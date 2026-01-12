@@ -1,0 +1,258 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro'
+import NavBar from '../components/NavBar.astro'
+import Footer from '../components/Footer.astro'
+
+const mods = [
+  {
+    title: "Alpine Whispers",
+    logo: "/assets/mod-logos/alpine_whispers.png",
+    description: "Snowy biomes, cozy alpine atmosphere, and new wildlife for long-term worlds.",
+    wiki: "/docs/mods/alpine-whispers/",
+    source: "https://github.com/Let-s-Do-Collection/AlpineWhispers",
+    tags: ["snow", "biomes", "atmosphere", "animals"],
+  },
+  {
+    title: "Bakery",
+    logo: "/assets/mod-logos/bakery.png",
+    description: "Baking, ovens, recipes, and warm kitchen details with a vanilla-friendly feel.",
+    wiki: "/docs/mods/bakery/",
+    source: "https://github.com/Let-s-Do-Collection/Bakery",
+    tags: ["food", "baking", "kitchen", "atmosphere"],
+  },
+  {
+    title: "Beachparty",
+    logo: "/assets/mod-logos/beachparty.png",
+    description: "Beach vibes, summer decorations, and relaxed gameplay moments by the sea.",
+    wiki: "/docs/mods/beachparty/",
+    source: "https://github.com/Let-s-Do-Collection/Beachparty",
+    tags: ["decor", "summer", "beach", "atmosphere", "biomes", "food", "plants"],
+  },
+  {
+    title: "BloomingNature",
+    logo: "/assets/mod-logos/bloomingnature.png",
+    description: "More plants, ground cover, and natural decoration to enrich exploration and building.",
+    wiki: "/docs/mods/bloomingnature/",
+    source: "https://github.com/Let-s-Do-Collection/BloomingNature",
+    tags: ["plants", "decor", "worldgen", "nature", "biomes"],
+  },
+  {
+    title: "Brewery",
+    logo: "/assets/mod-logos/brewery.png",
+    description: "Brewing, drinks, barrels, and cozy tavern-style atmosphere for your world.",
+    wiki: "/docs/mods/brewery/",
+    source: "https://github.com/Let-s-Do-Collection/Brewery",
+    tags: ["drinks", "brewing", "decor", "atmosphere", "food"],
+  },
+  {
+    title: "Camping",
+    logo: "/assets/mod-logos/camping.png",
+    description: "Camping gear, outdoor decoration, and cozy survival-friendly adventures.",
+    wiki: "/docs/mods/camping/",
+    source: "https://github.com/Let-s-Do-Collection/Camping",
+    tags: ["outdoors", "survival", "decor", "travel", "food"],
+  },
+  {
+    title: "Candlelight",
+    logo: "/assets/mod-logos/candlelight.png",
+    description: "Candlelit ambience, decoration, and warm details for homes and builds.",
+    wiki: "/docs/mods/candlelight/",
+    source: "https://github.com/Let-s-Do-Collection/Candlelight",
+    tags: ["decor", "lighting", "atmosphere", "building", "food", "plants"],
+  },
+  {
+    title: "Farm & Charm",
+    logo: "/assets/mod-logos/farm_and_charm.png",
+    description: "Cozy farming with atmosphere, food prep, and rustic everyday interactions.",
+    wiki: "/docs/mods/farm-and-charm/",
+    source: "https://github.com/Let-s-Do-Collection/FarmAndCharm",
+    tags: ["farming", "food", "atmosphere", "decor", "plants"],
+  },
+{
+  title: "Furniture",
+  logo: "/assets/mod-logos/furniture.png",
+  description: "Furniture, seating, tables, and decorative blocks focused on everyday interiors and cozy living spaces.",
+  wiki: "/docs/mods/furniture/",
+  source: "https://github.com/Let-s-Do-Collection/Furniture",
+  tags: ["decor", "furniture", "building", "interior", "atmosphere"],
+},
+  {
+    title: "Hearth & Timber",
+    logo: "/assets/mod-logos/hearth_and_timber.png",
+    description: "Woodworking, rustic building pieces, and homey details for long-term worlds.",
+    wiki: "/docs/mods/hearth-and-timber/",
+    source: "https://github.com/Let-s-Do-Collection/HearthAndTimber",
+    tags: ["building", "wood", "decor", "rustic", "biomes"],
+  },
+  {
+    title: "HerbalBrews",
+    logo: "/assets/mod-logos/herbalbrews.png",
+    description: "Herbal drinks, cozy brewing, and small features that fit naturally into gameplay.",
+    wiki: "/docs/mods/herbalbrews/",
+    source: "https://github.com/Let-s-Do-Collection/HerbalBrews",
+    tags: ["drinks", "herbs", "brewing", "atmosphere", "plants"],
+  },
+  {
+    title: "Lili's Pottery",
+    logo: "/assets/mod-logos/lilis_pottery.png",
+    description: "Handcrafted pottery, functional vessels, and decorative blocks for detailed builds.",
+    wiki: "/docs/mods/lilis-pottery/",
+    source: "https://github.com/Let-s-Do-Collection/LilisPottery",
+    tags: ["pottery", "decoration", "building", "blocks"],
+  },
+  {
+    title: "Lili's Lucky Lures",
+    logo: "/assets/mod-logos/lucky_lures.png",
+    description: "Fishing improvements, fun rewards, and cozy extras for relaxed gameplay.",
+    wiki: "/docs/mods/lucky-lures/",
+    source: "https://github.com/Let-s-Do-Collection/LuckyLures",
+    tags: ["fishing", "rewards", "gameplay", "atmosphere", "food"],
+  },
+  {
+    title: "Meadow",
+    logo: "/assets/mod-logos/meadow.png",
+    description: "Pastures, cozy nature, and vanilla-friendly world details for long-term survival.",
+    wiki: "/docs/mods/meadow/",
+    source: "https://github.com/Let-s-Do-Collection/Meadow",
+    tags: ["nature", "animals", "decor", "worldgen", "biomes", "food", "atmosphere", "plants"],
+  },
+  {
+    title: "Smoker",
+    logo: "/assets/mod-logos/smoker.png",
+    description: "Smoking and cooking additions with rustic atmosphere and survival-friendly utility.",
+    wiki: "/docs/mods/smoker/",
+    source: "https://github.com/Let-s-Do-Collection/Smoker",
+    tags: ["food", "cooking", "utility", "atmosphere", "food"],
+  },
+  {
+    title: "Vinery",
+    logo: "/assets/mod-logos/vinery.png",
+    description: "Wine making, vineyards, and cozy rustic decor for long-term worlds.",
+    wiki: "/docs/mods/vinery/",
+    source: "https://github.com/Let-s-Do-Collection/Vinery",
+    tags: ["wine", "farming", "decor", "atmosphere", "brewing"],
+  },
+  {
+    title: "WilderNature",
+    logo: "/assets/mod-logos/wildernature.png",
+    description: "Natural world additions, vegetation, and small details that make biomes feel alive.",
+    wiki: "/docs/mods/wildernature/",
+    source: "https://github.com/Let-s-Do-Collection/WilderNature",
+    tags: ["worldgen", "nature", "plants", "atmosphere", "food"],
+  },
+]
+---
+
+<SiteLayout title="Mods">
+  <link rel="stylesheet" href="/styles/mods.css" />
+
+  <NavBar />
+
+  <main class="page">
+    <section class="section sectionCentered">
+      <div class="aboutHero modsHero">
+        <div class="aboutHeroBackground modsHeroBackground"></div>
+        <h1>Mods</h1>
+      </div>
+    </section>
+
+    <section class="section sectionCentered sectionTight">
+      <div class="sectionTitle">
+        <span>Browse the Collection</span>
+      </div>
+
+      <p class="sectionSubtitle">
+        Search by name, theme, or feature.
+      </p>
+
+      <div class="modsSearch">
+        <input
+          id="modsSearchInput"
+          class="modsSearchInput"
+          type="search"
+          placeholder="Search mods..."
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <div id="modsSearchMeta" class="modsSearchMeta"></div>
+      </div>
+
+      <div class="gridWrapper">
+        <div id="modsGrid" class="grid">
+          {mods.map((mod) => (
+            <article
+              class="card"
+              data-search={`${mod.title} ${mod.description} ${(mod.tags ?? []).join(" ")}`.toLowerCase()}
+            >
+              <div class="cardContent">
+                <img
+                  class="cardLogo"
+                  src={mod.logo}
+                  alt={mod.title}
+                  loading="lazy"
+                />
+                <h3>{mod.title}</h3>
+                <p>{mod.description}</p>
+              </div>
+
+<div class="cardAction">
+  {mod.wiki ? (
+    <a class="btn btnPrimary" href={mod.wiki}>
+      View Wiki
+    </a>
+  ) : null}
+
+  {mod.source ? (
+    <a
+      class="btn btnSecondary"
+      href={mod.source}
+      target="_blank"
+      rel="noopener"
+    >
+      Source Code
+    </a>
+  ) : null}
+</div>
+            </article>
+          ))}
+        </div>
+      </div>
+
+      <div id="modsEmpty" class="modsEmpty" style="display: none;">
+        No mods match your search.
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+
+  <script is:inline>
+    const input = document.getElementById("modsSearchInput")
+    const grid = document.getElementById("modsGrid")
+    const meta = document.getElementById("modsSearchMeta")
+    const empty = document.getElementById("modsEmpty")
+    const cards = Array.from(grid.querySelectorAll("[data-search]"))
+
+    const update = () => {
+      const q = (input.value || "").trim().toLowerCase()
+      let visible = 0
+
+      for (const card of cards) {
+        const hay = card.getAttribute("data-search") || ""
+        const show = q.length === 0 || hay.includes(q)
+        card.style.display = show ? "" : "none"
+        if (show) visible++
+      }
+
+      meta.textContent =
+        q.length === 0
+          ? `${cards.length} mods`
+          : `${visible} of ${cards.length}`
+
+      empty.style.display = visible === 0 ? "" : "none"
+    }
+
+    input.addEventListener("input", update)
+    update()
+  </script>
+</SiteLayout>
