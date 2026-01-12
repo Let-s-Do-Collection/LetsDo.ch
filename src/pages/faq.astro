@@ -1,0 +1,186 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro'
+import NavBar from '../components/NavBar.astro'
+import Footer from '../components/Footer.astro'
+---
+
+<SiteLayout title="FAQ">
+  <NavBar />
+
+  <main class="page">
+    <section class="aboutHero">
+      <div class="aboutHeroBackground"></div>
+      <h1>FAQ</h1>
+    </section>
+
+    <section class="section sectionCentered sectionTight">
+      <div class="sectionTitle">
+        <span>General</span>
+      </div>
+    </section>
+
+    <section class="faqBlock">
+      <div class="faqCategory">
+        <details class="faqItem">
+          <summary class="faqQ">Which modloader do I need?</summary>
+          <div class="faqA">
+            All Let’s Do mods are built on Architectury and work on both Fabric and NeoForge.
+          </div>
+        </details>
+
+        <details class="faqItem">
+          <summary class="faqQ">Which Minecraft versions are supported?</summary>
+          <div class="faqA">
+            Development focuses on the latest Minecraft version only.
+          </div>
+        </details>
+
+        <details class="faqItem">
+          <summary class="faqQ">Do I need other dependencies?</summary>
+          <div class="faqA">
+            Yes. Architectury API is required.
+            Fabric API is required when using Fabric.
+            Always check the mod page for additional requirements.
+          </div>
+        </details>
+
+        <details class="faqItem">
+          <summary class="faqQ">Is there a config file?</summary>
+          <div class="faqA">
+            Some mods include config options.
+            If a config is missing, that mod likely has no configurable options yet.
+          </div>
+        </details>
+
+        <details class="faqItem">
+          <summary class="faqQ">Can I use Let’s Do in my modpack?</summary>
+          <div class="faqA">
+            Yes. Modpacks are allowed.
+            Please do not re-upload, redistribute, or modify the mod files.
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section sectionCentered">
+      <div class="sectionTitle">
+        <span>Compatibility</span>
+      </div>
+    </section>
+
+    <section class="faqBlock">
+      <div class="faqCategory">
+        <details class="faqItem">
+          <summary class="faqQ">
+            Are Let’s Do mods compatible with worldgen mods?
+          </summary>
+          <div class="faqA">
+            Yes. As long as those mods use vanilla biome tags,
+            Let’s Do generation will work alongside them.
+          </div>
+        </details>
+
+        <details class="faqItem">
+          <summary class="faqQ">
+            Do Let’s Do mods work with Sodium / Rubidium / Optifine?
+          </summary>
+          <div class="faqA">
+            Sodium and Rubidium generally work, though visual glitches may occur with custom renderers.
+            Optifine is not officially supported and often causes issues.
+            Sodium-based performance mods are recommended.
+          </div>
+        </details>
+
+        <details class="faqItem">
+          <summary class="faqQ">
+            Why do I see “No data fixer registered” in the logs?
+          </summary>
+          <div class="faqA">
+            Minecraft’s DataFixerUpper is used to upgrade very old world data.
+            Let’s Do mods do not rely on it and handle changes directly.
+            This message is harmless and can be ignored.
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section sectionCentered">
+      <div class="sectionTitle">
+        <span>Project & Community</span>
+      </div>
+    </section>
+
+    <section class="faqBlock">
+      <div class="faqCategory">
+        <details class="faqItem">
+          <summary class="faqQ">Where can I track development progress?</summary>
+          <div class="faqA">
+            Check the status channel on Discord to see the current development stage of each mod.
+          </div>
+        </details>
+
+        <details class="faqItem">
+          <summary class="faqQ">How can I contribute?</summary>
+          <div class="faqA">
+            You can share ideas and feedback on Discord,
+            or contribute translations via Pull Requests.
+          </div>
+        </details>
+
+        <details class="faqItem">
+          <summary class="faqQ">Who is CR?</summary>
+          <div class="faqA">
+            CR is our Viking.
+            The guardian who keeps unruly Let’s Doers and their requests in check.
+          </div>
+        </details>
+
+        <details class="faqItem">
+          <summary class="faqQ">Who is MissLilitu?</summary>
+          <div class="faqA">
+            MissLilitu is the most important person behind Let’s Do.
+            While she does not write code, she provides endless support,
+            countless ideas, and constant encouragement.
+            Without her, Let’s Do would not be what it is today.
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section sectionCentered">
+      <div class="sectionTitle">
+        <span>Licensing & Support</span>
+      </div>
+    </section>
+
+    <section class="faqBlock">
+      <div class="faqCategory">
+        <details class="faqItem">
+          <summary class="faqQ">What license do the mods use?</summary>
+          <div class="faqA">
+            The code is licensed under MIT.
+            Assets are All Rights Reserved by default.
+          </div>
+        </details>
+
+        <details class="faqItem">
+          <summary class="faqQ">Can I ask about asset usage?</summary>
+          <div class="faqA">
+            Yes. While assets are ARR by default, I am always happy to talk.
+            If you are unsure about something, just ask.
+          </div>
+        </details>
+
+        <details class="faqItem">
+          <summary class="faqQ">Can I support development?</summary>
+          <div class="faqA">
+            Yes. You can support development via Patreon or PayPal.
+            All mods will remain fully playable without support.
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</SiteLayout>

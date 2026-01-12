@@ -1,0 +1,53 @@
+<footer class="footer">
+  <div class="footerInner">
+    <div class="themeSwitcher">
+      <button class="themeIcon" data-theme="light" type="button">
+        <img src="/assets/icons/sun.png" alt="Light mode" />
+      </button>
+
+      <button class="themeIcon" data-theme="dark" type="button">
+        <img src="/assets/icons/moon.png" alt="Dark mode" />
+      </button>
+
+      <button class="themeBtn theme-blue" data-theme="blue" type="button"></button>
+      <button class="themeBtn theme-gold" data-theme="gold" type="button"></button>
+      <button class="themeBtn theme-pink" data-theme="pink" type="button"></button>
+      <button class="themeBtn theme-green" data-theme="green" type="button"></button>
+    </div>
+
+    <div class="footerText">
+      Copyright 2026 © satisfy<br />
+      Let's Do is not affiliated with or endorsed by Mojang Studios
+    </div>
+  </div>
+
+  <script is:inline>
+    const root = document.documentElement
+    const buttons = document.querySelectorAll('.themeSwitcher [data-theme]')
+    const iconLight = document.querySelector('.themeSwitcher [data-theme="light"]')
+    const iconDark = document.querySelector('.themeSwitcher [data-theme="dark"]')
+
+    function normalizeTheme(theme) {
+      return theme === 'light' ? 'blue' : theme
+    }
+
+    function updateIcons(theme) {
+      const isDark = theme === 'dark'
+      iconLight.style.display = isDark ? 'inline-flex' : 'none'
+      iconDark.style.display = isDark ? 'none' : 'inline-flex'
+    }
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const theme = normalizeTheme(button.dataset.theme)
+        root.setAttribute('data-theme', theme)
+        localStorage.setItem('theme', theme)
+        updateIcons(theme)
+      })
+    })
+
+    const saved = localStorage.getItem('theme') || 'blue'
+    root.setAttribute('data-theme', saved)
+    updateIcons(saved)
+  </script>
+</footer>
