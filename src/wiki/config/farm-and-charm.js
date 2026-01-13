@@ -19,133 +19,274 @@ And of course it also adds a lot of cozy farming content, from practical tools t
       id: "stations",
       title: "Stations and Processing",
       entries: [
+  {
+    id: "stove",
+    title: "Stove",
+    namespace_id: "farm_and_charm:stove",
+    subtitle: "Your main Station for Baking and a Heat Source for Cooking.",
+    icon: "/assets/icons/farm-and-charm/stove.png",
+    search: "stove baking fuel heat cooking roaster pot",
+    details: true,
+    detailsTitle: "Usage",
+    detailsText: `
+The Stove works similarly to other Crafting Stations. It has three Ingredient Input Slots, one Fuel Slot, and one Output Slot.
+
+Place the required Ingredients into the Input Slots, add a valid Fuel Item, and wait about twelve seconds for the Crafting Process to complete. The crafted Item then appears in the Output Slot.
+
+Items located in both the Input Slots and the Output Slot are also visually displayed inside the Block in the World.`,
+    detailsBullets: [
+      "Three Ingredient Input Slots",
+      "One Fuel Slot and one Output Slot",
+      "Crafting takes about twelve seconds",
+      "Requires a valid Fuel Item such as Coal or Charcoal",
+      "Input and Output Items are visible in the Block Model",
+    ],
+  },
+       {
+         id: "cooking_pot",
+         title: "Cooking Pot",
+         namespace_id: "farm_and_charm:cooking_pot",
+         subtitle: "A cozy Station for preparing basic Meals, powered by Heat.",
+         icon: "/assets/icons/farm-and-charm/cooking_pot.png",
+         search: "cooking pot meals basic hot surface stove magma campfire bubbles recipe book container slot output cooking",
+         details: true,
+         detailsTitle: "Usage",
+         detailsText: `The Cooking Pot functions similarly to other Crafting Stations, but focuses on preparing basic Meals. It requires a Heat Source to operate and cannot be used on its own.
+
+The Cooking Pot has six Ingredient Input Slots, one Container Slot, and one Output Slot.
+
+After placing the Ingredients into the Input Slots, the Cooking Process takes about thirty seconds. Once completed, the prepared Meal appears in the Output Slot.
+
+To function, the Cooking Pot must be placed on a Hot Surface, such as a Stove, a Magma Block, or other Heat Sources. In some cases, it can also be placed directly on a Campfire. When active, this is indicated by rising Bubbles, Cooking Sounds, and a colored Fire Indicator in the Cooking Pot Interface.`,
+         detailsBullets: [
+           "Six Ingredient Input Slots",
+           "One Container Slot and one Output Slot",
+           "Requires a valid Heat Source",
+           "Cooking takes about thirty seconds",
+           "Active State is shown by Bubbles, Sounds, and a colored Fire Indicator",
+         ],
+       },
+       {
+         id: "roaster",
+         title: "Roaster",
+         namespace_id: "farm_and_charm:roaster",
+         subtitle: "A large Cooking Station for preparing bigger Meals.",
+         icon: "/assets/icons/farm-and-charm/roaster.png",
+         search: "roaster bigger meals large hot surface stove magma campfire smoke recipe book container slot output cooking",
+         details: true,
+         detailsTitle: "Usage",
+         detailsText: `The Roaster works similarly to the Cooking Pot, but is designed for larger and more complex Meals. It requires a Heat Source and cannot operate on its own.
+
+The Roaster provides six Ingredient Input Slots, one Container Slot, and one Output Slot.
+
+After placing the required Ingredients into the Input Slots, the Cooking Process takes about sixty seconds. Once completed, the prepared Meal appears in the Output Slot.
+
+To function, the Roaster must be connected to a Heat Source, such as a Stove, a Magma Block, or other Hot Surfaces. It can also be used when positioned above a Campfire. When active, the Roaster emits rising Smoke and Cooking Sounds, and the Fire Indicator in the Interface changes from grayscale to colored.`,
+         detailsBullets: [
+           "Designed for larger and more complex Meals",
+           "Six Ingredient Input Slots",
+           "One Container Slot and one Output Slot",
+           "Requires a valid Heat Source",
+           "Cooking takes about sixty seconds",
+           "Active State is shown by Smoke, Sounds, and a colored Fire Indicator",
+         ],
+       },
       {
-        id: "stove",
-        title: "Stove",
-        namespace_id: "farm_and_charm:stove",
-        subtitle: "Your main station for baking and a heat source for cooking.",
-        icon: "/assets/icons/farm-and-charm/stove.png",
-        search: "stove baking fuel heat cooking roaster pot",
+        id: "mincer",
+        title: "Mincer",
+        namespace_id: "farm_and_charm:mincer",
+        subtitle: "A crank-operated Tool for processing various Materials.",
+        icon: "/assets/icons/farm-and-charm/mincer.png",
+        search: "mincer crank processing interact right click hold particles sound animation meat iron wood speed",
         details: true,
         detailsTitle: "Usage",
-        detailsText: `The Stove is your primary crafting station for pastries and bread. It also acts as a heat source for the Cooking Pot and Roaster.`,
+        detailsText: `The Mincer is an all-purpose Processing Tool that operates entirely through direct Interaction and does not provide a Graphical Interface.
+
+Valid Items can be inserted by Right-Clicking the Mincer. Once an Item is inside, the Crank can be operated by targeting the Mincer and holding the Right Mouse Button.
+
+The Processing Process is indicated through the Crank Animation, Particles, and Sound Effects. Once fully processed, the resulting Item exits through the Opening at the Bottom of the Mincer.
+
+Processing Time depends on the Material being processed. Meat is processed almost instantly, while harder Materials such as Wood or Iron require more time. The Processing Speed can be increased by holding another Item of the same type in your Hand while cranking.`,
         detailsBullets: [
-          "3 ingredient slots plus 1 fuel slot",
-          "Works with coal, charcoal, and other fuels",
-          "Crafting takes about 12 seconds per recipe",
+          "No Interface, operates through direct Interaction",
+          "Insert Items via Right-Click",
+          "Operate the Crank by holding Right Mouse Button",
+          "Processing is shown through Animation, Particles, and Sounds",
+          "Output exits at the Bottom",
+          "Processing Time varies by Material",
+          "Holding an additional Item increases Processing Speed",
         ],
       },
-        {
-          id: "cooking_pot",
-          title: "Cooking Pot",
-          namespace_id: "farm_and_charm:cooking_pot",
-          subtitle: "A cozy station for basic meals, powered by heat.",
-          icon: "/assets/icons/farm-and-charm/cooking_pot.png",
-          search:
-            "cooking pot meals basic hot surface stove magma campfire bubbles recipe book container slot output cooking",
-        },
-        {
-          id: "roaster",
-          title: "Roaster",
-          namespace_id: "farm_and_charm:roaster",
-          subtitle: "Like the Cooking Pot, but made for larger meals.",
-          icon: "/assets/icons/farm-and-charm/roaster.png",
-          search:
-            "roaster bigger meals hot surface stove magma campfire smoke recipe book container slot output cooking",
-        },
-        {
-          id: "mincer",
-          title: "Mincer",
-          namespace_id: "farm_and_charm:mincer",
-          subtitle: "Crank driven processing for a variety of materials.",
-          icon: "/assets/icons/farm-and-charm/mincer.png",
-          search:
-            "mincer crank processing interact right click hold use particles sound animation meat iron wood speed",
-        },
-        {
-          id: "crafting_bowl",
-          title: "Crafting Bowl",
-          namespace_id: "farm_and_charm:crafting_bowl",
-          subtitle: "Mix and stir dough, cereals, salads, and more.",
-          icon: "/assets/icons/farm-and-charm/crafting_bowl.png",
-          search:
-            "crafting bowl dough cereals salads whisk stir interact no gui empty hand capacity 4 animation",
-        },
+    {
+      id: "crafting_bowl",
+      title: "Crafting Bowl",
+      namespace_id: "farm_and_charm:crafting_bowl",
+      subtitle: "A manual Station for preparing Dough, Cereals, Salads, and more.",
+      icon: "/assets/icons/farm-and-charm/crafting_bowl.png",
+      search: "crafting bowl dough cereals salads whisk stir interact no gui empty hand capacity animation",
+      details: true,
+      detailsTitle: "Usage",
+      detailsText: `The Crafting Bowl is used to prepare various Ingredients such as Dough, Cereals, and Salads. Like the Mincer, it does not feature a Graphical Interface and relies entirely on direct Interaction.
+
+The Crafting Bowl can hold up to four Items at a time. Ingredients are added by placing them directly into the Bowl.
+
+Once the correct Ingredients are inside, the Mixing Process is started by stirring the Whisk inside the Bowl. This Process is visually represented through an Animation.
+
+An empty Hand is required to begin the Mixing Process.`,
+      detailsBullets: [
+        "No Interface, direct Interaction only",
+        "Holds up to four Ingredients",
+        "Used for Dough, Cereals, Salads, and similar Recipes",
+        "Start Mixing by stirring the Whisk",
+        "Mixing is shown through an Animation",
+        "Requires an empty Hand to operate",
+      ],
+    },
+    {
+      id: "silo_copper",
+      title: "Silo",
+      namespace_id: "farm_and_charm:silo_copper",
+      subtitle: "Modular Storage for drying Items, scaling with Size.",
+      icon: "/assets/icons/farm-and-charm/silo_copper.png",
+      search: "silo modular expand width height capacity drying time hatch open close right click storage",
+      details: true,
+      detailsTitle: "Usage",
+      detailsText: `The Silo is a modular Storage Block used for drying Items. It can be expanded both in Width and Height. A larger Silo provides higher Storage Capacity and reduces the required Drying Time.
+
+Items can be inserted directly by Right-Clicking the Silo with a valid Item. The Hatch of the Silo can be opened or closed through Interaction.
+
+Drying continues regardless of whether the Hatch is open or closed. However, when the Hatch is closed, dried Items will not be automatically released.`,
+      detailsBullets: [
+        "Modular Structure expandable in Width and Height",
+        "Larger Silos increase Capacity and reduce Drying Time",
+        "Insert Items via Right-Click",
+        "Right-Click to open or close the Hatch",
+        "Drying occurs even with the Hatch open",
+        "Closed Hatch prevents automatic Item Output",
+      ],
+    }
       ],
     },
     {
       id: "farming",
       title: "Farming and Utility",
       entries: [
-        {
-          id: "silo_copper",
-          title: "Silo",
-          namespace_id: "farm_and_charm:silo_copper",
-          subtitle: "Modular drying storage that scales with size.",
-          icon: "/assets/icons/farm-and-charm/silo_copper.png",
-          search:
-            "silo modular expand width height capacity drying time hatch open close right click dry storage",
-        },
-        {
-          id: "fertilized_soil",
-          title: "Fertilized Soil",
-          namespace_id: "farm_and_charm:fertilized_soil",
-          subtitle: "Boost your fields and upgrade farmland.",
-          icon: "/assets/icons/farm-and-charm/fertilized_soil.png",
-          search:
-            "fertilized soil hoe convert fertilized farmland pitchfork bone meal effect radius crops uses 4",
-        },
-        {
-          id: "fertilized_farmland",
-          title: "Fertilized Farmland",
-          namespace_id: "farm_and_charm:fertilized_farmland",
-          subtitle: "Enhanced farmland that helps crops grow.",
-          icon: "/assets/icons/farm-and-charm/fertilized_farmland.png",
-          search:
-            "fertilized farmland enhanced cannot trample random bone meal chance crop growth",
-        },
-        {
-          id: "feeding_trough",
-          title: "Feeding Trough",
-          namespace_id: "farm_and_charm:feeding_trough",
-          subtitle: "Attract animals and help them breed using any seeds.",
-          icon: "/assets/icons/farm-and-charm/feeding_trough.png",
-          search:
-            "feeding trough seeds capacity 4 animals nearby eat periodically ready to mate breeding any seeds",
-        },
-        {
-          id: "water_trough",
-          title: "Water Trough",
-          namespace_id: "farm_and_charm:water_trough",
-          subtitle: "A simple trough that provides water for nearby animals.",
-          icon: "/assets/icons/farm-and-charm/water_trough.png",
-          search: "water trough animals farm utility hydration",
-        },
-        {
-          id: "water_sprinkler",
-          title: "Water Sprinkler",
-          namespace_id: "farm_and_charm:water_sprinkler",
-          subtitle: "Irrigates nearby farmland without a water supply.",
-          icon: "/assets/icons/farm-and-charm/water_sprinkler.png",
-          search:
-            "water sprinkler irrigate farmland radius 8 no water supply refill rain storm turns off decoration",
-        },
-        {
-          id: "pet_bowl",
-          title: "Pet Bowl",
-          namespace_id: "farm_and_charm:pet_bowl",
-          subtitle: "A small bowl for feeding pets in a cozy way.",
-          icon: "/assets/icons/farm-and-charm/pet_bowl.png",
-          search: "pet bowl dog cat feeding decoration",
-        },
-        {
-          id: "chicken_nest",
-          title: "Chicken Nest",
-          namespace_id: "farm_and_charm:chicken_nest",
-          subtitle: "A comfy nest for chickens and farm builds.",
-          icon: "/assets/icons/farm-and-charm/chicken_nest.png",
-          search: "chicken nest coop farm eggs decoration",
-        },
+{
+  id: "fertilized_soil",
+  title: "Fertilized Soil",
+  namespace_id: "farm_and_charm:fertilized_soil",
+  subtitle: "Boost your Fields and upgrade Farmland.",
+  icon: "/assets/icons/farm-and-charm/fertilized_soil.png",
+  search:
+    "fertilized soil hoe convert fertilized farmland pitchfork bone meal effect radius crops uses 4",
+},
+ {
+   id: "fertilized_farmland",
+   title: "Fertilized Farmland",
+   namespace_id: "farm_and_charm:fertilized_farmland",
+   subtitle: "Enhanced Farmland that supports faster Crop Growth.",
+   icon: "/assets/icons/farm-and-charm/fertilized_farmland.png",
+   search:
+     "fertilized farmland enhanced cannot trample random bone meal chance crop growth",
+   details: true,
+   detailsTitle: "Function",
+   detailsText:
+     "Fertilized Farmland is an upgraded version of regular Farmland. It cannot be trampled and provides passive support for Crops planted on it.",
+   detailsBullets: [
+     "Cannot be trampled by Players or Mobs",
+     "Has a small chance to randomly apply the Bone Meal effect to the planted Crop",
+     "Works automatically without Player interaction",
+   ],
+ },
+{
+  id: "feeding_trough",
+  title: "Feeding Trough",
+  namespace_id: "farm_and_charm:feeding_trough",
+  subtitle: "Automatically feeds Animals and helps them get ready to Breed.",
+  icon: "/assets/icons/farm-and-charm/feeding_trough.png",
+  search:
+    "feeding trough seeds capacity animals breeding automatic nearby eat periodically",
+  details: true,
+  detailsTitle: "Usage",
+  detailsText:
+    "The Feeding Trough automatically feeds Animals in the surrounding area and helps them get ready to Breed.",
+  detailsBullets: [
+    "Can be filled with up to 4 Seed Items",
+    "Friendly and Neutral Animals will periodically walk to the Feeding Trough to eat",
+    "After eating, Animals become ready to Mate",
+    "All Seed Types work for all Animals",
+  ],
+},
+{
+  id: "water_trough",
+  title: "Water Trough",
+  namespace_id: "farm_and_charm:water_trough",
+  subtitle: "A simple trough that provides water for nearby Animals.",
+  icon: "/assets/icons/farm-and-charm/water_trough.png",
+  search: "water trough animals farm utility hydration breeding cooldown",
+  details: true,
+  detailsTitle: "Usage",
+  detailsText: `The Water Trough supplies Nearby Animals with Water. Animals that drink from it have their Breeding Cooldown reduced by 10 seconds.`,
+},
+{
+  id: "water_sprinkler",
+  title: "Water Sprinkler",
+  namespace_id: "farm_and_charm:water_sprinkler",
+  subtitle: "Automatically irrigates nearby Farmland without requiring a water source.",
+  icon: "/assets/icons/farm-and-charm/water_sprinkler.png",
+  search:
+    "water sprinkler irrigate farmland radius no water supply automatic farming utility decoration",
+},
+ {
+   id: "pet_bowl",
+   title: "Pet Bowl",
+   namespace_id: "farm_and_charm:pet_bowl",
+   subtitle: "A cozy feeding spot for Pets, with support for Cat Food, Dog Food, and a custom Name Tag.",
+   icon: "/assets/icons/farm-and-charm/pet_bowl.png",
+   search: "pet bowl cat dog food feeding name tag shears shift right click screen rename decoration",
+   details: true,
+   detailsTitle: "Usage",
+   detailsText: `The Pet Bowl can be filled with Cat Food or Dog Food. It can also hold a Name Tag to unlock a small management Screen.`,
+   detailsBullets: [
+     "Place Cat Food or Dog Food into the Pet Bowl with Right-Click.",
+     "Add a Name Tag with Right-Click to enable Pet Bowl customization.",
+     "While a Name Tag is attached: Hold Shift and Right-Click to open the Pet Bowl Screen.",
+     "Remove the Name Tag using Shears to get the Name Tag back."
+   ],
+ },
+{
+  id: "chicken_coop",
+  title: "Chicken Coop",
+  namespace_id: "farm_and_charm:chicken_coop",
+  subtitle: "Stores Chickens and collects Eggs for easy pickup.",
+  icon: "/assets/icons/farm-and-charm/chicken_coop.png",
+  search: "chicken coop store chickens eggs collect leash pitchfork release radius 7",
+  details: true,
+  detailsTitle: "Usage",
+  detailsText: `The Chicken Coop can store nearby Chickens and collects their Eggs inside. Interact to pick up Eggs, or use a Pitchfork to release stored Chickens.`,
+  detailsBullets: [
+    "Collect Eggs by interacting: All stored Eggs are given to you at once.",
+    "Leash a Chicken to yourself and bring it close: If the Coop has space, it will take the leashed Chicken in a 7 Block radius.",
+    "Use a Pitchfork on the Coop to release all stored Chickens.",
+    "Eggs are tracked visually on the Block in Stages."
+  ],
+},
+{
+  id: "chicken_nest",
+  title: "Chicken Nest",
+  namespace_id: "farm_and_charm:chicken_nest",
+  subtitle: "A cozy Nest where nearby Chickens lay their Eggs safely.",
+  icon: "/assets/icons/farm-and-charm/chicken_nest.png",
+  search: "chicken nest coop farm eggs storage nearby chickens",
+  details: true,
+  detailsTitle: "Usage",
+  detailsText: `Chickens in the surrounding area will naturally lay their Eggs inside the Chicken Nest instead of on the ground.`,
+  detailsBullets: [
+    "Nearby Chickens place their Eggs directly into the Nest.",
+    "Prevents Eggs from dropping on the ground.",
+    "Can store up to 2 Eggs at a time."
+  ],
+}
       ],
     },
     {
@@ -169,79 +310,125 @@ And of course it also adds a lot of cozy farming content, from practical tools t
           icon: "/assets/icons/farm-and-charm/tool_rack.png",
           search: "tool rack toolrack storage tools pans kitchen decor",
         },
-        {
-          id: "scarecrow",
-          title: "Scarecrow",
-          namespace_id: "farm_and_charm:scarecrow",
-          subtitle: "A special reward that boosts nearby crop growth.",
-          icon: "/assets/icons/farm-and-charm/scarecrow.png",
-          search:
-            "scarecrow reward crafted all food items growth speed 10 percent range animated sways wind weather",
-        },
-        {
-          id: "rope",
-          title: "Rope",
-          namespace_id: "farm_and_charm:rope",
-          subtitle: "A flexible utility piece for rustic farm builds.",
-          icon: "/assets/icons/farm-and-charm/rope.png",
-          search: "rope rustic farm utility building",
-        },
-        {
-          id: "packed_dirt",
-          title: "Packed Dirt",
-          namespace_id: "farm_and_charm:packed_dirt",
-          subtitle: "A sturdier dirt path block for farms and yards.",
-          icon: "/assets/icons/farm-and-charm/packed_dirt.png",
-          search: "packed dirt path farm yard decoration",
-        },
-        {
-          id: "trampled_packed_dirt",
-          title: "Trampled Packed Dirt",
-          namespace_id: "farm_and_charm:trampled_packed_dirt",
-          subtitle: "A worn variant for heavily used farm paths.",
-          icon: "/assets/icons/farm-and-charm/trampled_packed_dirt.png",
-          search: "trampled packed dirt worn path farm yard",
-        },
-        {
-          id: "stable_floor",
-          title: "Stable Floor",
-          namespace_id: "farm_and_charm:stable_floor",
-          subtitle: "A clean floor block for stables and barns.",
-          icon: "/assets/icons/farm-and-charm/stable_floor.png",
-          search: "stable floor barn stable building decor",
-        },
-        {
-          id: "trampled_stable_floor",
-          title: "Trampled Stable Floor",
-          namespace_id: "farm_and_charm:trampled_stable_floor",
-          subtitle: "A worn stable floor for busy animal pens.",
-          icon: "/assets/icons/farm-and-charm/trampled_stable_floor.png",
-          search: "trampled stable floor barn animals pen",
-        },
-        {
-          id: "straw_stable_floor",
-          title: "Straw Stable Floor",
-          namespace_id: "farm_and_charm:straw_stable_floor",
-          subtitle: "A cozy straw floor for barns and animal areas.",
-          icon: "/assets/icons/farm-and-charm/straw_stable_floor.png",
-          search: "straw stable floor barn straw animals",
-        },
-        {
-          id: "sturdy_ladder",
-          title: "Sturdy Ladder",
-          namespace_id: "farm_and_charm:sturdy_ladder",
-          subtitle: "A tougher ladder for barns and farm builds.",
-          icon: "/assets/icons/farm-and-charm/sturdy_ladder.png",
-          search: "sturdy ladder climb barn farm building",
-        },
-        {
-          id: "cattlegrid",
-          title: "Cattlegrid",
-          namespace_id: "farm_and_charm:cattlegrid",
-          subtitle: "A farm utility block for gates and enclosures.",
-          icon: "/assets/icons/farm-and-charm/cattlegrid.png",
-          search: "cattlegrid farm gate enclosure utility",
-        }
+ {
+   id: "scarecrow",
+   title: "Scarecrow",
+   namespace_id: "farm_and_charm:scarecrow",
+   subtitle: "A special Reward that boosts nearby Crop Growth.",
+   icon: "/assets/icons/farm-and-charm/scarecrow.png",
+   search:
+     "scarecrow reward cook all meals dishes completion unlock growth boost 10 percent range animated sways wind weather dungarees overalls pants funny",
+   details: true,
+   detailsTitle: "Reward",
+   detailsText: `The Scarecrow is a special Reward for true completionists: Cook every Farm And Charm Meal at least once to unlock it. Once placed, it boosts nearby Crop Growth by 10 Percent and brings a little life to your fields with subtle animations.`,
+   detailsBullets: [
+     "Reward for Cooking every Farm And Charm Meal.",
+     "Boosts nearby Crop Growth by 10 Percent.",
+     "Animated: Sways gently with wind and weather.",
+     "It also has Dungarees: Take them off by interacting, or put them back on by using Dungarees on the Scarecrow."
+   ],
+ },
+ {
+   id: "rope",
+   title: "Rope",
+   namespace_id: "farm_and_charm:rope",
+   subtitle: "A flexible Utility Block for rustic Builds and Farming Setups.",
+   icon: "/assets/icons/farm-and-charm/rope.png",
+   search:
+     "rope rope knot knot utility building decoration lantern bell hang climbing crops support anchor connect corner vertical horizontal",
+   details: true,
+   detailsTitle: "Usage",
+   detailsText: `Rope connects to nearby Blocks and can be used to build hanging lines, supports, and simple structures. It must be attached to something sturdy, or to a Rope Knot, otherwise it will not stay in place.`,
+   detailsBullets: [
+     "Connects in all Directions: North, South, East, West, Up, and Down.",
+     "Requires an Anchor: A sturdy Block Face, or a Rope Knot somewhere in the connected Rope Network.",
+     "Can support hanging Attachments like Lanterns and Bells.",
+     "Works with Climbing Crops: Rope can connect vertically to Climbing Crops above or below."
+   ],
+ },
+{
+  id: "packed_dirt",
+  title: "Packed Dirt",
+  namespace_id: "farm_and_charm:packed_dirt",
+  subtitle: "A compact Path Block for farms, yards, and rustic builds.",
+  icon: "/assets/icons/farm-and-charm/packed_dirt.png",
+  search: "packed dirt path farm yard decoration trail road",
+},
+{
+  id: "trampled_packed_dirt",
+  title: "Trampled Packed Dirt",
+  namespace_id: "farm_and_charm:trampled_packed_dirt",
+  subtitle: "A worn Packed Dirt variant for frequently used Paths.",
+  icon: "/assets/icons/farm-and-charm/trampled_packed_dirt.png",
+  search: "trampled packed dirt worn path farm yard trail road",
+},
+{
+  id: "stable_floor",
+  title: "Stable Floor",
+  namespace_id: "farm_and_charm:stable_floor",
+  subtitle: "A clean Floor Block for stables, barns, and animal areas.",
+  icon: "/assets/icons/farm-and-charm/stable_floor.png",
+  search: "stable floor barn stable building decor animals pen",
+},
+{
+  id: "trampled_stable_floor",
+  title: "Trampled Stable Floor",
+  namespace_id: "farm_and_charm:trampled_stable_floor",
+  subtitle: "A worn Stable Floor variant for busy pens and walkways.",
+  icon: "/assets/icons/farm-and-charm/trampled_stable_floor.png",
+  search: "trampled stable floor barn animals pen walkway worn",
+},
+{
+  id: "straw_stable_floor",
+  title: "Straw Stable Floor",
+  namespace_id: "farm_and_charm:straw_stable_floor",
+  subtitle: "A cozy Straw topped Floor Block for barns and stables.",
+  icon: "/assets/icons/farm-and-charm/straw_stable_floor.png",
+  search: "straw stable floor barn straw animals cozy stable",
+},
+{
+  id: "bag",
+  title: "Bag",
+  namespace_id: "farm_and_charm:*_bag",
+  subtitle: "Decorative Bags representing different ingredients and farm goods.",
+  icon: "/assets/icons/farm-and-charm/onion_bag.png",
+  search: "bag decoration ingredient sack strawberry carrot potato beetroot lettuce tomato corn onion flour",
+},
+{
+  id: "sturdy_ladder",
+  title: "Sturdy Ladder",
+  namespace_id: "farm_and_charm:sturdy_ladder",
+  subtitle: "A sturdier Ladder that can extend upward by placing more on top.",
+  icon: "/assets/icons/farm-and-charm/sturdy_ladder.png",
+  search:
+    "sturdy ladder barn farm building climb extend stack place on ladder support walls ground",
+},
+{
+  id: "pet_food_bags",
+  title: "Pet Food Bags",
+  namespace_id: "farm_and_charm:*_food",
+  subtitle: "Decorative sacks for storing dog and cat food in a rustic way.",
+  icon: "/assets/icons/farm-and-charm/cat_food_bag.png",
+  search: "pet food bags dog food cat food sacks decorative storage stackable",
+},
+  {
+    id: "cattlegrid",
+    title: "Cattlegrid",
+    namespace_id: "farm_and_charm:cattlegrid",
+    subtitle: "A practical grid that blocks livestock while letting players pass.",
+    icon: "/assets/icons/farm-and-charm/cattlegrid.png",
+    search:
+      "cattlegrid farm gate enclosure livestock cows sheep pigs horses block animals pass players",
+    details: true,
+    detailsTitle: "Usage",
+    detailsText: `The Cattlegrid is designed to control animal movement without the need for gates or doors.`,
+    detailsBullets: [
+      "Livestock such as Cows, Sheep, Pigs, Chickens, and Horses are unable to cross the Cattlegrid and will stop when stepping onto it.",
+      "Players can walk across the Cattlegrid, but their movement is slightly slowed unless they are in Creative Mode.",
+      "Cats can cross the grid freely and even move slightly faster across it.",
+      "Ideal for farm entrances, paddocks, and animal enclosures where you want to keep animals contained while maintaining easy access."
+    ],
+  },
       ],
     },
     {
@@ -264,30 +451,57 @@ And of course it also adds a lot of cozy farming content, from practical tools t
           icon: "/assets/icons/farm-and-charm/compost.png",
           search: "compost 10 uses apply bone meal wide area crops growth farming",
         },
-        {
-          id: "pitchfork",
-          title: "Pitchfork",
-          namespace_id: "farm_and_charm:pitchfork",
-          subtitle: "Works like a hoe, with special use on fertilized soil.",
-          icon: "/assets/icons/farm-and-charm/pitchfork.png",
-          search: "pitchfork hoe fertilized soil bone meal effect farming tool",
-        },
-        {
-          id: "supply_cart",
-          title: "Supply Cart",
-          namespace_id: "farm_and_charm:supply_cart",
-          subtitle: "A handy cart item for moving supplies around your farm.",
-          icon: "/assets/icons/farm-and-charm/supply_cart.png",
-          search: "supply cart transport storage move supplies farm utility",
-        },
-        {
-          id: "plow",
-          title: "Plow",
-          namespace_id: "farm_and_charm:plow",
-          subtitle: "A cart attachment for preparing fields more efficiently.",
-          icon: "/assets/icons/farm-and-charm/plow.png",
-          search: "plow cart attachment farming prepare fields till soil",
-        },
+  {
+    id: "pitchfork",
+    title: "Pitchfork",
+    namespace_id: "farm_and_charm:pitchfork",
+    subtitle: "A Farming Tool with a special use on Fertilized Soil.",
+    icon: "/assets/icons/farm-and-charm/pitchfork.png",
+    search: "pitchfork hoe fertilized soil bone meal effect farming tool range crops uses durability",
+    details: true,
+    detailsTitle: "Usage",
+    detailsText: `The Pitchfork is a versatile Farming Tool. It behaves like a regular Hoe for field work, but its unique feature is interacting with Fertilized Soil to boost nearby crops.`,
+    detailsBullets: [
+      "Fertilized Soil Interaction: Use the Pitchfork on Fertilized Soil to trigger a Bone Meal like Growth Boost in an area around the block.",
+      "Charges: Each Fertilized Soil Block has multiple Uses. Each Pitchfork activation consumes one Size level until the block is depleted.",
+      "Area of Effect: The Growth Boost affects Crops within a configurable Range around the Fertilized Soil Block.",
+      "Chance Based Growth: Each Crop in range has a chance to receive the Bone Meal effect, so repeated Uses are most effective on larger fields."
+          ],
+  },
+   {
+     id: "supply_cart",
+     title: "Supply Cart",
+     namespace_id: "farm_and_charm:supply_cart",
+     subtitle: "A placeable Cart you can attach to a Horse and use as mobile Storage.",
+     icon: "/assets/icons/farm-and-charm/supply_cart.png",
+     search: "supply cart placeable attach horse detach storage open mobile transport move supplies farm utility",
+     details: true,
+     detailsTitle: "Usage",
+     detailsText: `The Supply Cart is a placeable Cart Item. Place it on the ground to spawn the Cart, then attach it to a Horse to move supplies around your Farm.`,
+     detailsBullets: [
+       "Place: Use the Item on the ground to place the Cart.",
+       "Attach: Attach the Cart to a Horse to start pulling it.",
+       "Detach: Detach the Cart at any time to park it.",
+       "Storage: Open the Cart to access its Storage while using it.",
+     ],
+   },
+   {
+     id: "plow",
+     title: "Plow",
+     namespace_id: "farm_and_charm:plow",
+     subtitle: "A placeable Cart Attachment for Horses that helps prepare fields faster.",
+     icon: "/assets/icons/farm-and-charm/plow.png",
+     search: "plow cart placeable attachment attach horse detach toggle plowing farming fields till soil",
+     details: true,
+     detailsTitle: "Usage",
+     detailsText: `The Plow is a placeable Cart Attachment. Place it to spawn the Plow, attach it to a Horse, then toggle it while pulling to work your fields.`,
+     detailsBullets: [
+       "Place: Use the Item on the ground to place the Plow.",
+       "Attach: Attach the Plow to a Horse to pull it.",
+       "Toggle: Toggle the Plow while pulling to enable or disable plowing.",
+       "Detach: Detach the Plow to stop using it and park it.",
+     ],
+   },
         {
           id: "yeast",
           title: "Yeast",
@@ -403,29 +617,21 @@ And of course it also adds a lot of cozy farming content, from practical tools t
         {
           id: "tea",
           title: "Tea",
-          namespace_id: "farm_and_charm:tea",
+          namespace_id: "farm_and_charm:*_tea",
           subtitle: "Brewed from wild plants and water in a cooking pot.",
-          icon: "/assets/icons/farm-and-charm/tea.png",
+          icon: "/assets/icons/farm-and-charm/strawberry_tea.png",
           search: "tea brew wild plants water cooking pot herbalbrews tea jug glass bottle right click share friends",
         },
-        {
-          id: "food",
-          title: "Food",
-          namespace_id: "farm_and_charm:food",
-          subtitle: "A small peek at the meal selection.",
-          icon: "/assets/icons/farm-and-charm/food.png",
-          search: "food meals placeable dishes soups pancakes bread meats saturation hunger effects",
-          items: [
-            {
-              id: "farmers_bread",
-              title: "Farmer's Bread",
-              namespace_id: "farm_and_charm:farmers_bread",
-              subtitle: "A hearty bread that can also be placed.",
-              icon: "/assets/icons/farm-and-charm/farmers_bread.png",
-              search: "farmers bread food meal placeable bread baking",
-            },
-          ],
-        },
+{
+  id: "food",
+  title: "Food",
+  namespace_id: "farm_and_charm:food",
+  subtitle: "A small peek at the meal selection.",
+  icon: "/assets/icons/farm-and-charm/chicken_wrapped_in_bacon.png",
+  search: "food meals dishes soups pancakes bread meats saturation hunger effects",
+  details: true,
+  itemsFromDir: "farm-and-charm",
+},
       ],
     },
     {

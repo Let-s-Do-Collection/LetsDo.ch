@@ -369,6 +369,71 @@ img {
   color: var(--text);
 }
 
+/* ================= THANKS SECTION ================= */
+
+.thanksCard {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 36px 32px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.thanksIntro {
+  max-width: 760px;
+  margin: 0 auto 18px;
+  text-align: center;
+}
+
+.thanksDividerTitle {
+  margin: 32px 0 18px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.thanksNamesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 32px;
+  max-width: 720px;
+  margin: 0 auto;
+  place-items: center;
+}
+
+.thanksNamesGrid > div {
+  text-align: center;
+  color: rgba(20, 25, 35, 0.75);
+  font-weight: 500;
+}
+
+.thanksYou {
+  margin-top: 26px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: rgba(20, 25, 35, 0.55);
+}
+
+.thanksFooter {
+  margin-top: 10px;
+  font-weight: 700;
+  color: rgba(20, 25, 35, 0.85);
+}
+
+@media (max-width: 900px) {
+  .thanksNamesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .thanksNamesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ================= EXPECT ================= */
 
 .expectGrid {
