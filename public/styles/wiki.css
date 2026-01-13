@@ -1,3 +1,6 @@
+
+
+/* Hero */
 .wikiHero {
   min-height: 220px;
   max-height: 240px;
@@ -21,6 +24,8 @@
   display: block;
 }
 
+
+/* About */
 .aboutText {
   margin: 18px auto 0;
   max-width: 980px;
@@ -30,10 +35,14 @@
   color: var(--text);
 }
 
+
+/* Section header */
 .wikiSectionHeader {
   margin-top: 18px;
 }
 
+
+/* Main grid and cards */
 .wikiGrid {
   align-items: stretch;
 }
@@ -48,6 +57,8 @@
   white-space: nowrap;
 }
 
+
+/* Details panel inside a card */
 .wikiCardDetails {
   margin-top: 14px;
   padding-top: 14px;
@@ -76,6 +87,8 @@
   margin: 6px 0;
 }
 
+
+/* Expanded card behavior */
 .wikiCard.isOpen {
   grid-column: span 2;
 }
@@ -90,13 +103,8 @@
   margin: 0 auto;
 }
 
-.wikiSidebar {
-  margin-left: -160px;
-    width: 260px;
-      padding: 16px;
 
-}
-
+/* Layout (sidebar + main) */
 .wikiLayout {
   display: grid;
   grid-template-columns: 240px 1fr;
@@ -104,10 +112,57 @@
   align-items: start;
 }
 
+.wikiSidebar {
+  margin-left: -160px;
+  width: 260px;
+  padding: 16px;
+}
+
 .wikiMain {
   margin-left: -70px;
 }
 
+
+/* Mini cards (Food grid inside details) */
+.wikiMiniTitle,
+.wikiMiniNs,
+.wikiMiniSub {
+  text-align: left;
+}
+
+.wikiMiniNs {
+  font-size: 11px;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wikiMiniIcon {
+  width: 80px;
+  height: 80px;
+  image-rendering: pixelated;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.wikiMiniBody {
+  min-width: 0;
+  flex: 1;
+  text-align: left;
+}
+
+.wikiMiniCard {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 14px;
+  text-align: left;
+}
+
+
+/* Responsive */
 @media (max-width: 980px) {
   .wikiCard.isOpen {
     grid-column: span 2;
