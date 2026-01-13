@@ -1,0 +1,123 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import NavBar from "../NavBar.astro";
+import Footer from "../Footer.astro";
+
+const { config } = Astro.props;
+
+const title = config?.title ?? "Wiki";
+const logo = config?.logo ?? "";
+const slug = config?.slug ?? "";
+const aboutTitle = config?.aboutTitle ?? "Welcome";
+const aboutSubtitle = config?.aboutSubtitle ?? "";
+const aboutText = config?.aboutText ?? "";
+const sections = Array.isArray(config?.sections) ? config.sections : [];
+
+const searchPlaceholder = "Search items, blocks, features...";
+---
+
+<SiteLayout title={title}>
+  <link rel="stylesheet" href="/styles/mods.css" />
+  <link rel="stylesheet" href="/styles/wiki.css" />
+
+  <NavBar />
+
+  <main class="page">
+    <section class="section sectionCentered">
+      <div class="aboutHero modsHero wikiHero">
+        <img class="wikiHeroLogo" src={logo} alt={title} loading="eager" />
+      </div>
+    </section>
+
+    <section class="section sectionCentered sectionTight">
+      <div class="sectionTitle">
+        <span>{aboutTitle}</span>
+      </div>
+
+      {aboutSubtitle ? <p class="sectionSubtitle">{aboutSubtitle}</p> : null}
+
+      <div class="aboutText">{aboutText}</div>
+
+      <div class="modsSearch">
+        <input
+          id="wikiSearchInput"
+          class="modsSearchInput"
+          type="search"
+          placeholder={searchPlaceholder}
+          autocomplete="off"
+          spellcheck="false"
+        />
+      </div>
+    </section>
+
+    {sections.map((section) => (
+      <section class="section sectionCentered sectionTight wikiSection" id={section.id}>
+        <div class="wikiSectionHeader">
+          <h2 class="wikiSectionTitle">{section.title}</h2>
+        </div>
+
+        <div class="gridWrapper">
+          <div class="grid wikiGrid">
+            {(section.entries ?? []).map((entry) => (
+              <article
+                class="card wikiCard"
+                data-section={section.id}
+                data-search={`${entry.title} ${entry.subtitle} ${entry.namespace_id} ${entry.search}`.toLowerCase()}
+              >
+                <div class="cardContent wikiCardContent">
+                  <img class="cardLogo wikiCardLogo" src={entry.icon} alt={entry.title} loading="lazy" />
+                  <h3>{entry.title}</h3>
+                  <p>{entry.subtitle}</p>
+                  <div class="wikiCardNs">{entry.namespace_id}</div>
+                </div>
+
+                <div class="cardAction">
+                  <a class="btn btnPrimary" href={`/wiki/${slug}/${section.id}/${entry.id}`}>
+                    View
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        <div class="modsEmpty" data-empty-for={section.id} style="display:none;">
+          No results in {section.title}.
+        </div>
+      </section>
+    ))}
+  </main>
+
+  <Footer />
+
+  <script is:inline>
+    const input = document.getElementById("wikiSearchInput");
+    const cards = Array.from(document.querySelectorAll(".wikiCard[data-search]"));
+    const sections = Array.from(document.querySelectorAll(".wikiSection"));
+
+    const update = () => {
+      const q = (input.value || "").trim().toLowerCase();
+      const visiblePerSection = new Map();
+
+      for (const card of cards) {
+        const hay = card.getAttribute("data-search") || "";
+        const show = q.length === 0 || hay.includes(q);
+        card.style.display = show ? "" : "none";
+
+        const sectionId = card.getAttribute("data-section");
+        if (show) visiblePerSection.set(sectionId, (visiblePerSection.get(sectionId) || 0) + 1);
+      }
+
+      for (const section of sections) {
+        const sectionId = section.id;
+        const count = visiblePerSection.get(sectionId) || 0;
+
+        const emptyEl = section.querySelector(`[data-empty-for="${sectionId}"]`);
+        if (emptyEl) emptyEl.style.display = count === 0 ? "" : "none";
+      }
+    };
+
+    input.addEventListener("input", update);
+    update();
+  </script>
+</SiteLayout>
