@@ -2,7 +2,6 @@
 import SiteLayout from "../../layouts/SiteLayout.astro";
 import NavBar from "../NavBar.astro";
 import Footer from "../Footer.astro";
-import WikiRecipeGrid from "./WikiRecipeGrid.astro";
 
 const withBase = (path) => {
   if (!path) return "";
@@ -36,8 +35,7 @@ const entryHasDetails = (entry) =>
   (Array.isArray(entry.detailsBullets) && entry.detailsBullets.length) ||
   (Array.isArray(entry.detailsIds) && entry.detailsIds.length) ||
   (Array.isArray(entry.detailsGallery) && entry.detailsGallery.length) ||
-  (Array.isArray(entry.items) && entry.items.length) ||
-  Boolean(entry.recipe);
+  (Array.isArray(entry.items) && entry.items.length);
 
 const titleCaseFromId = (id) =>
   String(id ?? "")
@@ -100,13 +98,13 @@ const titleCaseFromId = (id) =>
 
       {sections.map((section) => (
         <section class="section sectionCentered sectionTight wikiSection" id={section.id} data-section={section.id}>
-          <div class="wikiSectionHeader">
-            <div class="sectionTitle">
-              <span>{section.title}</span>
-            </div>
+  <div class="wikiSectionHeader">
+    <div class="sectionTitle">
+      <span>{section.title}</span>
+    </div>
 
-            {section.subtitle ? <p class="sectionSubtitle">{section.subtitle}</p> : null}
-          </div>
+    {section.subtitle ? <p class="sectionSubtitle">{section.subtitle}</p> : null}
+  </div>
 
           <div class="gridWrapper">
             <div class="grid wikiGrid">
@@ -114,9 +112,6 @@ const titleCaseFromId = (id) =>
                 const hasDetails = entryHasDetails(entry);
                 const iconSrc = entry.icon ? withBase(entry.icon) : "";
                 const detailsOpenTitle = entry.detailsTitle ?? "Details";
-                const detailsSubtitle = entry.detailsSubtitle ?? "";
-
-                const showHeader = Boolean(detailsOpenTitle) || Boolean(detailsSubtitle);
 
                 return (
                   <article
@@ -141,16 +136,12 @@ const titleCaseFromId = (id) =>
 
                     {hasDetails ? (
                       <div class="wikiCardDetails" aria-hidden="true">
-                        {showHeader ? (
-                          <div class="wikiDetailsHeader">
-                            {detailsOpenTitle ? <div class="wikiDetailsTitle">{detailsOpenTitle}</div> : null}
-                            {detailsSubtitle ? <div class="wikiDetailsSubtitle">{detailsSubtitle}</div> : null}
-                          </div>
-                        ) : null}
+                        <div class="wikiDetailsHeader">
+                          <div class="wikiDetailsTitle">{detailsOpenTitle}</div>
+                          {entry.detailsSubtitle ? <div class="wikiDetailsSubtitle">{entry.detailsSubtitle}</div> : null}
+                        </div>
 
                         {entry.detailsText ? <div class="wikiDetailsText">{entry.detailsText}</div> : null}
-
-                        {entry.recipe ? <WikiRecipeGrid recipe={entry.recipe} /> : null}
 
                         {Array.isArray(entry.detailsIds) && entry.detailsIds.length ? (
                           <div class="wikiDetailsIds">
@@ -212,7 +203,7 @@ const titleCaseFromId = (id) =>
                     <div class="cardAction">
                       {hasDetails ? (
                         <button class="btn btnSecondary wikiToggle" type="button" aria-expanded="false">
-                          Show Recipe
+                          More info
                         </button>
                       ) : null}
 
@@ -254,7 +245,7 @@ const titleCaseFromId = (id) =>
 
       details.setAttribute("aria-hidden", open ? "false" : "true");
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
-      toggle.textContent = open ? "Close" : "Show Recipe";
+      toggle.textContent = open ? "Less info" : "More info";
 
       if (open) {
         for (const other of cards) {
@@ -265,7 +256,7 @@ const titleCaseFromId = (id) =>
             if (otherDetails) otherDetails.setAttribute("aria-hidden", "true");
             if (otherToggle) {
               otherToggle.setAttribute("aria-expanded", "false");
-              otherToggle.textContent = "Show Recipe";
+              otherToggle.textContent = "More info";
             }
           }
         }
@@ -334,6 +325,24 @@ const titleCaseFromId = (id) =>
   </script>
 
   <style>
+    .wikiLayout {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px;
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .wikiSidebar {
+      position: sticky;
+      top: 120px;
+      height: calc(100vh - 140px);
+      display: flex;
+      align-items: center;
+    }
+
     .wikiSidebarInner {
       width: 100%;
       border-radius: var(--radius-lg);
@@ -399,6 +408,10 @@ const titleCaseFromId = (id) =>
       font-weight: 700;
     }
 
+    .wikiMain {
+      min-width: 0;
+    }
+
     .wikiCard {
       transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
       will-change: transform;
@@ -427,10 +440,14 @@ const titleCaseFromId = (id) =>
     }
 
     .wikiCard.isOpen .wikiCardDetails {
-      max-height: 1800px;
+      max-height: 1400px;
       opacity: 1;
       transform: translateY(0);
       margin-top: 18px;
+    }
+
+    .wikiCard.isExpanded {
+      grid-column: 1 / -1;
     }
 
     .wikiDetailsHeader {
@@ -557,6 +574,16 @@ const titleCaseFromId = (id) =>
     }
 
     @media (max-width: 980px) {
+      .wikiLayout {
+        grid-template-columns: 1fr;
+      }
+
+      .wikiSidebar {
+        position: static;
+        height: auto;
+        align-items: stretch;
+      }
+
       .wikiCard.isExpanded {
         grid-column: auto;
       }

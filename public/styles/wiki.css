@@ -1,4 +1,4 @@
-@import "./wikiRecipe.css";
+
 
 /* Hero */
 .wikiHero {
@@ -24,6 +24,7 @@
   display: block;
 }
 
+
 /* About */
 .aboutText {
   margin: 18px auto 0;
@@ -34,10 +35,12 @@
   color: var(--text);
 }
 
+
 /* Section header */
 .wikiSectionHeader {
   margin-top: 18px;
 }
+
 
 /* Main grid and cards */
 .wikiGrid {
@@ -53,6 +56,7 @@
 .wikiToggle {
   white-space: nowrap;
 }
+
 
 /* Details panel inside a card */
 .wikiCardDetails {
@@ -83,6 +87,7 @@
   margin: 6px 0;
 }
 
+
 /* Expanded card behavior */
 .wikiCard.isOpen {
   grid-column: span 2;
@@ -98,33 +103,27 @@
   margin: 0 auto;
 }
 
-/* Layout */
+
+/* Layout (sidebar + main) */
 .wikiLayout {
   display: grid;
-  grid-template-columns: 280px minmax(0, 1fr);
+  grid-template-columns: 240px 1fr;
   gap: 24px;
   align-items: start;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 16px;
 }
 
 .wikiSidebar {
-  position: sticky;
-  top: 120px;
-  height: calc(100vh - 140px);
-  align-self: start;
-  margin: 0;
-  padding: 0;
+  margin-left: -160px;
+  width: 260px;
+  padding: 16px;
 }
 
 .wikiMain {
-  min-width: 0;
-  margin: 0;
-  overflow-x: hidden;
+  margin-left: -70px;
 }
 
-/* Mini cards */
+
+/* Mini cards (Food grid inside details) */
 .wikiMiniTitle,
 .wikiMiniNs,
 .wikiMiniSub {
@@ -162,32 +161,9 @@
   text-align: left;
 }
 
-/* Hard overflow safety */
-.page,
-.gridWrapper,
-.grid,
-.wikiCard,
-.wikiCardDetails,
-.cardContent {
-  min-width: 0;
-  max-width: 100%;
-}
-
-body {
-  overflow-x: hidden;
-}
 
 /* Responsive */
 @media (max-width: 980px) {
-  .wikiLayout {
-    grid-template-columns: 1fr;
-  }
-
-  .wikiSidebar {
-    position: static;
-    height: auto;
-  }
-
   .wikiCard.isOpen {
     grid-column: span 2;
   }

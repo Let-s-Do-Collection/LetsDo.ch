@@ -1,23 +1,6 @@
 ---
 import WikiPage from "../../components/wiki/WikiPage.astro";
-import baseConfig from "../../wiki/config/farm-and-charm.js";
-import { loadFarmAndCharmRecipes, recipeToWikiEntry } from "../../lib/recipes/githubFarmAndCharm.js";
-
-const recipeFiles = await loadFarmAndCharmRecipes();
-const recipeEntries = recipeFiles.map(recipeToWikiEntry);
-
-const config = {
-  ...baseConfig,
-  sections: [
-    ...(Array.isArray(baseConfig.sections) ? baseConfig.sections : []),
-    {
-      id: "recipes",
-      title: "Recipes",
-      subtitle: `${recipeEntries.length} entries`,
-      entries: recipeEntries,
-    },
-  ],
-};
+import config from "../../wiki/config/farm-and-charm.js";
 ---
 
 <WikiPage config={config} />
