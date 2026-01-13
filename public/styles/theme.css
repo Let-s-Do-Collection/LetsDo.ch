@@ -270,6 +270,25 @@ img {
   background: var(--card);
 }
 
+.btnSecondary {
+  background: rgba(0, 0, 0, 0.03);
+  color: var(--text);
+}
+
+.btnSecondary:hover {
+  background: rgba(0, 0, 0, 0.06);
+  border-color: var(--borderStrong);
+}
+
+[data-theme="dark"] .btnSecondary {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] .btnSecondary:hover {
+  background: rgba(255, 255, 255, 0.10);
+  border-color: var(--borderStrong);
+}
+
 /* ================= SECTIONS ================= */
 
 .section {
