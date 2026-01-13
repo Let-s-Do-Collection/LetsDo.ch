@@ -12,21 +12,29 @@ This is your home for blocks, items, mechanics, and quick guidance for Farm & Ch
 Farm & Charm is the food focused foundation of the Let’s Do ecosystem. It helps shared systems work together across mods, especially around cooking, processing, storage, and agriculture.
 
 And of course it also adds a lot of cozy farming content, from practical tools to decorative details that feel right at home in survival gameplay.
+
 `,
   sections: [
     {
       id: "stations",
       title: "Stations and Processing",
       entries: [
-        {
-          id: "stove",
-          title: "Stove",
-          namespace_id: "farm_and_charm:stove",
-          subtitle: "Your main station for baking and a heat source for cooking.",
-          icon: "/assets/icons/farm-and-charm/stove.png",
-          search:
-            "stove baking pastries bread fuel coal charcoal heat source cooking pot roaster recipe book crafting station",
-        },
+      {
+        id: "stove",
+        title: "Stove",
+        namespace_id: "farm_and_charm:stove",
+        subtitle: "Your main station for baking and a heat source for cooking.",
+        icon: "/assets/icons/farm-and-charm/stove.png",
+        search: "stove baking fuel heat cooking roaster pot",
+        details: true,
+        detailsTitle: "Usage",
+        detailsText: `The Stove is your primary crafting station for pastries and bread. It also acts as a heat source for the Cooking Pot and Roaster.`,
+        detailsBullets: [
+          "3 ingredient slots plus 1 fuel slot",
+          "Works with coal, charcoal, and other fuels",
+          "Crafting takes about 12 seconds per recipe",
+        ],
+      },
         {
           id: "cooking_pot",
           title: "Cooking Pot",

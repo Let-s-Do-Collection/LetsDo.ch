@@ -7,7 +7,6 @@ const { config } = Astro.props;
 
 const title = config?.title ?? "Wiki";
 const logo = config?.logo ?? "";
-const slug = config?.slug ?? "";
 const aboutTitle = config?.aboutTitle ?? "Welcome";
 const aboutSubtitle = config?.aboutSubtitle ?? "";
 const aboutText = config?.aboutText ?? "";
@@ -22,70 +21,123 @@ const searchPlaceholder = "Search items, blocks, features...";
 
   <NavBar />
 
-  <main class="page">
-    <section class="section sectionCentered">
-      <div class="aboutHero modsHero wikiHero">
-        <img class="wikiHeroLogo" src={logo} alt={title} loading="eager" />
-      </div>
-    </section>
+  <main class="page wikiLayout">
+    <aside class="wikiSidebar">
+      <div class="wikiSidebarInner">
+        <div class="wikiSideTitle">{title}</div>
 
-    <section class="section sectionCentered sectionTight">
-      <div class="sectionTitle">
-        <span>{aboutTitle}</span>
-      </div>
-
-      {aboutSubtitle ? <p class="sectionSubtitle">{aboutSubtitle}</p> : null}
-
-      <div class="aboutText">{aboutText}</div>
-
-      <div class="modsSearch">
-        <input
-          id="wikiSearchInput"
-          class="modsSearchInput"
-          type="search"
-          placeholder={searchPlaceholder}
-          autocomplete="off"
-          spellcheck="false"
-        />
-      </div>
-    </section>
-
-    {sections.map((section) => (
-      <section class="section sectionCentered sectionTight wikiSection" id={section.id}>
-        <div class="wikiSectionHeader">
-          <h2 class="wikiSectionTitle">{section.title}</h2>
+        <div class="wikiSideSearch">
+          <input
+            id="wikiSearchInput"
+            class="wikiSideSearchInput"
+            type="search"
+            placeholder={searchPlaceholder}
+            autocomplete="off"
+            spellcheck="false"
+          />
         </div>
 
-        <div class="gridWrapper">
-          <div class="grid wikiGrid">
-            {(section.entries ?? []).map((entry) => (
-              <article
-                class="card wikiCard"
-                data-section={section.id}
-                data-search={`${entry.title} ${entry.subtitle} ${entry.namespace_id} ${entry.search}`.toLowerCase()}
-              >
-                <div class="cardContent wikiCardContent">
-                  <img class="cardLogo wikiCardLogo" src={entry.icon} alt={entry.title} loading="lazy" />
-                  <h3>{entry.title}</h3>
-                  <p>{entry.subtitle}</p>
-                  <div class="wikiCardNs">{entry.namespace_id}</div>
-                </div>
+        <div class="wikiSideHeading">Content</div>
 
-                <div class="cardAction">
-                  <a class="btn btnPrimary" href={`/wiki/${slug}/${section.id}/${entry.id}`}>
-                    View
-                  </a>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
+        <nav class="wikiSideNav">
+          {sections.map((section) => (
+            <a class="wikiSideLink" href={`#${section.id}`} data-section-link={section.id}>
+              {section.title}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </aside>
 
-        <div class="modsEmpty" data-empty-for={section.id} style="display:none;">
-          No results in {section.title}.
+    <div class="wikiMain">
+      <section class="section sectionCentered">
+        <div class="aboutHero modsHero wikiHero">
+          <img class="wikiHeroLogo" src={logo} alt={title} loading="eager" />
         </div>
       </section>
-    ))}
+
+      <section class="section sectionCentered sectionTight">
+        <div class="sectionTitle">
+          <span>{aboutTitle}</span>
+        </div>
+
+        {aboutSubtitle ? <p class="sectionSubtitle">{aboutSubtitle}</p> : null}
+
+        <div class="aboutText">{aboutText}</div>
+      </section>
+
+      {sections.map((section) => (
+        <section class="section sectionCentered sectionTight wikiSection" id={section.id} data-section={section.id}>
+          <div class="wikiSectionHeader">
+            <div class="sectionTitle">
+              <span>{section.title}</span>
+            </div>
+          </div>
+
+          <div class="gridWrapper">
+            <div class="grid wikiGrid">
+              {(section.entries ?? []).map((entry) => (
+                <article
+                  class="card wikiCard"
+                  data-section={section.id}
+                  data-search={`${entry.title} ${entry.subtitle} ${entry.namespace_id} ${entry.search}`.toLowerCase()}
+                  data-has-details={entry.details ? "true" : "false"}
+                >
+<div class="cardContent wikiCardContent">
+  <img
+    class="cardLogo wikiCardLogo"
+    src={entry.icon}
+    alt={entry.title}
+    loading="lazy"
+  />
+
+  <h3>{entry.title}</h3>
+
+  <div class="wikiCardNs">{entry.namespace_id}</div>
+
+  <p>{entry.subtitle}</p>
+</div>
+
+                    {entry.details ? (
+                      <div class="wikiCardDetails" aria-hidden="true">
+                        {entry.detailsTitle ? <div class="wikiDetailsTitle">{entry.detailsTitle}</div> : null}
+                        {entry.detailsText ? <div class="wikiDetailsText">{entry.detailsText}</div> : null}
+
+                        {Array.isArray(entry.detailsBullets) && entry.detailsBullets.length ? (
+                          <ul class="wikiDetailsList">
+                            {entry.detailsBullets.map((line) => (
+                              <li>{line}</li>
+                            ))}
+                          </ul>
+                        ) : null}
+                      </div>
+                    ) : null}
+                  </div>
+
+                  <div class="cardAction">
+                    {entry.details ? (
+                      <button class="btn btnSecondary wikiToggle" type="button" aria-expanded="false">
+                        More info
+                      </button>
+                    ) : null}
+
+                    {entry.wikiHref ? (
+                      <a class="btn btnPrimary" href={entry.wikiHref}>
+                        View
+                      </a>
+                    ) : null}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div class="modsEmpty" data-empty-for={section.id} style="display:none;">
+            No results in {section.title}.
+          </div>
+        </section>
+      ))}
+    </div>
   </main>
 
   <Footer />
@@ -94,6 +146,66 @@ const searchPlaceholder = "Search items, blocks, features...";
     const input = document.getElementById("wikiSearchInput");
     const cards = Array.from(document.querySelectorAll(".wikiCard[data-search]"));
     const sections = Array.from(document.querySelectorAll(".wikiSection"));
+    const sectionLinks = Array.from(document.querySelectorAll("[data-section-link]"));
+
+    const setOpen = (card, open) => {
+      const details = card.querySelector(".wikiCardDetails");
+      const toggle = card.querySelector(".wikiToggle");
+      if (!details || !toggle) return;
+
+      card.classList.toggle("isOpen", open);
+      card.classList.toggle("isExpanded", open);
+
+      details.setAttribute("aria-hidden", open ? "false" : "true");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.textContent = open ? "Less info" : "More info";
+
+      if (open) {
+        for (const other of cards) {
+          if (other !== card) {
+            other.classList.remove("isOpen", "isExpanded");
+            const otherDetails = other.querySelector(".wikiCardDetails");
+            const otherToggle = other.querySelector(".wikiToggle");
+            if (otherDetails) otherDetails.setAttribute("aria-hidden", "true");
+            if (otherToggle) {
+              otherToggle.setAttribute("aria-expanded", "false");
+              otherToggle.textContent = "More info";
+            }
+          }
+        }
+      }
+    };
+
+    document.addEventListener("click", (event) => {
+      const toggle = event.target.closest(".wikiToggle");
+      if (!toggle) return;
+
+      const card = toggle.closest(".wikiCard");
+      if (!card) return;
+
+      const open = !card.classList.contains("isOpen");
+      setOpen(card, open);
+
+      if (open) {
+        requestAnimationFrame(() => {
+          card.scrollIntoView({ behavior: "smooth", block: "center" });
+        });
+      }
+    });
+
+    const updateActiveSection = () => {
+      const fromTop = window.scrollY + 140;
+      let active = null;
+
+      for (const section of sections) {
+        if (section.offsetTop <= fromTop) active = section;
+      }
+
+      const activeId = active ? active.id : null;
+      for (const link of sectionLinks) {
+        link.classList.toggle("isActive", link.getAttribute("data-section-link") === activeId);
+      }
+    };
 
     const update = () => {
       const q = (input.value || "").trim().toLowerCase();
@@ -104,6 +216,8 @@ const searchPlaceholder = "Search items, blocks, features...";
         const show = q.length === 0 || hay.includes(q);
         card.style.display = show ? "" : "none";
 
+        if (!show) setOpen(card, false);
+
         const sectionId = card.getAttribute("data-section");
         if (show) visiblePerSection.set(sectionId, (visiblePerSection.get(sectionId) || 0) + 1);
       }
@@ -111,13 +225,149 @@ const searchPlaceholder = "Search items, blocks, features...";
       for (const section of sections) {
         const sectionId = section.id;
         const count = visiblePerSection.get(sectionId) || 0;
-
         const emptyEl = section.querySelector(`[data-empty-for="${sectionId}"]`);
         if (emptyEl) emptyEl.style.display = count === 0 ? "" : "none";
       }
     };
 
     input.addEventListener("input", update);
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+
     update();
+    updateActiveSection();
   </script>
+
+  <style>
+    .wikiLayout {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px;
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    .wikiSidebar {
+      position: sticky;
+      top: 120px;
+      height: calc(100vh - 140px);
+      display: flex;
+      align-items: center;
+    }
+
+    .wikiSidebarInner {
+      width: 100%;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      background: var(--card);
+      box-shadow: var(--shadow);
+      padding: 16px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .wikiSideTitle {
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    .wikiSideSearchInput {
+      width: 100%;
+      padding: 12px 12px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.02);
+      color: var(--text);
+      font-size: 14px;
+      outline: none;
+    }
+
+    .wikiSideSearchInput:focus {
+      border-color: var(--borderStrong);
+      background: var(--card);
+    }
+
+    .wikiSideHeading {
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .wikiSideNav {
+      display: grid;
+      gap: 8px;
+    }
+
+    .wikiSideLink {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 13px;
+      padding: 8px 10px;
+      border-radius: var(--radius-md);
+    }
+
+    .wikiSideLink:hover {
+      background: rgba(0, 0, 0, 0.04);
+      color: var(--text);
+    }
+
+    .wikiSideLink.isActive {
+      background: rgba(0, 0, 0, 0.06);
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .wikiMain {
+      min-width: 0;
+    }
+
+    .wikiCard {
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+      will-change: transform;
+    }
+
+    .wikiCard:hover {
+      transform: translateY(-1px);
+    }
+
+    .wikiCardDetails {
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transform: translateY(-4px);
+      transition: max-height 260ms ease, opacity 220ms ease, transform 220ms ease;
+      margin-top: 0;
+    }
+
+    .wikiCard.isOpen .wikiCardDetails {
+      max-height: 520px;
+      opacity: 1;
+      transform: translateY(0);
+      margin-top: 18px;
+    }
+
+    .wikiCard.isExpanded {
+      grid-column: 1 / -1;
+    }
+
+    @media (max-width: 980px) {
+      .wikiLayout {
+        grid-template-columns: 1fr;
+      }
+
+      .wikiSidebar {
+        position: static;
+        height: auto;
+        align-items: stretch;
+      }
+
+      .wikiCard.isExpanded {
+        grid-column: auto;
+      }
+    }
+  </style>
 </SiteLayout>
