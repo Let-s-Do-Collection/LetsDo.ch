@@ -1,0 +1,92 @@
+---
+const withBase = (path) => {
+  if (!path) return "";
+  if (path.startsWith("http://") || path.startsWith("https://")) return path;
+
+  const base = import.meta.env.BASE_URL || "/";
+  const cleanBase = base.endsWith("/") ? base.slice(0, -1) : base;
+  const cleanPath = path.startsWith("/") ? path : `/${path}`;
+
+  return `${cleanBase}${cleanPath}`;
+};
+
+const { recipe } = Astro.props;
+
+const fallback = withBase("/assets/icons/unavailable.png");
+
+const isFilledSlot = (slot) => {
+  if (!slot || typeof slot !== "object") return false;
+  const id = String(slot.id ?? "").trim();
+  return id.length > 0;
+};
+
+const slotIconSrc = (slot) => {
+  if (!slot || typeof slot !== "object") return "";
+  return withBase(String(slot.icon ?? ""));
+};
+
+const slotIdText = (slot) => {
+  if (!slot || typeof slot !== "object") return "";
+  return String(slot.id ?? "").trim();
+};
+
+const output = recipe?.output ?? null;
+const outputId = output ? String(output.id ?? "").trim() : "";
+const outputIcon = output ? withBase(String(output.icon ?? "")) : "";
+const outputCount = output && typeof output.count === "number" ? output.count : 1;
+---
+
+<div class="wikiRecipe">
+  <div class="wikiRecipeMeta">
+    <div class="wikiRecipeKind">{recipe?.kindLabel ?? ""}</div>
+  </div>
+
+  <div class="wikiRecipeBody">
+    <div class="wikiRecipeGrid">
+      {(recipe?.grid ?? []).map((row) => (
+        <div class="wikiRecipeRow">
+          {row.map((slot) =>
+            isFilledSlot(slot) ? (
+              <div class="wikiRecipeSlot">
+                <img
+                  class="wikiRecipeIcon"
+                  src={slotIconSrc(slot) || fallback}
+                  alt={slotIdText(slot) || "unavailable"}
+                  loading="lazy"
+                  onerror={`this.onerror=null;this.src='${fallback}';`}
+                />
+                <div class="wikiRecipeId">{slotIdText(slot)}</div>
+              </div>
+            ) : (
+              <div class="wikiRecipeSlot isEmpty" aria-hidden="true" />
+            )
+          )}
+        </div>
+      ))}
+    </div>
+
+    <div class="wikiRecipeArrow">→</div>
+
+    <div class="wikiRecipeOutput">
+      <div class="wikiRecipeSlot wikiRecipeOutputSlot">
+        {outputId ? (
+          <>
+            <img
+              class="wikiRecipeIcon"
+              src={outputIcon || fallback}
+              alt={outputId || "unavailable"}
+              loading="lazy"
+              onerror={`this.onerror=null;this.src='${fallback}';`}
+            />
+            <div class="wikiRecipeId">
+              {outputId}
+              {outputCount > 1 ? ` ×${outputCount}` : ""}
+            </div>
+          </>
+        ) : (
+          <div class="wikiRecipeSlot isEmpty" aria-hidden="true" />
+        )}
+      </div>
+    </div>
+  </div>
+</div>
