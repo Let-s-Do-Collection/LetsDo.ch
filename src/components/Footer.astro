@@ -3,6 +3,7 @@ const year = new Date().getFullYear();
 ---
 
 <link rel="stylesheet" href="/styles/footer.css" />
+
 <footer class="footer">
   <div class="footerInner">
     <div class="footerLeft">
@@ -14,7 +15,6 @@ const year = new Date().getFullYear();
           type="button"
           aria-label="Toggle light or dark mode"
           data-tooltip="Toggle Light or Dark"
-          title="Toggle Light or Dark"
         >
           <img class="modeIcon" src="/assets/icons/ui/mode/sun.png" alt="Mode" />
         </button>
@@ -27,8 +27,7 @@ const year = new Date().getFullYear();
             type="button"
             data-theme="blue"
             aria-label="Blue theme"
-            data-tooltip="Marco&#39;s pick: Blue"
-            title="Marco's pick: Blue"
+            data-tooltip="Marco's pick: Blue"
           >
             <img src="/assets/icons/ui/blue.png" alt="Blue" />
           </button>
@@ -39,7 +38,6 @@ const year = new Date().getFullYear();
             data-theme="gold"
             aria-label="Gold theme"
             data-tooltip="CR loves: Gold"
-            title="CR loves: Gold"
           >
             <img src="/assets/icons/ui/gold.png" alt="Gold" />
           </button>
@@ -50,7 +48,6 @@ const year = new Date().getFullYear();
             data-theme="pink"
             aria-label="Pink theme"
             data-tooltip="MissLilitus chose: Pink"
-            title="MissLilitus chose: Pink"
           >
             <img src="/assets/icons/ui/pink.png" alt="Pink" />
           </button>
@@ -58,10 +55,19 @@ const year = new Date().getFullYear();
           <button
             class="themeHead"
             type="button"
+            data-theme="neon"
+       aria-label="Tsuyumori: Particle Party"
+       data-tooltip="Tsuyumori: High-energy neon madness"
+          >
+            <img src="/assets/icons/ui/neon.png" alt="Neon" />
+          </button>
+
+          <button
+            class="themeHead"
+            type="button"
             data-theme="green"
             aria-label="Green theme"
-            data-tooltip="Lunar&#39;s chaos: Toxic Green"
-            title="Lunar's chaos: Toxic Green"
+            data-tooltip="Lunar's chaos: Toxic Green"
           >
             <img src="/assets/icons/ui/green.png" alt="Green" />
           </button>
@@ -70,12 +76,10 @@ const year = new Date().getFullYear();
     </div>
 
     <div class="footerText">
-      Copyright 2026 © satisfy<br />
+      Copyright {year} © satisfy<br />
       Let's Do is not affiliated with Mojang Studios
     </div>
   </div>
-
-  <link rel="stylesheet" href="/styles/footer.css" />
 
   <script is:inline>
     const root = document.documentElement
@@ -83,7 +87,7 @@ const year = new Date().getFullYear();
     const modeIcon = document.querySelector('.modeIcon')
     const themeButtons = document.querySelectorAll('.themeHead[data-theme]')
 
-    const themes = new Set(['blue', 'gold', 'pink', 'green'])
+    const themes = new Set(['blue', 'gold', 'pink', 'green', 'neon'])
 
     function normalizeTheme(value) {
       return themes.has(value) ? value : 'blue'
