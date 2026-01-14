@@ -34,13 +34,11 @@
   transition: transform 0.14s ease, filter 0.14s ease;
 }
 
-/* HOVER → 5px nach oben */
 .modeBtn:hover img,
 .themeHead:hover img {
   transform: translateY(-5px);
 }
 
-/* ACTIVE THEME → subtiler Glow */
 html[data-theme="blue"]  .themeHead[data-theme="blue"]  img,
 html[data-theme="gold"]  .themeHead[data-theme="gold"]  img,
 html[data-theme="pink"]  .themeHead[data-theme="pink"]  img,
