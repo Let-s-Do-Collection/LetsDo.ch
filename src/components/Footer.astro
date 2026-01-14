@@ -1,18 +1,72 @@
+---
+const year = new Date().getFullYear();
+---
+
+<link rel="stylesheet" href="/styles/footer.css" />
 <footer class="footer">
   <div class="footerInner">
-    <div class="themeSwitcher">
-      <button class="themeIcon" data-theme="light" type="button">
-        <img src="/assets/icons/sun.png" alt="Light mode" />
-      </button>
+    <div class="footerLeft">
+      <div class="footerTitle">Select your Theme!</div>
 
-      <button class="themeIcon" data-theme="dark" type="button">
-        <img src="/assets/icons/moon.png" alt="Dark mode" />
-      </button>
+      <div class="themeBar">
+        <button
+          class="modeBtn"
+          type="button"
+          aria-label="Toggle light or dark mode"
+          data-tooltip="Toggle Light or Dark"
+          title="Toggle Light or Dark"
+        >
+          <img class="modeIcon" src="/assets/icons/ui/mode/sun.png" alt="Mode" />
+        </button>
 
-      <button class="themeBtn theme-blue" data-theme="blue" type="button"></button>
-      <button class="themeBtn theme-gold" data-theme="gold" type="button"></button>
-      <button class="themeBtn theme-pink" data-theme="pink" type="button"></button>
-      <button class="themeBtn theme-green" data-theme="green" type="button"></button>
+        <div class="themeSpacer"></div>
+
+        <div class="themeRow" aria-label="Theme selection">
+          <button
+            class="themeHead"
+            type="button"
+            data-theme="blue"
+            aria-label="Blue theme"
+            data-tooltip="Marco&#39;s pick: Blue"
+            title="Marco's pick: Blue"
+          >
+            <img src="/assets/icons/ui/blue.png" alt="Blue" />
+          </button>
+
+          <button
+            class="themeHead"
+            type="button"
+            data-theme="gold"
+            aria-label="Gold theme"
+            data-tooltip="CR loves: Gold"
+            title="CR loves: Gold"
+          >
+            <img src="/assets/icons/ui/gold.png" alt="Gold" />
+          </button>
+
+          <button
+            class="themeHead"
+            type="button"
+            data-theme="pink"
+            aria-label="Pink theme"
+            data-tooltip="MissLilitus chose: Pink"
+            title="MissLilitus chose: Pink"
+          >
+            <img src="/assets/icons/ui/pink.png" alt="Pink" />
+          </button>
+
+          <button
+            class="themeHead"
+            type="button"
+            data-theme="green"
+            aria-label="Green theme"
+            data-tooltip="Lunar&#39;s chaos: Toxic Green"
+            title="Lunar's chaos: Toxic Green"
+          >
+            <img src="/assets/icons/ui/green.png" alt="Green" />
+          </button>
+        </div>
+      </div>
     </div>
 
     <div class="footerText">
@@ -21,33 +75,49 @@
     </div>
   </div>
 
+  <link rel="stylesheet" href="/styles/footer.css" />
+
   <script is:inline>
     const root = document.documentElement
-    const buttons = document.querySelectorAll('.themeSwitcher [data-theme]')
-    const iconLight = document.querySelector('.themeSwitcher [data-theme="light"]')
-    const iconDark = document.querySelector('.themeSwitcher [data-theme="dark"]')
+    const modeButton = document.querySelector('.modeBtn')
+    const modeIcon = document.querySelector('.modeIcon')
+    const themeButtons = document.querySelectorAll('.themeHead[data-theme]')
 
-    function normalizeTheme(theme) {
-      return theme === 'light' ? 'blue' : theme
+    const themes = new Set(['blue', 'gold', 'pink', 'green'])
+
+    function normalizeTheme(value) {
+      return themes.has(value) ? value : 'blue'
     }
 
-    function updateIcons(theme) {
-      const isDark = theme === 'dark'
-      iconLight.style.display = isDark ? 'inline-flex' : 'none'
-      iconDark.style.display = isDark ? 'none' : 'inline-flex'
+    function normalizeMode(value) {
+      return value === 'dark' ? 'dark' : 'light'
     }
 
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        const theme = normalizeTheme(button.dataset.theme)
-        root.setAttribute('data-theme', theme)
-        localStorage.setItem('theme', theme)
-        updateIcons(theme)
+    function apply(theme, mode) {
+      root.setAttribute('data-theme', theme)
+      root.setAttribute('data-mode', mode)
+      localStorage.setItem('theme', theme)
+      localStorage.setItem('mode', mode)
+      modeIcon.src = mode === 'dark' ? '/assets/icons/ui/mode/moon.png' : '/assets/icons/ui/mode/sun.png'
+    }
+
+    themeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const theme = normalizeTheme(btn.dataset.theme)
+        const mode = normalizeMode(root.getAttribute('data-mode'))
+        apply(theme, mode)
       })
     })
 
-    const saved = localStorage.getItem('theme') || 'blue'
-    root.setAttribute('data-theme', saved)
-    updateIcons(saved)
+    modeButton.addEventListener('click', () => {
+      const theme = normalizeTheme(root.getAttribute('data-theme'))
+      const currentMode = normalizeMode(root.getAttribute('data-mode'))
+      const nextMode = currentMode === 'dark' ? 'light' : 'dark'
+      apply(theme, nextMode)
+    })
+
+    const savedTheme = normalizeTheme(localStorage.getItem('theme'))
+    const savedMode = normalizeMode(localStorage.getItem('mode'))
+    apply(savedTheme, savedMode)
   </script>
 </footer>

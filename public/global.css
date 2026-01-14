@@ -2,13 +2,145 @@
 @import "@fontsource/source-sans-3/600.css";
 @import "@fontsource/source-sans-3/700.css";
 
+/* ================= ROOT ================= */
+
 :root {
   font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
-  color-scheme: dark;
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --text: #141414;
+  --muted: rgba(20, 20, 20, 0.68);
+
+  --navBg: rgba(220, 232, 242, 0.96);
+  --navBorder: rgba(36, 58, 74, 0.14);
+
+  --card: rgba(246, 250, 253, 0.9);
+
+  --border: rgba(20, 20, 20, 0.12);
+  --borderStrong: rgba(20, 20, 20, 0.18);
+
+  --accent: #3e6e8e;
+  --accentHover: #4c82a8;
+
+  --shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+  --shadowHover: 0 14px 32px rgba(0, 0, 0, 0.12);
+
+  --radius-lg: 18px;
+  --radius-md: 14px;
+  --radius-sm: 12px;
+}
+
+/* ================= HTML / BODY ================= */
+
+html {
+  min-height: 100%;
+  background: var(--bg);
 }
 
 body {
   margin: 0;
-  background: #0b0f16;
-  color: #ffffff;
+  min-height: 100%;
+  background: transparent;
+  color: var(--text);
+}
+
+/* ================= LIGHT THEMES ================= */
+
+[data-theme="blue"][data-mode="light"] {
+  --bg: linear-gradient(180deg, #eef3f8 0%, #e6edf4 55%, #ffffff 100%);
+  --navBg: rgba(220, 232, 242, 0.96);
+  --card: rgba(246, 250, 253, 0.9);
+  --accent: #3e6e8e;
+  --accentHover: #4c82a8;
+}
+
+[data-theme="gold"][data-mode="light"] {
+  --bg: linear-gradient(180deg, #fbf4e3 0%, #f4ead1 55%, #ffffff 100%);
+  --navBg: rgba(240, 228, 198, 0.96);
+  --card: rgba(252, 249, 242, 0.9);
+  --accent: #c9a24d;
+  --accentHover: #d9b45f;
+}
+
+[data-theme="pink"][data-mode="light"] {
+  --bg: linear-gradient(180deg, #f8eef3 0%, #f1dde7 55%, #ffffff 100%);
+  --navBg: rgba(236, 214, 226, 0.96);
+  --card: rgba(250, 242, 245, 0.9);
+  --accent: #c35c8e;
+  --accentHover: #d76fa3;
+}
+
+[data-theme="green"][data-mode="light"] {
+  --bg: linear-gradient(180deg, #eef5ec 0%, #e3efde 55%, #ffffff 100%);
+  --navBg: rgba(214, 231, 212, 0.96);
+  --card: rgba(246, 251, 245, 0.9);
+  --accent: #4f8a3f;
+  --accentHover: #63a552;
+}
+
+/* ================= DARK MODE BASE ================= */
+
+[data-mode="dark"] {
+  --text: #e7e7e7;
+  --muted: rgba(231, 231, 231, 0.6);
+
+  --navBorder: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.08);
+  --borderStrong: rgba(255, 255, 255, 0.14);
+
+  --shadow: 0 10px 35px rgba(0, 0, 0, 0.45);
+  --shadowHover: 0 14px 32px rgba(0, 0, 0, 0.6);
+}
+
+/* ================= DARK THEMES ================= */
+
+[data-theme="blue"][data-mode="dark"] {
+  --bg: linear-gradient(180deg, #1c1f24 0%, #15181d 100%);
+  --navBg: rgba(28, 31, 36, 0.96);
+  --card: rgba(36, 40, 46, 0.92);
+  --accent: #6fa3c8;
+  --accentHover: #87b7da;
+}
+
+[data-theme="gold"][data-mode="dark"] {
+  --bg: linear-gradient(180deg, #1f1b14 0%, #15130f 100%);
+  --navBg: rgba(31, 27, 20, 0.96);
+  --card: rgba(40, 35, 28, 0.92);
+  --accent: #d0b26b;
+  --accentHover: #e2c781;
+}
+
+[data-theme="pink"][data-mode="dark"] {
+  --bg: linear-gradient(180deg, #20161d 0%, #151016 100%);
+  --navBg: rgba(32, 22, 29, 0.96);
+  --card: rgba(41, 30, 38, 0.92);
+  --accent: #d07aa7;
+  --accentHover: #e08bb8;
+}
+
+[data-theme="green"][data-mode="dark"] {
+  --bg: linear-gradient(180deg, #151c16 0%, #0f1410 100%);
+  --navBg: rgba(21, 28, 22, 0.96);
+  --card: rgba(30, 38, 32, 0.92);
+  --accent: #7fbf7a;
+  --accentHover: #95d892;
+}
+
+html[data-mode="dark"] .modeBtn[data-mode="dark"]::before {
+  background: radial-gradient(
+    circle,
+    var(--glow-moon) 0%,
+    color-mix(in srgb, var(--glow-moon) 50%, transparent) 42%,
+    transparent 72%
+  );
+}
+
+html[data-mode="light"] .modeBtn[data-mode="light"]::before {
+  background: radial-gradient(
+    circle,
+    var(--glow-sun) 0%,
+    color-mix(in srgb, var(--glow-sun) 50%, transparent) 42%,
+    transparent 72%
+  );
 }

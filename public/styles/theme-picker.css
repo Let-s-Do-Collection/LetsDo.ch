@@ -1,0 +1,60 @@
+.themeBar {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.themeRow {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.themeSpacer {
+  width: 36px;
+}
+
+.modeBtn,
+.themeHead {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modeBtn img,
+.themeHead img {
+  width: 44px;
+  height: 44px;
+  image-rendering: pixelated;
+  transition: transform 0.14s ease, filter 0.14s ease;
+}
+
+/* HOVER → 5px nach oben */
+.modeBtn:hover img,
+.themeHead:hover img {
+  transform: translateY(-5px);
+}
+
+/* ACTIVE THEME → subtiler Glow */
+html[data-theme="blue"]  .themeHead[data-theme="blue"]  img,
+html[data-theme="gold"]  .themeHead[data-theme="gold"]  img,
+html[data-theme="pink"]  .themeHead[data-theme="pink"]  img,
+html[data-theme="green"] .themeHead[data-theme="green"] img {
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.18));
+}
+
+[data-mode="dark"]
+html[data-theme="blue"]  .themeHead[data-theme="blue"]  img,
+[data-mode="dark"]
+html[data-theme="gold"]  .themeHead[data-theme="gold"]  img,
+[data-mode="dark"]
+html[data-theme="pink"]  .themeHead[data-theme="pink"]  img,
+[data-mode="dark"]
+html[data-theme="green"] .themeHead[data-theme="green"] img {
+  filter: drop-shadow(0 6px 12px rgba(255, 255, 255, 0.22));
+}
