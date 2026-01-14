@@ -471,23 +471,35 @@ img {
 }
 
 .expectPoints {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   gap: 18px;
 }
 
+.expectPoint {
+  width: 100%;
+  max-width: 560px;
+  text-align: center;
+}
+
 .expectPoint h3 {
+  width: 100%;
   margin: 0;
   font-size: 18px;
   font-weight: 800;
   letter-spacing: -0.01em;
+  text-align: center;
 }
 
 .expectPoint p {
+  width: 100%;
   margin: 8px 0 0;
   font-size: 15.5px;
   color: var(--muted);
   line-height: 1.6;
-  max-width: 60ch;
+  text-align: center;
 }
 
 .expectMedia {

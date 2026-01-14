@@ -26,45 +26,58 @@ HerbalBrews focuses on tea, coffee, and magical brews, expanding the Let’s Do 
           icon: "/assets/icons/herbalbrews/stove.png",
           search: "stove heat hot surface kettle tea kettle heating station",
         },
-        {
-          id: "tea_kettle",
-          title: "Tea Kettle",
-          namespace_id: "herbalbrews:tea_kettle",
-          subtitle: "Main brewing station for Tea and Coffee.",
-          icon: "/assets/icons/herbalbrews/tea_kettle.png",
-          search: "tea kettle tea coffee station heat items blaze powder water bottles bucket bottle slot output crafting",
-          details: true,
-          detailsTitle: "Usage",
-          detailsText: `The Tea Kettle is your main station for brewing Tea and Coffee.
+{
+  id: "tea_kettle",
+  title: "Tea Kettle",
+  namespace_id: "herbalbrews:tea_kettle",
+  subtitle: "The primary station for brewing Tea and Coffee.",
+  icon: "/assets/icons/herbalbrews/tea_kettle.png",
+  search: "tea kettle tea coffee station heat items blaze powder water bottles bucket bottle slot output crafting",
+  details: true,
+  detailsTitle: "Usage",
+  detailsText: `The Tea Kettle works similarly to other brewing stations.
 
-It provides multiple ingredient slots, a bottle slot, an output slot, and dedicated inputs for heat and water.
+It has four Ingredient Input Slots, one Bottle Slot, one Heat Slot, one Water Input Slot, and one Output Slot.
 
-Different recipes require different amounts of heat and water.`,
-          detailsBullets: [
-            "4 ingredient input slots",
-            "1 bottle slot",
-            "1 output slot",
-            "1 heat item slot",
-            "1 water input slot",
-          ],
-        },
-        {
-          id: "brewing_cauldron",
-          title: "Brewing Cauldron",
-          namespace_id: "herbalbrews:brewing_cauldron",
-          subtitle: "Combines Potions into Flasks.",
-          icon: "/assets/icons/herbalbrews/cauldron.png",
-          search: "brewing cauldron flasks potions herbal infusion catalyst",
-          details: true,
-          detailsTitle: "Usage",
-          detailsText: `The Brewing Cauldron is used to craft Flasks by combining potion effects.`,
-          detailsBullets: [
-            "3 potion input slots",
-            "1 output slot",
-            "1 catalyst slot: Herbal Infusion",
-            "Outputs a Flask",
-          ],
-        },
+Place the required Ingredients into the Input Slots, add a valid Heat Item and Water, and wait for the brewing process to complete. The finished drink then appears in the Output Slot.
+
+Ingredients, bottles, and the brewed result are also visually displayed inside the block while brewing.`,
+  detailsBullets: [
+    "Four Ingredient Input Slots",
+    "One Bottle Slot",
+    "One Heat Item Slot",
+    "One Water Input Slot",
+    "One Output Slot",
+    "Requires Heat and Water to brew",
+    "Input and Output Items are visible in the Block Model",
+  ],
+},
+{
+  id: "brewing_cauldron",
+  title: "Brewing Cauldron",
+  namespace_id: "herbalbrews:brewing_cauldron",
+  subtitle: "A brewing station for creating Flasks from Potions.",
+  icon: "/assets/icons/herbalbrews/cauldron.png",
+  search: "brewing cauldron flasks potions herbal infusion catalyst",
+  details: true,
+  detailsTitle: "Usage",
+  detailsText: `The Brewing Cauldron is used to combine multiple Potions into a single Flask.
+
+It has three Potion Input Slots, one Catalyst Slot, and one Output Slot.
+
+Place three Potions into the Input Slots and add Herbal Infusion as the catalyst. After the brewing process finishes, the resulting Flask appears in the Output Slot.
+
+The Potions placed inside the Cauldron are also visually displayed while brewing.`,
+  detailsBullets: [
+    "Three Potion Input Slots",
+    "One Catalyst Slot: Herbal Infusion",
+    "One Output Slot",
+    "Combines multiple Potion effects into a single Flask",
+    "Input Potions are visible in the Block Model",
+  ],
+},
+
+
       ],
     },
     {
