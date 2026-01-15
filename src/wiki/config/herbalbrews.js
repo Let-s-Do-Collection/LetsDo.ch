@@ -410,7 +410,7 @@ The deeper you are, the stronger the effect becomes. When multiple players are n
           id: "config",
           title: "Configuration",
           subtitle: "Most gameplay features of HerbalBrews can be adjusted via a configuration file, usually located at `config/herbalbrews.json`.",
-          icon: "/assets/icons/farm-and-charm/config.png",
+          icon: "/assets/icons/misc/config.png",
           search: "config configuration settings options balance json herbalbrews",
         },
    {

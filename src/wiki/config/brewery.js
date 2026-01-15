@@ -25,24 +25,28 @@ Alongside that, you get practical tavern blocks for storage and serving, playful
           title: "Brewingstation",
           namespace_id: "brewery:*_brewingstation",
           subtitle: "The heart of Brewery: brew Beer and Whiskey through direct interaction.",
-          icon: "/assets/icons/brewery/brewingstation.png",
+          icon: "/assets/icons/brewery/copper_brewingstation.png",
           search: "brewingstation brewing station beer whiskey minigame tiers wood copper netherite 2x2x2",
           details: true,
           detailsTitle: "How it works",
-          detailsText: `The Brewingstation is used to brew Beer and Whiskey.
+detailsText: `The Brewingstation is used to brew Beer and Whiskey.
 
 It is a multi-block station and needs a 2x2x2 space to be placed.
 
 There is no GUI. Brewing happens through direct interaction: you add ingredients, start the process, and respond to small interactive events along the way.
 
-The station comes in tiers: Wood, Copper, and Netherite. To brew Whiskey, you need Copper or Netherite.`,
-          detailsBullets: [
-            "Multi-block station, requires a 2x2x2 space",
-            "No GUI, works via direct interaction",
-            "Brewing includes interactive events",
-            "Tiers: Wood, Copper, Netherite",
-            "Whiskey requires Copper or Netherite",
-          ],
+The faster you complete these events, the more beer is brewed and the higher its quality becomes. Making too many mistakes can cause a booze entity to spawn. This does not happen in Peaceful mode.
+
+The station comes in tiers: Wood, Copper, and Netherite. To brew Whiskey, you need Copper or Netherite. The Netherite Brewingstation always produces the highest quality in the maximum possible amount.`,     detailsBullets: [
+       "Multi-block station, requires a 2x2x2 space",
+       "No GUI, works via direct interaction",
+       "Brewing includes timed interactive events",
+       "Faster completion increases output and quality",
+       "Mistakes may spawn a booze entity (not in Peaceful)",
+       "Tiers: Wood, Copper, Netherite",
+       "Whiskey requires Copper or Netherite",
+       "Netherite always yields maximum quality and amount",
+     ],
         },
       ],
     },
@@ -135,7 +139,7 @@ The carpet can be removed again by interacting with the Table.`,
           id: "patterned_wool",
           title: "Patterned Wool",
           namespace_id: "brewery:patterned_wool",
-          subtitle: "A patterned block for cozy interiors and Brewfest colors.",
+          subtitle: "A patterned wool block for cozy interiors and Brewfest colors.",
           icon: "/assets/icons/brewery/patterned_wool.png",
           search: "patterned wool brewery",
         },
@@ -145,18 +149,21 @@ The carpet can be removed again by interacting with the Table.`,
           namespace_id: "brewery:gingerbread",
           subtitle: "A writable wall decoration for notes, menus, and messages.",
           icon: "/assets/icons/brewery/gingerbread.png",
-          search: "gingerbread wall decoration writeable sign glow ink",
+          search: "gingerbread wall decoration writable sign glow ink",
           details: true,
           detailsTitle: "Write your own text",
-          detailsText: `Gingerbread is a wall mounted decoration that also works as a writable sign.
+detailsText: `Gingerbread is a wall mounted decoration that works as a writable note.
 
-Right-click it to open the text screen and add your own messages. You can also apply Glow Ink to make the text glow, which stands out nicely in darker rooms.`,
-          detailsBullets: [
-            "Wall placed writable decoration",
-            "Right-click to open the text interface",
-            "Supports glowing text using Glow Ink",
-            "Needs a sturdy surface behind it",
-          ],
+It is intended for short messages only, such as quick notes, labels, or small menu entries.
+
+Right-click it to open the text screen and add your text. You can also apply Glow Ink to make the text glow, which helps it stand out in darker rooms.`,
+detailsBullets: [
+  "Wall placed writable decoration",
+  "Designed for short notes and brief messages",
+  "Right-click to open the text interface",
+  "Supports glowing text using Glow Ink",
+  "Needs a sturdy surface behind it",
+],
         },
         {
           id: "completionist_banner",
@@ -180,238 +187,144 @@ Once earned, it can be placed as a standing banner or as a wall banner.`,
         },
       ],
     },
-
+{
+  id: "items",
+  title: "Items, Tools and Clothing",
+  subtitle: "Usable items, equipment, and outfits introduced by Brewery.",
+  entries: [
     {
-      id: "items_tools",
-      title: "Items and Tools",
-      subtitle: "Handy items that interact with Brewery mechanics.",
-      entries: [
-        {
-          id: "breathalyzer",
-          title: "Breathalyzer",
-          namespace_id: "brewery:breathalyzer",
-          subtitle: "Blow into it to see how drunk you currently are.",
-          icon: "/assets/icons/brewery/breathalyzer.png",
-          search: "breathalyzer check drunkenness easy warning danger drunk blackout brewery tool",
-          details: true,
-          detailsTitle: "Reading your alcohol level",
-          detailsText: `Hold right-click to use it. After a short moment, it stores a reading and shows it as a colored tooltip level: EASY, WARNING, or DANGER.
+      id: "breathalyzer",
+      title: "Breathalyzer",
+      namespace_id: "brewery:breathalyzer",
+      subtitle: "Blow into it to see how drunk you currently are.",
+      icon: "/assets/icons/brewery/breathalyzer.png",
+      search: "breathalyzer check drunkenness easy warning danger drunk blackout brewery tool",
+      details: true,
+      detailsTitle: "Reading your alcohol level",
+      detailsText: `Hold right-click to use it. After a short moment, it stores a reading and shows it as a colored tooltip level: EASY, WARNING, or DANGER.
 
 The Breathalyzer reads your current DRUNK effect strength, so it is a quick way to see how close you are to getting completely wasted.`,
-          detailsBullets: [
-            "Hold right-click to use",
-            "After a short delay, it saves the result",
-            "Shows: EASY, WARNING, or DANGER",
-            "Based on your current DRUNK effect strength",
-          ],
-        },
-        {
-          id: "dark_brew",
-          title: "Dark Brew",
-          namespace_id: "brewery:dark_brew",
-          subtitle: "A mischievous bottle that turns into trouble when it hits the ground.",
-          icon: "/assets/icons/brewery/dark_brew.png",
-          search: "dark brew throw spawn booze prank brewery peaceful mode",
-          details: true,
-          detailsTitle: "Mischief in a bottle",
-          detailsText: `Dark Brew is not meant to be consumed like a normal drink.
+      detailsBullets: [
+        "Hold right-click to use",
+        "After a short delay, it saves the result",
+        "Shows: EASY, WARNING, or DANGER",
+        "Based on your current DRUNK effect strength",
+      ],
+    },
+    {
+      id: "dark_brew",
+      title: "Dark Brew",
+      namespace_id: "brewery:dark_brew",
+      subtitle: "A mischievous bottle that turns into trouble when it hits the ground.",
+      icon: "/assets/icons/brewery/dark_brew.png",
+      search: "dark brew throw spawn booze prank brewery peaceful mode",
+      details: true,
+      detailsTitle: "Mischief in a bottle",
+      detailsText: `Dark Brew is not meant to be consumed like a normal drink.
 
 When thrown, it breaks on impact and spawns a Booze entity at the landing spot.
 
 This does not work in Peaceful mode, since Booze will not spawn there.
 
 It is perfect for pranks and harmless chaos.`,
-          detailsBullets: [
-            "Throwable item",
-            "Spawns a Booze on impact",
-            "Does not work in Peaceful mode",
-            "Great for pranks and lighthearted chaos",
-          ],
-        },
-        {
-          id: "dried_ingredients",
-          title: "Dried Ingredients",
-          namespace_id: "brewery:dried_*",
-          subtitle: "Grains and harvest goods that can be dried in a Silo, then used or displayed as placeable bags.",
-          icon: "/assets/icons/brewery/dried_wheat.png",
-          search: "dried ingredients silo drying wheat barley corn oat placeable bag block brewery",
-          details: true,
-          detailsTitle: "Drying and Placement",
-          detailsText: `Certain ingredients can be dried inside a Silo.
+      detailsBullets: [
+        "Throwable item",
+        "Spawns a Booze on impact",
+        "Does not work in Peaceful mode",
+        "Great for pranks and lighthearted chaos",
+      ],
+    },
+    {
+      id: "dried_ingredients",
+      title: "Dried Ingredients",
+      namespace_id: "brewery:dried_*",
+      subtitle: "Grains and harvest goods that can be dried in a Silo, then used or displayed as placeable bags.",
+      icon: "/assets/icons/brewery/dried_wheat.png",
+      search: "dried ingredients silo drying wheat barley corn oat placeable bag block brewery",
+      details: true,
+      detailsTitle: "Drying and Placement",
+      detailsText: `Certain ingredients can be dried inside a Silo.
 
 Once dried, they become items you can use in recipes, and they can also be placed as blocks in the world as decorative bags.`,
-          detailsBullets: [
-  "Created by drying raw ingredients inside a Silo",
-  "Results in a usable dried ingredient item",
-  "Can also be placed as a decorative bag block",
-          ],
-          items: [
-            {
-              id: "dried_wheat",
-              title: "Dried Wheat",
-              namespace_id: "brewery:dried_wheat",
-              subtitle: "Dried wheat stored in a placeable bag.",
-              icon: "/assets/icons/brewery/dried_wheat.png",
-              search: "dried wheat silo placeable bag",
-            },
-            {
-              id: "dried_barley",
-              title: "Dried Barley",
-              namespace_id: "brewery:dried_barley",
-              subtitle: "Dried barley stored in a placeable bag.",
-              icon: "/assets/icons/brewery/dried_barley.png",
-              search: "dried barley silo placeable bag",
-            },
-            {
-              id: "dried_corn",
-              title: "Dried Corn",
-              namespace_id: "brewery:dried_corn",
-              subtitle: "Dried corn stored in a placeable bag.",
-              icon: "/assets/icons/brewery/dried_corn.png",
-              search: "dried corn silo placeable bag",
-            },
-            {
-              id: "dried_oat",
-              title: "Dried Oat",
-              namespace_id: "brewery:dried_oat",
-              subtitle: "Dried oat stored in a placeable bag.",
-              icon: "/assets/icons/brewery/dried_oat.png",
-              search: "dried oat silo placeable bag",
-            },
-          ],
-        },
-        {
-          id: "beer_mug",
-          title: "Beer Mug",
-          namespace_id: "brewery:beer_mug",
-          subtitle: "A mug for drinks that can also be used as a flower pot.",
-          icon: "/assets/icons/brewery/beer_mug.png",
-          search: "beer mug flower pot brewery",
-          details: true,
-          detailsTitle: "Two uses",
-          detailsText: `The Beer Mug is used for beverages, and can also be repurposed as a small flower pot.`,
-          detailsBullets: [
-            "Mug for beverages",
-            "Can be used as a flower pot",
-          ],
-        },
+      detailsBullets: [
+        "Created by drying raw ingredients inside a Silo",
+        "Results in a usable dried ingredient item",
+        "Can also be placed as a decorative bag block",
+      ],
+      items: [
+        { id: "dried_wheat", title: "Dried Wheat", namespace_id: "brewery:dried_wheat", subtitle: "Dried wheat stored in a placeable bag.", icon: "/assets/icons/brewery/dried_wheat.png", search: "dried wheat silo placeable bag" },
+        { id: "dried_barley", title: "Dried Barley", namespace_id: "brewery:dried_barley", subtitle: "Dried barley stored in a placeable bag.", icon: "/assets/icons/brewery/dried_barley.png", search: "dried barley silo placeable bag" },
+        { id: "dried_corn", title: "Dried Corn", namespace_id: "brewery:dried_corn", subtitle: "Dried corn stored in a placeable bag.", icon: "/assets/icons/brewery/dried_corn.png", search: "dried corn silo placeable bag" },
+        { id: "dried_oat", title: "Dried Oat", namespace_id: "brewery:dried_oat", subtitle: "Dried oat stored in a placeable bag.", icon: "/assets/icons/brewery/dried_oat.png", search: "dried oat silo placeable bag" },
       ],
     },
-
     {
-      id: "armor",
-      title: "Armor and Clothing",
-      subtitle: "Brewfest outfits you can freely mix and match.",
-      entries: [
-        {
-          id: "regalia_set",
-          title: "Regalia",
-          namespace_id: "brewery:brewfest_*",
-          subtitle: "Traditional Brewfest pieces with a full set bonus.",
-          icon: "/assets/icons/brewery/brewfest_regalia.png",
-          search: "brewfest regalia hat trousers boots lederhosen harddrinking",
-          details: true,
-          detailsTitle: "Mix and Match",
-          detailsText: `These are individual outfit pieces. You can combine them with any other Brewfest clothing.
-
-If you wear the full set at the same time, you gain Harddrinking and become immune to drunkenness effects.`,
-          detailsBullets: [
-            "Individual clothing pieces",
-            "Can be combined with other Brewfest items",
-            "Full set bonus: Harddrinking",
-            "Harddrinking: immune to Drunkness effects",
-          ],
-          items: [
-            {
-              id: "brewfest_hat",
-              title: "Brewfest Hat",
-              namespace_id: "brewery:brewfest_hat",
-              subtitle: "A red Brewfest hat.",
-              icon: "/assets/icons/brewery/brewfest_hat.png",
-              search: "brewfest hat red",
-            },
-            {
-              id: "brewfest_regalia",
-              title: "Brewfest Regalia",
-              namespace_id: "brewery:brewfest_regalia",
-              subtitle: "A classic chest piece for the regalia look.",
-              icon: "/assets/icons/brewery/brewfest_regalia.png",
-              search: "brewfest regalia chest lederhosen",
-            },
-            {
-              id: "brewfest_trousers",
-              title: "Brewfest Trousers",
-              namespace_id: "brewery:brewfest_trousers",
-              subtitle: "Trousers that pair well with many Brewfest tops.",
-              icon: "/assets/icons/brewery/brewfest_trousers.png",
-              search: "brewfest trousers",
-            },
-            {
-              id: "brewfest_boots",
-              title: "Brewfest Boots",
-              namespace_id: "brewery:brewfest_boots",
-              subtitle: "Sturdy boots for long festival nights.",
-              icon: "/assets/icons/brewery/brewfest_boots.png",
-              search: "brewfest boots",
-            },
-          ],
-        },
-        {
-          id: "dirndl_set",
-          title: "Dirndl",
-          namespace_id: "brewery:brewfest_*",
-          subtitle: "Classic dirndl pieces with a full set bonus.",
-          icon: "/assets/icons/brewery/brewfest_blouse.png",
-          search: "dirndl blouse dress shoes blue hat harddrinking",
-          details: true,
-          detailsTitle: "Mix and Match",
-          detailsText: `These are individual outfit pieces. You can combine them with any other Brewfest clothing.
-
-If you wear the full set at the same time, you gain Harddrinking and become immune to drunkenness effects.`,
-          detailsBullets: [
-            "Individual clothing pieces",
-            "Can be combined with other Brewfest items",
-            "Full set bonus: Harddrinking",
-            "Harddrinking: immune to Drunkness effects",
-          ],
-          items: [
-            {
-              id: "brewfest_hat_blue",
-              title: "Brewfest Hat",
-              namespace_id: "brewery:brewfest_hat_red",
-              subtitle: "A blue Brewfest hat.",
-              icon: "/assets/icons/brewery/brewfest_hat_blue.png",
-              search: "brewfest hat blue",
-            },
-            {
-              id: "brewfest_blouse",
-              title: "Brewfest Blouse",
-              namespace_id: "brewery:brewfest_blouse",
-              subtitle: "A blouse for your dirndl look.",
-              icon: "/assets/icons/brewery/brewfest_blouse.png",
-              search: "brewfest blouse dirndl",
-            },
-            {
-              id: "brewfest_dress",
-              title: "Brewfest Dress",
-              namespace_id: "brewery:brewfest_dress",
-              subtitle: "A dress that pairs with many Brewfest pieces.",
-              icon: "/assets/icons/brewery/brewfest_dress.png",
-              search: "brewfest dress dirndl",
-            },
-            {
-              id: "brewfest_shoes",
-              title: "Brewfest Shoes",
-              namespace_id: "brewery:brewfest_shoes",
-              subtitle: "Comfortable shoes for dancing and wandering.",
-              icon: "/assets/icons/brewery/brewfest_shoes.png",
-              search: "brewfest shoes dirndl",
-            },
-          ],
-        },
+      id: "beer_mug",
+      title: "Beer Mug",
+      namespace_id: "brewery:beer_mug",
+      subtitle: "A mug for drinks that can also be used as a flower pot.",
+      icon: "/assets/icons/brewery/beer_mug.png",
+      search: "beer mug flower pot brewery",
+      details: true,
+      detailsTitle: "Two uses",
+      detailsText: `The Beer Mug is used for beverages, and can also be repurposed as a small flower pot.`,
+      detailsBullets: [
+        "Mug for beverages",
+        "Can be used as a flower pot",
       ],
     },
+    {
+      id: "regalia_set",
+      title: "Regalia",
+      namespace_id: "brewery:brewfest_*",
+      subtitle: "Traditional Brewfest pieces with a full set bonus.",
+      icon: "/assets/icons/brewery/brewfest_regalia.png",
+      search: "brewfest regalia hat trousers boots lederhosen harddrinking",
+      details: true,
+      detailsTitle: "Mix and Match",
+      detailsText: `These are individual outfit pieces. You can combine them with any other Brewfest clothing.
 
+If you wear the full set at the same time, you gain Harddrinking and become immune to drunkenness effects.`,
+      detailsBullets: [
+        "Individual clothing pieces",
+        "Can be combined with other Brewfest items",
+        "Full set bonus: Harddrinking",
+        "Harddrinking: immune to Drunkness effects",
+      ],
+      items: [
+        { id: "brewfest_hat", title: "Brewfest Hat", namespace_id: "brewery:brewfest_hat_red", subtitle: "A red Brewfest hat.", icon: "/assets/icons/brewery/brewfest_hat.png", search: "brewfest hat red" },
+        { id: "brewfest_regalia", title: "Brewfest Regalia", namespace_id: "brewery:brewfest_regalia", subtitle: "A classic chest piece for the regalia look.", icon: "/assets/icons/brewery/brewfest_regalia.png", search: "brewfest regalia chest lederhosen" },
+        { id: "brewfest_trousers", title: "Brewfest Trousers", namespace_id: "brewery:brewfest_trousers", subtitle: "Trousers that pair well with many Brewfest tops.", icon: "/assets/icons/brewery/brewfest_trousers.png", search: "brewfest trousers" },
+        { id: "brewfest_boots", title: "Brewfest Boots", namespace_id: "brewery:brewfest_boots", subtitle: "Sturdy boots for long festival nights.", icon: "/assets/icons/brewery/brewfest_boots.png", search: "brewfest boots" },
+      ],
+    },
+    {
+      id: "dirndl_set",
+      title: "Dirndl",
+      namespace_id: "brewery:brewfest_*",
+      subtitle: "Classic dirndl pieces with a full set bonus.",
+      icon: "/assets/icons/brewery/brewfest_dress.png",
+      search: "dirndl blouse dress shoes blue hat harddrinking",
+      details: true,
+      detailsTitle: "Mix and Match",
+      detailsText: `These are individual outfit pieces. You can combine them with any other Brewfest clothing.
+
+If you wear the full set at the same time, you gain Harddrinking and become immune to drunkenness effects.`,
+      detailsBullets: [
+        "Individual clothing pieces",
+        "Can be combined with other Brewfest items",
+        "Full set bonus: Harddrinking",
+        "Harddrinking: immune to Drunkness effects",
+      ],
+      items: [
+        { id: "brewfest_hat_blue", title: "Brewfest Hat", namespace_id: "brewery:brewfest_hat_red", subtitle: "A blue Brewfest hat.", icon: "/assets/icons/brewery/brewfest_hat_red.png", search: "brewfest hat blue" },
+        { id: "brewfest_blouse", title: "Brewfest Blouse", namespace_id: "brewery:brewfest_blouse", subtitle: "A blouse for your dirndl look.", icon: "/assets/icons/brewery/brewfest_blouse.png", search: "brewfest blouse dirndl" },
+        { id: "brewfest_dress", title: "Brewfest Dress", namespace_id: "brewery:brewfest_dress", subtitle: "A dress that pairs with many Brewfest pieces.", icon: "/assets/icons/brewery/brewfest_dress.png", search: "brewfest dress dirndl" },
+        { id: "brewfest_shoes", title: "Brewfest Shoes", namespace_id: "brewery:brewfest_shoes", subtitle: "Comfortable shoes for dancing and wandering.", icon: "/assets/icons/brewery/brewfest_shoes.png", search: "brewfest shoes dirndl" },
+      ],
+    },
+  ],
+},
     {
       id: "consumables",
       title: "Consumables",
@@ -421,43 +334,35 @@ If you wear the full set at the same time, you gain Harddrinking and become immu
           id: "crops",
           title: "Crops and Wild Plants",
           namespace_id: "brewery:*hops*",
-          subtitle: "Hops can be found in the wild and cultivated for brewing.",
-          icon: "/assets/icons/brewery/hops.png",
+          subtitle: "Hops can be found in taiga biomes and cultivated for brewing.",
+          icon: "/assets/icons/brewery/wild_hops.png",
           search: "hops taiga village woodland mansion wild hops crop",
           details: true,
           detailsTitle: "More infos",
           detailsText: `Hops can be found growing naturally in Taiga biomes and their sub-variants.
 
-        They can also generate in Villages and Woodland Mansions.
+They can also generate in Villages and Woodland Mansions.
 
-        When cultivated, hops can grow taller over time and can be supported using Ropes, allowing them to climb upward similar to other climbing crops.
+When cultivated, hops can grow taller over time and can be supported using Ropes, allowing them to climb upward similar to other climbing crops.
 
-        Hops will also spawn in modded biomes as long as they use the respective biome tags.`,
+Hops will also spawn in modded biomes as long as they use the respective biome tags.`,
           items: [
-            {
-              id: "wild_hops",
-              title: "Wild Hops",
-              namespace_id: "brewery:wild_hops",
-              subtitle: "A wild patch of hops growing naturally in the world.",
-              icon: "/assets/icons/brewery/wild_hops.png",
-              search: "wild hops worldgen taiga",
-            },
-            {
-              id: "hops_crop",
-              title: "Hops Crop",
-              namespace_id: "brewery:hops_crop",
-              subtitle: "A cultivated hops plant that can grow taller when supported by ropes.",
-              icon: "/assets/icons/brewery/hops_crop.png",
-              search: "hops crop cultivated growth rope climbing",
-            },
             {
               id: "hops_item",
               title: "Hops",
               namespace_id: "brewery:hops",
-              subtitle: "Used for cultivation and as a brewing ingredient.",
+              subtitle: "Used for cultivation and as a brewing ingredient. The Hops itself can be planted to grow more.",
               icon: "/assets/icons/brewery/hops.png",
               search: "hops item seed ingredient beer",
             },
+                 {
+                          id: "hops_crop",
+                          title: "Hops Crop",
+                          namespace_id: "brewery:hops_crop",
+                          subtitle: "A cultivated hops plant, capable of climbing Ropes when placed above and alongside the plant.",
+                          icon: "/assets/icons/brewery/hops_crop.png",
+                          search: "hops crop cultivated growth rope climbing",
+                        },
           ],
         },
         {
@@ -502,12 +407,39 @@ If you wear the full set at the same time, you gain Harddrinking and become immu
         },
       ],
     },
+{
+  id: "entities",
+  title: "Entities",
+  subtitle: "New entities that find their way into your world through Brewery.",
+  entries: [
+    {
+      id: "booze",
+      title: "Booze",
+      namespace_id: "brewery:booze",
+      subtitle: "A hostile Beer Elemental entity.",
+      icon: "/assets/icons/brewery/entity/booze.png",
+      search: "booze beer elemental hostile mob brewingstation failure dark brew thrown entity",
+      details: true,
+      detailsTitle: "How it spawns",
+      detailsText: `Booze is a hostile Beer Elemental.
 
+It can spawn when too many mistakes are made during Brewingstation events. Additionally, throwing a Dark Brew can also summon a Booze directly.
+
+Booze actively hunts players and uses both melee and ranged attacks. It does not spawn in Peaceful mode.`,
+      detailsBullets: [
+        "Hostile Beer Elemental entity",
+        "Can spawn from failed Brewingstation events",
+        "Also summoned by throwing a Dark Brew",
+        "Attacks players with melee and ranged attacks",
+        "Does not spawn in Peaceful mode",
+      ],
+    },
+  ],
+},
     {
       id: "mob_effects",
       title: "Mob Effects",
-      subtitle: "Special status effects caused by Brewery drinks and their unique properties.",
-      entries: [
+subtitle: "New Status effects from Brewery consumables.",      entries: [
         { id: "toxic_touch", title: "Toxic Touch", subtitle: "Melee attacks apply Poison to hit entities.", icon: "/assets/icons/brewery/effects/toxictouch.png", search: "toxic touch poison melee attacks" },
         { id: "renewing_touch", title: "Renewing Touch", subtitle: "Melee attacks apply Regeneration to hit entities.", icon: "/assets/icons/brewery/effects/renewingtouch.png", search: "renewing touch regeneration melee attacks" },
         { id: "protective_touch", title: "Protective Touch", subtitle: "Melee attacks grant Absorption for a short duration.", icon: "/assets/icons/brewery/effects/protectivetouch.png", search: "protective touch absorption melee attacks" },
@@ -537,7 +469,7 @@ If you wear the full set at the same time, you gain Harddrinking and become immu
           id: "config",
           title: "Configuration",
           subtitle: "Most Brewery features can be adjusted in `config/brewery.json`.",
-          icon: "/assets/icons/farm-and-charm/config.png",
+          icon: "/assets/icons/misc/config.png",
           search: "config configuration settings options balance json brewery",
         },
         {
@@ -547,6 +479,30 @@ If you wear the full set at the same time, you gain Harddrinking and become immu
           icon: "/assets/icons/brewery/entity/zombie.png",
           search: "festive zombie brewfest spawn",
         },
+               {
+                  id: "farmer_trades",
+                  title: "Expanded Trades",
+                  subtitle: "Certain Brewery items have been added to Farmer Villager trade pools, allowing them to be obtained naturally through trading.",
+                  icon: "/assets/icons/misc/emerald.png",
+                  search: "farmer villager trades farm and charm items economy progression",
+                },
+                {
+                          id: "loot",
+                          title: "Loot and Exploration",
+                          subtitle: "Certain items and ingredients can be found while exploring the world.",
+                          icon: "/assets/icons/misc/chest.png",
+                          search: "loot chest dungeon village exploration items ingredients",
+                          details: true,
+                          detailsTitle: "Where to find loot",
+                          detailsText: `Some items and ingredients can be found naturally while exploring the world.
+
+                        They may appear in various loot containers, such as village chests, dungeon chests, or other generated structures.`,
+                          detailsBullets: [
+                            "Items and ingredients can appear in loot chests",
+                            "Found in villages, dungeons, and other structures",
+                            "Encourages exploration alongside farming",
+                          ],
+                        },
       ],
     },
   ],

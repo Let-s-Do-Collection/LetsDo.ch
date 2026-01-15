@@ -1478,16 +1478,33 @@ subtitle: "Wild Beetroots growing naturally in Plains, Swamps, Meadows, and Fore
           id: "farmer_trades",
           title: "Expanded Trades",
           subtitle: "Certain Farm & Charm items have been added to Farmer Villager trade pools, allowing them to be obtained naturally through trading.",
-          icon: "/assets/icons/farm-and-charm/emerald.png",
+          icon: "/assets/icons/misc/emerald.png",
           search: "farmer villager trades farm and charm items economy progression",
         },
         {
           id: "config",
           title: "Configuration",
           subtitle: "Most gameplay features of Farm & Charm can be adjusted via a configuration file, usually located at `config/farm_and_charm.json`.",
-          icon: "/assets/icons/farm-and-charm/config.png",
+          icon: "/assets/icons/misc/config.png",
           search: "config configuration settings options balance json farm and charm",
         },
+        {
+                  id: "loot",
+                  title: "Loot and Exploration",
+                  subtitle: "Certain items and ingredients can be found while exploring the world.",
+                  icon: "/assets/icons/misc/chest.png",
+                  search: "loot chest dungeon village exploration items ingredients",
+                  details: true,
+                  detailsTitle: "Where to find loot",
+                  detailsText: `Some items and ingredients can be found naturally while exploring the world.
+
+                They may appear in various loot containers, such as village chests, dungeon chests, or other generated structures.`,
+                  detailsBullets: [
+                    "Items and ingredients can appear in loot chests",
+                    "Found in villages, dungeons, and other structures",
+                    "Encourages exploration alongside farming",
+                  ],
+                },
       ],
     }
   ],

@@ -113,6 +113,12 @@ html[data-theme="neon"]  .themeHead[data-theme="neon"]::before {
   opacity: 1;
 }
 
+.themeHead[data-theme="blue"] { --glow: rgba(120, 160, 255, 0.95); }
+.themeHead[data-theme="gold"] { --glow: rgba(214, 176, 92, 0.95); }
+.themeHead[data-theme="pink"] { --glow: rgba(255, 120, 200, 0.95); }
+.themeHead[data-theme="neon"] { --glow: rgba(255, 40, 220, 1); }
+.themeHead[data-theme="green"] { --glow: rgba(120, 220, 120, 0.95); }
+
 html[data-mode="dark"] .modeBtn::before {
   background: radial-gradient(
     circle,
