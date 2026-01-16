@@ -16,120 +16,6 @@ Alongside that, you get practical vineyard and cellar decor, dedicated storage o
 `,
   sections: [
     {
-      id: "worldgen",
-      title: "Worldgen",
-      subtitle: "New plants and resources that generate in newly created chunks.",
-      entries: [
-        {
-          id: "apple_cherry_trees",
-          title: "Apple and Cherry Trees",
-          namespace_id: "vinery:*",
-          subtitle: "Fruit trees that generate in temperate biomes and can be harvested by hand.",
-          icon: "/assets/icons/vinery/worldgen/apple_tree.png",
-          search: "apple tree cherry tree worldgen plains meadow sunflower plains fruit leaves harvest empty hand rotten cherry config growth rate",
-          details: true,
-          detailsTitle: "Harvesting",
-          detailsText: `Apple and Cherry Trees generate in temperate biomes such as Plains, Meadow, and Sunflower Plains.
-
-They look similar to Oak Trees, but some leaves show visible fruit. To harvest, make sure your main hand is empty, then right-click the leaves block that shows fruit to pick it.
-
-There is a small chance to obtain a rotten cherry. The apple growth rate can be adjusted in the config.`,
-          detailsBullets: [
-            "Generates in Plains, Meadow, Sunflower Plains",
-            "Harvest with empty main hand",
-            "Right-click fruit leaves to pick",
-            "Small chance for rotten cherry",
-            "Apple growth rate configurable",
-          ],
-        },
-        {
-          id: "grapes_common",
-          title: "Grapes",
-          namespace_id: "vinery:*grape*",
-          subtitle: "Common wild grapes found across many overworld biomes.",
-          icon: "/assets/icons/vinery/worldgen/grapes.png",
-          search: "grapes worldgen forest plains swamp birch forest meadow sunflower plains river red white common easy to find",
-          details: true,
-          detailsTitle: "Where to find them",
-          detailsText: `Grapes can be found in Forest, Plains, Swamp, Birch Forest, Meadow, Sunflower Plains, and River biomes.
-
-They are quite common and easy to spot while exploring.`,
-          detailsBullets: [
-            "Found in many overworld biomes",
-            "Common and easy to find",
-            "Includes multiple grape variants",
-          ],
-        },
-        {
-          id: "taiga_grapes",
-          title: "Taiga Grapes",
-          namespace_id: "vinery:*taiga*grape*",
-          subtitle: "A rare grape variant that primarily generates in taiga biomes.",
-          icon: "/assets/icons/vinery/worldgen/taiga_grapes.png",
-          search: "taiga grapes worldgen taiga sub variants rare red white",
-          details: true,
-          detailsTitle: "Where to find them",
-          detailsText: `Taiga Grapes generate mostly in taiga biomes and their sub-variants.
-
-They are rare and may require a longer journey to discover.`,
-          detailsBullets: [
-            "Found in taiga biomes and sub-variants",
-            "Rare variant",
-          ],
-        },
-        {
-          id: "savanna_grapes",
-          title: "Savanna Grapes",
-          namespace_id: "vinery:*savanna*grape*",
-          subtitle: "A very rare grape variant that generates in savanna biomes.",
-          icon: "/assets/icons/vinery/worldgen/savanna_grapes.png",
-          search: "savanna grapes worldgen savanna sub variants very rare red white",
-          details: true,
-          detailsTitle: "Where to find them",
-          detailsText: `Savanna Grapes generate mostly in savanna biomes and their sub-variants.
-
-They are very rare.`,
-          detailsBullets: [
-            "Found in savanna biomes and sub-variants",
-            "Very rare variant",
-          ],
-        },
-        {
-          id: "jungle_grapes",
-          title: "Jungle Grapes",
-          namespace_id: "vinery:*jungle*grape*",
-          subtitle: "A grape variant that generates in jungle biomes and can be cultivated on lattice.",
-          icon: "/assets/icons/vinery/worldgen/jungle_grapes.png",
-          search: "jungle grapes worldgen jungle sub variants common lattice cultivation seeds",
-          details: true,
-          detailsTitle: "Where to find them",
-          detailsText: `Jungle Grapes generate in jungle biomes and their sub-variants.
-
-They are quite common and easy to find.`,
-          detailsBullets: [
-            "Found in jungle biomes and sub-variants",
-            "Common variant",
-            "Can be cultivated using lattice",
-          ],
-        },
-        {
-          id: "modded_biomes_note",
-          title: "Modded Biomes",
-          namespace_id: "vinery:*",
-          subtitle: "Grapes can also generate in modded biomes when biome tags match.",
-          icon: "/assets/icons/vinery/worldgen/modded_biomes.png",
-          search: "grapes modded biomes biome tags worldgen compatibility",
-          details: true,
-          detailsTitle: "Biome tags",
-          detailsText: `All grape variants can also generate in modded biomes as long as those biomes use the respective biome tags.`,
-          detailsBullets: [
-            "Works in modded biomes via biome tags",
-          ],
-        },
-      ],
-    },
-
-    {
       id: "stations",
       title: "Stations and Processing",
       subtitle: "Core winemaking stations and grape processing.",
@@ -546,23 +432,23 @@ The Apple Press acts as the workstation for this profession.`,
             "Apple Press is the workstation",
           ],
         },
-  {
-    id: "winemaker_donkey",
-    title: "Winemaker Donkey",
-    namespace_id: "vinery:winemaker_donkey",
-    subtitle: "A donkey that accompanies the Wandering Winemaker.",
-    icon: "/assets/icons/vinery/entity/winemaker_donkey.png",
-    search: "winemaker donkey entity vinery wandering winemaker rideable",
-    details: true,
-    detailsTitle: "Behavior",
-    detailsText: `The Winemaker Donkey spawns together with the Wandering Winemaker.
+        {
+          id: "winemaker_donkey",
+          title: "Winemaker Donkey",
+          namespace_id: "vinery:winemaker_donkey",
+          subtitle: "A donkey that accompanies the Wandering Winemaker.",
+          icon: "/assets/icons/vinery/entity/winemaker_donkey.png",
+          search: "winemaker donkey entity vinery wandering winemaker rideable",
+          details: true,
+          detailsTitle: "Behavior",
+          detailsText: `The Winemaker Donkey spawns together with the Wandering Winemaker.
 
-  It behaves like a normal donkey and can be mounted and ridden by the player.`,
-    detailsBullets: [
-      "Spawns alongside the Wandering Winemaker",
-      "Rideable like a normal donkey",
-    ],
-  },
+It behaves like a normal donkey and can be mounted and ridden by the player.`,
+          detailsBullets: [
+            "Spawns alongside the Wandering Winemaker",
+            "Rideable like a normal donkey",
+          ],
+        },
       ],
     },
 
@@ -589,6 +475,120 @@ The Apple Press acts as the workstation for this profession.`,
     },
 
     {
+      id: "wild_worldgen",
+      title: "Wild Plants and Worldgen",
+      subtitle: "New plants and fruit trees that generate in newly created chunks.",
+      entries: [
+        {
+          id: "apple_cherry_trees",
+          title: "Apple and Cherry Trees",
+          namespace_id: "vinery:*",
+          subtitle: "Fruit trees that generate in temperate biomes and can be harvested by hand.",
+          icon: "/assets/icons/vinery/worldgen/apple_tree.png",
+          search: "apple tree cherry tree worldgen plains meadow sunflower plains fruit leaves harvest empty hand rotten cherry config growth rate",
+          details: true,
+          detailsTitle: "Harvesting",
+          detailsText: `Apple and Cherry Trees generate in temperate biomes such as Plains, Meadow, and Sunflower Plains.
+
+They look similar to Oak Trees, but some leaves show visible fruit. To harvest, make sure your main hand is empty, then right-click the leaves block that shows fruit to pick it.
+
+There is a small chance to obtain a rotten cherry. The apple growth rate can be adjusted in the config.`,
+          detailsBullets: [
+            "Generates in Plains, Meadow, Sunflower Plains",
+            "Harvest with empty main hand",
+            "Right-click fruit leaves to pick",
+            "Small chance for rotten cherry",
+            "Apple growth rate configurable",
+          ],
+        },
+        {
+          id: "grapes_common",
+          title: "Grapes",
+          namespace_id: "vinery:*grape*",
+          subtitle: "Common wild grapes found across many overworld biomes.",
+          icon: "/assets/icons/vinery/worldgen/grapes.png",
+          search: "grapes worldgen forest plains swamp birch forest meadow sunflower plains river red white common easy to find",
+          details: true,
+          detailsTitle: "Where to find them",
+          detailsText: `Grapes can be found in Forest, Plains, Swamp, Birch Forest, Meadow, Sunflower Plains, and River biomes.
+
+They are quite common and easy to spot while exploring.`,
+          detailsBullets: [
+            "Found in many overworld biomes",
+            "Common and easy to find",
+            "Includes multiple grape variants",
+          ],
+        },
+        {
+          id: "taiga_grapes",
+          title: "Taiga Grapes",
+          namespace_id: "vinery:*taiga*grape*",
+          subtitle: "A rare grape variant that primarily generates in taiga biomes.",
+          icon: "/assets/icons/vinery/worldgen/taiga_grapes.png",
+          search: "taiga grapes worldgen taiga sub variants rare red white",
+          details: true,
+          detailsTitle: "Where to find them",
+          detailsText: `Taiga Grapes generate mostly in taiga biomes and their sub-variants.
+
+They are rare and may require a longer journey to discover.`,
+          detailsBullets: [
+            "Found in taiga biomes and sub-variants",
+            "Rare variant",
+          ],
+        },
+        {
+          id: "savanna_grapes",
+          title: "Savanna Grapes",
+          namespace_id: "vinery:*savanna*grape*",
+          subtitle: "A very rare grape variant that generates in savanna biomes.",
+          icon: "/assets/icons/vinery/worldgen/savanna_grapes.png",
+          search: "savanna grapes worldgen savanna sub variants very rare red white",
+          details: true,
+          detailsTitle: "Where to find them",
+          detailsText: `Savanna Grapes generate mostly in savanna biomes and their sub-variants.
+
+They are very rare.`,
+          detailsBullets: [
+            "Found in savanna biomes and sub-variants",
+            "Very rare variant",
+          ],
+        },
+        {
+          id: "jungle_grapes",
+          title: "Jungle Grapes",
+          namespace_id: "vinery:*jungle*grape*",
+          subtitle: "A grape variant that generates in jungle biomes and can be cultivated on lattice.",
+          icon: "/assets/icons/vinery/worldgen/jungle_grapes.png",
+          search: "jungle grapes worldgen jungle sub variants common lattice cultivation seeds",
+          details: true,
+          detailsTitle: "Where to find them",
+          detailsText: `Jungle Grapes generate in jungle biomes and their sub-variants.
+
+They are quite common and easy to find.`,
+          detailsBullets: [
+            "Found in jungle biomes and sub-variants",
+            "Common variant",
+            "Can be cultivated using lattice",
+          ],
+        },
+        {
+          id: "modded_biomes_note",
+          title: "Modded Biomes",
+          namespace_id: "vinery:*",
+          subtitle: "Grapes can also generate in modded biomes when biome tags match.",
+          icon: "/assets/icons/vinery/worldgen/modded_biomes.png",
+          search: "grapes modded biomes biome tags worldgen compatibility",
+          details: true,
+          detailsTitle: "Biome tags",
+          detailsText: `All grape variants can also generate in modded biomes as long as those biomes use the respective biome tags.`,
+          detailsBullets: [
+            "Works in modded biomes via biome tags",
+          ],
+        },
+      ],
+    },
+
+    {
       id: "misc_changes",
       title: "Miscellaneous Changes",
       subtitle: "Small extras and optional tweaks.",
@@ -596,7 +596,7 @@ The Apple Press acts as the workstation for this profession.`,
         {
           id: "config",
           title: "Configuration",
-          subtitle: "Most Vinery features can be adjusted in `config/vinery.json`.",
+          subtitle: "Most Vinery features can be adjusted in \`config/vinery.json\`.",
           icon: "/assets/icons/farm-and-charm/config.png",
           search: "config configuration settings options balance json vinery",
         },
@@ -605,12 +605,12 @@ The Apple Press acts as the workstation for this profession.`,
           title: "Loot and Exploration",
           subtitle: "Certain items and ingredients can be found while exploring the world.",
           icon: "/assets/icons/misc/chest.png",
-          search: "loot chest dungeon village exploration items ingredients",
+          search: "loot chest dungeon village exploration items ingredients vinery",
           details: true,
           detailsTitle: "Where to find loot",
           detailsText: `Some items and ingredients can be found naturally while exploring the world.
 
-        They may appear in various loot containers, such as village chests, dungeon chests, or other generated structures.`,
+They may appear in various loot containers, such as village chests, dungeon chests, or other generated structures.`,
           detailsBullets: [
             "Items and ingredients can appear in loot chests",
             "Found in villages, dungeons, and other structures",

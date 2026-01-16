@@ -1,0 +1,33 @@
+---
+import WikiPage from "../../components/wiki/WikiPage.astro";
+import brewery from "./config/brewery.js";
+import farmAndCharm from "./config/farm-and-charm.js";
+import herbalbrews from "./config/herbalbrews.js";
+import vinery from "./config/vinery.js";
+
+export function getStaticPaths() {
+  return [
+    { params: { slug: "brewery" } },
+    { params: { slug: "farm-and-charm" } },
+    { params: { slug: "herbalbrews" } },
+    { params: { slug: "vinery" } },
+  ];
+}
+
+const { slug } = Astro.params;
+
+const configs = {
+  brewery,
+  "farm-and-charm": farmAndCharm,
+  herbalbrews,
+  vinery,
+};
+
+const config = configs[slug];
+
+if (!config) {
+  return Astro.redirect("/404");
+}
+---
+
+<WikiPage config={config} />
