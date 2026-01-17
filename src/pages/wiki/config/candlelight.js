@@ -23,205 +23,111 @@ Alongside that, it introduces themed outfits, a lucky ring, and a few special sh
           id: "stove",
           title: "Stove",
           namespace_id: "candlelight:*_stove",
-          subtitle: "A heat source for cooking. Available in multiple stone variants.",
+          subtitle: "Works the same as the Farm & Charm Stove. A heat source for cooking, available in multiple stone variants.",
           icon: "/assets/icons/candlelight/cobblestone_stove.png",
-          search: "stove heat cooking candlelight stone variants cobblestone sandstone stone bricks deepslate granite basalt quartz",
+          search: "stove fuel heat cooking candlelight farm and charm same functionality variants cobblestone sandstone stone bricks deepslate granite basalt quartz",
           details: true,
-          detailsTitle: "Variants",
-          detailsText: `Candlelight includes multiple Stove variants designed to match different stone palettes.
+          detailsTitle: "Usage",
+          detailsText: `
+The Candlelight Stove works the same as the Farm & Charm Stove.
 
-All variants share the same functionality.`,
+It functions like a Crafting Station and provides three Ingredient Input Slots, one Fuel Slot, and one Output Slot.
+
+Place the required Ingredients into the Input Slots, add a valid Fuel Item, and wait about twelve seconds for the Crafting Process to complete. The crafted Item then appears in the Output Slot.
+
+Items located in both the Input Slots and the Output Slot are also visually displayed inside the Block in the World.
+
+Candlelight includes multiple Stove variants designed to match different stone palettes. All variants share the same functionality.`,
           detailsBullets: [
-            "Multiple stone themed designs",
-            "Same functionality across all variants",
+            "Same functionality as the Farm & Charm Stove",
+            "Three Ingredient Input Slots",
+            "One Fuel Slot and one Output Slot",
+            "Crafting takes about twelve seconds",
+            "Requires a valid Fuel Item such as Coal or Charcoal",
+            "Input and Output Items are visible in the Block Model",
+            "Available in multiple stone themed variants",
           ],
         },
         {
           id: "cooking_pot",
           title: "Cooking Pot",
           namespace_id: "candlelight:cooking_pot",
-          subtitle: "A primary cooking station for Candlelight meals.",
+          subtitle: "Works the same as the Farm & Charm Cooking Pot. A cozy station for preparing basic meals, powered by heat.",
           icon: "/assets/icons/candlelight/cooking_pot.png",
-          search: "cooking pot station recipes meal candlelight",
+          search: "cooking pot meals basic hot surface stove magma campfire bubbles container slot output cooking candlelight farm and charm same functionality",
           details: true,
           detailsTitle: "Usage",
-          detailsText: `The Cooking Pot works similarly to other crafting stations.
+          detailsText: `The Candlelight Cooking Pot works the same as the Farm & Charm Cooking Pot, but is used for Candlelight Meals.
 
-It provides 6 ingredient slots, 1 container slot, and 1 output slot. It also includes a built in recipe book to browse available recipes.`,
+It requires a Heat Source to operate and cannot be used on its own.
+
+The Cooking Pot has six Ingredient Input Slots, one Container Slot, and one Output Slot.
+
+After placing the Ingredients into the Input Slots, the Cooking Process takes about thirty seconds. Once completed, the prepared Meal appears in the Output Slot.
+
+To function, the Cooking Pot must be placed on a Hot Surface, such as a Stove, a Magma Block, or other Heat Sources. In some cases, it can also be placed directly on a Campfire. When active, this is indicated by rising Bubbles, Cooking Sounds, and a colored Fire Indicator in the Cooking Pot Interface.`,
           detailsBullets: [
-            "6 ingredient slots",
-            "1 container slot",
-            "1 output slot",
-            "Built in recipe book",
+            "Same functionality as the Farm & Charm Cooking Pot",
+            "Six Ingredient Input Slots",
+            "One Container Slot and one Output Slot",
+            "Requires a valid Heat Source",
+            "Cooking takes about thirty seconds",
+            "Active State is shown by Bubbles, Sounds, and a colored Fire Indicator",
           ],
         },
         {
           id: "cooking_pan",
           title: "Cooking Pan",
           namespace_id: "candlelight:cooking_pan",
-          subtitle: "A cooking pan that exists as a block and as an item.",
+          subtitle: "Works the same as the Farm & Charm Roaster. A large cooking station for preparing bigger meals.",
           icon: "/assets/icons/candlelight/cooking_pan.png",
-          search: "cooking pan station block item candlelight",
+          search: "cooking pan bigger meals large hot surface stove magma campfire smoke container slot output cooking candlelight farm and charm roaster same functionality",
           details: true,
-          detailsTitle: "Overview",
-          detailsText: `The Cooking Pan exists as a placed block and as an item.
+          detailsTitle: "Usage",
+          detailsText: `The Candlelight Cooking Pan works the same as the Farm & Charm Roaster, but is used for Candlelight Meals.
 
-The station works like the Cooking Pot and includes the same slot layout and recipe book.`,
+It requires a Heat Source and cannot operate on its own.
+
+The Cooking Pan provides six Ingredient Input Slots, one Container Slot, and one Output Slot.
+
+After placing the required Ingredients into the Input Slots, the Cooking Process takes about sixty seconds. Once completed, the prepared Meal appears in the Output Slot.
+
+To function, the Cooking Pan must be connected to a Heat Source, such as a Stove, a Magma Block, or other Hot Surfaces. It can also be used when positioned above a Campfire. When active, the Cooking Pan emits rising Smoke and Cooking Sounds, and the Fire Indicator in the Interface changes from grayscale to colored.`,
           detailsBullets: [
-            "Placed block variant",
-            "Item variant",
-            "Same workflow as the Cooking Pot",
+            "Same functionality as the Farm & Charm Roaster",
+            "Designed for larger and more complex Meals",
+            "Six Ingredient Input Slots",
+            "One Container Slot and one Output Slot",
+            "Requires a valid Heat Source",
+            "Cooking takes about sixty seconds",
+            "Active State is shown by Smoke, Sounds, and a colored Fire Indicator",
           ],
         },
       ],
     },
 
     {
-      id: "farming_utility",
-      title: "Farming and Utility",
-      subtitle: "Helpful everyday features and interactive utility blocks.",
-      entries: [
-        {
-          id: "typewriter",
-          title: "Typewriter",
-          namespace_id: "candlelight:typewriter_iron",
-          subtitle: "A writing block for longer letters. Available in Iron and Gold.",
-          icon: "/assets/icons/candlelight/typewriter_iron.png",
-          search: "typewriter writing letters note paper iron gold candlelight",
-          details: true,
-          detailsTitle: "Usage",
-          detailsText: `Right click the Typewriter while holding Note Paper to insert it.
-
-Right click again to open the interface. When finished, sign the letter and remove it with another right click.`,
-          detailsBullets: [
-            "Right click with Note Paper to insert",
-            "Right click to open the interface",
-            "Sign and remove the letter via interaction",
-            "Iron and Gold variants",
-          ],
-          items: [
-            {
-              id: "typewriter_iron",
-              title: "Iron Typewriter",
-              namespace_id: "candlelight:typewriter_iron",
-              subtitle: "",
-              icon: "/assets/icons/candlelight/typewriter_iron.png",
-              search: "typewriter iron",
-            },
-            {
-              id: "typewriter_gold",
-              title: "Gold Typewriter",
-              namespace_id: "candlelight:typewriter_gold",
-              subtitle: "",
-              icon: "/assets/icons/candlelight/typewriter_gold.png",
-              search: "typewriter gold",
-            },
-          ],
-        },
-        {
-          id: "note_paper_and_letters",
-          title: "Note Paper and Letter",
-          namespace_id: "candlelight:note_paper_writeable",
-          subtitle: "Write notes, seal letters, and exchange messages.",
-          icon: "/assets/icons/candlelight/note_paper.png",
-          search: "note paper letter love letter writable written sealed candlelight typewriter",
-          details: true,
-          detailsTitle: "Usage",
-          detailsText: `You can write notes using Writable Note Paper or by using a Typewriter filled with Note Paper.
-
-To seal a letter, combine a written note and an open envelope in the letter interface to create a closed letter.`,
-          detailsBullets: [
-            "Write notes using Writable Note Paper or the Typewriter",
-            "Create closed letters through the letter interface",
-            "Includes love letter variants",
-          ],
-          items: [
-            {
-              id: "note_paper",
-              title: "Note Paper",
-              namespace_id: "candlelight:note_paper",
-              subtitle: "Paper used for writing and decoration.",
-              icon: "/assets/icons/candlelight/note_paper.png",
-              search: "note paper",
-            },
-            {
-              id: "note_paper_writeable",
-              title: "Writable Note Paper",
-              namespace_id: "candlelight:note_paper_writeable",
-              subtitle: "Write a note and sign it.",
-              icon: "/assets/icons/candlelight/note_paper_writeable.png",
-              search: "writable note paper",
-            },
-            {
-              id: "note_paper_written",
-              title: "Written Note Paper",
-              namespace_id: "candlelight:note_paper_written",
-              subtitle: "A finished written note.",
-              icon: "/assets/icons/candlelight/note_paper_written.png",
-              search: "written note paper",
-            },
-            {
-              id: "letter_open",
-              title: "Letter",
-              namespace_id: "candlelight:letter_open",
-              subtitle: "An open letter used for sealing.",
-              icon: "/assets/icons/candlelight/letter_open.png",
-              search: "letter open",
-            },
-            {
-              id: "letter_closed",
-              title: "Sealed Letter",
-              namespace_id: "candlelight:letter_closed",
-              subtitle: "A sealed letter item.",
-              icon: "/assets/icons/candlelight/letter_closed.png",
-              search: "sealed letter closed",
-            },
-            {
-              id: "love_letter_open",
-              title: "Love Letter",
-              namespace_id: "candlelight:love_letter_open",
-              subtitle: "An open love letter used for sealing.",
-              icon: "/assets/icons/candlelight/love_letter_open.png",
-              search: "love letter open",
-            },
-            {
-              id: "love_letter",
-              title: "Sealed Love Letter",
-              namespace_id: "candlelight:love_letter",
-              subtitle: "A sealed love letter item.",
-              icon: "/assets/icons/candlelight/love_letter.png",
-              search: "sealed love letter closed",
-            },
-          ],
-        },
-      ],
-    },
-
-    {
-      id: "decor_building",
+      id: "decor",
       title: "Decor and Building",
       subtitle: "Furniture and decorative blocks for restaurants, dining rooms, and interiors.",
       entries: [
         {
           id: "drawer",
           title: "Drawer",
-          namespace_id: "candlelight:*_drawer",
           subtitle: "A storage drawer. Available in all wood variants.",
-          icon: "/assets/icons/candlelight/oak_drawer.png",
+          icon: "/assets/icons/candlelight/drawer.png",
           search: "drawer storage wood variants oak spruce birch jungle acacia dark oak mangrove cherry bamboo candlelight",
         },
         {
           id: "cabinet",
           title: "Cabinet",
-          namespace_id: "candlelight:*_cabinet",
           subtitle: "A storage cabinet. Available in all wood variants.",
-          icon: "/assets/icons/candlelight/oak_cabinet.png",
+          icon: "/assets/icons/candlelight/cabinet.png",
           search: "cabinet storage wood variants oak spruce birch jungle acacia dark oak mangrove cherry bamboo candlelight",
         },
         {
           id: "table",
           title: "Table",
-          namespace_id: "candlelight:*_table",
           subtitle: "A dining table. Available in all wood variants.",
           icon: "/assets/icons/candlelight/oak_table.png",
           search: "table dining wood variants oak spruce birch jungle acacia dark oak mangrove cherry bamboo candlelight",
@@ -229,36 +135,37 @@ To seal a letter, combine a written note and an open envelope in the letter inte
         {
           id: "chair",
           title: "Chair",
-          namespace_id: "candlelight:*_chair",
           subtitle: "A chair. Available in all wood variants.",
-          icon: "/assets/icons/candlelight/oak_chair.png",
+          icon: "/assets/icons/candlelight/chair.png",
           search: "chair seating wood variants oak spruce birch jungle acacia dark oak mangrove cherry bamboo candlelight",
         },
-        {
-          id: "big_table",
-          title: "Big Table",
-          namespace_id: "candlelight:*_big_table",
-          subtitle: "A large dining table. Available in all wood variants.",
-          icon: "/assets/icons/candlelight/oak_big_table.png",
-          search: "big table large dining wood variants oak spruce birch jungle acacia dark oak mangrove cherry bamboo candlelight",
-        },
-        {
-          id: "kitchen_sink",
-          title: "Kitchen Sink",
-          namespace_id: "candlelight:*_kitchen_sink",
-          subtitle: "A kitchen sink. Available in multiple stone variants.",
-          icon: "/assets/icons/candlelight/cobblestone_kitchen_sink.png",
-          search: "kitchen sink stone variants cobblestone sandstone stone bricks deepslate granite basalt quartz candlelight",
-          details: true,
-          detailsTitle: "Variants",
-          detailsText: `Candlelight includes multiple Kitchen Sink variants designed to match different stone palettes.
+ {
+   id: "kitchen_sink",
+   title: "Kitchen Sink",
+   subtitle: "A functional kitchen sink block available in multiple stone variants.",
+   icon: "/assets/icons/candlelight/cobblestone_kitchen_sink.png",
+   search: "kitchen sink stone variants cobblestone sandstone stone bricks deepslate granite basalt quartz candlelight",
+   details: true,
+   detailsTitle: "Variants and Usage",
+   detailsText: `The Kitchen Sink is a decorative and functional utility block used in kitchens and restaurant interiors.
 
-All variants share the same functionality.`,
-          detailsBullets: [
-            "Multiple stone themed designs",
-            "Same functionality across all variants",
-          ],
-        },
+ Candlelight provides multiple Kitchen Sink variants designed to match different stone palettes, such as Cobblestone, Sandstone, Stone Bricks, Deepslate, Granite, Basalt, and Quartz.
+
+ All Kitchen Sink variants share the same functionality and differ only in appearance, allowing you to choose the version that best fits your build style.`,
+   detailsBullets: [
+     "Available in multiple stone themed variants",
+     "All variants share identical functionality",
+     "Designed for kitchen and restaurant interiors",
+     "Visual differences only, no gameplay changes",
+   ],
+ },
+ {
+   id: "kitchen_counter",
+   title: "Kitchen Counter",
+   subtitle: "A decorative kitchen counter for interior builds.",
+   icon: "/assets/icons/candlelight/cobblestone_counter.png",
+   search: "kitchen counter decorative candlelight",
+ },
         {
           id: "table_set",
           title: "Table Set",
@@ -269,12 +176,7 @@ All variants share the same functionality.`,
           details: true,
           detailsTitle: "Placeables",
           detailsText: `The Table Set lets you place different dining pieces for table decoration.`,
-          detailsBullets: [
-            "Plate and Bowl",
-            "Glass and Wine Glass",
-            "Napkin",
-            "Cloche",
-          ],
+          detailsBullets: ["Plate and Bowl", "Glass and Wine Glass", "Napkin", "Cloche"],
           items: [
             { id: "plate", title: "Plate", namespace_id: "candlelight:plate", subtitle: "", icon: "/assets/icons/candlelight/plate.png", search: "plate table set" },
             { id: "bowl", title: "Bowl", namespace_id: "candlelight:bowl", subtitle: "", icon: "/assets/icons/candlelight/bowl.png", search: "bowl table set" },
@@ -304,10 +206,17 @@ All variants share the same functionality.`,
           id: "sofa",
           title: "Sofa",
           namespace_id: "candlelight:sofa",
-          subtitle: "A sofa for seating and interior layouts.",
+          subtitle: "A decorative sofa for seating.",
           icon: "/assets/icons/candlelight/sofa.png",
           search: "sofa seating candlelight",
         },
+               {
+                  id: "big_table",
+                  title: "Big Table",
+                  subtitle: "A large dining table. Available in all wood variants.",
+                  icon: "/assets/icons/candlelight/oak_big_table.png",
+                  search: "big table large dining wood variants oak spruce birch jungle acacia dark oak mangrove cherry bamboo candlelight",
+                },
         {
           id: "dinner_bell",
           title: "Dinner Bell",
@@ -344,11 +253,7 @@ All variants share the same functionality.`,
           detailsText: `The Small Painting can display different motifs.
 
 Right click the placed painting to cycle through the available designs.`,
-          detailsBullets: [
-            "Multiple motifs",
-            "Right click to change motif",
-            "Tribute style decoration",
-          ],
+          detailsBullets: ["Multiple motifs", "Right click to change motif", "Tribute style decoration"],
         },
         {
           id: "jewelry_box",
@@ -360,10 +265,7 @@ Right click the placed painting to cycle through the available designs.`,
           details: true,
           detailsTitle: "Usage",
           detailsText: `Store and display rings inside the box.`,
-          detailsBullets: [
-            "Stores rings",
-            "Designed for display",
-          ],
+          detailsBullets: ["Stores rings", "Designed for display"],
         },
         {
           id: "chocolate_box",
@@ -378,7 +280,7 @@ Right click the placed painting to cycle through the available designs.`,
           title: "Completionist Banner",
           namespace_id: "candlelight:candlelight_banner",
           subtitle: "A reward banner for completing Candlelight foods.",
-          icon: "/assets/icons/candlelight/banner.png",
+          icon: "/assets/icons/candlelight/candlelight_banner.png",
           search: "completionist banner reward foods advancements tooltip candlelight",
           details: true,
           detailsTitle: "Reward",
@@ -395,10 +297,117 @@ To receive the respective advancements, you need all required items in your inve
     },
 
     {
-      id: "items_ingredients_tools",
+      id: "items",
       title: "Items, Ingredients, and Tools",
-      subtitle: "Wearables, accessories, and everyday items used across Candlelight.",
+      subtitle: "Everyday items, ingredients, and tools used across cooking, writing, gifting, and outfits.",
       entries: [
+        {
+          id: "typewriter",
+          title: "Typewriter",
+          namespace_id: "candlelight:typewriter_iron",
+          subtitle: "A writing block for longer letters. Available in Iron and Gold.",
+          icon: "/assets/icons/candlelight/typewriter_iron.png",
+          search: "typewriter writing letters note paper iron gold candlelight",
+          details: true,
+          detailsTitle: "Usage",
+          detailsText: `Right click the Typewriter while holding Note Paper to insert it.
+
+Right click again to open the interface. When finished, sign the letter and remove it with another right click.`,
+          detailsBullets: [
+            "Right click with Note Paper to insert",
+            "Right click to open the interface",
+            "Sign and remove the letter via interaction",
+            "Iron and Gold variants",
+          ],
+          items: [
+            { id: "typewriter_iron", title: "Iron Typewriter", namespace_id: "candlelight:typewriter_iron", subtitle: "", icon: "/assets/icons/candlelight/typewriter_iron.png", search: "typewriter iron" },
+            { id: "typewriter_gold", title: "Gold Typewriter", namespace_id: "candlelight:typewriter_gold", subtitle: "", icon: "/assets/icons/candlelight/typewriter_gold.png", search: "typewriter gold" },
+          ],
+        },
+{
+  id: "note_paper",
+  title: "Note Paper",
+  namespace_id: "candlelight:note_paper*",
+  subtitle: "Write short notes and messages.",
+  icon: "/assets/icons/candlelight/note_paper.png",
+  search: "note paper writable written candlelight typewriter",
+  details: true,
+  detailsTitle: "Usage",
+  detailsText: `Note Paper can be written on directly or processed using a Typewriter.
+
+Writable Note Paper allows you to enter and sign a short message, which then turns into Written Note Paper.
+
+Written notes can be used as decoration, shared with other players, or used as the basis for creating letters.`,
+  detailsBullets: [
+    "Writable and non writable note paper variants",
+    "Write notes directly or using a Typewriter",
+    "Written notes can be shared",
+    "Notepaper can be placed",
+  ],
+  items: [
+    {
+      id: "note_paper",
+      title: "Note Paper",
+      subtitle: "Blank paper used for writing.",
+      icon: "/assets/icons/candlelight/note_paper.png",
+      search: "note paper blank",
+    },
+    {
+      id: "note_paper_writeable",
+      title: "Writable Note Paper",
+      subtitle: "Allows you to write and sign a note.",
+      icon: "/assets/icons/candlelight/note_paper_writeable.png",
+      search: "writable note paper",
+    },
+    {
+      id: "note_paper_written",
+      title: "Written Note Paper",
+      subtitle: "A finished written note.",
+      icon: "/assets/icons/candlelight/note_paper_written.png",
+      search: "written note paper",
+    },
+  ],
+},
+{
+  id: "letter",
+  title: "Letter",
+  namespace_id: "candlelight:letter_*",
+  subtitle: "Write, seal, and exchange letters with other players.",
+  icon: "/assets/icons/candlelight/letter_open.png",
+  search: "letter note paper writable sealed love letter candlelight message",
+  details: true,
+  detailsTitle: "Usage",
+  detailsText: `Letters are used to send written messages to other players.
+
+To create a letter, hold an open Letter and right-click to open the letter interface.
+
+Place a Written Note Paper into the note slot and the open Letter into the envelope slot. Enter a recipient name, then seal the letter to create a Sealed Letter.
+
+Sealed Letters can be gifted or shared with other players.
+
+Love Letters work the same way, but use their own themed variants. When a Love Letter is opened, heart particles appear briefly.`,
+  detailsBullets: [
+    "Hold an open Letter and right-click to open the interface",
+    "Insert Written Note Paper and an open Letter",
+    "Enter a recipient and seal the letter",
+    "Creates a Sealed Letter that can be gifted or shared",
+    "Love Letters spawn heart particles when opened",
+  ],
+  items: [
+    {
+      id: "love_letter_closed",
+      title: "Sealed love Letter",
+      icon: "/assets/icons/candlelight/love_letter.png",
+      search: "sealed love letter closed envelope",
+    },
+    {
+      id: "letter_closed",
+      title: "Sealed Letter",
+      icon: "/assets/icons/candlelight/letter_closed.png",
+      search: "sealed letter closed envelope",
+    },
+  ],
+},
         {
           id: "gold_ring",
           title: "Gold Ring",
@@ -508,8 +517,8 @@ If a meal is prepared using a potion or wine, it inherits the effect from the us
 
     {
       id: "crops",
-      title: "Crops and Wild Plants",
-      subtitle: "Naturally generating plants found in newly generated chunks.",
+      title: "Crops, Wild Plants, and Worldgen",
+      subtitle: "Crops and plants found growing naturally in the world, ready to be harvested or cultivated.",
       entries: [
         {
           id: "rose",
@@ -531,21 +540,13 @@ If a meal is prepared using a potion or wine, it inherits the effect from the us
             "minecraft:river",
           ],
         },
-        {
-          id: "potted_rose",
-          title: "Potted Rose",
-          namespace_id: "candlelight:potted_rose",
-          subtitle: "A potted rose for shelves and tables.",
-          icon: "/assets/icons/candlelight/potted_rose.png",
-          search: "potted rose flower pot candlelight",
-        },
       ],
     },
 
     {
       id: "misc_changes",
       title: "Miscellaneous Changes",
-      subtitle: "Small tweaks and additions that enhance gameplay.",
+      subtitle: "Small but meaningful tweaks and additions that subtly enhance gameplay and atmosphere.",
       entries: [
         {
           id: "config",
@@ -554,13 +555,13 @@ If a meal is prepared using a potion or wine, it inherits the effect from the us
           icon: "/assets/icons/misc/config.png",
           search: "config configuration settings options json candlelight",
         },
-{
-  id: "chef_zombies",
-  title: "Chef Zombies",
-  subtitle: "Sometimes zombies spawn wearing a cooking hat.",
-  icon: "/assets/icons/misc/zombie.png",
-  search: "chef zombie candlelight cooking hat spawn",
-},
+        {
+          id: "chef_zombies",
+          title: "Chef Zombies",
+          subtitle: "Sometimes zombies spawn wearing a cooking hat.",
+          icon: "/assets/icons/misc/zombie.png",
+          search: "chef zombie candlelight cooking hat spawn",
+        },
       ],
     },
   ],

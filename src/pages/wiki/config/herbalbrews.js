@@ -4,6 +4,7 @@ export default {
   logo: "/assets/mod-logos/herbalbrews.png",
   aboutTitle: "Welcome",
   aboutSubtitle: "Tea, coffee, flasks, andi brewing",
+
   aboutText: `
 Welcome to the HerbalBrews Wiki.
 

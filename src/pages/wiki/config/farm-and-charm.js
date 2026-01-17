@@ -44,6 +44,7 @@ Items located in both the Input Slots and the Output Slot are also visually disp
           ],
         },
         {
+
           id: "cooking_pot",
           title: "Cooking Pot",
           namespace_id: "farm_and_charm:cooking_pot",
