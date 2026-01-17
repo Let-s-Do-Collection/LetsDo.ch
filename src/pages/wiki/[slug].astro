@@ -28,6 +28,13 @@ const config = configs[slug];
 if (!config) {
   return Astro.redirect("/404");
 }
+
+const wikiIndex = Object.entries(configs)
+  .map(([wikiSlug, wikiConfig]) => ({
+    slug: wikiSlug,
+    title: wikiConfig?.title ?? wikiSlug,
+  }))
+  .sort((a, b) => String(a.title).localeCompare(String(b.title)));
 ---
 
-<WikiPage config={config} />
+<WikiPage config={config} currentSlug={slug} wikiIndex={wikiIndex} />

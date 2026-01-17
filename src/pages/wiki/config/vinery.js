@@ -12,13 +12,12 @@ This is your home for blocks, items, mechanics, and quick guidance for Vinery.
 Vinery adds new wild plants and crops to discover in newly generated chunks, introduces winemaking stations for juice processing and fermentation, and offers a large selection of placeable wines.
 
 Alongside that, you get practical vineyard and cellar decor, dedicated storage options for bottles, and a few unique entities that can help you obtain Vinery items in survival.
-
 `,
   sections: [
     {
       id: "stations",
       title: "Stations and Processing",
-      subtitle: "Core winemaking stations and grape processing.",
+      subtitle: "Workstations and interactive elements used for winemaking, processing, and ingredient preparation.",
       entries: [
         {
           id: "grapevine_pot",
@@ -28,7 +27,7 @@ Alongside that, you get practical vineyard and cellar decor, dedicated storage o
           icon: "/assets/icons/vinery/grapevine_pot.png",
           search: "grapevine pot stomp grapes must grape juice bottle jump move around cannot mix variants",
           details: true,
-          detailsTitle: "How it works",
+          detailsTitle: "Usage",
           detailsText: `The Grapevine Pot is used to process grapes into grape juice.
 
 Fill the pot with a single grape variant until it is full. Jump in and move around to stomp the grapes into must. Once the juice is ready, collect it using wine bottles.
@@ -77,7 +76,7 @@ The Fermentation Barrel also acts as a workstation for Winemaker Villagers.`,
           icon: "/assets/icons/vinery/apple_press.png",
           search: "apple press crafting station apple mash fermenting input slots output slot apple juice wine bottle",
           details: true,
-          detailsTitle: "Mashing and Fermenting",
+          detailsTitle: "Usage",
           detailsText: `The Apple Press is used for two processes: mashing and fermenting.
 
 To mash apples, place them into the upper left input slot. After a short time, Apple Mash is produced and moved into the fermenting input slot.
@@ -94,42 +93,9 @@ To ferment, use the middle input slots with ingredients and containers such as w
     },
 
     {
-      id: "wine_aging",
-      title: "Wine Aging",
-      subtitle: "Aging mechanics that improve wine over time.",
-      entries: [
-        {
-          id: "aging_mechanics",
-          title: "Aging mechanics",
-          namespace_id: "vinery:*wine*",
-          subtitle: "Wine gains years, stronger effects, and more duration over time.",
-          icon: "/assets/icons/vinery/wine_aging.png",
-          search: "wine aging 16 days 384000 ticks five years effect level max 5 duration +10 seconds inventory chest barrel cabinet config",
-          details: true,
-          detailsTitle: "How aging works",
-          detailsText: `Every 16 in-game days, wine gains one additional year of aging.
-
-Every five years, the effect level increases by one, up to a maximum effect level of 5. The effect duration also increases by 10 seconds every five years.
-
-No special action is required. Wine ages while stored in your inventory or in containers such as chests, barrels, cabinets, and similar storage blocks.
-
-All values can be changed in the config.`,
-          detailsBullets: [
-            "Every 16 in-game days: +1 year",
-            "Every 5 years: +1 effect level",
-            "Maximum effect level: 5",
-            "Every 5 years: +10 seconds duration",
-            "Ages in inventories and containers",
-            "All values configurable",
-          ],
-        },
-      ],
-    },
-
-    {
       id: "decor",
       title: "Decor and Building",
-      subtitle: "Vineyard and cellar building blocks, storage, and cozy details.",
+      subtitle: "Decorative and structural elements used to build vineyards, taverns, and cozy cellar spaces.",
       entries: [
         {
           id: "lattice",
@@ -139,7 +105,7 @@ All values can be changed in the config.`,
           icon: "/assets/icons/vinery/lattice.png",
           search: "lattice decoration wall passageway cultivate jungle grapes seeds connects toggle supports axe top side placement",
           details: true,
-          detailsTitle: "Cultivation and placement",
+          detailsTitle: "Usage",
           detailsText: `Lattice is a decorative block that can be used to cultivate Jungle Grapes.
 
 Right-click the lattice while holding Jungle Grape Seeds to plant them.
@@ -162,7 +128,7 @@ Lattice connects to adjacent lattice blocks. With an axe, right-click to toggle 
           icon: "/assets/icons/vinery/wine_rack.png",
           search: "wine storage blocks racks small large variations wood type arrangement not every wine fits",
           details: true,
-          detailsTitle: "Bottle storage",
+          detailsTitle: "Usage",
           detailsText: `Vinery includes multiple storage blocks for wine bottles, with different wood types, sizes, and arrangements.
 
 Not every wine fits in the small or large wine racks.`,
@@ -180,12 +146,9 @@ Not every wine fits in the small or large wine racks.`,
           icon: "/assets/icons/vinery/wine_box.png",
           search: "wine box storage decoration smaller wines",
           details: true,
-          detailsTitle: "Use",
+          detailsTitle: "Usage",
           detailsText: `The Wine Box is a storage and decoration option for smaller wines.`,
-          detailsBullets: [
-            "Compact wine storage",
-            "Decorative block",
-          ],
+          detailsBullets: ["Compact wine storage", "Decorative block"],
         },
         {
           id: "vinery_slabs",
@@ -195,13 +158,9 @@ Not every wine fits in the small or large wine racks.`,
           icon: "/assets/icons/vinery/slabs.png",
           search: "slabs grass dirt coarse dirt vineyard tier expand",
           details: true,
-          detailsTitle: "Variants",
+          detailsTitle: "Usage",
           detailsText: `Vinery offers multiple slabs for building vineyards and paths, including Grass, Dirt, and Coarse Dirt.`,
-          detailsBullets: [
-            "Grass slab",
-            "Dirt slab",
-            "Coarse dirt slab",
-          ],
+          detailsBullets: ["Grass slab", "Dirt slab", "Coarse dirt slab"],
         },
         {
           id: "wine_placeable",
@@ -211,19 +170,17 @@ Not every wine fits in the small or large wine racks.`,
           icon: "/assets/icons/vinery/wine.png",
           search: "wine placeable decoration bottle cellar wine shop",
           details: true,
-          detailsTitle: "Placement",
+          detailsTitle: "Usage",
           detailsText: `Wines can be placed in the world as decoration, making them perfect for cellars, wine shops, and taverns.`,
-          detailsBullets: [
-            "Placeable bottle decoration",
-          ],
+          detailsBullets: ["Placeable bottle decoration"],
         },
       ],
     },
 
     {
       id: "items",
-      title: "Items, Tools and Clothing",
-      subtitle: "Usable items, ingredients, and equipment introduced by Vinery.",
+      title: "Items, Ingredients, and Tools",
+      subtitle: "Everyday items, ingredients, and tools used across winemaking, farming, and processing.",
       entries: [
         {
           id: "stem",
@@ -233,15 +190,11 @@ Not every wine fits in the small or large wine racks.`,
           icon: "/assets/icons/vinery/stem.png",
           search: "stem required cultivate normal taiga savanna grapes two blocks high click upper part seeds",
           details: true,
-          detailsTitle: "Cultivation",
+          detailsTitle: "Usage",
           detailsText: `Stem is required to cultivate normal, taiga, and savanna grapes.
 
 It is two blocks high. To place the respective seeds, click the upper part while holding the seeds.`,
-          detailsBullets: [
-            "Required for grape cultivation",
-            "Two blocks high",
-            "Plant seeds by clicking the upper part",
-          ],
+          detailsBullets: ["Required for grape cultivation", "Two blocks high", "Plant seeds by clicking the upper part"],
         },
         {
           id: "grape_juice",
@@ -251,11 +204,9 @@ It is two blocks high. To place the respective seeds, click the upper part while
           icon: "/assets/icons/vinery/grape_juice.png",
           search: "grape juice ingredient fermentation barrel wine production",
           details: true,
-          detailsTitle: "Use",
+          detailsTitle: "Usage",
           detailsText: `Grape Juice is used as an ingredient for crafting wine.`,
-          detailsBullets: [
-            "Ingredient for wine recipes",
-          ],
+          detailsBullets: ["Ingredient for wine recipes"],
         },
         {
           id: "apple_juice",
@@ -265,11 +216,9 @@ It is two blocks high. To place the respective seeds, click the upper part while
           icon: "/assets/icons/vinery/apple_juice.png",
           search: "apple juice ingredient apple press fermenting wine production",
           details: true,
-          detailsTitle: "Use",
+          detailsTitle: "Usage",
           detailsText: `Apple Juice is used as an ingredient for apple-based fermentation recipes.`,
-          detailsBullets: [
-            "Ingredient for apple fermentation",
-          ],
+          detailsBullets: ["Ingredient for apple fermentation"],
         },
         {
           id: "basket",
@@ -279,14 +228,11 @@ It is two blocks high. To place the respective seeds, click the upper part while
           icon: "/assets/icons/vinery/basket.png",
           search: "basket mini shulker 9 slots winemaker villager trade picnic",
           details: true,
-          detailsTitle: "Storage",
+          detailsTitle: "Usage",
           detailsText: `The Basket is a small storage container with 9 slots.
 
 It can be obtained from Winemaker Villagers and is great for quick storage and picnics.`,
-          detailsBullets: [
-            "9 slot storage",
-            "Often sold by Winemaker Villagers",
-          ],
+          detailsBullets: ["9 slot storage", "Often sold by Winemaker Villagers"],
         },
         {
           id: "winemaker_armor",
@@ -296,7 +242,7 @@ It can be obtained from Winemaker Villagers and is great for quick storage and p
           icon: "/assets/icons/vinery/winemaker_armor.png",
           search: "winemaker armor set bonus bone meal not consumed durability loss config toggle",
           details: true,
-          detailsTitle: "Set bonus",
+          detailsTitle: "Usage",
           detailsText: `When wearing the full Winemaker Armor Set, you gain a set bonus that prevents bone meal from being consumed.
 
 The armor loses durability in exchange. Both the durability loss and the set bonus can be adjusted in the config.`,
@@ -315,7 +261,7 @@ The armor loses durability in exchange. Both the durability loss and the set bon
           icon: "/assets/icons/vinery/completionist_banner.png",
           search: "completionist banner craft all wines advancement inventory at same time",
           details: true,
-          detailsTitle: "How to unlock",
+          detailsTitle: "Usage",
           detailsText: `The Completionist Banner is awarded to players who crafted all Vinery wines at least once.
 
 To trigger the advancement, you need all wines in your inventory at the same time.`,
@@ -330,7 +276,7 @@ To trigger the advancement, you need all wines in your inventory at the same tim
     {
       id: "consumables",
       title: "Consumables",
-      subtitle: "Fruits and drinks you can enjoy in survival.",
+      subtitle: "Meals, drinks, soups, and other consumable food items.",
       entries: [
         {
           id: "apple",
@@ -356,15 +302,11 @@ To trigger the advancement, you need all wines in your inventory at the same tim
           icon: "/assets/icons/vinery/rotten_cherry.png",
           search: "rotten cherry harvest chance throw at creatures friends",
           details: true,
-          detailsTitle: "Use",
+          detailsTitle: "Usage",
           detailsText: `Rotten Cherry has a small chance to drop when harvesting cherries.
 
 It is not meant to be eaten. It can be thrown at unwanted creatures or friends.`,
-          detailsBullets: [
-            "Rare harvest outcome",
-            "Not meant for eating",
-            "Throwable item",
-          ],
+          detailsBullets: ["Rare harvest outcome", "Not meant for eating", "Throwable item"],
         },
         {
           id: "wine",
@@ -374,110 +316,19 @@ It is not meant to be eaten. It can be thrown at unwanted creatures or friends.`
           icon: "/assets/icons/vinery/wine.png",
           search: "wine effects drink placeable aging",
           details: true,
-          detailsTitle: "About wine",
+          detailsTitle: "Usage",
           detailsText: `Vinery offers many wine variants that provide unique effects when consumed.
 
 Wines can also be placed as decoration. Aging mechanics improve wines over time.`,
-          detailsBullets: [
-            "Many wine variants",
-            "Provides effects when consumed",
-            "Also placeable as decoration",
-            "Improves through aging",
-          ],
+          detailsBullets: ["Many wine variants", "Provides effects when consumed", "Also placeable as decoration", "Improves through aging"],
         },
       ],
     },
 
     {
-      id: "entities",
-      title: "Entities",
-      subtitle: "New entities that find their way into your world through Vinery.",
-      entries: [
-        {
-          id: "wandering_winemaker",
-          title: "Wandering Winemaker",
-          namespace_id: "vinery:wandering_winemaker",
-          subtitle: "A trader that can offer Vinery items in exchange for emeralds.",
-          icon: "/assets/icons/vinery/entity/wandering_winemaker.png",
-          search: "wandering winemaker trader spawn chance shares with wandering trader offers vinery items emeralds config",
-          details: true,
-          detailsTitle: "Trades",
-          detailsText: `Having trouble finding specific seeds or grapes? Keep an eye out for the Wandering Winemaker.
-
-He can appear from time to time and offers Vinery items in exchange for emeralds. His offers vary each visit.
-
-The Wandering Winemaker shares the spawn chance with the Minecraft Wandering Trader. This can be adjusted in the config.`,
-          detailsBullets: [
-            "Offers Vinery items for emeralds",
-            "Offers vary each visit",
-            "Shares spawn chance with Wandering Trader",
-            "Spawn chance configurable",
-          ],
-        },
-        {
-          id: "winemaker_villager",
-          title: "Winemaker Villager",
-          namespace_id: "vinery:winemaker",
-          subtitle: "A villager profession that sells Vinery items and uses the Apple Press as a workstation.",
-          icon: "/assets/icons/vinery/entity/winemaker_villager.png",
-          search: "winemaker villager profession trades sells vinery items apple press workstation",
-          details: true,
-          detailsTitle: "Workstation and trades",
-          detailsText: `The Winemaker Villager is a Vinery profession that sells Vinery items.
-
-The Apple Press acts as the workstation for this profession.`,
-          detailsBullets: [
-            "Vinery profession",
-            "Sells Vinery items",
-            "Apple Press is the workstation",
-          ],
-        },
-        {
-          id: "winemaker_donkey",
-          title: "Winemaker Donkey",
-          namespace_id: "vinery:winemaker_donkey",
-          subtitle: "A donkey that accompanies the Wandering Winemaker.",
-          icon: "/assets/icons/vinery/entity/winemaker_donkey.png",
-          search: "winemaker donkey entity vinery wandering winemaker rideable",
-          details: true,
-          detailsTitle: "Behavior",
-          detailsText: `The Winemaker Donkey spawns together with the Wandering Winemaker.
-
-It behaves like a normal donkey and can be mounted and ridden by the player.`,
-          detailsBullets: [
-            "Spawns alongside the Wandering Winemaker",
-            "Rideable like a normal donkey",
-          ],
-        },
-      ],
-    },
-
-    {
-      id: "mob_effects",
-      title: "Mob Effects",
-      subtitle: "Unique effects added by Vinery.",
-      entries: [
-        { id: "teleports", title: "Teleports", subtitle: "Teleports the player randomly forward.", icon: "/assets/icons/vinery/effects/teleports.png", search: "teleports random forward" },
-        { id: "magnetic", title: "Magnetic", subtitle: "Pulls nearby items towards the player.", icon: "/assets/icons/vinery/effects/magnetic.png", search: "magnetic pull items radius" },
-        { id: "pint_charisma", title: "Pint Charisma", subtitle: "10% discount while trading with villagers.", icon: "/assets/icons/vinery/effects/pint_charisma.png", search: "pint charisma villager discount 10%" },
-        { id: "partystarter", title: "Partystarter", subtitle: "Melee hits emit firework particles and deal a small amount of extra damage.", icon: "/assets/icons/vinery/effects/partystarter.png", search: "partystarter fireworks melee extra damage" },
-        { id: "lava_walker", title: "Lava Walker", subtitle: "Walk over lava without taking damage.", icon: "/assets/icons/vinery/effects/lava_walker.png", search: "lava walker walk on lava" },
-        { id: "double_jump", title: "Double Jump", subtitle: "Jump a second time while in the air.", icon: "/assets/icons/vinery/effects/double_jump.png", search: "double jump mid air" },
-        { id: "staggering", title: "Staggering", subtitle: "Messes with movement and makes you stumble around.", icon: "/assets/icons/vinery/effects/staggering.png", search: "staggering movement stumble drunk" },
-        { id: "better_than_golden_apples", title: "Better than Golden Apples", subtitle: "Similar to Golden Apple effects, slightly improved.", icon: "/assets/icons/vinery/effects/better_than_golden_apples.png", search: "better than golden apples golden apple improved effects" },
-        { id: "creeper_effect", title: "Creeper Effect", subtitle: "You explode. Kaboom.", icon: "/assets/icons/vinery/effects/creeper_effect.png", search: "creeper effect explode" },
-        { id: "experience", title: "Experience", subtitle: "Increases gained experience.", icon: "/assets/icons/vinery/effects/experience.png", search: "experience increased gained xp" },
-        { id: "climbing", title: "Climbing", subtitle: "Lets you climb steep walls.", icon: "/assets/icons/vinery/effects/climbing.png", search: "climbing climb walls" },
-        { id: "saturated", title: "Saturated", subtitle: "Prevents you from getting hungry too quickly.", icon: "/assets/icons/vinery/effects/saturated.png", search: "saturated hunger prevention" },
-        { id: "water_walking", title: "Water Walking", subtitle: "Walk over water.", icon: "/assets/icons/vinery/effects/water_walking.png", search: "water walking walk on water" },
-        { id: "perception", title: "Perception", subtitle: "Random effects that alter your visual spectrum.", icon: "/assets/icons/vinery/effects/perception.png", search: "perception visual spectrum random effects" },
-      ],
-    },
-
-    {
-      id: "wild_worldgen",
-      title: "Wild Plants and Worldgen",
-      subtitle: "New plants and fruit trees that generate in newly created chunks.",
+      id: "crops",
+      title: "Crops, Wild Plants, and Worldgen",
+      subtitle: "Crops and plants found growing naturally in the world, ready to be harvested or cultivated.",
       entries: [
         {
           id: "apple_cherry_trees",
@@ -487,7 +338,7 @@ It behaves like a normal donkey and can be mounted and ridden by the player.`,
           icon: "/assets/icons/vinery/worldgen/apple_tree.png",
           search: "apple tree cherry tree worldgen plains meadow sunflower plains fruit leaves harvest empty hand rotten cherry config growth rate",
           details: true,
-          detailsTitle: "Harvesting",
+          detailsTitle: "Usage",
           detailsText: `Apple and Cherry Trees generate in temperate biomes such as Plains, Meadow, and Sunflower Plains.
 
 They look similar to Oak Trees, but some leaves show visible fruit. To harvest, make sure your main hand is empty, then right-click the leaves block that shows fruit to pick it.
@@ -509,15 +360,11 @@ There is a small chance to obtain a rotten cherry. The apple growth rate can be 
           icon: "/assets/icons/vinery/worldgen/grapes.png",
           search: "grapes worldgen forest plains swamp birch forest meadow sunflower plains river red white common easy to find",
           details: true,
-          detailsTitle: "Where to find them",
+          detailsTitle: "Usage",
           detailsText: `Grapes can be found in Forest, Plains, Swamp, Birch Forest, Meadow, Sunflower Plains, and River biomes.
 
 They are quite common and easy to spot while exploring.`,
-          detailsBullets: [
-            "Found in many overworld biomes",
-            "Common and easy to find",
-            "Includes multiple grape variants",
-          ],
+          detailsBullets: ["Found in many overworld biomes", "Common and easy to find", "Includes multiple grape variants"],
         },
         {
           id: "taiga_grapes",
@@ -527,14 +374,11 @@ They are quite common and easy to spot while exploring.`,
           icon: "/assets/icons/vinery/worldgen/taiga_grapes.png",
           search: "taiga grapes worldgen taiga sub variants rare red white",
           details: true,
-          detailsTitle: "Where to find them",
+          detailsTitle: "Usage",
           detailsText: `Taiga Grapes generate mostly in taiga biomes and their sub-variants.
 
 They are rare and may require a longer journey to discover.`,
-          detailsBullets: [
-            "Found in taiga biomes and sub-variants",
-            "Rare variant",
-          ],
+          detailsBullets: ["Found in taiga biomes and sub-variants", "Rare variant"],
         },
         {
           id: "savanna_grapes",
@@ -544,14 +388,11 @@ They are rare and may require a longer journey to discover.`,
           icon: "/assets/icons/vinery/worldgen/savanna_grapes.png",
           search: "savanna grapes worldgen savanna sub variants very rare red white",
           details: true,
-          detailsTitle: "Where to find them",
+          detailsTitle: "Usage",
           detailsText: `Savanna Grapes generate mostly in savanna biomes and their sub-variants.
 
 They are very rare.`,
-          detailsBullets: [
-            "Found in savanna biomes and sub-variants",
-            "Very rare variant",
-          ],
+          detailsBullets: ["Found in savanna biomes and sub-variants", "Very rare variant"],
         },
         {
           id: "jungle_grapes",
@@ -561,15 +402,11 @@ They are very rare.`,
           icon: "/assets/icons/vinery/worldgen/jungle_grapes.png",
           search: "jungle grapes worldgen jungle sub variants common lattice cultivation seeds",
           details: true,
-          detailsTitle: "Where to find them",
+          detailsTitle: "Usage",
           detailsText: `Jungle Grapes generate in jungle biomes and their sub-variants.
 
 They are quite common and easy to find.`,
-          detailsBullets: [
-            "Found in jungle biomes and sub-variants",
-            "Common variant",
-            "Can be cultivated using lattice",
-          ],
+          detailsBullets: ["Found in jungle biomes and sub-variants", "Common variant", "Can be cultivated using lattice"],
         },
         {
           id: "modded_biomes_note",
@@ -579,25 +416,102 @@ They are quite common and easy to find.`,
           icon: "/assets/icons/vinery/worldgen/modded_biomes.png",
           search: "grapes modded biomes biome tags worldgen compatibility",
           details: true,
-          detailsTitle: "Biome tags",
+          detailsTitle: "Usage",
           detailsText: `All grape variants can also generate in modded biomes as long as those biomes use the respective biome tags.`,
+          detailsBullets: ["Works in modded biomes via biome tags"],
+        },
+      ],
+    },
+
+    {
+      id: "entities",
+      title: "Entities",
+      subtitle: "New entities that find their way into your world through Vinery.",
+      entries: [
+        {
+          id: "wandering_winemaker",
+          title: "Wandering Winemaker",
+          namespace_id: "vinery:wandering_winemaker",
+          subtitle: "A trader that can offer Vinery items in exchange for emeralds.",
+          icon: "/assets/icons/vinery/entity/wandering_winemaker.png",
+          search: "wandering winemaker trader spawn chance shares with wandering trader offers vinery items emeralds config",
+          details: true,
+          detailsTitle: "Usage",
+          detailsText: `Having trouble finding specific seeds or grapes? Keep an eye out for the Wandering Winemaker.
+
+He can appear from time to time and offers Vinery items in exchange for emeralds. His offers vary each visit.
+
+The Wandering Winemaker shares the spawn chance with the Minecraft Wandering Trader. This can be adjusted in the config.`,
           detailsBullets: [
-            "Works in modded biomes via biome tags",
+            "Offers Vinery items for emeralds",
+            "Offers vary each visit",
+            "Shares spawn chance with Wandering Trader",
+            "Spawn chance configurable",
           ],
         },
+        {
+          id: "winemaker_villager",
+          title: "Winemaker Villager",
+          namespace_id: "vinery:winemaker",
+          subtitle: "A villager profession that sells Vinery items and uses the Apple Press as a workstation.",
+          icon: "/assets/icons/vinery/entity/winemaker_villager.png",
+          search: "winemaker villager profession trades sells vinery items apple press workstation",
+          details: true,
+          detailsTitle: "Usage",
+          detailsText: `The Winemaker Villager is a Vinery profession that sells Vinery items.
+
+The Apple Press acts as the workstation for this profession.`,
+          detailsBullets: ["Vinery profession", "Sells Vinery items", "Apple Press is the workstation"],
+        },
+        {
+          id: "winemaker_donkey",
+          title: "Winemaker Donkey",
+          namespace_id: "vinery:winemaker_donkey",
+          subtitle: "A donkey that accompanies the Wandering Winemaker.",
+          icon: "/assets/icons/vinery/entity/winemaker_donkey.png",
+          search: "winemaker donkey entity vinery wandering winemaker rideable",
+          details: true,
+          detailsTitle: "Usage",
+          detailsText: `The Winemaker Donkey spawns together with the Wandering Winemaker.
+
+It behaves like a normal donkey and can be mounted and ridden by the player.`,
+          detailsBullets: ["Spawns alongside the Wandering Winemaker", "Rideable like a normal donkey"],
+        },
+      ],
+    },
+
+    {
+      id: "mob_effects",
+      title: "Mob Effects",
+      subtitle: "Status effects granted by Vinery foods, wines, and interactions.",
+      entries: [
+        { id: "teleports", title: "Teleports", subtitle: "Teleports the player randomly forward.", icon: "/assets/icons/vinery/effects/teleports.png", search: "teleports random forward" },
+        { id: "magnetic", title: "Magnetic", subtitle: "Pulls nearby items towards the player.", icon: "/assets/icons/vinery/effects/magnetic.png", search: "magnetic pull items radius" },
+        { id: "pint_charisma", title: "Pint Charisma", subtitle: "10% discount while trading with villagers.", icon: "/assets/icons/vinery/effects/pint_charisma.png", search: "pint charisma villager discount 10%" },
+        { id: "partystarter", title: "Partystarter", subtitle: "Melee hits emit firework particles and deal a small amount of extra damage.", icon: "/assets/icons/vinery/effects/partystarter.png", search: "partystarter fireworks melee extra damage" },
+        { id: "lava_walker", title: "Lava Walker", subtitle: "Walk over lava without taking damage.", icon: "/assets/icons/vinery/effects/lava_walker.png", search: "lava walker walk on lava" },
+        { id: "double_jump", title: "Double Jump", subtitle: "Jump a second time while in the air.", icon: "/assets/icons/vinery/effects/double_jump.png", search: "double jump mid air" },
+        { id: "staggering", title: "Staggering", subtitle: "Messes with movement and makes you stumble around.", icon: "/assets/icons/vinery/effects/staggering.png", search: "staggering movement stumble drunk" },
+        { id: "better_than_golden_apples", title: "Better than Golden Apples", subtitle: "Similar to Golden Apple effects, slightly improved.", icon: "/assets/icons/vinery/effects/better_than_golden_apples.png", search: "better than golden apples golden apple improved effects" },
+        { id: "creeper_effect", title: "Creeper Effect", subtitle: "You explode. Kaboom.", icon: "/assets/icons/vinery/effects/creeper_effect.png", search: "creeper effect explode" },
+        { id: "experience", title: "Experience", subtitle: "Increases gained experience.", icon: "/assets/icons/vinery/effects/experience.png", search: "experience increased gained xp" },
+        { id: "climbing", title: "Climbing", subtitle: "Lets you climb steep walls.", icon: "/assets/icons/vinery/effects/climbing.png", search: "climbing climb walls" },
+        { id: "saturated", title: "Saturated", subtitle: "Prevents you from getting hungry too quickly.", icon: "/assets/icons/vinery/effects/saturated.png", search: "saturated hunger prevention" },
+        { id: "water_walking", title: "Water Walking", subtitle: "Walk over water.", icon: "/assets/icons/vinery/effects/water_walking.png", search: "water walking walk on water" },
+        { id: "perception", title: "Perception", subtitle: "Random effects that alter your visual spectrum.", icon: "/assets/icons/vinery/effects/perception.png", search: "perception visual spectrum random effects" },
       ],
     },
 
     {
       id: "misc_changes",
       title: "Miscellaneous Changes",
-      subtitle: "Small extras and optional tweaks.",
+      subtitle: "Small but meaningful tweaks and additions that subtly enhance gameplay and atmosphere.",
       entries: [
         {
           id: "config",
           title: "Configuration",
-          subtitle: "Most Vinery features can be adjusted in \`config/vinery.json\`.",
-          icon: "/assets/icons/farm-and-charm/config.png",
+          subtitle: "Most Vinery features can be adjusted via a configuration file, usually located at `config/vinery.json`.",
+          icon: "/assets/icons/misc/config.png",
           search: "config configuration settings options balance json vinery",
         },
         {
