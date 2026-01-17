@@ -4,6 +4,7 @@ import brewery from "./config/brewery.js";
 import farmAndCharm from "./config/farm-and-charm.js";
 import herbalbrews from "./config/herbalbrews.js";
 import vinery from "./config/vinery.js";
+import candlelight from "./config/candlelight.js";
 
 export function getStaticPaths() {
   return [
@@ -11,6 +12,7 @@ export function getStaticPaths() {
     { params: { slug: "farm-and-charm" } },
     { params: { slug: "herbalbrews" } },
     { params: { slug: "vinery" } },
+    { params: { slug: "candlelight" } },
   ];
 }
 
@@ -21,6 +23,7 @@ const configs = {
   "farm-and-charm": farmAndCharm,
   herbalbrews,
   vinery,
+  candlelight,
 };
 
 const config = configs[slug];

@@ -451,7 +451,7 @@ Booze actively hunts players and uses both melee and ranged attacks. It does not
           id: "festive_zombies",
           title: "Festive Zombies",
           subtitle: "Sometimes zombies show up in Brewfest clothing, and yes, it looks ridiculous.",
-          icon: "/assets/icons/brewery/entity/zombie.png",
+          icon: "/assets/icons/misc/zombie.png",
           search: "festive zombie brewfest spawn",
         },
         {
@@ -479,7 +479,7 @@ Booze actively hunts players and uses both melee and ranged attacks. It does not
           detailsText: `Some items and ingredients can be found naturally while exploring the world.
 
 They may appear in various loot containers, such as village chests, dungeon chests, or other generated structures.`,
-          detailsBullets: ["Items and ingredients can appear in loot chests", "Found in villages, dungeons, and other structures", "Encourages exploration alongside farming"],
+          detailsBullets: ["Items and ingredients can appear in loot chests", "Found in villages, dungeons, and other structures", "Encourages exploration alongside brewing"],
         },
       ],
     },

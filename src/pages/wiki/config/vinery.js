@@ -528,7 +528,7 @@ They may appear in various loot containers, such as village chests, dungeon ches
           detailsBullets: [
             "Items and ingredients can appear in loot chests",
             "Found in villages, dungeons, and other structures",
-            "Encourages exploration alongside farming",
+            "Encourages exploration alongside fermenting",
           ],
         },
       ],

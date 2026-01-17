@@ -336,7 +336,7 @@ The deeper you are, the stronger the effect becomes. When multiple players are n
           id: "hat_zombies",
           title: "Hat Zombies",
           subtitle: "Zombies have a small chance to spawn wearing a Witch Hat or Top Hat.",
-          icon: "/assets/icons/herbalbrews/entity/zombie.png",
+          icon: "/assets/icons/misc/zombie.png",
           search: "zombie hat spawn witch hat top hat",
         },
       ],
