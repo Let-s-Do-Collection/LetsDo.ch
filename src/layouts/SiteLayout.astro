@@ -1,4 +1,7 @@
 ---
+import "../styles/global.css";
+import "../styles/theme.css";
+
 const { title = "Let's Do" } = Astro.props;
 ---
 
@@ -8,7 +11,6 @@ const { title = "Let's Do" } = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
-    <link rel="stylesheet" href="/styles/theme.css" />
   </head>
   <body>
     <slot />

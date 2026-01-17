@@ -2,6 +2,8 @@
 import SiteLayout from "../../layouts/SiteLayout.astro";
 import NavBar from "../NavBar.astro";
 import Footer from "../Footer.astro";
+import "../../styles/mods.css";
+import "../../styles/wiki.css";
 
 const withBase = (path) => {
   if (!path) return "";
@@ -53,9 +55,6 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
 ---
 
 <SiteLayout title={title}>
-  <link rel="stylesheet" href={withBase("/styles/mods.css")} />
-  <link rel="stylesheet" href={withBase("/styles/wiki.css")} />
-
   <NavBar />
 
   <main class="page wikiLayout">

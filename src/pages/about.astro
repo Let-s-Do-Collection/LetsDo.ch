@@ -1,7 +1,8 @@
 ---
-import SiteLayout from '../layouts/SiteLayout.astro'
-import NavBar from '../components/NavBar.astro'
-import Footer from '../components/Footer.astro'
+import SiteLayout from "../layouts/SiteLayout.astro";
+import NavBar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
 ---
 
 <SiteLayout title="About Us">
@@ -26,11 +27,7 @@ import Footer from '../components/Footer.astro'
 
       <div class="expectGrid">
         <div class="expectMedia">
-          <img
-            class="expectImage"
-            src="/assets/renderers/lili_cheers.png"
-            alt="Let’s Do collection"
-          />
+          <img class="expectImage" src="/assets/renderers/lili_cheers.png" alt="Let’s Do collection" />
         </div>
 
         <div class="aboutText">
@@ -96,11 +93,7 @@ import Footer from '../components/Footer.astro'
         </div>
 
         <div class="expectMedia">
-          <img
-            class="expectImage"
-            src="/assets/renderers/cart.png"
-            alt="Jason repaired the Cart!"
-          />
+          <img class="expectImage" src="/assets/renderers/cart.png" alt="Jason repaired the Cart!" />
         </div>
       </div>
     </section>
@@ -116,11 +109,7 @@ import Footer from '../components/Footer.astro'
 
       <div class="expectGrid">
         <div class="expectMedia">
-          <img
-            class="expectImage"
-            src="/assets/renderers/its_eating_me_alive.png"
-            alt="It's eating me ALIVE!"
-          />
+          <img class="expectImage" src="/assets/renderers/its_eating_me_alive.png" alt="It's eating me ALIVE!" />
         </div>
 
         <div class="expectPoints">
@@ -190,19 +179,10 @@ import Footer from '../components/Footer.astro'
         </div>
 
         <div class="expectMedia">
-          <img
-            class="expectImage"
-            src="/assets/renderers/baker.png"
-            alt="Supporting Let’s Do development"
-          />
+          <img class="expectImage" src="/assets/renderers/baker.png" alt="Supporting Let’s Do development" />
 
           <div style="margin-top: 22px;">
-            <a
-              class="btn btnPrimary"
-              href="https://www.patreon.com/c/u78595058"
-              target="_blank"
-              rel="noopener"
-            >
+            <a class="btn btnPrimary" href="https://www.patreon.com/c/u78595058" target="_blank" rel="noopener">
               Visit Patreon
             </a>
           </div>
@@ -211,94 +191,90 @@ import Footer from '../components/Footer.astro'
     </section>
   </main>
 
-<section class="section sectionCentered sectionTight">
-  <div class="sectionTitle">
-    <span>Thank you</span>
-  </div>
+  <section class="section sectionCentered sectionTight">
+    <div class="sectionTitle">
+      <span>Thank you</span>
+    </div>
 
-  <p class="sectionSubtitle">
-    This project would not exist in this form without the people behind it.
-  </p>
-
-  <div class="thanksCard">
-    <p class="thanksIntro">
-      Let’s Do is not a solo effort. Over the years, many people have contributed their time,
-      ideas, feedback, patience, and support to help shape the collection into what it is today.
+    <p class="sectionSubtitle">
+      This project would not exist in this form without the people behind it.
     </p>
 
-    <p class="thanksIntro">
-      Some helped directly with development, testing, rendering, moderation, and organization.
-      Others supported the project financially, shared feedback, reported issues, or simply kept
-      the motivation alive.
-    </p>
+    <div class="thanksCard">
+      <p class="thanksIntro">
+        Let’s Do is not a solo effort. Over the years, many people have contributed their time,
+        ideas, feedback, patience, and support to help shape the collection into what it is today.
+      </p>
 
-    <div class="thanksDividerTitle">
-      Special thanks to:
+      <p class="thanksIntro">
+        Some helped directly with development, testing, rendering, moderation, and organization.
+        Others supported the project financially, shared feedback, reported issues, or simply kept
+        the motivation alive.
+      </p>
+
+      <div class="thanksDividerTitle">
+        Special thanks to:
+      </div>
+
+      <div class="thanksNamesGrid">
+        <div>MissLilitu</div>
+        <div>Jason13Official</div>
+        <div>LunarSakura</div>
+        <div>Tsuyumori</div>
+        <div>Cristelknight</div>
+        <div>Cloud</div>
+        <div>Plantkillable</div>
+        <div>SirColor</div>
+        <div>Raymond</div>
+        <div>CR-055</div>
+        <div>Awoolanche</div>
+        <div>unroman</div>
+        <div>Flower</div>
+        <div>Jamie</div>
+        <div>Iri</div>
+        <div>Noah</div>
+        <div>Cowsticker</div>
+        <div>Tera</div>
+        <div>Raph</div>
+        <div>Myst</div>
+        <div>Tefny</div>
+        <div>Ender</div>
+        <div>KalWantsPizza</div>
+        <div>Ninjaday</div>
+        <div>Blockdown</div>
+        <div>Kenddie</div>
+        <div>Tokimi</div>
+        <div>Globox</div>
+        <div>Meshinator</div>
+        <div>Fudgy</div>
+        <div>Rick O.</div>
+        <div>Hubert K.</div>
+        <div>Wupin</div>
+        <div>Alchered</div>
+        <div>Jessica H.</div>
+        <div>Hannah S.</div>
+        <div>BaumeisterJo</div>
+        <div>Imogen</div>
+        <div>Petr</div>
+        <div>CJ B.</div>
+        <div>AOE Studios</div>
+        <div>Nog</div>
+        <div>KaupenJoe</div>
+        <div>OrcGoth</div>
+        <div>Aaron loves Coffee</div>
+        <div>Medieval Norfare</div>
+        <div>Enders Brother</div>
+        <div>Badgerson</div>
+        <div>Ari</div>
+      </div>
+
+      <div class="thanksYou">YOU</div>
+
+      <div class="thanksFooter">
+        Thank you for being part of the journey!
+      </div>
     </div>
-
-    <div class="thanksNamesGrid">
-      <div>MissLilitu</div>
-      <div>Jason13Official</div>
-      <div>LunarSakura</div>
-      <div>Tsuyumori</div>
-      <div>Cristelknight</div>
-      <div>Cloud</div>
-      <div>Plantkillable</div>
-      <div>SirColor</div>
-      <div>Raymond</div>
-      <div>CR-055</div>
-      <div>Awoolanche</div>
-      <div>unroman</div>
-      <div>Flower</div>
-      <div>Jamie</div>
-      <div>Iri</div>
-      <div>Noah</div>
-      <div>Cowsticker</div>
-      <div>Tera</div>
-      <div>Raph</div>
-      <div>Myst</div>
-      <div>Tefny</div>
-      <div>Ender</div>
-      <div>KalWantsPizza</div>
-      <div>Ninjaday</div>
-      <div>Blockdown</div>
-      <div>Kenddie</div>
-      <div>Tokimi</div>
-      <div>Globox</div>
-      <div>Meshinator</div>
-      <div>Fudgy</div>
-      <div>Rick O.</div>
-      <div>Hubert K.</div>
-      <div>Wupin</div>
-      <div>Alchered</div>
-      <div>Jessica H.</div>
-      <div>Hannah S.</div>
-      <div>BaumeisterJo</div>
-      <div>Imogen</div>
-      <div>Petr</div>
-      <div>CJ B.</div>
-      <div>AOE Studios</div>
-      <div>Nog</div>
-      <div>KaupenJoe</div>
-      <div>OrcGoth</div>
-      <div>Aaron loves Coffee</div>
-      <div>Medieval Norfare</div>
-      <div>Enders Brother</div>
-      <div>Badgerson</div>
-      <div>Ari</div>
-    </div>
-
-
-    <div class="thanksYou">
-      YOU
-
-    </div>
-
-    <div class="thanksFooter">
-      Thank you for being part of the journey!
-    </div>
-  </div>
-</section>
+  </section>
 
   <Footer />
 </SiteLayout>

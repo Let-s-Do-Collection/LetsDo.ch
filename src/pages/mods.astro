@@ -1,7 +1,8 @@
 ---
-import SiteLayout from '../layouts/SiteLayout.astro'
-import NavBar from '../components/NavBar.astro'
-import Footer from '../components/Footer.astro'
+import SiteLayout from "../layouts/SiteLayout.astro";
+import NavBar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/mods.css";
 
 const mods = [
   {
@@ -36,24 +37,14 @@ const mods = [
     source: "https://github.com/Let-s-Do-Collection/BloomingNature",
     tags: ["plants", "decor", "worldgen", "nature", "biomes"],
   },
-{
-  title: "Brewery",
-  logo: "/assets/mod-logos/brewery.png",
-  description: "Brewing, beer, food, and a festive tavern atmosphere built around interactive brewing.",
-  wiki: "/wiki/brewery/",
-  source: "https://github.com/Let-s-Do-Collection/Brewery",
-  tags: [
-    "brewing",
-    "beer",
-    "drinks",
-    "food",
-    "atmosphere",
-    "tavern",
-    "festive",
-    "multiblock",
-    "minigame"
-  ],
-},
+  {
+    title: "Brewery",
+    logo: "/assets/mod-logos/brewery.png",
+    description: "Brewing, beer, food, and a festive tavern atmosphere built around interactive brewing.",
+    wiki: "/wiki/brewery/",
+    source: "https://github.com/Let-s-Do-Collection/Brewery",
+    tags: ["brewing", "beer", "drinks", "food", "atmosphere", "tavern", "festive", "multiblock", "minigame"],
+  },
   {
     title: "Camping",
     logo: "/assets/mod-logos/camping.png",
@@ -77,35 +68,35 @@ const mods = [
     wiki: "/wiki/farm-and-charm/",
     source: "https://github.com/Let-s-Do-Collection/FarmAndCharm",
     tags: [
-    "farming",
-    "food",
-    "cooking",
-    "processing",
-    "agriculture",
-    "crafting",
-    "storage",
-    "blocks",
-    "items",
-    "crops",
-    "ingredients",
-    "stations",
-    "decor",
-    "plants",
-    "cozy",
-    "rustic",
-    "immersive",
-    "vanilla-plus",
-    "lets-do-core"
-  ],
-   },
-{
-  title: "Furniture",
-  logo: "/assets/mod-logos/furniture.png",
-  description: "Furniture, seating, tables, and decorative blocks focused on everyday interiors and cozy living spaces.",
-  wiki: "/docs/mods/furniture/",
-  source: "https://github.com/Let-s-Do-Collection/Furniture",
-  tags: ["decor", "furniture", "building", "interior", "atmosphere"],
-},
+      "farming",
+      "food",
+      "cooking",
+      "processing",
+      "agriculture",
+      "crafting",
+      "storage",
+      "blocks",
+      "items",
+      "crops",
+      "ingredients",
+      "stations",
+      "decor",
+      "plants",
+      "cozy",
+      "rustic",
+      "immersive",
+      "vanilla-plus",
+      "lets-do-core",
+    ],
+  },
+  {
+    title: "Furniture",
+    logo: "/assets/mod-logos/furniture.png",
+    description: "Furniture, seating, tables, and decorative blocks focused on everyday interiors and cozy living spaces.",
+    wiki: "/docs/mods/furniture/",
+    source: "https://github.com/Let-s-Do-Collection/Furniture",
+    tags: ["decor", "furniture", "building", "interior", "atmosphere"],
+  },
   {
     title: "Hearth & Timber",
     logo: "/assets/mod-logos/hearth_and_timber.png",
@@ -120,19 +111,7 @@ const mods = [
     description: "Herbal drinks, cozy brewing, and small features that fit naturally into gameplay.",
     wiki: "/wiki/herbalbrews/",
     source: "https://github.com/Let-s-Do-Collection/HerbalBrews",
-tags: [
-  "tea",
-  "coffee",
-  "flasks",
-  "potions",
-  "brewing",
-  "cauldron",
-  "kettle",
-  "flowers",
-  "wild-crops",
-  "worldgen",
-  "decor",
-]
+    tags: ["tea", "coffee", "flasks", "potions", "brewing", "cauldron", "kettle", "flowers", "wild-crops", "worldgen", "decor"],
   },
   {
     title: "Lili's Pottery",
@@ -172,7 +151,8 @@ tags: [
     description: "Wine making, vineyards, and cozy rustic decor for long-term worlds.",
     wiki: "/wiki/vinery/",
     source: "https://github.com/Let-s-Do-Collection/Vinery",
-tags: ["wine", "winemaking", "vineyard", "farming", "decor", "atmosphere"],  },
+    tags: ["wine", "winemaking", "vineyard", "farming", "decor", "atmosphere"],
+  },
   {
     title: "WilderNature",
     logo: "/assets/mod-logos/wildernature.png",
@@ -181,12 +161,10 @@ tags: ["wine", "winemaking", "vineyard", "farming", "decor", "atmosphere"],  },
     source: "https://github.com/Let-s-Do-Collection/WilderNature",
     tags: ["worldgen", "nature", "plants", "atmosphere", "food"],
   },
-]
+];
 ---
 
 <SiteLayout title="Mods">
-  <link rel="stylesheet" href="/styles/mods.css" />
-
   <NavBar />
 
   <main class="page">
@@ -202,9 +180,7 @@ tags: ["wine", "winemaking", "vineyard", "farming", "decor", "atmosphere"],  },
         <span>Browse the Collection</span>
       </div>
 
-      <p class="sectionSubtitle">
-        Search by name, theme, or feature.
-      </p>
+      <p class="sectionSubtitle">Search by name, theme, or feature.</p>
 
       <div class="modsSearch">
         <input
@@ -221,39 +197,26 @@ tags: ["wine", "winemaking", "vineyard", "farming", "decor", "atmosphere"],  },
       <div class="gridWrapper">
         <div id="modsGrid" class="grid">
           {mods.map((mod) => (
-            <article
-              class="card"
-              data-search={`${mod.title} ${mod.description} ${(mod.tags ?? []).join(" ")}`.toLowerCase()}
-            >
+            <article class="card" data-search={`${mod.title} ${mod.description} ${(mod.tags ?? []).join(" ")}`.toLowerCase()}>
               <div class="cardContent">
-                <img
-                  class="cardLogo"
-                  src={mod.logo}
-                  alt={mod.title}
-                  loading="lazy"
-                />
+                <img class="cardLogo" src={mod.logo} alt={mod.title} loading="lazy" />
                 <h3>{mod.title}</h3>
                 <p>{mod.description}</p>
               </div>
 
-<div class="cardAction">
-  {mod.wiki ? (
-    <a class="btn btnPrimary" href={mod.wiki}>
-      View Wiki
-    </a>
-  ) : null}
+              <div class="cardAction">
+                {mod.wiki ? (
+                  <a class="btn btnPrimary" href={mod.wiki}>
+                    View Wiki
+                  </a>
+                ) : null}
 
-  {mod.source ? (
-    <a
-      class="btn btnSecondary"
-      href={mod.source}
-      target="_blank"
-      rel="noopener"
-    >
-      Source Code
-    </a>
-  ) : null}
-</div>
+                {mod.source ? (
+                  <a class="btn btnSecondary" href={mod.source} target="_blank" rel="noopener">
+                    Source Code
+                  </a>
+                ) : null}
+              </div>
             </article>
           ))}
         </div>
@@ -285,11 +248,7 @@ tags: ["wine", "winemaking", "vineyard", "farming", "decor", "atmosphere"],  },
         if (show) visible++
       }
 
-      meta.textContent =
-        q.length === 0
-          ? `${cards.length} mods`
-          : `${visible} of ${cards.length}`
-
+      meta.textContent = q.length === 0 ? `${cards.length} mods` : `${visible} of ${cards.length}`
       empty.style.display = visible === 0 ? "" : "none"
     }
 

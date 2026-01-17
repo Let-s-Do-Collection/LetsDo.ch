@@ -1,7 +1,8 @@
 ---
-import SiteLayout from '../layouts/SiteLayout.astro'
-import NavBar from '../components/NavBar.astro'
-import Footer from '../components/Footer.astro'
+import SiteLayout from "../layouts/SiteLayout.astro";
+import NavBar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
 ---
 
 <SiteLayout title="FAQ">
@@ -31,32 +32,32 @@ import Footer from '../components/Footer.astro'
         <details class="faqItem">
           <summary class="faqQ">Which Minecraft versions are supported?</summary>
           <div class="faqA">
-            Development currently focuses on Minecraft 1.21.1 and will likely stay there for a while. We prefer to take our time and do things properly – where it goes from here, we’ll see.          </div>
+            Development currently focuses on Minecraft 1.21.1 and will likely stay there for a while. We prefer to take
+            our time and do things properly – where it goes from here, we’ll see.
+          </div>
         </details>
 
         <details class="faqItem">
           <summary class="faqQ">Do I need other dependencies?</summary>
           <div class="faqA">
-            Architectury API is always required.
-            When using Fabric, Fabric API is required as well.
-            Additional dependencies may exist depending on the mod and are always listed on the mod page.
+            Architectury API is always required. When using Fabric, Fabric API is required as well. Additional
+            dependencies may exist depending on the mod and are always listed on the mod page.
           </div>
         </details>
 
         <details class="faqItem">
           <summary class="faqQ">Is there a config file?</summary>
           <div class="faqA">
-Some mods already include configuration options.
-If you don’t see a config yet, it simply means it’s planned for the future and will be added as the mod continues to grow.
+            Some mods already include configuration options. If you don’t see a config yet, it simply means it’s planned
+            for the future and will be added as the mod continues to grow.
           </div>
         </details>
 
         <details class="faqItem">
           <summary class="faqQ">Can I use Let’s Do in my modpack?</summary>
           <div class="faqA">
-Yes, modpacks are absolutely allowed.
-You are free to include Let’s Do mods in modpacks distributed via Modrinth or CurseForge.
-Please do not re-upload, redistribute, or modify the original mod files themselves.
+            Yes, modpacks are absolutely allowed. You are free to include Let’s Do mods in modpacks distributed via
+            Modrinth or CurseForge. Please do not re-upload, redistribute, or modify the original mod files themselves.
           </div>
         </details>
       </div>
@@ -74,36 +75,36 @@ Please do not re-upload, redistribute, or modify the original mod files themselv
           <summary class="faqQ">What are datapacks and how do they work?</summary>
           <div class="faqA">
             Datapacks are a vanilla Minecraft system that allows changing or extending game behavior using JSON files.
-            They operate on the server side and can modify recipes, loot tables, tags, advancements, and world generation.
-            Let’s Do mods expose many internal features through datapacks to allow customization without code changes.
+            They operate on the server side and can modify recipes, loot tables, tags, advancements, and world
+            generation. Let’s Do mods expose many internal features through datapacks to allow customization without
+            code changes.
           </div>
         </details>
 
         <details class="faqItem">
           <summary class="faqQ">How do I create a datapack for a Let’s Do mod?</summary>
           <div class="faqA">
-            The easiest way is to look at the mod’s built-in datapack.
-            You can open the mod jar and inspect the data folder, or view it directly on GitHub.
-            Copy the files you want to change and place them into your own datapack.
-            Only the files you modify need to be included.
+            The easiest way is to look at the mod’s built-in datapack. You can open the mod jar and inspect the data
+            folder, or view it directly on GitHub. Copy the files you want to change and place them into your own
+            datapack. Only the files you modify need to be included.
           </div>
         </details>
 
         <details class="faqItem">
           <summary class="faqQ">How can datapacks be loaded?</summary>
           <div class="faqA">
-            Datapacks can be placed directly into a world’s datapacks folder.
-            Alternatively, mods like OpenLoader or Global Datapacks can load datapacks globally across all worlds.
-            Datapacks are applied when a world is loaded or reloaded.
+            Datapacks can be placed directly into a world’s datapacks folder. Alternatively, mods like OpenLoader or
+            Global Datapacks can load datapacks globally across all worlds. Datapacks are applied when a world is loaded
+            or reloaded.
           </div>
         </details>
 
         <details class="faqItem">
           <summary class="faqQ">What can I change using datapacks?</summary>
           <div class="faqA">
-            Datapacks can be used to change recipes, loot tables, mob drops, tags, and world generation behavior.
-            Many Let’s Do features are controlled through tags, allowing you to enable, disable, or extend behavior.
-            This includes things like spawn rules, interactions, and structure placement.
+            Datapacks can be used to change recipes, loot tables, mob drops, tags, and world generation behavior. Many
+            Let’s Do features are controlled through tags, allowing you to enable, disable, or extend behavior. This
+            includes things like spawn rules, interactions, and structure placement.
           </div>
         </details>
       </div>
@@ -120,27 +121,25 @@ Please do not re-upload, redistribute, or modify the original mod files themselv
         <details class="faqItem">
           <summary class="faqQ">What are resource packs?</summary>
           <div class="faqA">
-            Resource packs are a vanilla Minecraft system used to change visuals and audio.
-            They control textures, models, animations, particles, UI elements, fonts, and sounds.
-            Resource packs do not change gameplay logic.
+            Resource packs are a vanilla Minecraft system used to change visuals and audio. They control textures,
+            models, animations, particles, UI elements, fonts, and sounds. Resource packs do not change gameplay logic.
           </div>
         </details>
 
         <details class="faqItem">
           <summary class="faqQ">How does Let’s Do use resource packs?</summary>
           <div class="faqA">
-            Let’s Do mods include built-in resources for custom textures, models, particles, and animations.
-            These resources define the visual style of each mod and are loaded automatically.
-            Custom resource packs can override these assets if desired.
+            Let’s Do mods include built-in resources for custom textures, models, particles, and animations. These
+            resources define the visual style of each mod and are loaded automatically. Custom resource packs can
+            override these assets if desired.
           </div>
         </details>
 
         <details class="faqItem">
           <summary class="faqQ">Can I create my own resource pack for Let’s Do?</summary>
           <div class="faqA">
-            Yes. You can create a resource pack that overrides Let’s Do textures or models.
-            This works the same way as overriding vanilla assets.
-            Only visual elements can be changed through resource packs.
+            Yes. You can create a resource pack that overrides Let’s Do textures or models. This works the same way as
+            overriding vanilla assets. Only visual elements can be changed through resource packs.
           </div>
         </details>
       </div>
@@ -157,101 +156,91 @@ Please do not re-upload, redistribute, or modify the original mod files themselv
         <details class="faqItem">
           <summary class="faqQ">Are Let’s Do mods compatible with worldgen mods?</summary>
           <div class="faqA">
-Yes. As long as other mods rely on vanilla biome tags, Let’s Do world generation will integrate alongside them.
-For example world generation mods like Terralith work seamlessly.
-Just keep in mind that worldgen features will only show up in new chunks.
+            Yes. As long as other mods rely on vanilla biome tags, Let’s Do world generation will integrate alongside
+            them. For example world generation mods like Terralith work seamlessly. Just keep in mind that worldgen
+            features will only show up in new chunks.
           </div>
         </details>
 
         <details class="faqItem">
           <summary class="faqQ">Do Let’s Do mods work with performance mods?</summary>
           <div class="faqA">
-            Sodium- and Rubidium-based performance mods generally work well.
-            In some cases, custom renderers may behave differently depending on the rendering setup.
+            Sodium- and Rubidium-based performance mods generally work well. In some cases, custom renderers may behave
+            differently depending on the rendering setup.
           </div>
         </details>
 
         <details class="faqItem">
           <summary class="faqQ">Why do I see “No data fixer registered” in the logs?</summary>
           <div class="faqA">
-         This message refers to Minecraft’s DataFixerUpper, a system Minecraft uses to update and convert very old world data between versions.
-         Let’s Do mods do not rely on DataFixers, as changes are handled directly within the mod logic.
-         The message is harmless and can safely be ignored.
+            This message refers to Minecraft’s DataFixerUpper, a system Minecraft uses to update and convert very old
+            world data between versions. Let’s Do mods do not rely on DataFixers, as changes are handled directly within
+            the mod logic. The message is harmless and can safely be ignored.
           </div>
         </details>
       </div>
     </section>
 
-<section class="section sectionCentered">
-  <div class="sectionTitle">
-    <span>Licensing & Support</span>
-  </div>
-</section>
-
-<section class="faqBlock">
-  <div class="faqCategory">
-    <details class="faqItem">
-      <summary class="faqQ">What license do the mods use?</summary>
-      <div class="faqA">
-        The code is licensed under MIT.
-        Assets are All Rights Reserved by default.
+    <section class="section sectionCentered">
+      <div class="sectionTitle">
+        <span>Licensing & Support</span>
       </div>
-    </details>
+    </section>
 
-    <details class="faqItem">
-      <summary class="faqQ">Can I ask about asset usage?</summary>
-      <div class="faqA">
-        Yes. If you are unsure about asset usage, just ask.
-      </div>
-    </details>
+    <section class="faqBlock">
+      <div class="faqCategory">
+        <details class="faqItem">
+          <summary class="faqQ">What license do the mods use?</summary>
+          <div class="faqA">
+            The code is licensed under MIT. Assets are All Rights Reserved by default.
+          </div>
+        </details>
 
-    <details class="faqItem">
-      <summary class="faqQ">Where should I report bugs or issues?</summary>
-      <div class="faqA">
-        If you find bugs, inconsistencies, or have suggestions,
-        please use the Let’s Do Hub on GitHub for bug reports:
-        <br />
-        <a
-          href="https://github.com/Let-s-Do-Collection/Let-s-Do-Collection/issues"
-          target="_blank"
-          rel="noopener"
-        >
-          Let’s Do – GitHub Issues
-        </a>
-        <br />
-        This helps keep everything organized and easy to track.
-      </div>
-    </details>
+        <details class="faqItem">
+          <summary class="faqQ">Can I ask about asset usage?</summary>
+          <div class="faqA">
+            Yes. If you are unsure about asset usage, just ask.
+          </div>
+        </details>
 
-    <details class="faqItem">
-      <summary class="faqQ">How should I report an issue?</summary>
-      <div class="faqA">
-        To help resolve issues faster, please include:
-        Minecraft version,
-        mod name and version,
-        confirmation that you are on the latest version,
-        a short description,
-        steps to reproduce,
-        and logs or crash reports if available.
-      </div>
-    </details>
+        <details class="faqItem">
+          <summary class="faqQ">Where should I report bugs or issues?</summary>
+          <div class="faqA">
+            If you find bugs, inconsistencies, or have suggestions, please use the Let’s Do Hub on GitHub for bug
+            reports:
+            <br />
+            <a href="https://github.com/Let-s-Do-Collection/Let-s-Do-Collection/issues" target="_blank" rel="noopener">
+              Let’s Do – GitHub Issues
+            </a>
+            <br />
+            This helps keep everything organized and easy to track.
+          </div>
+        </details>
 
-    <details class="faqItem">
-      <summary class="faqQ">Can I help with translations?</summary>
-      <div class="faqA">
-        Yes. Community translations are always welcome
-        and can be contributed via Pull Requests.
-      </div>
-    </details>
+        <details class="faqItem">
+          <summary class="faqQ">How should I report an issue?</summary>
+          <div class="faqA">
+            To help resolve issues faster, please include: Minecraft version, mod name and version, confirmation that you
+            are on the latest version, a short description, steps to reproduce, and logs or crash reports if available.
+          </div>
+        </details>
 
-    <details class="faqItem">
-      <summary class="faqQ">Can I support development?</summary>
-      <div class="faqA">
-        Support is possible via Patreon or PayPal.
-        All mods remain fully playable without support.
+        <details class="faqItem">
+          <summary class="faqQ">Can I help with translations?</summary>
+          <div class="faqA">
+            Yes. Community translations are always welcome and can be contributed via Pull Requests.
+          </div>
+        </details>
+
+        <details class="faqItem">
+          <summary class="faqQ">Can I support development?</summary>
+          <div class="faqA">
+            Support is possible via Patreon or PayPal. All mods remain fully playable without support.
+          </div>
+        </details>
       </div>
-    </details>
-  </div>
-</section>
+    </section>
+  </main>
+
   <Footer />
 </SiteLayout>
