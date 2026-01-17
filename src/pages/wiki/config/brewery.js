@@ -256,7 +256,6 @@ Once dried, they become items you can use in recipes, and they can also be place
         {
           id: "regalia_set",
           title: "Regalia",
-          namespace_id: "brewery:brewfest_*",
           subtitle: "Traditional Brewfest pieces with a full set bonus.",
           icon: "/assets/icons/brewery/brewfest_regalia.png",
           search: "brewfest regalia hat trousers boots lederhosen harddrinking",
@@ -276,7 +275,6 @@ If you wear the full set at the same time, you gain Harddrinking and become immu
         {
           id: "dirndl_set",
           title: "Dirndl",
-          namespace_id: "brewery:brewfest_*",
           subtitle: "Classic dirndl pieces with a full set bonus.",
           icon: "/assets/icons/brewery/brewfest_dress.png",
           search: "dirndl blouse dress shoes blue hat harddrinking",

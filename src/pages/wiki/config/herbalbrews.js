@@ -110,7 +110,6 @@ The Potions placed inside the Cauldron are also visually displayed while brewing
         {
           id: "witching_time_hats",
           title: "Witching Time",
-          namespace_id: "herbalbrews:*_hat",
           subtitle: "Wearable hats with magical protection.",
           icon: "/assets/icons/herbalbrews/witch_hat.png",
           search: "witch hat top hat herbalbrews magic damage reduction head armor witching time",
