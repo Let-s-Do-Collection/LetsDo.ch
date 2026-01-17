@@ -3,7 +3,7 @@ export default {
   title: "HerbalBrews Wiki",
   logo: "/assets/mod-logos/herbalbrews.png",
   aboutTitle: "Welcome",
-  aboutSubtitle: "Tea, coffee, flasks, and cozy brewing",
+  aboutSubtitle: "Tea, coffee, flasks, andi brewing",
   aboutText: `
 Welcome to the HerbalBrews Wiki.
 

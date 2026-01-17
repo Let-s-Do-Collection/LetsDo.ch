@@ -30,6 +30,31 @@ import "../styles/global.css";
         </details>
 
         <details class="faqItem">
+          <summary class="faqQ">What is Architectury API and why is it required?</summary>
+          <div class="faqA">
+            Architectury API is a shared library that allows mods to run on multiple modloaders using a single codebase.
+            All Let’s Do mods are built on Architectury to ensure consistent behavior across platforms. Architectury API
+            is always required, no matter which modloader you use.
+          </div>
+        </details>
+
+        <details class="faqItem">
+          <summary class="faqQ">Why do I need Fabric API when using Fabric?</summary>
+          <div class="faqA">
+            Fabric API provides core hooks and functionality used by many Fabric mods, including Let’s Do. When running
+            Let’s Do mods on Fabric, both Architectury API and Fabric API must be installed.
+          </div>
+        </details>
+
+        <details class="faqItem">
+          <summary class="faqQ">What happens if a required API is missing?</summary>
+          <div class="faqA">
+            If a required API is missing, Minecraft will usually fail to start and display an error message listing the
+            missing dependency. This simply means a required library has not been installed yet.
+          </div>
+        </details>
+
+        <details class="faqItem">
           <summary class="faqQ">Which Minecraft versions are supported?</summary>
           <div class="faqA">
             Development currently focuses on Minecraft 1.21.1 and will likely stay there for a while. We prefer to take

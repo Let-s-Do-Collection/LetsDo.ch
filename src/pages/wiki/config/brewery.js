@@ -3,7 +3,7 @@ export default {
   title: "Brewery Wiki",
   logo: "/assets/mod-logos/brewery.png",
   aboutTitle: "Welcome",
-  aboutSubtitle: "Beer, brewfest, and tavern life in survival",
+  aboutSubtitle: "Everything about beer and brewing",
   aboutText: `
 Welcome to the Brewery Wiki.
 

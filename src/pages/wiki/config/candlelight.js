@@ -3,7 +3,7 @@ export default {
   title: "Candlelight Wiki",
   logo: "/assets/mod-logos/candlelight.png",
   aboutTitle: "Welcome",
-  aboutSubtitle: "Fine dining, interiors, and a little romance in survival",
+  aboutSubtitle: "Fine dining, interiors, and a little bit of romance",
   aboutText: `
 Welcome to the Candlelight Wiki.
 
@@ -554,6 +554,13 @@ If a meal is prepared using a potion or wine, it inherits the effect from the us
           icon: "/assets/icons/misc/config.png",
           search: "config configuration settings options json candlelight",
         },
+{
+  id: "chef_zombies",
+  title: "Chef Zombies",
+  subtitle: "Sometimes zombies spawn wearing a cooking hat.",
+  icon: "/assets/icons/misc/zombie.png",
+  search: "chef zombie candlelight cooking hat spawn",
+},
       ],
     },
   ],
