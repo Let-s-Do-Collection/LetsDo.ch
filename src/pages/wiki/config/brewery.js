@@ -4,8 +4,7 @@ export default {
   logo: "/assets/mod-logos/brewery.png",
   aboutTitle: "Welcome",
   aboutSubtitle: "Everything about beer and brewing",
-  aboutText: `
-Welcome to the Brewery Wiki.
+  aboutText: `Welcome to the Brewery Wiki.
 
 This is your home for blocks, items, mechanics, and quick guidance for Brewery.
 

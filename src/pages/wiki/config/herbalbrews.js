@@ -5,8 +5,7 @@ export default {
   aboutTitle: "Welcome",
   aboutSubtitle: "Tea, coffee, flasks, andi brewing",
 
-  aboutText: `
-Welcome to the HerbalBrews Wiki.
+  aboutText: `Welcome to the HerbalBrews Wiki.
 
 This is your home for blocks, items, mechanics, and quick guidance for HerbalBrews.
 

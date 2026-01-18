@@ -4,8 +4,7 @@ export default {
   logo: "/assets/mod-logos/farm_and_charm.png",
   aboutTitle: "Welcome",
   aboutSubtitle: "Everything you need, in one place",
-  aboutText: `
-Welcome to the Farm & Charm Wiki.
+  aboutText: `Welcome to the Farm & Charm Wiki.
 
 This is your home for blocks, items, mechanics, and quick guidance for Farm & Charm.
 

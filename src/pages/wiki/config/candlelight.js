@@ -4,8 +4,7 @@ export default {
   logo: "/assets/mod-logos/candlelight.png",
   aboutTitle: "Welcome",
   aboutSubtitle: "Fine dining, interiors, and a little bit of romance",
-  aboutText: `
-Welcome to the Candlelight Wiki.
+  aboutText: `Welcome to the Candlelight Wiki.
 
 This is your home for blocks, items, mechanics, and quick guidance for Candlelight.
 
@@ -149,9 +148,9 @@ To function, the Cooking Pan must be connected to a Heat Source, such as a Stove
    detailsTitle: "Variants and Usage",
    detailsText: `The Kitchen Sink is a decorative and functional utility block used in kitchens and restaurant interiors.
 
- Candlelight provides multiple Kitchen Sink variants designed to match different stone palettes, such as Cobblestone, Sandstone, Stone Bricks, Deepslate, Granite, Basalt, and Quartz.
+Candlelight provides multiple Kitchen Sink variants designed to match different stone palettes, such as Cobblestone, Sandstone, Stone Bricks, Deepslate, Granite, Basalt, and Quartz.
 
- All Kitchen Sink variants share the same functionality and differ only in appearance, allowing you to choose the version that best fits your build style.`,
+All Kitchen Sink variants share the same functionality and differ only in appearance, allowing you to choose the version that best fits your build style.`,
    detailsBullets: [
      "Available in multiple stone themed variants",
      "All variants share identical functionality",
@@ -166,26 +165,35 @@ To function, the Cooking Pan must be connected to a Heat Source, such as a Stove
    icon: "/assets/icons/candlelight/cobblestone_counter.png",
    search: "kitchen counter decorative candlelight",
  },
-        {
-          id: "table_set",
-          title: "Table Set",
-          namespace_id: "candlelight:table_set",
-          subtitle: "Placeable dining pieces for plates, bowls, glasses, and cloches.",
-          icon: "/assets/icons/candlelight/plate.png",
-          search: "table set plate bowl glass wine glass napkin cloche candlelight",
-          details: true,
-          detailsTitle: "Placeables",
-          detailsText: `The Table Set lets you place different dining pieces for table decoration.`,
-          detailsBullets: ["Plate and Bowl", "Glass and Wine Glass", "Napkin", "Cloche"],
-          items: [
-            { id: "plate", title: "Plate", namespace_id: "candlelight:plate", subtitle: "", icon: "/assets/icons/candlelight/plate.png", search: "plate table set" },
-            { id: "bowl", title: "Bowl", namespace_id: "candlelight:bowl", subtitle: "", icon: "/assets/icons/candlelight/bowl.png", search: "bowl table set" },
-            { id: "glass", title: "Glass", namespace_id: "candlelight:glass", subtitle: "", icon: "/assets/icons/candlelight/glass.png", search: "glass table set" },
-            { id: "wine_glass", title: "Wine Glass", namespace_id: "candlelight:wine_glass", subtitle: "", icon: "/assets/icons/candlelight/wine_glass.png", search: "wine glass table set" },
-            { id: "napkin", title: "Napkin", namespace_id: "candlelight:napkin", subtitle: "", icon: "/assets/icons/candlelight/napkin.png", search: "napkin table set" },
-            { id: "cloche", title: "Cloche", namespace_id: "candlelight:cloche", subtitle: "", icon: "/assets/icons/candlelight/cloche.png", search: "cloche table set" },
-          ],
-        },
+{
+  id: "table_set",
+  title: "Table Set",
+  namespace_id: "candlelight:table_set",
+  subtitle: "Placeable dining pieces for serving and consuming food and drinks.",
+  icon: "/assets/icons/candlelight/plate.png",
+  search: "table set plate bowl glass wine glass napkin cloche candlelight",
+  details: true,
+  detailsTitle: "Usage",
+  detailsText: `The Table Set includes multiple placeable dining pieces used for serving and consuming food and drinks.
+
+Food placed onto Plates and Bowls retains its effects. When eaten from the plate or bowl, all food effects are applied normally.
+
+Glasses and Wine Glasses can be filled with drinks such as Potions or Wine. Players can drink directly from them.`,
+  detailsBullets: [
+    "Place food onto Plates and Bowls",
+    "Food effects are preserved and applied when eaten",
+    "Glasses and Wine Glasses can be filled with drinks",
+    "Drink directly from placed glasses",
+  ],
+  items: [
+    { id: "plate", title: "Plate", namespace_id: "candlelight:plate", icon: "/assets/icons/candlelight/plate.png", search: "plate table set food" },
+    { id: "bowl", title: "Bowl", namespace_id: "candlelight:bowl", icon: "/assets/icons/candlelight/bowl.png", search: "bowl table set food" },
+    { id: "glass", title: "Glass", namespace_id: "candlelight:glass", icon: "/assets/icons/candlelight/glass.png", search: "glass table set drink potion" },
+    { id: "wine_glass", title: "Wine Glass", namespace_id: "candlelight:wine_glass", icon: "/assets/icons/candlelight/wine_glass.png", search: "wine glass table set drink wine" },
+    { id: "napkin", title: "Napkin", namespace_id: "candlelight:napkin", icon: "/assets/icons/candlelight/napkin.png", search: "napkin table set" },
+    { id: "cloche", title: "Cloche", namespace_id: "candlelight:cloche", icon: "/assets/icons/candlelight/cloche.png", search: "cloche table set" },
+  ],
+},
         {
           id: "lamp",
           title: "Lamp",
@@ -221,7 +229,7 @@ To function, the Cooking Pan must be connected to a Heat Source, such as a Stove
           id: "dinner_bell",
           title: "Dinner Bell",
           namespace_id: "candlelight:dinner_bell",
-          subtitle: "A bell block you can ring with right click.",
+          subtitle: "A bell block you can ring with right click. Ding!",
           icon: "/assets/icons/candlelight/dinner_bell.png",
           search: "dinner bell ring right click candlelight",
         },
@@ -245,7 +253,7 @@ To function, the Cooking Pan must be connected to a Heat Source, such as a Stove
           id: "small_painting",
           title: "Small Painting",
           namespace_id: "candlelight:painting",
-          subtitle: "A painting with multiple motifs. Right click to cycle.",
+          subtitle: "A painting with multiple motifs.",
           icon: "/assets/icons/candlelight/painting.png",
           search: "small painting motifs cycle right click candlelight",
           details: true,
@@ -255,23 +263,28 @@ To function, the Cooking Pan must be connected to a Heat Source, such as a Stove
 Right click the placed painting to cycle through the available designs.`,
           detailsBullets: ["Multiple motifs", "Right click to change motif", "Tribute style decoration"],
         },
-        {
-          id: "jewelry_box",
-          title: "Jewelry Box",
-          namespace_id: "candlelight:jewelry_box",
-          subtitle: "Store and display rings.",
-          icon: "/assets/icons/candlelight/jewelry_box.png",
-          search: "jewelry box rings store display candlelight",
-          details: true,
-          detailsTitle: "Usage",
-          detailsText: `Store and display rings inside the box.`,
-          detailsBullets: ["Stores rings", "Designed for display"],
-        },
+   {
+     id: "jewelry_box",
+     title: "Jewelry Box",
+     namespace_id: "candlelight:jewelry_box",
+     subtitle: "A small box for storing and displaying rings.",
+     icon: "/assets/icons/candlelight/jewelry_box.png",
+     search: "jewelry box rings store display candlelight",
+     details: true,
+     detailsTitle: "Usage",
+     detailsText: `The Jewelry Box can be opened and closed through interaction.
+
+   Rings can be placed inside the Jewelry Box. Stored rings are visually displayed when the box is opened, making it suitable for both storage and decoration.`,
+     detailsBullets: [
+       "Can be opened and closed",
+       "Rings can be placed inside",
+       "Stored rings are visually displayed",     ],
+   },
         {
           id: "chocolate_box",
           title: "Chocolate Box",
           namespace_id: "candlelight:chocolate_box",
-          subtitle: "A placed box you can eat from multiple times.",
+          subtitle: "A placeable box you can eat from multiple times.",
           icon: "/assets/icons/candlelight/chocolate_box.png",
           search: "chocolate box eat multiple times placed candlelight",
         },

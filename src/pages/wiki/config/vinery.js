@@ -4,8 +4,7 @@ export default {
   logo: "/assets/mod-logos/vinery.png",
   aboutTitle: "Welcome",
   aboutSubtitle: "Everything about wine and vineyards",
-  aboutText: `
-Welcome to the Vinery Wiki.
+  aboutText: `Welcome to the Vinery Wiki.
 
 This is your home for blocks, items, mechanics, and quick guidance for Vinery.
 
@@ -95,29 +94,41 @@ To ferment, use the middle input slots with ingredients and containers such as w
       title: "Decor and Building",
       subtitle: "Decorative and structural elements used to build vineyards, taverns, and cozy cellar spaces.",
       entries: [
-        {
-          id: "lattice",
-          title: "Lattice",
-          namespace_id: "vinery:lattice",
-          subtitle: "Wall decor that can also be used to cultivate jungle grapes.",
-          icon: "/assets/icons/vinery/oak_lattice.png",
-          search: "lattice decoration wall passageway cultivate jungle grapes seeds connects toggle supports axe top side placement",
-          details: true,
-          detailsTitle: "Usage",
-          detailsText: `Lattice is a decorative block that can be used to cultivate Jungle Grapes.
+  {
+    id: "lattice",
+    title: "Lattice",
+    subtitle: "Wall decor that can also be used to cultivate jungle grapes.",
+    icon: "/assets/icons/vinery/oak_lattice.png",
+    textures: [
+      "/assets/icons/vinery/acacia_lattice.png",
+      "/assets/icons/vinery/bamboo_lattice.png",
+      "/assets/icons/vinery/birch_lattice.png",
+      "/assets/icons/vinery/cherry_lattice.png",
+      "/assets/icons/vinery/dark_cherry_lattice.png",
+      "/assets/icons/vinery/dark_oak_lattice.png",
+      "/assets/icons/vinery/jungle_lattice.png",
+      "/assets/icons/vinery/mangrove_lattice.png",
+      "/assets/icons/vinery/oak_lattice.png",
+      "/assets/icons/vinery/spruce_lattice.png",
+    ],
+    carousel: true,
+    search: "lattice decoration wall passageway cultivate jungle grapes seeds connects toggle supports axe top side placement",
+    details: true,
+    detailsTitle: "Usage",
+    detailsText: `Lattice is a decorative block that can be used to cultivate Jungle Grapes.
 
-Right-click the lattice while holding Jungle Grape Seeds to plant them.
+  Right-click the lattice while holding Jungle Grape Seeds to plant them.
 
-Lattice connects to adjacent lattice blocks. With an axe, right-click to toggle supports on or off. It also supports different placement options, including on top of a block or on the side of another block.`,
-          detailsBullets: [
-            "Decor block for walls and passageways",
-            "Used to cultivate Jungle Grapes",
-            "Right-click with Jungle Grape Seeds to plant",
-            "Connects to adjacent lattice blocks",
-            "Axe interaction toggles supports",
-            "Supports multiple placement styles",
-          ],
-        },
+  Lattice connects to adjacent lattice blocks. With an axe, right-click to toggle supports on or off. It also supports different placement options, including on top of a block or on the side of another block.`,
+    detailsBullets: [
+      "Decor block for walls and passageways",
+      "Used to cultivate Jungle Grapes",
+      "Right-click with Jungle Grape Seeds to plant",
+      "Connects to adjacent lattice blocks",
+      "Axe interaction toggles supports",
+      "Supports multiple placement styles",
+    ],
+  },
   {
     id: "wine_racks",
     title: "Wine Racks",
