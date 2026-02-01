@@ -7,16 +7,17 @@ const { title = "Let's Do" } = Astro.props;
 
 <!doctype html>
 <html lang="en" data-theme="blue" data-mode="light">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
 
-    <link rel="icon" type="image/png" sizes="64x64" href="/assets/icons/ui/chest_logo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/ui/chest_logo.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/ui/chest_logo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/ui/chest_logo.png">
-  </head>
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/icons/ui/chest_logo.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/ui/chest_logo.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/ui/chest_logo.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/ui/chest_logo.png" />
+</head>
   <body>
     <slot />
   </body>
