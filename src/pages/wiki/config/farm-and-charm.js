@@ -1026,71 +1026,106 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
         },
       ],
     },
-    {
-      id: "misc_changes",
-      title: "Miscellaneous Changes & Features",
-      subtitle: "Small but meaningful tweaks and additions that subtly enhance gameplay and atmosphere.",
-      entries: [
-        {
-          id: "rain_growth",
-          title: "Rain Growth",
-          subtitle: "Crops can grow faster during rain. During thunderstorms, growth is boosted even further.",
-          icon: "/assets/icons/farm-and-charm/weather.png",
-          search: "rain crop growth faster thunderstorm",
-        },
-        {
-          id: "armed_zombies",
-          title: "Armed Zombies",
-          subtitle: "Zombies have a small chance to spawn holding Farm & Charm tools, such as Pitchforks.",
-          icon: "/assets/icons/misc/zombie.png",
-          search: "zombie pitchfork weapon spawn",
-        },
-        {
-          id: "animal_saturation",
-          title: "Animal Saturation",
-          subtitle: "Feeding animals over time increases their saturation level, rewarding careful farming with increased loot drops. While wearing Dungarees, the animal's current saturation level becomes visible.",
-          icon: "/assets/icons/farm-and-charm/leather.png",
-          search: "animal saturation feeding bonus loot",
-        },
-        {
-          id: "vanilla_soups_effects",
-          title: "Soups and Effects",
-          subtitle: "Vanilla soups such as Mushroom Stew, Beetroot Soup, and Rabbit Stew now grant Farm & Charm food effects, rewarding warm meals with additional nourishment.",
-          icon: "/assets/icons/farm-and-charm/soup.png",
-          search: "vanilla soup mushroom stew beetroot soup rabbit stew sustenance effect",
-        },
-        {
-          id: "farmer_trades",
-          title: "Expanded Trades",
-          subtitle: "Certain Farm & Charm items have been added to Farmer Villager trade pools, allowing them to be obtained naturally through trading.",
-          icon: "/assets/icons/misc/emerald.png",
-          search: "farmer villager trades farm and charm items economy progression",
-        },
-        {
-          id: "config",
-          title: "Configuration",
-          subtitle: "Most gameplay features of Farm & Charm can be adjusted via a configuration file, usually located at `config/farm_and_charm.json`.",
-          icon: "/assets/icons/misc/config.png",
-          search: "config configuration settings options balance json farm and charm",
-        },
-        {
-          id: "loot",
-          title: "Loot and Exploration",
-          subtitle: "Certain items and ingredients can be found while exploring the world.",
-          icon: "/assets/icons/misc/chest.png",
-          search: "loot chest dungeon village exploration items ingredients",
-          details: true,
-          detailsTitle: "Where to find loot",
-          detailsText: `Some items and ingredients can be found naturally while exploring the world.
+      {
+        id: "misc_changes",
+        title: "Miscellaneous Changes & Features",
+        subtitle: "Small but meaningful tweaks and additions that subtly enhance gameplay and atmosphere.",
+        entries: [
+          {
+            id: "rain_growth",
+            title: "Rain Growth",
+            subtitle: "Crops can grow faster during rain. During thunderstorms, growth is boosted even further.",
+            icon: "/assets/icons/farm-and-charm/weather.png",
+            search: "rain crop growth faster thunderstorm",
+          },
+          {
+            id: "armed_zombies",
+            title: "Armed Zombies",
+            subtitle: "Zombies have a small chance to spawn holding Farm & Charm tools, such as Pitchforks.",
+            icon: "/assets/icons/misc/zombie.png",
+            search: "zombie pitchfork weapon spawn",
+          },
+          {
+            id: "animal_saturation",
+            title: "Animal Saturation",
+            subtitle:
+              "Feeding animals over time increases their saturation level, rewarding careful farming with increased loot drops. While wearing Dungarees, the animal's current saturation level becomes visible.",
+            icon: "/assets/icons/farm-and-charm/leather.png",
+            search: "animal saturation feeding bonus loot",
+          },
+          {
+            id: "vanilla_soups_effects",
+            title: "Soups and Effects",
+            subtitle:
+              "Vanilla soups such as Mushroom Stew, Beetroot Soup, and Rabbit Stew now grant Farm & Charm food effects, rewarding warm meals with additional nourishment.",
+            icon: "/assets/icons/farm-and-charm/soup.png",
+            search: "vanilla soup mushroom stew beetroot soup rabbit stew sustenance effect",
+          },
+          {
+            id: "farmer_trades",
+            title: "Expanded Trades",
+            subtitle:
+              "Certain Farm & Charm items have been added to Farmer Villager trade pools, allowing them to be obtained naturally through trading.",
+            icon: "/assets/icons/misc/emerald.png",
+            search: "farmer villager trades farm and charm items economy progression",
+          },
+          {
+            id: "config",
+            title: "Configuration",
+            subtitle: "Most gameplay features of Farm & Charm can be adjusted via a configuration file, usually located at `config/farm_and_charm.json`.",
+            icon: "/assets/icons/misc/config.png",
+            search: "config configuration settings options balance json farm and charm",
+          },
+          {
+            id: "loot",
+            title: "Loot and Exploration",
+            subtitle: "Certain items and ingredients can be found while exploring the world.",
+            icon: "/assets/icons/misc/chest.png",
+            search: "loot chest dungeon village exploration items ingredients",
+            details: true,
+            detailsTitle: "Where to find loot",
+            detailsText: `Some items and ingredients can be found naturally while exploring the world.
 
-They may appear in various loot containers, such as village chests, dungeon chests, or other generated structures.`,
-          detailsBullets: [
-            "Items and ingredients can appear in loot chests",
-            "Found in villages, dungeons, and other structures",
-            "Encourages exploration alongside farming",
-          ],
-        },
-      ],
+  They may appear in various loot containers, such as village chests, dungeon chests, or other generated structures.`,
+            detailsBullets: [
+              "Items and ingredients can appear in loot chests",
+              "Found in villages, dungeons, and other structures",
+              "Encourages exploration alongside farming",
+            ],
+          },
+        ],
+      },
+    ],
+impressionsTitle: "Impressions",
+  impressionsSubtitle: "A quick look at how it feels ingame",
+  impressions: [
+    {
+      src: "/assets/impressions/farm-and-charm/01.jpeg",
+      caption: "Cozy kitchen corner with stations",
+    },
+    {
+      src: "/assets/impressions/farm-and-charm/02.jpeg",
+      caption: "Harvest basket setup",
+    },
+    {
+      src: "/assets/impressions/farm-and-charm/03.jpeg",
+      caption: "Cooking pot in action",
+    },
+    {
+      src: "/assets/impressions/farm-and-charm/04.jpeg",
+      caption: "Decor shelf details",
+    },
+    {
+      src: "/assets/impressions/farm-and-charm/05.jpeg",
+      caption: "Market stall vibes",
+    },
+    {
+      src: "/assets/impressions/farm-and-charm/06.jpeg",
+      caption: "Evening lighting example",
+    },
+    {
+      src: "/assets/impressions/farm-and-charm/07.jpeg",
+      caption: "Storage area overview",
     },
   ],
 };

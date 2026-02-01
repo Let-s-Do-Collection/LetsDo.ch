@@ -1,3 +1,59 @@
+:root {
+  --wikiTopAlignOffset: 0px;
+
+  --wikiContentMaxWidth: 840px;
+  --wikiContentSidePadding: 0px;
+  --wikiContentShiftX: -20px;
+
+  --wikiSidebarWidth: 260px;
+  --wikiSidebarLeftInset: 24px;
+  --wikiContentGap: 24px;
+}
+
+.page.wikiShell,
+main.page.wikiShell,
+.wikiShell {
+  width: 100%;
+  max-width: none;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: var(--wikiTopAlignOffset);
+}
+
+.page.wikiShell > *,
+main.page.wikiShell > *,
+.wikiShell > * {
+  max-width: none;
+}
+
+.wikiShell {
+  position: relative;
+}
+
+.wikiContent {
+  width: min(100%, var(--wikiContentMaxWidth));
+  margin: 0 auto;
+  margin-top: 0 !important;
+  padding: 0 var(--wikiContentSidePadding);
+  padding-left: calc(
+    var(--wikiSidebarLeftInset)
+    + var(--wikiSidebarWidth)
+    + var(--wikiContentGap)
+    + var(--wikiContentSidePadding)
+    + var(--wikiContentShiftX)
+  );
+  transform: none;
+}
+
+.wikiMain {
+  margin-left: -70px;
+  padding-bottom: 140px;
+}
+
+.wikiMain > section:first-child {
+  margin-top: 0;
+}
+
 .wikiHero {
   min-height: 220px;
   max-height: 240px;
@@ -184,91 +240,6 @@
   margin: 0 auto;
 }
 
-.wikiLayout {
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 24px;
-  align-items: start;
-  padding-top: 0;
-}
-
-.wikiSidebar {
-  margin-left: -160px;
-  width: 260px;
-  padding: 16px;
-  position: sticky;
-  top: 120px;
-  align-self: start;
-  z-index: 20;
-}
-
-.wikiSidebarInner {
-  width: 100%;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border);
-  background: var(--card);
-  box-shadow: var(--shadow);
-  padding: 16px;
-  display: grid;
-  gap: 14px;
-}
-
-.wikiMain {
-  margin-left: -70px;
-}
-
-.wikiSideSearch {
-  width: 100%;
-}
-
-.wikiSideSearchInput {
-  width: 100%;
-  padding: 12px 12px;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border);
-  background: rgba(0, 0, 0, 0.02);
-  color: var(--text);
-  font-size: 14px;
-  outline: none;
-}
-
-.wikiSideSearchInput:focus {
-  border-color: var(--borderStrong);
-  background: var(--card);
-}
-
-.wikiSideHeading {
-  font-size: 12px;
-  color: var(--muted);
-  letter-spacing: 0.2px;
-  text-transform: uppercase;
-  margin-top: 2px;
-}
-
-.wikiSideNav {
-  display: grid;
-  gap: 8px;
-}
-
-.wikiSideLink {
-  text-decoration: none;
-  color: var(--muted);
-  font-size: 13px;
-  padding: 8px 10px;
-  border-radius: var(--radius-md);
-}
-
-.wikiSideLink:hover {
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--text);
-}
-
-.wikiSideLink.isActive {
-  background: rgba(255, 255, 255, 0.06);
-  color: var(--text);
-  font-weight: 700;
-}
-
 .wikiMiniGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -317,132 +288,20 @@
   text-align: left;
 }
 
-.wikiDropdown {
-  position: relative;
-  width: 100%;
-}
-
-.wikiDropdownButton {
-  width: 100%;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border);
-  background: var(--card);
-  box-shadow: var(--shadow);
-  padding: 12px 40px 12px 12px;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  align-items: center;
-  cursor: pointer;
-  color: var(--text);
-  font: inherit;
-  font-weight: 800;
-  font-size: 14px;
-  line-height: 1.2;
-  position: relative;
-}
-
-.wikiDropdownLabel {
-  min-width: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.wikiDropdownChevron {
-  position: absolute;
-  right: 14px;
-  top: 50%;
-  width: 10px;
-  height: 10px;
-  border-right: 2px solid var(--muted);
-  border-bottom: 2px solid var(--muted);
-  transform: translateY(-60%) rotate(45deg);
-  opacity: 0.85;
-  pointer-events: none;
-  transition: transform 180ms ease;
-}
-
-.wikiDropdown[data-open="true"] .wikiDropdownChevron {
-  transform: translateY(-35%) rotate(225deg);
-}
-
-.wikiDropdownMenu {
-  position: absolute;
-  top: calc(100% + 8px);
-  left: 0;
-  right: 0;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border);
-  background: var(--card);
-  box-shadow: var(--shadow);
-  padding: 6px;
-  display: grid;
-  gap: 2px;
-  z-index: 60;
-}
-
-.wikiDropdownMenu[hidden] {
-  display: none !important;
-}
-
-.wikiDropdownItem {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 12px;
-  border-radius: var(--radius-sm);
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 700;
-  font-size: 13px;
-  line-height: 1.2;
-}
-
-.wikiDropdownItem:hover {
-  background: rgba(255, 255, 255, 0.04);
-}
-
-.wikiDropdownItem.isActive {
-  background: rgba(255, 255, 255, 0.06);
-}
-
-.wikiDropdownItemTitle {
-  min-width: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.wikiDropdownCheck {
-  color: var(--muted);
-  font-weight: 900;
-  font-size: 14px;
-  line-height: 1;
-}
-
-:root {
-  --wikiTopAlignOffset: 30px;
-}
-
-.wikiSidebar {
-  padding-top: calc(-26px + var(--wikiTopAlignOffset));
-}
-
-.wikiMain > section:first-child {
-  margin-top: var(--wikiTopAlignOffset);
-}
-
 @media (max-width: 980px) {
-  .wikiLayout {
-    grid-template-columns: 1fr;
+  .page.wikiShell,
+  main.page.wikiShell,
+  .wikiShell {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: var(--wikiTopAlignOffset);
   }
 
-  .wikiSidebar {
-    position: static;
-    width: auto;
-    margin-left: 0;
+  .wikiContent {
+    width: 100%;
+    max-width: none;
     padding: 0;
+    transform: none;
   }
 
   .wikiMain {

@@ -2,8 +2,12 @@
 import SiteLayout from "../../layouts/SiteLayout.astro";
 import NavBar from "../NavBar.astro";
 import Footer from "../Footer.astro";
+import Impressions from "./Impressions.astro";
+import WikiSidebar from "./WikiSidebar.astro";
 import "../../styles/mods.css";
 import "../../styles/wiki.css";
+import "../../styles/wikiSidebar.css";
+import "../../styles/impressions.css";
 
 const withBase = (path) => {
   if (!path) return "";
@@ -32,6 +36,10 @@ const activeWikiTitle = activeWiki?.title ?? title;
 
 const searchPlaceholder = "Search items, blocks, features...";
 
+const impressionsTitle = config?.impressionsTitle ?? "Impressions";
+const impressionsSubtitle = config?.impressionsSubtitle ?? "Thats how it looks ingame";
+const impressions = Array.isArray(config?.impressions) ? config.impressions : [];
+
 const entrySearch = (entry) =>
   `${entry.title ?? ""} ${entry.subtitle ?? ""} ${entry.namespace_id ?? ""} ${entry.search ?? ""}`.toLowerCase();
 
@@ -57,210 +65,182 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
 <SiteLayout title={title}>
   <NavBar />
 
-  <main class="page wikiLayout">
-    <aside class="wikiSidebar">
-      <div class="wikiSidebarInner">
-        <div class="wikiDropdown" id="wikiDropdown" data-open="false">
-          <button
-            class="wikiDropdownButton"
-            id="wikiDropdownButton"
-            type="button"
-            aria-haspopup="menu"
-            aria-expanded="false"
-          >
-            <span class="wikiDropdownLabel" id="wikiDropdownLabel">{activeWikiTitle}</span>
-            <span class="wikiDropdownChevron" aria-hidden="true"></span>
-          </button>
+  <main class="page wikiShell">
+    <WikiSidebar
+      activeWikiTitle={activeWikiTitle}
+      wikis={wikis}
+      activeSlug={activeSlug}
+      wikiHref={wikiHref}
+      searchPlaceholder={searchPlaceholder}
+      sections={sections}
+      impressions={impressions}
+    />
 
-          <div class="wikiDropdownMenu" id="wikiDropdownMenu" role="menu" hidden>
-            {wikis.map((w) => (
-              <a
-                class={`wikiDropdownItem ${w.slug === activeSlug ? "isActive" : ""}`}
-                href={wikiHref(w.slug)}
-                role="menuitem"
-                data-wiki-slug={w.slug}
-              >
-                <span class="wikiDropdownItemTitle">{w.title}</span>
-                {w.slug === activeSlug ? <span class="wikiDropdownCheck" aria-hidden="true">✓</span> : null}
-              </a>
-            ))}
-          </div>
-        </div>
-
-        <div class="wikiSideSearch">
-          <input
-            id="wikiSearchInput"
-            class="wikiSideSearchInput"
-            type="search"
-            placeholder={searchPlaceholder}
-            autocomplete="off"
-            spellcheck="false"
-          />
-        </div>
-
-        <div class="wikiSideHeading">Content</div>
-
-        <nav class="wikiSideNav">
-          {sections.map((section) => (
-            <a class="wikiSideLink" href={`#${section.id}`} data-section-link={section.id}>
-              {section.title}
-            </a>
-          ))}
-        </nav>
-      </div>
-    </aside>
-
-    <div class="wikiMain">
-      <section class="section sectionCentered">
-        <div class="aboutHero modsHero wikiHero">
-          {logo ? <img class="wikiHeroLogo" src={withBase(logo)} alt={title} loading="eager" /> : null}
-        </div>
-      </section>
-
-      <section class="section sectionCentered sectionTight">
-        <div class="sectionTitle">
-          <span>{aboutTitle}</span>
-        </div>
-
-        {aboutSubtitle ? <p class="sectionSubtitle">{aboutSubtitle}</p> : null}
-
-        {aboutText ? <div class="aboutText">{aboutText}</div> : null}
-      </section>
-
-      {sections.map((section) => (
-        <section class="section sectionCentered sectionTight wikiSection" id={section.id} data-section={section.id}>
-          <div class="wikiSectionHeader">
-            <div class="sectionTitle">
-              <span>{section.title}</span>
-            </div>
-
-            {section.subtitle ? <p class="sectionSubtitle">{section.subtitle}</p> : null}
-          </div>
-
-          <div class="gridWrapper">
-            <div class="grid wikiGrid">
-              {(section.entries ?? []).map((entry) => {
-                const hasDetails = entryHasDetails(entry);
-                const iconSrc = entry.icon ? withBase(entry.icon) : "";
-                const detailsOpenTitle = entry.detailsTitle ?? "Details";
-
-                return (
-                  <article
-                    class="card wikiCard"
-                    data-section={section.id}
-                    data-search={entrySearch(entry)}
-                    data-has-details={hasDetails ? "true" : "false"}
-                  >
-                    <div class="cardContent wikiCardContent">
-                      {iconSrc ? (
-                        <img class="cardLogo wikiCardLogo" src={iconSrc} alt={entry.title} loading="lazy" />
-                      ) : (
-                        <div class="wikiCardLogoPlaceholder" aria-hidden="true" />
-                      )}
-
-                      <h3>{entry.title}</h3>
-
-                      {entry.namespace_id ? <div class="wikiCardNs">{entry.namespace_id}</div> : null}
-
-                      {entry.subtitle ? <p>{entry.subtitle}</p> : null}
-                    </div>
-
-                    {hasDetails ? (
-                      <div class="wikiCardDetails" aria-hidden="true">
-                        <div class="wikiDetailsHeader">
-                          <div class="wikiDetailsTitle">{detailsOpenTitle}</div>
-                          {entry.detailsSubtitle ? <div class="wikiDetailsSubtitle">{entry.detailsSubtitle}</div> : null}
-                        </div>
-
-                        {entry.detailsText ? <div class="wikiDetailsText">{entry.detailsText}</div> : null}
-
-                        {Array.isArray(entry.detailsIds) && entry.detailsIds.length ? (
-                          <div class="wikiDetailsIds">
-                            {entry.detailsIds.map((id) => (
-                              <div class="wikiDetailsId">{id}</div>
-                            ))}
-                          </div>
-                        ) : null}
-
-                        {Array.isArray(entry.detailsGallery) && entry.detailsGallery.length ? (
-                          <div class="wikiDetailsGallery">
-                            {entry.detailsGallery.map((g) => (
-                              <div class="wikiGalleryItem">
-                                <img
-                                  class="wikiGalleryImg"
-                                  src={g.icon ? withBase(g.icon) : ""}
-                                  alt={g.title ?? ""}
-                                  loading="lazy"
-                                />
-                                <div class="wikiGalleryMeta">
-                                  <div class="wikiGalleryTitle">{g.title ?? ""}</div>
-                                  {g.namespace_id ? <div class="wikiGalleryNs">{g.namespace_id}</div> : null}
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                        ) : null}
-
-                        {Array.isArray(entry.detailsBullets) && entry.detailsBullets.length ? (
-                          <ul class="wikiDetailsList">
-                            {entry.detailsBullets.map((line) => (
-                              <li>{line}</li>
-                            ))}
-                          </ul>
-                        ) : null}
-
-                        {Array.isArray(entry.items) && entry.items.length ? (
-                          <div class="wikiMiniGrid">
-                            {entry.items.map((it) => (
-                              <article class="wikiMiniCard" data-search={entrySearch(it)}>
-                                <img
-                                  class="wikiMiniIcon"
-                                  src={it.icon ? withBase(it.icon) : ""}
-                                  alt={it.title ?? ""}
-                                  loading="lazy"
-                                />
-                                <div class="wikiMiniBody">
-                                  <div class="wikiMiniTitle">{it.title ?? titleCaseFromId(it.id)}</div>
-                                  {it.namespace_id ? <div class="wikiMiniNs">{it.namespace_id}</div> : null}
-                                  {it.subtitle ? <div class="wikiMiniSub">{it.subtitle}</div> : null}
-                                </div>
-                              </article>
-                            ))}
-                          </div>
-                        ) : null}
-                      </div>
-                    ) : null}
-
-                    <div class="cardAction">
-                      {hasDetails ? (
-                        <button class="btn btnSecondary wikiToggle" type="button" aria-expanded="false">
-                          More info
-                        </button>
-                      ) : null}
-
-                      {entry.wikiHref ? (
-                        <a class="btn btnPrimary" href={entry.wikiHref}>
-                          View
-                        </a>
-                      ) : null}
-                    </div>
-                  </article>
-                );
-              })}
-            </div>
-          </div>
-
-          <div class="modsEmpty" data-empty-for={section.id} style="display:none;">
-            No results in {section.title}.
+    <div class="wikiContent" data-wiki-content>
+      <div class="wikiMain">
+        <section class="section sectionCentered">
+          <div class="aboutHero modsHero wikiHero">
+            {logo ? <img class="wikiHeroLogo" src={withBase(logo)} alt={title} loading="eager" /> : null}
           </div>
         </section>
-      ))}
+
+        <section class="section sectionCentered sectionTight">
+          <div class="sectionTitle">
+            <span>{aboutTitle}</span>
+          </div>
+
+          {aboutSubtitle ? <p class="sectionSubtitle">{aboutSubtitle}</p> : null}
+
+          {aboutText ? <div class="aboutText">{aboutText}</div> : null}
+        </section>
+
+        {sections.map((section) => (
+          <section class="section sectionCentered sectionTight wikiSection" id={section.id} data-section={section.id}>
+            <div class="wikiSectionHeader">
+              <div class="sectionTitle">
+                <span>{section.title}</span>
+              </div>
+
+              {section.subtitle ? <p class="sectionSubtitle">{section.subtitle}</p> : null}
+            </div>
+
+            <div class="gridWrapper">
+              <div class="grid wikiGrid">
+                {(section.entries ?? []).map((entry) => {
+                  const hasDetails = entryHasDetails(entry);
+                  const iconSrc = entry.icon ? withBase(entry.icon) : "";
+                  const detailsOpenTitle = entry.detailsTitle ?? "Details";
+
+                  return (
+                    <article
+                      class="card wikiCard"
+                      data-section={section.id}
+                      data-search={entrySearch(entry)}
+                      data-has-details={hasDetails ? "true" : "false"}
+                    >
+                      <div class="cardContent wikiCardContent">
+                        {iconSrc ? (
+                          <img class="cardLogo wikiCardLogo" src={iconSrc} alt={entry.title} loading="lazy" />
+                        ) : (
+                          <div class="wikiCardLogoPlaceholder" aria-hidden="true" />
+                        )}
+
+                        <h3>{entry.title}</h3>
+
+                        {entry.namespace_id ? <div class="wikiCardNs">{entry.namespace_id}</div> : null}
+
+                        {entry.subtitle ? <p>{entry.subtitle}</p> : null}
+                      </div>
+
+                      {hasDetails ? (
+                        <div class="wikiCardDetails" aria-hidden="true">
+                          <div class="wikiDetailsHeader">
+                            <div class="wikiDetailsTitle">{detailsOpenTitle}</div>
+                            {entry.detailsSubtitle ? <div class="wikiDetailsSubtitle">{entry.detailsSubtitle}</div> : null}
+                          </div>
+
+                          {entry.detailsText ? <div class="wikiDetailsText">{entry.detailsText}</div> : null}
+
+                          {Array.isArray(entry.detailsIds) && entry.detailsIds.length ? (
+                            <div class="wikiDetailsIds">
+                              {entry.detailsIds.map((id) => (
+                                <div class="wikiDetailsId">{id}</div>
+                              ))}
+                            </div>
+                          ) : null}
+
+                          {Array.isArray(entry.detailsGallery) && entry.detailsGallery.length ? (
+                            <div class="wikiDetailsGallery">
+                              {entry.detailsGallery.map((g) => (
+                                <div class="wikiGalleryItem">
+                                  <img
+                                    class="wikiGalleryImg"
+                                    src={g.icon ? withBase(g.icon) : ""}
+                                    alt={g.title ?? ""}
+                                    loading="lazy"
+                                  />
+                                  <div class="wikiGalleryMeta">
+                                    <div class="wikiGalleryTitle">{g.title ?? ""}</div>
+                                    {g.namespace_id ? <div class="wikiGalleryNs">{g.namespace_id}</div> : null}
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          ) : null}
+
+                          {Array.isArray(entry.detailsBullets) && entry.detailsBullets.length ? (
+                            <ul class="wikiDetailsList">
+                              {entry.detailsBullets.map((line) => (
+                                <li>{line}</li>
+                              ))}
+                            </ul>
+                          ) : null}
+
+                          {Array.isArray(entry.items) && entry.items.length ? (
+                            <div class="wikiMiniGrid">
+                              {entry.items.map((it) => (
+                                <article class="wikiMiniCard" data-search={entrySearch(it)}>
+                                  <img
+                                    class="wikiMiniIcon"
+                                    src={it.icon ? withBase(it.icon) : ""}
+                                    alt={it.title ?? ""}
+                                    loading="lazy"
+                                  />
+                                  <div class="wikiMiniBody">
+                                    <div class="wikiMiniTitle">{it.title ?? titleCaseFromId(it.id)}</div>
+                                    {it.namespace_id ? <div class="wikiMiniNs">{it.namespace_id}</div> : null}
+                                    {it.subtitle ? <div class="wikiMiniSub">{it.subtitle}</div> : null}
+                                  </div>
+                                </article>
+                              ))}
+                            </div>
+                          ) : null}
+                        </div>
+                      ) : null}
+
+                      <div class="cardAction">
+                        {hasDetails ? (
+                          <button class="btn btnSecondary wikiToggle" type="button" aria-expanded="false">
+                            More info
+                          </button>
+                        ) : null}
+
+                        {entry.wikiHref ? (
+                          <a class="btn btnPrimary" href={entry.wikiHref}>
+                            View
+                          </a>
+                        ) : null}
+                      </div>
+                    </article>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div class="modsEmpty" data-empty-for={section.id} style="display:none;">
+              No results in {section.title}.
+            </div>
+          </section>
+        ))}
+
+        <Impressions id="impressions" title={impressionsTitle} subtitle={impressionsSubtitle} images={impressions} />
+      </div>
     </div>
   </main>
 
   <Footer />
 
   <script is:inline>
+    const setNavHeightVar = () => {
+      const header = document.querySelector("header");
+      const element = header || document.querySelector("nav");
+      const height = element ? Math.ceil(element.getBoundingClientRect().height) : 120;
+      document.documentElement.style.setProperty("--navHeight", `${height}px`);
+    };
+
+    setNavHeightVar();
+    window.addEventListener("resize", setNavHeightVar, { passive: true });
+
     const input = document.getElementById("wikiSearchInput");
     const cards = Array.from(document.querySelectorAll(".wikiCard[data-search]"));
     const sections = Array.from(document.querySelectorAll(".wikiSection"));
@@ -280,6 +260,7 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
     if (dropdownButton && dropdownMenu) {
       dropdownButton.addEventListener("click", (event) => {
         event.preventDefault();
+        event.stopPropagation();
         const openNow = dropdown.dataset.open === "true";
         setDropdownOpen(!openNow);
       });
@@ -353,6 +334,9 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
       for (const section of sections) {
         if (section.offsetTop <= fromTop) active = section;
       }
+
+      const impressionsEl = document.getElementById("impressions");
+      if (impressionsEl && impressionsEl.offsetTop <= fromTop) active = impressionsEl;
 
       const activeId = active ? active.id : null;
       for (const link of sectionLinks) {
