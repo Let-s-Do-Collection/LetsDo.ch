@@ -558,7 +558,7 @@ If a meal is prepared using a potion or wine, it inherits the effect from the us
 
     {
       id: "misc_changes",
-      title: "Miscellaneous Changes",
+      title: "Miscellaneous Changes & Features",
       subtitle: "Small but meaningful tweaks and additions that subtly enhance gameplay and atmosphere.",
       entries: [
         {

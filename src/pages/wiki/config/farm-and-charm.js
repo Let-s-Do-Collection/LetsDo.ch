@@ -1028,7 +1028,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
     },
     {
       id: "misc_changes",
-      title: "Miscellaneous Changes",
+      title: "Miscellaneous Changes & Features",
       subtitle: "Small but meaningful tweaks and additions that subtly enhance gameplay and atmosphere.",
       entries: [
         {

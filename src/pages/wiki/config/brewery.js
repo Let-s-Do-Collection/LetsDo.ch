@@ -441,7 +441,7 @@ Booze actively hunts players and uses both melee and ranged attacks. It does not
 
     {
       id: "misc_changes",
-      title: "Miscellaneous Changes",
+      title: "Miscellaneous Changes & Features",
       subtitle: "Small but meaningful tweaks and additions that subtly enhance gameplay and atmosphere.",
       entries: [
         {

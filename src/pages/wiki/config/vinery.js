@@ -567,7 +567,7 @@ It behaves like a normal donkey and can be mounted and ridden by the player.`,
 },
     {
       id: "misc_changes",
-      title: "Miscellaneous Changes",
+      title: "Miscellaneous Changes & Features",
       subtitle: "Small but meaningful tweaks and additions that subtly enhance gameplay and atmosphere.",
       entries: [
         {

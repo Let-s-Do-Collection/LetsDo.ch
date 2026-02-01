@@ -9,7 +9,7 @@
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr auto auto;
   align-items: center;
   gap: 18px;
 }
@@ -105,11 +105,11 @@
   transform: translateY(-4px);
 }
 
-html[data-theme="blue"]  .themeHead[data-theme="blue"]::before,
-html[data-theme="gold"]  .themeHead[data-theme="gold"]::before,
-html[data-theme="pink"]  .themeHead[data-theme="pink"]::before,
+html[data-theme="blue"] .themeHead[data-theme="blue"]::before,
+html[data-theme="gold"] .themeHead[data-theme="gold"]::before,
+html[data-theme="pink"] .themeHead[data-theme="pink"]::before,
 html[data-theme="green"] .themeHead[data-theme="green"]::before,
-html[data-theme="neon"]  .themeHead[data-theme="neon"]::before {
+html[data-theme="neon"] .themeHead[data-theme="neon"]::before {
   opacity: 1;
 }
 
@@ -139,8 +139,16 @@ html[data-mode="light"] .modeBtn::before {
   opacity: 1;
 }
 
+.themeHead:focus-visible,
+.modeBtn:focus-visible,
+.socialLink:focus-visible {
+  outline: 2px solid var(--borderStrong);
+  outline-offset: 3px;
+}
+
 .themeHead[data-tooltip]::after,
-.modeBtn[data-tooltip]::after {
+.modeBtn[data-tooltip]::after,
+.socialLink[data-tooltip]::after {
   content: attr(data-tooltip);
   position: absolute;
   bottom: calc(100% + 14px);
@@ -158,11 +166,13 @@ html[data-mode="light"] .modeBtn::before {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.12s ease, transform 0.12s ease;
+  transition-delay: 120ms;
   z-index: 20;
 }
 
 .themeHead:hover::after,
-.modeBtn:hover::after {
+.modeBtn:hover::after,
+.socialLink:hover::after {
   opacity: 1;
   transform: translateX(-50%) translateY(-2px);
 }
@@ -173,6 +183,42 @@ html[data-mode="light"] .modeBtn::before {
   font-size: 13px;
   color: var(--muted);
   line-height: 1.5;
+}
+
+.footerRight {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  min-width: 120px;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  opacity: 0.72;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  position: relative;
+}
+
+.socialLink:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.socialLink:active {
+  transform: translateY(1px) scale(0.97);
+}
+
+.socialIcon {
+  width: 22px;
+  height: 22px;
+  display: block;
 }
 
 @media (max-width: 900px) {
@@ -188,5 +234,17 @@ html[data-mode="light"] .modeBtn::before {
 
   .footerLeft {
     flex-wrap: wrap;
+  }
+
+  .footerRight {
+    justify-self: start;
+    justify-content: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
   }
 }

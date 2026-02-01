@@ -321,7 +321,7 @@ The deeper you are, the stronger the effect becomes. When multiple players are n
 
     {
       id: "misc_changes",
-      title: "Miscellaneous Changes",
+      title: "Miscellaneous Changes & Features",
       subtitle: "Small but meaningful tweaks and additions that subtly enhance gameplay and atmosphere.",
       entries: [
         {
