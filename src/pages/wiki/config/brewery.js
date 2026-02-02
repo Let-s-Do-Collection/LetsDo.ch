@@ -771,6 +771,14 @@ Booze actively hunts players and uses both melee and ranged attacks. It does not
       title: 'Miscellaneous Changes & Features',
       subtitle: 'Small but meaningful tweaks and additions that subtly enhance gameplay and atmosphere.',
       entries: [
+          {
+                id: 'config',
+                title: 'Configuration',
+                subtitle:
+                  'Most gameplay features of Brewery can be adjusted via a configuration file, usually located at `config/brewery.json`.',
+                icon: '/assets/icons/misc/config.png',
+                search: 'config configuration settings options balance json brewery'
+              },
         {
           id: 'festive_zombies',
           title: 'Festive Zombies',
@@ -786,14 +794,7 @@ Booze actively hunts players and uses both melee and ranged attacks. It does not
           icon: '/assets/icons/misc/emerald.png',
           search: 'farmer villager trades brewery items economy progression'
         },
-        {
-          id: 'config',
-          title: 'Configuration',
-          subtitle:
-            'Most gameplay features of Brewery can be adjusted via a configuration file, usually located at `config/brewery.json`.',
-          icon: '/assets/icons/misc/config.png',
-          search: 'config configuration settings options balance json brewery'
-        },
+
         {
           id: 'loot',
           title: 'Loot and Exploration',

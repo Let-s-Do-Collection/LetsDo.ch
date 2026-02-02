@@ -1444,11 +1444,19 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
       title: 'Miscellaneous Changes & Features',
       subtitle: 'Small but meaningful tweaks and additions that subtly enhance gameplay and atmosphere.',
       entries: [
+          {
+                id: 'config',
+                title: 'Configuration',
+                subtitle:
+                  'Most gameplay features of Farm & Charm can be adjusted via a configuration file, usually located at `config/farm_and_charm.json`.',
+                icon: '/assets/icons/misc/config.png',
+                search: 'config configuration settings options balance json farm and charm'
+              },
         {
           id: 'rain_growth',
           title: 'Rain Growth',
           subtitle: 'Crops can grow faster during rain. During thunderstorms, growth is boosted even further.',
-          icon: '/assets/icons/farm-and-charm/weather.png',
+          icon: '/assets/icons/misc/weather.png',
           search: 'rain crop growth faster thunderstorm'
         },
         {
@@ -1481,14 +1489,6 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
             'Certain Farm & Charm items have been added to Farmer Villager trade pools, allowing them to be obtained naturally through trading.',
           icon: '/assets/icons/misc/emerald.png',
           search: 'farmer villager trades farm and charm items economy progression'
-        },
-        {
-          id: 'config',
-          title: 'Configuration',
-          subtitle:
-            'Most gameplay features of Farm & Charm can be adjusted via a configuration file, usually located at `config/farm_and_charm.json`.',
-          icon: '/assets/icons/misc/config.png',
-          search: 'config configuration settings options balance json farm and charm'
         },
         {
           id: 'loot',

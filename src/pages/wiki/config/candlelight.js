@@ -824,7 +824,7 @@ If a meal is prepared using a potion or wine, it inherits the effect from the us
 
     {
       id: 'crops',
-      title: 'Crops, Wild Plants, and Worldgen',
+      title: 'Worldgen and Natural Features',
       subtitle: 'Crops and plants found growing naturally in the world, ready to be harvested or cultivated.',
       entries: [
         {

@@ -309,7 +309,7 @@ Like other pottery pieces, Urns can be painted and crafted in different colors. 
           id: 'brick_blocks',
           title: 'Brick Blocks',
           subtitle: 'Decorative building blocks for cozy walls, trims, and pottery themed builds.',
-          icon: '/assets/icons/pottery/red_brick.png',
+          icon: '/assets/icons/pottery/red_bricks.png',
           search: 'brick blocks wall stairs slabs decorative pottery building',
           details: true,
           detailsTitle: 'Usage',
@@ -325,31 +325,31 @@ They come in Wall, Stair, and Slab variants.`,
             {
               id: 'red_brick_blocks',
               title: 'Red Brick Blocks',
-              icon: '/assets/icons/pottery/red_brick.png',
+              icon: '/assets/icons/pottery/red_bricks.png',
               search: 'red brick blocks wall stair slab'
             },
             {
               id: 'yellow_brick_blocks',
               title: 'Yellow Brick Blocks',
-              icon: '/assets/icons/pottery/yellow_brick.png',
+              icon: '/assets/icons/pottery/yellow_bricks.png',
               search: 'yellow brick blocks wall stair slab'
             },
             {
               id: 'white_brick_blocks',
               title: 'White Brick Blocks',
-              icon: '/assets/icons/pottery/white_brick.png',
+              icon: '/assets/icons/pottery/white_bricks.png',
               search: 'white brick blocks wall stair slab'
             },
             {
               id: 'blue_brick_blocks',
               title: 'Blue Brick Blocks',
-              icon: '/assets/icons/pottery/blue_brick.png',
+              icon: '/assets/icons/pottery/blue_bricks.png',
               search: 'blue brick blocks wall stair slab'
             },
             {
               id: 'black_brick_blocks',
               title: 'Black Brick Blocks',
-              icon: '/assets/icons/pottery/black_brick.png',
+              icon: '/assets/icons/pottery/black_bricks.png',
               search: 'black brick blocks wall stair slab'
             }
           ]
