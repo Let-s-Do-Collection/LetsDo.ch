@@ -426,11 +426,11 @@ Breaking the tank releases any stored fish back into the world.`,
   impressions: [
     {
       src: '/assets/impressions/furniture/01.png',
-      caption: 'Come hangout in the Stargazing Study'
+      caption: 'Lili’s Vanity Room'
     },
     {
       src: '/assets/impressions/furniture/02.png',
-      caption: 'I got nothing for this room'
+      caption: 'Study Corner'
     },
     {
       src: '/assets/impressions/furniture/03.png',
@@ -442,11 +442,11 @@ Breaking the tank releases any stored fish back into the world.`,
     },
     {
       src: '/assets/impressions/furniture/05.png',
-      caption: 'Fish swimming in their tanks, within a LunarSakura`s room'
+      caption: 'Fish swimming in their tanks, within a Lunar’s room'
     },
     {
       src: '/assets/impressions/furniture/06.png',
-      caption: 'I got nothing for this room'
+      caption: 'Time to retire to the Crimson suite'
     },
     {
       src: '/assets/impressions/furniture/07.png',
@@ -462,7 +462,7 @@ Breaking the tank releases any stored fish back into the world.`,
     },
     {
       src: '/assets/impressions/furniture/10.png',
-      caption: 'Time to retire to the Crimson suite'
+      caption: 'Fireplace keeping the cottage warm'
     }
   ]
 }
