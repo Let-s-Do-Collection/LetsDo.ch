@@ -1,0 +1,415 @@
+export default {
+  slug: 'hearth-and-timber',
+  title: 'Hearth & Timber',
+  logo: '/assets/mod-logos/hearth_and_timber.png',
+  aboutTitle: 'Welcome',
+  aboutSubtitle: 'Oak first building pieces, textures, and rustic world details',
+  aboutText: `Hearth & Timber is focused entirely on blocks.
+
+It adds a set of rustic building pieces, decorative details, and a bit of world generation to make your builds feel more grounded and lived in.`,
+  sections: [
+    {
+      id: 'building',
+      title: 'Decor & Building',
+      subtitle: 'All building blocks and decorative pieces.',
+      entries: [
+        {
+          id: 'timber_frames',
+          title: 'Timber Frames',
+          subtitle: 'Decorative timber frames used to shape classic half timbered buildings.',
+          icon: '/assets/icons/hearth-and-timber/framework.png',
+          search: 'timber frame half timbered framework mimic block apply pickaxe remove shift tooltip waterlogged',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `Timber Frames form the visible wooden structure of half timbered buildings.
+
+They can be covered with most full blocks to fill the gaps between the beams while keeping the timber structure visible.
+
+Apply a block to fill the frame. Use a pickaxe to remove it again.`,
+          detailsBullets: [
+            'Used for half timbered and framed building styles',
+            'Apply blocks to fill the frame visually',
+            'Use a pickaxe to remove the applied block',
+            'Only accepts full model blocks',
+            'Waterloggable',
+            'Shows extended tooltip information while holding SHIFT'
+          ],
+          items: [
+            {
+              id: 'timber_frame',
+              title: 'Timber Frame',
+              icon: '/assets/icons/hearth-and-timber/framework.png',
+              search: 'timber frame straight'
+            },
+            {
+              id: 'timber_frame_cross',
+              title: 'Cross Timber Frame',
+              icon: '/assets/icons/hearth-and-timber/framework_cross.png',
+              search: 'timber frame cross'
+            },
+            {
+              id: 'timber_frame_diagonal',
+              title: 'Diagonal Timber Frame',
+              icon: '/assets/icons/hearth-and-timber/framework_diagonal.png',
+              search: 'timber frame diagonal'
+            }
+          ]
+        },
+        {
+          id: 'shingles',
+          title: 'Shingles',
+          subtitle: 'Decorative roof blocks with matching stairs and slabs.',
+          icon: '/assets/icons/hearth-and-timber/oak_shingles.png',
+          search: 'shingles roof decorative stairs slab oak terracotta patchwork',
+          details: true,
+          detailsTitle: 'More info',
+          detailsText: `Shingles are purely decorative roof blocks and come with matching stairs and slabs.
+
+Wooden Shingles are available in all vanilla wood variants.`,
+          items: [
+            {
+              id: 'oak_shingles',
+              title: 'Oak Shingles',
+              icon: '/assets/icons/hearth-and-timber/oak_shingles.png',
+              search: 'oak shingles roof'
+            },
+            {
+              id: 'terracotta_shingles',
+              title: 'Terracotta Shingles',
+              icon: '/assets/icons/hearth-and-timber/terracotta_shingles.png',
+              search: 'terracotta shingles roof'
+            },
+            {
+              id: 'patchwork_shingles',
+              title: 'Patchwork Shingles',
+              icon: '/assets/icons/hearth-and-timber/patchwork_shingles.png',
+              search: 'patchwork shingles roof'
+            }
+          ]
+        },
+        {
+          id: 'rubblestone_masonry',
+          title: 'Rubblestone Masonry',
+          subtitle: 'Stonework that shifts between worn ruins and freshly patched walls.',
+          icon: '/assets/icons/hearth-and-timber/covered_rubblestone.png',
+          search: 'rubblestone masonry covered plastered pointed groutless pickaxe quicklime shift tooltip cycle',
+          details: true,
+          detailsTitle: 'How it works',
+          detailsText: `Rubblestone Masonry can be cycled between its variants.
+
+Use a pickaxe to progress to the next look. Use Quicklime to revert to the previous one.
+
+It keeps matching block properties where possible and shows extra info while holding SHIFT.`,
+          detailsBullets: ['Pickaxe: cycles to the next variant', 'Quicklime: reverts to the previous variant'],
+          items: [
+            {
+              id: 'covered_rubblestone',
+              title: 'Covered Rubblestone',
+              icon: '/assets/icons/hearth-and-timber/covered_rubblestone.png',
+              search: 'covered rubblestone masonry'
+            },
+            {
+              id: 'plastered_rubblestone',
+              title: 'Plastered Rubblestone',
+              icon: '/assets/icons/hearth-and-timber/plastered_rubblestone.png',
+              search: 'plastered rubblestone masonry'
+            },
+            {
+              id: 'pointed_rubblestone',
+              title: 'Pointed Rubblestone',
+              icon: '/assets/icons/hearth-and-timber/pointed_rubblestone.png',
+              search: 'pointed rubblestone masonry'
+            },
+            {
+              id: 'groutless_rubblestone',
+              title: 'Groutless Rubblestone',
+              icon: '/assets/icons/hearth-and-timber/groutless_rubblestone.png',
+              search: 'groutless rubblestone masonry'
+            }
+          ]
+        },
+        {
+          title: 'Beams',
+          subtitle: 'Sturdy wooden beams used for visible support structures and classic timbered builds.',
+          icon: '/assets/icons/hearth-and-timber/oak_beam.png',
+          search: 'beam timber structural support',
+          details: true,
+          detailsTitle: 'Good to know',
+          detailsText: `Beams are purely decorative structural elements used to visually support roofs, floors, and framing.
+
+They are available in all vanilla wood variants.`,
+          detailsBullets: [
+            'Purely decorative',
+            'Used for framing and visible support structures',
+            'Available in all vanilla wood variants'
+          ]
+        },
+        {
+          title: 'Supports',
+          subtitle: 'Small wooden helpers that hold things together when your build starts looking a bit… ambitious.',
+          icon: '/assets/icons/hearth-and-timber/oak_support.png',
+          search: 'support framing timber structural detail',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `Supports are flexible framing elements that adapt to their surroundings.
+
+They automatically align when placed next to pillars or other supports and can be modified after placement to fine tune their shape and look.
+
+Supports are available in all vanilla wood variants.`,
+          detailsBullets: [
+            'Automatically aligns to nearby pillars and supports',
+            'Use an axe to toggle extensions or remove the resting foot',
+            'Can be reinforced using wooden boards',
+            'Supports adjust visually when chained together',
+            'Available in all vanilla wood variants'
+          ]
+        },
+        {
+          title: 'Pillars',
+          subtitle: 'Clean vertical pillars used to anchor frames, supports, and ambitious timber builds.',
+          icon: '/assets/icons/hearth-and-timber/oak_pillar.png',
+          search: 'pillar timber framing structural interior',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `Pillars act as central anchor points for timber framing.
+
+They automatically connect to nearby Supports, visually extending into them to form clean structural joints.
+
+Using an axe, the top of a pillar can be extended or retracted to better fit ceilings, beams, or framing details.
+
+Pillars are available in all vanilla wood variants.`,
+          detailsBullets: [
+            'Automatically connects to nearby Supports',
+            'Visually extends into connected framing elements',
+            'Use an axe to toggle the extended top',
+            'Designed for interiors, framing, and vertical structure',
+            'Available in all vanilla wood variants'
+          ]
+        },
+        {
+          title: 'Railings',
+          subtitle: 'Slim railings for balconies and edges. Use an axe to cycle the size when you inevitably misclick.',
+          icon: '/assets/icons/hearth-and-timber/oak_railing.png',
+          search: 'railing balcony walkway edge waterlogged axe size full half quarter stairs shape corner',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `Railings automatically form clean corners when placed next to each other.
+
+If a full railing feels a bit too confident, use an axe to cycle through three sizes: Full, Half, and Quarter.
+
+They can also be waterlogged, because of course your balcony needs a pool.
+
+Railings are available in all vanilla wood variants.`,
+          detailsBullets: [
+            'Auto connects and forms inner and outer corners',
+            'Use an axe to cycle size: Full, Half, Quarter',
+            'Waterloggable',
+            'Available in all vanilla wood variants',
+            'Shows extended tooltip information while holding SHIFT'
+          ]
+        },
+        {
+          title: 'Window Casings',
+          subtitle:
+            'Slim wooden trims that automatically frame windows and politely disappear where they are not needed.',
+          icon: '/assets/icons/hearth-and-timber/oak_window_casing.png',
+          search: 'window casing frame trim facade waterlogged axe toggle',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `Window Casings automatically connect to each other to form clean window frames.
+
+Edges appear only where no neighboring casing is present, keeping the look tidy without manual tweaking.
+
+If the bottom trim gets in the way, use an axe on the lower part to toggle it off.
+
+Window Casings are available in all vanilla wood variants.`,
+          detailsBullets: [
+            'Automatically connects to nearby Window Casings',
+            'Hides inner edges for clean window frames',
+            'Use an axe to toggle the bottom trim',
+            'Waterloggable',
+            'Available in all vanilla wood variants',
+            'Shows extended tooltip information while holding SHIFT'
+          ]
+        },
+        {
+          title: 'Boards',
+          subtitle: 'Stackable wooden boards for subtle depth and tiny build lies we all tell ourselves.',
+          icon: '/assets/icons/hearth-and-timber/oak_board.png',
+          search: 'boards wooden board layers stackable detail',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `Boards are stackable detail blocks that build up in layers.
+
+Placing another Board onto an existing one increases its thickness. Once fully stacked, the next Board continues into the block above or below, depending on placement.
+
+Use an axe to remove layers again, one by one.
+
+Boards are available in all vanilla wood variants.`,
+          detailsBullets: [
+            'Stack up to four layers in one block',
+            'Continues building vertically when fully stacked',
+            'Top and bottom placement supported',
+            'Use an axe to remove layers',
+            'Available in all vanilla wood variants'
+          ]
+        },
+        {
+          id: 'window_set',
+          title: 'Windows',
+          subtitle: 'Windows available as full blocks and panes.',
+          icon: '/assets/icons/hearth-and-timber/oak_window.png',
+          search: 'window pane block vertical connect timber wood glass',
+          details: true,
+          detailsTitle: 'Good to know',
+          detailsText: `Windows are available both as full blocks and as panes, allowing you to mix solid frames with lighter window sections.
+
+They automatically connect vertically, making tall windows and stacked designs effortless.
+
+All window variants are available in every vanilla wood type.`,
+          detailsBullets: [
+            'Available as window blocks and window panes',
+            'Automatically connects vertically',
+            'Ideal for tall and stacked window designs',
+            'Available in all vanilla wood variants',
+            'Purely decorative'
+          ]
+        },
+        {
+          id: 'timber_foundation_set',
+          title: 'Timber Foundations',
+          subtitle: 'Timber pieces that replace the full block instead of leaving visible framing.',
+          icon: '/assets/icons/hearth-and-timber/timber_foundation.png',
+          search: 'timber foundation base trim skirt timber framing',
+          details: true,
+          detailsTitle: 'How they work',
+          detailsText: `Timber Foundations work similarly to Timber Frames, but fully replace the block instead of leaving visible struts.
+
+They take on the applied block visually, while keeping a clean, solid shape that is ideal for lower walls, bases, and transitions between materials.
+
+These pieces are designed to make builds feel grounded without exposing inner framing.`,
+          detailsBullets: [
+            'Fully replaces the block instead of showing timber struts',
+            'Can be dressed with other full blocks',
+            'Ideal for foundations, lower walls, and base detailing',
+            'Includes multiple foundation-style variants'
+          ]
+        },
+
+        {
+          id: 'thatch',
+          title: 'Thatch',
+          subtitle: 'A roof material that progresses through weathering stages, with waxed variants to stop changes.',
+          icon: '/assets/icons/hearth-and-timber/thatch.png',
+          search: 'thatch weathering weathered drying aged waxed stairs slab',
+          details: true,
+          detailsTitle: 'Weathering',
+          detailsText: `Thatch progresses naturally through several weathering stages over time.
+
+Using a water bottle advances it to the next stage instantly.
+Using wheat restores it back to fresh Thatch.
+Using a hoe reverts it to the previous stage.
+
+Waxed variants permanently lock the current stage and prevent further changes.`,
+          detailsBullets: [
+            'Stages: Thatch, Weathered Thatch, Drying Thatch, Aged Thatch',
+            'Includes matching stairs and slabs',
+            'Water bottles advance weathering',
+            'Wheat restores fresh Thatch',
+            'Hoes revert to previous stages',
+            'Waxed variants stop all weathering'
+          ],
+          items: [
+            {
+              id: 'thatch_block',
+              title: 'Thatch',
+              icon: '/assets/icons/hearth-and-timber/thatch.png',
+              search: 'thatch roof'
+            },
+            {
+              id: 'weathered_thatch',
+              title: 'Weathered Thatch',
+              icon: '/assets/icons/hearth-and-timber/weathered_thatch.png',
+              search: 'weathered thatch roof'
+            },
+            {
+              id: 'drying_thatch',
+              title: 'Drying Thatch',
+              icon: '/assets/icons/hearth-and-timber/drying_thatch.png',
+              search: 'drying thatch roof'
+            },
+            {
+              id: 'aged_thatch',
+              title: 'Aged Thatch',
+              icon: '/assets/icons/hearth-and-timber/aged_thatch.png',
+              search: 'aged thatch roof'
+            }
+          ]
+        },
+        {
+          id: 'sliding_doors',
+          title: 'Sliding Doors',
+          subtitle: 'Sliding doors for larger openings, available in multiple formats.',
+          icon: '/assets/icons/hearth-and-timber/sliding_barn_door.png',
+          search: 'sliding hayloft barn stable door',
+          details: true,
+          detailsTitle: 'Variants',
+          detailsText: `Sliding Doors are designed for wide and tall entrances commonly found in rural and agricultural builds.
+
+   They slide horizontally and are suited for barns, stables, and haylofts.`,
+          detailsBullets: [
+            'Designed for larger openings',
+            'Slides horizontally when opened',
+            'Purely decorative building blocks',
+            'Used for barns, stables, and similar structures'
+          ],
+          items: [
+            {
+              id: 'sliding_hayloft_door',
+              title: 'Sliding Hayloft Door',
+              icon: '/assets/icons/hearth-and-timber/sliding_hayloft_door.png',
+              search: 'sliding hayloft door'
+            },
+            {
+              id: 'sliding_barn_door',
+              title: 'Sliding Barn Door',
+              icon: '/assets/icons/hearth-and-timber/sliding_barn_door.png',
+              search: 'sliding barn door'
+            },
+            {
+              id: 'sliding_stable_door',
+              title: 'Sliding Stable Door',
+              icon: '/assets/icons/hearth-and-timber/sliding_stable_door.png',
+              search: 'sliding stable door'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: 'worldgen',
+      title: 'Worldgen and Natural Features',
+      subtitle: 'Crops, plants, and terrain features that generate naturally in the world.',
+      entries: [
+        {
+          id: 'groutless_rubblestone',
+          title: 'Groutless Rubblestone',
+          subtitle: 'Generates naturally underground as a stone variant.',
+          icon: '/assets/icons/hearth-and-timber/groutless_rubblestone.png',
+          search: 'groutless rubblestone worldgen overworld',
+          details: true,
+          detailsTitle: 'Generation',
+          detailsText: `Groutless Rubblestone generates naturally in the Overworld.
+
+It forms large underground veins and replaces base stone blocks.`,
+          detailsBullets: [
+            'Generates in the Overworld',
+            'Replaces base stone',
+            'Large vein size',
+            'Spawns between Y -64 and Y 0'
+          ]
+        }
+      ]
+    }
+  ]
+}

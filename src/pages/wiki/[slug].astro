@@ -1,7 +1,7 @@
 ---
 import WikiPage from "../../components/wiki/WikiPage.astro";
 import brewery from "./config/brewery.js";
-import farmAndCharm from "./config/farm-and-charm.js";
+import farmandcharm from "./config/farm-and-charm.js";
 import herbalbrews from "./config/herbalbrews.js";
 import vinery from "./config/vinery.js";
 import candlelight from "./config/candlelight.js";
@@ -9,6 +9,7 @@ import pottery from "./config/lilis-pottery.js";
 import alpinewhispers from "./config/alpine-whispers.js";
 import furniture from "./config/furniture.js";
 import camping from "./config/camping.js";
+import hearthandtimber from "./config/hearth-and-timber.js";
 
 export function getStaticPaths() {
   return [
@@ -21,6 +22,7 @@ export function getStaticPaths() {
     { params: { slug: "candlelight" } },
     { params: { slug: "lilis-pottery" } },
     { params: { slug: "alpine-whispers" } },
+    { params: { slug: "hearth-and-timber" } },
   ];
 }
 
@@ -28,12 +30,13 @@ const { slug } = Astro.params;
 
 const configs = {
   brewery,
-  "farm-and-charm": farmAndCharm,
+  "farm-and-charm": farmandcharm,
   herbalbrews,
   vinery,
   camping,
   candlelight,
   furniture,
+  "hearth-and-timber": hearthandtimber,
   "lilis-pottery": pottery,
   "alpine-whispers": alpinewhispers,
 };

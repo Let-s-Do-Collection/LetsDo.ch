@@ -16,7 +16,7 @@ It focuses on portable gear, simple camp setups, and a handful of useful items f
         {
           id: 'grill',
           title: 'Grill',
-          subtitle: 'A simple, no GUI grill. Right click with cookable food to grill it directly on the block.',
+          subtitle: 'A small open-flame grill. Toss cookable food on top and let the fire do the rest.',
           icon: '/assets/icons/camping/grill.png',
           search: 'grill camping cook food campfire no gui grilled tooltip nutrition saturation',
           details: true,
