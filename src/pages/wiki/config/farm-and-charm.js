@@ -1096,36 +1096,36 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
         ],
       },
     ],
-impressionsTitle: "Impressions",
-  impressionsSubtitle: "A quick look at how it feels ingame",
-  impressions: [
-    {
-      src: "/assets/impressions/farm-and-charm/01.jpeg",
-      caption: "Cozy kitchen corner with stations",
-    },
-    {
-      src: "/assets/impressions/farm-and-charm/02.jpeg",
-      caption: "Harvest basket setup",
-    },
-    {
-      src: "/assets/impressions/farm-and-charm/03.jpeg",
-      caption: "Cooking pot in action",
-    },
-    {
-      src: "/assets/impressions/farm-and-charm/04.jpeg",
-      caption: "Decor shelf details",
-    },
-    {
-      src: "/assets/impressions/farm-and-charm/05.jpeg",
-      caption: "Market stall vibes",
-    },
-    {
-      src: "/assets/impressions/farm-and-charm/06.jpeg",
-      caption: "Evening lighting example",
-    },
-    {
-      src: "/assets/impressions/farm-and-charm/07.jpeg",
-      caption: "Storage area overview",
-    },
-  ],
+impressionsTitle: "Everyday Scenes",
+  impressionsSubtitle: "A closer look at how everything comes together ingame",
+impressions: [
+  {
+    src: "/assets/impressions/farm-and-charm/01.jpeg",
+    caption: "Tomatoes growing on a rope",
+  },
+  {
+    src: "/assets/impressions/farm-and-charm/02.jpeg",
+    caption: "A wooden cart in everyday use",
+  },
+  {
+    src: "/assets/impressions/farm-and-charm/03.jpeg",
+    caption: "Pigs waiting at a feeding trough",
+  },
+  {
+    src: "/assets/impressions/farm-and-charm/04.jpeg",
+    caption: "Crop fields with sprinklers",
+  },
+  {
+    src: "/assets/impressions/farm-and-charm/05.jpeg",
+    caption: "Walking through a barley field",
+  },
+  {
+    src: "/assets/impressions/farm-and-charm/06.jpeg",
+    caption: "A complete set of new kitchen tools",
+  },
+  {
+    src: "/assets/impressions/farm-and-charm/07.jpeg",
+    caption: "Preparing food in the kitchen",
+  },
+],
 };

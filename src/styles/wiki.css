@@ -47,7 +47,11 @@ main.page.wikiShell > *,
 
 .wikiMain {
   margin-left: -70px;
-  padding-bottom: 140px;
+  padding-bottom: 8px;
+}
+
+.impressionsSection {
+  margin-bottom: 12px;
 }
 
 .wikiMain > section:first-child {
