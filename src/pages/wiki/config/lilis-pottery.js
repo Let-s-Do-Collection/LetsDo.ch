@@ -1,6 +1,6 @@
 export default {
   slug: "pottery",
-  title: "Pottery Wiki",
+  title: "Pottery",
   logo: "/assets/mod-logos/lilis_pottery.png",
   aboutTitle: "Welcome",
   aboutSubtitle: "Clay, fire and handcrafted pottery",
@@ -497,4 +497,32 @@ If you want to start fresh, a Brush can be used to remove the color again.`,
       ],
     }
   ],
-};
+  impressionsTitle: "Everyday Scenes",
+     impressionsSubtitle: "A closer look at how everything comes together ingame",
+impressions: [
+  {
+    src: "/assets/impressions/pottery/01.png",
+    caption: "Lili’s Bloom Shop",
+  },
+  {
+    src: "/assets/impressions/pottery/02.png",
+    caption: "Lili’s Statue",
+  },
+  {
+    src: "/assets/impressions/pottery/03.png",
+    caption: "A pottery kiln",
+  },
+  {
+    src: "/assets/impressions/pottery/04.png",
+    caption: "Decorative planters",
+  },
+  {
+    src: "/assets/impressions/pottery/05.png",
+    caption: "A small pottery shop",
+  },
+  {
+    src: "/assets/impressions/pottery/06.png",
+    caption: "Another pottery shop",
+  },
+],
+   };

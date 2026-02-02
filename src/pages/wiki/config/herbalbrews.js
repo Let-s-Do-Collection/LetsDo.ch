@@ -1,6 +1,6 @@
 export default {
   slug: "herbalbrews",
-  title: "HerbalBrews Wiki",
+  title: "HerbalBrews",
   logo: "/assets/mod-logos/herbalbrews.png",
   aboutTitle: "Welcome",
   aboutSubtitle: "Tea, coffee, flasks, andi brewing",

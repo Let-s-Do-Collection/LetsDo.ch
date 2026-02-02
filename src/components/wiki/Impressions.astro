@@ -52,9 +52,9 @@ const loopItems = loop ? [items[items.length - 1], ...items, items[0]] : items
         {loopItems.map((it, i) => {
           const realIndex = loop ? (i === 0 ? items.length - 1 : i === loopItems.length - 1 ? 0 : i - 1) : i
           return (
-            <button class="impressionsSlide" type="button" data-open data-real-index={String(realIndex)} data-slide-index={String(i)}>
+            <button class="impressionsSlide" type="button" data-open data-real-index={String(realIndex)} data-slide-index={String(i)} aria-label={it.alt || "Open"}>
               <div class="impressionsFrame">
-                <img class="impressionsImg" src={it.src} alt={it.alt} loading="lazy" />
+              <img class="impressionsImg" src={it.src} alt={it.alt} loading="eager" decoding="async" />
               </div>
               <div class="impressionsCaption">{it.caption}</div>
             </button>
@@ -66,6 +66,29 @@ const loopItems = loop ? [items[items.length - 1], ...items, items[0]] : items
     <button class="impressionsArrow" data-next type="button" aria-label="Next">
       <span aria-hidden="true">›</span>
     </button>
+  </div>
+
+  <div class="impressionsLightbox" data-lightbox aria-hidden="true">
+    <button class="impressionsLightboxBackdrop" type="button" aria-label="Close" data-close></button>
+
+    <div class="impressionsLightboxInner" role="dialog" aria-modal="true" aria-label="Impressions">
+      <button class="impressionsLightboxBtn impressionsLightboxPrev" type="button" aria-label="Previous" data-lb-prev>
+        <span aria-hidden="true">‹</span>
+      </button>
+
+      <figure class="impressionsLightboxFigure">
+        <img class="impressionsLightboxImg" data-lb-img alt="" />
+        <figcaption class="impressionsLightboxCaption" data-lb-cap></figcaption>
+      </figure>
+
+      <button class="impressionsLightboxBtn impressionsLightboxNext" type="button" aria-label="Next" data-lb-next>
+        <span aria-hidden="true">›</span>
+      </button>
+
+      <button class="impressionsLightboxClose" type="button" aria-label="Close" data-close>
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
   </div>
 
   <style is:inline>
@@ -91,7 +114,7 @@ const loopItems = loop ? [items[items.length - 1], ...items, items[0]] : items
       scroll-snap-type: x mandatory;
       -webkit-overflow-scrolling: touch;
       overscroll-behavior-x: contain;
-      overscroll-behavior-y: none;
+      overscroll-behavior-y: auto;
       scrollbar-width: none;
     }
 
@@ -107,7 +130,7 @@ const loopItems = loop ? [items[items.length - 1], ...items, items[0]] : items
     .impressionsSlide {
       flex: 0 0 100%;
       scroll-snap-align: start;
-      scroll-snap-stop: always;
+      scroll-snap-stop: normal;
       border: 0;
       background: transparent;
       padding: 0;
@@ -171,6 +194,114 @@ const loopItems = loop ? [items[items.length - 1], ...items, items[0]] : items
       line-height: 1;
     }
 
+    .impressionsLightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 999999;
+      display: none;
+    }
+
+    .impressionsLightbox.isOpen {
+      display: block;
+    }
+
+    .impressionsLightboxBackdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.62);
+      border: 0;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .impressionsLightboxInner {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: min(1100px, calc(100vw - 28px));
+      max-height: calc(100vh - 28px);
+      background: var(--card);
+      border: 1px solid var(--borderStrong);
+      border-radius: 18px;
+      box-shadow: var(--shadowHover);
+      display: grid;
+      grid-template-columns: 58px 1fr 58px;
+      align-items: center;
+      padding: 18px;
+    }
+
+    .impressionsLightboxFigure {
+      margin: 0;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      gap: 10px;
+      min-width: 0;
+    }
+
+    .impressionsLightboxImg {
+      width: 100%;
+      height: min(70vh, 720px);
+      object-fit: contain;
+      border-radius: 14px;
+      background: rgba(0, 0, 0, 0.06);
+    }
+
+    .impressionsLightboxCaption {
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .impressionsLightboxBtn {
+      appearance: none;
+      border: 1px solid var(--border);
+      background: rgba(0, 0, 0, 0.03);
+      color: var(--text);
+      cursor: pointer;
+      width: 44px;
+      height: 52px;
+      border-radius: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    html[data-mode="dark"] .impressionsLightboxBtn {
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    .impressionsLightboxBtn span {
+      font-size: 26px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .impressionsLightboxClose {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+    }
+
+    .impressionsLightboxClose span {
+      font-size: 22px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    body.isImpressionsOpen {
+      overflow: hidden;
+    }
+
     @media (max-width: 900px) {
       .impressionsFrame {
         height: 260px;
@@ -194,10 +325,20 @@ const loopItems = loop ? [items[items.length - 1], ...items, items[0]] : items
       .impressionsFrame {
         height: 220px;
       }
+
+      .impressionsLightboxInner {
+        grid-template-columns: 44px 1fr 44px;
+        padding: 12px;
+      }
+
+      .impressionsLightboxBtn {
+        width: 38px;
+        height: 46px;
+      }
     }
   </style>
 
-  <script is:inline define:vars={{ loop }}>
+  <script is:inline define:vars={{ items, loop }}>
     ;(() => {
       const root = document.querySelector('[data-impressions-root]')
       if (!root) return
@@ -206,10 +347,20 @@ const loopItems = loop ? [items[items.length - 1], ...items, items[0]] : items
       const track = root.querySelector('[data-track]')
       const prev = root.querySelector('[data-prev]')
       const next = root.querySelector('[data-next]')
-      if (!viewport || !track || !prev || !next) return
+      const lightbox = root.querySelector('[data-lightbox]')
+
+      if (!viewport || !track || !prev || !next || !lightbox) return
+
+      if (lightbox.parentElement !== document.body) document.body.appendChild(lightbox)
 
       const slides = Array.from(track.querySelectorAll('[data-slide-index]'))
       if (slides.length === 0) return
+
+      const lbImg = lightbox.querySelector('[data-lb-img]')
+      const lbCap = lightbox.querySelector('[data-lb-cap]')
+      const lbPrev = lightbox.querySelector('[data-lb-prev]')
+      const lbNext = lightbox.querySelector('[data-lb-next]')
+      const lbClose = Array.from(lightbox.querySelectorAll('[data-close]'))
 
       const slideWidth = () => viewport.clientWidth || 1
 
@@ -239,9 +390,10 @@ const loopItems = loop ? [items[items.length - 1], ...items, items[0]] : items
         scrollToSlideIndex(realToSlideIndex(realIndex), smooth)
       }
 
-      const snapFixIfOnClone = () => {
-        if (!loop) return
-        const w = slideWidth()
+const snapFixIfOnClone = () => {
+  if (!loop) return
+  const w = slideWidth()
+  if (w <= 1) return
         const slideIndex = Math.round(viewport.scrollLeft / w)
         if (slideIndex === 0) {
           scrollToSlideIndex(realToSlideIndex(realCount - 1), false)
@@ -254,11 +406,20 @@ const loopItems = loop ? [items[items.length - 1], ...items, items[0]] : items
         }
       }
 
-      const onScroll = () => {
-        if (syncing) return
-        if (scrollTimer) window.clearTimeout(scrollTimer)
-        scrollTimer = window.setTimeout(snapFixIfOnClone, 120)
+  const onScroll = () => {
+    if (syncing) return
+
+    if (loop) {
+      const max = viewport.scrollWidth - viewport.clientWidth
+      if (viewport.scrollLeft <= 1 || viewport.scrollLeft >= max - 1) {
+        snapFixIfOnClone()
+        return
       }
+    }
+
+    if (scrollTimer) window.clearTimeout(scrollTimer)
+    scrollTimer = window.setTimeout(snapFixIfOnClone, 60)
+  }
 
       viewport.addEventListener('scroll', onScroll, { passive: true })
 
@@ -274,11 +435,52 @@ const loopItems = loop ? [items[items.length - 1], ...items, items[0]] : items
         scrollToReal(realIndex + 1, true)
       })
 
-      const init = () => {
-        scrollToReal(0, false)
+      const setLightboxOpen = (open) => {
+        lightbox.classList.toggle('isOpen', open)
+        lightbox.setAttribute('aria-hidden', open ? 'false' : 'true')
+        document.body.classList.toggle('isImpressionsOpen', open)
       }
 
-      init()
+      const renderLightbox = () => {
+        const it = items[realIndex]
+        if (!it) return
+        if (lbImg) {
+          lbImg.src = it.full || it.src || ''
+          lbImg.alt = it.alt || ''
+        }
+        if (lbCap) lbCap.textContent = it.caption || ''
+      }
+
+      const open = (idx) => {
+        realIndex = ((idx % realCount) + realCount) % realCount
+        renderLightbox()
+        setLightboxOpen(true)
+      }
+
+      slides.forEach((slide) => {
+        slide.addEventListener('click', (e) => {
+          e.preventDefault()
+          e.stopPropagation()
+          const idx = Number(slide.getAttribute('data-real-index') || '0')
+          if (!Number.isNaN(idx)) open(idx)
+        })
+      })
+
+      if (lbPrev) lbPrev.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); scrollToReal(realIndex - 1, true); renderLightbox() })
+      if (lbNext) lbNext.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); scrollToReal(realIndex + 1, true); renderLightbox() })
+
+      if (lbClose && lbClose.length) {
+        lbClose.forEach((b) => b.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); setLightboxOpen(false) }))
+      }
+
+      document.addEventListener('keydown', (event) => {
+        if (lightbox.getAttribute('aria-hidden') === 'true') return
+        if (event.key === 'Escape') setLightboxOpen(false)
+        if (event.key === 'ArrowLeft') { scrollToReal(realIndex - 1, true); renderLightbox() }
+        if (event.key === 'ArrowRight') { scrollToReal(realIndex + 1, true); renderLightbox() }
+      })
+
+      scrollToReal(0, false)
 
       window.addEventListener('resize', () => {
         scrollToReal(realIndex, false)

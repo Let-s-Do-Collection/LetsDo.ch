@@ -38,7 +38,7 @@
 .impressionsSlide {
   flex: 0 0 100%;
   scroll-snap-align: start;
-  scroll-snap-stop: always;
+  scroll-snap-stop: normal;
   appearance: none;
   border: 0;
   padding: 0;

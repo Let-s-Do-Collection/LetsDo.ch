@@ -1,6 +1,6 @@
 export default {
   slug: "brewery",
-  title: "Brewery Wiki",
+  title: "Brewery",
   logo: "/assets/mod-logos/brewery.png",
   aboutTitle: "Welcome",
   aboutSubtitle: "Everything about beer and brewing",

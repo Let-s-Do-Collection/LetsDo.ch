@@ -1,6 +1,6 @@
 export default {
   slug: "farm-and-charm",
-  title: "Farm & Charm Wiki",
+  title: "Farm & Charm",
   logo: "/assets/mod-logos/farm_and_charm.png",
   aboutTitle: "Welcome",
   aboutSubtitle: "Everything you need, in one place",

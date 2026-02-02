@@ -1,6 +1,6 @@
 export default {
   slug: "candlelight",
-  title: "Candlelight Wiki",
+  title: "Candlelight",
   logo: "/assets/mod-logos/candlelight.png",
   aboutTitle: "Welcome",
   aboutSubtitle: "Fine dining, interiors, and a little bit of romance",
@@ -221,7 +221,7 @@ Glasses and Wine Glasses can be filled with drinks such as Potions or Wine. Play
                {
                   id: "big_table",
                   title: "Big Table",
-                  subtitle: "A large dining table. Available in all wood variants.",
+                  subtitle: "A large table. Available in all wood variants.",
                   icon: "/assets/icons/candlelight/oak_big_table.png",
                   search: "big table large dining wood variants oak spruce birch jungle acacia dark oak mangrove cherry bamboo candlelight",
                 },

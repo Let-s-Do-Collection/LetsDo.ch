@@ -1,6 +1,6 @@
 export default {
   slug: "vinery",
-  title: "Vinery Wiki",
+  title: "Vinery",
   logo: "/assets/mod-logos/vinery.png",
   aboutTitle: "Welcome",
   aboutSubtitle: "Everything about wine and vineyards",
