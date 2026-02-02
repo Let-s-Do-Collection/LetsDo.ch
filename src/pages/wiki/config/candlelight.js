@@ -21,7 +21,6 @@ Alongside that, it introduces themed outfits, a lucky ring, and a few special sh
         {
           id: 'stove',
           title: 'Stove',
-          namespace_id: 'candlelight:*_stove',
           subtitle:
             'Works the same as the Farm & Charm Stove. A heat source for cooking, available in multiple stone variants.',
           icon: '/assets/icons/candlelight/cobblestone_stove.png',
@@ -402,7 +401,6 @@ Right click again to open the interface. When finished, sign the letter and remo
         {
           id: 'note_paper',
           title: 'Note Paper',
-          namespace_id: 'candlelight:note_paper*',
           subtitle: 'Write short notes and messages.',
           icon: '/assets/icons/candlelight/note_paper.png',
           search: 'note paper writable written candlelight typewriter',
@@ -446,7 +444,6 @@ Written notes can be used as decoration, shared with other players, or used as t
         {
           id: 'letter',
           title: 'Letter',
-          namespace_id: 'candlelight:letter_*',
           subtitle: 'Write, seal, and exchange letters with other players.',
           icon: '/assets/icons/candlelight/letter_open.png',
           search: 'letter note paper writable sealed love letter candlelight message',

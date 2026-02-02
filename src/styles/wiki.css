@@ -47,6 +47,10 @@ main.page.wikiShell > *,
   padding-bottom: 8px;
 }
 
+.wikiDetailsList li {
+  overflow-wrap: anywhere;
+}
+
 .impressionsSection {
   margin-bottom: 12px;
 }
@@ -106,11 +110,26 @@ main.page.wikiShell > *,
 }
 
 .wikiCard {
+  display: flex;
+  flex-direction: column;
   transition:
     transform 180ms ease,
     box-shadow 180ms ease,
     border-color 180ms ease;
   will-change: transform;
+}
+
+.wikiCard .cardContent {
+  flex: 1;
+}
+
+.wikiCard .cardAction {
+  margin-top: auto;
+  min-height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .wikiCard:hover {

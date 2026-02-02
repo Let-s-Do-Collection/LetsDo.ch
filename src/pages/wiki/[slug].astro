@@ -7,6 +7,7 @@ import vinery from "./config/vinery.js";
 import candlelight from "./config/candlelight.js";
 import pottery from "./config/lilis-pottery.js";
 import alpinewhispers from "./config/alpine-whispers.js";
+import furniture from "./config/furniture.js";
 
 export function getStaticPaths() {
   return [
@@ -14,6 +15,7 @@ export function getStaticPaths() {
     { params: { slug: "farm-and-charm" } },
     { params: { slug: "herbalbrews" } },
     { params: { slug: "vinery" } },
+        { params: { slug: "furniture" } },
     { params: { slug: "candlelight" } },
     { params: { slug: "lilis-pottery" } },
     { params: { slug: "alpine-whispers" } },
@@ -28,6 +30,7 @@ const configs = {
   herbalbrews,
   vinery,
   candlelight,
+  furniture,
   "lilis-pottery": pottery,
   "alpine-whispers": alpinewhispers,
 };

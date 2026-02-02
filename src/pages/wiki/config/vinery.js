@@ -168,7 +168,6 @@ To ferment, use the middle input slots with ingredients and containers such as w
         {
           id: 'vinery_slabs',
           title: 'Vineyard Slabs',
-          namespace_id: 'vinery:*_slab*',
           subtitle: 'Terrain slabs used for vineyard paths and tiered fields.',
           icon: '/assets/icons/vinery/dirt_slab.png',
           search: 'slabs grass dirt coarse dirt vineyard tier expand',
@@ -643,7 +642,6 @@ It is not meant to be eaten. It can be thrown at unwanted creatures or friends.`
         {
           id: 'grapes',
           title: 'Grapes',
-          namespace_id: 'vinery:*grape*',
           subtitle: 'Wild and cultivated grape varieties found across different overworld biomes.',
           icon: '/assets/icons/vinery/red_grape.png',
           search:

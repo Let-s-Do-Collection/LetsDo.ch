@@ -39,7 +39,7 @@ The mod focuses on classic alpine building materials and interiors, expanding bu
           title: 'Alpine Gneiss',
           namespace_id: 'alpinewhispers:alpine_gneiss',
           subtitle: 'A complete stone building set including all standard block variants.',
-          icon: '/assets/icons/alpine-whispers/alpine_gneiss.png',
+          icon: '/assets/icons/alpine-whispers/alpine_gneiss_bricks.png',
           search: 'alpine gneiss stone set bricks layered mossy frosty',
           details: true,
           detailsMiniGallery: true,
@@ -77,7 +77,7 @@ Mossy variants can be turned frosty by using a snowball on them, or by hitting t
               id: 'mossy_alpine_gneiss_bricks',
               title: 'Mossy Alpine Gneiss Bricks',
               namespace_id: 'alpinewhispers:mossy_alpine_gneiss_bricks',
-              icon: '/assets/icons/alpine-whispers/mossy_alpine_gneiss_bricks.png'
+              icon: '/assets/icons/alpine-whispers/mossy_alpine_gneiss_bricks_1_.png'
             },
             {
               id: 'mossy_layered_alpine_gneiss_bricks',
@@ -89,7 +89,7 @@ Mossy variants can be turned frosty by using a snowball on them, or by hitting t
               id: 'frosty_alpine_gneiss_bricks',
               title: 'Frosty Alpine Gneiss Bricks',
               namespace_id: 'alpinewhispers:frosty_alpine_gneiss_bricks',
-              icon: '/assets/icons/alpine-whispers/frosty_alpine_gneiss_bricks.png'
+              icon: '/assets/icons/alpine-whispers/mossy_alpine_gneiss_bricks.png'
             }
           ]
         },
@@ -256,10 +256,10 @@ Use without an item to open and close it.`,
 
         {
           id: 'kitchen_sink',
-          title: 'Kitchen Sink',
-          namespace_id: 'alpinewhispers:kitchen_sink',
+          title: 'Arolla Pine Sink',
+          namespace_id: 'alpinewhispers:arolla_pine_sink',
           subtitle: 'A functional sink you can fill and empty with buckets and bottles.',
-          icon: '/assets/icons/alpine-whispers/kitchen_sink.png',
+          icon: '/assets/icons/alpine-whispers/arolla_pine_sink.png',
           search: 'kitchen sink alpine whispers filled bucket bottle water potion',
           details: true,
           detailsTitle: 'Function',
@@ -538,14 +538,12 @@ It can be used to ride and control Alpine Sheep.`,
             'Controls Alpine Sheep movement'
           ]
         },
-
         {
           id: 'winter_magic_music_disc',
           title: 'Winter Magic Music Disc',
-          namespace_id: 'alpinewhispers:winter_magic_music_disc',
-          subtitle: 'A music disc.',
+          subtitle: 'Plays Marco’s absolute favorite track and usually runs on repeat. For over a year. Craftable.',
           icon: '/assets/icons/alpine-whispers/winter_magic_music_disc.png',
-          search: 'music disc winter magic alpine whispers'
+          search: 'music disc winter magic alpine whispers craftable favorite track'
         }
       ]
     },
@@ -598,7 +596,6 @@ Once placed, right click it to eat. Each bite removes a portion until it is gone
         {
           id: 'snow_gentian',
           title: 'Snow Gentian',
-          namespace_id: 'alpinewhispers:snow_gentian',
           subtitle: 'Snow Gentian can generate naturally in cold alpine regions.',
           icon: '/assets/icons/alpine-whispers/snow_gentian.png',
           search: 'snow gentian flower alpine whispers'
@@ -607,7 +604,6 @@ Once placed, right click it to eat. Each bite removes a portion until it is gone
         {
           id: 'christmas_rose',
           title: 'Christmas Rose',
-          namespace_id: 'alpinewhispers:christmas_rose',
           subtitle: 'Christmas Roses can generate naturally in snowy environments.',
           icon: '/assets/icons/alpine-whispers/christmas_rose.png',
           search: 'christmas rose flower alpine whispers'
@@ -616,7 +612,6 @@ Once placed, right click it to eat. Each bite removes a portion until it is gone
         {
           id: 'hoarfrost_grass',
           title: 'Hoarfrost Grass',
-          namespace_id: 'alpinewhispers:hoarfrost_grass',
           subtitle: 'Hoarfrost Grass can generate naturally across frozen terrain.',
           icon: '/assets/icons/alpine-whispers/hoarfrost_grass.png',
           search: 'hoarfrost grass alpine whispers'
@@ -625,7 +620,6 @@ Once placed, right click it to eat. Each bite removes a portion until it is gone
         {
           id: 'tall_hoarfrost_grass',
           title: 'Tall Hoarfrost Grass',
-          namespace_id: 'alpinewhispers:tall_hoarfrost_grass',
           subtitle: 'A taller variant of Hoarfrost Grass found in cold regions.',
           icon: '/assets/icons/alpine-whispers/tall_hoarfrost_grass.png',
           search: 'tall hoarfrost grass alpine whispers'
@@ -634,16 +628,14 @@ Once placed, right click it to eat. Each bite removes a portion until it is gone
         {
           id: 'snow_layers',
           title: 'Snow Layers',
-          namespace_id: 'minecraft:snow_layer',
           subtitle: 'Snowy biomes now feature naturally varying snow layer heights.',
-          icon: '/assets/icons/minecraft/snow_layer.png',
+          icon: '/assets/icons/alpine-whispers/snow_layer.png',
           search: 'snow layer worldgen alpine whispers snowy plains grove'
         },
 
         {
           id: 'arolla_pine_sapling',
           title: 'Arolla Pines',
-          namespace_id: 'alpinewhispers:arolla_pine_sapling',
           subtitle: 'Arolla Pines can grow naturally in snowy regions.',
           icon: '/assets/icons/alpine-whispers/arolla_pine_sapling.png',
           search: 'arolla pine sapling tree worldgen alpine whispers'
@@ -652,16 +644,14 @@ Once placed, right click it to eat. Each bite removes a portion until it is gone
         {
           id: 'cobbled_alpine_gneiss',
           title: 'Alpine Gneiss',
-          namespace_id: 'alpinewhispers:cobbled_alpine_gneiss',
           subtitle: 'Some stone formations are naturally replaced with Alpine Gneiss.',
-          icon: '/assets/icons/alpine-whispers/cobbled_alpine_gneiss.png',
+          icon: '/assets/icons/alpine-whispers/alpine_gneiss.png',
           search: 'cobbled alpine gneiss stone worldgen alpine whispers'
         },
 
         {
           id: 'alpine_gneiss_slabs',
           title: 'Gneiss Slabs',
-          namespace_id: 'alpinewhispers:alpine_gneiss_slab',
           subtitle: 'Alpine Gneiss slabs can generate naturally near slopes and terrain edges.',
           icon: '/assets/icons/alpine-whispers/alpine_gneiss_slab.png',
           search: 'alpine gneiss slab worldgen alpine whispers'
@@ -776,7 +766,7 @@ Feeding Bread is a bad idea: after a short while, the sheep gets angry and event
   impressions: [
     {
       src: '/assets/impressions/alpine-whispers/01.jpeg',
-      caption: 'Lili`s Alpine Spa featuring Bathtub, Wardrobe and a Dresser',
+      caption: 'Lili`s Alpine Spa featuring Bathtub, Wardrobe and a Dresser'
     },
     {
       src: '/assets/impressions/alpine-whispers/02.jpeg',
@@ -798,9 +788,9 @@ Feeding Bread is a bad idea: after a short while, the sheep gets angry and event
       src: '/assets/impressions/alpine-whispers/06.jpeg',
       caption: 'Cold alpine slopes with lingering winter fog.'
     },
-       {
-          src: '/assets/impressions/alpine-whispers/07.jpeg',
-          caption: 'Quiet alpine wildlife sheltering under snowy trees.'
-        }
+    {
+      src: '/assets/impressions/alpine-whispers/07.jpeg',
+      caption: 'Quiet alpine wildlife sheltering under snowy trees.'
+    }
   ]
 }

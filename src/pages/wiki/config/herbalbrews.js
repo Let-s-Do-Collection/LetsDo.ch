@@ -140,7 +140,6 @@ The Potions placed inside the Cauldron are also visually displayed while brewing
         {
           id: 'tea_drying',
           title: 'Tea Drying',
-          namespace_id: 'herbalbrews:*tea_leaf*_block, herbalbrews:dried_*_tea',
           subtitle: 'Turns fresh tea leaves into dried tea ingredients over time.',
           icon: '/assets/icons/herbalbrews/dried_green_tea.png',
           search: 'tea drying dry dried green tea black tea oolong tea leaf block stages',

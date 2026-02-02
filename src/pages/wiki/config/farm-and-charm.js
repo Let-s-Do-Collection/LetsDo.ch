@@ -388,7 +388,6 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
         {
           id: 'bag',
           title: 'Bag',
-          namespace_id: 'farm_and_charm:*_bag',
           subtitle: 'Decorative Bags representing different ingredients and farm goods.',
           icon: '/assets/icons/farm-and-charm/onion_bag.png',
           search: 'bag decoration ingredient sack strawberry carrot potato beetroot lettuce tomato corn onion flour'
@@ -396,7 +395,6 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
         {
           id: 'grain_ball',
           title: 'Grain Balls',
-          namespace_id: 'farm_and_charm:*_ball',
           subtitle: 'Decorative bundles of grains used to add detail and atmosphere to fields and storage areas.',
           icon: '/assets/icons/farm-and-charm/oat_ball.png',
           search: 'grain ball oat barley food ingredient'
@@ -412,7 +410,6 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
         {
           id: 'pet_food_bags',
           title: 'Pet Food Bags',
-          namespace_id: 'farm_and_charm:*_food',
           subtitle: 'Decorative sacks for storing dog and cat food in a rustic way.',
           icon: '/assets/icons/farm-and-charm/cat_food_bag.png',
           search: 'pet food bags dog food cat food sacks decorative storage stackable'
@@ -648,7 +645,6 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
         {
           id: 'tea',
           title: 'Tea',
-          namespace_id: 'farm_and_charm:*_tea',
           subtitle: 'Brewed from wild plants and water in a cooking pot.',
           icon: '/assets/icons/farm-and-charm/strawberry_tea.png',
           search: 'tea brew wild plants water cooking pot herbalbrews tea jug glass bottle right click share friends'
@@ -1444,14 +1440,15 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
       title: 'Miscellaneous Changes & Features',
       subtitle: 'Small but meaningful tweaks and additions that subtly enhance gameplay and atmosphere.',
       entries: [
-          {
-                id: 'config',
-                title: 'Configuration',
-                subtitle:
-                  'Most gameplay features of Farm & Charm can be adjusted via a configuration file, usually located at `config/farm_and_charm.json`.',
-                icon: '/assets/icons/misc/config.png',
-                search: 'config configuration settings options balance json farm and charm'
-              },
+        {
+          id: 'config',
+          title: 'Configuration',
+          subtitle:
+            'Most gameplay features of Farm & Charm can be adjusted via a configuration file, usually located at `config/farm_and_charm.json`.',
+          icon: '/assets/icons/misc/config.png',
+          search: 'config configuration settings options balance json farm and charm'
+        },
+
         {
           id: 'rain_growth',
           title: 'Rain Growth',

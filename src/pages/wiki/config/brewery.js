@@ -21,7 +21,6 @@ Alongside that, you get practical tavern blocks for storage and serving, playful
         {
           id: 'brewingstation',
           title: 'Brewingstation',
-          namespace_id: 'brewery:*_brewingstation',
           subtitle: 'The heart of Brewery: brew Beer and Whiskey through direct interaction.',
           icon: '/assets/icons/brewery/copper_brewingstation.png',
           search: 'brewingstation brewing station beer whiskey minigame tiers wood copper netherite multiblock 2x2x2',
@@ -233,7 +232,6 @@ It is perfect for pranks and harmless chaos.`,
         {
           id: 'dried_ingredients',
           title: 'Dried Ingredients',
-          namespace_id: 'brewery:dried_*',
           subtitle: 'Grains and harvest goods that can be dried in a Silo, then used or displayed as placeable bags.',
           icon: '/assets/icons/brewery/dried_wheat.png',
           search: 'dried ingredients silo drying wheat barley corn oat placeable bag block brewery',
@@ -409,7 +407,6 @@ If you wear the full set at the same time, you gain Harddrinking and become immu
         {
           id: 'beer',
           title: 'Beer',
-          namespace_id: 'brewery:beer_*',
           subtitle: 'A selection of beers, each with its own effect.',
           icon: '/assets/icons/brewery/beer_hops.png',
           search: 'beer mug brewery effects wheat hops barley oat nettle haley',
@@ -556,7 +553,6 @@ If you wear the full set at the same time, you gain Harddrinking and become immu
         {
           id: 'hops',
           title: 'Hops',
-          namespace_id: 'brewery:*hops*',
           subtitle: 'Hops can be found in taiga biomes and cultivated for brewing.',
           icon: '/assets/icons/brewery/wild_hops.png',
           search: 'hops taiga village woodland mansion wild hops crop rope climbing',
@@ -771,14 +767,14 @@ Booze actively hunts players and uses both melee and ranged attacks. It does not
       title: 'Miscellaneous Changes & Features',
       subtitle: 'Small but meaningful tweaks and additions that subtly enhance gameplay and atmosphere.',
       entries: [
-          {
-                id: 'config',
-                title: 'Configuration',
-                subtitle:
-                  'Most gameplay features of Brewery can be adjusted via a configuration file, usually located at `config/brewery.json`.',
-                icon: '/assets/icons/misc/config.png',
-                search: 'config configuration settings options balance json brewery'
-              },
+        {
+          id: 'config',
+          title: 'Configuration',
+          subtitle:
+            'Most gameplay features of Brewery can be adjusted via a configuration file, usually located at `config/brewery.json`.',
+          icon: '/assets/icons/misc/config.png',
+          search: 'config configuration settings options balance json brewery'
+        },
         {
           id: 'festive_zombies',
           title: 'Festive Zombies',
