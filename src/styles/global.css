@@ -1,9 +1,14 @@
-@import "@fontsource/source-sans-3/400.css";
-@import "@fontsource/source-sans-3/600.css";
-@import "@fontsource/source-sans-3/700.css";
+@import '@fontsource/source-sans-3/400.css';
+@import '@fontsource/source-sans-3/600.css';
+@import '@fontsource/source-sans-3/700.css';
 
 :root {
-  font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-family:
+    'Source Sans 3',
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    sans-serif;
 
   --text: #141414;
   --muted: rgba(20, 20, 20, 0.68);
@@ -39,11 +44,11 @@ body {
   color: var(--text);
 }
 
-[data-mode="light"] {
+[data-mode='light'] {
   color-scheme: light;
 }
 
-[data-mode="dark"] {
+[data-mode='dark'] {
   color-scheme: dark;
   --text: #e7e7e7;
   --muted: rgba(231, 231, 231, 0.6);
@@ -55,35 +60,35 @@ body {
 }
 
 /* THEME COLORS */
-html[data-theme="blue"][data-mode="light"] {
+html[data-theme='blue'][data-mode='light'] {
   --bg: linear-gradient(180deg, #eef3f8 0%, #e6edf4 55%, #ffffff 100%);
   --navBg: rgba(220, 232, 242, 0.96);
   --card: rgba(246, 250, 253, 0.9);
   --accent: #3e6e8e;
 }
 
-html[data-theme="gold"][data-mode="light"] {
+html[data-theme='gold'][data-mode='light'] {
   --bg: linear-gradient(180deg, #fbf4e3 0%, #f4ead1 55%, #ffffff 100%);
   --navBg: rgba(240, 228, 198, 0.96);
   --card: rgba(252, 249, 242, 0.9);
   --accent: #c9a24d;
 }
 
-html[data-theme="pink"][data-mode="light"] {
+html[data-theme='pink'][data-mode='light'] {
   --bg: linear-gradient(180deg, #f8eef3 0%, #f1dde7 55%, #ffffff 100%);
   --navBg: rgba(236, 214, 226, 0.96);
   --card: rgba(250, 242, 245, 0.9);
   --accent: #c35c8e;
 }
 
-html[data-theme="green"][data-mode="light"] {
+html[data-theme='green'][data-mode='light'] {
   --bg: linear-gradient(180deg, #eef5ec 0%, #e3efde 55%, #ffffff 100%);
   --navBg: rgba(214, 231, 212, 0.96);
   --card: rgba(246, 251, 245, 0.9);
   --accent: #4f8a3f;
 }
 
-html[data-theme="neon"][data-mode="light"] {
+html[data-theme='neon'][data-mode='light'] {
   --bg: linear-gradient(180deg, #f4e9ff 0%, #e8d6ff 55%, #ffffff 100%);
   --navBg: rgba(230, 210, 255, 0.96);
   --card: rgba(248, 240, 255, 0.92);
@@ -91,35 +96,35 @@ html[data-theme="neon"][data-mode="light"] {
 }
 
 /* DARK */
-html[data-theme="blue"][data-mode="dark"] {
+html[data-theme='blue'][data-mode='dark'] {
   --bg: linear-gradient(180deg, #1c1f24 0%, #15181d 100%);
   --navBg: rgba(28, 31, 36, 0.96);
   --card: rgba(36, 40, 46, 0.92);
   --accent: #6fa3c8;
 }
 
-html[data-theme="gold"][data-mode="dark"] {
+html[data-theme='gold'][data-mode='dark'] {
   --bg: linear-gradient(180deg, #1f1b14 0%, #15130f 100%);
   --navBg: rgba(31, 27, 20, 0.96);
   --card: rgba(40, 35, 28, 0.92);
   --accent: #d0b26b;
 }
 
-html[data-theme="pink"][data-mode="dark"] {
+html[data-theme='pink'][data-mode='dark'] {
   --bg: linear-gradient(180deg, #20161d 0%, #151016 100%);
   --navBg: rgba(32, 22, 29, 0.96);
   --card: rgba(41, 30, 38, 0.92);
   --accent: #d07aa7;
 }
 
-html[data-theme="green"][data-mode="dark"] {
+html[data-theme='green'][data-mode='dark'] {
   --bg: linear-gradient(180deg, #151c16 0%, #0f1410 100%);
   --navBg: rgba(21, 28, 22, 0.96);
   --card: rgba(30, 38, 32, 0.92);
   --accent: #7fbf7a;
 }
 
-html[data-theme="neon"][data-mode="dark"] {
+html[data-theme='neon'][data-mode='dark'] {
   --bg: linear-gradient(180deg, #120818 0%, #0b050f 100%);
   --navBg: rgba(20, 10, 28, 0.96);
   --card: rgba(32, 18, 44, 0.92);
@@ -128,18 +133,16 @@ html[data-theme="neon"][data-mode="dark"] {
 
 /* THEME WIPE */
 html::before {
-  content: "";
+  content: '';
   position: fixed;
   inset: 0;
   pointer-events: none;
   opacity: 0;
   transform: scale(0.98);
-  background: radial-gradient(
-    circle at var(--theme-x) var(--theme-y),
-    var(--theme-accent) 0%,
-    transparent 50%
-  );
-  transition: opacity 0.24s ease, transform 0.24s ease;
+  background: radial-gradient(circle at var(--theme-x) var(--theme-y), var(--theme-accent) 0%, transparent 50%);
+  transition:
+    opacity 0.24s ease,
+    transform 0.24s ease;
   z-index: 9999;
 }
 
@@ -150,7 +153,7 @@ html.themeTransition::before {
 
 /* MODE FADE */
 html::after {
-  content: "";
+  content: '';
   position: fixed;
   inset: 0;
   pointer-events: none;
@@ -172,7 +175,7 @@ html.modeTransition::after {
 }
 
 html::after {
-  content: "";
+  content: '';
   position: fixed;
   inset: 0;
   pointer-events: none;

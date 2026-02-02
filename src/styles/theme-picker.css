@@ -31,7 +31,9 @@
   width: 44px;
   height: 44px;
   image-rendering: pixelated;
-  transition: transform 0.14s ease, filter 0.14s ease;
+  transition:
+    transform 0.14s ease,
+    filter 0.14s ease;
 }
 
 .modeBtn:hover img,
@@ -39,20 +41,16 @@
   transform: translateY(-5px);
 }
 
-html[data-theme="blue"]  .themeHead[data-theme="blue"]  img,
-html[data-theme="gold"]  .themeHead[data-theme="gold"]  img,
-html[data-theme="pink"]  .themeHead[data-theme="pink"]  img,
-html[data-theme="green"] .themeHead[data-theme="green"] img {
+html[data-theme='blue'] .themeHead[data-theme='blue'] img,
+html[data-theme='gold'] .themeHead[data-theme='gold'] img,
+html[data-theme='pink'] .themeHead[data-theme='pink'] img,
+html[data-theme='green'] .themeHead[data-theme='green'] img {
   filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.18));
 }
 
-[data-mode="dark"]
-html[data-theme="blue"]  .themeHead[data-theme="blue"]  img,
-[data-mode="dark"]
-html[data-theme="gold"]  .themeHead[data-theme="gold"]  img,
-[data-mode="dark"]
-html[data-theme="pink"]  .themeHead[data-theme="pink"]  img,
-[data-mode="dark"]
-html[data-theme="green"] .themeHead[data-theme="green"] img {
+[data-mode='dark'] html[data-theme='blue'] .themeHead[data-theme='blue'] img,
+[data-mode='dark'] html[data-theme='gold'] .themeHead[data-theme='gold'] img,
+[data-mode='dark'] html[data-theme='pink'] .themeHead[data-theme='pink'] img,
+[data-mode='dark'] html[data-theme='green'] .themeHead[data-theme='green'] img {
   filter: drop-shadow(0 6px 12px rgba(255, 255, 255, 0.22));
 }

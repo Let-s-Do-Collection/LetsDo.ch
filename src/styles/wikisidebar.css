@@ -10,10 +10,7 @@
 .wikiSidebarFixed {
   position: fixed;
   top: calc(var(--navHeight) + var(--wikiTopAlignOffset));
-  left: calc(
-    max(var(--wikiSideInset), (100vw - var(--wikiMaxWidth)) / 2)
-    + var(--wikiSidebarOffsetX)
-  );
+  left: calc(max(var(--wikiSideInset), (100vw - var(--wikiMaxWidth)) / 2) + var(--wikiSidebarOffsetX));
   width: var(--wikiSidebarWidth);
   z-index: 50;
 }
@@ -126,7 +123,7 @@
   transition: transform 180ms ease;
 }
 
-.wikiDropdown[data-open="true"] .wikiDropdownChevron {
+.wikiDropdown[data-open='true'] .wikiDropdownChevron {
   transform: translateY(-35%) rotate(225deg);
 }
 
