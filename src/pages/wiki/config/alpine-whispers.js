@@ -554,21 +554,25 @@ It can be used to ride and control Alpine Sheep.`,
       subtitle: 'Food items tied to alpine survival and colder biomes.',
       entries: [
         {
-          id: 'reindeer',
-          title: 'Reindeer',
+          id: 'reindeer_meat',
+          title: 'Reindeer Meat',
           namespace_id: 'alpinewhispers:reindeer',
-          subtitle: 'Raw meat dropped by Reindeer.',
+          subtitle: 'Raw meat dropped by reindeer.',
           icon: '/assets/icons/alpine-whispers/reindeer.png',
-          search: 'reindeer meat raw food'
-        },
-
-        {
-          id: 'cooked_reindeer',
-          title: 'Cooked Reindeer',
-          namespace_id: 'alpinewhispers:cooked_reindeer',
-          subtitle: 'Cooked Reindeer meat.',
-          icon: '/assets/icons/alpine-whispers/cooked_reindeer.png',
-          search: 'cooked reindeer food'
+          search: 'reindeer meat raw food',
+          details: true,
+          detailsTitle: 'Cooked Variant',
+          detailsText: `Reindeer Meat can be cooked to obtain Cooked Reindeer Meat.`,
+          items: [
+            {
+              id: 'cooked_reindeer',
+              title: 'Cooked Reindeer Meat',
+              namespace_id: 'alpinewhispers:cooked_reindeer',
+              subtitle: 'Cooked reindeer meat.',
+              icon: '/assets/icons/alpine-whispers/cooked_reindeer.png',
+              search: 'reindeer meat cooked food'
+            }
+          ]
         },
 
         {

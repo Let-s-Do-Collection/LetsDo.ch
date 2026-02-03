@@ -110,6 +110,7 @@ Apply a block to fill the frame. Use a pickaxe to remove it again.`,
             }
           ]
         },
+
         {
           id: 'plaster',
           title: 'Plaster',

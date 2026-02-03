@@ -12,6 +12,7 @@ import camping from "./config/camping.js";
 import hearthandtimber from "./config/hearth-and-timber.js";
 import bakery from "./config/bakery.js";
 import lilisluckylures from "./config/lilis-lucky-lures.js";
+import wildernature from "./config/wildernature.js";
 
 export function getStaticPaths() {
   return [
@@ -27,6 +28,7 @@ export function getStaticPaths() {
     { params: { slug: "alpine-whispers" } },
     { params: { slug: "hearth-and-timber" } },
     { params: { slug: "bakery" } },
+    { params: { slug: "wildernature" } },
   ];
 }
 
@@ -40,6 +42,7 @@ const configs = {
   vinery,
   camping,
   candlelight,
+  wildernature,
   furniture,
   bakery,
   "hearth-and-timber": hearthandtimber,
