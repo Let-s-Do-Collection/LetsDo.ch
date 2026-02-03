@@ -10,6 +10,7 @@ import alpinewhispers from "./config/alpine-whispers.js";
 import furniture from "./config/furniture.js";
 import camping from "./config/camping.js";
 import hearthandtimber from "./config/hearth-and-timber.js";
+import bakery from "./config/bakery.js";
 
 export function getStaticPaths() {
   return [
@@ -23,6 +24,7 @@ export function getStaticPaths() {
     { params: { slug: "lilis-pottery" } },
     { params: { slug: "alpine-whispers" } },
     { params: { slug: "hearth-and-timber" } },
+    { params: { slug: "bakery" } },
   ];
 }
 
@@ -36,6 +38,7 @@ const configs = {
   camping,
   candlelight,
   furniture,
+  bakery,
   "hearth-and-timber": hearthandtimber,
   "lilis-pottery": pottery,
   "alpine-whispers": alpinewhispers,
