@@ -3,10 +3,10 @@ export default {
   title: 'Hearth & Timber',
   logo: '/assets/mod-logos/hearth_and_timber.png',
   aboutTitle: 'Welcome',
-  aboutSubtitle: 'Oak first building pieces, textures, and rustic world details',
-  aboutText: `Hearth & Timber is focused entirely on blocks.
+  aboutSubtitle: 'Building blocks, textures, and world features for detailed construction',
+  aboutText: `Hearth & Timber focuses entirely on blocks.
 
-It adds a set of rustic building pieces, decorative details, and a bit of world generation to make your builds feel more grounded and lived in.`,
+It adds building materials, decorative construction pieces, and a small set of world generation features intended for long term building projects.`,
   sections: [
     {
       id: 'building',
@@ -14,10 +14,27 @@ It adds a set of rustic building pieces, decorative details, and a bit of world 
       subtitle: 'All building blocks and decorative pieces.',
       entries: [
         {
+          title: 'Framework',
+          subtitle:
+            'A simple timber framework for scaffolding and quick structure work. Yes, it is basically a wooden scaffold.',
+          icon: '/assets/icons/hearth-and-timber/framework.png',
+          search: 'framework scaffold geruest extension platform collision',
+          details: true,
+          detailsTitle: 'Good to know',
+          detailsText: `Framework works like scaffolding and is meant for quick building support.
+
+      Framework Extensions create a thin platform you can stand on while keeping the block visually light.`,
+          detailsBullets: [
+            'Works like scaffolding',
+            'Framework Extensions add a thin walkable platform',
+            'Ideal for temporary structure support and building access'
+          ]
+        },
+        {
           id: 'timber_frames',
           title: 'Timber Frames',
           subtitle: 'Decorative timber frames used to shape classic half timbered buildings.',
-          icon: '/assets/icons/hearth-and-timber/framework.png',
+          icon: '/assets/icons/hearth-and-timber/timber_frame.png',
           search: 'timber frame half timbered framework mimic block apply pickaxe remove shift tooltip waterlogged',
           details: true,
           detailsTitle: 'Usage',
@@ -38,20 +55,157 @@ Apply a block to fill the frame. Use a pickaxe to remove it again.`,
             {
               id: 'timber_frame',
               title: 'Timber Frame',
-              icon: '/assets/icons/hearth-and-timber/framework.png',
+              icon: '/assets/icons/hearth-and-timber/timber_frame.png',
               search: 'timber frame straight'
             },
             {
               id: 'timber_frame_cross',
               title: 'Cross Timber Frame',
-              icon: '/assets/icons/hearth-and-timber/framework_cross.png',
+              icon: '/assets/icons/hearth-and-timber/timber_crossl_frame.png',
               search: 'timber frame cross'
             },
             {
               id: 'timber_frame_diagonal',
               title: 'Diagonal Timber Frame',
-              icon: '/assets/icons/hearth-and-timber/framework_diagonal.png',
+              icon: '/assets/icons/hearth-and-timber/timber_diagonal_frame.png',
               search: 'timber frame diagonal'
+            },
+            {
+              id: 'timber_frame_grid',
+              title: 'Grid Timber Frame',
+              icon: '/assets/icons/hearth-and-timber/timber_grid_frame.png',
+              search: 'timber frame grid'
+            }
+          ]
+        },
+        {
+          id: 'timber_foundation_set',
+          title: 'Timber Foundations',
+          subtitle: 'Timber pieces that replace the full block instead of leaving visible framing.',
+          icon: '/assets/icons/hearth-and-timber/timber_foundation.png',
+          search: 'timber foundation base trim skirt timber framing',
+          details: true,
+          detailsTitle: 'How they work',
+          detailsText: `Timber Foundations work similarly to Timber Frames, but fully replace the block instead of leaving visible struts.
+
+             They take on the applied block visually, while keeping a clean, solid shape that is ideal for lower walls, bases, and transitions between materials.`,
+          items: [
+            {
+              id: 'timber_foundation',
+              title: 'Timber Foundation',
+              icon: '/assets/icons/hearth-and-timber/timber_foundation.png',
+              search: 'timber foundation block'
+            },
+            {
+              id: 'timber_base_trim',
+              title: 'Timber Base Trim',
+              icon: '/assets/icons/hearth-and-timber/timber_base_trim.png',
+              search: 'timber base trim'
+            },
+            {
+              id: 'timber_base_skirt',
+              title: 'Timber Base Skirt',
+              icon: '/assets/icons/hearth-and-timber/timber_base_skirt.png',
+              search: 'timber base skirt'
+            }
+          ]
+        },
+        {
+          id: 'plaster',
+          title: 'Plaster',
+          subtitle: 'A smooth building material crafted from quicklime and available in all 16 dye colors.',
+          icon: '/assets/icons/hearth-and-timber/white_plaster.png',
+          search: 'plaster wall smooth quicklime colored dye'
+        },
+        {
+          id: 'rubblestone_masonry',
+          title: 'Rubblestone Masonry',
+          subtitle: 'Stonework that shifts between worn ruins and freshly patched walls.',
+          icon: '/assets/icons/hearth-and-timber/covered_rubblestone.png',
+          search: 'rubblestone masonry covered plastered pointed groutless pickaxe quicklime shift tooltip cycle',
+          details: true,
+          detailsTitle: 'How it works',
+          detailsText: `Rubblestone Masonry can be cycled between its variants.
+
+              Use a pickaxe to progress to the next look. Use Quicklime to revert to the previous one.
+
+              It keeps matching block properties where possible and shows extra info while holding SHIFT.`,
+          detailsBullets: ['Pickaxe: cycles to the next variant', 'Quicklime: reverts to the previous variant'],
+          items: [
+            {
+              id: 'covered_rubblestone',
+              title: 'Covered Rubblestone',
+              icon: '/assets/icons/hearth-and-timber/covered_rubblestone.png',
+              search: 'covered rubblestone masonry'
+            },
+            {
+              id: 'plastered_rubblestone',
+              title: 'Plastered Rubblestone',
+              icon: '/assets/icons/hearth-and-timber/plastered_rubblestone.png',
+              search: 'plastered rubblestone masonry'
+            },
+            {
+              id: 'pointed_rubblestone',
+              title: 'Pointed Rubblestone',
+              icon: '/assets/icons/hearth-and-timber/pointed_rubblestone.png',
+              search: 'pointed rubblestone masonry'
+            },
+            {
+              id: 'groutless_rubblestone',
+              title: 'Groutless Rubblestone',
+              icon: '/assets/icons/hearth-and-timber/groutless_rubblestone.png',
+              search: 'groutless rubblestone masonry'
+            }
+          ]
+        },
+
+        {
+          id: 'thatch',
+          title: 'Thatch',
+          subtitle: 'A roof material that progresses through weathering stages, with waxed variants to stop changes.',
+          icon: '/assets/icons/hearth-and-timber/thatch.png',
+          search: 'thatch weathering weathered drying aged waxed stairs slab',
+          details: true,
+          detailsTitle: 'Weathering',
+          detailsText: `Thatch progresses naturally through several weathering stages over time.
+
+Using a water bottle advances it to the next stage instantly.
+Using wheat restores it back to fresh Thatch.
+Using a hoe reverts it to the previous stage.
+
+Waxed variants permanently lock the current stage and prevent further changes.`,
+          detailsBullets: [
+            'Stages: Thatch, Weathered Thatch, Drying Thatch, Aged Thatch',
+            'Includes matching stairs and slabs',
+            'Water bottles advance weathering',
+            'Wheat restores fresh Thatch',
+            'Hoes revert to previous stages',
+            'Waxed variants stop all weathering'
+          ],
+          items: [
+            {
+              id: 'thatch_block',
+              title: 'Thatch',
+              icon: '/assets/icons/hearth-and-timber/thatch.png',
+              search: 'thatch roof'
+            },
+            {
+              id: 'drying_thatch',
+              title: 'Drying Thatch',
+              icon: '/assets/icons/hearth-and-timber/drying_thatch.png',
+              search: 'drying thatch roof'
+            },
+            {
+              id: 'weathered_thatch',
+              title: 'Weathered Thatch',
+              icon: '/assets/icons/hearth-and-timber/weathered_thatch.png',
+              search: 'weathered thatch roof'
+            },
+            {
+              id: 'aged_thatch',
+              title: 'Aged Thatch',
+              icon: '/assets/icons/hearth-and-timber/aged_thatch.png',
+              search: 'aged thatch roof'
             }
           ]
         },
@@ -87,47 +241,7 @@ Wooden Shingles are available in all vanilla wood variants.`,
             }
           ]
         },
-        {
-          id: 'rubblestone_masonry',
-          title: 'Rubblestone Masonry',
-          subtitle: 'Stonework that shifts between worn ruins and freshly patched walls.',
-          icon: '/assets/icons/hearth-and-timber/covered_rubblestone.png',
-          search: 'rubblestone masonry covered plastered pointed groutless pickaxe quicklime shift tooltip cycle',
-          details: true,
-          detailsTitle: 'How it works',
-          detailsText: `Rubblestone Masonry can be cycled between its variants.
 
-Use a pickaxe to progress to the next look. Use Quicklime to revert to the previous one.
-
-It keeps matching block properties where possible and shows extra info while holding SHIFT.`,
-          detailsBullets: ['Pickaxe: cycles to the next variant', 'Quicklime: reverts to the previous variant'],
-          items: [
-            {
-              id: 'covered_rubblestone',
-              title: 'Covered Rubblestone',
-              icon: '/assets/icons/hearth-and-timber/covered_rubblestone.png',
-              search: 'covered rubblestone masonry'
-            },
-            {
-              id: 'plastered_rubblestone',
-              title: 'Plastered Rubblestone',
-              icon: '/assets/icons/hearth-and-timber/plastered_rubblestone.png',
-              search: 'plastered rubblestone masonry'
-            },
-            {
-              id: 'pointed_rubblestone',
-              title: 'Pointed Rubblestone',
-              icon: '/assets/icons/hearth-and-timber/pointed_rubblestone.png',
-              search: 'pointed rubblestone masonry'
-            },
-            {
-              id: 'groutless_rubblestone',
-              title: 'Groutless Rubblestone',
-              icon: '/assets/icons/hearth-and-timber/groutless_rubblestone.png',
-              search: 'groutless rubblestone masonry'
-            }
-          ]
-        },
         {
           title: 'Beams',
           subtitle: 'Sturdy wooden beams used for visible support structures and classic timbered builds.',
@@ -261,88 +375,24 @@ Boards are available in all vanilla wood variants.`,
           icon: '/assets/icons/hearth-and-timber/oak_window.png',
           search: 'window pane block vertical connect timber wood glass',
           details: true,
-          detailsTitle: 'Good to know',
-          detailsText: `Windows are available both as full blocks and as panes, allowing you to mix solid frames with lighter window sections.
+          detailsTitle: 'More info',
+          detailsText: `Windows are purely decorative and automatically connect vertically.
 
-They automatically connect vertically, making tall windows and stacked designs effortless.
+They are available as full window blocks and lighter window panes.
 
-All window variants are available in every vanilla wood type.`,
-          detailsBullets: [
-            'Available as window blocks and window panes',
-            'Automatically connects vertically',
-            'Ideal for tall and stacked window designs',
-            'Available in all vanilla wood variants',
-            'Purely decorative'
-          ]
-        },
-        {
-          id: 'timber_foundation_set',
-          title: 'Timber Foundations',
-          subtitle: 'Timber pieces that replace the full block instead of leaving visible framing.',
-          icon: '/assets/icons/hearth-and-timber/timber_foundation.png',
-          search: 'timber foundation base trim skirt timber framing',
-          details: true,
-          detailsTitle: 'How they work',
-          detailsText: `Timber Foundations work similarly to Timber Frames, but fully replace the block instead of leaving visible struts.
-
-They take on the applied block visually, while keeping a clean, solid shape that is ideal for lower walls, bases, and transitions between materials.
-
-These pieces are designed to make builds feel grounded without exposing inner framing.`,
-          detailsBullets: [
-            'Fully replaces the block instead of showing timber struts',
-            'Can be dressed with other full blocks',
-            'Ideal for foundations, lower walls, and base detailing',
-            'Includes multiple foundation-style variants'
-          ]
-        },
-
-        {
-          id: 'thatch',
-          title: 'Thatch',
-          subtitle: 'A roof material that progresses through weathering stages, with waxed variants to stop changes.',
-          icon: '/assets/icons/hearth-and-timber/thatch.png',
-          search: 'thatch weathering weathered drying aged waxed stairs slab',
-          details: true,
-          detailsTitle: 'Weathering',
-          detailsText: `Thatch progresses naturally through several weathering stages over time.
-
-Using a water bottle advances it to the next stage instantly.
-Using wheat restores it back to fresh Thatch.
-Using a hoe reverts it to the previous stage.
-
-Waxed variants permanently lock the current stage and prevent further changes.`,
-          detailsBullets: [
-            'Stages: Thatch, Weathered Thatch, Drying Thatch, Aged Thatch',
-            'Includes matching stairs and slabs',
-            'Water bottles advance weathering',
-            'Wheat restores fresh Thatch',
-            'Hoes revert to previous stages',
-            'Waxed variants stop all weathering'
-          ],
+All window variants are available in all vanilla wood variants.`,
           items: [
             {
-              id: 'thatch_block',
-              title: 'Thatch',
-              icon: '/assets/icons/hearth-and-timber/thatch.png',
-              search: 'thatch roof'
+              id: 'window_block',
+              title: 'Window Block',
+              icon: '/assets/icons/hearth-and-timber/oak_window.png',
+              search: 'window block timber wood glass'
             },
             {
-              id: 'weathered_thatch',
-              title: 'Weathered Thatch',
-              icon: '/assets/icons/hearth-and-timber/weathered_thatch.png',
-              search: 'weathered thatch roof'
-            },
-            {
-              id: 'drying_thatch',
-              title: 'Drying Thatch',
-              icon: '/assets/icons/hearth-and-timber/drying_thatch.png',
-              search: 'drying thatch roof'
-            },
-            {
-              id: 'aged_thatch',
-              title: 'Aged Thatch',
-              icon: '/assets/icons/hearth-and-timber/aged_thatch.png',
-              search: 'aged thatch roof'
+              id: 'window_pane',
+              title: 'Window Pane',
+              icon: '/assets/icons/hearth-and-timber/oak_window_pane.png',
+              search: 'window pane timber wood glass'
             }
           ]
         },
@@ -365,16 +415,16 @@ Waxed variants permanently lock the current stage and prevent further changes.`,
           ],
           items: [
             {
-              id: 'sliding_hayloft_door',
-              title: 'Sliding Hayloft Door',
-              icon: '/assets/icons/hearth-and-timber/sliding_hayloft_door.png',
-              search: 'sliding hayloft door'
-            },
-            {
               id: 'sliding_barn_door',
               title: 'Sliding Barn Door',
               icon: '/assets/icons/hearth-and-timber/sliding_barn_door.png',
               search: 'sliding barn door'
+            },
+            {
+              id: 'sliding_hayloft_door',
+              title: 'Sliding Hayloft Door',
+              icon: '/assets/icons/hearth-and-timber/sliding_hayloft_door.png',
+              search: 'sliding hayloft door'
             },
             {
               id: 'sliding_stable_door',
@@ -389,7 +439,7 @@ Waxed variants permanently lock the current stage and prevent further changes.`,
     {
       id: 'worldgen',
       title: 'Worldgen and Natural Features',
-      subtitle: 'Crops, plants, and terrain features that generate naturally in the world.',
+      subtitle: 'Terrain features that generate naturally in the world.',
       entries: [
         {
           id: 'groutless_rubblestone',
