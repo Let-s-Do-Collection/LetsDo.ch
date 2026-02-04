@@ -409,11 +409,7 @@ Players standing nearby are granted Water Breathing as long as they remain withi
           detailsText: `Rubber Rings can be worn as Trinkets.
 
         While in water, they keep you moving and help you stay afloat.`,
-          detailsBullets: [
-            'Wearable as a Trinket',
-            'Helps you float in water',
-            'Makes water travel smoother'
-          ],
+          detailsBullets: ['Wearable as a Trinket', 'Helps you float in water', 'Makes water travel smoother'],
           items: [
             {
               id: 'rubber_ring_blue',
@@ -471,11 +467,7 @@ Players standing nearby are granted Water Breathing as long as they remain withi
           detailsText: `These music discs are available as loot.
 
         Pop them into a Jukebox and let the beach vibes do their job.`,
-          detailsBullets: [
-            'Found as loot',
-            'Playable in a Jukebox',
-            'Rare collectibles'
-          ],
+          detailsBullets: ['Found as loot', 'Playable in a Jukebox', 'Rare collectibles'],
           items: [
             {
               id: 'music_disc_beachparty',
@@ -670,88 +662,88 @@ Each cocktail grants a specific status effect for 30 seconds.`,
         }
       ]
     },
-{
-  id: 'worldgen',
-  title: 'Worldgen and Natural Features',
-  subtitle: 'Natural features that generate along beaches and coastal areas.',
-  entries: [
     {
-      id: 'sandwaves',
-      title: 'Sandwaves',
-      namespace_id: 'beachparty:sandwaves',
-      subtitle: 'Sandwaves generate near water along beaches.',
-      icon: '/assets/icons/beachparty/sandwaves.png',
-      search: 'sandwaves beach water worldgen'
-    },
-    {
-      id: 'seashells',
-      title: 'Seashells',
-      namespace_id: 'beachparty:seashells',
-      subtitle: 'Seashells generate on sand blocks at beaches.',
-      icon: '/assets/icons/beachparty/seashells.png',
-      search: 'seashells beach sand worldgen'
-    },
-    {
-      id: 'palm_trees',
-      title: 'Palm Trees',
-      namespace_id: 'beachparty:palm_sapling',
-      subtitle: 'Palm Trees naturally generate along beaches.',
-      icon: '/assets/icons/beachparty/palm_sapling.png',
-      search: 'palm trees beach worldgen'
-    },
-    {
-      id: 'message_in_a_bottle',
-      title: 'Message in a Bottle',
-      namespace_id: 'beachparty:message_in_a_bottle',
-      subtitle: 'A tiny beach treasure that can appear on sandy shores.',
-      icon: '/assets/icons/beachparty/message_in_a_bottle.png',
-      search: 'message in a bottle beach loot shoreline sand spawn',
-      details: true,
-      detailsTitle: 'Spawning',
-      detailsText: `Messages in a Bottle can spawn naturally on beaches.
+      id: 'worldgen',
+      title: 'Worldgen and Natural Features',
+      subtitle: 'Natural features that generate along beaches and coastal areas.',
+      entries: [
+        {
+          id: 'sandwaves',
+          title: 'Sandwaves',
+          namespace_id: 'beachparty:sandwaves',
+          subtitle: 'Sandwaves generate near water along beaches.',
+          icon: '/assets/icons/beachparty/sandwaves.png',
+          search: 'sandwaves beach water worldgen'
+        },
+        {
+          id: 'seashells',
+          title: 'Seashells',
+          namespace_id: 'beachparty:seashells',
+          subtitle: 'Seashells generate on sand blocks at beaches.',
+          icon: '/assets/icons/beachparty/seashells.png',
+          search: 'seashells beach sand worldgen'
+        },
+        {
+          id: 'palm_trees',
+          title: 'Palm Trees',
+          namespace_id: 'beachparty:palm_sapling',
+          subtitle: 'Palm Trees naturally generate along beaches.',
+          icon: '/assets/icons/beachparty/palm_sapling.png',
+          search: 'palm trees beach worldgen'
+        },
+        {
+          id: 'message_in_a_bottle',
+          title: 'Message in a Bottle',
+          namespace_id: 'beachparty:message_in_a_bottle',
+          subtitle: 'A tiny beach treasure that can appear on sandy shores.',
+          icon: '/assets/icons/beachparty/message_in_a_bottle.png',
+          search: 'message in a bottle beach loot shoreline sand spawn',
+          details: true,
+          detailsTitle: 'Spawning',
+          detailsText: `Messages in a Bottle can spawn naturally on beaches.
 
     They appear on sand, close to where players are, and only up to a limited amount in the area.`,
-      detailsBullets: [
-        'Spawns naturally in beach biomes',
-        'Appears on sand',
-        'Spawns near players',
-        'Limited amount per area'
+          detailsBullets: [
+            'Spawns naturally in beach biomes',
+            'Appears on sand',
+            'Spawns near players',
+            'Limited amount per area'
+          ]
+        }
       ]
-    }
-  ]
-},
+    },
     {
       id: 'misc',
       title: 'Miscellaneous',
       subtitle: 'Music and special blocks.',
       entries: [
-          {
-                id: 'config',
-                title: 'Configuration',
-                subtitle:
-                  'Most gameplay features of Candlelight can be adjusted via a configuration file, usually located at `config/candlelight.json`.',
-                icon: '/assets/icons/misc/config.png',
-                search: 'config configuration settings options json candlelight'
-              },
-              {
-                id: 'villager_profession',
-                title: 'Sandy Merchant',
-                subtitle: 'A beach loving trader offering tropical goods and summer essentials.',
-                icon: '/assets/icons/misc/emerald.png',
-                search: 'villager profession sandy merchant beachparty trades',
-                details: true,
-                detailsTitle: 'Sandy Merchant',
-                detailsText: `The Sandy Merchant is a new Villager profession found near beaches.
+        {
+          id: 'config',
+          title: 'Configuration',
+          subtitle:
+            'Most gameplay features of Candlelight can be adjusted via a configuration file, usually located at `config/candlelight.json`.',
+          icon: '/assets/icons/misc/config.png',
+          search: 'config configuration settings options json candlelight'
+        },
+        {
+          id: 'villager_profession',
+          title: 'Sandy Merchant',
+          subtitle: 'A beach loving trader offering tropical goods and summer essentials.',
+          icon: '/assets/icons/misc/emerald.png',
+          search: 'villager profession sandy merchant beachparty trades',
+          details: true,
+          detailsTitle: 'Sandy Merchant',
+          detailsText: `The Sandy Merchant is a new Villager profession found near beaches.
 
               Using the Palm Bar as their work station, Sandy Merchants offer a wide range of beach themed items, from building materials and decor to food, tools, and collectibles.`,
-                detailsBullets: [
-                  'Uses the Palm Bar as work station',
-                  'Sells beach themed blocks, decor, and items',
-                  'Offers food, tools, and collectibles',
-                  'Some trades include rare and exclusive items'
-                ]
-              }
-              ]
+          detailsBullets: [
+            'Uses the Palm Bar as work station',
+            'Sells beach themed blocks, decor, and items',
+            'Offers food, tools, and collectibles',
+            'Some trades include rare and exclusive items'
+          ]
+        }
+      ]
     }
   ],
   impressionsTitle: 'Everyday Scenes',

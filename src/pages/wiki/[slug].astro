@@ -14,6 +14,7 @@ import bakery from "./config/bakery.js";
 import lilisluckylures from "./config/lilis-lucky-lures.js";
 import wildernature from "./config/wildernature.js";
 import beachparty from "./config/beachparty.js";
+import bloomingnature from "./config/bloomingnature.js";
 
 export function getStaticPaths() {
   return [
@@ -30,6 +31,7 @@ export function getStaticPaths() {
     { params: { slug: "alpine-whispers" } },
     { params: { slug: "hearth-and-timber" } },
     { params: { slug: "bakery" } },
+    { params: { slug: "bloomingnature" } },
     { params: { slug: "wildernature" } },
   ];
 }
@@ -45,6 +47,7 @@ const configs = {
   camping,
   beachparty,
   candlelight,
+  bloomingnature,
   wildernature,
   furniture,
   bakery,
