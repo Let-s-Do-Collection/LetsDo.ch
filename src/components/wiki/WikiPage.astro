@@ -23,6 +23,27 @@ const withBase = (path) => {
   return `${cleanBase}${cleanPath}`;
 };
 
+const linkifyText = (text) => {
+  if (!text) return null;
+
+  return text.split(/(\[\[.*?\]\])/g).map((part) => {
+    const match = part.match(/^\[\[(.+?)(?:\|(.+?))?\]\]$/);
+    if (!match) return part;
+
+    const label = match[1];
+    const targetId = match[2] ?? match[1];
+
+    return (
+      <a
+        href={`#${targetId}`}
+        class="wikiInlineLink"
+      >
+        {label}
+      </a>
+    );
+  });
+};
+
 const { config, currentSlug, wikiIndex } = Astro.props;
 
 const title = config?.title ?? "Wiki";
@@ -144,7 +165,11 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
                             {entry.detailsSubtitle ? <div class="wikiDetailsSubtitle">{entry.detailsSubtitle}</div> : null}
                           </div>
 
-                          {entry.detailsText ? <div class="wikiDetailsText">{entry.detailsText}</div> : null}
+{entry.detailsText ? (
+  <div class="wikiDetailsText">
+    {linkifyText(entry.detailsText)}
+  </div>
+) : null}
 
                           {tracks.length ? <MusicPlayer tracks={tracks} /> : null}
 

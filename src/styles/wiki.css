@@ -116,6 +116,8 @@ main.page.wikiShell > *,
   flex: 1;
   min-height: 260px;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .wikiCard .cardContent h3 {
@@ -126,11 +128,14 @@ main.page.wikiShell > *,
 }
 
 .wikiCard .cardContent p {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  display: block;
   overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 10px;
+  flex: 1;
 }
+
+
 
 .wikiCardNs {
   margin-top: 10px;
