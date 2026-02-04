@@ -33,13 +33,16 @@ The Stove works similarly to other Crafting Stations. It has three Ingredient In
 
 Place the required Ingredients into the Input Slots, add a valid Fuel Item, and wait about twelve seconds for the Crafting Process to complete. The crafted Item then appears in the Output Slot.
 
-Items located in both the Input Slots and the Output Slot are also visually displayed inside the Block in the World.`,
+Items located in both the Input Slots and the Output Slot are also visually displayed inside the Block in the World.
+
+Related: [[Cooking Pot|cooking_pot]].`,
           detailsBullets: [
             'Three Ingredient Input Slots',
             'One Fuel Slot and one Output Slot',
             'Crafting takes about twelve seconds',
             'Requires a valid Fuel Item such as Coal or Charcoal',
-            'Input and Output Items are visible in the Block Model'
+            'Input and Output Items are visible in the Block Model',
+            'Related: [[Cooking Pot|cooking_pot]]'
           ]
         },
         {
@@ -58,13 +61,16 @@ The Cooking Pot has six Ingredient Input Slots, one Container Slot, and one Outp
 
 After placing the Ingredients into the Input Slots, the Cooking Process takes about thirty seconds. Once completed, the prepared Meal appears in the Output Slot.
 
-To function, the Cooking Pot must be placed on a Hot Surface, such as a Stove, a Magma Block, or other Heat Sources. In some cases, it can also be placed directly on a Campfire. When active, this is indicated by rising Bubbles, Cooking Sounds, and a colored Fire Indicator in the Cooking Pot Interface.`,
+To function, the Cooking Pot must be placed on a Hot Surface, such as a [[Stove|stove]], a Magma Block, or other Heat Sources. In some cases, it can also be placed directly on a Campfire. When active, this is indicated by rising Bubbles, Cooking Sounds, and a colored Fire Indicator in the Cooking Pot Interface.
+
+Related: [[Roaster|roaster]].`,
           detailsBullets: [
             'Six Ingredient Input Slots',
             'One Container Slot and one Output Slot',
             'Requires a valid Heat Source',
             'Cooking takes about thirty seconds',
-            'Active State is shown by Bubbles, Sounds, and a colored Fire Indicator'
+            'Active State is shown by Bubbles, Sounds, and a colored Fire Indicator',
+            'Related: [[Roaster|roaster]]'
           ]
         },
         {
@@ -77,13 +83,13 @@ To function, the Cooking Pot must be placed on a Hot Surface, such as a Stove, a
             'roaster bigger meals large hot surface stove magma campfire smoke recipe book container slot output cooking',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Roaster works similarly to the Cooking Pot, but is designed for larger and more complex Meals. It requires a Heat Source and cannot operate on its own.
+          detailsText: `The Roaster works similarly to the [[Cooking Pot|cooking_pot]], but is designed for larger and more complex Meals. It requires a Heat Source and cannot operate on its own.
 
 The Roaster provides six Ingredient Input Slots, one Container Slot, and one Output Slot.
 
 After placing the required Ingredients into the Input Slots, the Cooking Process takes about sixty seconds. Once completed, the prepared Meal appears in the Output Slot.
 
-To function, the Roaster must be connected to a Heat Source, such as a Stove, a Magma Block, or other Hot Surfaces. It can also be used when positioned above a Campfire. When active, the Roaster emits rising Smoke and Cooking Sounds, and the Fire Indicator in the Interface changes from grayscale to colored.`,
+To function, the Roaster must be connected to a Heat Source, such as a [[Stove|stove]], a Magma Block, or other Hot Surfaces. It can also be used when positioned above a Campfire. When active, the Roaster emits rising Smoke and Cooking Sounds, and the Fire Indicator in the Interface changes from grayscale to colored.`,
           detailsBullets: [
             'Designed for larger and more complex Meals',
             'Six Ingredient Input Slots',
@@ -245,7 +251,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           search: 'pet bowl cat dog food feeding name tag shears shift right click screen rename decoration',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Pet Bowl can be filled with Cat Food or Dog Food. It can also hold a Name Tag to unlock a small management Screen.`,
+          detailsText: `The Pet Bowl can be filled with [[Cat Food|cat_food]] or [[Dog Food|dog_food]]. It can also hold a Name Tag to unlock a small management Screen.`,
           detailsBullets: [
             'Place Cat Food or Dog Food into the Pet Bowl with Right-Click.',
             'Add a Name Tag with Right-Click to enable Pet Bowl customization.',
@@ -262,7 +268,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           search: 'chicken coop store chickens eggs collect leash pitchfork release radius 7',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Chicken Coop can store nearby Chickens and collects their Eggs inside. Interact to pick up Eggs, or use a Pitchfork to release stored Chickens.`,
+          detailsText: `The Chicken Coop can store nearby Chickens and collects their Eggs inside. Interact to pick up Eggs, or use a [[Pitchfork|pitchfork]] to release stored Chickens.`,
           detailsBullets: [
             'Collect Eggs by interacting: All stored Eggs are given to you at once.',
             'Leash a Chicken to yourself and bring it close: If the Coop has space, it will take the leashed Chicken in a 7 Block radius.',
@@ -324,7 +330,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
             'Reward for Cooking every Farm And Charm Meal.',
             'Boosts nearby Crop Growth by 10 Percent.',
             'Animated: Sways gently with wind and weather.',
-            'It also has Dungarees: Take them off by interacting, or put them back on by using Dungarees on the Scarecrow.'
+            'It also has Dungarees: Take them off by interacting, or put them back on by using [[Dungarees|dungarees]] on the Scarecrow.'
           ]
         },
         {
@@ -463,7 +469,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           search: 'pitchfork hoe fertilized soil bone meal effect farming tool range crops uses durability',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Pitchfork is a versatile Farming Tool. It behaves like a regular Hoe for field work, but its unique feature is interacting with Fertilized Soil to boost nearby crops.`,
+          detailsText: `The Pitchfork is a versatile Farming Tool. It behaves like a regular Hoe for field work, but its unique feature is interacting with [[Fertilized Soil|fertilized_soil]] to boost nearby crops.`,
           detailsBullets: [
             'Fertilized Soil Interaction: Use the Pitchfork on Fertilized Soil to trigger a Bone Meal like Growth Boost in an area around the block.',
             'Charges: Each Fertilized Soil Block has multiple Uses. Each Pitchfork activation consumes one Size level until the block is depleted.',
@@ -625,7 +631,10 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           namespace_id: 'farm_and_charm:chicken_feed',
           subtitle: 'Feed chickens and gain a funny effect, even as a player.',
           icon: '/assets/icons/farm-and-charm/chicken_feed.png',
-          search: 'chicken feed chickens cluck effect player consume'
+          search: 'chicken feed chickens cluck effect player consume',
+          details: true,
+          detailsTitle: 'Effect',
+          detailsText: `Chicken Feed grants the [[Cluck|mob_effects:cluck]] effect when consumed and also improves chicken related behavior when fed to Chickens.`
         },
         {
           id: 'rotten_tomato',
@@ -645,7 +654,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
         {
           id: 'tea',
           title: 'Tea',
-          subtitle: 'Brewed from wild plants and water in a cooking pot.',
+          subtitle: 'Brewed from wild plants and water in a [[Cooking Pot|cooking_pot]].',
           icon: '/assets/icons/farm-and-charm/strawberry_tea.png',
           search: 'tea brew wild plants water cooking pot herbalbrews tea jug glass bottle right click share friends'
         },
@@ -1000,7 +1009,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Tomato',
           namespace_id: 'farm_and_charm:tomato',
           subtitle:
-            'A sun-loving crop found growing naturally in Plains, Savannas, and Badlands, capable of climbing Ropes when placed above and alongside the plant.',
+            'A sun-loving crop found growing naturally in Plains, Savannas, and Badlands, capable of climbing [[Rope|rope]] when placed above and alongside the plant.',
           icon: '/assets/icons/farm-and-charm/wild_tomatoes.png',
           search: 'tomato crop wild tomatoes farming',
           items: [
@@ -1448,7 +1457,6 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           icon: '/assets/icons/misc/config.png',
           search: 'config configuration settings options balance json farm and charm'
         },
-
         {
           id: 'rain_growth',
           title: 'Rain Growth',
@@ -1459,7 +1467,8 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
         {
           id: 'armed_zombies',
           title: 'Armed Zombies',
-          subtitle: 'Zombies have a small chance to spawn holding Farm & Charm tools, such as Pitchforks.',
+          subtitle:
+            'Zombies have a small chance to spawn holding Farm & Charm tools, such as [[Pitchforks|pitchfork]].',
           icon: '/assets/icons/misc/zombie.png',
           search: 'zombie pitchfork weapon spawn'
         },
@@ -1467,7 +1476,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'animal_saturation',
           title: 'Animal Saturation',
           subtitle:
-            "Feeding animals over time increases their saturation level, rewarding careful farming with increased loot drops. While wearing Dungarees, the animal's current saturation level becomes visible.",
+            "Feeding animals over time increases their saturation level, rewarding careful farming with increased loot drops. While wearing [[Dungarees|dungarees]], the animal's current saturation level becomes visible.",
           icon: '/assets/icons/farm-and-charm/leather.png',
           search: 'animal saturation feeding bonus loot'
         },
@@ -1510,33 +1519,12 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
   impressionsTitle: 'Everyday Scenes',
   impressionsSubtitle: 'A closer look at how everything comes together ingame',
   impressions: [
-    {
-      src: '/assets/impressions/farm-and-charm/01.jpeg',
-      caption: 'Tomatoes growing on a rope'
-    },
-    {
-      src: '/assets/impressions/farm-and-charm/02.jpeg',
-      caption: 'A wooden cart in everyday use'
-    },
-    {
-      src: '/assets/impressions/farm-and-charm/03.jpeg',
-      caption: 'Pigs waiting at a feeding trough'
-    },
-    {
-      src: '/assets/impressions/farm-and-charm/04.jpeg',
-      caption: 'Crop fields with sprinklers'
-    },
-    {
-      src: '/assets/impressions/farm-and-charm/05.jpeg',
-      caption: 'Walking through a barley field'
-    },
-    {
-      src: '/assets/impressions/farm-and-charm/06.jpeg',
-      caption: 'A complete set of new kitchen tools'
-    },
-    {
-      src: '/assets/impressions/farm-and-charm/07.jpeg',
-      caption: 'Preparing food in the kitchen'
-    }
+    { src: '/assets/impressions/farm-and-charm/01.jpeg', caption: 'Tomatoes growing on a rope' },
+    { src: '/assets/impressions/farm-and-charm/02.jpeg', caption: 'A wooden cart in everyday use' },
+    { src: '/assets/impressions/farm-and-charm/03.jpeg', caption: 'Pigs waiting at a feeding trough' },
+    { src: '/assets/impressions/farm-and-charm/04.jpeg', caption: 'Crop fields with sprinklers' },
+    { src: '/assets/impressions/farm-and-charm/05.jpeg', caption: 'Walking through a barley field' },
+    { src: '/assets/impressions/farm-and-charm/06.jpeg', caption: 'A complete set of new kitchen tools' },
+    { src: '/assets/impressions/farm-and-charm/07.jpeg', caption: 'Preparing food in the kitchen' }
   ]
 }

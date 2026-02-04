@@ -28,8 +28,7 @@ Alongside that, it introduces themed outfits, a lucky ring, and a few special sh
             'stove fuel heat cooking candlelight farm and charm same functionality variants cobblestone sandstone stone bricks deepslate granite basalt quartz',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `
-The Candlelight Stove works the same as the Farm & Charm Stove.
+          detailsText: `The Candlelight Stove works the same as the Farm & Charm Stove.
 
 It functions like a Crafting Station and provides three Ingredient Input Slots, one Fuel Slot, and one Output Slot.
 
@@ -37,7 +36,9 @@ Place the required Ingredients into the Input Slots, add a valid Fuel Item, and 
 
 Items located in both the Input Slots and the Output Slot are also visually displayed inside the Block in the World.
 
-Candlelight includes multiple Stove variants designed to match different stone palettes. All variants share the same functionality.`,
+Candlelight includes multiple Stove variants designed to match different stone palettes. All variants share the same functionality.
+
+Related: [[Cooking Pot|cooking_pot]] and [[Cooking Pan|cooking_pan]].`,
           detailsBullets: [
             'Same functionality as the Farm & Charm Stove',
             'Three Ingredient Input Slots',
@@ -67,7 +68,9 @@ The Cooking Pot has six Ingredient Input Slots, one Container Slot, and one Outp
 
 After placing the Ingredients into the Input Slots, the Cooking Process takes about thirty seconds. Once completed, the prepared Meal appears in the Output Slot.
 
-To function, the Cooking Pot must be placed on a Hot Surface, such as a Stove, a Magma Block, or other Heat Sources. In some cases, it can also be placed directly on a Campfire. When active, this is indicated by rising Bubbles, Cooking Sounds, and a colored Fire Indicator in the Cooking Pot Interface.`,
+To function, the Cooking Pot must be placed on a Hot Surface, such as a [[Stove|stove]], a Magma Block, or other Heat Sources. In some cases, it can also be placed directly on a Campfire. When active, this is indicated by rising Bubbles, Cooking Sounds, and a colored Fire Indicator in the Cooking Pot Interface.
+
+Related: [[Cooking Pan|cooking_pan]].`,
           detailsBullets: [
             'Same functionality as the Farm & Charm Cooking Pot',
             'Six Ingredient Input Slots',
@@ -95,7 +98,9 @@ The Cooking Pan provides six Ingredient Input Slots, one Container Slot, and one
 
 After placing the required Ingredients into the Input Slots, the Cooking Process takes about sixty seconds. Once completed, the prepared Meal appears in the Output Slot.
 
-To function, the Cooking Pan must be connected to a Heat Source, such as a Stove, a Magma Block, or other Hot Surfaces. It can also be used when positioned above a Campfire. When active, the Cooking Pan emits rising Smoke and Cooking Sounds, and the Fire Indicator in the Interface changes from grayscale to colored.`,
+To function, the Cooking Pan must be connected to a Heat Source, such as a [[Stove|stove]], a Magma Block, or other Hot Surfaces. It can also be used when positioned above a Campfire. When active, the Cooking Pan emits rising Smoke and Cooking Sounds, and the Fire Indicator in the Interface changes from grayscale to colored.
+
+Related: [[Cooking Pot|cooking_pot]].`,
           detailsBullets: [
             'Same functionality as the Farm & Charm Roaster',
             'Designed for larger and more complex Meals',
@@ -320,7 +325,9 @@ Right click the placed painting to cycle through the available designs.`,
           detailsTitle: 'Usage',
           detailsText: `The Jewelry Box can be opened and closed through interaction.
 
-   Rings can be placed inside the Jewelry Box. Stored rings are visually displayed when the box is opened, making it suitable for both storage and decoration.`,
+Rings can be placed inside the Jewelry Box. Stored rings are visually displayed when the box is opened, making it suitable for both storage and decoration.
+
+Related: [[Gold Ring|gold_ring]].`,
           detailsBullets: [
             'Can be opened and closed',
             'Rings can be placed inside',
@@ -370,7 +377,7 @@ To receive the respective advancements, you need all required items in your inve
           search: 'typewriter writing letters note paper iron gold candlelight',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Right click the Typewriter while holding Note Paper to insert it.
+          detailsText: `Right click the Typewriter while holding [[Note Paper|note_paper]] to insert it.
 
 Right click again to open the interface. When finished, sign the letter and remove it with another right click.`,
           detailsBullets: [
@@ -406,11 +413,13 @@ Right click again to open the interface. When finished, sign the letter and remo
           search: 'note paper writable written candlelight typewriter',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Note Paper can be written on directly or processed using a Typewriter.
+          detailsText: `Note Paper can be written on directly or processed using a [[Typewriter|typewriter_iron]].
 
 Writable Note Paper allows you to enter and sign a short message, which then turns into Written Note Paper.
 
-Written notes can be used as decoration, shared with other players, or used as the basis for creating letters.`,
+Written notes can be used as decoration, shared with other players, or used as the basis for creating letters.
+
+Related: [[Letter|letter]].`,
           detailsBullets: [
             'Writable and non writable note paper variants',
             'Write notes directly or using a Typewriter',
@@ -451,15 +460,15 @@ Written notes can be used as decoration, shared with other players, or used as t
           detailsTitle: 'Usage',
           detailsText: `Letters are used to send written messages to other players.
 
-To create a letter, hold an open Letter and right-click to open the letter interface.
+To create a letter, hold an open Letter and right click to open the letter interface.
 
-Place a Written Note Paper into the note slot and the open Letter into the envelope slot. Enter a recipient name, then seal the letter to create a Sealed Letter.
+Place a [[Written Note Paper|note_paper_written]] into the note slot and the open Letter into the envelope slot. Enter a recipient name, then seal the letter to create a Sealed Letter.
 
 Sealed Letters can be gifted or shared with other players.
 
 Love Letters work the same way, but use their own themed variants. When a Love Letter is opened, heart particles appear briefly.`,
           detailsBullets: [
-            'Hold an open Letter and right-click to open the interface',
+            'Hold an open Letter and right click to open the interface',
             'Insert Written Note Paper and an open Letter',
             'Enter a recipient and seal the letter',
             'Creates a Sealed Letter that can be gifted or shared',
@@ -468,7 +477,7 @@ Love Letters work the same way, but use their own themed variants. When a Love L
           items: [
             {
               id: 'love_letter_closed',
-              title: 'Sealed love Letter',
+              title: 'Sealed Love Letter',
               icon: '/assets/icons/candlelight/love_letter.png',
               search: 'sealed love letter closed envelope'
             },
@@ -489,19 +498,21 @@ Love Letters work the same way, but use their own themed variants. When a Love L
           search: 'gold ring +2 luck accessory candlelight',
           details: true,
           detailsTitle: 'Effect',
-          detailsText: `The Gold Ring grants +2 Luck while worn.`,
+          detailsText: `The Gold Ring grants +2 Luck while worn.
+
+It can be stored and displayed inside a [[Jewelry Box|jewelry_box]].`,
           detailsBullets: ['Grants +2 Luck']
         },
         {
           id: 'chefs_attire',
-          title: 'Chef’s Attire',
+          title: "Chef's Attire",
           namespace_id: '',
           subtitle: 'Cooking themed outfit pieces.',
           icon: '/assets/icons/candlelight/cooking_hat.png',
           search: 'chef attire cooking hat chefs jacket chefs pants chefs boots candlelight',
           details: true,
           detailsTitle: 'Included Pieces',
-          detailsText: ``,
+          detailsText: `A small set of cooking themed outfit pieces for restaurant life.`,
           items: [
             {
               id: 'cooking_hat',
@@ -546,7 +557,7 @@ Love Letters work the same way, but use their own themed variants. When a Love L
           search: 'evening wear flower crown dress shirt formal shirt trousers vest necktie candlelight',
           details: true,
           detailsTitle: 'Included Pieces',
-          detailsText: ``,
+          detailsText: `A set of formal outfit pieces for dinners, dates, and restaurant scenes.`,
           items: [
             {
               id: 'flower_crown',
@@ -610,12 +621,13 @@ Love Letters work the same way, but use their own themed variants. When a Love L
           id: 'food',
           title: 'Food',
           namespace_id: '',
-          subtitle: 'Prepared in the Cooking Pot or Cooking Pan. Many meals can be eaten multiple times.',
+          subtitle:
+            'Prepared in the [[Cooking Pot|cooking_pot]] or [[Cooking Pan|cooking_pan]]. Many meals can be eaten multiple times.',
           icon: '/assets/icons/candlelight/lasagne.png',
           search: 'candlelight food meals plated soups pasta steak salad',
           details: true,
           detailsTitle: 'Notes',
-          detailsText: `Most Candlelight food is prepared in the Cooking Pot or Cooking Pan.
+          detailsText: `Most Candlelight food is prepared in the [[Cooking Pot|cooking_pot]] or [[Cooking Pan|cooking_pan]].
 
 If a meal is prepared using a potion or wine, it inherits the effect from the used drink.`,
           detailsBullets: [
@@ -833,7 +845,9 @@ If a meal is prepared using a potion or wine, it inherits the effect from the us
           search: 'rose flower worldgen biomes forest plains swamp birch meadow sunflower plains river candlelight',
           details: true,
           detailsTitle: 'Biomes',
-          detailsText: `Roses can generate naturally in the following biomes.`,
+          detailsText: `Roses can generate naturally in the following biomes.
+
+You can also place them as decoration, including as a potted variant.`,
           detailsBullets: [
             'minecraft:forest',
             'minecraft:plains',
@@ -863,7 +877,7 @@ If a meal is prepared using a potion or wine, it inherits the effect from the us
         {
           id: 'chef_zombies',
           title: 'Chef Zombies',
-          subtitle: 'Sometimes zombies spawn wearing a cooking hat.',
+          subtitle: 'Sometimes zombies spawn wearing a [[Cooking Hat|cooking_hat]].',
           icon: '/assets/icons/misc/zombie.png',
           search: 'chef zombie candlelight cooking hat spawn'
         }

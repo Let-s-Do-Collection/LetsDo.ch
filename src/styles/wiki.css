@@ -42,6 +42,19 @@ main.page.wikiShell > *,
   transform: none;
 }
 
+.wikiInlineLink {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.wikiInlineLink:hover {
+  text-decoration-thickness: 2px;
+}
+
 .wikiMain {
   margin-left: -70px;
   padding-bottom: 8px;
@@ -134,8 +147,6 @@ main.page.wikiShell > *,
   margin-top: 10px;
   flex: 1;
 }
-
-
 
 .wikiCardNs {
   margin-top: 10px;

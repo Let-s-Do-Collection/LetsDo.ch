@@ -47,11 +47,7 @@ WilderNature focuses on new animals with biome tag based spawning, a small set o
               details: true,
               detailsTitle: 'Interaction',
               detailsText: `Interacting with the Deer Trophy applies Glowing to nearby living entities.`,
-              detailsBullets: [
-                'Range: 32 blocks',
-                'Applies Glowing for 30 seconds',
-                'Affects living entities in the area'
-              ]
+              detailsBullets: ['Range: 32 blocks', 'Applies Glowing for 30 seconds', 'Affects living entities in the area']
             },
             {
               id: 'red_wolf_trophy',
@@ -112,7 +108,6 @@ WilderNature focuses on new animals with biome tag based spawning, a small set o
             }
           ]
         },
-
         {
           id: 'hollow_logs',
           title: 'Hollow Logs',
@@ -154,7 +149,6 @@ WilderNature focuses on new animals with biome tag based spawning, a small set o
         }
       ]
     },
-
     {
       id: 'items',
       title: 'Items, Ingredients, and Tools',
@@ -235,12 +229,7 @@ WilderNature focuses on new animals with biome tag based spawning, a small set o
     Rare Finds
     • Emerald
     • Diamond`,
-          detailsBullets: [
-            'Right-click to open',
-            'Obtained from bounties or dropped by raccoons',
-            'Drops a random item',
-            'Rare items can appear'
-          ]
+          detailsBullets: ['Right-click to open', 'Obtained from bounties or dropped by raccoons', 'Drops a random item', 'Rare items can appear']
         },
         {
           id: 'fish_oil',
@@ -284,7 +273,6 @@ WilderNature focuses on new animals with biome tag based spawning, a small set o
         }
       ]
     },
-
     {
       id: 'food',
       title: 'Food',
@@ -345,7 +333,7 @@ WilderNature focuses on new animals with biome tag based spawning, a small set o
           items: [
             {
               id: 'cooked_turkey_meat',
-              title: 'Cooked Turkey Meat',
+              title: 'Cooked turkey meat.',
               namespace_id: 'wildernature:cooked_turkey_meat',
               subtitle: 'Cooked turkey meat.',
               icon: '/assets/icons/wildernature/cooked_turkey_meat.png',
@@ -406,7 +394,6 @@ WilderNature focuses on new animals with biome tag based spawning, a small set o
         }
       ]
     },
-
     {
       id: 'entities',
       title: 'Entities',
@@ -680,8 +667,7 @@ They share loot and breeding behavior with wolves.`,
           namespace_id: 'wildernature:squirrel',
           subtitle: 'Hazelnut fans that steal saplings and run around nonstop.',
           icon: '/assets/icons/wildernature/entity/squirrel.png',
-          search:
-            'squirrel hazelnut steal saplings holdable temporary tame breed tag spawns_squirrel squirrel_holdable',
+          search: 'squirrel hazelnut steal saplings holdable temporary tame breed tag spawns_squirrel squirrel_holdable',
           details: true,
           detailsTitle: 'Behavior',
           detailsText: `Squirrels love hazelnuts, can temporarily be tamed, and are generally busy doing squirrel things.
@@ -695,7 +681,6 @@ To temporarily tame them, give them an item from the wildernature:squirrel_holda
         }
       ]
     },
-
     {
       id: 'worldgen',
       title: 'Worldgen and Natural Features',

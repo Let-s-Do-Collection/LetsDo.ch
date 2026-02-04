@@ -23,7 +23,7 @@ It focuses on portable gear, simple camp setups, and a handful of useful items f
           detailsTitle: 'Usage',
           detailsText: `Food prepared on the Grill is marked as Grilled and becomes noticeably more nourishing.
 
-Slowly cooked over open flames, grilled food restores more hunger and saturation, shimmers slightly, and shows its improved state directly in the tooltip.`,
+Grilled food restores more hunger and saturation and shows its improved state directly in the tooltip.`,
           detailsBullets: [
             'No GUI interaction',
             'Right click with cookable food',
@@ -48,7 +48,9 @@ Slowly cooked over open flames, grilled food restores more hunger and saturation
           search: 'tent camping decorative dye colors',
           details: true,
           detailsTitle: 'More info',
-          detailsText: `Below is the generous color selection of the tents, which trade features for looks and atmosphere.`,
+          detailsText: `Tents are purely decorative and meant to add atmosphere to camps and outdoor scenes.
+
+They are available in all standard dye colors.`,
           items: [
             'white',
             'orange',
@@ -76,13 +78,14 @@ Slowly cooked over open flames, grilled food restores more hunger and saturation
         {
           id: 'sleeping_bags',
           title: 'Sleeping Bags',
-          subtitle:
-            'Quickly placeable sleeping bags for a calm, not always perfectly comfortable rest. Does not set a respawn point.',
+          subtitle: 'Quickly placeable sleeping bags for rest. Does not set a respawn point.',
           icon: '/assets/icons/camping/sleeping_bag_light_blue.png',
           search: 'sleeping bag camping dye colors',
           details: true,
           detailsTitle: 'More info',
-          detailsText: `Sleeping Bags are available in all dye colors. Just look at the color selection!`,
+          detailsText: `Sleeping Bags allow you to sleep without setting a respawn point.
+
+They are available in all standard dye colors.`,
           items: [
             'white',
             'orange',
@@ -117,15 +120,14 @@ Slowly cooked over open flames, grilled food restores more hunger and saturation
         {
           id: 'multitool',
           title: 'Multitool',
-          subtitle:
-            'A compact travel tool for quick block rotation. Shift use rotates the other way. Fire resistant, durable, and of finest Swiss quality.',
+          subtitle: 'A compact travel tool for quick block rotation.',
           icon: '/assets/icons/camping/multitool.png',
           search: 'multitool camping rotate block fire resistant durable'
         },
         {
           id: 'walking_stick',
           title: 'Walking Stick',
-          subtitle: 'A sturdy walking stick with durability that slightly boosts movement speed.',
+          subtitle: 'A sturdy walking stick that slightly boosts movement speed.',
           icon: '/assets/icons/camping/walking_stick.png',
           search: 'walking stick camping durability movement speed'
         }
@@ -134,63 +136,55 @@ Slowly cooked over open flames, grilled food restores more hunger and saturation
     {
       id: 'backpacks',
       title: 'Backpacks',
-      subtitle: 'All backpacks share the same storage size. What a scam!',
+      subtitle: 'All backpacks share the same storage size.',
       entries: [
         {
           id: 'small_backpack',
           title: 'Small Backpack',
           subtitle: 'Can be crafted.',
-          icon: '/assets/icons/camping/small_backpack.png',
-          search: 'small backpack camping craftable place block'
+          icon: '/assets/icons/camping/small_backpack.png'
         },
         {
           id: 'large_backpack',
           title: 'Large Backpack',
-          subtitle: 'Looks larger, but is not. Can be crafted.',
-          icon: '/assets/icons/camping/large_backpack.png',
-          search: 'large backpack camping craftable not larger same size place block'
+          subtitle: 'Looks larger, but is not.',
+          icon: '/assets/icons/camping/large_backpack.png'
         },
         {
           id: 'wanderer_backpack',
           title: 'Wanderer Backpack',
-          subtitle: 'Not craftable. Has a chance to appear in the Wandering Trader trade pool.',
-          icon: '/assets/icons/camping/wanderer_backpack.png',
-          search: 'wanderer backpack camping wandering trader trade not craftable place block'
+          subtitle: 'Obtained through [[Wandering Trader|trader_trades]].',
+          icon: '/assets/icons/camping/wanderer_backpack.png'
         },
         {
           id: 'wanderer_bag',
           title: 'Wanderer Bag',
-          subtitle: 'Not craftable. Has a chance to appear in the Wandering Trader trade pool.',
-          icon: '/assets/icons/camping/wanderer_bag.png',
-          search: 'wanderer bag camping wandering trader trade not craftable place block'
+          subtitle: 'Obtained through [[Wandering Trader|trader_trades]].',
+          icon: '/assets/icons/camping/wanderer_bag.png'
         },
         {
           id: 'sheepbag',
           title: 'Sheepbag',
-          subtitle: 'Not craftable. Has a chance to appear in the Shepherd trade pool.',
-          icon: '/assets/icons/camping/sheepbag.png',
-          search: 'sheepbag camping shepherd trade not craftable place block'
+          subtitle: 'Obtained through [[Shepherd Villagers|trader_trades]].',
+          icon: '/assets/icons/camping/sheepbag.png'
         },
         {
           id: 'enderbag',
           title: 'Enderbag',
-          subtitle: 'Not craftable. Can be found in Strongholds. Grants access to your Ender Chest.',
-          icon: '/assets/icons/camping/enderbag.png',
-          search: 'enderbag camping stronghold loot ender chest access not craftable place block'
+          subtitle: 'Found in [[Strongholds|loot]]. Grants Ender Chest access.',
+          icon: '/assets/icons/camping/enderbag.png'
         },
         {
           id: 'enderpack',
           title: 'Enderpack',
-          subtitle: 'Not craftable. Can be found in The End. Grants access to your Ender Chest.',
-          icon: '/assets/icons/camping/enderpack.png',
-          search: 'enderpack camping end loot ender chest access not craftable place block'
+          subtitle: 'Found in [[The End|loot]]. Grants Ender Chest access.',
+          icon: '/assets/icons/camping/enderpack.png'
         },
         {
           id: 'goodybag',
           title: 'Goodybag',
-          subtitle: 'Not craftable. A reward for collecting all backpacks.',
-          icon: '/assets/icons/camping/goodybag.png',
-          search: 'goodybag camping reward collect all backpacks not craftable place block'
+          subtitle: 'Reward for collecting all backpacks.',
+          icon: '/assets/icons/camping/goodybag.png'
         }
       ]
     },
@@ -202,83 +196,66 @@ Slowly cooked over open flames, grilled food restores more hunger and saturation
         {
           id: 'marshmallow',
           title: 'Marshmallow',
-          subtitle: 'A small sweet snack with a chance to grant a short Speed boost.',
-          icon: '/assets/icons/camping/marshmallow.png',
-          search: 'marshmallow camping food speed chance'
+          subtitle: 'A small sweet snack with a chance to grant Speed.',
+          icon: '/assets/icons/camping/marshmallow.png'
         },
         {
           id: 'roasted_marshmallow',
           title: 'Roasted Marshmallow',
-          subtitle: 'Grilled to perfection. Always grants a Speed boost.',
-          icon: '/assets/icons/camping/roasted_marshmallow.png',
-          search: 'roasted marshmallow camping food speed grilled'
+          subtitle: 'Grilled to perfection. Always grants Speed.',
+          icon: '/assets/icons/camping/roasted_marshmallow.png'
         },
         {
           id: 'marshmallow_on_a_stick',
           title: 'Marshmallow on a Stick',
-          subtitle:
-            'The longer you hold it over the fire, the greater the risk of turning a sweet treat into something… less enjoyable.',
-          icon: '/assets/icons/camping/marshmallow_on_a_stick.png',
-          search: 'marshmallow on a stick camping roast campfire stages risk burnt effects'
+          subtitle: 'Hold it over a Campfire and manage the heat.',
+          icon: '/assets/icons/camping/marshmallow_on_a_stick.png'
         }
       ]
     },
     {
       id: 'misc_changes',
       title: 'Miscellaneous Changes & Features',
-      subtitle: 'Small but meaningful additions that support exploration and camping gameplay.',
+      subtitle: 'Small but meaningful additions.',
       entries: [
         {
           id: 'backpack_general',
           title: 'Backpacks in General',
           subtitle: 'Shared behavior across all backpack variants.',
           icon: '/assets/icons/misc/tip.png',
-          search: 'camping backpacks trinkets curios keybind placement same size',
           details: true,
           detailsTitle: 'Good to know',
-          detailsText: `All backpacks added by Camping behave the same in terms of functionality.
-
-Their differences are purely visual, allowing you to choose a style that fits your character or journey.`,
+          detailsText: `All backpacks added by Camping behave the same in terms of functionality.`,
           detailsBullets: [
             'All backpacks share the same storage size',
             'Backpacks are worn in Trinkets or Curios slots',
-            'Default keybind to open backpacks is B (configurable)',
-            'All backpacks can be placed as blocks and accessed that way as well'
+            'Default keybind is B (configurable)',
+            'Backpacks can be placed as blocks'
           ]
         },
         {
           id: 'trader_trades',
           title: 'Trading',
-          subtitle: 'Some Camping items can be obtained through villager and wandering trader trades.',
+          subtitle: 'Some items are obtained via traders.',
           icon: '/assets/icons/misc/emerald.png',
-          search: 'camping trader trades wandering trader shepherd backpack',
           details: true,
-          detailsTitle: 'Available Trades',
-          detailsText: `Certain Camping items are not craftable and are instead obtained through trading.
+          detailsText: `Some backpacks are not craftable and are instead obtained through trading.
 
-This encourages interaction with villagers and wandering traders while traveling.`,
-          detailsBullets: [
-            'Wanderer Backpack can appear in Wandering Trader trades',
-            'Wanderer Bag can appear in Wandering Trader trades',
-            'Sheepbag can appear in Shepherd Villager trades'
-          ]
+     - [[Wanderer Backpack|wanderer_backpack]] via Wandering Trader
+     - [[Wanderer Bag|wanderer_bag]] via Wandering Trader
+     - [[Sheepbag|sheepbag]] via Shepherd Villagers`
         },
         {
           id: 'loot',
           title: 'Loot and Exploration',
-          subtitle: 'Some Camping items can be found while exploring the world.',
+          subtitle: 'Some items are found through exploration.',
           icon: '/assets/icons/misc/chest.png',
-          search: 'camping loot stronghold end exploration backpacks',
           details: true,
-          detailsTitle: 'Where to find loot',
-          detailsText: `Certain Camping items are discovered through exploration rather than crafting.
+          detailsText: `Some backpacks are discovered through exploration.
 
-These items reward players for venturing into dangerous or remote locations.`,
-          detailsBullets: [
-            'Enderbag can be found in Strongholds',
-            'Enderpack can be found in The End',
-            'Goodybag is a special reward for collecting all backpacks'
-          ]
+     - [[Enderbag|enderbag]] in Strongholds
+     - [[Enderpack|enderpack]] in The End
+     - [[Goodybag|goodybag]] for collecting all backpacks`
         }
       ]
     }

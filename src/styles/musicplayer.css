@@ -20,7 +20,7 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-:root[data-mode="light"] .musicPlayerInner {
+:root[data-mode='light'] .musicPlayerInner {
   background: rgba(255, 255, 255, 0.76);
   border: 1px solid rgba(0, 0, 0, 0.08);
 }
@@ -30,15 +30,15 @@
   min-width: 40px;
   padding: 0 10px;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.06);
   color: inherit;
   font-weight: 700;
   cursor: pointer;
 }
 
-:root[data-mode="light"] .musicBtn {
-  border: 1px solid rgba(0, 0, 0, 0.10);
+:root[data-mode='light'] .musicBtn {
+  border: 1px solid rgba(0, 0, 0, 0.1);
   background: rgba(0, 0, 0, 0.04);
 }
 
@@ -52,10 +52,10 @@
 
 .musicBtn.isActive {
   border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.1);
 }
 
-:root[data-mode="light"] .musicBtn.isActive {
+:root[data-mode='light'] .musicBtn.isActive {
   border: 1px solid rgba(0, 0, 0, 0.14);
   background: rgba(0, 0, 0, 0.06);
 }
@@ -89,11 +89,11 @@
   height: 40px;
   border-radius: 10px;
   object-fit: cover;
-  border: 1px solid rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-:root[data-mode="light"] .musicCover {
-  border: 1px solid rgba(0, 0, 0, 0.10);
+:root[data-mode='light'] .musicCover {
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .musicPlaylist {
@@ -109,7 +109,7 @@
   max-width: 100%;
 }
 
-:root[data-mode="light"] .musicPlaylist {
+:root[data-mode='light'] .musicPlaylist {
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid rgba(0, 0, 0, 0.08);
 }
@@ -131,7 +131,7 @@
   background: rgba(255, 255, 255, 0.06);
 }
 
-:root[data-mode="light"] .musicTrack:hover {
+:root[data-mode='light'] .musicTrack:hover {
   background: rgba(0, 0, 0, 0.04);
 }
 
@@ -140,7 +140,7 @@
   background: rgba(255, 255, 255, 0.06);
 }
 
-:root[data-mode="light"] .musicTrack.isActive {
+:root[data-mode='light'] .musicTrack.isActive {
   border: 1px solid rgba(0, 0, 0, 0.12);
   background: rgba(0, 0, 0, 0.04);
 }

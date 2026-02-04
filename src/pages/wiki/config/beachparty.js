@@ -19,7 +19,7 @@ Beachparty focuses on warm weather building materials, beach furniture, and play
           id: 'palm_bar',
           title: 'Palm Bar',
           namespace_id: 'beachparty:palm_bar',
-          subtitle: 'A bar counter used for mixing drinks and cocktails.',
+          subtitle: 'A bar counter used for mixing drinks and [[Cocktails|cocktails]].',
           icon: '/assets/icons/beachparty/palm_bar.png',
           search: 'palm bar cocktails drinks mixing',
           details: true,
@@ -70,7 +70,9 @@ It provides multiple input slots for ingredients and a single output slot for th
           details: true,
           detailsMiniGallery: true,
           detailsTitle: 'Included Blocks',
-          detailsText: `Palm is a complete wood building set used across Beachparty builds.`,
+          detailsText: `Palm is a complete wood building set used across Beachparty builds.
+
+        Palm Trees generate naturally as a world feature. See [[Palm Trees|palm_trees]].`,
           detailsBullets: ['Full wood set with matching variants'],
           items: [
             {
@@ -279,7 +281,8 @@ Sneak-use to stop the Radio.`,
           id: 'beach_goal',
           title: 'Beach Goal',
           namespace_id: 'beachparty:beach_goal',
-          subtitle: 'Fancy a quick game of football? Score with a Beach Ball and enjoy a small celebratory firework.',
+          subtitle:
+            'Fancy a quick game of football? Score with a [[Beach Ball|beach_ball]] and enjoy a small celebratory firework.',
           icon: '/assets/icons/beachparty/beach_goal.png',
           search: 'beach goal football soccer beach ball firework'
         },
@@ -299,7 +302,7 @@ Breaking a placed Seashell drops a random selection of loot.
 Possible contents include:
 
 Food
-• Raw Mussel Meat
+• [[Raw Mussel Meat|raw_mussel_meat]]
 
 Valuables
 • Gold Ingot
@@ -612,12 +615,12 @@ Using bone meal on Palm Leaves places a young coconut directly below it.`,
           id: 'mussel_meat',
           title: 'Mussel Meat',
           namespace_id: 'beachparty:raw_mussel_meat',
-          subtitle: 'Mussel Meat can be obtained from Seashells and prepared for food.',
+          subtitle: 'Mussel Meat can be obtained from [[Seashells|seashells]] and prepared for food.',
           icon: '/assets/icons/beachparty/raw_mussel_meat.png',
           search: 'mussel meat seashell food raw cooked',
           details: true,
           detailsTitle: 'Obtaining and Cooking',
-          detailsText: `Mussel Meat is obtained by processing Seashells.
+          detailsText: `Mussel Meat is obtained by processing [[Seashells|seashells]].
 
 It can be cooked to create Cooked Mussel Meat.`,
           detailsBullets: ['Obtained from Seashells', 'Can be cooked for better food value'],
@@ -641,14 +644,14 @@ It can be cooked to create Cooked Mussel Meat.`,
         {
           id: 'cocktails',
           title: 'Cocktails',
-          subtitle: 'Placeable drinks mixed at the Palm Bar. Each cocktail grants a temporary effect.',
+          subtitle: 'Placeable drinks mixed at the [[Palm Bar|palm_bar]]. Each cocktail grants a temporary effect.',
           icon: '/assets/icons/beachparty/coconut_cocktail.png',
           search: 'cocktail drinks effects palm bar',
           details: true,
           detailsTitle: 'Effects',
-          detailsText: `Cocktails are mixed at the Palm Bar and placed as blocks.
+          detailsText: `Cocktails are mixed at the [[Palm Bar|palm_bar]] and placed as blocks.
 
-Each cocktail grants a specific status effect for 30 seconds.`,
+       Each cocktail grants a specific status effect for 30 seconds.`,
           detailsBullets: [
             'Mixed at the Palm Bar',
             'Placed as drink blocks',
@@ -732,7 +735,7 @@ Each cocktail grants a specific status effect for 30 seconds.`,
           id: 'palm_trees',
           title: 'Palm Trees',
           namespace_id: 'beachparty:palm_sapling',
-          subtitle: 'Palm Trees naturally generate along beaches.',
+          subtitle: 'Palm Trees naturally generate along beaches. Their wood set is [[Palm|palm]].',
           icon: '/assets/icons/beachparty/palm_sapling.png',
           search: 'palm trees beach worldgen'
         },
@@ -768,7 +771,7 @@ Each cocktail grants a specific status effect for 30 seconds.`,
           subtitle:
             'Most gameplay features of Candlelight can be adjusted via a configuration file, usually located at `config/candlelight.json`.',
           icon: '/assets/icons/misc/config.png',
-          search: 'config configuration settings options json candlelight'
+          search: 'config configuration settings options json beachparty'
         },
         {
           id: 'villager_profession',
@@ -780,9 +783,9 @@ Each cocktail grants a specific status effect for 30 seconds.`,
           detailsTitle: 'Sandy Merchant',
           detailsText: `The Sandy Merchant is a new Villager profession found near beaches.
 
-              Using the Palm Bar as their work station, Sandy Merchants offer a wide range of beach themed items, from building materials and decor to food, tools, and collectibles.`,
+       Using the Palm Bar as their work station, Sandy Merchants offer a wide range of beach themed items, from building materials and decor to food, tools, and collectibles.`,
           detailsBullets: [
-            'Uses the Palm Bar as work station',
+            'Uses the [[Palm Bar|palm_bar]] as work station',
             'Sells beach themed blocks, decor, and items',
             'Offers food, tools, and collectibles',
             'Some trades include rare and exclusive items'

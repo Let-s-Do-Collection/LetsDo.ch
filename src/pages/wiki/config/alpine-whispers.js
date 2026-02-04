@@ -106,7 +106,7 @@ Mossy variants can be turned frosty by using a snowball on them, or by hitting t
           detailsTitle: 'Included Blocks',
           detailsText: `Arolla Pine is a complete wood building set used across Alpine Whispers builds.
 
-It represents the wood of the Arolla Pine and is the native wood type found in Snowy Plains and Grove biomes.`,
+        It represents the wood of the Arolla Pine and is the native wood type found in snowy regions, where it grows naturally as [[Arolla Pines|arolla_pine_sapling]].`,
           detailsBullets: ['Native wood type of Snowy Plains and Grove biomes', 'Full wood set with matching variants'],
           items: [
             {
@@ -381,7 +381,7 @@ They are primarily decorative, but over time they can trigger small changes to t
           id: 'homespun_wool',
           title: 'Homespun Wool',
           namespace_id: 'alpinewhispers:homespun_wool',
-          subtitle: 'A wool variant obtained by shearing Alpine Sheep.',
+          subtitle: 'A wool variant obtained by shearing [[Alpine Sheep|alpine_sheep]].',
           icon: '/assets/icons/alpine-whispers/homespun_wool.png',
           search: 'homespun wool alpine whispers alpine sheep'
         },
@@ -390,9 +390,9 @@ They are primarily decorative, but over time they can trigger small changes to t
           id: 'homespun_carpet',
           title: 'Homespun Carpet',
           namespace_id: 'alpinewhispers:homespun_carpet',
-          subtitle: 'A fluffy, shaggy carpet made out of homespun wool.',
+          subtitle: 'A fluffy, shaggy carpet made out of [[Homespun Wool|homespun_wool]].',
           icon: '/assets/icons/alpine-whispers/homespun_carpet.png',
-          search: 'homespun carpet alpine whispers'
+          search: 'homespun carpet alpine whispers homespun wool'
         },
 
         {
@@ -531,7 +531,7 @@ Once placed, they sit in the foliage until you decide to remove them again.`,
           detailsTitle: 'Function',
           detailsText: `Bread on a Stick works similar to a Carrot on a Stick.
 
-It can be used to ride and control Alpine Sheep.`,
+  It can be used to ride and control [[Alpine Sheep|alpine_sheep]].`,
           detailsBullets: [
             'Works similar to Carrot on a Stick',
             'Used to ride Alpine Sheep',
@@ -650,7 +650,8 @@ Once placed, right click it to eat. Each bite removes a portion until it is gone
         {
           id: 'arolla_pine_sapling',
           title: 'Arolla Pines',
-          subtitle: 'Arolla Pines can grow naturally in snowy regions.',
+          subtitle:
+            'Arolla Pines can grow naturally in snowy regions and form the basis of the [[Arolla Pine|arolla_pine]] wood set.',
           icon: '/assets/icons/alpine-whispers/arolla_pine_sapling.png',
           search: 'arolla pine sapling tree worldgen alpine whispers'
         },
@@ -711,18 +712,18 @@ Reindeer move faster on snow blocks, but slow down on ice.`,
           id: 'alpine_sheep',
           title: 'Alpine Sheep',
           namespace_id: 'alpinewhispers:alpine_sheep',
-          subtitle: 'A ridable sheep that drops Homespun Wool when sheared.',
+          subtitle: 'A ridable sheep that drops [[Homespun Wool|homespun_wool]] when sheared.',
           icon: '/assets/icons/alpine-whispers/entity/alpine_sheep.png',
           search:
             'alpine sheep alpine whispers ride bread on a stick homespun wool shears wheat hoarfrost grass frozen dirt snow boost',
           details: true,
           detailsTitle: 'Behavior and Riding',
-          detailsText: `Alpine Sheep can be bred using Wheat and can be sheared for Homespun Wool.
+          detailsText: `Alpine Sheep can be bred using Wheat and can be sheared for [[Homespun Wool|homespun_wool]].
 
 Right click a grown Alpine Sheep with an empty hand to ride it.
-Use Bread on a Stick to steer it, and use it again for a short speed boost.
+Use [[Bread on a Stick|bread_on_a_stick]] to steer it, and use it again for a short speed boost.
 
-Alpine Sheep graze on cold plants and terrain, including Hoarfrost Grass and Frozen Dirt.
+Alpine Sheep graze on cold plants and terrain, including [[Hoarfrost Grass|hoarfrost_grass]] and [[Frozen Dirt|frozen_dirt]].
 
 Feeding Bread is a bad idea: after a short while, the sheep gets angry and eventually takes damage.`,
           detailsBullets: [

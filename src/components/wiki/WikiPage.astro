@@ -9,7 +9,6 @@ import "../../styles/mods.css";
 import "../../styles/wiki.css";
 import "../../styles/wikisidebar.css";
 import "../../styles/impressions.css";
-
 import "../../styles/musicplayer.css";
 
 const withBase = (path) => {
@@ -23,25 +22,49 @@ const withBase = (path) => {
   return `${cleanBase}${cleanPath}`;
 };
 
+const escapeHtml = (value) =>
+  String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+
+const normalizeId = (value) =>
+  String(value ?? "")
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "_")
+    .replace(/[^\w\-]/g, "");
+
 const linkifyText = (text) => {
-  if (!text) return null;
+  if (!text) return "";
 
-  return text.split(/(\[\[.*?\]\])/g).map((part) => {
+  const parts = String(text).split(/(\[\[.*?\]\])/g);
+  let out = "";
+
+  for (let index = 0; index < parts.length; index += 1) {
+    const part = parts[index];
     const match = part.match(/^\[\[(.+?)(?:\|(.+?))?\]\]$/);
-    if (!match) return part;
 
-    const label = match[1];
-    const targetId = match[2] ?? match[1];
+    if (!match) {
+      out += escapeHtml(part);
+      continue;
+    }
 
-    return (
-      <a
-        href={`#${targetId}`}
-        class="wikiInlineLink"
-      >
-        {label}
-      </a>
-    );
-  });
+    const label = match[1] ?? "";
+    const rawTarget = match[2] ?? match[1] ?? "";
+    const targetId = normalizeId(rawTarget);
+
+    if (!targetId) {
+      out += escapeHtml(label);
+      continue;
+    }
+
+    out += `<a class="wikiInlineLink" href="#${escapeHtml(targetId)}">${escapeHtml(label)}</a>`;
+  }
+
+  return out;
 };
 
 const { config, currentSlug, wikiIndex } = Astro.props;
@@ -140,6 +163,7 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
                   return (
                     <article
                       class="card wikiCard"
+                      id={entry.id}
                       data-section={section.id}
                       data-search={entrySearch(entry)}
                       data-has-details={hasDetails ? "true" : "false"}
@@ -155,7 +179,7 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
 
                         {entry.namespace_id ? <div class="wikiCardNs">{entry.namespace_id}</div> : null}
 
-                        {entry.subtitle ? <p>{entry.subtitle}</p> : null}
+                        {entry.subtitle ? <p set:html={linkifyText(entry.subtitle)} /> : null}
                       </div>
 
                       {hasDetails ? (
@@ -165,11 +189,9 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
                             {entry.detailsSubtitle ? <div class="wikiDetailsSubtitle">{entry.detailsSubtitle}</div> : null}
                           </div>
 
-{entry.detailsText ? (
-  <div class="wikiDetailsText">
-    {linkifyText(entry.detailsText)}
-  </div>
-) : null}
+                          {entry.detailsText ? (
+                            <div class="wikiDetailsText" set:html={linkifyText(entry.detailsText)} />
+                          ) : null}
 
                           {tracks.length ? <MusicPlayer tracks={tracks} /> : null}
 
@@ -211,7 +233,7 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
                           {Array.isArray(entry.items) && entry.items.length ? (
                             <div class="wikiMiniGrid">
                               {entry.items.map((it) => (
-                                <article class="wikiMiniCard" data-search={entrySearch(it)}>
+                                <article class="wikiMiniCard" id={it.id} data-search={entrySearch(it)}>
                                   <img
                                     class="wikiMiniIcon"
                                     src={it.icon ? withBase(it.icon) : ""}

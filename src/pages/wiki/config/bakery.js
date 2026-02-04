@@ -19,16 +19,19 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           id: 'baker_station',
           title: 'Baker Station',
           namespace_id: 'bakery:baker_station',
-          subtitle: 'The main work surface for shaping, cutting, and finishing baked goods.',
+          subtitle:
+            'The main work surface for shaping, cutting, and finishing baked goods. Works with [[Rolling Pin|rolling_pin]] and [[Bread Knife|bread_knife]].',
           icon: '/assets/icons/bakery/baker_station.png',
           search: 'baker station baking cake cupcake cookie dough jam rolling pin knife',
           details: true,
           detailsTitle: 'How baking works',
           detailsText: `The Baker Station is a hands-on baking surface. It does not use a crafting interface.
 
-Baking is done by placing a Blank Cake on top of the station and interacting with it using tools and toppings.
+  Baking is done by placing a Blank Cake on top of the station and interacting with it using tools and toppings.
 
-What you get depends entirely on the order of interactions.`,
+  Use a [[Bread Knife|bread_knife]] to cut, and a [[Rolling Pin|rolling_pin]] to shape.
+
+  What you get depends entirely on the order of interactions.`,
           detailsBullets: [
             'Place a Blank Cake on top of the Baker Station',
             'Using Jam or a Spread directly creates a finished Cake',
@@ -173,7 +176,7 @@ What you get depends entirely on the order of interactions.`,
           id: 'cake_stand',
           title: 'Cake Stand',
           namespace_id: 'bakery:cake_stand',
-          subtitle: 'A serving stand for cakes and baked goods.',
+          subtitle: 'A serving stand for cakes and baked goods. Great for presenting [[Cakes and slices|cakes]].',
           icon: '/assets/icons/bakery/cake_stand.png',
           search: 'cake stand bakery display',
           details: true,
@@ -192,7 +195,8 @@ What you get depends entirely on the order of interactions.`,
           id: 'cake_display',
           title: 'Cake Display',
           namespace_id: 'bakery:cake_display',
-          subtitle: 'A glass display for showcasing baked goods.',
+          subtitle:
+            'A glass display for showcasing baked goods, especially [[Cakes and slices|cakes]] and [[Pastries and sweets|pastries]].',
           icon: '/assets/icons/bakery/cake_display.png',
           search: 'cake display bakery shelf',
           details: true,
@@ -212,7 +216,7 @@ What you get depends entirely on the order of interactions.`,
           id: 'cupcake_display',
           title: 'Cupcake Display',
           namespace_id: 'bakery:cupcake_display',
-          subtitle: 'A compact display for cupcakes and small pastries.',
+          subtitle: 'A compact display for cupcakes and small pastries. Pairs with [[Pastries and sweets|pastries]].',
           icon: '/assets/icons/bakery/cupcake_display.png',
           search: 'cupcake display bakery shelf',
           details: true,
@@ -249,7 +253,8 @@ What you get depends entirely on the order of interactions.`,
           id: 'tray',
           title: 'Tray',
           namespace_id: 'bakery:tray',
-          subtitle: 'A serving tray for bread and baked goods.',
+          subtitle:
+            'A serving tray for bread and baked goods. Perfect with [[Breads and buns|breads]] and [[Pastries and sweets|pastries]].',
           icon: '/assets/icons/bakery/tray.png',
           search: 'tray bakery serving',
           details: true,
@@ -288,7 +293,9 @@ What you get depends entirely on the order of interactions.`,
           search: 'jar jam strawberry glowberry sweetberry chocolate apple stackable',
           details: true,
           detailsTitle: 'Included Pieces',
-          detailsText: `A small set of jar pieces used for kitchens and shelves.`,
+          detailsText: `A small set of jar pieces used for kitchens and shelves.
+
+Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]].`,
           items: [
             {
               id: 'jar',
@@ -365,7 +372,7 @@ What you get depends entirely on the order of interactions.`,
           title: 'Rolling Pin',
           namespace_id: 'bakery:rolling_pin',
           subtitle:
-            'Used to flatten dough and occasionally your expectations. Can be used as a weapon, just not a very good one.',
+            'Used to flatten dough and occasionally your expectations. Used at the [[Baker Station|baker_station]]. Can be used as a weapon, just not a very good one.',
           icon: '/assets/icons/bakery/rolling_pin.png',
           search: 'rolling pin tool weapon'
         },
@@ -373,7 +380,7 @@ What you get depends entirely on the order of interactions.`,
           id: 'bread_knife',
           title: 'Bread Knife',
           namespace_id: 'bakery:bread_knife',
-          subtitle: 'Cuts bread and doubles as a very unambitious sword.',
+          subtitle: 'Cuts bread and doubles as a very unambitious sword. Used at the [[Baker Station|baker_station]].',
           icon: '/assets/icons/bakery/bread_knife.png',
           search: 'bread knife tool weapon'
         },
@@ -381,7 +388,7 @@ What you get depends entirely on the order of interactions.`,
           id: 'cake_dough',
           title: 'Cake Dough',
           namespace_id: 'bakery:cake_dough',
-          subtitle: 'Base dough used for cakes.',
+          subtitle: 'Base dough used for cakes. Used at the [[Baker Station|baker_station]].',
           icon: '/assets/icons/bakery/cake_dough.png',
           search: 'cake dough ingredient'
         },
@@ -401,18 +408,18 @@ What you get depends entirely on the order of interactions.`,
       subtitle: 'A small peek at the Bakery selection.',
       entries: [
         {
-          id: 'breadbox',
-          title: 'Breadbox',
-          namespace_id: 'bakery:breadbox',
+          id: 'bread_crate',
+          title: 'Bread Crate',
+          namespace_id: 'bakery:bread_crate',
           subtitle: 'A placeable bread box you can eat from.',
-          icon: '/assets/icons/bakery/breadbox.png',
-          search: 'breadbox bread food eatable placeable',
+          icon: '/assets/icons/bakery/bread_crate.png',
+          search: 'bread_crate bread food eatable placeable',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Breadbox can be placed in the world and eaten directly.
+          detailsText: `The Bread Crate can be placed in the world and eaten directly.
 
   Each bite restores hunger and advances the bite stage.
-  Once fully consumed, the Breadbox is removed and drops its tray, which was used to craft it.`,
+  Once fully consumed, the Bread Crate is removed and drops its tray, which was used to craft it.`,
           detailsBullets: [
             'Can be placed',
             'Consumed in multiple bites',

@@ -27,8 +27,9 @@ Pottery focuses on working with clay, shaping ceramic storage and decor, and fir
             'pottery table shaping station pottering recipe selection scroll list stonecutter clay shaping output',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `
-The Pottery Table works similarly to other Crafting Stations. It has one Input Slot and one Output Slot, and provides a recipe selection list based on the inserted Item.
+          detailsText: `The Pottery Table works similarly to other Crafting Stations.
+
+It has one Input Slot and one Output Slot, and provides a recipe selection list based on the inserted Item.
 
 Recipes usually use Clay Balls as their input. Place a Clay Ball into the Input Slot to populate the recipe list. Select a recipe to preview the output, then take the finished Item from the Output Slot to consume the input and craft the result.
 
@@ -52,8 +53,9 @@ The Interface behaves similarly to a Stonecutter: it shows a scrollable recipe g
           search: 'kiln firing station fuel dye painted glaze preview pottery urn storage',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `
-The Kiln works similarly to other Crafting Stations. It has one Base Input Slot, one Modifier Slot, one Fuel Slot, and one Output Slot.
+          detailsText: `The Kiln works similarly to other Crafting Stations.
+
+It has one Base Input Slot, one Modifier Slot, one Fuel Slot, and one Output Slot.
 
 Place a valid pottery Base Block into the Base Slot, optionally add a Dye as a Modifier, then insert a valid Fuel Item to start the Firing Process. The Kiln will automatically consume fuel, process the recipe, and place the finished result into the Output Slot.
 
@@ -205,34 +207,34 @@ They are ideal for tables, shelves, and small decorative touches that make a spa
           ],
           items: [
             {
-              id: 'flower_pot',
+              id: 'cupella',
               title: 'Cupella',
               icon: '/assets/icons/pottery/white_cupella.png',
-              search: 'small flower pot pottery'
+              search: 'cupella small flower pot pottery'
             },
             {
-              id: 'flower_pot',
+              id: 'bud_vase',
               title: 'Bud Vase',
               icon: '/assets/icons/pottery/yellow_bud_vase.png',
-              search: 'small flower pot small flowers pottery'
+              search: 'bud vase small flower pot pottery'
             },
             {
-              id: 'flower_pot',
+              id: 'planter',
               title: 'Planter',
               icon: '/assets/icons/pottery/red_planter.png',
-              search: 'small flower pot small flowers pottery'
+              search: 'planter small flower pot pottery'
             },
             {
               id: 'plant_bowl',
               title: 'Plant Bowl',
               icon: '/assets/icons/pottery/plant_bowl.png',
-              search: 'small flower pot small flowers pottery'
+              search: 'plant bowl small flower pot pottery'
             },
             {
               id: 'vase',
               title: 'Vase',
               icon: '/assets/icons/pottery/blue_vase.png',
-              search: 'small flower pot small flowers pottery'
+              search: 'vase small flower pot pottery'
             }
           ]
         },
@@ -259,13 +261,13 @@ They are perfect for filling open spaces, framing doorways, or simply adding a b
               id: 'square_pot',
               title: 'Square Pot',
               icon: '/assets/icons/pottery/white_square_pot.png',
-              search: 'square flower pot pottery'
+              search: 'square pot large flower pot pottery'
             },
             {
               id: 'garden_pot',
               title: 'Garden Pot',
               icon: '/assets/icons/pottery/black_garden_pot.png',
-              search: 'large flower pot tall flowers pottery'
+              search: 'garden pot large flower pot pottery'
             }
           ]
         },
@@ -323,31 +325,31 @@ They come in Wall, Stair, and Slab variants.`,
           ],
           items: [
             {
-              id: 'red_brick_blocks',
+              id: 'red_bricks',
               title: 'Red Brick Blocks',
               icon: '/assets/icons/pottery/red_bricks.png',
               search: 'red brick blocks wall stair slab'
             },
             {
-              id: 'yellow_brick_blocks',
+              id: 'yellow_bricks',
               title: 'Yellow Brick Blocks',
               icon: '/assets/icons/pottery/yellow_bricks.png',
               search: 'yellow brick blocks wall stair slab'
             },
             {
-              id: 'white_brick_blocks',
+              id: 'white_bricks',
               title: 'White Brick Blocks',
               icon: '/assets/icons/pottery/white_bricks.png',
               search: 'white brick blocks wall stair slab'
             },
             {
-              id: 'blue_brick_blocks',
+              id: 'blue_bricks',
               title: 'Blue Brick Blocks',
               icon: '/assets/icons/pottery/blue_bricks.png',
               search: 'blue brick blocks wall stair slab'
             },
             {
-              id: 'black_brick_blocks',
+              id: 'black_bricks',
               title: 'Black Brick Blocks',
               icon: '/assets/icons/pottery/black_bricks.png',
               search: 'black brick blocks wall stair slab'
@@ -368,7 +370,7 @@ They come in Wall, Stair, and Slab variants.`,
 When interacting with the top half of the statue, it launches a large celebratory firework show and displays the title "Lili's Pottery".`,
           detailsBullets: [
             'Reward for completing all Pottery',
-            'Interact with the top half to trigger a large firework show',
+            'Interact with the top half to trigger a large celebratory firework show',
             'Displays the title "Lili\'s Pottery"'
           ]
         }
@@ -449,7 +451,7 @@ When interacting with the top half of the statue, it launches a large celebrator
           subtitle: 'Cool toned clay found in forests, windswept hills, and even deeper underground.',
           icon: '/assets/icons/pottery/blue_clay.png',
           search:
-            'blue clay taiga old growth pine taiga old growth spruce taiga windswept hills windswept forest river swamp lush caves',
+            'blue clay taiga old growth pine taiga old growth spruce taiga windswept hills windswept forest river swamp mangrove swamp lush caves',
           details: true,
           detailsTitle: 'Where to find',
           detailsText: `Blue Clay generates in Taiga regions, Windswept biomes, and along Rivers. It can also be found in Swamps and Mangrove Swamps, and has an additional deposit type in Lush Caves.`,

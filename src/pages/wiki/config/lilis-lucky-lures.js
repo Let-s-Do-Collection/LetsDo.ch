@@ -30,7 +30,7 @@ The mod focuses on playful fishing mechanics, small world interactions, and a ha
           search: 'fish trap bait catch waterlogged hanging ropes net fence bubble',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Place the Fish Trap in water or hang it below ropes or fish net fences.
+          detailsText: `Place the Fish Trap in water or hang it below [[Rope|rope]] or [[Fish Net Fence|fish_net_fence]].
 
 Right-click with a bait item to insert it. The trap visually shows the inserted bait and later the caught fish.
 
@@ -55,7 +55,7 @@ When a catch is ready, subtle bubbles appear. Right-click with an empty hand to 
           detailsTitle: 'Usage',
           detailsText: `The Fish Net item can place two different blocks.
 
-Use Shift + Right-click while holding it to switch between Elastic Fishing Net and Fish Net Fence.
+Use Shift + Right-click while holding it to switch between [[Elastic Fishing Net|elastic_fishing_net]] and [[Fish Net Fence|fish_net_fence]].
 
 The Elastic Fishing Net cushions falls and bounces entities back up.
 
@@ -72,13 +72,15 @@ The Fish Net Fence connects to nearby blocks, can be waterlogged, and may resona
               id: 'elastic_fishing_net',
               title: 'Elastic Fishing Net',
               namespace_id: 'lilis_lucky_lures:elastic_fishing_net',
-              icon: '/assets/icons/lilis-lucky-lures/elastic_fishing_net.png'
+              icon: '/assets/icons/lilis-lucky-lures/elastic_fishing_net.png',
+              search: 'elastic fishing net bounce fall damage'
             },
             {
               id: 'fish_net_fence',
               title: 'Fish Net Fence',
               namespace_id: 'lilis_lucky_lures:fish_net_fence',
-              icon: '/assets/icons/lilis-lucky-lures/fish_net_fence.png'
+              icon: '/assets/icons/lilis-lucky-lures/fish_net_fence.png',
+              search: 'fish net fence waterlogged bell'
             }
           ]
         },
@@ -93,9 +95,9 @@ The Fish Net Fence connects to nearby blocks, can be waterlogged, and may resona
           detailsTitle: 'Usage',
           detailsText: `The Fish Trophy Frame can be placed on walls and is used to display a single fish item.
 
- Right-click the frame while holding a fish to mount it inside the frame.
+Right-click the frame while holding a fish to mount it inside the frame.
 
- Right-click with an empty hand to remove the displayed item again.`,
+Right-click with an empty hand to remove the displayed item again.`,
           detailsBullets: [
             'Wall mounted display block',
             'Displays a single fish as a decorative centerpiece',
@@ -115,7 +117,7 @@ The Fish Net Fence connects to nearby blocks, can be waterlogged, and may resona
           detailsTitle: 'Usage',
           detailsText: `The Hanging Frame is a double-height block used to display multiple fish.
 
-   It features two hanging ropes. You can place up to three fish on the upper rope and three more on the lower rope.`,
+It features two hanging ropes. You can place up to three fish on the upper rope and three more on the lower rope.`,
           detailsBullets: [
             'Double-height hanging block',
             'Displays up to six fish in total',
@@ -157,7 +159,7 @@ When powered, the coil becomes active and applies its behavior based on the sele
           detailsTitle: 'Reward',
           detailsText: `The Completionist Banner is a special reward for players who have fully explored what Lili’s Lucky Lures has to offer.
 
-    While placed, it grants nearby players a Luck bonus, giving a subtle but fitting boost to fishing related activities.`,
+While placed, it grants nearby players a Luck bonus, giving a subtle but fitting boost to fishing related activities.`,
           detailsBullets: [
             'Reward for completing Lili’s Lucky Lures progression',
             'Grants Luck to nearby players',
@@ -199,25 +201,25 @@ While worn, it grants a constant Luck bonus, subtly improving fishing outcomes w
           id: 'fishing_net',
           title: 'Fishing Net',
           namespace_id: 'lilis_lucky_lures:fishing_net',
-          subtitle: 'A handheld net for scooping up loot from Floating Debris.',
+          subtitle: 'A handheld net for scooping up loot from [[Floating Debris|floating_debris]].',
           icon: '/assets/icons/lilis-lucky-lures/fishing_net.png',
           search: 'fishing net debris loot scoop lilis lucky lures hold right click icon changes empty',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Fishing Net is used on Floating Debris.
+          detailsText: `The Fishing Net is used on floating loot pools like [[Floating Debris|floating_debris]] and [[Floating Books|floating_books]].
 
-Get close to a debris pile, then Right-click and hold to try pulling something out.
+Get close to a pool, then Right-click and hold to try pulling something out.
 On success, the net becomes filled and its icon changes.
 
 Right-click again to empty the net and collect the loot.
 
-Different debris types can yield different loot.`,
+Different pools can yield different loot.`,
           detailsBullets: [
-            'Right-click and hold near Floating Debris',
+            'Right-click and hold near a floating pool',
             'Has a chance to pull loot out',
             'Net icon changes when filled',
             'Right-click to empty and collect the loot',
-            'Loot depends on the debris type'
+            'Loot depends on the pool type'
           ]
         },
         {
@@ -239,14 +241,11 @@ Different debris types can yield different loot.`,
           detailsTitle: 'Usage',
           detailsText: `Dynamite is a throwable explosive item.
 
-Right-click to light and throw it in the direction you are facing. After a short fuse, it explodes on its own.
-
-It has a short cooldown between throws, so panic-spamming is discouraged.`,
+Right-click to light and throw it in the direction you are facing. After a short fuse, it explodes on its own.`,
           detailsBullets: [
             'Right-click to light and throw',
             'Explodes after a short fuse',
             'Thrown as a projectile',
-            'Has a short cooldown between uses',
             'Single-use item'
           ]
         },
@@ -351,7 +350,7 @@ Uncooked meals apply Hunger.
 Cooked meals grant Luck and restore more hunger.
 
 Both return an empty Bowl.`,
-          detailsBullets: ['Uncooked: applies Hunger', 'Cooked: grants Luck'],
+          detailsBullets: ['Uncooked: applies Hunger', 'Cooked: grants Luck', 'Always returns an empty Bowl'],
           items: [
             {
               id: 'uncooked_tropical_fish',
@@ -384,7 +383,7 @@ Uncooked versions apply Poison.
 Cooked versions grant one random status effect.
 
 Both return an empty Bowl.`,
-          detailsBullets: ['Uncooked: applies Poison', 'Cooked: grants a random status effect'],
+          detailsBullets: ['Uncooked: applies Poison', 'Cooked: grants a random status effect', 'Always returns an empty Bowl'],
           items: [
             {
               id: 'uncooked_puffer_plater',
@@ -394,7 +393,7 @@ Both return an empty Bowl.`,
               search: 'uncooked puffer plater'
             },
             {
-              id: 'puffer_plater_cooked',
+              id: 'puffer_plater',
               title: 'Cooked Puffer Plater',
               namespace_id: 'lilis_lucky_lures:puffer_plater',
               icon: '/assets/icons/lilis-lucky-lures/puffer_plater.png',
@@ -415,7 +414,7 @@ Both return an empty Bowl.`,
 They restore a large amount of hunger and grant Luck for a while.
 
 An empty Bowl is returned after eating.`,
-          detailsBullets: ['Restores a high amount of hunger', 'Grants Luck']
+          detailsBullets: ['Restores a high amount of hunger', 'Grants Luck', 'Always returns an empty Bowl']
         }
       ]
     },
@@ -434,7 +433,7 @@ An empty Bowl is returned after eating.`,
           search: 'floating books fishing pool loot lilis lucky lures',
           details: true,
           detailsTitle: 'Loot',
-          detailsText: `Floating Books can be fished from using a Fishing Rod or a Fishing Net.
+          detailsText: `Floating Books can be fished from using a Fishing Rod or a [[Fishing Net|fishing_net]].
 
 The bobber must land inside the pool, or the net must be used nearby.
 
@@ -468,7 +467,7 @@ The pool can only be looted a few times before breaking apart and disappearing.`
           search: 'floating debris fishing pool loot lilis lucky lures',
           details: true,
           detailsTitle: 'Loot',
-          detailsText: `Floating Debris can be fished from using a Fishing Rod or a Fishing Net.
+          detailsText: `Floating Debris can be fished from using a Fishing Rod or a [[Fishing Net|fishing_net]].
 
 The bobber must land inside the pool, or the net must be used nearby.
 
@@ -522,15 +521,15 @@ The pool can only be looted a few times before breaking apart and disappearing.`
           search: 'ocean fish pool fishing loot lilis lucky lures',
           details: true,
           detailsTitle: 'Loot',
-          detailsText: `Ocean Fish Pools can be fished from using a Fishing Rod or a Fishing Net.
+          detailsText: `Ocean Fish Pools can be fished from using a Fishing Rod or a [[Fishing Net|fishing_net]].
 
 The bobber must land inside the pool, or the net must be used nearby.
 
 Possible contents include:
 
 Fish
-• Tropical Fish (3–5)
-• Pufferfish (2–3)`,
+• Tropical Fish (3 to 5)
+• Pufferfish (2 to 3)`,
           detailsBullets: [
             'Fishable floating loot pool',
             'Works with Fishing Rod or Fishing Net',
@@ -547,15 +546,15 @@ Fish
           search: 'river fish pool fishing loot lilis lucky lures',
           details: true,
           detailsTitle: 'Loot',
-          detailsText: `River Fish Pools can be fished from using a Fishing Rod or a Fishing Net.
+          detailsText: `River Fish Pools can be fished from using a Fishing Rod or a [[Fishing Net|fishing_net]].
 
 The bobber must land inside the pool, or the net must be used nearby.
 
 Possible contents include:
 
 Fish
-• Cod (3–5)
-• Salmon (3–5)`,
+• Cod (3 to 5)
+• Salmon (3 to 5)`,
           detailsBullets: [
             'Fishable floating loot pool',
             'Works with Fishing Rod or Fishing Net',
@@ -586,10 +585,10 @@ A spawn position is searched within about 100 blocks, and only river or ocean bi
 At most three floating pools are allowed in a large area around the spawn point.
 
 Depending on the biome, a fish pool can appear:
-Ocean biomes may spawn an Ocean Fish Pool.
-River biomes may spawn a River Fish Pool.
+Ocean biomes may spawn an [[Ocean Fish Pool|ocean_fish_pool]].
+River biomes may spawn a [[River Fish Pool|river_fish_pool]].
 
-Floating Books and Floating Debris can also appear from the same spawner.`,
+[[Floating Books|floating_books]] and [[Floating Debris|floating_debris]] can also appear from the same spawner.`,
           detailsBullets: [
             'Spawns every 5 minutes',
             'Chooses a random player as the center',

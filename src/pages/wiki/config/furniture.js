@@ -228,7 +228,7 @@ Placing a second lantern adds an additional bulb.`,
           id: 'bin',
           title: 'Bin',
           subtitle:
-            'Dispose of unwanted items by throwing them into the Bin. Items are destroyed instantly with no way to recover them. When the Bin is full, it has a chance to drop a Trash Bag.',
+            'Dispose of unwanted items by throwing them into the Bin. Items are destroyed instantly with no way to recover them. When the Bin is full, it has a chance to drop a [[Trash Bag|trash_bag]].',
           icon: '/assets/icons/furniture/bin.png',
           search: 'bin trash furniture dispose destroy trash bag chance'
         },
@@ -356,42 +356,42 @@ Breaking the tank releases any stored fish back into the world.`,
           icon: '/assets/icons/furniture/canvas.png',
           search: 'canvas furniture painting place motifs sizes variants'
         },
-{
-  id: 'music_disc_cphs_pride',
-  title: "CPH's Pride",
-  subtitle: 'A dark and powerful track with a heavy, looming atmosphere. Drops from Creepers.',
-  namespace_id: 'furniture:music_disc_cphs_pride',
-  icon: '/assets/icons/furniture/cphs_pride.png',
-  search: 'music disc cphs pride furniture creeper drop',
-  musicdisc: true,
-  tracks: [
-    {
-      title: "CPH's Pride",
-      subtitle: 'Bellows & Brine',
-      icon: '/assets/icons/furniture/cphs_pride.png',
-      src: '/assets/music/furniture/cphs_pride.ogg'
-    }
-  ]
-},
-{
-  id: 'music_disc_letsdo_theme',
-  title: "Let's Do Theme",
-  subtitle: "The signature track of the Let's Do mod collection. Drops from Creepers.",
-  namespace_id: 'furniture:music_disc_letsdo_theme',
-  icon: '/assets/icons/furniture/letsdo_theme.png',
-  search: 'music disc lets do theme furniture creeper drop',
-  musicdisc: true,
-  tracks: [
-    {
-      title: "Let's Do Theme",
-      subtitle: 'Signature',
-      icon: '/assets/icons/furniture/letsdo_theme.png',
-      src: '/assets/music/furniture/letsdo_theme.ogg'
-    }
-  ]
-},
         {
-          id: 'trash:bag',
+          id: 'music_disc_cphs_pride',
+          title: "CPH's Pride",
+          subtitle: 'A dark and powerful track with a heavy, looming atmosphere. Drops from Creepers.',
+          namespace_id: 'furniture:music_disc_cphs_pride',
+          icon: '/assets/icons/furniture/cphs_pride.png',
+          search: 'music disc cphs pride furniture creeper drop',
+          musicdisc: true,
+          tracks: [
+            {
+              title: "CPH's Pride",
+              subtitle: 'Bellows & Brine',
+              icon: '/assets/icons/furniture/cphs_pride.png',
+              src: '/assets/music/furniture/cphs_pride.ogg'
+            }
+          ]
+        },
+        {
+          id: 'music_disc_letsdo_theme',
+          title: "Let's Do Theme",
+          subtitle: "The signature track of the Let's Do mod collection. Drops from Creepers.",
+          namespace_id: 'furniture:music_disc_letsdo_theme',
+          icon: '/assets/icons/furniture/letsdo_theme.png',
+          search: 'music disc lets do theme furniture creeper drop',
+          musicdisc: true,
+          tracks: [
+            {
+              title: "Let's Do Theme",
+              subtitle: 'Signature',
+              icon: '/assets/icons/furniture/letsdo_theme.png',
+              src: '/assets/music/furniture/letsdo_theme.ogg'
+            }
+          ]
+        },
+        {
+          id: 'trash_bag',
           title: 'Trash Bag',
           namespace_id: 'furniture:trash_bag',
           subtitle: 'What others throw away? Thats still great!',
@@ -401,9 +401,9 @@ Breaking the tank releases any stored fish back into the world.`,
           detailsTitle: 'Usage',
           detailsText: `Using a Trash Bag spawns a random discarded item.
 
-                                After use, it goes on cooldown before it can be used again.
+   After use, it goes on cooldown before it can be used again.
 
-                                Items can be excluded from dropping by adding them to the trash bag blacklist tag.`,
+   Items can be excluded from dropping by adding them to the trash bag blacklist tag.`,
           detailsBullets: [
             'Spawns a random discarded item on use',
             'Has a cooldown between uses',

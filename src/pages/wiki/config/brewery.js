@@ -10,8 +10,7 @@ This is your home for blocks, items, mechanics, and quick guidance for Brewery.
 
 Brewery brings brewing into everyday survival: a hands-on Brewingstation, a small crop to grow and process, and a lineup of drinks that come with their own special effects.
 
-Alongside that, you get practical tavern blocks for storage and serving, playful Brewfest outfits with a set bonus, and a few mischievous extras if you feel like causing a little trouble.
-`,
+Alongside that, you get practical tavern blocks for storage and serving, playful Brewfest outfits with a set bonus, and a few mischievous extras if you feel like causing a little trouble.`,
   sections: [
     {
       id: 'stations',
@@ -32,7 +31,9 @@ It is a multi-block station and needs a 2x2x2 space to be placed.
 
 There is no GUI. Brewing happens through direct interaction: you add ingredients, start the process, and respond to small interactive events along the way.
 
-The faster you complete these events, the more beer is brewed and the higher its quality becomes. Making too many mistakes can cause a Booze entity to spawn. This does not happen in Peaceful mode.
+The faster you complete these events, the more beer is brewed and the higher its quality becomes.
+
+Making too many mistakes can cause a [[Booze|booze]] entity to spawn. This does not happen in Peaceful mode.
 
 The station comes in tiers: Wood, Copper, and Netherite. To brew Whiskey, you need Copper or Netherite. The Netherite Brewingstation always produces the highest quality in the maximum possible amount.`,
           detailsBullets: [
@@ -87,7 +88,9 @@ It requires a 2x2x2 space to be placed.`,
           detailsTitle: 'Usage',
           detailsText: `Right-click the Table with a Patterned Carpet to place it on top as a tablecloth.
 
-The carpet can be removed again by interacting with the Table.`
+The carpet can be removed again by interacting with the Table.
+
+Related: [[Patterned Wool|patterned_wool]].`
         },
         {
           id: 'cabinet',
@@ -198,12 +201,14 @@ Once earned, it can be placed as a standing banner or as a wall banner.`,
           detailsTitle: 'Usage',
           detailsText: `Hold right-click to use it. After a short moment, it stores a reading and shows it as a colored tooltip level: EASY, WARNING, or DANGER.
 
-The Breathalyzer reads your current DRUNK effect strength, so it is a quick way to see how close you are to getting completely wasted.`,
+The Breathalyzer reads your current [[Drunk|drunk]] effect strength, so it is a quick way to see how close you are to getting completely wasted.
+
+Related: [[Blackout|blackout]].`,
           detailsBullets: [
             'Hold right-click to use',
             'After a short delay, it saves the result',
             'Shows: EASY, WARNING, or DANGER',
-            'Based on your current DRUNK effect strength'
+            'Based on your current Drunk effect strength'
           ]
         },
         {
@@ -217,7 +222,7 @@ The Breathalyzer reads your current DRUNK effect strength, so it is a quick way 
           detailsTitle: 'Usage',
           detailsText: `Dark Brew is not meant to be consumed like a normal drink.
 
-When thrown, it breaks on impact and spawns a Booze entity at the landing spot.
+When thrown, it breaks on impact and spawns a [[Booze|booze]] entity at the landing spot.
 
 This does not work in Peaceful mode, since Booze will not spawn there.
 
@@ -299,10 +304,12 @@ Once dried, they become items you can use in recipes, and they can also be place
           icon: '/assets/icons/brewery/brewfest_regalia.png',
           search: 'brewfest regalia hat trousers boots lederhosen harddrinking',
           details: true,
-          detailsTitle: 'Usage',
+          detailsTitle: 'Set Bonus',
           detailsText: `These are individual outfit pieces. You can combine them with any other Brewfest clothing.
 
-If you wear the full set at the same time, you gain Harddrinking and become immune to drunkenness effects.`,
+If you wear the full set at the same time, you gain [[Harddrinking|harddrinking]] and become immune to drunkenness effects.
+
+Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
           detailsBullets: [
             'Individual clothing pieces',
             'Can be combined with other Brewfest items',
@@ -351,10 +358,12 @@ If you wear the full set at the same time, you gain Harddrinking and become immu
           icon: '/assets/icons/brewery/brewfest_dress.png',
           search: 'dirndl blouse dress shoes blue hat harddrinking',
           details: true,
-          detailsTitle: 'Usage',
+          detailsTitle: 'Set Bonus',
           detailsText: `These are individual outfit pieces. You can combine them with any other Brewfest clothing.
 
-If you wear the full set at the same time, you gain Harddrinking and become immune to drunkenness effects.`,
+If you wear the full set at the same time, you gain [[Harddrinking|harddrinking]] and become immune to drunkenness effects.
+
+Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
           detailsBullets: [
             'Individual clothing pieces',
             'Can be combined with other Brewfest items',
@@ -412,7 +421,7 @@ If you wear the full set at the same time, you gain Harddrinking and become immu
           search: 'beer mug brewery effects wheat hops barley oat nettle haley',
           details: true,
           detailsTitle: 'All Beers',
-          detailsText: '',
+          detailsText: `All beers are brewed at the [[Brewingstation|brewingstation]] and come with their own special effects.`,
           items: [
             {
               id: 'beer_wheat',
@@ -458,9 +467,9 @@ If you wear the full set at the same time, you gain Harddrinking and become immu
               id: 'beer_haley',
               title: 'Beer Haley',
               namespace_id: 'brewery:beer_haley',
-              subtitle: '',
+              subtitle: 'Grants the [[Haley|haley]] effect.',
               icon: '/assets/icons/brewery/beer_haley.png',
-              search: 'beer haley'
+              search: 'beer haley flight effect'
             }
           ]
         },
@@ -474,7 +483,7 @@ If you wear the full set at the same time, you gain Harddrinking and become immu
             'brewery food oktoberfest sausage pretzel pork knuckle dumplings potato salad mashed potatoes chicken',
           details: true,
           detailsTitle: 'All Meals',
-          detailsText: '',
+          detailsText: `A full lineup of Oktoberfest inspired meals to pair with your drinks.`,
           items: [
             {
               id: 'sausage',
@@ -564,14 +573,15 @@ They can also generate in Villages and Woodland Mansions.
 
 When cultivated, hops can grow taller over time and can be supported using Ropes, allowing them to climb upward similar to other climbing crops.
 
-Hops will also spawn in modded biomes as long as they use the respective biome tags.`,
+Hops will also spawn in modded biomes as long as they use the respective biome tags.
+
+Used for brewing at the [[Brewingstation|brewingstation]].`,
           items: [
             {
               id: 'hops_item',
               title: 'Hops',
               namespace_id: 'brewery:hops',
-              subtitle:
-                'Used for cultivation and as a brewing ingredient. The Hops itself can be planted to grow more.',
+              subtitle: 'Used for cultivation and as a brewing ingredient.',
               icon: '/assets/icons/brewery/hops.png',
               search: 'hops item seed ingredient beer'
             },
@@ -579,7 +589,7 @@ Hops will also spawn in modded biomes as long as they use the respective biome t
               id: 'hops_crop',
               title: 'Hops Crop',
               namespace_id: 'brewery:hops_crop',
-              subtitle: 'A cultivated hops plant, capable of climbing Ropes when placed above and alongside the plant.',
+              subtitle: 'A cultivated hops plant, capable of climbing Ropes.',
               icon: '/assets/icons/brewery/hops_crop.png',
               search: 'hops crop cultivated growth rope climbing'
             }
@@ -601,10 +611,10 @@ Hops will also spawn in modded biomes as long as they use the respective biome t
           icon: '/assets/icons/brewery/entity/booze.png',
           search: 'booze beer elemental hostile mob brewingstation failure dark brew thrown entity',
           details: true,
-          detailsTitle: 'Usage',
+          detailsTitle: 'Behavior',
           detailsText: `Booze is a hostile Beer Elemental.
 
-It can spawn when too many mistakes are made during Brewingstation events. Additionally, throwing a Dark Brew can also summon a Booze directly.
+It can spawn when too many mistakes are made during [[Brewingstation|brewingstation]] events. Additionally, throwing a [[Dark Brew|dark_brew]] can also summon a Booze directly.
 
 Booze actively hunts players and uses both melee and ranged attacks. It does not spawn in Peaceful mode.`,
           detailsBullets: [
@@ -667,15 +677,15 @@ Booze actively hunts players and uses both melee and ranged attacks. It does not
           id: 'harddrinking',
           title: 'Harddrinking',
           namespace_id: 'brewery:harddrinking',
-          subtitle: 'Prevents all negative alcohol-related effects.',
+          subtitle: 'Prevents all negative alcohol-related effects. Gained from full Brewfest outfits.',
           icon: '/assets/icons/brewery/effects/harddrinking.png',
-          search: 'harddrinking alcohol immunity'
+          search: 'harddrinking alcohol immunity regalia dirndl set bonus'
         },
         {
           id: 'drunk',
           title: 'Drunk',
           namespace_id: 'brewery:drunk',
-          subtitle: 'Too much alcohol, and the world starts to wobble.',
+          subtitle: 'Too much alcohol, and the world starts to wobble. Check it with a [[Breathalyzer|breathalyzer]].',
           icon: '/assets/icons/brewery/effects/drunk.png',
           search: 'drunk alcohol effect'
         },
@@ -683,7 +693,7 @@ Booze actively hunts players and uses both melee and ranged attacks. It does not
           id: 'blackout',
           title: 'Blackout',
           namespace_id: 'brewery:blackout',
-          subtitle: 'The next step after Drunk. Strong and unforgiving.',
+          subtitle: 'The next step after [[Drunk|drunk]]. Strong and unforgiving.',
           icon: '/assets/icons/brewery/effects/blackout.png',
           search: 'blackout alcohol extreme drunk'
         },
@@ -785,12 +795,10 @@ Booze actively hunts players and uses both melee and ranged attacks. It does not
         {
           id: 'farmer_trades',
           title: 'Expanded Trades',
-          subtitle:
-            'Certain Brewery items have been added to Farmer Villager trade pools, allowing them to be obtained naturally through trading.',
+          subtitle: 'Certain Brewery items have been added to Farmer Villager trade pools.',
           icon: '/assets/icons/misc/emerald.png',
           search: 'farmer villager trades brewery items economy progression'
         },
-
         {
           id: 'loot',
           title: 'Loot and Exploration',
