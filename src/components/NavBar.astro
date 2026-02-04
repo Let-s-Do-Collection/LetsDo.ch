@@ -9,12 +9,17 @@ const isActive = (path) => {
 
 <nav class="nav">
   <div class="navInner">
-<a class="brand" href="/" data-tooltip="Return Home">
-      <img src="/assets/icons/ui/chest_logo.png" alt="Let's Do" class="logo" />
+    <a class="brand" href="/" data-tooltip="Return Home">
+      <img
+        src="/assets/icons/ui/chest_logo.png"
+        alt="Let's Do"
+        class="logo"
+        width="64"
+        height="64"
+        decoding="async"
+      />
       <span class="brandText">Let's Do</span>
     </a>
-
-
 
     <div class="links">
       <a href="/about/" class={isActive('/about') ? 'active' : ''}>
