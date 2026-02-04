@@ -294,19 +294,19 @@ Sneak-use to stop the Radio.`,
           detailsTitle: 'Loot',
           detailsText: `Seashells can be placed as a decorative block by sneak-right-clicking.
 
-        Breaking a placed Seashell drops a random selection of loot.
+Breaking a placed Seashell drops a random selection of loot.
 
-        Possible contents include:
+Possible contents include:
 
-        Food
-        • Raw Mussel Meat
+Food
+• Raw Mussel Meat
 
-        Valuables
-        • Gold Ingot
-        • Emerald
+Valuables
+• Gold Ingot
+• Emerald
 
-        Rare Finds
-        • Diamond`,
+Rare Finds
+• Diamond`,
           detailsBullets: [
             'Sneak-right-click to place as a decorative block',
             'Breaking it drops loot from its loot table',
@@ -408,7 +408,7 @@ Players standing nearby are granted Water Breathing as long as they remain withi
           detailsTitle: 'Trinket',
           detailsText: `Rubber Rings can be worn as Trinkets.
 
-        While in water, they keep you moving and help you stay afloat.`,
+While in water, they keep you moving and help you stay afloat.`,
           detailsBullets: ['Wearable as a Trinket', 'Helps you float in water', 'Makes water travel smoother'],
           items: [
             {
@@ -466,8 +466,53 @@ Players standing nearby are granted Water Breathing as long as they remain withi
           detailsTitle: 'Loot',
           detailsText: `These music discs are available as loot.
 
-        Pop them into a Jukebox and let the beach vibes do their job.`,
+Pop them into a Jukebox and let the beach vibes do their job.`,
           detailsBullets: ['Found as loot', 'Playable in a Jukebox', 'Rare collectibles'],
+          musicdisc: true,
+          tracks: [
+            {
+              id: 'beachparty',
+              title: 'Beachparty',
+              subtitle: 'Kevin MacLeod',
+              icon: '/assets/icons/beachparty/music_disc_beachparty.png',
+              src: '/assets/music/beachparty/beachparty_kevin_macleod.ogg'
+            },
+            {
+              id: 'caribbean_beach',
+              title: 'Caribbean Beach',
+              subtitle: 'Pecan Pie',
+              icon: '/assets/icons/beachparty/music_disc_caribbean_beach.png',
+              src: '/assets/music/beachparty/caribbeanbeach_pecan_pie.ogg'
+            },
+            {
+              id: 'pridelands',
+              title: 'Pridelands',
+              subtitle: 'Andey Rossi',
+              icon: '/assets/icons/beachparty/music_disc_pridelands.png',
+              src: '/assets/music/beachparty/pridelands_andey_rossi.ogg'
+            },
+            {
+              id: 'vocalista',
+              title: 'Vocalista',
+              subtitle: 'Pecan Pie',
+              icon: '/assets/icons/beachparty/music_disc_vocalista.png',
+              src: '/assets/music/beachparty/vocalista_pecan_pie.ogg'
+            },
+            {
+              id: 'wild_veins',
+              title: 'Wild Veins',
+              subtitle: 'Adams',
+              icon: '/assets/icons/beachparty/music_disc_wild_veins.png',
+              src: '/assets/music/beachparty/wildveins_adams.ogg'
+            },
+            {
+              id: 'over_the_rainbow',
+              title: 'Over the Rainbow',
+              subtitle: 'MissLilitu',
+              icon: '/assets/icons/beachparty/overgrown_disc.png',
+              src: '/assets/music/beachparty/over_the_rainbow.ogg'
+            }
+          ],
           items: [
             {
               id: 'music_disc_beachparty',

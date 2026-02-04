@@ -390,7 +390,7 @@ They are primarily decorative, but over time they can trigger small changes to t
           id: 'homespun_carpet',
           title: 'Homespun Carpet',
           namespace_id: 'alpinewhispers:homespun_carpet',
-          subtitle: 'A fluffy, shaggy carpet.',
+          subtitle: 'A fluffy, shaggy carpet made out of homespun wool.',
           icon: '/assets/icons/alpine-whispers/homespun_carpet.png',
           search: 'homespun carpet alpine whispers'
         },
@@ -542,8 +542,18 @@ It can be used to ride and control Alpine Sheep.`,
           id: 'winter_magic_music_disc',
           title: 'Winter Magic Music Disc',
           subtitle: 'Plays Marco’s absolute favorite track and usually runs on repeat. For over a year. Craftable.',
+          namespace_id: 'alpine_whispers:winter_magic_music_disc',
           icon: '/assets/icons/alpine-whispers/winter_magic_music_disc.png',
-          search: 'music disc winter magic alpine whispers craftable favorite track'
+          search: 'music disc winter magic alpine whispers craftable favorite track',
+          musicdisc: true,
+          tracks: [
+            {
+              title: 'Winter Magic',
+              subtitle: "Marco's Favorites",
+              icon: '/assets/icons/alpine-whispers/winter_magic_music_disc.png',
+              src: '/assets/music/alpine-whispers/winter_magic.ogg'
+            }
+          ]
         }
       ]
     },

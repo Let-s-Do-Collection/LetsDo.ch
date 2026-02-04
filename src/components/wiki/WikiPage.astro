@@ -4,10 +4,13 @@ import NavBar from "../NavBar.astro";
 import Footer from "../Footer.astro";
 import Impressions from "./Impressions.astro";
 import WikiSidebar from "./WikiSidebar.astro";
+import MusicPlayer from "./MusicPlayer.astro";
 import "../../styles/mods.css";
 import "../../styles/wiki.css";
 import "../../styles/wikisidebar.css";
 import "../../styles/impressions.css";
+
+import "../../styles/musicplayer.css";
 
 const withBase = (path) => {
   if (!path) return "";
@@ -50,7 +53,8 @@ const entryHasDetails = (entry) =>
   (Array.isArray(entry.detailsBullets) && entry.detailsBullets.length) ||
   (Array.isArray(entry.detailsIds) && entry.detailsIds.length) ||
   (Array.isArray(entry.detailsGallery) && entry.detailsGallery.length) ||
-  (Array.isArray(entry.items) && entry.items.length);
+  (Array.isArray(entry.items) && entry.items.length) ||
+  (Array.isArray(entry.tracks) && entry.tracks.length);
 
 const titleCaseFromId = (id) =>
   String(id ?? "")
@@ -110,6 +114,7 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
                   const hasDetails = entryHasDetails(entry);
                   const iconSrc = entry.icon ? withBase(entry.icon) : "";
                   const detailsOpenTitle = entry.detailsTitle ?? "Details";
+                  const tracks = Array.isArray(entry.tracks) ? entry.tracks : [];
 
                   return (
                     <article
@@ -140,6 +145,8 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
                           </div>
 
                           {entry.detailsText ? <div class="wikiDetailsText">{entry.detailsText}</div> : null}
+
+                          {tracks.length ? <MusicPlayer tracks={tracks} /> : null}
 
                           {Array.isArray(entry.detailsIds) && entry.detailsIds.length ? (
                             <div class="wikiDetailsIds">

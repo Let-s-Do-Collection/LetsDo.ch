@@ -3,6 +3,9 @@
   padding: 24px 20px;
   background: var(--navBg);
   border-top: 1px solid var(--navBorder);
+  position: relative;
+  z-index: 200;
+  pointer-events: auto;
 }
 
 .footerInner {
@@ -12,6 +15,9 @@
   grid-template-columns: 1fr auto auto;
   align-items: center;
   gap: 18px;
+  position: relative;
+  z-index: 200;
+  pointer-events: auto;
 }
 
 .footerLeft {

@@ -121,6 +121,21 @@ main.page.wikiShell > *,
 
 .wikiCard .cardContent {
   flex: 1;
+  min-height: 260px;
+}
+
+.wikiCard .cardContent h3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.wikiCard .cardContent p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 
 .wikiCard .cardAction {
@@ -346,5 +361,14 @@ main.page.wikiShell > *,
 @media (max-width: 720px) {
   .wikiCard.isOpen {
     grid-column: span 1;
+  }
+
+  .wikiCard .cardContent {
+    min-height: 0;
+  }
+
+  .wikiCard .cardContent h3,
+  .wikiCard .cardContent p {
+    display: block;
   }
 }
