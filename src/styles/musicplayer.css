@@ -1,17 +1,19 @@
 .musicPlayer {
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   margin: 12px 0 0;
   position: relative;
-  pointer-events: auto;
-  overflow: hidden;
 }
 
 .musicPlayerInner {
   display: grid;
-  grid-template-columns: auto auto auto 1fr auto auto;
+  min-width: 0;
+  max-width: 100%;
+  grid-template-columns: auto auto auto minmax(0, 1fr) auto auto;
   gap: 10px;
   align-items: center;
-  padding: 12px;
+  padding: 12px 12px;
   border-radius: 14px;
   background: rgba(12, 12, 14, 0.78);
   backdrop-filter: blur(10px);
@@ -95,7 +97,6 @@
 }
 
 .musicPlaylist {
-  position: relative;
   margin-top: 10px;
   max-height: 44vh;
   overflow: auto;
@@ -104,12 +105,8 @@
   background: rgba(12, 12, 14, 0.92);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  pointer-events: auto;
-}
-
-.musicPlaylist[hidden] {
-  display: none;
-  pointer-events: none;
+  min-width: 0;
+  max-width: 100%;
 }
 
 :root[data-mode="light"] .musicPlaylist {

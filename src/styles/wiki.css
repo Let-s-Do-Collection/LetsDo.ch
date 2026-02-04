@@ -47,16 +47,16 @@ main.page.wikiShell > *,
   padding-bottom: 8px;
 }
 
+.wikiMain > section:first-child {
+  margin-top: 0;
+}
+
 .wikiDetailsList li {
   overflow-wrap: anywhere;
 }
 
 .impressionsSection {
   margin-bottom: 12px;
-}
-
-.wikiMain > section:first-child {
-  margin-top: 0;
 }
 
 .wikiHero {
@@ -97,19 +97,12 @@ main.page.wikiShell > *,
 
 .wikiGrid {
   align-items: stretch;
-}
-
-.wikiCardNs {
-  margin-top: 10px;
-  font-size: 12px;
-  color: var(--muted);
-}
-
-.wikiToggle {
-  white-space: nowrap;
+  min-width: 0;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
 }
 
 .wikiCard {
+  min-width: 0;
   display: flex;
   flex-direction: column;
   transition:
@@ -122,6 +115,7 @@ main.page.wikiShell > *,
 .wikiCard .cardContent {
   flex: 1;
   min-height: 260px;
+  min-width: 0;
 }
 
 .wikiCard .cardContent h3 {
@@ -136,6 +130,16 @@ main.page.wikiShell > *,
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
+}
+
+.wikiCardNs {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.wikiToggle {
+  white-space: nowrap;
 }
 
 .wikiCard .cardAction {
@@ -169,6 +173,7 @@ main.page.wikiShell > *,
     opacity 200ms ease,
     transform 200ms ease;
   will-change: max-height, opacity, transform;
+  min-width: 0;
 }
 
 .wikiCard.isOpen .wikiCardDetails {
@@ -181,6 +186,7 @@ main.page.wikiShell > *,
   display: grid;
   gap: 4px;
   margin-bottom: 10px;
+  min-width: 0;
 }
 
 .wikiDetailsTitle {
@@ -199,6 +205,7 @@ main.page.wikiShell > *,
   color: var(--text);
   font-size: 14px;
   margin-bottom: 12px;
+  min-width: 0;
 }
 
 .wikiDetailsIds {
@@ -206,6 +213,7 @@ main.page.wikiShell > *,
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 14px;
+  min-width: 0;
 }
 
 .wikiDetailsId {
@@ -221,6 +229,7 @@ main.page.wikiShell > *,
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 12px;
   margin-bottom: 14px;
+  min-width: 0;
 }
 
 .wikiGalleryItem {
@@ -232,6 +241,7 @@ main.page.wikiShell > *,
   grid-template-columns: 56px minmax(0, 1fr);
   gap: 10px;
   align-items: center;
+  min-width: 0;
 }
 
 .wikiGalleryImg {
@@ -286,6 +296,7 @@ main.page.wikiShell > *,
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 12px;
   margin-top: 10px;
+  min-width: 0;
 }
 
 .wikiMiniTitle,
@@ -327,6 +338,7 @@ main.page.wikiShell > *,
   justify-content: flex-start;
   gap: 14px;
   text-align: left;
+  min-width: 0;
 }
 
 @media (max-width: 980px) {
@@ -370,5 +382,9 @@ main.page.wikiShell > *,
   .wikiCard .cardContent h3,
   .wikiCard .cardContent p {
     display: block;
+  }
+
+  .wikiGrid {
+    grid-template-columns: 1fr;
   }
 }
