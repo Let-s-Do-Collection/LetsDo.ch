@@ -517,27 +517,30 @@ Clayworkers use the Pottery Table as their work station and focus on everything 
             'Helpful for building and decoration focused worlds'
           ]
         },
-        {
-          id: 'glazing',
-          title: 'Glazing and Coloring',
-          subtitle: 'Experiment with colors and give your pottery a finished look.',
-          icon: '/assets/icons/pottery/honeycomb.png',
-          search: 'pottery glazing dye mixing honeycomb brush',
-          details: true,
-          detailsTitle: 'Glazing',
-          detailsText: `All pottery pieces can be colored and fired in the Kiln.
+   {
+     id: 'glazing',
+     title: 'Glazing and Coloring',
+     subtitle: 'Experiment with colors and give your pottery a finished look.',
+     icon: '/assets/icons/pottery/honeycomb.png',
+     search: 'pottery glazing dye mixing honeycomb brush kiln firing colors glow',
+     details: true,
+     detailsTitle: 'Glazing',
+     detailsText: `All pottery pieces can be colored and fired in the Kiln.
 
-Colors can be layered by firing a piece multiple times, allowing you to mix shades and discover unique variations along the way. For a finished look, painted pottery can be glazed using Honeycomb. Glazed pottery gains a gentle glow that highlights its surface without emitting light.
+Colors can be layered by firing a piece multiple times, allowing you to mix shades and discover unique variations along the way. For a finished look, painted pottery can be glazed using Honeycomb. Glazing only has a visible effect on certain colors and enhances their surface with a subtle sheen.
+
+Each application of Honeycomb increases the glaze strength by 0.25, up to a maximum of 2.0. Once the maximum strength is reached, additional Honeycomb can no longer be applied.
 
 If you want to start fresh, a Brush can be used to remove the color again.`,
-          detailsBullets: [
-            'Pottery can be colored and fired in the Kiln',
-            'Colors can be mixed through repeated firing',
-            'Honeycomb can be used to glaze painted pottery',
-            'Glazed pottery softly glows without emitting light',
-            'Colors can be removed using a Brush'
-          ]
-        }
+     detailsBullets: [
+       'Pottery can be colored and fired in the Kiln',
+       'Colors can be mixed through repeated firing',
+       'Glazing only affects certain colors visually',
+       'Each Honeycomb application adds 0.25 glaze strength',
+       'Glaze strength is capped at 2.0',
+       'Colors can be removed using a Brush'
+     ]
+   }
       ]
     }
   ],

@@ -1,0 +1,89 @@
+---
+
+---
+
+<div id="welcome-overlay" class="welcomeOverlay hidden" role="dialog" aria-modal="true" aria-labelledby="welcome-title">
+  <div class="welcomeBox" role="document">
+    <h2 id="welcome-title">Hey!</h2>
+
+    <p>
+      Thanks for stopping by. We are still under construction,
+      but a lot is already live and growing every day.
+    </p>
+
+    <p>
+      Happy to have you along.
+    </p>
+
+    <p class="welcomeSignature">
+      – Marco & Lili
+    </p>
+
+    <div class="welcomeFooter">
+      <label class="welcomeCheckbox">
+        <input type="checkbox" id="welcome-never" />
+        Never show again
+      </label>
+
+      <div class="welcomeActions">
+        <button id="welcome-light" class="welcomeButton" type="button">
+          Continue
+        </button>
+
+        <button id="welcome-dark" class="welcomeButton welcomeButtonSecondary" type="button">
+          Continue in Dark Mode
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const overlay = document.getElementById("welcome-overlay");
+  const box = overlay.querySelector(".welcomeBox");
+  const hideKey = "letsdo_welcome_hidden";
+
+  if (!localStorage.getItem(hideKey)) {
+    overlay.classList.remove("hidden");
+  }
+
+  const neverCheckbox = document.getElementById("welcome-never");
+
+  const hide = () => {
+    if (neverCheckbox.checked) {
+      localStorage.setItem(hideKey, "true");
+    }
+    overlay.classList.add("hidden");
+    document.removeEventListener("keydown", onKeyDown);
+  };
+
+  const onKeyDown = (event) => {
+    if (event.key === "Escape") {
+      hide();
+    }
+  };
+
+  if (!overlay.classList.contains("hidden")) {
+    document.addEventListener("keydown", onKeyDown);
+  }
+
+  overlay.addEventListener("click", (event) => {
+    if (event.target === overlay) {
+      hide();
+    }
+  });
+
+  box.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
+
+  document.getElementById("welcome-light").addEventListener("click", () => {
+    hide();
+  });
+
+  document.getElementById("welcome-dark").addEventListener("click", () => {
+    localStorage.setItem("mode", "dark");
+    document.documentElement.setAttribute("data-mode", "dark");
+    hide();
+  });
+</script>

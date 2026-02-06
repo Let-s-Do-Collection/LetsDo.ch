@@ -1,24 +1,52 @@
 ---
 import "../styles/global.css";
 import "../styles/theme.css";
+import "../styles/welcome.css";
+import WelcomeModal from "../components/WelcomeModal.astro";
 
 const { title = "Let's Do" } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" data-theme="blue" data-mode="light">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{title}</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
 
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" sizes="64x64" href="/assets/icons/ui/chest_logo.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/ui/chest_logo.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/ui/chest_logo.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/ui/chest_logo.png" />
-</head>
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/assets/icons/ui/chest_logo.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/ui/chest_logo.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/ui/chest_logo.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/ui/chest_logo.png" />
+
+    <script is:inline>
+      const allowedThemes = new Set(["blue", "gold", "pink", "green", "neon"]);
+
+      function normalizeTheme(value) {
+        return allowedThemes.has(value) ? value : "blue";
+      }
+
+      function normalizeMode(value) {
+        return value === "dark" ? "dark" : "light";
+      }
+
+      function applyStoredThemeAndMode() {
+        const storedTheme = normalizeTheme(localStorage.getItem("theme"));
+        const storedMode = normalizeMode(localStorage.getItem("mode"));
+        document.documentElement.setAttribute("data-theme", storedTheme);
+        document.documentElement.setAttribute("data-mode", storedMode);
+      }
+
+      applyStoredThemeAndMode();
+
+      document.addEventListener("astro:page-load", applyStoredThemeAndMode);
+      document.addEventListener("astro:after-swap", applyStoredThemeAndMode);
+    </script>
+  </head>
+
   <body>
     <slot />
+    <WelcomeModal />
   </body>
 </html>
