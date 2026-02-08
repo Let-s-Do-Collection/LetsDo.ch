@@ -276,14 +276,23 @@ Glasses and Wine Glasses can be filled with drinks such as Potions or Wine. Play
           search:
             'big table large dining wood variants oak spruce birch jungle acacia dark oak mangrove cherry bamboo candlelight'
         },
-        {
-          id: 'dinner_bell',
-          title: 'Dinner Bell',
-          namespace_id: 'candlelight:dinner_bell',
-          subtitle: 'A bell block you can ring with right click. Ding!',
-          icon: '/assets/icons/candlelight/dinner_bell.png',
-          search: 'dinner bell ring right click candlelight'
-        },
+   {
+     id: 'dinner_bell',
+     title: 'Dinner Bell',
+     namespace_id: 'candlelight:dinner_bell',
+     subtitle: 'A bell block you can ring with right click. Ding!',
+     icon: '/assets/icons/candlelight/dinner_bell.png',
+     search: 'dinner bell ring right click candlelight',
+     musicdisc: true,
+     tracks: [
+       {
+         title: 'Dinner Bell',
+         subtitle: 'Ding! Ding! Ding!',
+         icon: '/assets/icons/candlelight/dinner_bell.png',
+         src: '/assets/sound_effect/dinner_bell_ring.ogg'
+       }
+     ]
+   },
         {
           id: 'hearth',
           title: 'Hearth',

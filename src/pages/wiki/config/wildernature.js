@@ -107,45 +107,6 @@ WilderNature focuses on new animals with biome tag based spawning, a small set o
               search: 'cod catcher banner collectible decoration'
             }
           ]
-        },
-        {
-          id: 'hollow_logs',
-          title: 'Hollow Logs',
-          subtitle: 'Hollow log variants for decoration and builds.',
-          icon: '/assets/icons/wildernature/hollow_oak_log.png',
-          search: 'hollow log decoration build vanilla wood variants',
-          details: true,
-          detailsTitle: 'Overview',
-          detailsText: `Hollow Logs are decorative log blocks available in all vanilla wood variants.`,
-          items: [
-            {
-              id: 'hollow_log',
-              title: 'Hollow Log',
-              namespace_id: 'wildernature:hollow_log',
-              subtitle: 'A decorative hollow log block.',
-              icon: '/assets/icons/wildernature/hollow_oak_log.png',
-              search: 'hollow log vanilla wood variants'
-            }
-          ]
-        },
-        {
-          id: 'termite_mound',
-          title: 'Termite Mound',
-          namespace_id: 'wildernature:termite_mound',
-          subtitle: 'A natural mound inhabited by termites.',
-          icon: '/assets/icons/wildernature/termite_mound.png',
-          search: 'termite mound block savanna hostile termites',
-          details: true,
-          detailsTitle: 'Overview',
-          detailsText: `Termite Mounds house multiple termites. When destroyed, the termites emerge and become hostile.`
-        },
-        {
-          id: 'truffle_bag',
-          title: 'Truffle Bag',
-          namespace_id: 'wildernature:truffle_bag',
-          subtitle: 'A small bag filled with earthy, foraged truffles.',
-          icon: '/assets/icons/wildernature/truffle_bag.png',
-          search: 'truffle bag forage truffle collectible food'
         }
       ]
     },
@@ -197,14 +158,23 @@ WilderNature focuses on new animals with biome tag based spawning, a small set o
             }
           ]
         },
+    {
+      id: 'bison_horn',
+      title: 'Bison Horn',
+      namespace_id: 'wildernature:bison_horn',
+      subtitle: 'Dropped by [[Bisons|bison]] or rewarded from bounties.',
+      icon: '/assets/icons/wildernature/bison_horn.png',
+      search: 'bison horn sound horn item drop buffalo bounty reward',
+      musicdisc: true,
+      tracks: [
         {
-          id: 'bison_horn',
           title: 'Bison Horn',
-          namespace_id: 'wildernature:bison_horn',
-          subtitle: 'TOOOOT! Dropped by buffalos or rewarded from bounties.',
+          subtitle: 'TOOOOOOOHOOOOOOOOOOT! ',
           icon: '/assets/icons/wildernature/bison_horn.png',
-          search: 'bison horn sound horn item drop buffalo bounty reward'
-        },
+          src: '/assets/sound_effect/bison_horn.ogg'
+        }
+      ]
+    },
         {
           id: 'loot_bag',
           title: 'Loot Bag',
@@ -238,14 +208,6 @@ WilderNature focuses on new animals with biome tag based spawning, a small set o
           subtitle: 'A craftable oil and highly efficient fuel.',
           icon: '/assets/icons/wildernature/fish_oil.png',
           search: 'fish oil item fuel furnace craft'
-        },
-        {
-          id: 'woodmeal',
-          title: 'Woodmeal',
-          namespace_id: 'wildernature:woodmeal',
-          subtitle: 'A cheap and efficient fuel produced by termites.',
-          icon: '/assets/icons/wildernature/woodmeal.png',
-          search: 'woodmeal item fuel termites'
         },
         {
           id: 'fur_cloak',
