@@ -115,49 +115,72 @@ WilderNature focuses on new animals with biome tag based spawning, a small set o
       title: 'Items, Ingredients, and Tools',
       subtitle: 'Tools, equipment, and useful items.',
       entries: [
+    {
+      id: 'blunderbuss',
+      title: 'Blunderbuss',
+      namespace_id: 'wildernature:blunderbuss',
+      subtitle: 'A ranged weapon built for loud solutions. PENG!',
+      icon: '/assets/icons/wildernature/blunderbuss.png',
+      search: 'blunderbuss weapon ranged gun ammunition flint diamond cooldown reload',
+      musicdisc: true,
+      tracks: [
         {
-          id: 'blunderbuss',
-          title: 'Blunderbuss',
-          namespace_id: 'wildernature:blunderbuss',
-          subtitle: 'A ranged weapon built for loud solutions.',
+          title: 'Blunderbuss Shot',
+          subtitle: 'This solves problems.',
           icon: '/assets/icons/wildernature/blunderbuss.png',
-          search: 'blunderbuss weapon ranged gun ammunition flint diamond cooldown reload',
+          src: '/assets/sound_effect/blunderbuss_fire.ogg'
+        },
+         {
+           title: 'Blunderbuss Reload',
+           subtitle: 'One second. This will only take a moment.',
+           icon: '/assets/icons/wildernature/blunderbuss.png',
+           src: '/assets/sound_effect/blunderbuss_load.ogg'
+         }
+      ],
+      details: true,
+      detailsTitle: 'Overview',
+      detailsText: `The Blunderbuss is a ranged weapon that consumes ammunition and has a short firing delay between shots. It fires either a spread of pellets or a single bullet depending on the ammo used. The Blunderbuss itself is obtained as a reward from bounties.`,
+      detailsBullets: [
+        'Consumes ammunition',
+        'Has a short delay between shots',
+        'Creates flame and smoke particles when firing',
+        'Plays a reload sound shortly after firing'
+      ],
+      items: [
+        {
+          id: 'flint_ammunition',
+          title: 'Flint Ammunition',
+          namespace_id: 'wildernature:flint_ammunition',
+          subtitle: 'Shot pellets for extreme close range.',
+          icon: '/assets/icons/wildernature/flint_ammunition.png',
+          search: 'flint ammunition blunderbuss shotgun pellets close range',
           details: true,
-          detailsTitle: 'Overview',
-          detailsText: `The Blunderbuss is a ranged weapon that consumes ammunition and has a short firing delay between shots. It fires either a spread of pellets or a single bullet depending on the ammo used. The Blunderbuss itself is obtained as a reward from bounties.`,
+          detailsTitle: 'Ammo Type',
+          detailsText: `Flint Ammunition fires a burst of multiple pellets with heavy spread. It is strongest at very short range.`,
           detailsBullets: [
-            'Consumes ammunition',
-            'Has a short delay between shots',
-            'Creates flame and smoke particles when firing',
-            'Plays a reload sound shortly after firing'
-          ],
-          items: [
-            {
-              id: 'flint_ammunition',
-              title: 'Flint Ammunition',
-              namespace_id: 'wildernature:flint_ammunition',
-              subtitle: 'Shot pellets for extreme close range.',
-              icon: '/assets/icons/wildernature/flint_ammunition.png',
-              search: 'flint ammunition blunderbuss shotgun pellets close range',
-              details: true,
-              detailsTitle: 'Ammo Type',
-              detailsText: `Flint Ammunition fires a burst of multiple pellets with heavy spread. It is strongest at very short range.`,
-              detailsBullets: ['Fires multiple pellets per shot', 'Very high spread', 'Best at extreme close range']
-            },
-            {
-              id: 'diamond_ammunition',
-              title: 'Diamond Ammunition',
-              namespace_id: 'wildernature:diamond_ammunition',
-              subtitle: 'A piercing round for longer shots.',
-              icon: '/assets/icons/wildernature/diamond_ammunition.png',
-              search: 'diamond ammunition blunderbuss piercing bullet long range',
-              details: true,
-              detailsTitle: 'Ammo Type',
-              detailsText: `Diamond Ammunition fires a single, more reliable shot designed for better reach and penetration.`,
-              detailsBullets: ['Fires a single projectile', 'More reliable at distance', 'Designed as a piercing round']
-            }
+            'Fires multiple pellets per shot',
+            'Very high spread',
+            'Best at extreme close range'
           ]
         },
+        {
+          id: 'diamond_ammunition',
+          title: 'Diamond Ammunition',
+          namespace_id: 'wildernature:diamond_ammunition',
+          subtitle: 'A piercing round for longer shots.',
+          icon: '/assets/icons/wildernature/diamond_ammunition.png',
+          search: 'diamond ammunition blunderbuss piercing bullet long range',
+          details: true,
+          detailsTitle: 'Ammo Type',
+          detailsText: `Diamond Ammunition fires a single, more reliable shot designed for better reach and penetration.`,
+          detailsBullets: [
+            'Fires a single projectile',
+            'More reliable at distance',
+            'Designed as a piercing round'
+          ]
+        }
+      ]
+    },
     {
       id: 'bison_horn',
       title: 'Bison Horn',
