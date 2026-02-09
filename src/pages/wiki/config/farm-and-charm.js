@@ -1489,6 +1489,14 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           search: 'vanilla soup mushroom stew beetroot soup rabbit stew sustenance effect'
         },
         {
+          id: 'farmland_planting_particles',
+          title: 'Planting Feedback',
+          subtitle:
+             'Planting crops on Farmland now creates subtle soil particles, visually showing that seeds are being pressed into the earth.',
+          icon: '/assets/icons/farm-and-charm/fertilized_farmland.png',
+          search: 'farmland planting particles seeds wheat crop visual feedback soil effect block particles'
+        },
+        {
           id: 'farmer_trades',
           title: 'Expanded Trades',
           subtitle:

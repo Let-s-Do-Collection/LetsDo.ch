@@ -15,9 +15,11 @@ import lilisluckylures from "./config/lilis-lucky-lures.js";
 import wildernature from "./config/wildernature.js";
 import beachparty from "./config/beachparty.js";
 import bloomingnature from "./config/bloomingnature.js";
+import meadow from "./config/meadow.js";
 
 export function getStaticPaths() {
   return [
+    { params: { slug: "meadow" } },
     { params: { slug: "brewery" } },
     { params: { slug: "lilis-lucky-lures" } },
     { params: { slug: "farm-and-charm" } },
@@ -50,6 +52,7 @@ const configs = {
   bloomingnature,
   wildernature,
   furniture,
+  meadow,
   bakery,
   "hearth-and-timber": hearthandtimber,
   "lilis-pottery": pottery,
