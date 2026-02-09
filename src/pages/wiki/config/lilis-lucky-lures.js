@@ -383,7 +383,11 @@ Uncooked versions apply Poison.
 Cooked versions grant one random status effect.
 
 Both return an empty Bowl.`,
-          detailsBullets: ['Uncooked: applies Poison', 'Cooked: grants a random status effect', 'Always returns an empty Bowl'],
+          detailsBullets: [
+            'Uncooked: applies Poison',
+            'Cooked: grants a random status effect',
+            'Always returns an empty Bowl'
+          ],
           items: [
             {
               id: 'uncooked_puffer_plater',

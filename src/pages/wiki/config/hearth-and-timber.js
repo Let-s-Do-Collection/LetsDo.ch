@@ -188,10 +188,30 @@ Waxed variants permanently lock the current stage and prevent further changes.`,
             'Waxed variants stop all weathering'
           ],
           items: [
-            { id: 'thatch_block', title: 'Thatch', icon: '/assets/icons/hearth-and-timber/thatch.png', search: 'thatch roof' },
-            { id: 'drying_thatch', title: 'Drying Thatch', icon: '/assets/icons/hearth-and-timber/drying_thatch.png', search: 'drying thatch roof' },
-            { id: 'weathered_thatch', title: 'Weathered Thatch', icon: '/assets/icons/hearth-and-timber/weathered_thatch.png', search: 'weathered thatch roof' },
-            { id: 'aged_thatch', title: 'Aged Thatch', icon: '/assets/icons/hearth-and-timber/aged_thatch.png', search: 'aged thatch roof' }
+            {
+              id: 'thatch_block',
+              title: 'Thatch',
+              icon: '/assets/icons/hearth-and-timber/thatch.png',
+              search: 'thatch roof'
+            },
+            {
+              id: 'drying_thatch',
+              title: 'Drying Thatch',
+              icon: '/assets/icons/hearth-and-timber/drying_thatch.png',
+              search: 'drying thatch roof'
+            },
+            {
+              id: 'weathered_thatch',
+              title: 'Weathered Thatch',
+              icon: '/assets/icons/hearth-and-timber/weathered_thatch.png',
+              search: 'weathered thatch roof'
+            },
+            {
+              id: 'aged_thatch',
+              title: 'Aged Thatch',
+              icon: '/assets/icons/hearth-and-timber/aged_thatch.png',
+              search: 'aged thatch roof'
+            }
           ]
         },
         {
@@ -207,9 +227,24 @@ Waxed variants permanently lock the current stage and prevent further changes.`,
 Wooden Shingles are available in all vanilla wood variants.`,
           detailsBullets: ['Purely decorative', 'Includes matching stairs and slabs', 'Wood variants available'],
           items: [
-            { id: 'oak_shingles', title: 'Oak Shingles', icon: '/assets/icons/hearth-and-timber/oak_shingles.png', search: 'oak shingles roof' },
-            { id: 'terracotta_shingles', title: 'Terracotta Shingles', icon: '/assets/icons/hearth-and-timber/terracotta_shingles.png', search: 'terracotta shingles roof' },
-            { id: 'patchwork_shingles', title: 'Patchwork Shingles', icon: '/assets/icons/hearth-and-timber/patchwork_shingles.png', search: 'patchwork shingles roof' }
+            {
+              id: 'oak_shingles',
+              title: 'Oak Shingles',
+              icon: '/assets/icons/hearth-and-timber/oak_shingles.png',
+              search: 'oak shingles roof'
+            },
+            {
+              id: 'terracotta_shingles',
+              title: 'Terracotta Shingles',
+              icon: '/assets/icons/hearth-and-timber/terracotta_shingles.png',
+              search: 'terracotta shingles roof'
+            },
+            {
+              id: 'patchwork_shingles',
+              title: 'Patchwork Shingles',
+              icon: '/assets/icons/hearth-and-timber/patchwork_shingles.png',
+              search: 'patchwork shingles roof'
+            }
           ]
         },
         {
@@ -301,7 +336,8 @@ Railings are available in all vanilla wood variants.`,
         {
           id: 'window_casings',
           title: 'Window Casings',
-          subtitle: 'Slim wooden trims that automatically frame windows and politely disappear where they are not needed.',
+          subtitle:
+            'Slim wooden trims that automatically frame windows and politely disappear where they are not needed.',
           icon: '/assets/icons/hearth-and-timber/oak_window_casing.png',
           search: 'window casing frame trim facade waterlogged axe toggle',
           details: true,
@@ -395,9 +431,24 @@ They slide horizontally and are suited for barns, stables, and haylofts.`,
             'Used for barns, stables, and similar structures'
           ],
           items: [
-            { id: 'sliding_barn_door', title: 'Sliding Barn Door', icon: '/assets/icons/hearth-and-timber/sliding_barn_door.png', search: 'sliding barn door' },
-            { id: 'sliding_hayloft_door', title: 'Sliding Hayloft Door', icon: '/assets/icons/hearth-and-timber/sliding_hayloft_door.png', search: 'sliding hayloft door' },
-            { id: 'sliding_stable_door', title: 'Sliding Stable Door', icon: '/assets/icons/hearth-and-timber/sliding_stable_door.png', search: 'sliding stable door' }
+            {
+              id: 'sliding_barn_door',
+              title: 'Sliding Barn Door',
+              icon: '/assets/icons/hearth-and-timber/sliding_barn_door.png',
+              search: 'sliding barn door'
+            },
+            {
+              id: 'sliding_hayloft_door',
+              title: 'Sliding Hayloft Door',
+              icon: '/assets/icons/hearth-and-timber/sliding_hayloft_door.png',
+              search: 'sliding hayloft door'
+            },
+            {
+              id: 'sliding_stable_door',
+              title: 'Sliding Stable Door',
+              icon: '/assets/icons/hearth-and-timber/sliding_stable_door.png',
+              search: 'sliding stable door'
+            }
           ]
         }
       ]

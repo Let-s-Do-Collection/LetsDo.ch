@@ -18,7 +18,7 @@ Meadow focuses on alpine themed building materials, practical furniture, functio
 {
   id: 'cooking_stations',
   title: 'Cooking',
-  subtitle: 'Two cooking stations for preparing Meadow meals.',
+subtitle: 'A sturdy cookpot for preparing hearty meals.',
   icon: '/assets/icons/meadow/cookpot.png',
   search: 'cookpot cooking frame meals water heat slots output recipes meadow',
   details: true,
@@ -55,7 +55,7 @@ The Cooking Frame functions similarly in terms of recipes and slots, but unlike 
   id: 'fondue_pot',
   title: 'Fondue Pot',
   namespace_id: 'meadow:fondue_pot',
-  subtitle: 'A cozy station for melted cheese dishes.',
+subtitle: 'For melting cheese and serving it on a stick.',
   icon: '/assets/icons/meadow/fondue_pot.png',
   search: 'fondue pot cheese wheel heat source bread stick melted cheese meadow',
   details: true,
@@ -138,16 +138,18 @@ Insert the required wood input and retrieve the crafted result.`,
           id: 'limestone',
           title: 'Limestone',
           namespace_id: 'meadow:limestone',
-          subtitle: 'A complete stone building set including standard variants.',
+          subtitle: 'A complete stone building set including all standard block variants.',
           icon: '/assets/icons/meadow/limestone_bricks.png',
           search: 'limestone set bricks cobbled mossy cracked chiseled polished stairs slab wall',
           details: true,
           detailsMiniGallery: true,
           detailsTitle: 'Variants',
-          detailsText: `Limestone is a complete building set covering standard structural variants.`,
+          detailsText: `Limestone is a complete stone building set covering standard structural variants.
+
+In the world, Limestone can partially replace regular stone in Meadow Biomes.`,
           detailsBullets: [
-            'Includes standard stone variants',
-            'Supports structural building and detailing'
+         'Includes all standard stone block variants',
+            'Can partially replace regular stone in Snowy Plains and Grove biomes',
           ],
           items: [
             { id: 'limestone', title: 'Limestone', namespace_id: 'meadow:limestone', icon: '/assets/icons/meadow/limestone.png' },
@@ -169,30 +171,37 @@ Insert the required wood input and retrieve the crafted result.`,
           search: 'pine wood set log planks door trapdoor fence gate stairs slab',
           details: true,
           detailsMiniGallery: true,
-          detailsTitle: 'Included Blocks',
-          detailsText: `Pine is the primary wood set of Meadow and provides a full set of building variants.`,
+detailsTitle: 'Included Blocks',
+detailsText: `Pine is a complete wood building set used across Meadow.
+
+It represents the native pine trees that generate naturally in Meadow regions and grow from [[Pine Saplings|pine_sapling]].
+
+Reclaimed Pine Planks can be crafted from Pine Planks using the [[Woodcutter|woodcutter]].`,
           detailsBullets: [
             'Full pine wood set with matching variants',
             'Used across furniture and building blocks'
           ],
           items: [
-            { id: 'pine_log', title: 'Pine Log', namespace_id: 'meadow:pine_log', icon: '/assets/icons/meadow/pine_log.png' },
             { id: 'pine_planks', title: 'Pine Planks', namespace_id: 'meadow:pine_planks', icon: '/assets/icons/meadow/pine_planks.png' },
             { id: 'pine_door', title: 'Pine Door', namespace_id: 'meadow:pine_door', icon: '/assets/icons/meadow/pine_door.png' },
-            { id: 'pine_trapdoor', title: 'Pine Trapdoor', namespace_id: 'meadow:pine_trapdoor', icon: '/assets/icons/meadow/pine_trapdoor.png' }
+            { id: 'pine_trapdoor', title: 'Pine Trapdoor', namespace_id: 'meadow:pine_trapdoor', icon: '/assets/icons/meadow/pine_trapdoor.png' },
+                    { id: 'reclaimed_pine_planks', title: 'Reclaimed Pine Planks', namespace_id: 'meadow:reclaimed_pine_planks', icon: '/assets/icons/meadow/reclaimed_pine_planks.png' },
+                        { id: 'reclaimed_pine_door', title: 'Reclaimed Pine Door', namespace_id: 'meadow:reclaimed_pine_door', icon: '/assets/icons/meadow/reclaimed_pine_door.png' },
+                        { id: 'reclaimed_pine_trapdoor', title: 'Reclaimed Pine Trapdoor', namespace_id: 'meadow:reclaimed_pine_trapdoor', icon: '/assets/icons/meadow/reclaimed_pine_trapdoor.png' }
+
           ]
         },
         {
           id: 'bed',
           title: 'Beds',
           namespace_id: 'meadow:rustic_bed',
-          subtitle: 'Bed variants matching the textile themes.',
+subtitle: 'Bed variants crafted from matching [[Wool|wool]].',
           icon: '/assets/icons/meadow/rustic_bed.png',
           search: 'rustic linen jacquard plaid chambray tweed warped straw bed meadow',
           details: true,
           detailsMiniGallery: true,
           detailsTitle: 'Variants',
-          detailsText: `Multiple bed variants matching the available textile styles, plus a straw bed.`,
+detailsText: `Multiple bed variants in different [[Wool|wool]] variants, plus a straw bed that may or may not come with complimentary back pain.`,
           items: [
             { id: 'rustic_bed', title: 'Rustic Bed', namespace_id: 'meadow:rustic_bed', icon: '/assets/icons/meadow/rustic_bed.png' },
             { id: 'linen_bed', title: 'Linen Bed', namespace_id: 'meadow:linen_bed', icon: '/assets/icons/meadow/linen_bed.png' },
@@ -208,13 +217,13 @@ Insert the required wood input and retrieve the crafted result.`,
           id: 'pine_sofa',
           title: 'Pine Sofa',
           namespace_id: 'meadow:pine_sofa_rustic',
-          subtitle: 'A decorative pine sofa available in multiple fabric variants.',
+subtitle: 'A decorative pine sofa available in multiple [[Wool|wool]] variants.',
           icon: '/assets/icons/meadow/pine_sofa_rustic.png',
           search: 'pine sofa rustic linen jacquard plaid chambray tweed warped meadow',
           details: true,
           detailsMiniGallery: true,
           detailsTitle: 'Variants',
-          detailsText: `The Pine Sofa comes in several fabric styles for different interior themes.`,
+detailsText: `The Pine Sofa is available in multiple [[Wool|wool]] variants to match different interiors.`,
           items: [
             { id: 'pine_sofa_rustic', title: 'Rustic', namespace_id: 'meadow:pine_sofa_rustic', icon: '/assets/icons/meadow/pine_sofa_rustic.png' },
             { id: 'pine_sofa_linen', title: 'Linen', namespace_id: 'meadow:pine_sofa_linen', icon: '/assets/icons/meadow/pine_sofa_linen.png' },
@@ -307,7 +316,7 @@ Use without an item to open and close it.`,
         {
           id: 'windows',
           title: 'Windows',
-          subtitle: 'Available as blocks and panes.',
+subtitle: 'Window variants available as full blocks and panes.',
           icon: '/assets/icons/meadow/pine_window.png',
           search: 'window pane artisan ornate pine meadow glass',
           details: true,
@@ -398,8 +407,8 @@ It can also be used as an efficient fuel source in furnaces and stove related bl
   ]
 },
 {
-id: 'floral_decor',
-title: 'Floral Decor',
+id: 'flower_pots',
+title: 'Flower Pots',
 subtitle: 'Decorative elements for displaying flowers.',
   icon: '/assets/icons/meadow/wooden_flower_pot.png',
   search: 'wheelbarrow wooden flower pot wooden flower box small wooden flower pot small flowers tall flowers decoration',
@@ -460,6 +469,97 @@ These Wool variants can also be produced through [[Felting|felting_needle]].`,
     { id: 'warped_carpet', title: 'Warped Carpet', namespace_id: 'meadow:warped_carpet', icon: '/assets/icons/meadow/warped_carpet.png' }
   ]
 },
+{
+  id: 'camera',
+  title: 'Camera',
+  namespace_id: 'meadow:camera',
+  subtitle: 'A decorative camera block.',
+  icon: '/assets/icons/meadow/camera.png',
+  search: 'camera decoration block'
+},
+{
+  id: 'milk_can',
+  title: 'Milk Can',
+  namespace_id: 'meadow:milk_can',
+  subtitle: 'A sturdy milk container that keeps fresh milk close at hand.',
+  icon: '/assets/icons/meadow/milk_can.png',
+  search: 'milk can milk bucket wooden milk bucket bucket wooden bucket cow fill level',
+  details: true,
+  detailsTitle: 'Usage',
+  detailsText: `The Milk Can stores milk in four levels and serves as a small dairy reserve for your farm.
+
+Pour milk in using a Milk Bucket or Wooden Milk Bucket. Use an empty Bucket or Wooden Bucket to draw milk back out.
+
+If cows are nearby, the can will slowly refill itself over time until it is full.`,
+  detailsBullets: [
+    'Stores milk in 4 levels',
+    'Fill with Milk Bucket or Wooden Milk Bucket',
+    'Take milk with Bucket or Wooden Bucket',
+    'Slowly refills when cows are within 3 blocks'
+  ]
+},
+{
+  id: 'oil_lantern',
+  title: 'Oil Lantern',
+  namespace_id: 'meadow:oil_lantern',
+  subtitle: 'A rustic lantern providing light.',
+  icon: '/assets/icons/meadow/oil_lantern.png',
+  search: 'oil lantern rustic light decoration'
+},
+{
+  id: 'doormat',
+  title: 'Doormat',
+  namespace_id: 'meadow:doormat',
+  subtitle: 'A decorative floor mat that connects horizontally.',
+  icon: '/assets/icons/meadow/doormat.png',
+  search: 'doormat decoration floor horizontal connect'
+},
+{
+  id: 'climbing_rope',
+  title: 'Climbing Rope',
+  namespace_id: 'meadow:climbing_rope',
+  subtitle: 'Attachable rope that extends downward up to 12 blocks and can be climbed.',
+  icon: '/assets/icons/meadow/climbing_rope.png',
+  search: 'climbing rope attach underside extend 12 blocks climb',
+  details: true,
+  detailsTitle: 'Usage',
+  detailsText: `The Climbing Rope can be attached to the underside of blocks.
+
+It extends downward up to 12 blocks and can be climbed like a ladder.`
+},
+{
+  id: 'watering_can',
+  title: 'Watering Can',
+  namespace_id: 'meadow:watering_can_item',
+  subtitle: 'A refillable watering tool used to accelerate plant growth.',
+  icon: '/assets/icons/meadow/watering_can.png',
+  search: 'watering can water bone meal plant growth 25 uses',
+  details: true,
+  detailsTitle: 'Usage',
+  detailsText: `The Watering Can can be filled with water.
+
+By default, it provides 25 applications before needing to be refilled.
+
+Using it on crops or plants applies a bone meal effect.`
+},
+{
+  id: 'completionist_banner',
+  title: 'Completionist Banner',
+  namespace_id: 'meadow:meadow_banner',
+  subtitle: 'A reward banner for completing all Meadow cheese recipes.',
+  icon: '/assets/icons/meadow/completionist_banner.png',
+  search: 'completionist banner reward cheese advancements meadow',
+  details: true,
+  detailsTitle: 'Reward',
+  detailsText: `The Completionist Banner is awarded to players who have crafted all different [[Cheese|cheese_wheel]] variants.
+
+While placed, it grants nearby players a temporary Haste effect.`,
+  detailsBullets: [
+    'Reward for crafting all cheese variants',
+    'Tracked through advancements',
+    'Grants Haste to nearby players when placed'
+  ]
+}
       ]
        },
        {
@@ -576,27 +676,6 @@ These Wool variants can also be produced through [[Felting|felting_needle]].`,
                { id: 'cheese_stick', title: 'Cheese Stick', namespace_id: 'meadow:cheese_stick', icon: '/assets/icons/meadow/cheese_stick.png' },
                { id: 'sausage_with_cheese', title: 'Sausage with Cheese', namespace_id: 'meadow:sausage_with_cheese', icon: '/assets/icons/meadow/sausage_with_cheese.png' },
                { id: 'roasted_ham', title: 'Roasted Ham', namespace_id: 'meadow:roasted_ham', icon: '/assets/icons/meadow/roasted_ham.png' }
-             ]
-           },
-           {
-             id: 'buffalo_meat',
-             title: 'Buffalo Meat',
-             namespace_id: 'meadow:water_buffalo',
-             subtitle: 'Raw meat dropped by water buffalo.',
-             icon: '/assets/icons/meadow/raw_buffalo_meat.png',
-             search: 'buffalo meat raw cooked food water buffalo drop',
-             details: true,
-             detailsTitle: 'Cooked Variant',
-             detailsText: `Buffalo Meat can be cooked to obtain Cooked Buffalo Meat.`,
-             items: [
-               {
-                 id: 'cooked_buffalo_meat',
-                 title: 'Cooked Buffalo Meat',
-                 namespace_id: 'meadow:cooked_buffalo_meat',
-                 subtitle: 'Cooked buffalo meat.',
-                 icon: '/assets/icons/meadow/cooked_buffalo_meat.png',
-                 search: 'buffalo meat cooked food'
-               }
              ]
            },
 {
@@ -882,10 +961,47 @@ When killed, they drop [[Warped Wool|warped_wool]].`,
         {
           id: 'config',
           title: 'Configuration',
-          subtitle: 'Most Meadow features can be adjusted via a configuration file.',
+          subtitle: 'Some Meadow features can be adjusted via a configuration file.',
           icon: '/assets/icons/misc/config.png',
           search: 'config configuration settings options meadow'
-        }
+        },
+        {
+          id: 'villagers',
+          title: 'Villagers',
+subtitle: 'Two new villager professions: Cheesemaker and Hermit.',
+          icon: '/assets/icons/misc/emerald.png',
+          search: 'villager cheesemaker hermit trades cheese wood meadow profession workstation',
+          details: true,
+          detailsTitle: 'Professions',
+          detailsText: `Meadow introduces two custom Villager professions: the Cheesemaker and the Hermit.
+
+        The Cheesemaker works at the [[Cheese Form|cheese_form]] and helps keep your dairy setup running with useful trades, from ingredients to finished cheese.
+
+        The Hermit works at the [[Woodcutter|woodcutter]] and offers a small but practical selection of pine materials, tools, and everyday supplies.`,
+          detailsBullets: [
+            'Cheesemaker uses the Cheese Form as workstation',
+            'Trades dairy ingredients, milk tools, and cheese',
+            'Hermit uses the Woodcutter as workstation',
+            'Trades pine materials, utility items, and supplies'
+          ]
+        },
+              {
+                  id: 'loot',
+                  title: 'Loot and Exploration',
+                  subtitle: 'Certain items and ingredients can be found while exploring the world.',
+                  icon: '/assets/icons/misc/chest.png',
+                  search: 'loot chest dungeon village exploration items ingredients',
+                  details: true,
+                  detailsTitle: 'Where to find loot',
+                  detailsText: `Some items and ingredients can be found naturally while exploring the world.
+
+        They may appear in various loot containers, such as village chests, dungeon chests, or other generated structures.`,
+                  detailsBullets: [
+                    'Items and ingredients can appear in loot chests',
+                    'Found in villages, dungeons, and other structures',
+                    'Encourages exploration alongside brewing'
+                  ]
+                }
       ]
     }
   ],

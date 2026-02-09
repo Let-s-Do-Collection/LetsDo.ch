@@ -86,7 +86,8 @@ The Potions placed inside the Cauldron are also visually displayed while brewing
           id: 'coffee_beans',
           title: 'Coffee Beans',
           namespace_id: 'herbalbrews:coffee_beans',
-          subtitle: 'Obtained by harvesting [[Wild Coffee|wild_coffee]]. Can be planted on Farmland to grow Coffee Plants.',
+          subtitle:
+            'Obtained by harvesting [[Wild Coffee|wild_coffee]]. Can be planted on Farmland to grow Coffee Plants.',
           icon: '/assets/icons/herbalbrews/coffee_beans.png',
           search: 'coffee beans wild coffee harvest seeds coffee plant'
         },
@@ -115,7 +116,11 @@ The Potions placed inside the Cauldron are also visually displayed while brewing
           details: true,
           detailsTitle: 'Overview',
           detailsText: `HerbalBrews includes two wearable hats.`,
-          detailsBullets: ['Includes [[Witch Hat|witch_hat]] and [[Top Hat|top_hat]]', 'Worn in the head slot', 'Reduces magic damage'],
+          detailsBullets: [
+            'Includes [[Witch Hat|witch_hat]] and [[Top Hat|top_hat]]',
+            'Worn in the head slot',
+            'Reduces magic damage'
+          ],
           items: [
             {
               id: 'witch_hat',
