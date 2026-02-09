@@ -332,11 +332,11 @@ subtitle: 'Window variants available as full blocks and panes.',
           ]
         },
         {
-          id: 'pine_shutters',
-          title: 'Pine Shutters',
-          subtitle: 'Decorative shutters that can be opened and closed with right-click.',
+          id: 'pine_shutter',
+          title: 'Pine Shutter',
+          subtitle: 'Decorative shutter that can be opened and closed with right-click.',
           icon: '/assets/icons/meadow/pine_shutter.png',
-          search: 'pine shutters window shutters open close right click decoration'
+          search: 'pine shutters window shutter open close right click decoration'
         },
 {
   id: 'tiled_stove',
@@ -410,7 +410,7 @@ It can also be used as an efficient fuel source in furnaces and stove related bl
 id: 'flower_pots',
 title: 'Flower Pots',
 subtitle: 'Decorative elements for displaying flowers.',
-  icon: '/assets/icons/meadow/wooden_flower_pot.png',
+  icon: '/assets/icons/meadow/wooden_flower_pot_big.png',
   search: 'wheelbarrow wooden flower pot wooden flower box small wooden flower pot small flowers tall flowers decoration',
   details: true,
   detailsBullets: [
@@ -420,9 +420,9 @@ subtitle: 'Decorative elements for displaying flowers.',
   ],
   items: [
     { id: 'wheelbarrow', title: 'Wheelbarrow', namespace_id: 'meadow:wheelbarrow', icon: '/assets/icons/meadow/wheelbarrow.png' },
-    { id: 'wooden_flower_pot', title: 'Wooden Flower Pot', namespace_id: 'meadow:wooden_flower_pot', icon: '/assets/icons/meadow/wooden_flower_pot.png' },
+    { id: 'wooden_flower_pot_big', title: 'Wooden Flower Pot', namespace_id: 'meadow:wooden_flower_pot_big', icon: '/assets/icons/meadow/wooden_flower_pot_big.png' },
     { id: 'wooden_flower_box', title: 'Wooden Flower Box', namespace_id: 'meadow:wooden_flower_box', icon: '/assets/icons/meadow/wooden_flower_box.png' },
-    { id: 'small_wooden_flower_pot', title: 'Small Wooden Flower Pot', namespace_id: 'meadow:small_wooden_flower_pot', icon: '/assets/icons/meadow/small_wooden_flower_pot.png' }
+    { id: 'wooden_flower_pot_small', title: 'Small Wooden Flower Pot', namespace_id: 'meadow:wooden_flower_pot_small', icon: '/assets/icons/meadow/wooden_flower_pot_small.png' }
   ]
 },
 {
@@ -664,18 +664,17 @@ While placed, it grants nearby players a temporary Haste effect.`,
                { id: 'cheese_tart', title: 'Cheese Tart', namespace_id: 'meadow:cheese_tart', icon: '/assets/icons/meadow/cheese_tart.png' },
                { id: 'cheesecake_slice', title: 'Cheesecake Slice', namespace_id: 'meadow:cheesecake_slice', icon: '/assets/icons/meadow/cheesecake_slice.png' },
                { id: 'cheese_tart_slice', title: 'Cheese Tart Slice', namespace_id: 'meadow:cheese_tart_slice', icon: '/assets/icons/meadow/cheese_tart_slice.png' },
-               { id: 'piece_of_cheese', title: 'Piece of Cheese', namespace_id: 'meadow:piece_of_cheese', icon: '/assets/icons/meadow/piece_of_cheese.png' },
-               { id: 'piece_of_sheep_cheese', title: 'Piece of Sheep Cheese', namespace_id: 'meadow:piece_of_sheep_cheese', icon: '/assets/icons/meadow/piece_of_sheep_cheese.png' },
-               { id: 'piece_of_grain_cheese', title: 'Piece of Grain Cheese', namespace_id: 'meadow:piece_of_grain_cheese', icon: '/assets/icons/meadow/piece_of_grain_cheese.png' },
-               { id: 'piece_of_amethyst_cheese', title: 'Piece of Amethyst Cheese', namespace_id: 'meadow:piece_of_amethyst_cheese', icon: '/assets/icons/meadow/piece_of_amethyst_cheese.png' },
-               { id: 'piece_of_buffalo_cheese', title: 'Piece of Buffalo Cheese', namespace_id: 'meadow:piece_of_buffalo_cheese', icon: '/assets/icons/meadow/piece_of_buffalo_cheese.png' },
-               { id: 'piece_of_goat_cheese', title: 'Piece of Goat Cheese', namespace_id: 'meadow:piece_of_goat_cheese', icon: '/assets/icons/meadow/piece_of_goat_cheese.png' },
-               { id: 'piece_of_warped_cheese', title: 'Piece of Warped Cheese', namespace_id: 'meadow:piece_of_warped_cheese', icon: '/assets/icons/meadow/piece_of_warped_cheese.png' },
-               { id: 'cheese_sandwich', title: 'Cheese Sandwich', namespace_id: 'meadow:cheese_sandwich', icon: '/assets/icons/meadow/cheese_sandwich.png' },
+          { id: 'cheese_slice', title: 'Piece of Cheese', namespace_id: 'meadow:piece_of_cheese', icon: '/assets/icons/meadow/cheese_slice.png' },
+          { id: 'sheep_cheese_slice', title: 'Piece of Sheep Cheese', namespace_id: 'meadow:piece_of_sheep_cheese', icon: '/assets/icons/meadow/sheep_cheese_slice.png' },
+          { id: 'grain_cheese_slice', title: 'Piece of Grain Cheese', namespace_id: 'meadow:piece_of_grain_cheese', icon: '/assets/icons/meadow/grain_cheese_slice.png' },
+          { id: 'amethyst_cheese_slice', title: 'Piece of Amethyst Cheese', namespace_id: 'meadow:piece_of_amethyst_cheese', icon: '/assets/icons/meadow/amethyst_cheese_slice.png' },
+          { id: 'buffalo_cheese_slice', title: 'Piece of Buffalo Cheese', namespace_id: 'meadow:piece_of_buffalo_cheese', icon: '/assets/icons/meadow/buffalo_cheese_slice.png' },
+          { id: 'goat_cheese_slice', title: 'Piece of Goat Cheese', namespace_id: 'meadow:piece_of_goat_cheese', icon: '/assets/icons/meadow/goat_cheese_slice.png' },
+          { id: 'warped_cheese_slice', title: 'Warped Cheese Slice', namespace_id: 'meadow:piece_of_warped_cheese', icon: '/assets/icons/meadow/warped_cheese_slice.png' },               { id: 'cheese_sandwich', title: 'Cheese Sandwich', namespace_id: 'meadow:cheese_sandwich', icon: '/assets/icons/meadow/cheese_sandwich.png' },
                { id: 'cheese_roll', title: 'Cheese Roll', namespace_id: 'meadow:cheese_roll', icon: '/assets/icons/meadow/cheese_roll.png' },
                { id: 'cheese_stick', title: 'Cheese Stick', namespace_id: 'meadow:cheese_stick', icon: '/assets/icons/meadow/cheese_stick.png' },
                { id: 'sausage_with_cheese', title: 'Sausage with Cheese', namespace_id: 'meadow:sausage_with_cheese', icon: '/assets/icons/meadow/sausage_with_cheese.png' },
-               { id: 'roasted_ham', title: 'Roasted Ham', namespace_id: 'meadow:roasted_ham', icon: '/assets/icons/meadow/roasted_ham.png' }
+               { id: 'roasted_buffalo_ham', title: 'Roasted Buffalo Ham', namespace_id: 'meadow:roasted_buffalo_ham', icon: '/assets/icons/meadow/roasted_buffalo_ham.png' }
              ]
            },
 {
@@ -699,40 +698,7 @@ While placed, it grants nearby players a temporary Haste effect.`,
     }
   ]
 },
-{
-  id: 'foods',
-  title: 'Foods',
-  subtitle: 'Cheese specialties and savory meals.',
-  icon: '/assets/icons/meadow/cheese_sandwich.png',
-  search: 'cheesecake cheese tart cheese wheel cheesecake slice cheese tart slice cheese sandwich roll stick raw buffalo meat cooked buffalo meat roasted ham sausage with cheese',
-  details: true,
-  detailsTitle: 'Included Items',
-  detailsText: `Meadow adds a range of cheese dishes, preserved wheels, baked desserts, and filling meals.
 
-From full cheese wheels and sliced cakes to simple sandwiches and cooked buffalo cuts, these foods are directly tied into Meadow’s livestock and cheese systems.`,
-items: [
-  { id: 'cheesecake', title: 'Cheesecake', namespace_id: 'meadow:cheesecake', icon: '/assets/icons/meadow/cheesecake.png' },
-  { id: 'cheese_tart', title: 'Cheese Tart', namespace_id: 'meadow:cheese_tart', icon: '/assets/icons/meadow/cheese_tart.png' },
-  { id: 'cheese_wheel', title: 'Cheese Wheel', namespace_id: 'meadow:cheese_wheel', icon: '/assets/icons/meadow/cheese_wheel.png' },
-
-  { id: 'cheesecake_slice', title: 'Cheesecake Slice', namespace_id: 'meadow:cheesecake_slice', icon: '/assets/icons/meadow/cheesecake_slice.png' },
-  { id: 'cheese_tart_slice', title: 'Cheese Tart Slice', namespace_id: 'meadow:cheese_tart_slice', icon: '/assets/icons/meadow/cheese_tart_slice.png' },
-
-  { id: 'piece_of_cheese', title: 'Piece of Cheese', namespace_id: 'meadow:piece_of_cheese', icon: '/assets/icons/meadow/piece_of_cheese.png' },
-  { id: 'piece_of_sheep_cheese', title: 'Piece of Sheep Cheese', namespace_id: 'meadow:piece_of_sheep_cheese', icon: '/assets/icons/meadow/piece_of_sheep_cheese.png' },
-  { id: 'piece_of_grain_cheese', title: 'Piece of Grain Cheese', namespace_id: 'meadow:piece_of_grain_cheese', icon: '/assets/icons/meadow/piece_of_grain_cheese.png' },
-  { id: 'piece_of_amethyst_cheese', title: 'Piece of Amethyst Cheese', namespace_id: 'meadow:piece_of_amethyst_cheese', icon: '/assets/icons/meadow/piece_of_amethyst_cheese.png' },
-  { id: 'piece_of_buffalo_cheese', title: 'Piece of Buffalo Cheese', namespace_id: 'meadow:piece_of_buffalo_cheese', icon: '/assets/icons/meadow/piece_of_buffalo_cheese.png' },
-  { id: 'piece_of_goat_cheese', title: 'Piece of Goat Cheese', namespace_id: 'meadow:piece_of_goat_cheese', icon: '/assets/icons/meadow/piece_of_goat_cheese.png' },
-  { id: 'piece_of_warped_cheese', title: 'Piece of Warped Cheese', namespace_id: 'meadow:piece_of_warped_cheese', icon: '/assets/icons/meadow/piece_of_warped_cheese.png' },
-
-  { id: 'cheese_sandwich', title: 'Cheese Sandwich', namespace_id: 'meadow:cheese_sandwich', icon: '/assets/icons/meadow/cheese_sandwich.png' },
-  { id: 'cheese_roll', title: 'Cheese Roll', namespace_id: 'meadow:cheese_roll', icon: '/assets/icons/meadow/cheese_roll.png' },
-  { id: 'cheese_stick', title: 'Cheese Stick', namespace_id: 'meadow:cheese_stick', icon: '/assets/icons/meadow/cheese_stick.png' },
-  { id: 'sausage_with_cheese', title: 'Sausage with Cheese', namespace_id: 'meadow:sausage_with_cheese', icon: '/assets/icons/meadow/sausage_with_cheese.png' },
-  { id: 'roasted_ham', title: 'Roasted Ham', namespace_id: 'meadow:roasted_ham', icon: '/assets/icons/meadow/roasted_ham.png' }
-]
-}
       ]
     },
     {
@@ -893,7 +859,7 @@ Using Shears on them yields [[Rustic Wool|rustic_wool]].`,
       id: 'umbra_cattle',
       title: 'Umbra Cattle',
       subtitle: 'Cow variants commonly found in darker biomes.',
-      icon: '/assets/icons/meadow/entity/wooly_cow.png',
+      icon: '/assets/icons/meadow/entity/umbra_cow.png',
       search: 'wooly cow meadow animal milk dark forest chambray wool shear',
       details: true,
       detailsTitle: 'Spawning and Interaction',
@@ -1004,16 +970,5 @@ subtitle: 'Two new villager professions: Cheesemaker and Hermit.',
                 }
       ]
     }
-  ],
-  impressionsTitle: 'Everyday Scenes',
-  impressionsSubtitle: 'A closer look at how everything comes together ingame',
-  impressions: [
-    { src: '/assets/impressions/meadow/01.jpeg', caption: 'A pine kitchen with Cookpot and storage furniture' },
-    { src: '/assets/impressions/meadow/02.jpeg', caption: 'Cheese processing setup with Cheese Form and Cheese Rack' },
-    { src: '/assets/impressions/meadow/03.jpeg', caption: 'Limestone builds with alpine detailing' },
-    { src: '/assets/impressions/meadow/04.jpeg', caption: 'Cozy interiors with wardrobes, cabinets, and windows' },
-    { src: '/assets/impressions/meadow/05.jpeg', caption: 'Alpine flowers scattered across meadows' },
-    { src: '/assets/impressions/meadow/06.jpeg', caption: 'A tiled stove centerpiece in a cabin' },
-    { src: '/assets/impressions/meadow/07.jpeg', caption: 'Outdoor seating with stone furniture' }
   ]
 }

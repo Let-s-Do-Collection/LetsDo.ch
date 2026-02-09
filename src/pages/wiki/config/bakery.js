@@ -561,13 +561,5 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
         }
       ]
     }
-  ],
-  impressionsTitle: 'Everyday Scenes',
-  impressionsSubtitle: 'A closer look at how everything comes together ingame',
-  impressions: [
-    { src: '/assets/impressions/bakery/01.jpeg', caption: 'Baker Station with counters and storage' },
-    { src: '/assets/impressions/bakery/02.jpeg', caption: 'Cakes and slices on display pieces' },
-    { src: '/assets/impressions/bakery/03.jpeg', caption: 'Jars and jam variants' },
-    { src: '/assets/impressions/bakery/04.jpeg', caption: 'Bread pieces placed down and shared' }
   ]
 }

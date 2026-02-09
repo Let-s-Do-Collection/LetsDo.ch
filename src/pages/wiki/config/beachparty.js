@@ -793,8 +793,5 @@ It can be cooked to create Cooked Mussel Meat.`,
         }
       ]
     }
-  ],
-  impressionsTitle: 'Everyday Scenes',
-  impressionsSubtitle: 'Beachparty ingame',
-  impressions: []
+  ]
 }
