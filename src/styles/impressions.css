@@ -1,0 +1,187 @@
+.impressionsSection {
+  margin-top: 56px;
+  margin-bottom: 28px;
+}
+
+.impressionsShell {
+  width: 100%;
+  max-width: 1020px;
+  margin: 0 auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: 52px 1fr 52px;
+  align-items: center;
+  gap: 14px;
+}
+
+.impressionsViewport {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  border-radius: 22px;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  scrollbar-width: none;
+}
+
+.impressionsViewport::-webkit-scrollbar {
+  display: none;
+}
+
+.impressionsTrack {
+  display: flex;
+  width: 100%;
+}
+
+.impressionsSlide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+  appearance: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+}
+
+.impressionsFrame {
+  width: 100%;
+  height: 320px;
+  border-radius: 0;
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+.impressionsImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+
+.impressionsCaption {
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.4;
+  min-height: 18px;
+}
+
+.impressionsArrow {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.impressionsArrow span {
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.impressionsLightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: none;
+}
+
+.impressionsLightbox.isOpen {
+  display: block;
+}
+
+.impressionsLightboxBackdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.62);
+  border: 0;
+  cursor: pointer;
+}
+
+.impressionsLightboxInner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(1100px, calc(100vw - 28px));
+  max-height: calc(100vh - 28px);
+  background: var(--card);
+  border: 1px solid var(--borderStrong);
+  border-radius: 18px;
+  box-shadow: var(--shadowHover);
+  display: grid;
+  grid-template-columns: 58px 1fr 58px;
+  align-items: center;
+  padding: 18px;
+}
+
+.impressionsLightboxFigure {
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 10px;
+}
+
+.impressionsLightboxImg {
+  width: 100%;
+  height: min(70vh, 720px);
+  object-fit: contain;
+  border-radius: 14px;
+}
+
+.impressionsLightboxCaption {
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+body.isImpressionsOpen {
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .impressionsFrame {
+    height: 260px;
+  }
+}
+
+@media (max-width: 700px) {
+  .impressionsShell {
+    grid-template-columns: 44px 1fr 44px;
+  }
+
+  .impressionsArrow {
+    width: 44px;
+    height: 44px;
+  }
+
+  .impressionsArrow span {
+    font-size: 30px;
+  }
+
+  .impressionsFrame {
+    height: 220px;
+  }
+
+  .impressionsLightboxInner {
+    grid-template-columns: 44px 1fr 44px;
+    padding: 12px;
+  }
+}

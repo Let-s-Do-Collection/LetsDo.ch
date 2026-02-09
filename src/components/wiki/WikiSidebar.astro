@@ -1,0 +1,63 @@
+---
+const { activeWikiTitle, wikis, activeSlug, wikiHref, searchPlaceholder, sections, impressions } = Astro.props;
+---
+
+<aside class="wikiSidebarFixed" data-wiki-sidebar>
+  <div class="wikiSidebarInner" data-wiki-sidebar-inner>
+    <div class="wikiDropdown" id="wikiDropdown" data-open="false">
+      <button
+        class="wikiDropdownButton"
+        id="wikiDropdownButton"
+        type="button"
+        aria-haspopup="menu"
+        aria-expanded="false"
+      >
+        <span class="wikiDropdownLabel" id="wikiDropdownLabel">{activeWikiTitle}</span>
+        <span class="wikiDropdownChevron" aria-hidden="true"></span>
+      </button>
+
+      <div class="wikiDropdownMenu" id="wikiDropdownMenu" role="menu" hidden>
+        {wikis.map((w) => (
+          <a
+            class={`wikiDropdownItem ${w.slug === activeSlug ? "isActive" : ""}`}
+            href={wikiHref(w.slug)}
+            role="menuitem"
+            data-wiki-slug={w.slug}
+          >
+            <span class="wikiDropdownItemTitle">{w.title}</span>
+            {w.slug === activeSlug ? <span class="wikiDropdownCheck" aria-hidden="true">✓</span> : null}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <div class="wikiSidebarScroll">
+      <div class="wikiSideSearch">
+        <input
+          id="wikiSearchInput"
+          class="wikiSideSearchInput"
+          type="search"
+          placeholder={searchPlaceholder}
+          autocomplete="off"
+          spellcheck="false"
+        />
+      </div>
+
+      <div class="wikiSideHeading">Content</div>
+
+      <nav class="wikiSideNav">
+        {sections.map((section) => (
+          <a class="wikiSideLink" href={`#${section.id}`} data-section-link={section.id}>
+            {section.title}
+          </a>
+        ))}
+
+        {impressions.length ? (
+          <a class="wikiSideLink" href="#impressions" data-section-link="impressions">
+            Impressions
+          </a>
+        ) : null}
+      </nav>
+    </div>
+  </div>
+</aside>

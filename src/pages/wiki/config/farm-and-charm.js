@@ -1,0 +1,1538 @@
+export default {
+  slug: 'farm-and-charm',
+  title: 'Farm & Charm',
+  logo: '/assets/mod-logos/farm_and_charm.png',
+  aboutTitle: 'Welcome',
+  aboutSubtitle: 'Everything you need, in one place',
+  aboutText: `Welcome to the Farm & Charm Wiki.
+
+This is your home for blocks, items, mechanics, and quick guidance for Farm & Charm.
+
+Farm & Charm is the food focused foundation of the Let’s Do Food ecosystem. It helps shared systems work together across mods, especially around cooking, processing, storage, and agriculture.
+
+And of course it also adds a lot of cozy farming content, from practical tools to decorative details that feel right at home in survival gameplay.
+
+`,
+  sections: [
+    {
+      id: 'stations',
+      title: 'Stations and Processing',
+      subtitle: 'Workstations and interactive elements used for cooking, processing, and ingredient preparation.',
+      entries: [
+        {
+          id: 'stove',
+          title: 'Stove',
+          namespace_id: 'farm_and_charm:stove',
+          subtitle: 'Your main Station for Baking and a Heat Source for Cooking.',
+          icon: '/assets/icons/farm-and-charm/stove.png',
+          search: 'stove baking fuel heat cooking roaster pot',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `
+The Stove works similarly to other Crafting Stations. It has three Ingredient Input Slots, one Fuel Slot, and one Output Slot.
+
+Place the required Ingredients into the Input Slots, add a valid Fuel Item, and wait about twelve seconds for the Crafting Process to complete. The crafted Item then appears in the Output Slot.
+
+Items located in both the Input Slots and the Output Slot are also visually displayed inside the Block in the World.
+
+Related: [[Cooking Pot|cooking_pot]].`,
+          detailsBullets: [
+            'Three Ingredient Input Slots',
+            'One Fuel Slot and one Output Slot',
+            'Crafting takes about twelve seconds',
+            'Requires a valid Fuel Item such as Coal or Charcoal',
+            'Input and Output Items are visible in the Block Model',
+            'Related: [[Cooking Pot|cooking_pot]]'
+          ]
+        },
+        {
+          id: 'cooking_pot',
+          title: 'Cooking Pot',
+          namespace_id: 'farm_and_charm:cooking_pot',
+          subtitle: 'A cozy Station for preparing basic Meals, powered by Heat.',
+          icon: '/assets/icons/farm-and-charm/cooking_pot.png',
+          search:
+            'cooking pot meals basic hot surface stove magma campfire bubbles recipe book container slot output cooking',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Cooking Pot functions similarly to other Crafting Stations, but focuses on preparing basic Meals. It requires a Heat Source to operate and cannot be used on its own.
+
+The Cooking Pot has six Ingredient Input Slots, one Container Slot, and one Output Slot.
+
+After placing the Ingredients into the Input Slots, the Cooking Process takes about thirty seconds. Once completed, the prepared Meal appears in the Output Slot.
+
+To function, the Cooking Pot must be placed on a Hot Surface, such as a [[Stove|stove]], a Magma Block, or other Heat Sources. In some cases, it can also be placed directly on a Campfire. When active, this is indicated by rising Bubbles, Cooking Sounds, and a colored Fire Indicator in the Cooking Pot Interface.
+
+Related: [[Roaster|roaster]].`,
+          detailsBullets: [
+            'Six Ingredient Input Slots',
+            'One Container Slot and one Output Slot',
+            'Requires a valid Heat Source',
+            'Cooking takes about thirty seconds',
+            'Active State is shown by Bubbles, Sounds, and a colored Fire Indicator',
+            'Related: [[Roaster|roaster]]'
+          ]
+        },
+        {
+          id: 'roaster',
+          title: 'Roaster',
+          namespace_id: 'farm_and_charm:roaster',
+          subtitle: 'A large Cooking Station for preparing bigger Meals.',
+          icon: '/assets/icons/farm-and-charm/roaster.png',
+          search:
+            'roaster bigger meals large hot surface stove magma campfire smoke recipe book container slot output cooking',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Roaster works similarly to the [[Cooking Pot|cooking_pot]], but is designed for larger and more complex Meals. It requires a Heat Source and cannot operate on its own.
+
+The Roaster provides six Ingredient Input Slots, one Container Slot, and one Output Slot.
+
+After placing the required Ingredients into the Input Slots, the Cooking Process takes about sixty seconds. Once completed, the prepared Meal appears in the Output Slot.
+
+To function, the Roaster must be connected to a Heat Source, such as a [[Stove|stove]], a Magma Block, or other Hot Surfaces. It can also be used when positioned above a Campfire. When active, the Roaster emits rising Smoke and Cooking Sounds, and the Fire Indicator in the Interface changes from grayscale to colored.`,
+          detailsBullets: [
+            'Designed for larger and more complex Meals',
+            'Six Ingredient Input Slots',
+            'One Container Slot and one Output Slot',
+            'Requires a valid Heat Source',
+            'Cooking takes about sixty seconds',
+            'Active State is shown by Smoke, Sounds, and a colored Fire Indicator'
+          ]
+        },
+        {
+          id: 'mincer',
+          title: 'Mincer',
+          namespace_id: 'farm_and_charm:mincer',
+          subtitle: 'A crank-operated Tool for processing various Materials.',
+          icon: '/assets/icons/farm-and-charm/mincer.png',
+          search: 'mincer crank processing interact right click hold particles sound animation meat iron wood speed',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Mincer is an all-purpose Processing Tool that operates entirely through direct Interaction and does not provide a Graphical Interface.
+
+Valid Items can be inserted by Right-Clicking the Mincer. Once an Item is inside, the Crank can be operated by targeting the Mincer and holding the Right Mouse Button.
+
+The Processing Process is indicated through the Crank Animation, Particles, and Sound Effects. Once fully processed, the resulting Item exits through the Opening at the Bottom of the Mincer.
+
+Processing Time depends on the Material being processed. Meat is processed almost instantly, while harder Materials such as Wood or Iron require more time. The Processing Speed can be increased by holding another Item of the same type in your Hand while cranking.`,
+          detailsBullets: [
+            'No Interface, operates through direct Interaction',
+            'Insert Items via Right-Click',
+            'Operate the Crank by holding Right Mouse Button',
+            'Processing is shown through Animation, Particles, and Sounds',
+            'Output exits at the Bottom',
+            'Processing Time varies by Material',
+            'Holding an additional Item increases Processing Speed'
+          ]
+        },
+        {
+          id: 'crafting_bowl',
+          title: 'Crafting Bowl',
+          namespace_id: 'farm_and_charm:crafting_bowl',
+          subtitle: 'A manual Station for preparing Dough, Cereals, Salads, and more.',
+          icon: '/assets/icons/farm-and-charm/crafting_bowl.png',
+          search: 'crafting bowl dough cereals salads whisk stir interact no gui empty hand capacity animation',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Crafting Bowl is used to prepare various Ingredients such as Dough, Cereals, and Salads. Like the Mincer, it does not feature a Graphical Interface and relies entirely on direct Interaction.
+
+The Crafting Bowl can hold up to four Items at a time. Ingredients are added by placing them directly into the Bowl.
+
+Once the correct Ingredients are inside, the Mixing Process is started by stirring the Whisk inside the Bowl. This Process is visually represented through an Animation.
+
+An empty Hand is required to begin the Mixing Process.`,
+          detailsBullets: [
+            'No Interface, direct Interaction only',
+            'Holds up to four Ingredients',
+            'Used for Dough, Cereals, Salads, and similar Recipes',
+            'Start Mixing by stirring the Whisk',
+            'Mixing is shown through an Animation',
+            'Requires an empty Hand to operate'
+          ]
+        },
+        {
+          id: 'silo_copper',
+          title: 'Silo',
+          namespace_id: 'farm_and_charm:silo_copper',
+          subtitle: 'Modular Storage for drying Items, scaling with Size.',
+          icon: '/assets/icons/farm-and-charm/silo_copper.png',
+          search: 'silo modular expand width height capacity drying time hatch open close right click storage',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Silo is a modular Storage Block used for drying Items. It can be expanded both in Width and Height. A larger Silo provides higher Storage Capacity and reduces the required Drying Time.
+
+Items can be inserted directly by Right-Clicking the Silo with a valid Item. The Hatch of the Silo can be opened or closed through Interaction.
+
+Drying continues regardless of whether the Hatch is open or closed. However, when the Hatch is closed, dried Items will not be automatically released.`,
+          detailsBullets: [
+            'Modular Structure expandable in Width and Height',
+            'Larger Silos increase Capacity and reduce Drying Time',
+            'Insert Items via Right-Click',
+            'Right-Click to open or close the Hatch',
+            'Drying occurs even with the Hatch open',
+            'Closed Hatch prevents automatic Item Output'
+          ]
+        }
+      ]
+    },
+    {
+      id: 'farming',
+      title: 'Farming and Utility',
+      subtitle: 'Tools, structures, and mechanics that support everyday farming, animal care, and field management.',
+      entries: [
+        {
+          id: 'fertilized_soil',
+          title: 'Fertilized Soil',
+          namespace_id: 'farm_and_charm:fertilized_soil',
+          subtitle: 'Boost your Fields and upgrade Farmland.',
+          icon: '/assets/icons/farm-and-charm/fertilized_soil.png',
+          search: 'fertilized soil hoe convert fertilized farmland pitchfork bone meal effect radius crops uses 4'
+        },
+        {
+          id: 'fertilized_farmland',
+          title: 'Fertilized Farmland',
+          namespace_id: 'farm_and_charm:fertilized_farmland',
+          subtitle: 'Enhanced Farmland that supports faster Crop Growth.',
+          icon: '/assets/icons/farm-and-charm/fertilized_farmland.png',
+          search: 'fertilized farmland enhanced cannot trample random bone meal chance crop growth',
+          details: true,
+          detailsTitle: 'Function',
+          detailsText:
+            'Fertilized Farmland is an upgraded version of regular Farmland. It cannot be trampled and provides passive support for Crops planted on it.',
+          detailsBullets: [
+            'Cannot be trampled by Players or Mobs',
+            'Has a small chance to randomly apply the Bone Meal effect to the planted Crop',
+            'Works automatically without Player interaction'
+          ]
+        },
+        {
+          id: 'feeding_trough',
+          title: 'Feeding Trough',
+          namespace_id: 'farm_and_charm:feeding_trough',
+          subtitle: 'Automatically feeds Animals and helps them get ready to Breed.',
+          icon: '/assets/icons/farm-and-charm/feeding_trough.png',
+          search: 'feeding trough seeds capacity animals breeding automatic nearby eat periodically',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText:
+            'The Feeding Trough automatically feeds Animals in the surrounding area and helps them get ready to Breed.',
+          detailsBullets: [
+            'Can be filled with up to 4 Seed Items',
+            'Friendly and Neutral Animals will periodically walk to the Feeding Trough to eat',
+            'After eating, Animals become ready to Mate',
+            'All Seed Types work for all Animals'
+          ]
+        },
+        {
+          id: 'water_trough',
+          title: 'Water Trough',
+          namespace_id: 'farm_and_charm:water_trough',
+          subtitle: 'A simple trough that provides water for nearby Animals.',
+          icon: '/assets/icons/farm-and-charm/water_trough.png',
+          search: 'water trough animals farm utility hydration breeding cooldown',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Water Trough supplies Nearby Animals with Water. Animals that drink from it have their Breeding Cooldown reduced by 10 seconds.`
+        },
+        {
+          id: 'water_sprinkler',
+          title: 'Water Sprinkler',
+          namespace_id: 'farm_and_charm:water_sprinkler',
+          subtitle: 'Automatically irrigates nearby Farmland without requiring a water source.',
+          icon: '/assets/icons/farm-and-charm/water_sprinkler.png',
+          search: 'water sprinkler irrigate farmland radius no water supply automatic farming utility decoration'
+        },
+        {
+          id: 'pet_bowl',
+          title: 'Pet Bowl',
+          namespace_id: 'farm_and_charm:pet_bowl',
+          subtitle: 'A cozy feeding spot for Pets, with support for Cat Food, Dog Food, and a custom Name Tag.',
+          icon: '/assets/icons/farm-and-charm/pet_bowl.png',
+          search: 'pet bowl cat dog food feeding name tag shears shift right click screen rename decoration',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Pet Bowl can be filled with [[Cat Food|cat_food]] or [[Dog Food|dog_food]]. It can also hold a Name Tag to unlock a small management Screen.`,
+          detailsBullets: [
+            'Place Cat Food or Dog Food into the Pet Bowl with Right-Click.',
+            'Add a Name Tag with Right-Click to enable Pet Bowl customization.',
+            'While a Name Tag is attached: Hold Shift and Right-Click to open the Pet Bowl Screen.',
+            'Remove the Name Tag using Shears to get the Name Tag back.'
+          ]
+        },
+        {
+          id: 'chicken_coop',
+          title: 'Chicken Coop',
+          namespace_id: 'farm_and_charm:chicken_coop',
+          subtitle: 'Stores Chickens and collects Eggs for easy pickup.',
+          icon: '/assets/icons/farm-and-charm/chicken_coop.png',
+          search: 'chicken coop store chickens eggs collect leash pitchfork release radius 7',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Chicken Coop can store nearby Chickens and collects their Eggs inside. Interact to pick up Eggs, or use a [[Pitchfork|pitchfork]] to release stored Chickens.`,
+          detailsBullets: [
+            'Collect Eggs by interacting: All stored Eggs are given to you at once.',
+            'Leash a Chicken to yourself and bring it close: If the Coop has space, it will take the leashed Chicken in a 7 Block radius.',
+            'Use a Pitchfork on the Coop to release all stored Chickens.',
+            'Eggs are tracked visually on the Block in Stages.'
+          ]
+        },
+        {
+          id: 'chicken_nest',
+          title: 'Chicken Nest',
+          namespace_id: 'farm_and_charm:chicken_nest',
+          subtitle: 'A cozy Nest where nearby Chickens lay their Eggs safely.',
+          icon: '/assets/icons/farm-and-charm/chicken_nest.png',
+          search: 'chicken nest coop farm eggs storage nearby chickens',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `Chickens in the surrounding area will naturally lay their Eggs inside the Chicken Nest instead of on the ground.`,
+          detailsBullets: [
+            'Nearby Chickens place their Eggs directly into the Nest.',
+            'Prevents Eggs from dropping on the ground.',
+            'Can store up to 2 Eggs at a time.'
+          ]
+        }
+      ]
+    },
+    {
+      id: 'decor',
+      title: 'Decor and Building',
+      subtitle: 'Decorative and structural elements used to build farms, barns, and rural spaces.',
+      entries: [
+        {
+          id: 'window_sill',
+          title: 'Window Sill',
+          namespace_id: 'farm_and_charm:window_sill',
+          subtitle: 'Decorate your farmhouse. Fits up to two small flowers.',
+          icon: '/assets/icons/farm-and-charm/window_sill.png',
+          search: 'window sill decorate farmhouse holds 2 small flowers tag #small_flowers'
+        },
+        {
+          id: 'tool_rack',
+          title: 'Tool Rack',
+          namespace_id: 'farm_and_charm:tool_rack',
+          subtitle: 'The ideal storage solution for your tools and pans.',
+          icon: '/assets/icons/farm-and-charm/tool_rack.png',
+          search: 'tool rack toolrack storage tools pans kitchen decor'
+        },
+        {
+          id: 'scarecrow',
+          title: 'Scarecrow',
+          namespace_id: 'farm_and_charm:scarecrow',
+          subtitle: 'A special Reward that boosts nearby Crop Growth.',
+          icon: '/assets/icons/farm-and-charm/scarecrow.png',
+          search:
+            'scarecrow reward cook all meals dishes completion unlock growth boost 10 percent range animated sways wind weather dungarees overalls pants funny',
+          details: true,
+          detailsTitle: 'Reward',
+          detailsText: `The Scarecrow is a special Reward for true completionists: Cook every Farm And Charm Meal at least once to unlock it. Once placed, it boosts nearby Crop Growth by 10 Percent and brings a little life to your fields with subtle animations.`,
+          detailsBullets: [
+            'Reward for Cooking every Farm And Charm Meal.',
+            'Boosts nearby Crop Growth by 10 Percent.',
+            'Animated: Sways gently with wind and weather.',
+            'It also has Dungarees: Take them off by interacting, or put them back on by using [[Dungarees|dungarees]] on the Scarecrow.'
+          ]
+        },
+        {
+          id: 'rope',
+          title: 'Rope',
+          namespace_id: 'farm_and_charm:rope',
+          subtitle: 'A flexible Utility Block for rustic Builds and Farming Setups.',
+          icon: '/assets/icons/farm-and-charm/rope.png',
+          search:
+            'rope rope knot knot utility building decoration lantern bell hang climbing crops support anchor connect corner vertical horizontal',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `Rope connects to nearby Blocks and can be used to build hanging lines, supports, and simple structures. It must be attached to something sturdy, or to a Rope Knot, otherwise it will not stay in place.`,
+          detailsBullets: [
+            'Connects in all Directions: North, South, East, West, Up, and Down.',
+            'Requires an Anchor: A sturdy Block Face, or a Rope Knot somewhere in the connected Rope Network.',
+            'Can support hanging Attachments like Lanterns and Bells.',
+            'Works with Climbing Crops: Rope can connect vertically to Climbing Crops above or below.'
+          ]
+        },
+        {
+          id: 'packed_dirt',
+          title: 'Packed Dirt',
+          namespace_id: 'farm_and_charm:packed_dirt',
+          subtitle: 'A compact Path Block for farms, yards, and rustic builds.',
+          icon: '/assets/icons/farm-and-charm/packed_dirt.png',
+          search: 'packed dirt path farm yard decoration trail road'
+        },
+        {
+          id: 'trampled_packed_dirt',
+          title: 'Trampled Packed Dirt',
+          namespace_id: 'farm_and_charm:trampled_packed_dirt',
+          subtitle: 'A worn Packed Dirt variant for frequently used Paths.',
+          icon: '/assets/icons/farm-and-charm/trampled_packed_dirt.png',
+          search: 'trampled packed dirt worn path farm yard trail road'
+        },
+        {
+          id: 'stable_floor',
+          title: 'Stable Floor',
+          namespace_id: 'farm_and_charm:stable_floor',
+          subtitle: 'A clean Floor Block for stables, barns, and animal areas.',
+          icon: '/assets/icons/farm-and-charm/stable_floor.png',
+          search: 'stable floor barn stable building decor animals pen'
+        },
+        {
+          id: 'trampled_stable_floor',
+          title: 'Trampled Stable Floor',
+          namespace_id: 'farm_and_charm:trampled_stable_floor',
+          subtitle: 'A worn Stable Floor variant for busy pens and walkways.',
+          icon: '/assets/icons/farm-and-charm/trampled_stable_floor.png',
+          search: 'trampled stable floor barn animals pen walkway worn'
+        },
+        {
+          id: 'straw_stable_floor',
+          title: 'Straw Stable Floor',
+          namespace_id: 'farm_and_charm:straw_stable_floor',
+          subtitle: 'A cozy Straw topped Floor Block for barns and stables.',
+          icon: '/assets/icons/farm-and-charm/straw_stable_floor.png',
+          search: 'straw stable floor barn straw animals cozy stable'
+        },
+        {
+          id: 'bag',
+          title: 'Bag',
+          subtitle: 'Decorative Bags representing different ingredients and farm goods.',
+          icon: '/assets/icons/farm-and-charm/onion_bag.png',
+          search: 'bag decoration ingredient sack strawberry carrot potato beetroot lettuce tomato corn onion flour'
+        },
+        {
+          id: 'grain_ball',
+          title: 'Grain Balls',
+          subtitle: 'Decorative bundles of grains used to add detail and atmosphere to fields and storage areas.',
+          icon: '/assets/icons/farm-and-charm/oat_ball.png',
+          search: 'grain ball oat barley food ingredient'
+        },
+        {
+          id: 'sturdy_ladder',
+          title: 'Sturdy Ladder',
+          namespace_id: 'farm_and_charm:sturdy_ladder',
+          subtitle: 'A sturdier Ladder that can extend upward by placing more on top.',
+          icon: '/assets/icons/farm-and-charm/sturdy_ladder.png',
+          search: 'sturdy ladder barn farm building climb extend stack place on ladder support walls ground'
+        },
+        {
+          id: 'pet_food_bags',
+          title: 'Pet Food Bags',
+          subtitle: 'Decorative sacks for storing dog and cat food in a rustic way.',
+          icon: '/assets/icons/farm-and-charm/cat_food_bag.png',
+          search: 'pet food bags dog food cat food sacks decorative storage stackable'
+        },
+        {
+          id: 'cattlegrid',
+          title: 'Cattlegrid',
+          namespace_id: 'farm_and_charm:cattlegrid',
+          subtitle: 'A practical grid that blocks livestock while letting players pass.',
+          icon: '/assets/icons/farm-and-charm/cattlegrid.png',
+          search: 'cattlegrid farm gate enclosure livestock cows sheep pigs horses block animals pass players',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Cattlegrid is designed to control animal movement without the need for gates or doors.`,
+          detailsBullets: [
+            'Livestock such as Cows, Sheep, Pigs, Chickens, and Horses are unable to cross the Cattlegrid and will stop when stepping onto it.',
+            'Players can walk across the Cattlegrid, but their movement is slightly slowed unless they are in Creative Mode.',
+            'Cats can cross the grid freely and even move slightly faster across it.',
+            'Ideal for farm entrances, paddocks, and animal enclosures where you want to keep animals contained while maintaining easy access.'
+          ]
+        }
+      ]
+    },
+    {
+      id: 'items',
+      title: 'Items, Ingredients, and Tools',
+      subtitle: 'Everyday items, ingredients, and tools used across cooking, farming, and processing.',
+      entries: [
+        {
+          id: 'fertilizer',
+          title: 'Fertilizer',
+          namespace_id: 'farm_and_charm:fertilizer',
+          subtitle: 'Enhanced bone meal that boosts crops over a large area.',
+          icon: '/assets/icons/farm-and-charm/fertilizer.png',
+          search: 'fertilizer enhanced bone meal apply large area crops growth farming'
+        },
+        {
+          id: 'compost',
+          title: 'Compost',
+          namespace_id: 'farm_and_charm:compost',
+          subtitle: 'A multi use growth boost for wide areas.',
+          icon: '/assets/icons/farm-and-charm/compost.png',
+          search: 'compost 10 uses apply bone meal wide area crops growth farming'
+        },
+        {
+          id: 'pitchfork',
+          title: 'Pitchfork',
+          namespace_id: 'farm_and_charm:pitchfork',
+          subtitle: 'A Farming Tool with a special use on Fertilized Soil.',
+          icon: '/assets/icons/farm-and-charm/pitchfork.png',
+          search: 'pitchfork hoe fertilized soil bone meal effect farming tool range crops uses durability',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Pitchfork is a versatile Farming Tool. It behaves like a regular Hoe for field work, but its unique feature is interacting with [[Fertilized Soil|fertilized_soil]] to boost nearby crops.`,
+          detailsBullets: [
+            'Fertilized Soil Interaction: Use the Pitchfork on Fertilized Soil to trigger a Bone Meal like Growth Boost in an area around the block.',
+            'Charges: Each Fertilized Soil Block has multiple Uses. Each Pitchfork activation consumes one Size level until the block is depleted.',
+            'Area of Effect: The Growth Boost affects Crops within a configurable Range around the Fertilized Soil Block.',
+            'Chance Based Growth: Each Crop in range has a chance to receive the Bone Meal effect, so repeated Uses are most effective on larger fields.'
+          ]
+        },
+        {
+          id: 'dungarees',
+          title: 'Dungarees',
+          namespace_id: 'farm_and_charm:dungarees',
+          subtitle: 'Workwear that rewards careful farming and provides subtle utility benefits.',
+          icon: '/assets/icons/farm-and-charm/dungarees.png',
+          search: 'dungarees workwear farming armor saturation farmland villager wool repair',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `Dungarees are a lightweight piece of farming workwear designed to support long-term agricultural gameplay. While worn, they unlock additional information and small quality-of-life improvements without replacing proper armor.`,
+          detailsBullets: [
+            'Saturation Insight: While wearing Dungarees, the current Saturation Level of nearby Animals becomes visible.',
+            'Farmland Protection: Farmland will not be trampled while you are wearing Dungarees.',
+            'Light Protection: Provides a small amount of Armor, offering minor protection during farm work.',
+            'Repairable: Dungarees can be repaired using Wool.',
+            'Villager Trade: Can be purchased from Farmer Villagers.'
+          ]
+        },
+        {
+          id: 'supply_cart',
+          title: 'Supply Cart',
+          namespace_id: 'farm_and_charm:supply_cart',
+          subtitle: 'A placeable Cart you can attach to a Horse and use as mobile Storage.',
+          icon: '/assets/icons/farm-and-charm/supply_cart.png',
+          search: 'supply cart placeable attach horse detach storage open mobile transport move supplies farm utility',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Supply Cart is a placeable Cart Item. Place it on the ground to spawn the Cart, then attach it to a Horse to move supplies around your Farm.`,
+          detailsBullets: [
+            'Place: Use the Item on the ground to place the Cart.',
+            'Attach: Attach the Cart to a Horse to start pulling it.',
+            'Detach: Detach the Cart at any time to park it.',
+            'Storage: Open the Cart to access its Storage while using it.'
+          ]
+        },
+        {
+          id: 'plow',
+          title: 'Plow',
+          namespace_id: 'farm_and_charm:plow',
+          subtitle: 'A placeable Cart Attachment for Horses that helps prepare fields faster.',
+          icon: '/assets/icons/farm-and-charm/plow.png',
+          search: 'plow cart placeable attachment attach horse detach toggle plowing farming fields till soil',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Plow is a placeable Cart Attachment. Place it to spawn the Plow, attach it to a Horse, then toggle it while pulling to work your fields.`,
+          detailsBullets: [
+            'Place: Use the Item on the ground to place the Plow.',
+            'Attach: Attach the Plow to a Horse to pull it.',
+            'Toggle: Toggle the Plow while pulling to enable or disable plowing.',
+            'Detach: Detach the Plow to stop using it and park it.'
+          ]
+        },
+        {
+          id: 'yeast',
+          title: 'Yeast',
+          namespace_id: 'farm_and_charm:yeast',
+          subtitle: 'A key ingredient for baking and fermentation.',
+          icon: '/assets/icons/farm-and-charm/yeast.png',
+          search: 'yeast baking fermentation bread pastries ingredient'
+        },
+        {
+          id: 'butter',
+          title: 'Butter',
+          namespace_id: 'farm_and_charm:butter',
+          subtitle: 'A rich ingredient used in many recipes.',
+          icon: '/assets/icons/farm-and-charm/butter.png',
+          search: 'butter ingredient cooking baking recipes dairy'
+        },
+        {
+          id: 'dough',
+          title: 'Dough',
+          namespace_id: 'farm_and_charm:dough',
+          subtitle: 'Base dough for breads and baked goods.',
+          icon: '/assets/icons/farm-and-charm/dough.png',
+          search: 'dough bread baking base ingredient pastries'
+        },
+        {
+          id: 'raw_pasta',
+          title: 'Raw Pasta',
+          namespace_id: 'farm_and_charm:raw_pasta',
+          subtitle: 'Uncooked pasta, ready to be prepared into meals.',
+          icon: '/assets/icons/farm-and-charm/raw_pasta.png',
+          search: 'raw pasta ingredient cooking meals noodles'
+        },
+        {
+          id: 'flour',
+          title: 'Flour',
+          namespace_id: 'farm_and_charm:flour',
+          subtitle: 'A basic ingredient for baking and cooking.',
+          icon: '/assets/icons/farm-and-charm/flour.png',
+          search: 'flour wheat baking ingredient cooking recipes'
+        },
+        {
+          id: 'minced_beef',
+          title: 'Minced Beef',
+          namespace_id: 'farm_and_charm:minced_beef',
+          subtitle: 'Processed meat used in various hearty meals.',
+          icon: '/assets/icons/farm-and-charm/minced_beef.png',
+          search: 'minced beef meat ingredient cooking meals'
+        },
+        {
+          id: 'lamb_ham',
+          title: 'Lamb Ham',
+          namespace_id: 'farm_and_charm:lamb_ham',
+          subtitle: 'A flavorful cut used in rustic dishes.',
+          icon: '/assets/icons/farm-and-charm/lamb_ham.png',
+          search: 'lamb ham meat ingredient cooking meals'
+        },
+        {
+          id: 'bacon',
+          title: 'Bacon',
+          namespace_id: 'farm_and_charm:bacon',
+          subtitle: 'A classic ingredient for savory meals.',
+          icon: '/assets/icons/farm-and-charm/bacon.png',
+          search: 'bacon pork meat ingredient cooking meals breakfast'
+        },
+        {
+          id: 'chicken_parts',
+          title: 'Chicken Parts',
+          namespace_id: 'farm_and_charm:chicken_parts',
+          subtitle: 'Useful for cooking and various recipes.',
+          icon: '/assets/icons/farm-and-charm/chicken_parts.png',
+          search: 'chicken parts meat ingredient cooking recipes'
+        },
+        {
+          id: 'cat_food',
+          title: 'Cat Food',
+          namespace_id: 'farm_and_charm:cat_food',
+          subtitle: 'Helps tame cats and keeps wild cats from running away.',
+          icon: '/assets/icons/farm-and-charm/cat_food.png',
+          search: 'cat food cats tame chance hold in hand wild cats wont run away pet'
+        },
+        {
+          id: 'dog_food',
+          title: 'Dog Food',
+          namespace_id: 'farm_and_charm:dog_food',
+          subtitle: 'Tames wolves instantly and grants a special effect.',
+          icon: '/assets/icons/farm-and-charm/dog_food.png',
+          search: 'dog food wolves tame first try effect wolf pet'
+        },
+        {
+          id: 'horse_fodder',
+          title: 'Horse Fodder',
+          namespace_id: 'farm_and_charm:horse_fodder',
+          subtitle: 'Tames horses instantly and grants a special effect.',
+          icon: '/assets/icons/farm-and-charm/horse_fodder.png',
+          search: 'horse fodder horses tame first try effect horse mount'
+        },
+        {
+          id: 'chicken_feed',
+          title: 'Chicken Feed',
+          namespace_id: 'farm_and_charm:chicken_feed',
+          subtitle: 'Feed chickens and gain a funny effect, even as a player.',
+          icon: '/assets/icons/farm-and-charm/chicken_feed.png',
+          search: 'chicken feed chickens cluck effect player consume',
+          details: true,
+          detailsTitle: 'Effect',
+          detailsText: `Chicken Feed grants the [[Cluck|mob_effects:cluck]] effect when consumed and also improves chicken related behavior when fed to Chickens.`
+        },
+        {
+          id: 'rotten_tomato',
+          title: 'Rotten Tomato',
+          namespace_id: 'farm_and_charm:rotten_tomato',
+          subtitle: 'Not edible, but a fun throwable that poisons targets.',
+          icon: '/assets/icons/farm-and-charm/rotten_tomato.png',
+          search: 'rotten tomato throwable weapon toss poison creatures friends prank'
+        }
+      ]
+    },
+    {
+      id: 'consumables',
+      title: 'Consumables',
+      subtitle: 'Meals, drinks, soups, and other consumable food items.',
+      entries: [
+        {
+          id: 'tea',
+          title: 'Tea',
+          subtitle: 'Brewed from wild plants and water in a [[Cooking Pot|cooking_pot]].',
+          icon: '/assets/icons/farm-and-charm/strawberry_tea.png',
+          search: 'tea brew wild plants water cooking pot herbalbrews tea jug glass bottle right click share friends'
+        },
+        {
+          id: 'food',
+          title: 'Food',
+          namespace_id: '',
+          subtitle: 'A small peek at the meal selection.',
+          icon: '/assets/icons/farm-and-charm/bacon_with_eggs.png',
+          search: 'food meals dishes soups pancakes bread meats saturation hunger effects',
+          details: true,
+          detailsTitle: 'All Meals',
+          detailsText: '',
+          items: [
+            {
+              id: 'oat_pancake',
+              title: 'Oat Pancake',
+              subtitle: '',
+              icon: '/assets/icons/farm-and-charm/oat_pancake.png',
+              search: 'oat pancake food meal'
+            },
+            {
+              id: 'roasted_corn',
+              title: 'Roasted Corn',
+              subtitle: '',
+              icon: '/assets/icons/farm-and-charm/roasted_corn.png',
+              search: 'roasted corn food meal'
+            },
+            {
+              id: 'potato_with_roast_meat',
+              title: 'Potato With Roast Meat',
+              subtitle: '',
+              icon: '/assets/icons/farm-and-charm/potato_with_roast_meat.png',
+              search: 'potato roast meat food meal'
+            },
+            {
+              id: 'baked_lamb_ham',
+              title: 'Baked Lamb Ham',
+              subtitle: '',
+              icon: '/assets/icons/farm-and-charm/baked_lamb_ham.png',
+              search: 'baked lamb ham food meal'
+            },
+            {
+              id: 'farmers_breakfast',
+              title: "Farmer's Breakfast",
+              subtitle: '',
+              icon: '/assets/icons/farm-and-charm/farmers_breakfast.png',
+              search: 'farmers breakfast food meal'
+            },
+            {
+              id: 'stuffed_chicken',
+              title: 'Stuffed Chicken',
+              subtitle: '',
+              icon: '/assets/icons/farm-and-charm/stuffed_chicken.png',
+              search: 'stuffed chicken food meal'
+            },
+            {
+              id: 'stuffed_rabbit',
+              title: 'Stuffed Rabbit',
+              subtitle: '',
+              icon: '/assets/icons/farm-and-charm/stuffed_rabbit.png',
+              search: 'stuffed rabbit food meal'
+            },
+            {
+              id: 'farmers_bread',
+              title: "Farmer's Bread",
+              subtitle: '',
+              icon: '/assets/icons/farm-and-charm/farmers_bread.png',
+              search: 'farmers bread food meal'
+            },
+            {
+              id: 'grandmothers_strawberry_cake',
+              title: "Grandmother's Strawberry Cake",
+              subtitle: '',
+              icon: '/assets/icons/farm-and-charm/grandmothers_strawberry_cake.png',
+              search: 'strawberry cake food meal'
+            },
+            {
+              id: 'farmer_salad',
+              title: 'Farmer Salad',
+              subtitle: '',
+              icon: '/assets/icons/farm-and-charm/farmer_salad.png',
+              search: 'salad food meal'
+            },
+            {
+              id: 'goulash',
+              title: 'Goulash',
+              subtitle: '',
+              icon: '/assets/icons/farm-and-charm/goulash.png',
+              search: 'goulash food meal'
+            },
+            {
+              id: 'simple_tomato_soup',
+              title: 'Simple Tomato Soup',
+              subtitle: '',
+              icon: '/assets/icons/farm-and-charm/simple_tomato_soup.png',
+              search: 'tomato soup food meal'
+            },
+            {
+              id: 'barley_soup',
+              title: 'Barley Soup',
+              subtitle: '',
+              icon: '/assets/icons/farm-and-charm/barley_soup.png',
+              search: 'barley soup food meal'
+            },
+            {
+              id: 'onion_soup',
+              title: 'Onion Soup',
+              subtitle: '',
+              icon: '/assets/icons/farm-and-charm/onion_soup.png',
+              search: 'onion soup food meal'
+            },
+            {
+              id: 'potato_soup',
+              title: 'Potato Soup',
+              subtitle: '',
+              icon: '/assets/icons/farm-and-charm/potato_soup.png',
+              search: 'potato soup food meal'
+            },
+            {
+              id: 'pasta_with_onion_sauce',
+              title: 'Pasta With Onion Sauce',
+              subtitle: '',
+              icon: '/assets/icons/farm-and-charm/pasta_with_onion_sauce.png',
+              search: 'pasta onion sauce food meal'
+            },
+            {
+              id: 'corn_grits',
+              title: 'Corn Grits',
+              subtitle: '',
+              icon: '/assets/icons/farm-and-charm/corn_grits.png',
+              search: 'corn grits food meal'
+            },
+            {
+              id: 'oatmeal_with_strawberries',
+              title: 'Oatmeal With Strawberries',
+              subtitle: '',
+              icon: '/assets/icons/farm-and-charm/oatmeal_with_strawberries.png',
+              search: 'oatmeal strawberries food meal'
+            },
+            {
+              id: 'sausage_with_oat_patty',
+              title: 'Sausage With Oat Patty',
+              subtitle: '',
+              icon: '/assets/icons/farm-and-charm/sausage_with_oat_patty.png',
+              search: 'sausage oat patty food meal'
+            },
+            {
+              id: 'lamb_with_corn',
+              title: 'Lamb With Corn',
+              subtitle: '',
+              icon: '/assets/icons/farm-and-charm/lamb_with_corn.png',
+              search: 'lamb corn food meal'
+            },
+            {
+              id: 'beef_patty_with_vegetables',
+              title: 'Beef Patty With Vegetables',
+              subtitle: '',
+              icon: '/assets/icons/farm-and-charm/beef_patty_with_vegetables.png',
+              search: 'beef patty vegetables food meal'
+            },
+            {
+              id: 'barley_patties_with_potatoes',
+              title: 'Barley Patties With Potatoes',
+              subtitle: '',
+              icon: '/assets/icons/farm-and-charm/barley_patties_with_potatoes.png',
+              search: 'barley patties potatoes food meal'
+            },
+            {
+              id: 'bacon_with_eggs',
+              title: 'Bacon With Eggs',
+              subtitle: '',
+              icon: '/assets/icons/farm-and-charm/bacon_with_eggs.png',
+              search: 'bacon eggs food meal'
+            },
+            {
+              id: 'chicken_wrapped_in_bacon',
+              title: 'Chicken Wrapped In Bacon',
+              subtitle: '',
+              icon: '/assets/icons/farm-and-charm/chicken_wrapped_in_bacon.png',
+              search: 'chicken bacon food meal'
+            },
+            {
+              id: 'cooked_salmon',
+              title: 'Cooked Salmon',
+              subtitle: '',
+              icon: '/assets/icons/farm-and-charm/cooked_salmon.png',
+              search: 'salmon food meal fish'
+            },
+            {
+              id: 'cooked_cod',
+              title: 'Cooked Cod',
+              subtitle: '',
+              icon: '/assets/icons/farm-and-charm/cooked_cod.png',
+              search: 'cod food meal fish'
+            },
+            {
+              id: 'roasted_chicken',
+              title: 'Roasted Chicken',
+              subtitle: '',
+              icon: '/assets/icons/farm-and-charm/roasted_chicken.png',
+              search: 'roasted chicken food meal'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: 'crops',
+      title: 'Crops, Wild Plants, and Worldgen',
+      subtitle: 'Crops and plants found growing naturally in the world, ready to be harvested or cultivated.',
+      entries: [
+        {
+          id: 'barley',
+          title: 'Barley',
+          namespace_id: 'farm_and_charm:wild_barley',
+          subtitle: 'Naturally growing Barley found in Plains, Sunflower Plains, Rivers, and Savannas.',
+          icon: '/assets/icons/farm-and-charm/wild_barley.png',
+          search: 'barley grain wild barley farming',
+          items: [
+            {
+              id: 'barley_seeds',
+              title: 'Barley Seeds',
+              namespace_id: 'farm_and_charm:barley_seeds',
+              subtitle: 'Used to cultivate Barley on farmland.',
+              icon: '/assets/icons/farm-and-charm/barley_seeds.png',
+              search: 'barley seeds farming crop'
+            },
+            {
+              id: 'barley',
+              title: 'Barley',
+              namespace_id: 'farm_and_charm:barley',
+              subtitle: 'A hardy grain used for soups and rustic meals.',
+              icon: '/assets/icons/farm-and-charm/barley.png',
+              search: 'barley crop plant growth'
+            },
+            {
+              id: 'wild_crop',
+              title: 'Barley Crop',
+              namespace_id: 'farm_and_charm:barley_crop',
+              subtitle: 'A fully grown Barley plant waiting to be harvested.',
+              icon: '/assets/icons/farm-and-charm/barley_crop.png',
+              search: 'wild barley worldgen plant'
+            }
+          ]
+        },
+        {
+          id: 'emmer',
+          title: 'Emmer',
+          namespace_id: 'farm_and_charm:wild_emmer',
+          subtitle:
+            'An ancient ancestor of modern Wheat, growing in the wild in Plains, Sunflower Plains, Rivers, and Forests, offering an alternative way to obtain Wheat Seeds.',
+          icon: '/assets/icons/farm-and-charm/wild_emmer.png',
+          search: 'emmer grain wild emmer wheat farming',
+          items: [
+            {
+              id: 'wheat_seeds',
+              title: 'Wheat Seeds',
+              namespace_id: 'minecraft:wheat_seeds',
+              subtitle: 'Used to cultivate Wheat on farmland.',
+              icon: '/assets/icons/farm-and-charm/wheat_seeds.png',
+              search: 'wheat seeds farming crop'
+            },
+            {
+              id: 'wheat',
+              title: 'Wheat',
+              namespace_id: 'minecraft:wheat',
+              subtitle: 'A cultivated grain descended from ancient Emmer.',
+              icon: '/assets/icons/farm-and-charm/wheat.png',
+              search: 'wheat grain crop'
+            },
+            {
+              id: 'wheat_crop',
+              title: 'Wheat Crop',
+              namespace_id: 'minecraft:wheat',
+              subtitle: 'A fully grown Wheat plant ready for harvest.',
+              icon: '/assets/icons/farm-and-charm/wheat_crop.png',
+              search: 'wheat crop plant growth'
+            }
+          ]
+        },
+        {
+          id: 'oat',
+          title: 'Oat',
+          namespace_id: 'farm_and_charm:wild_oat',
+          subtitle: 'A soft grain used for baking and warm breakfasts, generating naturally in Meadows and Taiga.',
+          icon: '/assets/icons/farm-and-charm/wild_oat.png',
+          search: 'oat grain wild oat farming',
+          items: [
+            {
+              id: 'oat_seeds',
+              title: 'Oat Seeds',
+              namespace_id: 'farm_and_charm:oat_seeds',
+              subtitle: 'Used to cultivate Oat on farmland.',
+              icon: '/assets/icons/farm-and-charm/oat_seeds.png',
+              search: 'oat seeds farming crop'
+            },
+            {
+              id: 'oat',
+              title: 'Oat',
+              namespace_id: 'farm_and_charm:oat',
+              subtitle: 'A soft and nourishing grain used for baking and warm breakfasts.',
+              icon: '/assets/icons/farm-and-charm/oat.png',
+              search: 'oat grain food'
+            },
+            {
+              id: 'oat_crop',
+              title: 'Oat Crop',
+              namespace_id: 'farm_and_charm:oat_crop',
+              subtitle: 'A fully grown Oat plant gently swaying in the wind, ready for harvest.',
+              icon: '/assets/icons/farm-and-charm/oat_crop.png',
+              search: 'oat crop plant growth'
+            }
+          ]
+        },
+        {
+          id: 'corn',
+          title: 'Corn',
+          namespace_id: 'farm_and_charm:wild_corn',
+          subtitle: 'A tall crop thriving in Plains, Savannas, and Badlands, well suited to warm and dry climates.',
+          icon: '/assets/icons/farm-and-charm/wild_corn.png',
+          search: 'corn crop wild corn farming',
+          items: [
+            {
+              id: 'kernels',
+              title: 'Corn Kernels',
+              namespace_id: 'farm_and_charm:kernels',
+              subtitle: 'Used to cultivate Corn on farmland.',
+              icon: '/assets/icons/farm-and-charm/kernels.png',
+              search: 'corn kernels farming crop'
+            },
+            {
+              id: 'corn',
+              title: 'Corn',
+              namespace_id: 'farm_and_charm:corn',
+              subtitle: 'A versatile grain harvested from tall stalks and used in many hearty meals.',
+              icon: '/assets/icons/farm-and-charm/corn.png',
+              search: 'corn grain food'
+            },
+            {
+              id: 'corn_crop',
+              title: 'Corn Crop',
+              namespace_id: 'farm_and_charm:corn_crop',
+              subtitle: 'A fully grown Corn plant standing tall and ready for harvest.',
+              icon: '/assets/icons/farm-and-charm/corn_crop.png',
+              search: 'corn crop plant growth'
+            }
+          ]
+        },
+        {
+          id: 'tomato',
+          title: 'Tomato',
+          namespace_id: 'farm_and_charm:tomato',
+          subtitle:
+            'A sun-loving crop found growing naturally in Plains, Savannas, and Badlands, capable of climbing [[Rope|rope]] when placed above and alongside the plant.',
+          icon: '/assets/icons/farm-and-charm/wild_tomatoes.png',
+          search: 'tomato crop wild tomatoes farming',
+          items: [
+            {
+              id: 'tomato_seeds',
+              title: 'Tomato Seeds',
+              namespace_id: 'farm_and_charm:tomato_seeds',
+              subtitle: 'Used to cultivate Tomatoes on farmland.',
+              icon: '/assets/icons/farm-and-charm/tomato_seeds.png',
+              search: 'tomato seeds farming crop'
+            },
+            {
+              id: 'tomato',
+              title: 'Tomato',
+              namespace_id: 'farm_and_charm:tomato',
+              subtitle: 'A juicy and flavorful ingredient used in soups and rustic meals.',
+              icon: '/assets/icons/farm-and-charm/tomato.png',
+              search: 'tomato food ingredient'
+            },
+            {
+              id: 'tomato_crop',
+              title: 'Tomato Crop',
+              namespace_id: 'farm_and_charm:tomato_crop',
+              subtitle: 'A fully grown Tomato plant heavy with ripe fruit, ready for harvest.',
+              icon: '/assets/icons/farm-and-charm/tomato_crop.png',
+              search: 'tomato crop plant growth'
+            }
+          ]
+        },
+        {
+          id: 'lettuce',
+          title: 'Lettuce',
+          namespace_id: 'farm_and_charm:lettuce',
+          subtitle: 'A light leafy crop growing naturally in Plains, Swamps, Meadows, and Forests.',
+          icon: '/assets/icons/farm-and-charm/wild_lettuce.png',
+          search: 'lettuce crop wild lettuce farming',
+          items: [
+            {
+              id: 'lettuce_seeds',
+              title: 'Lettuce Seeds',
+              namespace_id: 'farm_and_charm:lettuce_seeds',
+              subtitle: 'Used to cultivate Lettuce on farmland.',
+              icon: '/assets/icons/farm-and-charm/lettuce_seeds.png',
+              search: 'lettuce seeds farming crop'
+            },
+            {
+              id: 'lettuce',
+              title: 'Lettuce',
+              namespace_id: 'farm_and_charm:lettuce',
+              subtitle: 'A fresh and tender leaf used for salads and light meals.',
+              icon: '/assets/icons/farm-and-charm/lettuce.png',
+              search: 'lettuce food ingredient'
+            },
+            {
+              id: 'wild_crop',
+              title: 'Lettuce Crop',
+              namespace_id: 'farm_and_charm:lettuce_crop',
+              subtitle: 'A fully grown Lettuce plant ready to be harvested.',
+              icon: '/assets/icons/farm-and-charm/lettuce_crop.png',
+              search: 'lettuce crop plant growth'
+            }
+          ]
+        },
+        {
+          id: 'onion',
+          title: 'Onion',
+          namespace_id: 'farm_and_charm:onion',
+          subtitle:
+            'A sharp and aromatic crop growing naturally in Plains, Swamps, Meadows, and Forests. The Onion itself can be planted to grow more.',
+          icon: '/assets/icons/farm-and-charm/wild_onions.png',
+          search: 'onion crop wild onions farming',
+          items: [
+            {
+              id: 'onion',
+              title: 'Onion',
+              namespace_id: 'farm_and_charm:onion',
+              subtitle: 'A harvested Onion that can also be planted directly to grow a new crop.',
+              icon: '/assets/icons/farm-and-charm/onion.png',
+              search: 'onion item seed'
+            },
+            {
+              id: 'wild_crop',
+              title: 'Onion Crop',
+              namespace_id: 'farm_and_charm:onion_crop',
+              subtitle: 'A fully grown Onion plant rooted just below the soil, ready for harvest.',
+              icon: '/assets/icons/farm-and-charm/onion_crop.png',
+              search: 'onion crop plant growth'
+            }
+          ]
+        },
+        {
+          id: 'potato',
+          title: 'Potato',
+          namespace_id: 'minecraft:potato',
+          subtitle:
+            'Wild Potatoes growing naturally in Meadows, Taiga, and Forests, offering an alternative way to obtain Potatoes.',
+          icon: '/assets/icons/farm-and-charm/wild_potatoes.png',
+          search: 'potato crop wild potatoes farming',
+          items: [
+            {
+              id: 'potato',
+              title: 'Potato',
+              namespace_id: 'minecraft:potato',
+              subtitle: 'A harvested Potato that can also be planted directly to grow a new crop.',
+              icon: '/assets/icons/farm-and-charm/potato.png',
+              search: 'potato item seed'
+            },
+            {
+              id: 'wild_crop',
+              title: 'Potato Crop',
+              namespace_id: 'minecraft:potatoes',
+              subtitle: 'A fully grown Potato plant hidden below the soil, ready for harvest.',
+              icon: '/assets/icons/farm-and-charm/potato_crop.png',
+              search: 'potato crop plant growth'
+            }
+          ]
+        },
+        {
+          id: 'carrot',
+          title: 'Carrot',
+          namespace_id: 'minecraft:carrot',
+          subtitle:
+            'Wild Carrots growing naturally in Plains, Swamps, Meadows, and Forests, offering an alternative way to obtain Carrots.',
+          icon: '/assets/icons/farm-and-charm/wild_carrots.png',
+          search: 'carrot crop wild carrots farming',
+          items: [
+            {
+              id: 'carrot',
+              title: 'Carrot',
+              namespace_id: 'minecraft:carrot',
+              subtitle: 'A harvested Carrot that can also be planted directly to grow a new crop.',
+              icon: '/assets/icons/farm-and-charm/carrot.png',
+              search: 'carrot item seed'
+            },
+            {
+              id: 'wild_crop',
+              title: 'Carrot Crop',
+              namespace_id: 'minecraft:carrots',
+              subtitle: 'A fully grown Carrot plant hidden below ground, ready for harvest.',
+              icon: '/assets/icons/farm-and-charm/carrot_crop.png',
+              search: 'carrot crop plant growth'
+            }
+          ]
+        },
+        {
+          id: 'beetroot',
+          title: 'Beetroot',
+          namespace_id: 'minecraft:beetroot',
+          subtitle:
+            'Wild Beetroots growing naturally in Plains, Swamps, Meadows, and Forests, offering an alternative way to obtain Beetroot Seeds.',
+          icon: '/assets/icons/farm-and-charm/wild_beetroots.png',
+          search: 'beetroot crop wild beetroots farming',
+          items: [
+            {
+              id: 'beetroot_seeds',
+              title: 'Beetroot Seeds',
+              namespace_id: 'minecraft:beetroot_seeds',
+              subtitle: 'Used to cultivate Beetroots on farmland.',
+              icon: '/assets/icons/farm-and-charm/beetroot_seeds.png',
+              search: 'beetroot seeds farming crop'
+            },
+            {
+              id: 'beetroot',
+              title: 'Beetroot',
+              namespace_id: 'minecraft:beetroot',
+              subtitle: 'A harvested Beetroot used in hearty meals and soups.',
+              icon: '/assets/icons/farm-and-charm/beetroot.png',
+              search: 'beetroot item food'
+            },
+            {
+              id: 'wild_crop',
+              title: 'Beetroot Crop',
+              namespace_id: 'minecraft:beetroots',
+              subtitle: 'A fully grown Beetroot plant hidden beneath the soil, ready for harvest.',
+              icon: '/assets/icons/farm-and-charm/beetroot_crop.png',
+              search: 'beetroot crop plant growth'
+            }
+          ]
+        },
+        {
+          id: 'nettle',
+          title: 'Nettle',
+          namespace_id: 'farm_and_charm:wild_nettle',
+          subtitle: 'A wild herb growing in Swamps, commonly used for brewing simple herbal teas.',
+          icon: '/assets/icons/farm-and-charm/wild_nettle.png',
+          search: 'nettle wild plant tea swamp'
+        },
+        {
+          id: 'ribwort',
+          title: 'Ribwort',
+          namespace_id: 'farm_and_charm:wild_ribwort',
+          subtitle: 'A hardy wild herb growing in Plains and Meadows, often used for brewing herbal teas.',
+          icon: '/assets/icons/farm-and-charm/wild_ribwort.png',
+          search: 'ribwort wild plant tea plains meadow'
+        }
+      ]
+    },
+    {
+      id: 'animal_feeding',
+      title: 'Animal Feeding',
+      namespace_id: 'farm_and_charm:animal_feeding',
+      subtitle: 'Many animals can be fed with Farm & Charm foods, unlocking new interactions and behaviors.',
+      icon: '/assets/icons/farm-and-charm/dog_food.png',
+      search: 'animal feeding food pigs rabbits fox parrots chicken',
+      entries: [
+        {
+          id: 'pigs',
+          title: 'Pigs',
+          subtitle: 'Pigs enjoy a wide variety of fresh farm produce.',
+          icon: '/assets/icons/farm-and-charm/entity/pig.png',
+          items: [
+            {
+              id: 'tomato',
+              title: 'Tomato',
+              namespace_id: 'farm_and_charm:tomato',
+              icon: '/assets/icons/farm-and-charm/tomato.png'
+            },
+            {
+              id: 'strawberry',
+              title: 'Strawberry',
+              namespace_id: 'farm_and_charm:strawberry',
+              icon: '/assets/icons/farm-and-charm/strawberry.png'
+            },
+            {
+              id: 'onion',
+              title: 'Onion',
+              namespace_id: 'farm_and_charm:onion',
+              icon: '/assets/icons/farm-and-charm/onion.png'
+            },
+            {
+              id: 'lettuce',
+              title: 'Lettuce',
+              namespace_id: 'farm_and_charm:lettuce',
+              icon: '/assets/icons/farm-and-charm/lettuce.png'
+            },
+            {
+              id: 'barley',
+              title: 'Barley',
+              namespace_id: 'farm_and_charm:barley',
+              icon: '/assets/icons/farm-and-charm/barley.png'
+            },
+            {
+              id: 'corn',
+              title: 'Corn',
+              namespace_id: 'farm_and_charm:corn',
+              icon: '/assets/icons/farm-and-charm/corn.png'
+            },
+            {
+              id: 'oat',
+              title: 'Oat',
+              namespace_id: 'farm_and_charm:oat',
+              icon: '/assets/icons/farm-and-charm/oat.png'
+            }
+          ]
+        },
+        {
+          id: 'rabbits',
+          title: 'Rabbits',
+          subtitle: 'Rabbits prefer lighter crops and fresh greens.',
+          icon: '/assets/icons/farm-and-charm/entity/rabbit.png',
+          items: [
+            {
+              id: 'strawberry',
+              title: 'Strawberry',
+              namespace_id: 'farm_and_charm:strawberry',
+              icon: '/assets/icons/farm-and-charm/strawberry.png'
+            },
+            {
+              id: 'lettuce',
+              title: 'Lettuce',
+              namespace_id: 'farm_and_charm:lettuce',
+              icon: '/assets/icons/farm-and-charm/lettuce.png'
+            }
+          ]
+        },
+        {
+          id: 'foxes',
+          title: 'Foxes',
+          subtitle: 'Foxes have developed a fondness for sweet berries.',
+          icon: '/assets/icons/farm-and-charm/entity/fox.png',
+          items: [
+            {
+              id: 'strawberry',
+              title: 'Strawberry',
+              namespace_id: 'farm_and_charm:strawberry',
+              icon: '/assets/icons/farm-and-charm/strawberry.png'
+            }
+          ]
+        },
+        {
+          id: 'parrots',
+          title: 'Parrots',
+          subtitle: 'Parrots can be tempted and fed with grains.',
+          icon: '/assets/icons/farm-and-charm/entity/parrot.png',
+          items: [
+            {
+              id: 'corn',
+              title: 'Corn',
+              namespace_id: 'farm_and_charm:corn',
+              icon: '/assets/icons/farm-and-charm/corn.png'
+            }
+          ]
+        },
+        {
+          id: 'wolf',
+          title: 'Wolf',
+          subtitle: 'The following items can be fed to Wolves.',
+          icon: '/assets/icons/farm-and-charm/entity/wolf.png',
+          items: [
+            {
+              id: 'dog_food',
+              title: 'Dog Food',
+              namespace_id: 'farm_and_charm:dog_food',
+              icon: '/assets/icons/farm-and-charm/dog_food.png'
+            }
+          ]
+        },
+        {
+          id: 'cats',
+          title: 'Cats',
+          subtitle: 'The following items can be fed to Cats.',
+          icon: '/assets/icons/farm-and-charm/entity/cat.png',
+          items: [
+            {
+              id: 'cat_food',
+              title: 'Cat Food',
+              namespace_id: 'farm_and_charm:cat_food',
+              icon: '/assets/icons/farm-and-charm/cat_food.png'
+            }
+          ]
+        },
+        {
+          id: 'horses',
+          title: 'Horses',
+          subtitle: 'The following items can be fed to Horses.',
+          icon: '/assets/icons/farm-and-charm/entity/horse.png',
+          items: [
+            {
+              id: 'horse_fodder',
+              title: 'Horse Fodder',
+              namespace_id: 'farm_and_charm:horse_fodder',
+              icon: '/assets/icons/farm-and-charm/horse_fodder.png'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: 'mob_effects',
+      title: 'Mob Effects',
+      subtitle: 'Status effects granted by Farm & Charm foods, items, and interactions.',
+      entries: [
+        {
+          id: 'satiation',
+          title: 'Satiation',
+          namespace_id: 'farm_and_charm:satiation',
+          subtitle: 'Prevents hunger from draining too quickly by managing food exhaustion.',
+          icon: '/assets/icons/farm-and-charm/effects/satiation.png',
+          search: 'satiation effect hunger exhaustion'
+        },
+        {
+          id: 'rested',
+          title: 'Rested',
+          namespace_id: 'farm_and_charm:rested',
+          subtitle: 'Increases Experience Points gained while the effect is active.',
+          icon: '/assets/icons/farm-and-charm/effects/rested.png',
+          search: 'rested effect experience xp'
+        },
+        {
+          id: 'sustenance',
+          title: 'Sustenance',
+          namespace_id: 'farm_and_charm:sustenance',
+          subtitle: 'Restores 1 Hunger every 6 seconds. If full, regenerates 1 Health instead.',
+          icon: '/assets/icons/farm-and-charm/effects/sustenance.png',
+          search: 'sustenance effect hunger health regen'
+        },
+        {
+          id: 'feast',
+          title: 'Feast',
+          namespace_id: 'farm_and_charm:feast',
+          subtitle: 'Combines Sustenance with Satiation in a single powerful buff.',
+          icon: '/assets/icons/farm-and-charm/effects/feast.png',
+          search: 'feast effect sustenance satiation'
+        },
+        {
+          id: 'farmers_blessing',
+          title: "Farmer's Blessing",
+          namespace_id: 'farm_and_charm:farmers_blessing',
+          subtitle: 'Removes all negative status effects for the duration of the effect.',
+          icon: '/assets/icons/farm-and-charm/effects/farmers_blessing.png',
+          search: 'farmers blessing effect cleanse'
+        },
+        {
+          id: 'grandmas_blessing',
+          title: "Grandma's Blessing",
+          namespace_id: 'farm_and_charm:grandmas_blessing',
+          subtitle: 'Removes all negative status effects and increases Luck by 2 while active.',
+          icon: '/assets/icons/farm-and-charm/effects/grandmas_blessing.png',
+          search: 'grandmas blessing effect cleanse luck'
+        },
+        {
+          id: 'cluck',
+          title: 'Cluck',
+          namespace_id: 'farm_and_charm:cluck',
+          subtitle: 'Increases egg laying and feather shedding when Chicken Feed is given to chickens.',
+          icon: '/assets/icons/farm-and-charm/effects/cluck.png',
+          search: 'cluck effect chicken eggs feathers'
+        },
+        {
+          id: 'horse_fodder',
+          title: 'Horse Fodder',
+          namespace_id: 'farm_and_charm:horse_fodder',
+          subtitle: 'Increases the movement speed and jump strength of Horses.',
+          icon: '/assets/icons/farm-and-charm/effects/horse_fodder.png',
+          search: 'horse fodder effect horse speed jump'
+        },
+        {
+          id: 'dog_food',
+          title: 'Dog Food',
+          namespace_id: 'farm_and_charm:dog_food',
+          subtitle: 'Increases Attack Damage, Attack Speed, and Knockback Resistance of Wolves.',
+          icon: '/assets/icons/farm-and-charm/effects/dog_food.png',
+          search: 'dog food effect wolf damage speed knockback'
+        },
+        {
+          id: 'cat_food',
+          title: 'Cat Food',
+          namespace_id: 'farm_and_charm:cat_food',
+          subtitle: 'Restores health. Cats only.',
+          icon: '/assets/icons/farm-and-charm/effects/cat_food.png',
+          search: 'cat food effect cat heal'
+        }
+      ]
+    },
+    {
+      id: 'misc_changes',
+      title: 'Miscellaneous Changes & Features',
+      subtitle: 'Small but meaningful tweaks and additions that subtly enhance gameplay and atmosphere.',
+      entries: [
+        {
+          id: 'config',
+          title: 'Configuration',
+          subtitle:
+            'Most gameplay features of Farm & Charm can be adjusted via a configuration file, usually located at `config/farm_and_charm.json`.',
+          icon: '/assets/icons/misc/config.png',
+          search: 'config configuration settings options balance json farm and charm'
+        },
+        {
+          id: 'rain_growth',
+          title: 'Rain Growth',
+          subtitle: 'Crops can grow faster during rain. During thunderstorms, growth is boosted even further.',
+          icon: '/assets/icons/misc/weather.png',
+          search: 'rain crop growth faster thunderstorm'
+        },
+        {
+          id: 'armed_zombies',
+          title: 'Armed Zombies',
+          subtitle:
+            'Zombies have a small chance to spawn holding Farm & Charm tools, such as [[Pitchforks|pitchfork]].',
+          icon: '/assets/icons/misc/zombie.png',
+          search: 'zombie pitchfork weapon spawn'
+        },
+        {
+          id: 'animal_saturation',
+          title: 'Animal Saturation',
+          subtitle:
+            "Feeding animals over time increases their saturation level, rewarding careful farming with increased loot drops. While wearing [[Dungarees|dungarees]], the animal's current saturation level becomes visible.",
+          icon: '/assets/icons/farm-and-charm/leather.png',
+          search: 'animal saturation feeding bonus loot'
+        },
+        {
+          id: 'vanilla_soups_effects',
+          title: 'Soups and Effects',
+          subtitle:
+            'Vanilla soups such as Mushroom Stew, Beetroot Soup, and Rabbit Stew now grant Farm & Charm food effects, rewarding warm meals with additional nourishment.',
+          icon: '/assets/icons/farm-and-charm/soup.png',
+          search: 'vanilla soup mushroom stew beetroot soup rabbit stew sustenance effect'
+        },
+        {
+          id: 'farmland_planting_particles',
+          title: 'Planting Feedback',
+          subtitle:
+            'Planting crops on Farmland now creates subtle soil particles, visually showing that seeds are being pressed into the earth.',
+          icon: '/assets/icons/farm-and-charm/fertilized_farmland.png',
+          search: 'farmland planting particles seeds wheat crop visual feedback soil effect block particles'
+        },
+        {
+          id: 'farmer_trades',
+          title: 'Expanded Trades',
+          subtitle:
+            'Certain Farm & Charm items have been added to Farmer Villager trade pools, allowing them to be obtained naturally through trading.',
+          icon: '/assets/icons/misc/emerald.png',
+          search: 'farmer villager trades farm and charm items economy progression'
+        },
+        {
+          id: 'loot',
+          title: 'Loot and Exploration',
+          subtitle: 'Certain items and ingredients can be found while exploring the world.',
+          icon: '/assets/icons/misc/chest.png',
+          search: 'loot chest dungeon village exploration items ingredients',
+          details: true,
+          detailsTitle: 'Where to find loot',
+          detailsText: `Some items and ingredients can be found naturally while exploring the world.
+
+  They may appear in various loot containers, such as village chests, dungeon chests, or other generated structures.`,
+          detailsBullets: [
+            'Items and ingredients can appear in loot chests',
+            'Found in villages, dungeons, and other structures',
+            'Encourages exploration alongside farming'
+          ]
+        }
+      ]
+    }
+  ],
+  impressionsTitle: 'Everyday Scenes',
+  impressionsSubtitle: 'A closer look at how everything comes together ingame',
+  impressions: [
+    { src: '/assets/impressions/farm-and-charm/01.jpeg', caption: 'Tomatoes growing on a rope' },
+    { src: '/assets/impressions/farm-and-charm/02.jpeg', caption: 'A wooden cart in everyday use' },
+    { src: '/assets/impressions/farm-and-charm/03.jpeg', caption: 'Pigs waiting at a feeding trough' },
+    { src: '/assets/impressions/farm-and-charm/04.jpeg', caption: 'Crop fields with sprinklers' },
+    { src: '/assets/impressions/farm-and-charm/05.jpeg', caption: 'Walking through a barley field' },
+    { src: '/assets/impressions/farm-and-charm/06.jpeg', caption: 'A complete set of new kitchen tools' },
+    { src: '/assets/impressions/farm-and-charm/07.jpeg', caption: 'Preparing food in the kitchen' }
+  ]
+}

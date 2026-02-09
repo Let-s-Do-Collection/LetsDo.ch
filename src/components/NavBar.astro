@@ -1,0 +1,55 @@
+---
+const { pathname } = Astro.url
+
+const isActive = (path) => {
+  if (path === '/') return pathname === '/'
+  return pathname.startsWith(path)
+}
+---
+
+<nav class="nav">
+  <div class="navInner">
+    <a class="brand" href="/" data-tooltip="Return Home">
+      <img
+        src="/assets/icons/ui/chest_logo.png"
+        alt="Let's Do"
+        class="logo"
+        width="64"
+        height="64"
+        decoding="async"
+      />
+      <span class="brandText">Let's Do</span>
+    </a>
+
+    <div class="links">
+      <a href="/about/" class={isActive('/about') ? 'active' : ''}>
+        About
+      </a>
+
+      <a href="/faq/" class={isActive('/faq') ? 'active' : ''}>
+        FAQ
+      </a>
+
+      <a href="/mods/" class={isActive('/mods') ? 'active' : ''}>
+        Mods
+      </a>
+
+      <a
+        href="https://github.com/Let-s-Do-Collection"
+        target="_blank"
+        rel="noopener"
+      >
+        GitHub
+      </a>
+
+      <a
+        class="download"
+        href="https://modrinth.com/user/satisfyu"
+        target="_blank"
+        rel="noopener"
+      >
+        Download
+      </a>
+    </div>
+  </div>
+</nav>

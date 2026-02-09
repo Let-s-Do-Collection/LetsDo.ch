@@ -1,0 +1,70 @@
+.modsHero {
+  margin-bottom: 34px;
+}
+
+.modsHeroBackground {
+  background-image: url('/assets/icons/hero_mods.png');
+}
+
+.modsSearch {
+  max-width: 720px;
+  margin: 22px auto 28px;
+  display: grid;
+  gap: 10px;
+}
+
+.modsSearchInput {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  font-size: 16px;
+}
+
+.modsSearchInput::placeholder {
+  color: var(--muted);
+}
+
+.modsSearchInput:focus {
+  outline: none;
+  border-color: var(--borderStrong);
+}
+
+.modsSearchMeta {
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.modsEmpty {
+  margin-top: 22px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.cardAction {
+  margin-top: 26px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cardMeta {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.metaLink {
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.metaLink:hover {
+  color: var(--text);
+}

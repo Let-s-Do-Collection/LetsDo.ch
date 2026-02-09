@@ -1,0 +1,232 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import NavBar from "../components/NavBar.astro";
+import LinkCardGrid from "../components/LinkCardGrid.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+---
+
+<SiteLayout title="Let's Do">
+  <NavBar />
+
+  <main class="page">
+    <section class="hero">
+      <div class="heroBackground"></div>
+
+      <div class="heroOverlay">
+        <h1>Welcome to Let's Do!</h1>
+
+        <p class="tagline">
+          Enjoy a wonderful series of fermenting, baking, shaking, cooking, cheesing and so much more!
+        </p>
+
+        <div class="actions">
+          <a class="btn btnPrimary" href="/mods/">Browse Mods</a>
+          <a class="btn btnSecondary" href="/about/">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section sectionCentered">
+      <div class="sectionTitle">
+        <span>Featured Mods</span>
+      </div>
+
+      <p class="sectionSubtitle">
+        A small selection of my favorite mods, I hope you enjoy them as much as I did while creating them.
+      </p>
+
+      <LinkCardGrid
+        cards={[
+          {
+            title: "Lili's Pottery",
+            logo: "/assets/mod-logos-resized/lilis_pottery.png",
+            description:
+              "Handcrafted pottery, functional vessels, and decorative blocks for a more detailed home. Shape clay into a variety of unique decorative elements.",
+            href: "/wiki/lilis-pottery/",
+          },
+          {
+            title: "Alpine Whispers",
+            logo: "/assets/mod-logos-resized/alpine_whispers.png",
+            description:
+              "Explore reworked snowy biomes, meet fluffy sheep and reindeer, discover new alpine trees, and add cozy winter details to your home.",
+            href: "/wiki/alpine-whispers/",
+          },
+          {
+            title: "Farm & Charm",
+            logo: "/assets/mod-logos-resized/farm_and_charm.png",
+            description:
+              "A cozy farming expansion centered around atmosphere, food preparation, and farm life, enhancing the feeling of everyday rural living.",
+            href: "/wiki/farm-and-charm/",
+          },
+        ]}
+      />
+    </section>
+  </main>
+
+  <section class="section sectionCentered sectionTight">
+    <div class="sectionTitle">
+      <span>What you can expect</span>
+    </div>
+
+    <p class="sectionSubtitle">
+      The core ideas behind every Let's Do mod.
+    </p>
+
+    <div class="expectGrid">
+      <div class="expectPoints">
+        <div class="expectPoint">
+          <h3>Cozy Gameplay & Atmosphere</h3>
+          <p>
+            A strong focus on small details, interactions, and everyday atmosphere.
+            Not just gameplay features, but also decorative elements that bring the world to life.
+          </p>
+        </div>
+
+        <div class="expectPoint">
+          <h3>Vanilla-Friendly Design</h3>
+          <p>
+            Everything is designed to feel like a natural part of Minecraft, with consistent mechanics,
+            balanced features, and a cohesive visual style.
+          </p>
+        </div>
+
+        <div class="expectPoint">
+          <h3>Survival-Friendly</h3>
+          <p>
+            All features are fully playable in survival and meant to enrich the core experience,
+            without shortcuts, forced progression, or unnecessary complexity.
+          </p>
+        </div>
+      </div>
+
+      <div class="expectMedia">
+        <img
+          class="expectImage"
+          src="/assets/renderers/lili_gone_fishing.png"
+          alt="That's me!"
+          loading="lazy"
+          decoding="async"
+          width="1200"
+          height="675"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section sectionCentered">
+    <div class="sectionTitle">
+      <span>Join the Community</span>
+    </div>
+
+    <p class="sectionSubtitle">
+      A place to share feedback, ideas, and follow ongoing development.
+    </p>
+
+    <div class="expectGrid">
+      <div class="expectMedia">
+        <img
+          class="expectImage"
+          src="/assets/renderers/satisfy.png"
+          alt="Me workin'!"
+          loading="lazy"
+          decoding="async"
+          width="1200"
+          height="675"
+        />
+      </div>
+
+      <div class="expectPoints">
+        <div class="expectPoint">
+          <h3>Stay connected</h3>
+          <p>
+            Get updates on new releases, previews of upcoming features,
+            or simply chat with us and be part of the community.
+          </p>
+        </div>
+
+        <div class="expectPoint">
+          <h3>Give feedback</h3>
+          <p>
+            Share ideas, feedback, and discuss what you'd love to see next.
+          </p>
+        </div>
+
+        <div class="expectPoint">
+          <h3>Be part of the journey</h3>
+          <p>
+            Let's Do is shaped together with its community, and your input truly matters.
+          </p>
+        </div>
+
+        <div style="margin-top: 22px;">
+          <a class="btn btnPrimary" href="https://discord.gg/ffwfbjhBHr" target="_blank">
+            Join Discord
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section sectionCentered">
+    <div class="sectionTitle">
+      <span>Where Memories are made</span>
+    </div>
+
+    <p class="sectionSubtitle">
+      Not just mods, but moments we share in-game.
+    </p>
+
+    <div class="expectGrid">
+      <div class="expectPoints">
+        <div class="expectPoint">
+          <h3>We love playing Minecraft</h3>
+          <p>
+            We don't just develop mods, we genuinely love playing Minecraft together.
+            Building, experimenting, and creating cozy worlds is what inspires Let's Do.
+          </p>
+        </div>
+
+        <div class="expectPoint">
+          <h3>A community server</h3>
+          <p>
+            We run a public community server with quality of life mods, Create, and the full Let's Do series.
+            Sometimes it's quiet, sometimes lively, but you're always welcome.
+          </p>
+        </div>
+
+        <div class="expectPoint">
+          <h3>Come build something nice</h3>
+          <p>
+            Explore the world, build something beautiful, or just look around.
+            All you need is the modpack <strong>"What a strange Journey it was"</strong>.
+          </p>
+        </div>
+
+        <div style="margin-top: 22px;">
+          <a
+            class="btn btnPrimary"
+            href="https://modrinth.com/modpack/what-a-strange-journey-it-was"
+            target="_blank"
+          >
+            Join the Journey
+          </a>
+        </div>
+      </div>
+
+      <div class="expectMedia">
+        <img
+          class="expectImage"
+          src="/assets/renderers/play_with_us.png"
+          alt="Playing together on the Let's Do server"
+          loading="lazy"
+          decoding="async"
+          width="1200"
+          height="675"
+        />
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</SiteLayout>

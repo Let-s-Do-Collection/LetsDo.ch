@@ -1,0 +1,153 @@
+---
+import "../styles/footer.css";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="footerInner">
+    <div class="footerLeft">
+      <div class="footerTitle">Select your Theme!</div>
+
+      <div class="themeBar">
+        <button
+          class="modeBtn"
+          type="button"
+          aria-label="Toggle light or dark mode"
+          data-tooltip="Toggle Light or Dark"
+        >
+          <img class="modeIcon" src="/assets/icons/ui/mode/sun.png" alt="Mode" />
+        </button>
+
+        <div class="themeSpacer"></div>
+
+        <div class="themeRow" aria-label="Theme selection">
+          <button class="themeHead" type="button" data-theme="blue" aria-label="Blue theme" data-tooltip="Marco's pick: Blue">
+            <img src="/assets/icons/ui/blue.png" alt="Blue" />
+          </button>
+
+          <button class="themeHead" type="button" data-theme="gold" aria-label="Gold theme" data-tooltip="CR loves: Gold">
+            <img src="/assets/icons/ui/gold.png" alt="Gold" />
+          </button>
+
+          <button class="themeHead" type="button" data-theme="pink" aria-label="Pink theme" data-tooltip="MissLilitus chose: Pink">
+            <img src="/assets/icons/ui/pink.png" alt="Pink" />
+          </button>
+
+          <button class="themeHead" type="button" data-theme="neon" aria-label="Tsuyumori: Particle Party" data-tooltip="Tsuyumori: High-energy neon madness">
+            <img src="/assets/icons/ui/neon.png" alt="Neon" />
+          </button>
+
+          <button class="themeHead" type="button" data-theme="green" aria-label="Green theme" data-tooltip="Lunar's chaos: Toxic Green">
+            <img src="/assets/icons/ui/green.png" alt="Green" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footerText">
+      © {year} Marco<br />
+      Let's Do is not affiliated with Mojang Studios.<br />
+      Created with heart, dedicated to MissLilitu.
+    </div>
+
+    <div class="footerRight" aria-label="Social links">
+      <a class="socialLink" href="https://github.com/Let-s-Do-Collection/Let-s-Do-Collection" target="_blank" rel="noopener noreferrer" aria-label="GitHub" data-tooltip="Source code & issues">
+        <img class="socialIcon" src="/assets/icons/ui/github.png" alt="GitHub" />
+      </a>
+
+      <a class="socialLink" href="https://discord.gg/Jb2bgpYr" target="_blank" rel="noopener noreferrer" aria-label="Discord" data-tooltip="Join the community">
+        <img class="socialIcon" src="/assets/icons/ui/discord.png" alt="Discord" />
+      </a>
+
+      <a class="socialLink" href="https://www.patreon.com/c/u78595058" target="_blank" rel="noopener noreferrer" aria-label="Patreon" data-tooltip="Support development">
+        <img class="socialIcon" src="/assets/icons/ui/patreon.png" alt="Patreon" />
+      </a>
+    </div>
+  </div>
+
+  <script is:inline>
+    const root = document.documentElement;
+    const modeButton = document.querySelector(".modeBtn");
+    const modeIcon = document.querySelector(".modeIcon");
+    const themeButtons = document.querySelectorAll(".themeHead[data-theme]");
+
+    const themes = new Set(["blue", "gold", "pink", "green", "neon"]);
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function normalizeTheme(value) {
+      return themes.has(value) ? value : "blue";
+    }
+
+    function normalizeMode(value) {
+      return value === "dark" ? "dark" : "light";
+    }
+
+    function triggerThemeTransitionFromRect(rect) {
+      if (reduceMotion) return;
+      root.style.setProperty("--theme-x", rect.left + rect.width / 2 + "px");
+      root.style.setProperty("--theme-y", rect.top + rect.height / 2 + "px");
+      root.classList.add("themeTransition");
+      window.setTimeout(() => root.classList.remove("themeTransition"), 260);
+    }
+
+    function beginModeTransition() {
+      if (reduceMotion) return;
+      root.style.setProperty("--mode-fade", "rgba(0,0,0,0.45)");
+      root.classList.add("modeTransition");
+    }
+
+    function softenModeTransitionForLight() {
+      if (reduceMotion) return;
+      root.style.setProperty("--mode-fade", "rgba(0,0,0,0.18)");
+    }
+
+    function endModeTransition(delay) {
+      if (reduceMotion) return;
+      window.setTimeout(() => root.classList.remove("modeTransition"), delay);
+    }
+
+    function apply(theme, mode) {
+      root.setAttribute("data-theme", theme);
+      root.setAttribute("data-mode", mode);
+      localStorage.setItem("theme", theme);
+      localStorage.setItem("mode", mode);
+      modeIcon.src = mode === "dark"
+        ? "/assets/icons/ui/mode/moon.png"
+        : "/assets/icons/ui/mode/sun.png";
+    }
+
+    themeButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const rect = btn.getBoundingClientRect();
+        triggerThemeTransitionFromRect(rect);
+        const theme = normalizeTheme(btn.dataset.theme);
+        const mode = normalizeMode(root.getAttribute("data-mode"));
+        apply(theme, mode);
+      });
+    });
+
+    modeButton.addEventListener("click", async () => {
+      const theme = normalizeTheme(root.getAttribute("data-theme"));
+      const currentMode = normalizeMode(root.getAttribute("data-mode"));
+      const nextMode = currentMode === "dark" ? "light" : "dark";
+
+      beginModeTransition();
+
+      await new Promise((r) => window.setTimeout(r, 170));
+
+      apply(theme, nextMode);
+
+      if (nextMode === "light") {
+        window.setTimeout(() => softenModeTransitionForLight(), 70);
+        endModeTransition(220);
+      } else {
+        endModeTransition(140);
+      }
+    });
+
+    const savedTheme = normalizeTheme(localStorage.getItem("theme"));
+    const savedMode = normalizeMode(localStorage.getItem("mode"));
+    apply(savedTheme, savedMode);
+  </script>
+</footer>

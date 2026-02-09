@@ -1,0 +1,171 @@
+---
+const { tracks } = Astro.props;
+
+const list = Array.isArray(tracks) ? tracks : [];
+const safe = list
+  .filter((t) => t && t.src)
+  .map((t) => ({
+    id: t.id ? String(t.id) : "",
+    title: t.title ? String(t.title) : "",
+    subtitle: t.subtitle ? String(t.subtitle) : "",
+    icon: t.icon ? String(t.icon) : "",
+    src: String(t.src)
+  }));
+
+const first = safe[0] ?? null;
+---
+
+{safe.length ? (
+  <div class="musicPlayer" data-music-player>
+    <div class="musicPlayerInner">
+      <button class="musicBtn" type="button" data-music-prev aria-label="Previous">‹</button>
+      <button class="musicBtn musicBtnPlay" type="button" data-music-play aria-label="Play or pause">▶</button>
+      <button class="musicBtn" type="button" data-music-next aria-label="Next">›</button>
+
+      <div class="musicMeta">
+        <div class="musicTitle" data-music-title>{first?.title ?? ""}</div>
+        <div class="musicSubtitle" data-music-subtitle>{first?.subtitle ?? ""}</div>
+      </div>
+
+      {first?.icon ? <img class="musicCover" data-music-cover src={first.icon} alt="" loading="lazy" /> : null}
+
+      <button class="musicBtn musicBtnList" type="button" data-music-list aria-label="Playlist">☰</button>
+
+      <audio data-music-audio preload="none" src={first?.src ?? ""}></audio>
+    </div>
+
+    <div class="musicPlaylist" hidden data-music-playlist>
+      {safe.map((t) => (
+        <button
+          class="musicTrack"
+          type="button"
+          data-music-track
+          data-src={t.src}
+          data-title={t.title}
+          data-subtitle={t.subtitle}
+          data-icon={t.icon}
+        >
+          <span class="musicTrackTitle">{t.title}</span>
+          {t.subtitle ? <span class="musicTrackSub">{t.subtitle}</span> : null}
+        </button>
+      ))}
+    </div>
+
+    <script is:inline>
+      (() => {
+        const playerRoot = document.currentScript && document.currentScript.closest("[data-music-player]");
+        if (!playerRoot) return;
+
+        const audioEl = playerRoot.querySelector("[data-music-audio]");
+        const playBtn = playerRoot.querySelector("[data-music-play]");
+        const prevBtn = playerRoot.querySelector("[data-music-prev]");
+        const nextBtn = playerRoot.querySelector("[data-music-next]");
+        const listBtn = playerRoot.querySelector("[data-music-list]");
+        const playlistEl = playerRoot.querySelector("[data-music-playlist]");
+        const titleEl = playerRoot.querySelector("[data-music-title]");
+        const subtitleEl = playerRoot.querySelector("[data-music-subtitle]");
+        const coverEl = playerRoot.querySelector("[data-music-cover]");
+        const trackBtns = Array.from(playerRoot.querySelectorAll("[data-music-track]"));
+
+        const setPlayingUi = (playing) => {
+          if (!playBtn) return;
+          playBtn.textContent = playing ? "⏸" : "▶";
+        };
+
+        const setTrack = (button) => {
+          if (!button || !audioEl) return;
+
+          const src = button.getAttribute("data-src") || "";
+          const title = button.getAttribute("data-title") || "";
+          const subtitle = button.getAttribute("data-subtitle") || "";
+          const icon = button.getAttribute("data-icon") || "";
+
+          audioEl.src = src;
+
+          if (titleEl) titleEl.textContent = title;
+          if (subtitleEl) subtitleEl.textContent = subtitle;
+
+          if (coverEl) {
+            if (icon) {
+              coverEl.src = icon;
+              coverEl.style.display = "";
+            } else {
+              coverEl.style.display = "none";
+            }
+          }
+
+          for (const t of trackBtns) t.classList.toggle("isActive", t === button);
+        };
+
+        const currentIndex = () => trackBtns.findIndex((t) => t.classList.contains("isActive"));
+
+        const play = async () => {
+          if (!audioEl) return;
+          try {
+            await audioEl.play();
+            setPlayingUi(true);
+          } catch (_) {
+            setPlayingUi(false);
+          }
+        };
+
+        const pause = () => {
+          if (!audioEl) return;
+          audioEl.pause();
+          setPlayingUi(false);
+        };
+
+        const toggle = () => {
+          if (!audioEl) return;
+          if (audioEl.paused) play();
+          else pause();
+        };
+
+        const next = () => {
+          if (!trackBtns.length) return;
+          const idx = currentIndex();
+          const nextIdx = idx === -1 ? 0 : (idx + 1) % trackBtns.length;
+          setTrack(trackBtns[nextIdx]);
+          play();
+        };
+
+        const prev = () => {
+          if (!trackBtns.length) return;
+          const idx = currentIndex();
+          const prevIdx = idx === -1 ? 0 : (idx - 1 + trackBtns.length) % trackBtns.length;
+          setTrack(trackBtns[prevIdx]);
+          play();
+        };
+
+        const toggleList = () => {
+          if (!playlistEl) return;
+          playlistEl.hidden = !playlistEl.hidden;
+          if (listBtn) listBtn.classList.toggle("isActive", !playlistEl.hidden);
+        };
+
+        for (const t of trackBtns) {
+          t.addEventListener("click", () => {
+            setTrack(t);
+            play();
+          });
+        }
+
+        if (playBtn) playBtn.addEventListener("click", toggle);
+        if (prevBtn) prevBtn.addEventListener("click", prev);
+        if (nextBtn) nextBtn.addEventListener("click", next);
+        if (listBtn) listBtn.addEventListener("click", toggleList);
+
+        if (audioEl) {
+          audioEl.addEventListener("play", () => setPlayingUi(true));
+          audioEl.addEventListener("pause", () => setPlayingUi(false));
+          audioEl.addEventListener("ended", next);
+        }
+
+        if (trackBtns.length) {
+          setTrack(trackBtns[0]);
+          setPlayingUi(false);
+        }
+      })();
+    </script>
+  </div>
+) : null}

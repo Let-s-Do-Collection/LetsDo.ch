@@ -1,0 +1,280 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import NavBar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+---
+
+<SiteLayout title="About">
+  <NavBar />
+
+  <main class="page">
+    <section class="section sectionCentered">
+      <div class="aboutHero">
+        <div class="aboutHeroBackgroundAU"></div>
+        <h1>About</h1>
+      </div>
+    </section>
+
+    <section class="section sectionCentered">
+      <div class="sectionTitle">
+        <span>What is Let’s Do?</span>
+      </div>
+
+      <p class="sectionSubtitle">
+        A short introduction to the ideas behind the Let’s Do collection.
+      </p>
+
+      <div class="expectGrid">
+        <div class="expectMedia">
+          <img class="expectImage" src="/assets/renderers/lili_cheers.png" alt="Let’s Do collection" />
+        </div>
+
+        <div class="aboutText">
+          <p>
+            Let’s Do is a small Minecraft mod collection. That is also why the logo is a chest:
+            a collection belongs somewhere, and there is no better place to store it than in a chest.
+          </p>
+
+          <p>
+            The focus is on adding features that are not always just rewards, upgrades,
+            or efficiency improvements. Many additions exist simply to enhance decoration,
+            atmosphere, and the small details that make everyday gameplay feel more alive.
+          </p>
+
+          <p>
+            Each mod, with the exception of the Farm &amp; Charm collection,
+            works fully on its own and can be enjoyed independently.
+          </p>
+
+          <p>
+            Together, however, they form a cohesive collection that fits naturally into
+            long-term worlds and keeps gameplay interesting for many hours,
+            without overwhelming the player.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section sectionCentered">
+      <div class="sectionTitle">
+        <span>Why does Let’s Do exist?</span>
+      </div>
+
+      <p class="sectionSubtitle">
+        A small backstory, and the idea that shaped the collection.
+      </p>
+
+      <div class="expectGrid">
+        <div class="expectPoints">
+          <div class="expectPoint">
+            <p>
+              Let’s Do originally started as a small commission. MissLilitu really wanted a way to make wine.
+              Over time, I began adding more ideas on my own, creating new features, and shaping it into something bigger.
+              One project slowly turned into a collection.
+            </p>
+
+            <p>
+              The motivation was never only personal, like learning new things, improving, and being creative.
+              It was also about building something that often gets overlooked: atmosphere, everyday interactions,
+              the feeling of living in a world, and simply slowing things down a little.
+            </p>
+
+            <p>
+              The goal is not to reinvent features or make everything “better”.
+              It is about thoughtful additions that blend in naturally and feel at home in normal gameplay.
+            </p>
+
+            <div class="aboutCallout">
+              Let’s Do is made for long-term worlds: install it once and keep it, because it keeps adding value
+              without demanding constant attention.
+            </div>
+          </div>
+        </div>
+
+        <div class="expectMedia">
+          <img class="expectImage" src="/assets/renderers/cart.png" alt="Jason repaired the Cart!" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="sectionTitle">
+        <span>Who makes Let’s Do?</span>
+      </div>
+
+      <p class="sectionSubtitle">
+        The people behind the mods, and the community around them.
+      </p>
+
+      <div class="expectGrid">
+        <div class="expectMedia">
+          <img class="expectImage" src="/assets/renderers/its_eating_me_alive.png" alt="It's eating me ALIVE!" />
+        </div>
+
+        <div class="expectPoints">
+          <div class="expectPoint">
+            <p>
+              First and foremost, it’s you. The players who play the mods, enjoy them,
+              give feedback, report issues, and support the project in countless ways.
+              Let’s Do would not exist in this form without its community.
+            </p>
+
+            <p>
+              But there are also people actively helping to push the Let’s Do collection forward:
+            </p>
+
+            <p>
+              <strong>MissLilitu</strong><br />
+              Idea giver, feedback source, and the original spark behind the project.
+              Without the wish to finally produce wine, Let’s Do would likely never have started.
+            </p>
+
+            <p>
+              <strong>Tsuyumori</strong><br />
+              The youngest adult in the room. Rendering wizard, visual perfectionist,
+              and always around with advice. Has an annoying tendency to be right.
+            </p>
+
+            <p>
+              <strong>CR-055</strong><br />
+              Not your typical Discord moderator. Keeps the crowd and their requests in check
+              and somehow manages to bring order into chaos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section sectionCentered">
+      <div class="sectionTitle">
+        <span>Support the Project</span>
+      </div>
+
+      <p class="sectionSubtitle">
+        Optional ways to support ongoing development.
+      </p>
+
+      <div class="expectGrid">
+        <div class="expectPoints">
+          <div class="expectPoint">
+            <p>
+              Let’s Do is developed in my free time and maintained over the long term.
+            </p>
+
+            <p>
+              If you enjoy the mods and would like to support their continued development,
+              Patreon is a simple and entirely optional way to do so.
+            </p>
+
+            <p>
+              Support helps cover development time, assets, and long-term maintenance,
+              and allows me to keep improving the collection at a sustainable pace.
+            </p>
+
+            <div class="aboutCallout">
+              All mods will remain fully playable without Patreon support.
+            </div>
+          </div>
+        </div>
+
+        <div class="expectMedia">
+          <img class="expectImage" src="/assets/renderers/baker.png" alt="Supporting Let’s Do development" />
+
+          <div style="margin-top: 22px;">
+            <a class="btn btnPrimary" href="https://www.patreon.com/c/u78595058" target="_blank" rel="noopener">
+              Visit Patreon
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="section sectionCentered sectionTight">
+    <div class="sectionTitle">
+      <span>Thank you</span>
+    </div>
+
+    <p class="sectionSubtitle">
+      This project would not exist in this form without the people behind it.
+    </p>
+
+    <div class="thanksCard">
+      <p class="thanksIntro">
+        Let’s Do is not a solo effort. Over the years, many people have contributed their time,
+        ideas, feedback, patience, and support to help shape the collection into what it is today.
+      </p>
+
+      <p class="thanksIntro">
+        Some helped directly with development, testing, rendering, moderation, and organization.
+        Others supported the project financially, shared feedback, reported issues, or simply kept
+        the motivation alive.
+      </p>
+
+      <div class="thanksDividerTitle">
+        Special thanks to:
+      </div>
+
+      <div class="thanksNamesGrid">
+        <div>MissLilitu</div>
+        <div>Jason13Official</div>
+        <div>LunarSakura</div>
+        <div>Tsuyumori</div>
+        <div>Cristelknight</div>
+        <div>Cloud</div>
+        <div>Plantkillable</div>
+        <div>SirColor</div>
+        <div>Raymond</div>
+        <div>CR-055</div>
+        <div>Awoolanche</div>
+        <div>unroman</div>
+        <div>Flower</div>
+        <div>Jamie</div>
+        <div>Iri</div>
+        <div>Noah</div>
+        <div>Cowsticker</div>
+        <div>Tera</div>
+        <div>Raph</div>
+        <div>Myst</div>
+        <div>Tefny</div>
+        <div>Ender</div>
+        <div>KalWantsPizza</div>
+        <div>Ninjaday</div>
+        <div>Blockdown</div>
+        <div>Kenddie</div>
+        <div>Tokimi</div>
+        <div>Globox</div>
+        <div>Meshinator</div>
+        <div>Fudgy</div>
+        <div>Rick O.</div>
+        <div>Hubert K.</div>
+        <div>Wupin</div>
+        <div>Alchered</div>
+        <div>Jessica H.</div>
+        <div>Hannah S.</div>
+        <div>BaumeisterJo</div>
+        <div>Imogen</div>
+        <div>Petr</div>
+        <div>CJ B.</div>
+        <div>AOE Studios</div>
+        <div>Nog</div>
+        <div>KaupenJoe</div>
+        <div>OrcGoth</div>
+        <div>Aaron loves Coffee</div>
+        <div>Medieval Norfare</div>
+        <div>Enders Brother</div>
+        <div>Badgerson</div>
+        <div>Ari</div>
+      </div>
+
+      <div class="thanksYou">YOU</div>
+
+      <div class="thanksFooter">
+        Thank you for being part of the journey!
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</SiteLayout>
