@@ -1,6 +1,6 @@
 export default {
   slug: 'pottery',
-  title: 'Pottery',
+  title: 'Lili’s Pottery',
   logo: '/assets/mod-logos/lilis_pottery.png',
   aboutTitle: 'Welcome',
   aboutSubtitle: 'Clay, fire and handcrafted pottery',
