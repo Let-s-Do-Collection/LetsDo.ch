@@ -1,7 +1,7 @@
 export default {
   slug: 'bakery',
   title: 'Bakery',
-  logo: '/assets/mod-logos/bakery.png',
+  logo: '/assets/mod-logos/bakery.webp',
   aboutTitle: 'Welcome',
   aboutSubtitle: 'Baking, pastries, and bakery essentials',
   aboutText: `Welcome to the Bakery Wiki.
@@ -21,7 +21,7 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           namespace_id: 'bakery:baker_station',
           subtitle:
             'The main work surface for shaping, cutting, and finishing baked goods. Works with [[Rolling Pin|rolling_pin]] and [[Bread Knife|bread_knife]].',
-          icon: '/assets/icons/bakery/baker_station.png',
+          icon: '/assets/icons/bakery/baker_station.webp',
           search: 'baker station baking cake cupcake cookie dough jam rolling pin knife',
           details: true,
           detailsTitle: 'How baking works',
@@ -46,7 +46,7 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           title: 'Small Cooking Pot',
           namespace_id: 'bakery:small_cooking_pot',
           subtitle: 'A cozy Station for preparing basic Meals, powered by Heat. Doubles as an emergency weapon.',
-          icon: '/assets/icons/bakery/small_cooking_pot.png',
+          icon: '/assets/icons/bakery/small_cooking_pot.webp',
           search: 'small cooking pot meals basic hot surface stove magma campfire bubbles recipe weapon',
           details: true,
           detailsTitle: 'Usage',
@@ -80,7 +80,7 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           title: 'Brick Counter',
           namespace_id: 'bakery:brick_counter',
           subtitle: 'A brick counter block that connects vertically to form continuous counter lines.',
-          icon: '/assets/icons/bakery/brick_counter.png',
+          icon: '/assets/icons/bakery/brick_counter.webp',
           search: 'brick counter vertical connect bakery'
         },
         {
@@ -88,7 +88,7 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           title: 'Brick Sink',
           namespace_id: 'bakery:kitchen_sink',
           subtitle: 'A functional sink you can fill and empty with buckets and bottles.',
-          icon: '/assets/icons/bakery/kitchen_sink.png',
+          icon: '/assets/icons/bakery/kitchen_sink.webp',
           search: 'kitchen sink bakery filled bucket bottle water potion',
           details: true,
           detailsTitle: 'Function',
@@ -107,7 +107,7 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           title: 'Cabinet',
           namespace_id: 'bakery:cabinet',
           subtitle: 'A storage cabinet for bakery interiors.',
-          icon: '/assets/icons/bakery/cabinet.png',
+          icon: '/assets/icons/bakery/cabinet.webp',
           search: 'cabinet storage bakery'
         },
         {
@@ -115,7 +115,7 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           title: 'Drawer',
           namespace_id: 'bakery:drawer',
           subtitle: 'A compact storage drawer for ingredients and tools.',
-          icon: '/assets/icons/bakery/drawer.png',
+          icon: '/assets/icons/bakery/drawer.webp',
           search: 'drawer storage bakery'
         },
         {
@@ -123,7 +123,7 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           title: 'Wall Cabinet',
           namespace_id: 'bakery:wall_cabinet',
           subtitle: 'Wall mounted storage to keep counters clear.',
-          icon: '/assets/icons/bakery/wall_cabinet.png',
+          icon: '/assets/icons/bakery/wall_cabinet.webp',
           search: 'wall cabinet storage bakery'
         },
         {
@@ -131,7 +131,7 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           title: 'Iron Bench',
           namespace_id: 'bakery:iron_bench',
           subtitle: 'Simple iron seating.',
-          icon: '/assets/icons/bakery/iron_bench.png',
+          icon: '/assets/icons/bakery/iron_bench.webp',
           search: 'iron bench seating bakery'
         },
         {
@@ -139,7 +139,7 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           title: 'Iron Chair',
           namespace_id: 'bakery:iron_chair',
           subtitle: 'A simple iron chair.',
-          icon: '/assets/icons/bakery/iron_chair.png',
+          icon: '/assets/icons/bakery/iron_chair.webp',
           search: 'iron chair seating bakery'
         },
         {
@@ -147,7 +147,7 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           title: 'Iron Table',
           namespace_id: 'bakery:iron_table',
           subtitle: 'A sturdy iron table.',
-          icon: '/assets/icons/bakery/iron_table.png',
+          icon: '/assets/icons/bakery/iron_table.webp',
           search: 'iron table bakery'
         },
         {
@@ -155,7 +155,7 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           title: 'Street Sign',
           namespace_id: 'bakery:street_sign',
           subtitle: 'A writable sign for streets, storefronts, and small notices.',
-          icon: '/assets/icons/bakery/street_sign.png',
+          icon: '/assets/icons/bakery/street_sign.webp',
           search: 'street sign storefront writable bakery',
           details: true,
           detailsTitle: 'Usage',
@@ -177,7 +177,7 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           title: 'Cake Stand',
           namespace_id: 'bakery:cake_stand',
           subtitle: 'A serving stand for cakes and baked goods. Great for presenting [[Cakes and slices|cakes]].',
-          icon: '/assets/icons/bakery/cake_stand.png',
+          icon: '/assets/icons/bakery/cake_stand.webp',
           search: 'cake stand bakery display',
           details: true,
           detailsTitle: 'Usage',
@@ -197,7 +197,7 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           namespace_id: 'bakery:cake_display',
           subtitle:
             'A glass display for showcasing baked goods, especially [[Cakes and slices|cakes]] and [[Pastries and sweets|pastries]].',
-          icon: '/assets/icons/bakery/cake_display.png',
+          icon: '/assets/icons/bakery/cake_display.webp',
           search: 'cake display bakery shelf',
           details: true,
           detailsTitle: 'Usage',
@@ -217,7 +217,7 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           title: 'Cupcake Display',
           namespace_id: 'bakery:cupcake_display',
           subtitle: 'A compact display for cupcakes and small pastries. Pairs with [[Pastries and sweets|pastries]].',
-          icon: '/assets/icons/bakery/cupcake_display.png',
+          icon: '/assets/icons/bakery/cupcake_display.webp',
           search: 'cupcake display bakery shelf',
           details: true,
           detailsTitle: 'Usage',
@@ -235,7 +235,7 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           title: 'Breadbox',
           namespace_id: 'bakery:breadbox',
           subtitle: 'A wooden breadbox with an opening lid.',
-          icon: '/assets/icons/bakery/breadbox.png',
+          icon: '/assets/icons/bakery/breadbox.webp',
           search: 'breadbox bakery bread storage',
           details: true,
           detailsTitle: 'Usage',
@@ -255,7 +255,7 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           namespace_id: 'bakery:tray',
           subtitle:
             'A serving tray for bread and baked goods. Perfect with [[Breads and buns|breads]] and [[Pastries and sweets|pastries]].',
-          icon: '/assets/icons/bakery/tray.png',
+          icon: '/assets/icons/bakery/tray.webp',
           search: 'tray bakery serving',
           details: true,
           detailsTitle: 'Usage',
@@ -272,7 +272,7 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           title: 'Wall Display',
           namespace_id: 'bakery:wall_display',
           subtitle: 'A wall mounted display shelf for baked goods.',
-          icon: '/assets/icons/bakery/wall_display.png',
+          icon: '/assets/icons/bakery/wall_display.webp',
           search: 'wall display bakery shelf',
           details: true,
           detailsTitle: 'Usage',
@@ -289,7 +289,7 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           id: 'jars',
           title: 'Jars and Jam',
           subtitle: 'Stackable jar pieces and jam variants.',
-          icon: '/assets/icons/bakery/jar.png',
+          icon: '/assets/icons/bakery/jar.webp',
           search: 'jar jam strawberry glowberry sweetberry chocolate apple stackable',
           details: true,
           detailsTitle: 'Included Pieces',
@@ -301,42 +301,42 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
               id: 'jar',
               title: 'Jar',
               namespace_id: 'bakery:jar',
-              icon: '/assets/icons/bakery/jar.png',
+              icon: '/assets/icons/bakery/jar.webp',
               search: 'jar'
             },
             {
               id: 'strawberry_jam',
               title: 'Strawberry Jam',
               namespace_id: 'bakery:strawberry_jam',
-              icon: '/assets/icons/bakery/strawberry_jam.png',
+              icon: '/assets/icons/bakery/strawberry_jam.webp',
               search: 'strawberry jam'
             },
             {
               id: 'glowberry_jam',
               title: 'Glowberry Jam',
               namespace_id: 'bakery:glowberry_jam',
-              icon: '/assets/icons/bakery/glowberry_jam.png',
+              icon: '/assets/icons/bakery/glowberry_jam.webp',
               search: 'glowberry jam'
             },
             {
               id: 'sweetberry_jam',
               title: 'Sweetberry Jam',
               namespace_id: 'bakery:sweetberry_jam',
-              icon: '/assets/icons/bakery/sweetberry_jam.png',
+              icon: '/assets/icons/bakery/sweetberry_jam.webp',
               search: 'sweetberry jam'
             },
             {
               id: 'chocolate_jam',
               title: 'Chocolate Jam',
               namespace_id: 'bakery:chocolate_jam',
-              icon: '/assets/icons/bakery/chocolate_jam.png',
+              icon: '/assets/icons/bakery/chocolate_jam.webp',
               search: 'chocolate jam'
             },
             {
               id: 'apple_jam',
               title: 'Apple Jam',
               namespace_id: 'bakery:apple_jam',
-              icon: '/assets/icons/bakery/apple_jam.png',
+              icon: '/assets/icons/bakery/apple_jam.webp',
               search: 'apple jam'
             }
           ]
@@ -347,7 +347,7 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
           title: 'Completionist Banner',
           namespace_id: 'bakery:bakery_banner',
           subtitle: 'A reward banner for completing Bakery foods.',
-          icon: '/assets/icons/bakery/bakery_banner.png',
+          icon: '/assets/icons/bakery/bakery_banner.webp',
           search: 'completionist banner reward foods advancements bakery',
           details: true,
           detailsTitle: 'Reward',
@@ -373,7 +373,7 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
           namespace_id: 'bakery:rolling_pin',
           subtitle:
             'Used to flatten dough and occasionally your expectations. Used at the [[Baker Station|baker_station]]. Can be used as a weapon, just not a very good one.',
-          icon: '/assets/icons/bakery/rolling_pin.png',
+          icon: '/assets/icons/bakery/rolling_pin.webp',
           search: 'rolling pin tool weapon'
         },
         {
@@ -381,7 +381,7 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
           title: 'Bread Knife',
           namespace_id: 'bakery:bread_knife',
           subtitle: 'Cuts bread and doubles as a very unambitious sword. Used at the [[Baker Station|baker_station]].',
-          icon: '/assets/icons/bakery/bread_knife.png',
+          icon: '/assets/icons/bakery/bread_knife.webp',
           search: 'bread knife tool weapon'
         },
         {
@@ -389,7 +389,7 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
           title: 'Cake Dough',
           namespace_id: 'bakery:cake_dough',
           subtitle: 'Base dough used for cakes. Used at the [[Baker Station|baker_station]].',
-          icon: '/assets/icons/bakery/cake_dough.png',
+          icon: '/assets/icons/bakery/cake_dough.webp',
           search: 'cake dough ingredient'
         },
         {
@@ -397,7 +397,7 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
           title: 'Sweet Dough',
           namespace_id: 'bakery:sweet_dough',
           subtitle: 'Base dough used for pastries.',
-          icon: '/assets/icons/bakery/sweet_dough.png',
+          icon: '/assets/icons/bakery/sweet_dough.webp',
           search: 'sweet dough ingredient'
         }
       ]
@@ -412,7 +412,7 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
           title: 'Bread Crate',
           namespace_id: 'bakery:bread_crate',
           subtitle: 'A placeable bread box you can eat from.',
-          icon: '/assets/icons/bakery/bread_crate.png',
+          icon: '/assets/icons/bakery/bread_crate.webp',
           search: 'bread_crate bread food eatable placeable',
           details: true,
           detailsTitle: 'Usage',
@@ -432,7 +432,7 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
           title: 'Chocolate Box',
           namespace_id: 'bakery:chocolate_box',
           subtitle: 'A small box of chocolates you can eat piece by piece.',
-          icon: '/assets/icons/bakery/chocolate_box.png',
+          icon: '/assets/icons/bakery/chocolate_box.webp',
           search: 'chocolate box food eatable placeable',
           details: true,
           detailsTitle: 'Usage',
@@ -446,7 +446,7 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
           id: 'breads',
           title: 'Breads & Buns',
           subtitle: 'Simple baked breads and loaves.',
-          icon: '/assets/icons/bakery/bread.png',
+          icon: '/assets/icons/bakery/bread.webp',
           search: 'bread bakery loaf baguette toast braided bread crusty bun sandwich',
           details: true,
           detailsTitle: 'Included Breads',
@@ -455,20 +455,20 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
   All listed breads are simple food items and restore hunger when eaten.`,
           detailsBullets: ['Croissant', 'Crusty Bread', 'Bread', 'Baguette', 'Toast', 'Braided Bread', 'Bun'],
           detailsImages: [
-            '/assets/icons/bakery/croissant.png',
-            '/assets/icons/bakery/crusty_bread.png',
-            '/assets/icons/bakery/bread.png',
-            '/assets/icons/bakery/baguette.png',
-            '/assets/icons/bakery/toast.png',
-            '/assets/icons/bakery/braided_bread.png',
-            '/assets/icons/bakery/bun.png'
+            '/assets/icons/bakery/croissant.webp',
+            '/assets/icons/bakery/crusty_bread.webp',
+            '/assets/icons/bakery/bread.webp',
+            '/assets/icons/bakery/baguette.webp',
+            '/assets/icons/bakery/toast.webp',
+            '/assets/icons/bakery/braided_bread.webp',
+            '/assets/icons/bakery/bun.webp'
           ]
         },
         {
           id: 'cakes',
           title: 'Cakes & Slices',
           subtitle: 'Cakes, pies, tarts, and their slices.',
-          icon: '/assets/icons/bakery/chocolate_cake_slice.png',
+          icon: '/assets/icons/bakery/chocolate_cake_slice.webp',
           search: 'cake slice tart pie gateau pudding bakery',
           details: true,
           detailsTitle: 'Included Cakes',
@@ -488,23 +488,23 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
             'Pudding Slice'
           ],
           detailsImages: [
-            '/assets/icons/bakery/strawberry_cake_slice.png',
-            '/assets/icons/bakery/sweetberry_cake_slice.png',
-            '/assets/icons/bakery/chocolate_cake_slice.png',
-            '/assets/icons/bakery/chocolate_gateau_slice.png',
-            '/assets/icons/bakery/bundt_cake_slice.png',
-            '/assets/icons/bakery/linzer_tart_slice.png',
-            '/assets/icons/bakery/apple_pie_slice.png',
-            '/assets/icons/bakery/glowberry_pie_slice.png',
-            '/assets/icons/bakery/chocolate_tart_slice.png',
-            '/assets/icons/bakery/pudding_slice.png'
+            '/assets/icons/bakery/strawberry_cake_slice.webp',
+            '/assets/icons/bakery/sweetberry_cake_slice.webp',
+            '/assets/icons/bakery/chocolate_cake_slice.webp',
+            '/assets/icons/bakery/chocolate_gateau_slice.webp',
+            '/assets/icons/bakery/bundt_cake_slice.webp',
+            '/assets/icons/bakery/linzer_tart_slice.webp',
+            '/assets/icons/bakery/apple_pie_slice.webp',
+            '/assets/icons/bakery/glowberry_pie_slice.webp',
+            '/assets/icons/bakery/chocolate_tart_slice.webp',
+            '/assets/icons/bakery/pudding_slice.webp'
           ]
         },
         {
           id: 'pastries',
           title: 'Pastries & Sweets',
           subtitle: 'Cookies, cupcakes, rolls, and confectionery.',
-          icon: '/assets/icons/bakery/strawberry_cupcake.png',
+          icon: '/assets/icons/bakery/strawberry_cupcake.webp',
           search: 'cookie cupcake pastry jam roll truffle waffle biscuit',
           details: true,
           detailsTitle: 'Included Sweets',
@@ -523,17 +523,17 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
             'Waffle'
           ],
           detailsImages: [
-            '/assets/icons/bakery/strawberry_glazed_cookie.png',
-            '/assets/icons/bakery/sweetberry_glazed_cookie.png',
-            '/assets/icons/bakery/chocolate_glazed_cookie.png',
-            '/assets/icons/bakery/strawberry_cupcake.png',
-            '/assets/icons/bakery/sweetberry_cupcake.png',
-            '/assets/icons/bakery/apple_cupcake.png',
-            '/assets/icons/bakery/jam_roll.png',
-            '/assets/icons/bakery/chocolate_truffle.png',
-            '/assets/icons/bakery/misslilitu_biscuit.png',
-            '/assets/icons/bakery/cornet.png',
-            '/assets/icons/bakery/waffle.png'
+            '/assets/icons/bakery/strawberry_glazed_cookie.webp',
+            '/assets/icons/bakery/sweetberry_glazed_cookie.webp',
+            '/assets/icons/bakery/chocolate_glazed_cookie.webp',
+            '/assets/icons/bakery/strawberry_cupcake.webp',
+            '/assets/icons/bakery/sweetberry_cupcake.webp',
+            '/assets/icons/bakery/apple_cupcake.webp',
+            '/assets/icons/bakery/jam_roll.webp',
+            '/assets/icons/bakery/chocolate_truffle.webp',
+            '/assets/icons/bakery/misslilitu_biscuit.webp',
+            '/assets/icons/bakery/cornet.webp',
+            '/assets/icons/bakery/waffle.webp'
           ]
         }
       ]
@@ -548,7 +548,7 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
           title: 'Vitality',
           namespace_id: 'bakery:vitality',
           subtitle: 'Reduces exhaustion over time. Scales with effect level.',
-          icon: '/assets/icons/bakery/effects/vitality.png',
+          icon: '/assets/icons/bakery/effects/vitality.webp',
           search: 'vitality effect bakery exhaustion reduction interval scales amplifier'
         },
         {
@@ -556,7 +556,7 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
           title: 'Sugar Rush',
           namespace_id: 'bakery:sugar_rush',
           subtitle: 'Stacks up to 10. Grants Movement Speed up to 5 stacks, then Attack Speed for remaining stacks.',
-          icon: '/assets/icons/bakery/effects/sugar_rush.png',
+          icon: '/assets/icons/bakery/effects/sugar_rush.webp',
           search: 'sugar rush effect bakery stacks movement speed attack speed up to 10'
         }
       ]

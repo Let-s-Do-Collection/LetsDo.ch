@@ -1,7 +1,7 @@
 export default {
   slug: 'pottery',
   title: 'Lili’s Pottery',
-  logo: '/assets/mod-logos/lilis_pottery.png',
+  logo: '/assets/mod-logos/lilis_pottery.webp',
   aboutTitle: 'Welcome',
   aboutSubtitle: 'Clay, fire and handcrafted pottery',
   aboutText: `Welcome to the Pottery Wiki.
@@ -22,7 +22,7 @@ Pottery focuses on working with clay, shaping ceramic storage and decor, and fir
           title: 'Pottery Table',
           namespace_id: 'lilis_pottery:pottery_table',
           subtitle: 'A shaping Station for turning pottery inputs into finished pieces, with a recipe selection list.',
-          icon: '/assets/icons/pottery/pottery_table.png',
+          icon: '/assets/icons/pottery/pottery_table.webp',
           search:
             'pottery table shaping station pottering recipe selection scroll list stonecutter clay shaping output',
           details: true,
@@ -49,7 +49,7 @@ The Interface behaves similarly to a Stonecutter: it shows a scrollable recipe g
           title: 'Kiln',
           namespace_id: 'lilis_pottery:kiln',
           subtitle: 'A hot firing kiln used to burn patterns and colors permanently into pottery.',
-          icon: '/assets/icons/pottery/kiln.png',
+          icon: '/assets/icons/pottery/kiln.webp',
           search: 'kiln firing station fuel dye painted glaze preview pottery urn storage',
           details: true,
           detailsTitle: 'Usage',
@@ -81,7 +81,7 @@ While active, the Kiln lights up and plays furnace sounds. The Interface also sh
           id: 'clay_balls',
           title: 'Clay Balls',
           subtitle: 'Colored clay pieces used as the base material for shaping pottery.',
-          icon: '/assets/icons/pottery/red_clay_ball.png',
+          icon: '/assets/icons/pottery/red_clay_ball.webp',
           search: 'clay ball colored clay pottery red yellow white blue black',
           details: true,
           detailsTitle: 'Usage',
@@ -99,35 +99,35 @@ Different Clay Blocks yield differently colored Clay Balls, which are then used 
               id: 'red_clay_ball',
               title: 'Red Clay Ball',
               namespace_id: 'lilis_pottery:red_clay_ball',
-              icon: '/assets/icons/pottery/red_clay_ball.png',
+              icon: '/assets/icons/pottery/red_clay_ball.webp',
               search: 'red clay ball pottery material'
             },
             {
               id: 'yellow_clay_ball',
               title: 'Yellow Clay Ball',
               namespace_id: 'lilis_pottery:yellow_clay_ball',
-              icon: '/assets/icons/pottery/yellow_clay_ball.png',
+              icon: '/assets/icons/pottery/yellow_clay_ball.webp',
               search: 'yellow clay ball pottery material'
             },
             {
               id: 'white_clay_ball',
               title: 'White Clay Ball',
               namespace_id: 'lilis_pottery:white_clay_ball',
-              icon: '/assets/icons/pottery/white_clay_ball.png',
+              icon: '/assets/icons/pottery/white_clay_ball.webp',
               search: 'white clay ball pottery material'
             },
             {
               id: 'blue_clay_ball',
               title: 'Blue Clay Ball',
               namespace_id: 'lilis_pottery:blue_clay_ball',
-              icon: '/assets/icons/pottery/blue_clay_ball.png',
+              icon: '/assets/icons/pottery/blue_clay_ball.webp',
               search: 'blue clay ball pottery material'
             },
             {
               id: 'black_clay_ball',
               title: 'Black Clay Ball',
               namespace_id: 'lilis_pottery:black_clay_ball',
-              icon: '/assets/icons/pottery/black_clay_ball.png',
+              icon: '/assets/icons/pottery/black_clay_ball.webp',
               search: 'black clay ball pottery material'
             }
           ]
@@ -136,7 +136,7 @@ Different Clay Blocks yield differently colored Clay Balls, which are then used 
           id: 'bricks',
           title: 'Bricks',
           subtitle: 'Fired pottery materials created by smelting Clay Balls.',
-          icon: '/assets/icons/pottery/red_brick.png',
+          icon: '/assets/icons/pottery/red_brick.webp',
           search: 'brick pottery fired clay red yellow white blue black furnace smelting',
           details: true,
           detailsTitle: 'Usage',
@@ -154,28 +154,28 @@ Place any Clay Ball into a Furnace to fire it into a Brick of the corresponding 
               id: 'red_brick',
               title: 'Red Brick',
               namespace_id: 'lilis_pottery:red_brick',
-              icon: '/assets/icons/pottery/red_brick.png',
+              icon: '/assets/icons/pottery/red_brick.webp',
               search: 'red brick pottery material'
             },
             {
               id: 'yellow_brick',
               title: 'Yellow Brick',
               namespace_id: 'lilis_pottery:yellow_brick',
-              icon: '/assets/icons/pottery/yellow_brick.png',
+              icon: '/assets/icons/pottery/yellow_brick.webp',
               search: 'yellow brick pottery material'
             },
             {
               id: 'white_brick',
               title: 'White Brick',
               namespace_id: 'lilis_pottery:white_brick',
-              icon: '/assets/icons/pottery/white_brick.png',
+              icon: '/assets/icons/pottery/white_brick.webp',
               search: 'white brick pottery material'
             },
             {
               id: 'blue_brick',
               title: 'Blue Brick',
               namespace_id: 'lilis_pottery:blue_brick',
-              icon: '/assets/icons/pottery/blue_brick.png',
+              icon: '/assets/icons/pottery/blue_brick.webp',
               search: 'blue brick pottery material'
             }
           ]
@@ -191,7 +191,7 @@ Place any Clay Ball into a Furnace to fire it into a Brick of the corresponding 
           id: 'small_flower_pots',
           title: 'Small Flower Pots',
           subtitle: 'Compact pottery flower pots for small plants and details.',
-          icon: '/assets/icons/pottery/white_cupella.png',
+          icon: '/assets/icons/pottery/white_cupella.webp',
           search: 'small flower pot pottery decor',
           details: true,
           detailsTitle: 'Usage',
@@ -209,31 +209,31 @@ They are ideal for tables, shelves, and small decorative touches that make a spa
             {
               id: 'cupella',
               title: 'Cupella',
-              icon: '/assets/icons/pottery/white_cupella.png',
+              icon: '/assets/icons/pottery/white_cupella.webp',
               search: 'cupella small flower pot pottery'
             },
             {
               id: 'bud_vase',
               title: 'Bud Vase',
-              icon: '/assets/icons/pottery/yellow_bud_vase.png',
+              icon: '/assets/icons/pottery/yellow_bud_vase.webp',
               search: 'bud vase small flower pot pottery'
             },
             {
               id: 'planter',
               title: 'Planter',
-              icon: '/assets/icons/pottery/red_planter.png',
+              icon: '/assets/icons/pottery/red_planter.webp',
               search: 'planter small flower pot pottery'
             },
             {
               id: 'plant_bowl',
               title: 'Plant Bowl',
-              icon: '/assets/icons/pottery/plant_bowl.png',
+              icon: '/assets/icons/pottery/plant_bowl.webp',
               search: 'plant bowl small flower pot pottery'
             },
             {
               id: 'vase',
               title: 'Vase',
-              icon: '/assets/icons/pottery/blue_vase.png',
+              icon: '/assets/icons/pottery/blue_vase.webp',
               search: 'vase small flower pot pottery'
             }
           ]
@@ -242,7 +242,7 @@ They are ideal for tables, shelves, and small decorative touches that make a spa
           id: 'large_flower_pots',
           title: 'Large Flower Pots',
           subtitle: 'Tall pottery flower pots made for larger plants and statement pieces.',
-          icon: '/assets/icons/pottery/white_square_pot.png',
+          icon: '/assets/icons/pottery/white_square_pot.webp',
           search: 'large flower pot tall flowers two block high pottery decor',
           details: true,
           detailsTitle: 'Usage',
@@ -260,13 +260,13 @@ They are perfect for filling open spaces, framing doorways, or simply adding a b
             {
               id: 'square_pot',
               title: 'Square Pot',
-              icon: '/assets/icons/pottery/white_square_pot.png',
+              icon: '/assets/icons/pottery/white_square_pot.webp',
               search: 'square pot large flower pot pottery'
             },
             {
               id: 'garden_pot',
               title: 'Garden Pot',
-              icon: '/assets/icons/pottery/black_garden_pot.png',
+              icon: '/assets/icons/pottery/black_garden_pot.webp',
               search: 'garden pot large flower pot pottery'
             }
           ]
@@ -275,7 +275,7 @@ They are perfect for filling open spaces, framing doorways, or simply adding a b
           id: 'urns',
           title: 'Urns and Amphores',
           subtitle: 'A special pottery piece that protects your belongings after death.',
-          icon: '/assets/icons/pottery/blue_amphore.png',
+          icon: '/assets/icons/pottery/blue_amphore.webp',
           search: 'urn amphore death storage grave pottery painted glazed honeycomb',
           details: true,
           detailsTitle: 'Usage',
@@ -296,13 +296,13 @@ Like other pottery pieces, Urns can be painted and crafted in different colors. 
             {
               id: 'urn',
               title: 'Urn',
-              icon: '/assets/icons/pottery/urn.png',
+              icon: '/assets/icons/pottery/urn.webp',
               search: 'urn pottery storage painted glazed'
             },
             {
               id: 'amphore',
               title: 'Amphore',
-              icon: '/assets/icons/pottery/blue_amphore.png',
+              icon: '/assets/icons/pottery/blue_amphore.webp',
               search: 'amphore pottery storage painted glazed'
             }
           ]
@@ -311,7 +311,7 @@ Like other pottery pieces, Urns can be painted and crafted in different colors. 
           id: 'brick_blocks',
           title: 'Brick Blocks',
           subtitle: 'Decorative building blocks for cozy walls, trims, and pottery themed builds.',
-          icon: '/assets/icons/pottery/red_bricks.png',
+          icon: '/assets/icons/pottery/red_bricks.webp',
           search: 'brick blocks wall stairs slabs decorative pottery building',
           details: true,
           detailsTitle: 'Usage',
@@ -327,31 +327,31 @@ They come in Wall, Stair, and Slab variants.`,
             {
               id: 'red_bricks',
               title: 'Red Brick Blocks',
-              icon: '/assets/icons/pottery/red_bricks.png',
+              icon: '/assets/icons/pottery/red_bricks.webp',
               search: 'red brick blocks wall stair slab'
             },
             {
               id: 'yellow_bricks',
               title: 'Yellow Brick Blocks',
-              icon: '/assets/icons/pottery/yellow_bricks.png',
+              icon: '/assets/icons/pottery/yellow_bricks.webp',
               search: 'yellow brick blocks wall stair slab'
             },
             {
               id: 'white_bricks',
               title: 'White Brick Blocks',
-              icon: '/assets/icons/pottery/white_bricks.png',
+              icon: '/assets/icons/pottery/white_bricks.webp',
               search: 'white brick blocks wall stair slab'
             },
             {
               id: 'blue_bricks',
               title: 'Blue Brick Blocks',
-              icon: '/assets/icons/pottery/blue_bricks.png',
+              icon: '/assets/icons/pottery/blue_bricks.webp',
               search: 'blue brick blocks wall stair slab'
             },
             {
               id: 'black_bricks',
               title: 'Black Brick Blocks',
-              icon: '/assets/icons/pottery/black_bricks.png',
+              icon: '/assets/icons/pottery/black_bricks.webp',
               search: 'black brick blocks wall stair slab'
             }
           ]
@@ -361,7 +361,7 @@ They come in Wall, Stair, and Slab variants.`,
           title: "Lili's Statue",
           namespace_id: 'pottery:lilis_statue',
           subtitle: 'A reward statue for completing all Pottery.',
-          icon: '/assets/icons/pottery/lilis_statue.png',
+          icon: '/assets/icons/pottery/lilis_statue.webp',
           search: 'completionist statue reward pottery all pots colors shapes firework interaction tooltip',
           details: true,
           detailsTitle: 'Function',
@@ -386,7 +386,7 @@ When interacting with the top half of the statue, it launches a large celebrator
           title: 'Red Clay',
           namespace_id: 'lilis_pottery:red_clay',
           subtitle: 'Warm red clay that feels right at home in rugged landscapes and riverbeds.',
-          icon: '/assets/icons/pottery/red_clay.png',
+          icon: '/assets/icons/pottery/red_clay.webp',
           search: 'red clay badlands eroded wooded badlands river swamp mangrove swamp',
           details: true,
           detailsTitle: 'Where to find',
@@ -397,7 +397,7 @@ When interacting with the top half of the statue, it launches a large celebrator
               id: 'red_clay_ball',
               title: 'Red Clay Ball',
               namespace_id: 'lilis_pottery:red_clay_ball',
-              icon: '/assets/icons/pottery/red_clay_ball.png',
+              icon: '/assets/icons/pottery/red_clay_ball.webp',
               search: 'red clay ball clay deposit'
             }
           ]
@@ -407,7 +407,7 @@ When interacting with the top half of the statue, it launches a large celebrator
           title: 'Yellow Clay',
           namespace_id: 'lilis_pottery:yellow_clay',
           subtitle: 'Sunny clay that shows up in warmer regions and near flowing water.',
-          icon: '/assets/icons/pottery/yellow_clay.png',
+          icon: '/assets/icons/pottery/yellow_clay.webp',
           search: 'yellow clay savanna savanna plateau windswept savanna river swamp mangrove swamp',
           details: true,
           detailsTitle: 'Where to find',
@@ -418,7 +418,7 @@ When interacting with the top half of the statue, it launches a large celebrator
               id: 'yellow_clay_ball',
               title: 'Yellow Clay Ball',
               namespace_id: 'lilis_pottery:yellow_clay_ball',
-              icon: '/assets/icons/pottery/yellow_clay_ball.png',
+              icon: '/assets/icons/pottery/yellow_clay_ball.webp',
               search: 'yellow clay ball clay deposit'
             }
           ]
@@ -428,7 +428,7 @@ When interacting with the top half of the statue, it launches a large celebrator
           title: 'White Clay',
           namespace_id: 'lilis_pottery:white_clay',
           subtitle: 'Pale clay found in colder biomes, perfect for clean and bright pottery tones.',
-          icon: '/assets/icons/pottery/white_clay.png',
+          icon: '/assets/icons/pottery/white_clay.webp',
           search: 'white clay snowy plains ice spikes snowy taiga frozen river swamp mangrove swamp',
           details: true,
           detailsTitle: 'Where to find',
@@ -439,7 +439,7 @@ When interacting with the top half of the statue, it launches a large celebrator
               id: 'white_clay_ball',
               title: 'White Clay Ball',
               namespace_id: 'lilis_pottery:white_clay_ball',
-              icon: '/assets/icons/pottery/white_clay_ball.png',
+              icon: '/assets/icons/pottery/white_clay_ball.webp',
               search: 'white clay ball clay deposit'
             }
           ]
@@ -449,7 +449,7 @@ When interacting with the top half of the statue, it launches a large celebrator
           title: 'Blue Clay',
           namespace_id: 'lilis_pottery:blue_clay',
           subtitle: 'Cool toned clay found in forests, windswept hills, and even deeper underground.',
-          icon: '/assets/icons/pottery/blue_clay.png',
+          icon: '/assets/icons/pottery/blue_clay.webp',
           search:
             'blue clay taiga old growth pine taiga old growth spruce taiga windswept hills windswept forest river swamp mangrove swamp lush caves',
           details: true,
@@ -467,7 +467,7 @@ When interacting with the top half of the statue, it launches a large celebrator
               id: 'blue_clay_ball',
               title: 'Blue Clay Ball',
               namespace_id: 'lilis_pottery:blue_clay_ball',
-              icon: '/assets/icons/pottery/blue_clay_ball.png',
+              icon: '/assets/icons/pottery/blue_clay_ball.webp',
               search: 'blue clay ball clay deposit'
             }
           ]
@@ -477,7 +477,7 @@ When interacting with the top half of the statue, it launches a large celebrator
           title: 'Black Clay',
           namespace_id: 'lilis_pottery:black_clay',
           subtitle: 'Deep clay that feels at home in wetlands and muddy waterlogged ground.',
-          icon: '/assets/icons/pottery/black_clay.png',
+          icon: '/assets/icons/pottery/black_clay.webp',
           search: 'black clay swamp mangrove swamp',
           details: true,
           detailsTitle: 'Where to find',
@@ -488,7 +488,7 @@ When interacting with the top half of the statue, it launches a large celebrator
               id: 'black_clay_ball',
               title: 'Black Clay Ball',
               namespace_id: 'lilis_pottery:black_clay_ball',
-              icon: '/assets/icons/pottery/black_clay_ball.png',
+              icon: '/assets/icons/pottery/black_clay_ball.webp',
               search: 'black clay ball clay deposit'
             }
           ]
@@ -504,7 +504,7 @@ When interacting with the top half of the statue, it launches a large celebrator
           id: 'clayworker',
           title: 'Clayworker Villager',
           subtitle: 'A new villager profession centered around clay and pottery.',
-          icon: '/assets/icons/misc/emerald.png',
+          icon: '/assets/icons/misc/emerald.webp',
           search: 'clayworker villager pottery clay bricks pots',
           details: true,
           detailsTitle: 'Clayworker',
@@ -521,7 +521,7 @@ Clayworkers use the Pottery Table as their work station and focus on everything 
           id: 'glazing',
           title: 'Glazing and Coloring',
           subtitle: 'Experiment with colors and give your pottery a finished look.',
-          icon: '/assets/icons/pottery/honeycomb.png',
+          icon: '/assets/icons/pottery/honeycomb.webp',
           search: 'pottery glazing dye mixing honeycomb brush kiln firing colors glow',
           details: true,
           detailsTitle: 'Glazing',
@@ -548,27 +548,27 @@ If you want to start fresh, a Brush can be used to remove the color again.`,
   impressionsSubtitle: 'A closer look at how everything comes together ingame',
   impressions: [
     {
-      src: '/assets/impressions/pottery/01.png',
+      src: '/assets/impressions/pottery/01.webp',
       caption: 'Lili’s Bloom Shop'
     },
     {
-      src: '/assets/impressions/pottery/02.png',
+      src: '/assets/impressions/pottery/02.webp',
       caption: 'Lili’s Statue'
     },
     {
-      src: '/assets/impressions/pottery/03.png',
+      src: '/assets/impressions/pottery/03.webp',
       caption: 'A pottery kiln'
     },
     {
-      src: '/assets/impressions/pottery/04.png',
+      src: '/assets/impressions/pottery/04.webp',
       caption: 'Decorative planters'
     },
     {
-      src: '/assets/impressions/pottery/05.png',
+      src: '/assets/impressions/pottery/05.webp',
       caption: 'A small pottery shop'
     },
     {
-      src: '/assets/impressions/pottery/06.png',
+      src: '/assets/impressions/pottery/06.webp',
       caption: 'Another pottery shop'
     }
   ]

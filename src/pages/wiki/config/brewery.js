@@ -1,7 +1,7 @@
 export default {
   slug: 'brewery',
   title: 'Brewery',
-  logo: '/assets/mod-logos/brewery.png',
+  logo: '/assets/mod-logos/brewery.webp',
   aboutTitle: 'Welcome',
   aboutSubtitle: 'Everything about beer and brewing',
   aboutText: `Welcome to the Brewery Wiki.
@@ -21,7 +21,7 @@ Alongside that, you get practical tavern blocks for storage and serving, playful
           id: 'brewingstation',
           title: 'Brewingstation',
           subtitle: 'The heart of Brewery: brew Beer and Whiskey through direct interaction.',
-          icon: '/assets/icons/brewery/copper_brewingstation.png',
+          icon: '/assets/icons/brewery/copper_brewingstation.webp',
           search: 'brewingstation brewing station beer whiskey minigame tiers wood copper netherite multiblock 2x2x2',
           details: true,
           detailsTitle: 'Usage',
@@ -60,7 +60,7 @@ The station comes in tiers: Wood, Copper, and Netherite. To brew Whiskey, you ne
           title: 'Big Barrel',
           namespace_id: 'brewery:barrel_main',
           subtitle: 'A large barrel structure that currently serves as a decorative centerpiece.',
-          icon: '/assets/icons/brewery/big_barrel.png',
+          icon: '/assets/icons/brewery/big_barrel.webp',
           search: 'big barrel 2x2x2 brewery decor cellar',
           details: true,
           detailsTitle: 'Placement',
@@ -74,7 +74,7 @@ It requires a 2x2x2 space to be placed.`,
           title: 'Bench',
           namespace_id: 'brewery:bench',
           subtitle: 'Simple seating for gathering around tables and counters.',
-          icon: '/assets/icons/brewery/bench.png',
+          icon: '/assets/icons/brewery/bench.webp',
           search: 'bench seating brewery tavern'
         },
         {
@@ -82,7 +82,7 @@ It requires a 2x2x2 space to be placed.`,
           title: 'Table',
           namespace_id: 'brewery:table',
           subtitle: 'A dining table that can be dressed up with a tablecloth.',
-          icon: '/assets/icons/brewery/table.png',
+          icon: '/assets/icons/brewery/table.webp',
           search: 'table brewery tablecloth patterned carpet',
           details: true,
           detailsTitle: 'Usage',
@@ -97,7 +97,7 @@ Related: [[Patterned Wool|patterned_wool]].`
           title: 'Cabinet',
           namespace_id: 'brewery:cabinet',
           subtitle: 'A storage block for keeping supplies close and organized.',
-          icon: '/assets/icons/brewery/cabinet.png',
+          icon: '/assets/icons/brewery/cabinet.webp',
           search: 'cabinet storage brewery'
         },
         {
@@ -105,7 +105,7 @@ Related: [[Patterned Wool|patterned_wool]].`
           title: 'Drawer',
           namespace_id: 'brewery:drawer',
           subtitle: 'Compact storage for small items and quick access.',
-          icon: '/assets/icons/brewery/drawer.png',
+          icon: '/assets/icons/brewery/drawer.webp',
           search: 'drawer storage brewery'
         },
         {
@@ -113,7 +113,7 @@ Related: [[Patterned Wool|patterned_wool]].`
           title: 'Sideboard',
           namespace_id: 'brewery:sideboard',
           subtitle: 'Extra storage that fits perfectly near counters and kitchens.',
-          icon: '/assets/icons/brewery/sideboard.png',
+          icon: '/assets/icons/brewery/sideboard.webp',
           search: 'sideboard storage brewery'
         },
         {
@@ -121,7 +121,7 @@ Related: [[Patterned Wool|patterned_wool]].`
           title: 'Wall Cabinet',
           namespace_id: 'brewery:wall_cabinet',
           subtitle: 'Wall mounted storage to free up floor space.',
-          icon: '/assets/icons/brewery/wall_cabinet.png',
+          icon: '/assets/icons/brewery/wall_cabinet.webp',
           search: 'wall cabinet storage brewery kitchen'
         },
         {
@@ -129,7 +129,7 @@ Related: [[Patterned Wool|patterned_wool]].`
           title: 'Bar Counter',
           namespace_id: 'brewery:bar_counter',
           subtitle: 'A counter block for serving, decorating, and building a proper bar.',
-          icon: '/assets/icons/brewery/bar_counter.png',
+          icon: '/assets/icons/brewery/bar_counter.webp',
           search: 'bar counter brewery'
         },
         {
@@ -137,7 +137,7 @@ Related: [[Patterned Wool|patterned_wool]].`
           title: 'Patterned Wool',
           namespace_id: 'brewery:patterned_wool',
           subtitle: 'A patterned wool block for cozy interiors and Brewfest colors.',
-          icon: '/assets/icons/brewery/patterned_wool.png',
+          icon: '/assets/icons/brewery/patterned_wool.webp',
           search: 'patterned wool brewery'
         },
         {
@@ -145,7 +145,7 @@ Related: [[Patterned Wool|patterned_wool]].`
           title: 'Gingerbread',
           namespace_id: 'brewery:gingerbread',
           subtitle: 'A writable wall decoration for notes, menus, and messages.',
-          icon: '/assets/icons/brewery/gingerbread.png',
+          icon: '/assets/icons/brewery/gingerbread.webp',
           search: 'gingerbread wall decoration writable sign glow ink',
           details: true,
           detailsTitle: 'Usage',
@@ -167,7 +167,7 @@ Right-click it to open the text screen and add your text. You can also apply Glo
           title: 'Completionist Banner',
           namespace_id: 'brewery:brewery_banner',
           subtitle: 'A trophy banner for finishing the full beverage collection.',
-          icon: '/assets/icons/brewery/banner.png',
+          icon: '/assets/icons/brewery/banner.webp',
           search: 'completionist banner brewery reward craft all beverages advancement',
           details: true,
           detailsTitle: 'Reward',
@@ -195,7 +195,7 @@ Once earned, it can be placed as a standing banner or as a wall banner.`,
           title: 'Breathalyzer',
           namespace_id: 'brewery:breathalyzer',
           subtitle: 'Blow into it to see how drunk you currently are.',
-          icon: '/assets/icons/brewery/breathalyzer.png',
+          icon: '/assets/icons/brewery/breathalyzer.webp',
           search: 'breathalyzer check drunkenness easy warning danger drunk blackout brewery tool',
           details: true,
           detailsTitle: 'Usage',
@@ -216,7 +216,7 @@ Related: [[Blackout|blackout]].`,
           title: 'Dark Brew',
           namespace_id: 'brewery:dark_brew',
           subtitle: 'A mischievous bottle that turns into trouble when it hits the ground.',
-          icon: '/assets/icons/brewery/dark_brew.png',
+          icon: '/assets/icons/brewery/dark_brew.webp',
           search: 'dark brew throw spawn booze prank brewery peaceful mode',
           details: true,
           detailsTitle: 'Usage',
@@ -238,7 +238,7 @@ It is perfect for pranks and harmless chaos.`,
           id: 'dried_ingredients',
           title: 'Dried Ingredients',
           subtitle: 'Grains and harvest goods that can be dried in a Silo, then used or displayed as placeable bags.',
-          icon: '/assets/icons/brewery/dried_wheat.png',
+          icon: '/assets/icons/brewery/dried_wheat.webp',
           search: 'dried ingredients silo drying wheat barley corn oat placeable bag block brewery',
           details: true,
           detailsTitle: 'Usage',
@@ -256,7 +256,7 @@ Once dried, they become items you can use in recipes, and they can also be place
               title: 'Dried Wheat',
               namespace_id: 'brewery:dried_wheat',
               subtitle: 'Dried wheat stored in a placeable bag.',
-              icon: '/assets/icons/brewery/dried_wheat.png',
+              icon: '/assets/icons/brewery/dried_wheat.webp',
               search: 'dried wheat silo placeable bag'
             },
             {
@@ -264,7 +264,7 @@ Once dried, they become items you can use in recipes, and they can also be place
               title: 'Dried Barley',
               namespace_id: 'brewery:dried_barley',
               subtitle: 'Dried barley stored in a placeable bag.',
-              icon: '/assets/icons/brewery/dried_barley.png',
+              icon: '/assets/icons/brewery/dried_barley.webp',
               search: 'dried barley silo placeable bag'
             },
             {
@@ -272,7 +272,7 @@ Once dried, they become items you can use in recipes, and they can also be place
               title: 'Dried Corn',
               namespace_id: 'brewery:dried_corn',
               subtitle: 'Dried corn stored in a placeable bag.',
-              icon: '/assets/icons/brewery/dried_corn.png',
+              icon: '/assets/icons/brewery/dried_corn.webp',
               search: 'dried corn silo placeable bag'
             },
             {
@@ -280,7 +280,7 @@ Once dried, they become items you can use in recipes, and they can also be place
               title: 'Dried Oat',
               namespace_id: 'brewery:dried_oat',
               subtitle: 'Dried oat stored in a placeable bag.',
-              icon: '/assets/icons/brewery/dried_oat.png',
+              icon: '/assets/icons/brewery/dried_oat.webp',
               search: 'dried oat silo placeable bag'
             }
           ]
@@ -290,7 +290,7 @@ Once dried, they become items you can use in recipes, and they can also be place
           title: 'Beer Mug',
           namespace_id: 'brewery:beer_mug',
           subtitle: 'A mug for drinks that can also be used as a flower pot.',
-          icon: '/assets/icons/brewery/beer_mug.png',
+          icon: '/assets/icons/brewery/beer_mug.webp',
           search: 'beer mug flower pot brewery',
           details: true,
           detailsTitle: 'Usage',
@@ -301,7 +301,7 @@ Once dried, they become items you can use in recipes, and they can also be place
           id: 'regalia_set',
           title: 'Regalia',
           subtitle: 'Traditional Brewfest pieces with a full set bonus.',
-          icon: '/assets/icons/brewery/brewfest_regalia.png',
+          icon: '/assets/icons/brewery/brewfest_regalia.webp',
           search: 'brewfest regalia hat trousers boots lederhosen harddrinking',
           details: true,
           detailsTitle: 'Set Bonus',
@@ -322,7 +322,7 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
               title: 'Brewfest Hat',
               namespace_id: 'brewery:brewfest_hat_red',
               subtitle: 'A red Brewfest hat.',
-              icon: '/assets/icons/brewery/brewfest_hat.png',
+              icon: '/assets/icons/brewery/brewfest_hat.webp',
               search: 'brewfest hat red'
             },
             {
@@ -330,7 +330,7 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
               title: 'Brewfest Regalia',
               namespace_id: 'brewery:brewfest_regalia',
               subtitle: 'A classic chest piece for the regalia look.',
-              icon: '/assets/icons/brewery/brewfest_regalia.png',
+              icon: '/assets/icons/brewery/brewfest_regalia.webp',
               search: 'brewfest regalia chest lederhosen'
             },
             {
@@ -338,7 +338,7 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
               title: 'Brewfest Trousers',
               namespace_id: 'brewery:brewfest_trousers',
               subtitle: 'Trousers that pair well with many Brewfest tops.',
-              icon: '/assets/icons/brewery/brewfest_trousers.png',
+              icon: '/assets/icons/brewery/brewfest_trousers.webp',
               search: 'brewfest trousers'
             },
             {
@@ -346,7 +346,7 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
               title: 'Brewfest Boots',
               namespace_id: 'brewery:brewfest_boots',
               subtitle: 'Sturdy boots for long festival nights.',
-              icon: '/assets/icons/brewery/brewfest_boots.png',
+              icon: '/assets/icons/brewery/brewfest_boots.webp',
               search: 'brewfest boots'
             }
           ]
@@ -355,7 +355,7 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
           id: 'dirndl_set',
           title: 'Dirndl',
           subtitle: 'Classic dirndl pieces with a full set bonus.',
-          icon: '/assets/icons/brewery/brewfest_dress.png',
+          icon: '/assets/icons/brewery/brewfest_dress.webp',
           search: 'dirndl blouse dress shoes blue hat harddrinking',
           details: true,
           detailsTitle: 'Set Bonus',
@@ -376,7 +376,7 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
               title: 'Brewfest Hat',
               namespace_id: 'brewery:brewfest_hat_blue',
               subtitle: 'A blue Brewfest hat.',
-              icon: '/assets/icons/brewery/brewfest_hat_red.png',
+              icon: '/assets/icons/brewery/brewfest_hat_red.webp',
               search: 'brewfest hat blue'
             },
             {
@@ -384,7 +384,7 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
               title: 'Brewfest Blouse',
               namespace_id: 'brewery:brewfest_blouse',
               subtitle: 'A blouse for your dirndl look.',
-              icon: '/assets/icons/brewery/brewfest_blouse.png',
+              icon: '/assets/icons/brewery/brewfest_blouse.webp',
               search: 'brewfest blouse dirndl'
             },
             {
@@ -392,7 +392,7 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
               title: 'Brewfest Dress',
               namespace_id: 'brewery:brewfest_dress',
               subtitle: 'A dress that pairs with many Brewfest pieces.',
-              icon: '/assets/icons/brewery/brewfest_dress.png',
+              icon: '/assets/icons/brewery/brewfest_dress.webp',
               search: 'brewfest dress dirndl'
             },
             {
@@ -400,7 +400,7 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
               title: 'Brewfest Shoes',
               namespace_id: 'brewery:brewfest_shoes',
               subtitle: 'Comfortable shoes for dancing and wandering.',
-              icon: '/assets/icons/brewery/brewfest_shoes.png',
+              icon: '/assets/icons/brewery/brewfest_shoes.webp',
               search: 'brewfest shoes dirndl'
             }
           ]
@@ -417,7 +417,7 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
           id: 'beer',
           title: 'Beer',
           subtitle: 'A selection of beers, each with its own effect.',
-          icon: '/assets/icons/brewery/beer_hops.png',
+          icon: '/assets/icons/brewery/beer_hops.webp',
           search: 'beer mug brewery effects wheat hops barley oat nettle haley',
           details: true,
           detailsTitle: 'All Beers',
@@ -428,7 +428,7 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
               title: 'Beer Wheat',
               namespace_id: 'brewery:beer_wheat',
               subtitle: '',
-              icon: '/assets/icons/brewery/beer_wheat.png',
+              icon: '/assets/icons/brewery/beer_wheat.webp',
               search: 'beer wheat'
             },
             {
@@ -436,7 +436,7 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
               title: 'Beer Hops',
               namespace_id: 'brewery:beer_hops',
               subtitle: '',
-              icon: '/assets/icons/brewery/beer_hops.png',
+              icon: '/assets/icons/brewery/beer_hops.webp',
               search: 'beer hops'
             },
             {
@@ -444,7 +444,7 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
               title: 'Beer Barley',
               namespace_id: 'brewery:beer_barley',
               subtitle: '',
-              icon: '/assets/icons/brewery/beer_barley.png',
+              icon: '/assets/icons/brewery/beer_barley.webp',
               search: 'beer barley'
             },
             {
@@ -452,7 +452,7 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
               title: 'Beer Oat',
               namespace_id: 'brewery:beer_oat',
               subtitle: '',
-              icon: '/assets/icons/brewery/beer_oat.png',
+              icon: '/assets/icons/brewery/beer_oat.webp',
               search: 'beer oat'
             },
             {
@@ -460,7 +460,7 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
               title: 'Beer Nettle',
               namespace_id: 'brewery:beer_nettle',
               subtitle: '',
-              icon: '/assets/icons/brewery/beer_nettle.png',
+              icon: '/assets/icons/brewery/beer_nettle.webp',
               search: 'beer nettle'
             },
             {
@@ -468,7 +468,7 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
               title: 'Beer Haley',
               namespace_id: 'brewery:beer_haley',
               subtitle: 'Grants the [[Haley|haley]] effect.',
-              icon: '/assets/icons/brewery/beer_haley.png',
+              icon: '/assets/icons/brewery/beer_haley.webp',
               search: 'beer haley flight effect'
             }
           ]
@@ -478,7 +478,7 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
           title: 'Food',
           namespace_id: '',
           subtitle: 'Oktoberfest inspired meals for long nights and full hearts.',
-          icon: '/assets/icons/brewery/pretzel.png',
+          icon: '/assets/icons/brewery/pretzel.webp',
           search:
             'brewery food oktoberfest sausage pretzel pork knuckle dumplings potato salad mashed potatoes chicken',
           details: true,
@@ -490,7 +490,7 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
               title: 'Sausage',
               namespace_id: 'brewery:sausage',
               subtitle: '',
-              icon: '/assets/icons/brewery/sausage.png',
+              icon: '/assets/icons/brewery/sausage.webp',
               search: 'sausage food'
             },
             {
@@ -498,7 +498,7 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
               title: 'Pretzel',
               namespace_id: 'brewery:pretzel',
               subtitle: '',
-              icon: '/assets/icons/brewery/pretzel.png',
+              icon: '/assets/icons/brewery/pretzel.webp',
               search: 'pretzel food'
             },
             {
@@ -506,7 +506,7 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
               title: 'Pork Knuckle',
               namespace_id: 'brewery:pork_knuckle',
               subtitle: '',
-              icon: '/assets/icons/brewery/pork_knuckle.png',
+              icon: '/assets/icons/brewery/pork_knuckle.webp',
               search: 'pork knuckle food'
             },
             {
@@ -514,7 +514,7 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
               title: 'Fried Chicken',
               namespace_id: 'brewery:fried_chicken',
               subtitle: '',
-              icon: '/assets/icons/brewery/fried_chicken.png',
+              icon: '/assets/icons/brewery/fried_chicken.webp',
               search: 'fried chicken food'
             },
             {
@@ -522,7 +522,7 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
               title: 'Half Chicken',
               namespace_id: 'brewery:half_chicken',
               subtitle: '',
-              icon: '/assets/icons/brewery/half_chicken.png',
+              icon: '/assets/icons/brewery/half_chicken.webp',
               search: 'half chicken food'
             },
             {
@@ -530,7 +530,7 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
               title: 'Mashed Potatoes',
               namespace_id: 'brewery:mashed_potatoes',
               subtitle: '',
-              icon: '/assets/icons/brewery/mashed_potatoes.png',
+              icon: '/assets/icons/brewery/mashed_potatoes.webp',
               search: 'mashed potatoes food'
             },
             {
@@ -538,7 +538,7 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
               title: 'Potato Salad',
               namespace_id: 'brewery:potato_salad',
               subtitle: '',
-              icon: '/assets/icons/brewery/potato_salad.png',
+              icon: '/assets/icons/brewery/potato_salad.webp',
               search: 'potato salad food'
             },
             {
@@ -546,7 +546,7 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
               title: 'Dumplings',
               namespace_id: 'brewery:dumplings',
               subtitle: '',
-              icon: '/assets/icons/brewery/dumplings.png',
+              icon: '/assets/icons/brewery/dumplings.webp',
               search: 'dumplings food'
             }
           ]
@@ -563,7 +563,7 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
           id: 'hops',
           title: 'Hops',
           subtitle: 'Hops can be found in taiga biomes and cultivated for brewing.',
-          icon: '/assets/icons/brewery/wild_hops.png',
+          icon: '/assets/icons/brewery/wild_hops.webp',
           search: 'hops taiga village woodland mansion wild hops crop rope climbing',
           details: true,
           detailsTitle: 'Usage',
@@ -582,7 +582,7 @@ Used for brewing at the [[Brewingstation|brewingstation]].`,
               title: 'Hops',
               namespace_id: 'brewery:hops',
               subtitle: 'Used for cultivation and as a brewing ingredient.',
-              icon: '/assets/icons/brewery/hops.png',
+              icon: '/assets/icons/brewery/hops.webp',
               search: 'hops item seed ingredient beer'
             },
             {
@@ -590,7 +590,7 @@ Used for brewing at the [[Brewingstation|brewingstation]].`,
               title: 'Hops Crop',
               namespace_id: 'brewery:hops_crop',
               subtitle: 'A cultivated hops plant, capable of climbing Ropes.',
-              icon: '/assets/icons/brewery/hops_crop.png',
+              icon: '/assets/icons/brewery/hops_crop.webp',
               search: 'hops crop cultivated growth rope climbing'
             }
           ]
@@ -608,7 +608,7 @@ Used for brewing at the [[Brewingstation|brewingstation]].`,
           title: 'Booze',
           namespace_id: 'brewery:booze',
           subtitle: 'A hostile Beer Elemental entity.',
-          icon: '/assets/icons/brewery/entity/booze.png',
+          icon: '/assets/icons/brewery/entity/booze.webp',
           search: 'booze beer elemental hostile mob brewingstation failure dark brew thrown entity',
           details: true,
           detailsTitle: 'Behavior',
@@ -638,7 +638,7 @@ Booze actively hunts players and uses both melee and ranged attacks. It does not
           title: 'Toxic Touch',
           namespace_id: 'brewery:toxic_touch',
           subtitle: 'Melee attacks apply Poison to hit entities.',
-          icon: '/assets/icons/brewery/effects/toxictouch.png',
+          icon: '/assets/icons/brewery/effects/toxictouch.webp',
           search: 'toxic touch poison melee attacks'
         },
         {
@@ -646,7 +646,7 @@ Booze actively hunts players and uses both melee and ranged attacks. It does not
           title: 'Renewing Touch',
           namespace_id: 'brewery:renewing_touch',
           subtitle: 'Melee attacks apply Regeneration to hit entities.',
-          icon: '/assets/icons/brewery/effects/renewingtouch.png',
+          icon: '/assets/icons/brewery/effects/renewingtouch.webp',
           search: 'renewing touch regeneration melee attacks'
         },
         {
@@ -654,7 +654,7 @@ Booze actively hunts players and uses both melee and ranged attacks. It does not
           title: 'Protective Touch',
           namespace_id: 'brewery:protective_touch',
           subtitle: 'Melee attacks grant Absorption for a short duration.',
-          icon: '/assets/icons/brewery/effects/protectivetouch.png',
+          icon: '/assets/icons/brewery/effects/protectivetouch.webp',
           search: 'protective touch absorption melee attacks'
         },
         {
@@ -662,7 +662,7 @@ Booze actively hunts players and uses both melee and ranged attacks. It does not
           title: 'Healing Touch',
           namespace_id: 'brewery:healing_touch',
           subtitle: 'Melee attacks directly heal hit entities.',
-          icon: '/assets/icons/brewery/effects/healingtouch.png',
+          icon: '/assets/icons/brewery/effects/healingtouch.webp',
           search: 'healing touch heal melee attacks'
         },
         {
@@ -670,7 +670,7 @@ Booze actively hunts players and uses both melee and ranged attacks. It does not
           title: 'Haley',
           namespace_id: 'brewery:haley',
           subtitle: 'Grants temporary flight for a short duration.',
-          icon: '/assets/icons/brewery/effects/haley.png',
+          icon: '/assets/icons/brewery/effects/haley.webp',
           search: 'haley temporary flight'
         },
         {
@@ -678,7 +678,7 @@ Booze actively hunts players and uses both melee and ranged attacks. It does not
           title: 'Harddrinking',
           namespace_id: 'brewery:harddrinking',
           subtitle: 'Prevents all negative alcohol-related effects. Gained from full Brewfest outfits.',
-          icon: '/assets/icons/brewery/effects/harddrinking.png',
+          icon: '/assets/icons/brewery/effects/harddrinking.webp',
           search: 'harddrinking alcohol immunity regalia dirndl set bonus'
         },
         {
@@ -686,7 +686,7 @@ Booze actively hunts players and uses both melee and ranged attacks. It does not
           title: 'Drunk',
           namespace_id: 'brewery:drunk',
           subtitle: 'Too much alcohol, and the world starts to wobble. Check it with a [[Breathalyzer|breathalyzer]].',
-          icon: '/assets/icons/brewery/effects/drunk.png',
+          icon: '/assets/icons/brewery/effects/drunk.webp',
           search: 'drunk alcohol effect'
         },
         {
@@ -694,7 +694,7 @@ Booze actively hunts players and uses both melee and ranged attacks. It does not
           title: 'Blackout',
           namespace_id: 'brewery:blackout',
           subtitle: 'The next step after [[Drunk|drunk]]. Strong and unforgiving.',
-          icon: '/assets/icons/brewery/effects/blackout.png',
+          icon: '/assets/icons/brewery/effects/blackout.webp',
           search: 'blackout alcohol extreme drunk'
         },
         {
@@ -702,7 +702,7 @@ Booze actively hunts players and uses both melee and ranged attacks. It does not
           title: 'Pint Charisma',
           namespace_id: 'brewery:pint_charisma',
           subtitle: 'Reduces villager trading prices by 10%.',
-          icon: '/assets/icons/brewery/effects/pintcharisma.png',
+          icon: '/assets/icons/brewery/effects/pintcharisma.webp',
           search: 'pint charisma villager discount'
         },
         {
@@ -710,7 +710,7 @@ Booze actively hunts players and uses both melee and ranged attacks. It does not
           title: 'Partystarter',
           namespace_id: 'brewery:partystarter',
           subtitle: 'Melee hits pop fireworks and deal a little extra damage.',
-          icon: '/assets/icons/brewery/effects/partystarter.png',
+          icon: '/assets/icons/brewery/effects/partystarter.webp',
           search: 'partystarter fireworks melee damage'
         },
         {
@@ -718,7 +718,7 @@ Booze actively hunts players and uses both melee and ranged attacks. It does not
           title: 'Snow White',
           namespace_id: 'brewery:snow_white',
           subtitle: 'Nearby animals feel unusually friendly and stick around.',
-          icon: '/assets/icons/brewery/effects/snowwhite.png',
+          icon: '/assets/icons/brewery/effects/snowwhite.webp',
           search: 'snow white animals follow'
         },
         {
@@ -726,7 +726,7 @@ Booze actively hunts players and uses both melee and ranged attacks. It does not
           title: 'Combustion',
           namespace_id: 'brewery:combustion',
           subtitle: 'Sets nearby enemies on fire for a short time.',
-          icon: '/assets/icons/brewery/effects/combustion.png',
+          icon: '/assets/icons/brewery/effects/combustion.webp',
           search: 'combustion ignite nearby enemies'
         },
         {
@@ -734,7 +734,7 @@ Booze actively hunts players and uses both melee and ranged attacks. It does not
           title: 'Explosion',
           namespace_id: 'brewery:explosion',
           subtitle: 'Attacks have a small chance to launch a fireball.',
-          icon: '/assets/icons/brewery/effects/explosion.png',
+          icon: '/assets/icons/brewery/effects/explosion.webp',
           search: 'explosion fireball chance attacks'
         },
         {
@@ -742,7 +742,7 @@ Booze actively hunts players and uses both melee and ranged attacks. It does not
           title: 'Repulsion',
           namespace_id: 'brewery:repulsion',
           subtitle: 'Periodically pushes enemies away from you.',
-          icon: '/assets/icons/brewery/effects/repulsion.png',
+          icon: '/assets/icons/brewery/effects/repulsion.webp',
           search: 'repulsion knockback nearby enemies'
         },
         {
@@ -750,7 +750,7 @@ Booze actively hunts players and uses both melee and ranged attacks. It does not
           title: 'Lightning',
           namespace_id: 'brewery:lightning',
           subtitle: 'Attacks have a small chance to strike the target.',
-          icon: '/assets/icons/brewery/effects/lightning.png',
+          icon: '/assets/icons/brewery/effects/lightning.webp',
           search: 'lightning strike chance attacks'
         },
         {
@@ -758,7 +758,7 @@ Booze actively hunts players and uses both melee and ranged attacks. It does not
           title: 'Mining',
           namespace_id: 'brewery:mining',
           subtitle: 'The deeper you go, the faster you can mine.',
-          icon: '/assets/icons/brewery/effects/mining.png',
+          icon: '/assets/icons/brewery/effects/mining.webp',
           search: 'mining depth based speed'
         },
         {
@@ -766,7 +766,7 @@ Booze actively hunts players and uses both melee and ranged attacks. It does not
           title: 'Pacify',
           namespace_id: 'brewery:pacify',
           subtitle: 'Makes enemies less persistent. Endermen eye contact becomes safe.',
-          icon: '/assets/icons/brewery/effects/pacify.png',
+          icon: '/assets/icons/brewery/effects/pacify.webp',
           search: 'pacify reduce aggro enderman'
         }
       ]
@@ -782,28 +782,28 @@ Booze actively hunts players and uses both melee and ranged attacks. It does not
           title: 'Configuration',
           subtitle:
             'Most gameplay features of Brewery can be adjusted via a configuration file, usually located at `config/brewery.json`.',
-          icon: '/assets/icons/misc/config.png',
+          icon: '/assets/icons/misc/config.webp',
           search: 'config configuration settings options balance json brewery'
         },
         {
           id: 'festive_zombies',
           title: 'Festive Zombies',
           subtitle: 'Sometimes zombies show up in Brewfest clothing, and yes, it looks ridiculous.',
-          icon: '/assets/icons/misc/zombie.png',
+          icon: '/assets/icons/misc/zombie.webp',
           search: 'festive zombie brewfest spawn'
         },
         {
           id: 'farmer_trades',
           title: 'Expanded Trades',
           subtitle: 'Certain Brewery items have been added to Farmer Villager trade pools.',
-          icon: '/assets/icons/misc/emerald.png',
+          icon: '/assets/icons/misc/emerald.webp',
           search: 'farmer villager trades brewery items economy progression'
         },
         {
           id: 'loot',
           title: 'Loot and Exploration',
           subtitle: 'Certain items and ingredients can be found while exploring the world.',
-          icon: '/assets/icons/misc/chest.png',
+          icon: '/assets/icons/misc/chest.webp',
           search: 'loot chest dungeon village exploration items ingredients',
           details: true,
           detailsTitle: 'Where to find loot',

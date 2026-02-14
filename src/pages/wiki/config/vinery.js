@@ -1,7 +1,7 @@
 export default {
   slug: 'vinery',
   title: 'Vinery',
-  logo: '/assets/mod-logos/vinery.png',
+  logo: '/assets/mod-logos/vinery.webp',
   aboutTitle: 'Welcome',
   aboutSubtitle: 'Everything about wine and vineyards',
   aboutText: `Welcome to the Vinery Wiki.
@@ -23,7 +23,7 @@ Alongside that, you get practical vineyard and cellar decor, dedicated storage o
           title: 'Grapevine Pot',
           namespace_id: 'vinery:grapevine_pot',
           subtitle: 'Stomp grapes into must and collect fresh grape juice with bottles.',
-          icon: '/assets/icons/vinery/grapevine_pot.png',
+          icon: '/assets/icons/vinery/grapevine_pot.webp',
           search: 'grapevine pot stomp grapes must grape juice bottle jump move around cannot mix variants',
           details: true,
           detailsTitle: 'Usage',
@@ -45,7 +45,7 @@ You cannot mix different grape variants in the same pot.`,
           title: 'Fermentation Barrel',
           namespace_id: 'vinery:fermentation_barrel',
           subtitle: 'Main station for fermenting juice into wine.',
-          icon: '/assets/icons/vinery/fermentation_barrel.png',
+          icon: '/assets/icons/vinery/fermentation_barrel.webp',
           search:
             'fermentation barrel wine crafting station juice fill slot container wine bottle empty shift right click workstation winemaker',
           details: true,
@@ -71,7 +71,7 @@ To empty the stored juice, shift-right-click the block.`,
           title: 'Apple Press',
           namespace_id: 'vinery:apple_press',
           subtitle: 'Crafting station for mashing apples and fermenting apple products.',
-          icon: '/assets/icons/vinery/apple_press.png',
+          icon: '/assets/icons/vinery/apple_press.webp',
           search: 'apple press crafting station apple mash fermenting input slots output slot apple juice wine bottle',
           details: true,
           detailsTitle: 'Usage',
@@ -99,18 +99,18 @@ To ferment, use the middle input slots with ingredients and containers such as w
           id: 'lattice',
           title: 'Lattice',
           subtitle: 'Wall decor that can also be used to cultivate jungle grapes.',
-          icon: '/assets/icons/vinery/oak_lattice.png',
+          icon: '/assets/icons/vinery/oak_lattice.webp',
           textures: [
-            '/assets/icons/vinery/acacia_lattice.png',
-            '/assets/icons/vinery/bamboo_lattice.png',
-            '/assets/icons/vinery/birch_lattice.png',
-            '/assets/icons/vinery/cherry_lattice.png',
-            '/assets/icons/vinery/dark_cherry_lattice.png',
-            '/assets/icons/vinery/dark_oak_lattice.png',
-            '/assets/icons/vinery/jungle_lattice.png',
-            '/assets/icons/vinery/mangrove_lattice.png',
-            '/assets/icons/vinery/oak_lattice.png',
-            '/assets/icons/vinery/spruce_lattice.png'
+            '/assets/icons/vinery/acacia_lattice.webp',
+            '/assets/icons/vinery/bamboo_lattice.webp',
+            '/assets/icons/vinery/birch_lattice.webp',
+            '/assets/icons/vinery/cherry_lattice.webp',
+            '/assets/icons/vinery/dark_cherry_lattice.webp',
+            '/assets/icons/vinery/dark_oak_lattice.webp',
+            '/assets/icons/vinery/jungle_lattice.webp',
+            '/assets/icons/vinery/mangrove_lattice.webp',
+            '/assets/icons/vinery/oak_lattice.webp',
+            '/assets/icons/vinery/spruce_lattice.webp'
           ],
           carousel: true,
           search:
@@ -135,7 +135,7 @@ To ferment, use the middle input slots with ingredients and containers such as w
           id: 'wine_racks',
           title: 'Wine Racks',
           subtitle: 'Dedicated storage blocks for displaying wine bottles.',
-          icon: '/assets/icons/vinery/oak_wine_rack_small.png',
+          icon: '/assets/icons/vinery/oak_wine_rack_small.webp',
           search: 'wine racks storage bottles display wood variants small large cellar',
           details: true,
           detailsTitle: 'Usage',
@@ -154,7 +154,7 @@ To ferment, use the middle input slots with ingredients and containers such as w
           title: 'Wine Box',
           namespace_id: 'vinery:wine_box',
           subtitle: 'A compact storage and decoration option for smaller wines.',
-          icon: '/assets/icons/vinery/wine_box.png',
+          icon: '/assets/icons/vinery/wine_box.webp',
           search: 'wine box storage decoration smaller wines',
           details: true,
           detailsTitle: 'Usage',
@@ -169,7 +169,7 @@ To ferment, use the middle input slots with ingredients and containers such as w
           id: 'vinery_slabs',
           title: 'Vineyard Slabs',
           subtitle: 'Terrain slabs used for vineyard paths and tiered fields.',
-          icon: '/assets/icons/vinery/dirt_slab.png',
+          icon: '/assets/icons/vinery/dirt_slab.webp',
           search: 'slabs grass dirt coarse dirt vineyard tier expand',
           details: true,
           detailsTitle: 'Usage',
@@ -181,7 +181,7 @@ To ferment, use the middle input slots with ingredients and containers such as w
               title: 'Grass Slab',
               namespace_id: 'vinery:grass_slab',
               subtitle: '',
-              icon: '/assets/icons/vinery/grass_slab.png',
+              icon: '/assets/icons/vinery/grass_slab.webp',
               search: 'grass slab vineyard'
             },
             {
@@ -189,7 +189,7 @@ To ferment, use the middle input slots with ingredients and containers such as w
               title: 'Dirt Slab',
               namespace_id: 'vinery:dirt_slab',
               subtitle: '',
-              icon: '/assets/icons/vinery/dirt_slab.png',
+              icon: '/assets/icons/vinery/dirt_slab.webp',
               search: 'dirt slab vineyard'
             },
             {
@@ -197,7 +197,7 @@ To ferment, use the middle input slots with ingredients and containers such as w
               title: 'Coarse Dirt Slab',
               namespace_id: 'vinery:coarse_dirt_slab',
               subtitle: '',
-              icon: '/assets/icons/vinery/coarse_dirt_slab.png',
+              icon: '/assets/icons/vinery/coarse_dirt_slab.webp',
               search: 'coarse dirt slab vineyard'
             }
           ]
@@ -215,7 +215,7 @@ To ferment, use the middle input slots with ingredients and containers such as w
           title: 'Stem',
           namespace_id: 'vinery:grapevine_stem',
           subtitle: 'Required to cultivate normal, taiga, and savanna grapes.',
-          icon: '/assets/icons/vinery/grapevine_stem.png',
+          icon: '/assets/icons/vinery/grapevine_stem.webp',
           search: 'stem required cultivate normal taiga savanna grapes two blocks high click upper part seeds',
           details: true,
           detailsTitle: 'Usage',
@@ -232,7 +232,7 @@ It is two blocks high. To place the respective seeds, click the upper part while
           id: 'grape_juice',
           title: 'Grape Juice',
           subtitle: 'Processing ingredient used for wine production.',
-          icon: '/assets/icons/vinery/red_grapejuice.png',
+          icon: '/assets/icons/vinery/red_grapejuice.webp',
           search: 'grape juice ingredient fermentation barrel wine production red white savanna taiga jungle',
           details: true,
           detailsTitle: 'Variants',
@@ -242,56 +242,56 @@ It is two blocks high. To place the respective seeds, click the upper part while
               id: 'red_grapejuice',
               title: 'Red Grape Juice',
               subtitle: '',
-              icon: '/assets/icons/vinery/red_grapejuice.png',
+              icon: '/assets/icons/vinery/red_grapejuice.webp',
               search: 'red grape juice'
             },
             {
               id: 'white_grapejuice',
               title: 'White Grape Juice',
               subtitle: '',
-              icon: '/assets/icons/vinery/white_grapejuice.png',
+              icon: '/assets/icons/vinery/white_grapejuice.webp',
               search: 'white grape juice'
             },
             {
               id: 'red_savanna_grapejuice',
               title: 'Red Savanna Grape Juice',
               subtitle: '',
-              icon: '/assets/icons/vinery/red_savanna_grapejuice.png',
+              icon: '/assets/icons/vinery/red_savanna_grapejuice.webp',
               search: 'red savanna grape juice'
             },
             {
               id: 'white_savanna_grapejuice',
               title: 'White Savanna Grape Juice',
               subtitle: '',
-              icon: '/assets/icons/vinery/white_savanna_grapejuice.png',
+              icon: '/assets/icons/vinery/white_savanna_grapejuice.webp',
               search: 'white savanna grape juice'
             },
             {
               id: 'red_taiga_grapejuice',
               title: 'Red Taiga Grape Juice',
               subtitle: '',
-              icon: '/assets/icons/vinery/red_taiga_grapejuice.png',
+              icon: '/assets/icons/vinery/red_taiga_grapejuice.webp',
               search: 'red taiga grape juice'
             },
             {
               id: 'white_taiga_grapejuice',
               title: 'White Taiga Grape Juice',
               subtitle: '',
-              icon: '/assets/icons/vinery/white_taiga_grapejuice.png',
+              icon: '/assets/icons/vinery/white_taiga_grapejuice.webp',
               search: 'white taiga grape juice'
             },
             {
               id: 'red_jungle_grapejuice',
               title: 'Red Jungle Grape Juice',
               subtitle: '',
-              icon: '/assets/icons/vinery/red_jungle_grapejuice.png',
+              icon: '/assets/icons/vinery/red_jungle_grapejuice.webp',
               search: 'red jungle grape juice'
             },
             {
               id: 'white_jungle_grapejuice',
               title: 'White Jungle Grape Juice',
               subtitle: '',
-              icon: '/assets/icons/vinery/white_jungle_grapejuice.png',
+              icon: '/assets/icons/vinery/white_jungle_grapejuice.webp',
               search: 'white jungle grape juice'
             }
           ]
@@ -301,7 +301,7 @@ It is two blocks high. To place the respective seeds, click the upper part while
           title: 'Apple Juice',
           namespace_id: 'vinery:apple_juice',
           subtitle: 'Processing ingredient used for apple-based recipes.',
-          icon: '/assets/icons/vinery/apple_juice.png',
+          icon: '/assets/icons/vinery/apple_juice.webp',
           search: 'apple juice ingredient apple press fermenting wine production',
           details: true,
           detailsTitle: 'Usage',
@@ -313,7 +313,7 @@ It is two blocks high. To place the respective seeds, click the upper part while
           title: 'Wine Bottle',
           namespace_id: 'vinery:wine_bottle',
           subtitle: 'A crafting ingredient used for bottling wines and juices.',
-          icon: '/assets/icons/vinery/wine_bottle.png',
+          icon: '/assets/icons/vinery/wine_bottle.webp',
           search: 'wine bottle crafting ingredient bottling wines juices'
         },
         {
@@ -321,7 +321,7 @@ It is two blocks high. To place the respective seeds, click the upper part while
           title: 'Apple Mash',
           namespace_id: 'vinery:apple_mash',
           subtitle: 'A crafting ingredient used for making apple-based juices and wines.',
-          icon: '/assets/icons/vinery/apple_mash.png',
+          icon: '/assets/icons/vinery/apple_mash.webp',
           search: 'apple mash crafting ingredient apple press apples juice wine',
           details: true,
           detailsTitle: 'How to obtain',
@@ -332,7 +332,7 @@ It is two blocks high. To place the respective seeds, click the upper part while
           id: 'winemaker_armor',
           title: 'Winemaker Armor',
           subtitle: 'Armor set designed for grape cultivation with a full set bonus.',
-          icon: '/assets/icons/vinery/straw_hat.png',
+          icon: '/assets/icons/vinery/straw_hat.webp',
           search: 'winemaker armor set bonus bone meal not consumed durability loss',
           details: true,
           detailsTitle: 'Usage',
@@ -344,25 +344,25 @@ Instead, the armor loses durability in exchange.`,
             {
               id: 'winemaker_helmet',
               title: 'Straw Hat',
-              icon: '/assets/icons/vinery/straw_hat.png',
+              icon: '/assets/icons/vinery/straw_hat.webp',
               search: 'winemaker hat helmet armor'
             },
             {
               id: 'winemaker_chestplate',
               title: 'Winemaker Apron',
-              icon: '/assets/icons/vinery/winemaker_apron.png',
+              icon: '/assets/icons/vinery/winemaker_apron.webp',
               search: 'winemaker jacket chestplate armor'
             },
             {
               id: 'winemaker_leggings',
               title: 'Winemaker Leggings',
-              icon: '/assets/icons/vinery/winemaker_leggings.png',
+              icon: '/assets/icons/vinery/winemaker_leggings.webp',
               search: 'winemaker pants leggings armor'
             },
             {
               id: 'winemaker_boots',
               title: 'Winemaker Boots',
-              icon: '/assets/icons/vinery/winemaker_boots.png',
+              icon: '/assets/icons/vinery/winemaker_boots.webp',
               search: 'winemaker boots armor'
             }
           ]
@@ -372,7 +372,7 @@ Instead, the armor loses durability in exchange.`,
           title: 'Completionist Banner',
           namespace_id: 'vinery:completionist_banner',
           subtitle: 'A trophy banner unlocked by crafting every Vinery wine at least once.',
-          icon: '/assets/icons/vinery/vinery_standard.png',
+          icon: '/assets/icons/vinery/vinery_standard.webp',
           search: 'completionist banner craft all wines advancement inventory same time trophy thank you tooltip',
           details: true,
           detailsTitle: 'Reward',
@@ -401,7 +401,7 @@ When tooltips are enabled, the banner also shows a small thank you message in it
           title: 'Cherry',
           namespace_id: 'vinery:cherry',
           subtitle: 'Fresh fruit harvested from cherry trees.',
-          icon: '/assets/icons/vinery/cherry.png',
+          icon: '/assets/icons/vinery/cherry.webp',
           search: 'cherry fruit harvest tree leaves empty hand'
         },
         {
@@ -409,7 +409,7 @@ When tooltips are enabled, the banner also shows a small thank you message in it
           title: 'Rotten Cherry',
           namespace_id: 'vinery:rotten_cherry',
           subtitle: 'An unpleasant cherry with a small chance to drop during harvesting.',
-          icon: '/assets/icons/vinery/rotten_cherry.png',
+          icon: '/assets/icons/vinery/rotten_cherry.webp',
           search: 'rotten cherry harvest chance throw at creatures friends',
           details: true,
           detailsTitle: 'Usage',
@@ -422,183 +422,183 @@ It is not meant to be eaten. It can be thrown at unwanted creatures or friends.`
           id: 'wine',
           title: 'Wine',
           subtitle: 'A wide selection of wines with unique effects.',
-          icon: '/assets/icons/vinery/cristel_wine.png',
+          icon: '/assets/icons/vinery/cristel_wine.webp',
           search: 'wine effects drink placeable aging bottle',
           items: [
             {
               id: 'apple_cider',
               title: 'Apple Cider',
               subtitle: '',
-              icon: '/assets/icons/vinery/apple_cider.png',
+              icon: '/assets/icons/vinery/apple_cider.webp',
               search: 'apple cider wine'
             },
             {
               id: 'apple_wine',
               title: 'Apple Wine',
               subtitle: '',
-              icon: '/assets/icons/vinery/apple_wine.png',
+              icon: '/assets/icons/vinery/apple_wine.webp',
               search: 'apple wine'
             },
-            { id: 'mead', title: 'Mead', subtitle: '', icon: '/assets/icons/vinery/mead.png', search: 'mead' },
+            { id: 'mead', title: 'Mead', subtitle: '', icon: '/assets/icons/vinery/mead.webp', search: 'mead' },
             {
               id: 'glowing_wine',
               title: 'Glowing Wine',
               subtitle: '',
-              icon: '/assets/icons/vinery/glowing_wine.png',
+              icon: '/assets/icons/vinery/glowing_wine.webp',
               search: 'glowing wine'
             },
             {
               id: 'solaris_wine',
               title: 'Solaris Wine',
               subtitle: '',
-              icon: '/assets/icons/vinery/solaris_wine.png',
+              icon: '/assets/icons/vinery/solaris_wine.webp',
               search: 'solaris wine'
             },
             {
               id: 'kelp_cider',
               title: 'Kelp Cider',
               subtitle: '',
-              icon: '/assets/icons/vinery/kelp_cider.png',
+              icon: '/assets/icons/vinery/kelp_cider.webp',
               search: 'kelp cider'
             },
             {
               id: 'eiswein',
               title: 'Eiswein',
               subtitle: '',
-              icon: '/assets/icons/vinery/eiswein.png',
+              icon: '/assets/icons/vinery/eiswein.webp',
               search: 'eiswein'
             },
             {
               id: 'aegis_wine',
               title: 'Aegis Wine',
               subtitle: '',
-              icon: '/assets/icons/vinery/aegis_wine.png',
+              icon: '/assets/icons/vinery/aegis_wine.webp',
               search: 'aegis wine'
             },
             {
               id: 'villagers_fright',
               title: "Villager's Fright",
               subtitle: '',
-              icon: '/assets/icons/vinery/villagers_fright.png',
+              icon: '/assets/icons/vinery/villagers_fright.webp',
               search: 'villagers fright'
             },
             {
               id: 'clark_wine',
               title: 'Clark Wine',
               subtitle: '',
-              icon: '/assets/icons/vinery/clark_wine.png',
+              icon: '/assets/icons/vinery/clark_wine.webp',
               search: 'clark wine'
             },
             {
               id: 'jellie_wine',
               title: 'Jellie Wine',
               subtitle: '',
-              icon: '/assets/icons/vinery/jellie_wine.png',
+              icon: '/assets/icons/vinery/jellie_wine.webp',
               search: 'jellie wine'
             },
             {
               id: 'noir_wine',
               title: 'Noir Wine',
               subtitle: '',
-              icon: '/assets/icons/vinery/noir_wine.png',
+              icon: '/assets/icons/vinery/noir_wine.webp',
               search: 'noir wine'
             },
             {
               id: 'red_wine',
               title: 'Red Wine',
               subtitle: '',
-              icon: '/assets/icons/vinery/red_wine.png',
+              icon: '/assets/icons/vinery/red_wine.webp',
               search: 'red wine'
             },
             {
               id: 'strad_wine',
               title: 'Strad Wine',
               subtitle: '',
-              icon: '/assets/icons/vinery/strad_wine.png',
+              icon: '/assets/icons/vinery/strad_wine.webp',
               search: 'strad wine'
             },
             {
               id: 'cherry_wine',
               title: 'Cherry Wine',
               subtitle: '',
-              icon: '/assets/icons/vinery/cherry_wine.png',
+              icon: '/assets/icons/vinery/cherry_wine.webp',
               search: 'cherry wine'
             },
             {
               id: 'cristel_wine',
               title: 'Cristel Wine',
               subtitle: '',
-              icon: '/assets/icons/vinery/cristel_wine.png',
+              icon: '/assets/icons/vinery/cristel_wine.webp',
               search: 'cristel wine'
             },
             {
               id: 'lilitu_wine',
               title: 'Lilitu Wine',
               subtitle: '',
-              icon: '/assets/icons/vinery/lilitu_wine.png',
+              icon: '/assets/icons/vinery/lilitu_wine.webp',
               search: 'lilitu wine'
             },
             {
               id: 'jo_special_mixture',
               title: 'Jo Special Mixture',
               subtitle: '',
-              icon: '/assets/icons/vinery/jo_special_mixture.png',
+              icon: '/assets/icons/vinery/jo_special_mixture.webp',
               search: 'jo special mixture'
             },
             {
               id: 'bolvar_wine',
               title: 'Bolvar Wine',
               subtitle: '',
-              icon: '/assets/icons/vinery/bolvar_wine.png',
+              icon: '/assets/icons/vinery/bolvar_wine.webp',
               search: 'bolvar wine'
             },
             {
               id: 'magnetic_wine',
               title: 'Magnetic Wine',
               subtitle: '',
-              icon: '/assets/icons/vinery/magnetic_wine.png',
+              icon: '/assets/icons/vinery/magnetic_wine.webp',
               search: 'magnetic wine'
             },
             {
               id: 'stal_wine',
               title: 'Stal Wine',
               subtitle: '',
-              icon: '/assets/icons/vinery/stal_wine.png',
+              icon: '/assets/icons/vinery/stal_wine.webp',
               search: 'stal wine'
             },
             {
               id: 'chenet_wine',
               title: 'Chenet Wine',
               subtitle: '',
-              icon: '/assets/icons/vinery/chenet_wine.png',
+              icon: '/assets/icons/vinery/chenet_wine.webp',
               search: 'chenet wine'
             },
             {
               id: 'bottle_mojang_noir',
               title: 'Bottle Mojang Noir',
               subtitle: '',
-              icon: '/assets/icons/vinery/bottle_mojang_noir.png',
+              icon: '/assets/icons/vinery/bottle_mojang_noir.webp',
               search: 'mojang noir bottle'
             },
             {
               id: 'chorus_wine',
               title: 'Chorus Wine',
               subtitle: '',
-              icon: '/assets/icons/vinery/chorus_wine.png',
+              icon: '/assets/icons/vinery/chorus_wine.webp',
               search: 'chorus wine'
             },
             {
               id: 'creepers_crush',
               title: "Creeper's Crush",
               subtitle: '',
-              icon: '/assets/icons/vinery/creepers_crush.png',
+              icon: '/assets/icons/vinery/creepers_crush.webp',
               search: 'creepers crush'
             },
             {
               id: 'mellohi_wine',
               title: 'Mellohi Wine',
               subtitle: '',
-              icon: '/assets/icons/vinery/mellohi_wine.png',
+              icon: '/assets/icons/vinery/mellohi_wine.webp',
               search: 'mellohi wine'
             }
           ]
@@ -615,7 +615,7 @@ It is not meant to be eaten. It can be thrown at unwanted creatures or friends.`
           id: 'apple_cherry_trees',
           title: 'Apple and Cherry Trees',
           subtitle: 'Fruit trees that generate naturally and can be harvested directly from their leaves.',
-          icon: '/assets/icons/vinery/apple_tree_sapling.png',
+          icon: '/assets/icons/vinery/apple_tree_sapling.webp',
           search:
             'apple tree cherry tree worldgen plains meadow sunflower plains fruit leaves harvest right click empty hand rotten cherry',
           details: true,
@@ -643,7 +643,7 @@ It is not meant to be eaten. It can be thrown at unwanted creatures or friends.`
           id: 'grapes',
           title: 'Grapes',
           subtitle: 'Wild and cultivated grape varieties found across different overworld biomes.',
-          icon: '/assets/icons/vinery/red_grape.png',
+          icon: '/assets/icons/vinery/red_grape.webp',
           search:
             'grapes worldgen forest plains swamp birch forest meadow sunflower plains river taiga savanna jungle red white lattice stems bushes',
           details: true,
@@ -670,56 +670,56 @@ Grape seeds can either be planted as grape bushes or grown on grapevine stems. S
               id: 'red_grape',
               title: 'Red Grape',
               subtitle: '',
-              icon: '/assets/icons/vinery/red_grape.png',
+              icon: '/assets/icons/vinery/red_grape.webp',
               search: 'red grape'
             },
             {
               id: 'white_grape',
               title: 'White Grape',
               subtitle: '',
-              icon: '/assets/icons/vinery/white_grape.png',
+              icon: '/assets/icons/vinery/white_grape.webp',
               search: 'white grape'
             },
             {
               id: 'savanna_grapes_red',
               title: 'Savanna Red Grapes',
               subtitle: '',
-              icon: '/assets/icons/vinery/savanna_grapes_red.png',
+              icon: '/assets/icons/vinery/savanna_grapes_red.webp',
               search: 'savanna red grapes'
             },
             {
               id: 'savanna_grapes_white',
               title: 'Savanna White Grapes',
               subtitle: '',
-              icon: '/assets/icons/vinery/savanna_grapes_white.png',
+              icon: '/assets/icons/vinery/savanna_grapes_white.webp',
               search: 'savanna white grapes'
             },
             {
               id: 'taiga_grapes_red',
               title: 'Taiga Red Grapes',
               subtitle: '',
-              icon: '/assets/icons/vinery/taiga_grapes_red.png',
+              icon: '/assets/icons/vinery/taiga_grapes_red.webp',
               search: 'taiga red grapes'
             },
             {
               id: 'taiga_grapes_white',
               title: 'Taiga White Grapes',
               subtitle: '',
-              icon: '/assets/icons/vinery/taiga_grapes_white.png',
+              icon: '/assets/icons/vinery/taiga_grapes_white.webp',
               search: 'taiga white grapes'
             },
             {
               id: 'jungle_grapes_red',
               title: 'Jungle Red Grapes',
               subtitle: '',
-              icon: '/assets/icons/vinery/jungle_grapes_red.png',
+              icon: '/assets/icons/vinery/jungle_grapes_red.webp',
               search: 'jungle red grapes'
             },
             {
               id: 'jungle_grapes_white',
               title: 'Jungle White Grapes',
               subtitle: '',
-              icon: '/assets/icons/vinery/jungle_grapes_white.png',
+              icon: '/assets/icons/vinery/jungle_grapes_white.webp',
               search: 'jungle white grapes'
             }
           ]
@@ -737,7 +737,7 @@ Grape seeds can either be planted as grape bushes or grown on grapevine stems. S
           title: 'Wandering Winemaker',
           namespace_id: 'vinery:wandering_winemaker',
           subtitle: 'A trader that can offer Vinery items in exchange for emeralds.',
-          icon: '/assets/icons/vinery/entity/wandering_winemaker.png',
+          icon: '/assets/icons/vinery/entity/wandering_winemaker.webp',
           search:
             'wandering winemaker trader spawn chance shares with wandering trader offers vinery items emeralds config',
           details: true,
@@ -759,7 +759,7 @@ The Wandering Winemaker shares the spawn chance with the Minecraft Wandering Tra
           title: 'Winemaker Villager',
           namespace_id: 'vinery:winemaker',
           subtitle: 'A villager profession that sells Vinery items and uses the Apple Press as a workstation.',
-          icon: '/assets/icons/vinery/entity/winemaker_villager.png',
+          icon: '/assets/icons/vinery/entity/winemaker_villager.webp',
           search: 'winemaker villager profession trades sells vinery items apple press workstation',
           details: true,
           detailsTitle: 'Usage',
@@ -773,7 +773,7 @@ The Apple Press acts as the workstation for this profession.`,
           title: 'Winemaker Donkey',
           namespace_id: 'vinery:winemaker_donkey',
           subtitle: 'A donkey that accompanies the Wandering Winemaker.',
-          icon: '/assets/icons/vinery/entity/winemaker_donkey.png',
+          icon: '/assets/icons/vinery/entity/winemaker_donkey.webp',
           search: 'winemaker donkey entity vinery wandering winemaker rideable',
           details: true,
           detailsTitle: 'Usage',
@@ -793,35 +793,35 @@ It behaves like a normal donkey and can be mounted and ridden by the player.`,
           id: 'teleport',
           title: 'Teleport',
           subtitle: 'Teleports the player randomly forward.',
-          icon: '/assets/icons/vinery/effects/teleport.png',
+          icon: '/assets/icons/vinery/effects/teleport.webp',
           search: 'teleport random forward'
         },
         {
           id: 'magnet',
           title: 'Magnet',
           subtitle: 'Pulls nearby items towards the player.',
-          icon: '/assets/icons/vinery/effects/magnet.png',
+          icon: '/assets/icons/vinery/effects/magnet.webp',
           search: 'magnet pull items radius'
         },
         {
           id: 'party_effect',
           title: 'Partystarter',
           subtitle: 'Melee hits emit firework particles and deal a small amount of extra damage.',
-          icon: '/assets/icons/vinery/effects/party_effect.png',
+          icon: '/assets/icons/vinery/effects/party_effect.webp',
           search: 'party effect fireworks melee extra damage'
         },
         {
           id: 'lava_walker',
           title: 'Lava Walker',
           subtitle: 'Walk over lava without taking damage.',
-          icon: '/assets/icons/vinery/effects/lava_walker.png',
+          icon: '/assets/icons/vinery/effects/lava_walker.webp',
           search: 'lava walker walk on lava'
         },
         {
           id: 'double_jump',
           title: 'Double Jump',
           subtitle: 'Jump a second time while in the air.',
-          icon: '/assets/icons/vinery/effects/double_jump.png',
+          icon: '/assets/icons/vinery/effects/double_jump.webp',
           search: 'double jump mid air'
         },
         {
@@ -829,35 +829,35 @@ It behaves like a normal donkey and can be mounted and ridden by the player.`,
           title: 'Jellie',
           subtitle:
             'A small tribute to Jellie, the beloved cat of GoodTimesWithScar. Grants comforting, powerful effects similar to a Golden Apple.',
-          icon: '/assets/icons/vinery/effects/jellie.png',
+          icon: '/assets/icons/vinery/effects/jellie.webp',
           search: 'jellie GoodTimesWithScar tribute cat golden apple'
         },
         {
           id: 'creeper_effect',
           title: 'Creeper Effect',
           subtitle: 'Triggers an explosion on the affected player.',
-          icon: '/assets/icons/vinery/effects/creeper_effect.png',
+          icon: '/assets/icons/vinery/effects/creeper_effect.webp',
           search: 'creeper effect explosion'
         },
         {
           id: 'experience_effect',
           title: 'Experience',
           subtitle: 'Increases gained experience.',
-          icon: '/assets/icons/vinery/effects/experience_effect.png',
+          icon: '/assets/icons/vinery/effects/experience_effect.webp',
           search: 'experience effect increased gained xp'
         },
         {
           id: 'climbing_effect',
           title: 'Climbing',
           subtitle: 'Lets you climb steep walls.',
-          icon: '/assets/icons/vinery/effects/climbing_effect.png',
+          icon: '/assets/icons/vinery/effects/climbing_effect.webp',
           search: 'climbing effect climb walls'
         },
         {
           id: 'water_walker',
           title: 'Water Walker',
           subtitle: 'Walk over water.',
-          icon: '/assets/icons/vinery/effects/water_walker.png',
+          icon: '/assets/icons/vinery/effects/water_walker.webp',
           search: 'water walker walk on water'
         },
 
@@ -865,35 +865,35 @@ It behaves like a normal donkey and can be mounted and ridden by the player.`,
           id: 'armor_effect',
           title: 'Armor',
           subtitle: 'Increases armor and armor toughness.',
-          icon: '/assets/icons/vinery/effects/armor_effect.png',
+          icon: '/assets/icons/vinery/effects/armor_effect.webp',
           search: 'armor effect armor toughness'
         },
         {
           id: 'frosty_armor',
           title: 'Frosty Armor',
           subtitle: 'Grants armor and damage, but slows you down and makes you freeze.',
-          icon: '/assets/icons/vinery/effects/frosty_armor.png',
+          icon: '/assets/icons/vinery/effects/frosty_armor.webp',
           search: 'frosty armor effect freeze slow damage armor'
         },
         {
           id: 'health_effect',
           title: 'Health',
           subtitle: 'Increases maximum health.',
-          icon: '/assets/icons/vinery/effects/health_effect.png',
+          icon: '/assets/icons/vinery/effects/health_effect.webp',
           search: 'health effect increase max health'
         },
         {
           id: 'luck_effect',
           title: 'Luck',
           subtitle: 'Increases luck.',
-          icon: '/assets/icons/vinery/effects/luck_effect.png',
+          icon: '/assets/icons/vinery/effects/luck_effect.webp',
           search: 'luck effect loot chance'
         },
         {
           id: 'resistance_effect',
           title: 'Resistance',
           subtitle: 'Reduces incoming damage.',
-          icon: '/assets/icons/vinery/effects/resistance_effect.png',
+          icon: '/assets/icons/vinery/effects/resistance_effect.webp',
           search: 'resistance effect reduce damage'
         }
       ]
@@ -908,21 +908,21 @@ It behaves like a normal donkey and can be mounted and ridden by the player.`,
           title: 'Configuration',
           subtitle:
             'Most Vinery features can be adjusted via a configuration file, usually located at `config/vinery.json`.',
-          icon: '/assets/icons/misc/config.png',
+          icon: '/assets/icons/misc/config.webp',
           search: 'config configuration settings options balance json vinery'
         },
         {
           id: 'winemaker_zombies',
           title: 'Winemaker Zombies',
           subtitle: 'Sometimes zombies spawn wearing a winemaker apron.',
-          icon: '/assets/icons/misc/zombie.png',
+          icon: '/assets/icons/misc/zombie.webp',
           search: 'winemaker zombie vinery apron spawn'
         },
         {
           id: 'loot',
           title: 'Loot and Exploration',
           subtitle: 'Certain items and ingredients can be found while exploring the world.',
-          icon: '/assets/icons/misc/chest.png',
+          icon: '/assets/icons/misc/chest.webp',
           search: 'loot chest dungeon village exploration items ingredients vinery',
           details: true,
           detailsTitle: 'Where to find loot',

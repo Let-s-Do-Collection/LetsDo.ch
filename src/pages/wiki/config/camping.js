@@ -1,7 +1,7 @@
 export default {
   slug: 'camping',
   title: 'Camping',
-  logo: '/assets/mod-logos/camping.png',
+  logo: '/assets/mod-logos/camping.webp',
   aboutTitle: 'Welcome',
   aboutSubtitle: 'Small camping essentials for your adventures',
   aboutText: `Camping is a small mod that adds a few cozy outdoor essentials.
@@ -17,7 +17,7 @@ It focuses on portable gear, simple camp setups, and a handful of useful items f
           id: 'grill',
           title: 'Grill',
           subtitle: 'A small open-flame grill. Toss cookable food on top and let the fire do the rest.',
-          icon: '/assets/icons/camping/grill.png',
+          icon: '/assets/icons/camping/grill.webp',
           search: 'grill camping cook food campfire no gui grilled tooltip nutrition saturation',
           details: true,
           detailsTitle: 'Usage',
@@ -44,7 +44,7 @@ Grilled food restores more hunger and saturation and shows its improved state di
           id: 'tents',
           title: 'Tents',
           subtitle: 'A cozy placeable tent for camps and outdoor scenes, available in all dye colors.',
-          icon: '/assets/icons/camping/tent_pink.png',
+          icon: '/assets/icons/camping/tent_pink.webp',
           search: 'tent camping decorative dye colors',
           details: true,
           detailsTitle: 'More info',
@@ -71,7 +71,7 @@ They are available in all standard dye colors.`,
           ].map((color) => ({
             id: `tent_${color}`,
             title: `${color.replace('_', ' ').replace(/\b\w/g, (l) => l.toUpperCase())} Tent`,
-            icon: `/assets/icons/camping/tent_${color}.png`,
+            icon: `/assets/icons/camping/tent_${color}.webp`,
             search: `${color} tent camping`
           }))
         },
@@ -79,7 +79,7 @@ They are available in all standard dye colors.`,
           id: 'sleeping_bags',
           title: 'Sleeping Bags',
           subtitle: 'Quickly placeable sleeping bags for rest. Does not set a respawn point.',
-          icon: '/assets/icons/camping/sleeping_bag_light_blue.png',
+          icon: '/assets/icons/camping/sleeping_bag_light_blue.webp',
           search: 'sleeping bag camping dye colors',
           details: true,
           detailsTitle: 'More info',
@@ -106,7 +106,7 @@ They are available in all standard dye colors.`,
           ].map((color) => ({
             id: `sleeping_bag_${color}`,
             title: `${color.replace('_', ' ').replace(/\b\w/g, (l) => l.toUpperCase())} Sleeping Bag`,
-            icon: `/assets/icons/camping/sleeping_bag_${color}.png`,
+            icon: `/assets/icons/camping/sleeping_bag_${color}.webp`,
             search: `${color} sleeping bag camping`
           }))
         }
@@ -121,14 +121,14 @@ They are available in all standard dye colors.`,
           id: 'multitool',
           title: 'Multitool',
           subtitle: 'A compact travel tool for quick block rotation.',
-          icon: '/assets/icons/camping/multitool.png',
+          icon: '/assets/icons/camping/multitool.webp',
           search: 'multitool camping rotate block fire resistant durable'
         },
         {
           id: 'walking_stick',
           title: 'Walking Stick',
           subtitle: 'A sturdy walking stick that slightly boosts movement speed.',
-          icon: '/assets/icons/camping/walking_stick.png',
+          icon: '/assets/icons/camping/walking_stick.webp',
           search: 'walking stick camping durability movement speed'
         }
       ]
@@ -142,49 +142,49 @@ They are available in all standard dye colors.`,
           id: 'small_backpack',
           title: 'Small Backpack',
           subtitle: 'Can be crafted.',
-          icon: '/assets/icons/camping/small_backpack.png'
+          icon: '/assets/icons/camping/small_backpack.webp'
         },
         {
           id: 'large_backpack',
           title: 'Large Backpack',
           subtitle: 'Looks larger, but is not.',
-          icon: '/assets/icons/camping/large_backpack.png'
+          icon: '/assets/icons/camping/large_backpack.webp'
         },
         {
           id: 'wanderer_backpack',
           title: 'Wanderer Backpack',
           subtitle: 'Obtained through [[Wandering Trader|trader_trades]].',
-          icon: '/assets/icons/camping/wanderer_backpack.png'
+          icon: '/assets/icons/camping/wanderer_backpack.webp'
         },
         {
           id: 'wanderer_bag',
           title: 'Wanderer Bag',
           subtitle: 'Obtained through [[Wandering Trader|trader_trades]].',
-          icon: '/assets/icons/camping/wanderer_bag.png'
+          icon: '/assets/icons/camping/wanderer_bag.webp'
         },
         {
           id: 'sheepbag',
           title: 'Sheepbag',
           subtitle: 'Obtained through [[Shepherd Villagers|trader_trades]].',
-          icon: '/assets/icons/camping/sheepbag.png'
+          icon: '/assets/icons/camping/sheepbag.webp'
         },
         {
           id: 'enderbag',
           title: 'Enderbag',
           subtitle: 'Found in [[Strongholds|loot]]. Grants Ender Chest access.',
-          icon: '/assets/icons/camping/enderbag.png'
+          icon: '/assets/icons/camping/enderbag.webp'
         },
         {
           id: 'enderpack',
           title: 'Enderpack',
           subtitle: 'Found in [[The End|loot]]. Grants Ender Chest access.',
-          icon: '/assets/icons/camping/enderpack.png'
+          icon: '/assets/icons/camping/enderpack.webp'
         },
         {
           id: 'goodybag',
           title: 'Goodybag',
           subtitle: 'Reward for collecting all backpacks.',
-          icon: '/assets/icons/camping/goodybag.png'
+          icon: '/assets/icons/camping/goodybag.webp'
         }
       ]
     },
@@ -197,19 +197,19 @@ They are available in all standard dye colors.`,
           id: 'marshmallow',
           title: 'Marshmallow',
           subtitle: 'A small sweet snack with a chance to grant Speed.',
-          icon: '/assets/icons/camping/marshmallow.png'
+          icon: '/assets/icons/camping/marshmallow.webp'
         },
         {
           id: 'roasted_marshmallow',
           title: 'Roasted Marshmallow',
           subtitle: 'Grilled to perfection. Always grants Speed.',
-          icon: '/assets/icons/camping/roasted_marshmallow.png'
+          icon: '/assets/icons/camping/roasted_marshmallow.webp'
         },
         {
           id: 'marshmallow_on_a_stick',
           title: 'Marshmallow on a Stick',
           subtitle: 'Hold it over a Campfire and manage the heat.',
-          icon: '/assets/icons/camping/marshmallow_on_a_stick.png'
+          icon: '/assets/icons/camping/marshmallow_on_a_stick.webp'
         }
       ]
     },
@@ -222,7 +222,7 @@ They are available in all standard dye colors.`,
           id: 'backpack_general',
           title: 'Backpacks in General',
           subtitle: 'Shared behavior across all backpack variants.',
-          icon: '/assets/icons/misc/tip.png',
+          icon: '/assets/icons/misc/tip.webp',
           details: true,
           detailsTitle: 'Good to know',
           detailsText: `All backpacks added by Camping behave the same in terms of functionality.`,
@@ -237,7 +237,7 @@ They are available in all standard dye colors.`,
           id: 'trader_trades',
           title: 'Trading',
           subtitle: 'Some items are obtained via traders.',
-          icon: '/assets/icons/misc/emerald.png',
+          icon: '/assets/icons/misc/emerald.webp',
           details: true,
           detailsText: `Some backpacks are not craftable and are instead obtained through trading.
 
@@ -249,7 +249,7 @@ They are available in all standard dye colors.`,
           id: 'loot',
           title: 'Loot and Exploration',
           subtitle: 'Some items are found through exploration.',
-          icon: '/assets/icons/misc/chest.png',
+          icon: '/assets/icons/misc/chest.webp',
           details: true,
           detailsText: `Some backpacks are discovered through exploration.
 

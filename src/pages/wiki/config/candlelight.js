@@ -1,7 +1,7 @@
 export default {
   slug: 'candlelight',
   title: 'Candlelight',
-  logo: '/assets/mod-logos/candlelight.png',
+  logo: '/assets/mod-logos/candlelight.webp',
   aboutTitle: 'Welcome',
   aboutSubtitle: 'Fine dining, interiors, and a little bit of romance',
   aboutText: `Welcome to the Candlelight Wiki.
@@ -23,7 +23,7 @@ Alongside that, it introduces themed outfits, a lucky ring, and a few special sh
           title: 'Stove',
           subtitle:
             'Works the same as the Farm & Charm Stove. A heat source for cooking, available in multiple stone variants.',
-          icon: '/assets/icons/candlelight/cobblestone_stove.png',
+          icon: '/assets/icons/candlelight/cobblestone_stove.webp',
           search:
             'stove fuel heat cooking candlelight farm and charm same functionality variants cobblestone sandstone stone bricks deepslate granite basalt quartz',
           details: true,
@@ -55,7 +55,7 @@ Related: [[Cooking Pot|cooking_pot]] and [[Cooking Pan|cooking_pan]].`,
           namespace_id: 'candlelight:cooking_pot',
           subtitle:
             'Works the same as the Farm & Charm Cooking Pot. A cozy station for preparing basic meals, powered by heat.',
-          icon: '/assets/icons/candlelight/cooking_pot.png',
+          icon: '/assets/icons/candlelight/cooking_pot.webp',
           search:
             'cooking pot meals basic hot surface stove magma campfire bubbles container slot output cooking candlelight farm and charm same functionality',
           details: true,
@@ -85,7 +85,7 @@ Related: [[Cooking Pan|cooking_pan]].`,
           title: 'Cooking Pan',
           namespace_id: 'candlelight:cooking_pan',
           subtitle: 'Works the same as the Farm & Charm Roaster. A large cooking station for preparing bigger meals.',
-          icon: '/assets/icons/candlelight/cooking_pan.png',
+          icon: '/assets/icons/candlelight/cooking_pan.webp',
           search:
             'cooking pan bigger meals large hot surface stove magma campfire smoke container slot output cooking candlelight farm and charm roaster same functionality',
           details: true,
@@ -123,7 +123,7 @@ Related: [[Cooking Pot|cooking_pot]].`,
           id: 'drawer',
           title: 'Drawer',
           subtitle: 'A storage drawer. Available in all wood variants.',
-          icon: '/assets/icons/candlelight/drawer.png',
+          icon: '/assets/icons/candlelight/drawer.webp',
           search:
             'drawer storage wood variants oak spruce birch jungle acacia dark oak mangrove cherry bamboo candlelight'
         },
@@ -131,7 +131,7 @@ Related: [[Cooking Pot|cooking_pot]].`,
           id: 'cabinet',
           title: 'Cabinet',
           subtitle: 'A storage cabinet. Available in all wood variants.',
-          icon: '/assets/icons/candlelight/cabinet.png',
+          icon: '/assets/icons/candlelight/cabinet.webp',
           search:
             'cabinet storage wood variants oak spruce birch jungle acacia dark oak mangrove cherry bamboo candlelight'
         },
@@ -139,7 +139,7 @@ Related: [[Cooking Pot|cooking_pot]].`,
           id: 'table',
           title: 'Table',
           subtitle: 'A dining table. Available in all wood variants.',
-          icon: '/assets/icons/candlelight/oak_table.png',
+          icon: '/assets/icons/candlelight/oak_table.webp',
           search:
             'table dining wood variants oak spruce birch jungle acacia dark oak mangrove cherry bamboo candlelight'
         },
@@ -147,7 +147,7 @@ Related: [[Cooking Pot|cooking_pot]].`,
           id: 'chair',
           title: 'Chair',
           subtitle: 'A chair. Available in all wood variants.',
-          icon: '/assets/icons/candlelight/chair.png',
+          icon: '/assets/icons/candlelight/chair.webp',
           search:
             'chair seating wood variants oak spruce birch jungle acacia dark oak mangrove cherry bamboo candlelight'
         },
@@ -155,7 +155,7 @@ Related: [[Cooking Pot|cooking_pot]].`,
           id: 'kitchen_sink',
           title: 'Kitchen Sink',
           subtitle: 'A functional kitchen sink block available in multiple stone variants.',
-          icon: '/assets/icons/candlelight/cobblestone_kitchen_sink.png',
+          icon: '/assets/icons/candlelight/cobblestone_kitchen_sink.webp',
           search:
             'kitchen sink stone variants cobblestone sandstone stone bricks deepslate granite basalt quartz candlelight',
           details: true,
@@ -176,7 +176,7 @@ All Kitchen Sink variants share the same functionality and differ only in appear
           id: 'kitchen_counter',
           title: 'Kitchen Counter',
           subtitle: 'A decorative kitchen counter for interior builds.',
-          icon: '/assets/icons/candlelight/cobblestone_counter.png',
+          icon: '/assets/icons/candlelight/cobblestone_counter.webp',
           search: 'kitchen counter decorative candlelight'
         },
         {
@@ -184,7 +184,7 @@ All Kitchen Sink variants share the same functionality and differ only in appear
           title: 'Table Set',
           namespace_id: 'candlelight:table_set',
           subtitle: 'Placeable dining pieces for serving and consuming food and drinks.',
-          icon: '/assets/icons/candlelight/plate.png',
+          icon: '/assets/icons/candlelight/plate.webp',
           search: 'table set plate bowl glass wine glass napkin cloche candlelight',
           details: true,
           detailsTitle: 'Usage',
@@ -204,42 +204,42 @@ Glasses and Wine Glasses can be filled with drinks such as Potions or Wine. Play
               id: 'plate',
               title: 'Plate',
               namespace_id: 'candlelight:plate',
-              icon: '/assets/icons/candlelight/plate.png',
+              icon: '/assets/icons/candlelight/plate.webp',
               search: 'plate table set food'
             },
             {
               id: 'bowl',
               title: 'Bowl',
               namespace_id: 'candlelight:bowl',
-              icon: '/assets/icons/candlelight/bowl.png',
+              icon: '/assets/icons/candlelight/bowl.webp',
               search: 'bowl table set food'
             },
             {
               id: 'glass',
               title: 'Glass',
               namespace_id: 'candlelight:glass',
-              icon: '/assets/icons/candlelight/glass.png',
+              icon: '/assets/icons/candlelight/glass.webp',
               search: 'glass table set drink potion'
             },
             {
               id: 'wine_glass',
               title: 'Wine Glass',
               namespace_id: 'candlelight:wine_glass',
-              icon: '/assets/icons/candlelight/wine_glass.png',
+              icon: '/assets/icons/candlelight/wine_glass.webp',
               search: 'wine glass table set drink wine'
             },
             {
               id: 'napkin',
               title: 'Napkin',
               namespace_id: 'candlelight:napkin',
-              icon: '/assets/icons/candlelight/napkin.png',
+              icon: '/assets/icons/candlelight/napkin.webp',
               search: 'napkin table set'
             },
             {
               id: 'cloche',
               title: 'Cloche',
               namespace_id: 'candlelight:cloche',
-              icon: '/assets/icons/candlelight/cloche.png',
+              icon: '/assets/icons/candlelight/cloche.webp',
               search: 'cloche table set'
             }
           ]
@@ -249,7 +249,7 @@ Glasses and Wine Glasses can be filled with drinks such as Potions or Wine. Play
           title: 'Lamp',
           namespace_id: 'candlelight:lamp',
           subtitle: 'A placeable lamp for interiors.',
-          icon: '/assets/icons/candlelight/lamp.png',
+          icon: '/assets/icons/candlelight/lamp.webp',
           search: 'lamp light candlelight'
         },
         {
@@ -257,7 +257,7 @@ Glasses and Wine Glasses can be filled with drinks such as Potions or Wine. Play
           title: 'Side Table',
           namespace_id: 'candlelight:side_table',
           subtitle: 'A small table to place items like books, lamps, lanterns, and decorations.',
-          icon: '/assets/icons/candlelight/side_table.png',
+          icon: '/assets/icons/candlelight/side_table.webp',
           search: 'side table place items books lamp lantern candlelight'
         },
         {
@@ -265,14 +265,14 @@ Glasses and Wine Glasses can be filled with drinks such as Potions or Wine. Play
           title: 'Sofa',
           namespace_id: 'candlelight:sofa',
           subtitle: 'A decorative sofa for seating.',
-          icon: '/assets/icons/candlelight/sofa.png',
+          icon: '/assets/icons/candlelight/sofa.webp',
           search: 'sofa seating candlelight'
         },
         {
           id: 'big_table',
           title: 'Big Table',
           subtitle: 'A large table. Available in all wood variants.',
-          icon: '/assets/icons/candlelight/oak_big_table.png',
+          icon: '/assets/icons/candlelight/oak_big_table.webp',
           search:
             'big table large dining wood variants oak spruce birch jungle acacia dark oak mangrove cherry bamboo candlelight'
         },
@@ -281,14 +281,14 @@ Glasses and Wine Glasses can be filled with drinks such as Potions or Wine. Play
           title: 'Dinner Bell',
           namespace_id: 'candlelight:dinner_bell',
           subtitle: 'A bell block you can ring with right click. Ding!',
-          icon: '/assets/icons/candlelight/dinner_bell.png',
+          icon: '/assets/icons/candlelight/dinner_bell.webp',
           search: 'dinner bell ring right click candlelight',
           musicdisc: true,
           tracks: [
             {
               title: 'Dinner Bell',
               subtitle: 'Ding! Ding! Ding!',
-              icon: '/assets/icons/candlelight/dinner_bell.png',
+              icon: '/assets/icons/candlelight/dinner_bell.webp',
               src: '/assets/sound_effect/dinner_bell_ring.ogg'
             }
           ]
@@ -298,7 +298,7 @@ Glasses and Wine Glasses can be filled with drinks such as Potions or Wine. Play
           title: 'Hearth',
           namespace_id: 'candlelight:hearth',
           subtitle: 'A decorative block that can be placed on walls.',
-          icon: '/assets/icons/candlelight/hearth.png',
+          icon: '/assets/icons/candlelight/hearth.webp',
           search: 'hearth wall placeable candlelight'
         },
         {
@@ -306,7 +306,7 @@ Glasses and Wine Glasses can be filled with drinks such as Potions or Wine. Play
           title: 'Table Sign',
           namespace_id: 'candlelight:table_sign',
           subtitle: 'A placeable decorative sign for tables and counters.',
-          icon: '/assets/icons/candlelight/table_sign.png',
+          icon: '/assets/icons/candlelight/table_sign.webp',
           search: 'table sign placeable decor candlelight'
         },
         {
@@ -314,7 +314,7 @@ Glasses and Wine Glasses can be filled with drinks such as Potions or Wine. Play
           title: 'Small Painting',
           namespace_id: 'candlelight:painting',
           subtitle: 'A painting with multiple motifs.',
-          icon: '/assets/icons/candlelight/painting.png',
+          icon: '/assets/icons/candlelight/painting.webp',
           search: 'small painting motifs cycle right click candlelight',
           details: true,
           detailsTitle: 'Motifs',
@@ -328,7 +328,7 @@ Right click the placed painting to cycle through the available designs.`,
           title: 'Jewelry Box',
           namespace_id: 'candlelight:jewelry_box',
           subtitle: 'A small box for storing and displaying rings.',
-          icon: '/assets/icons/candlelight/jewelry_box.png',
+          icon: '/assets/icons/candlelight/jewelry_box.webp',
           search: 'jewelry box rings store display candlelight',
           details: true,
           detailsTitle: 'Usage',
@@ -348,7 +348,7 @@ Related: [[Gold Ring|gold_ring]].`,
           title: 'Chocolate Box',
           namespace_id: 'candlelight:chocolate_box',
           subtitle: 'A placeable box you can eat from multiple times.',
-          icon: '/assets/icons/candlelight/chocolate_box.png',
+          icon: '/assets/icons/candlelight/chocolate_box.webp',
           search: 'chocolate box eat multiple times placed candlelight'
         },
         {
@@ -356,7 +356,7 @@ Related: [[Gold Ring|gold_ring]].`,
           title: 'Completionist Banner',
           namespace_id: 'candlelight:candlelight_banner',
           subtitle: 'A reward banner for completing Candlelight foods.',
-          icon: '/assets/icons/candlelight/candlelight_banner.png',
+          icon: '/assets/icons/candlelight/candlelight_banner.webp',
           search: 'completionist banner reward foods advancements tooltip candlelight',
           details: true,
           detailsTitle: 'Reward',
@@ -382,7 +382,7 @@ To receive the respective advancements, you need all required items in your inve
           title: 'Typewriter',
           namespace_id: 'candlelight:typewriter_iron',
           subtitle: 'A writing block for longer letters. Available in Iron and Gold.',
-          icon: '/assets/icons/candlelight/typewriter_iron.png',
+          icon: '/assets/icons/candlelight/typewriter_iron.webp',
           search: 'typewriter writing letters note paper iron gold candlelight',
           details: true,
           detailsTitle: 'Usage',
@@ -401,7 +401,7 @@ Right click again to open the interface. When finished, sign the letter and remo
               title: 'Iron Typewriter',
               namespace_id: 'candlelight:typewriter_iron',
               subtitle: '',
-              icon: '/assets/icons/candlelight/typewriter_iron.png',
+              icon: '/assets/icons/candlelight/typewriter_iron.webp',
               search: 'typewriter iron'
             },
             {
@@ -409,7 +409,7 @@ Right click again to open the interface. When finished, sign the letter and remo
               title: 'Gold Typewriter',
               namespace_id: 'candlelight:typewriter_gold',
               subtitle: '',
-              icon: '/assets/icons/candlelight/typewriter_gold.png',
+              icon: '/assets/icons/candlelight/typewriter_gold.webp',
               search: 'typewriter gold'
             }
           ]
@@ -418,7 +418,7 @@ Right click again to open the interface. When finished, sign the letter and remo
           id: 'note_paper',
           title: 'Note Paper',
           subtitle: 'Write short notes and messages.',
-          icon: '/assets/icons/candlelight/note_paper.png',
+          icon: '/assets/icons/candlelight/note_paper.webp',
           search: 'note paper writable written candlelight typewriter',
           details: true,
           detailsTitle: 'Usage',
@@ -440,21 +440,21 @@ Related: [[Letter|letter]].`,
               id: 'note_paper',
               title: 'Note Paper',
               subtitle: 'Blank paper used for writing.',
-              icon: '/assets/icons/candlelight/note_paper.png',
+              icon: '/assets/icons/candlelight/note_paper.webp',
               search: 'note paper blank'
             },
             {
               id: 'note_paper_writeable',
               title: 'Writable Note Paper',
               subtitle: 'Allows you to write and sign a note.',
-              icon: '/assets/icons/candlelight/note_paper_writeable.png',
+              icon: '/assets/icons/candlelight/note_paper_writeable.webp',
               search: 'writable note paper'
             },
             {
               id: 'note_paper_written',
               title: 'Written Note Paper',
               subtitle: 'A finished written note.',
-              icon: '/assets/icons/candlelight/note_paper_written.png',
+              icon: '/assets/icons/candlelight/note_paper_written.webp',
               search: 'written note paper'
             }
           ]
@@ -463,7 +463,7 @@ Related: [[Letter|letter]].`,
           id: 'letter',
           title: 'Letter',
           subtitle: 'Write, seal, and exchange letters with other players.',
-          icon: '/assets/icons/candlelight/letter_open.png',
+          icon: '/assets/icons/candlelight/letter_open.webp',
           search: 'letter note paper writable sealed love letter candlelight message',
           details: true,
           detailsTitle: 'Usage',
@@ -487,13 +487,13 @@ Love Letters work the same way, but use their own themed variants. When a Love L
             {
               id: 'love_letter_closed',
               title: 'Sealed Love Letter',
-              icon: '/assets/icons/candlelight/love_letter.png',
+              icon: '/assets/icons/candlelight/love_letter.webp',
               search: 'sealed love letter closed envelope'
             },
             {
               id: 'letter_closed',
               title: 'Sealed Letter',
-              icon: '/assets/icons/candlelight/letter_closed.png',
+              icon: '/assets/icons/candlelight/letter_closed.webp',
               search: 'sealed letter closed envelope'
             }
           ]
@@ -503,7 +503,7 @@ Love Letters work the same way, but use their own themed variants. When a Love L
           title: 'Gold Ring',
           namespace_id: 'candlelight:gold_ring',
           subtitle: 'A wearable ring that grants +2 Luck.',
-          icon: '/assets/icons/candlelight/gold_ring.png',
+          icon: '/assets/icons/candlelight/gold_ring.webp',
           search: 'gold ring +2 luck accessory candlelight',
           details: true,
           detailsTitle: 'Effect',
@@ -517,7 +517,7 @@ It can be stored and displayed inside a [[Jewelry Box|jewelry_box]].`,
           title: "Chef's Attire",
           namespace_id: '',
           subtitle: 'Cooking themed outfit pieces.',
-          icon: '/assets/icons/candlelight/cooking_hat.png',
+          icon: '/assets/icons/candlelight/cooking_hat.webp',
           search: 'chef attire cooking hat chefs jacket chefs pants chefs boots candlelight',
           details: true,
           detailsTitle: 'Included Pieces',
@@ -528,7 +528,7 @@ It can be stored and displayed inside a [[Jewelry Box|jewelry_box]].`,
               title: 'Cooking Hat',
               namespace_id: 'candlelight:cooking_hat',
               subtitle: '',
-              icon: '/assets/icons/candlelight/cooking_hat.png',
+              icon: '/assets/icons/candlelight/cooking_hat.webp',
               search: 'cooking hat'
             },
             {
@@ -536,7 +536,7 @@ It can be stored and displayed inside a [[Jewelry Box|jewelry_box]].`,
               title: "Chef's Jacket",
               namespace_id: 'candlelight:chefs_jacket',
               subtitle: '',
-              icon: '/assets/icons/candlelight/chefs_jacket.png',
+              icon: '/assets/icons/candlelight/chefs_jacket.webp',
               search: 'chefs jacket'
             },
             {
@@ -544,7 +544,7 @@ It can be stored and displayed inside a [[Jewelry Box|jewelry_box]].`,
               title: "Chef's Pants",
               namespace_id: 'candlelight:chefs_pants',
               subtitle: '',
-              icon: '/assets/icons/candlelight/chefs_pants.png',
+              icon: '/assets/icons/candlelight/chefs_pants.webp',
               search: 'chefs pants'
             },
             {
@@ -552,7 +552,7 @@ It can be stored and displayed inside a [[Jewelry Box|jewelry_box]].`,
               title: "Chef's Boots",
               namespace_id: 'candlelight:chefs_boots',
               subtitle: '',
-              icon: '/assets/icons/candlelight/chefs_boots.png',
+              icon: '/assets/icons/candlelight/chefs_boots.webp',
               search: 'chefs boots'
             }
           ]
@@ -562,7 +562,7 @@ It can be stored and displayed inside a [[Jewelry Box|jewelry_box]].`,
           title: 'Evening Wear',
           namespace_id: '',
           subtitle: 'Formal outfit pieces.',
-          icon: '/assets/icons/candlelight/dress.png',
+          icon: '/assets/icons/candlelight/dress.webp',
           search: 'evening wear flower crown dress shirt formal shirt trousers vest necktie candlelight',
           details: true,
           detailsTitle: 'Included Pieces',
@@ -573,7 +573,7 @@ It can be stored and displayed inside a [[Jewelry Box|jewelry_box]].`,
               title: 'Flower Crown',
               namespace_id: 'candlelight:flower_crown',
               subtitle: '',
-              icon: '/assets/icons/candlelight/flower_crown.png',
+              icon: '/assets/icons/candlelight/flower_crown.webp',
               search: 'flower crown'
             },
             {
@@ -581,7 +581,7 @@ It can be stored and displayed inside a [[Jewelry Box|jewelry_box]].`,
               title: 'Dress',
               namespace_id: 'candlelight:dress',
               subtitle: '',
-              icon: '/assets/icons/candlelight/dress.png',
+              icon: '/assets/icons/candlelight/dress.webp',
               search: 'dress'
             },
             {
@@ -589,7 +589,7 @@ It can be stored and displayed inside a [[Jewelry Box|jewelry_box]].`,
               title: 'Shirt',
               namespace_id: 'candlelight:shirt',
               subtitle: '',
-              icon: '/assets/icons/candlelight/shirt.png',
+              icon: '/assets/icons/candlelight/shirt.webp',
               search: 'shirt'
             },
             {
@@ -597,7 +597,7 @@ It can be stored and displayed inside a [[Jewelry Box|jewelry_box]].`,
               title: 'Formal Shirt',
               namespace_id: 'candlelight:formal_shirt',
               subtitle: '',
-              icon: '/assets/icons/candlelight/formal_shirt.png',
+              icon: '/assets/icons/candlelight/formal_shirt.webp',
               search: 'formal shirt'
             },
             {
@@ -605,7 +605,7 @@ It can be stored and displayed inside a [[Jewelry Box|jewelry_box]].`,
               title: 'Trousers and Vest',
               namespace_id: 'candlelight:trousers_and_vest',
               subtitle: '',
-              icon: '/assets/icons/candlelight/trousers_and_vest.png',
+              icon: '/assets/icons/candlelight/trousers_and_vest.webp',
               search: 'trousers and vest'
             },
             {
@@ -613,7 +613,7 @@ It can be stored and displayed inside a [[Jewelry Box|jewelry_box]].`,
               title: 'Necktie',
               namespace_id: 'candlelight:necktie',
               subtitle: '',
-              icon: '/assets/icons/candlelight/necktie.png',
+              icon: '/assets/icons/candlelight/necktie.webp',
               search: 'necktie'
             }
           ]
@@ -632,7 +632,7 @@ It can be stored and displayed inside a [[Jewelry Box|jewelry_box]].`,
           namespace_id: '',
           subtitle:
             'Prepared in the [[Cooking Pot|cooking_pot]] or [[Cooking Pan|cooking_pan]]. Many meals can be eaten multiple times.',
-          icon: '/assets/icons/candlelight/lasagne.png',
+          icon: '/assets/icons/candlelight/lasagne.webp',
           search: 'candlelight food meals plated soups pasta steak salad',
           details: true,
           detailsTitle: 'Notes',
@@ -649,190 +649,190 @@ If a meal is prepared using a potion or wine, it inherits the effect from the us
               id: 'tomato_soup',
               title: 'Tomato Soup',
               subtitle: '',
-              icon: '/assets/icons/candlelight/tomato_soup.png',
+              icon: '/assets/icons/candlelight/tomato_soup.webp',
               search: 'tomato soup'
             },
             {
               id: 'mushroom_soup',
               title: 'Mushroom Soup',
               subtitle: '',
-              icon: '/assets/icons/candlelight/mushroom_soup.png',
+              icon: '/assets/icons/candlelight/mushroom_soup.webp',
               search: 'mushroom soup'
             },
             {
               id: 'pasta_with_mozzarella',
               title: 'Pasta With Mozzarella',
               subtitle: '',
-              icon: '/assets/icons/candlelight/pasta_with_mozzarella.png',
+              icon: '/assets/icons/candlelight/pasta_with_mozzarella.webp',
               search: 'pasta mozzarella'
             },
             {
               id: 'bolognese',
               title: 'Bolognese',
               subtitle: '',
-              icon: '/assets/icons/candlelight/bolognese.png',
+              icon: '/assets/icons/candlelight/bolognese.webp',
               search: 'bolognese'
             },
             {
               id: 'pasta_with_bolognese',
               title: 'Pasta With Bolognese',
               subtitle: '',
-              icon: '/assets/icons/candlelight/pasta_with_bolognese.png',
+              icon: '/assets/icons/candlelight/pasta_with_bolognese.webp',
               search: 'pasta bolognese'
             },
             {
               id: 'beef_with_mushroom_in_wine_and_potatoes',
               title: 'Beef With Mushroom In Wine And Potatoes',
               subtitle: '',
-              icon: '/assets/icons/candlelight/beef_with_mushroom_in_wine_and_potatoes.png',
+              icon: '/assets/icons/candlelight/beef_with_mushroom_in_wine_and_potatoes.webp',
               search: 'beef mushroom wine potatoes'
             },
             {
               id: 'roastbeef_with_glazed_carrots',
               title: 'Roastbeef With Glazed Carrots',
               subtitle: '',
-              icon: '/assets/icons/candlelight/roastbeef_with_glazed_carrots.png',
+              icon: '/assets/icons/candlelight/roastbeef_with_glazed_carrots.webp',
               search: 'roastbeef glazed carrots'
             },
             {
               id: 'roasted_lamb_with_lettuce',
               title: 'Roasted Lamb With Lettuce',
               subtitle: '',
-              icon: '/assets/icons/candlelight/roasted_lamb_with_lettuce.png',
+              icon: '/assets/icons/candlelight/roasted_lamb_with_lettuce.webp',
               search: 'roasted lamb'
             },
             {
               id: 'fillet_steak',
               title: 'Fillet Steak',
               subtitle: '',
-              icon: '/assets/icons/candlelight/fillet_steak.png',
+              icon: '/assets/icons/candlelight/fillet_steak.webp',
               search: 'fillet steak'
             },
             {
               id: 'chicken_alfredo',
               title: 'Chicken Alfredo',
               subtitle: '',
-              icon: '/assets/icons/candlelight/chicken_alfredo.png',
+              icon: '/assets/icons/candlelight/chicken_alfredo.webp',
               search: 'chicken alfredo'
             },
             {
               id: 'salmon_on_white_wine',
               title: 'Salmon On White Wine',
               subtitle: '',
-              icon: '/assets/icons/candlelight/salmon_on_white_wine.png',
+              icon: '/assets/icons/candlelight/salmon_on_white_wine.webp',
               search: 'salmon white wine'
             },
             {
               id: 'chicken_with_vegetables',
               title: 'Chicken With Vegetables',
               subtitle: '',
-              icon: '/assets/icons/candlelight/chicken_with_vegetables.png',
+              icon: '/assets/icons/candlelight/chicken_with_vegetables.webp',
               search: 'chicken vegetables'
             },
             {
               id: 'tropical_fish_supreme',
               title: 'Tropical Fish Supreme',
               subtitle: '',
-              icon: '/assets/icons/candlelight/tropical_fish_supreme.png',
+              icon: '/assets/icons/candlelight/tropical_fish_supreme.webp',
               search: 'tropical fish'
             },
             {
               id: 'lasagne',
               title: 'Lasagne',
               subtitle: '',
-              icon: '/assets/icons/candlelight/lasagne.png',
+              icon: '/assets/icons/candlelight/lasagne.webp',
               search: 'lasagne'
             },
             {
               id: 'beef_wellington',
               title: 'Beef Wellington',
               subtitle: '',
-              icon: '/assets/icons/candlelight/beef_wellington.png',
+              icon: '/assets/icons/candlelight/beef_wellington.webp',
               search: 'beef wellington'
             },
             {
               id: 'pork_ribs',
               title: 'Pork Ribs',
               subtitle: '',
-              icon: '/assets/icons/candlelight/pork_ribs.png',
+              icon: '/assets/icons/candlelight/pork_ribs.webp',
               search: 'pork ribs'
             },
             {
               id: 'fresh_garden_salad',
               title: 'Fresh Garden Salad',
               subtitle: '',
-              icon: '/assets/icons/candlelight/fresh_garden_salad.png',
+              icon: '/assets/icons/candlelight/fresh_garden_salad.webp',
               search: 'fresh garden salad'
             },
             {
               id: 'tomato_mozzarella_salad',
               title: 'Tomato Mozzarella Salad',
               subtitle: '',
-              icon: '/assets/icons/candlelight/tomato_mozzarella_salad.png',
+              icon: '/assets/icons/candlelight/tomato_mozzarella_salad.webp',
               search: 'tomato mozzarella salad'
             },
-            { id: 'salad', title: 'Salad', subtitle: '', icon: '/assets/icons/candlelight/salad.png', search: 'salad' },
+            { id: 'salad', title: 'Salad', subtitle: '', icon: '/assets/icons/candlelight/salad.webp', search: 'salad' },
             {
               id: 'beetroot_salad',
               title: 'Beetroot Salad',
               subtitle: '',
-              icon: '/assets/icons/candlelight/beetroot_salad.png',
+              icon: '/assets/icons/candlelight/beetroot_salad.webp',
               search: 'beetroot salad'
             },
             {
               id: 'pasta_with_lettuce',
               title: 'Pasta With Lettuce',
               subtitle: '',
-              icon: '/assets/icons/candlelight/pasta_with_lettuce.png',
+              icon: '/assets/icons/candlelight/pasta_with_lettuce.webp',
               search: 'pasta'
             },
             {
               id: 'khinkali',
               title: 'Khinkali',
               subtitle: '',
-              icon: '/assets/icons/candlelight/khinkali.png',
+              icon: '/assets/icons/candlelight/khinkali.webp',
               search: 'khinkali'
             },
             {
               id: 'omelet',
               title: 'Omelet',
               subtitle: '',
-              icon: '/assets/icons/candlelight/omelet.png',
+              icon: '/assets/icons/candlelight/omelet.webp',
               search: 'omelet'
             },
             {
               id: 'harvest_plate',
               title: 'Harvest Plate',
               subtitle: '',
-              icon: '/assets/icons/candlelight/harvest_plate.png',
+              icon: '/assets/icons/candlelight/harvest_plate.webp',
               search: 'harvest plate'
             },
             {
               id: 'chocolate_mousse',
               title: 'Chocolate Mousse',
               subtitle: '',
-              icon: '/assets/icons/candlelight/chocolate_mousse.png',
+              icon: '/assets/icons/candlelight/chocolate_mousse.webp',
               search: 'chocolate mousse'
             },
             {
               id: 'beef_tartare',
               title: 'Beef Tartare',
               subtitle: '',
-              icon: '/assets/icons/candlelight/beef_tartare.png',
+              icon: '/assets/icons/candlelight/beef_tartare.webp',
               search: 'beef tartare'
             },
             {
               id: 'chicken_teriyaki',
               title: 'Chicken Teriyaki',
               subtitle: '',
-              icon: '/assets/icons/candlelight/chicken_teriyaki.png',
+              icon: '/assets/icons/candlelight/chicken_teriyaki.webp',
               search: 'chicken teriyaki'
             },
             {
               id: 'mozzarella',
               title: 'Mozzarella',
               subtitle: '',
-              icon: '/assets/icons/candlelight/mozzarella.png',
+              icon: '/assets/icons/candlelight/mozzarella.webp',
               search: 'mozzarella'
             }
           ]
@@ -850,7 +850,7 @@ If a meal is prepared using a potion or wine, it inherits the effect from the us
           title: 'Rose',
           namespace_id: 'candlelight:rose',
           subtitle: 'Roses can generate naturally in specific biomes.',
-          icon: '/assets/icons/candlelight/rose.png',
+          icon: '/assets/icons/candlelight/rose.webp',
           search: 'rose flower worldgen biomes forest plains swamp birch meadow sunflower plains river candlelight',
           details: true,
           detailsTitle: 'Biomes',
@@ -880,14 +880,14 @@ You can also place them as decoration, including as a potted variant.`,
           title: 'Configuration',
           subtitle:
             'Most gameplay features of Candlelight can be adjusted via a configuration file, usually located at `config/candlelight.json`.',
-          icon: '/assets/icons/misc/config.png',
+          icon: '/assets/icons/misc/config.webp',
           search: 'config configuration settings options json candlelight'
         },
         {
           id: 'chef_zombies',
           title: 'Chef Zombies',
           subtitle: 'Sometimes zombies spawn wearing a [[Cooking Hat|cooking_hat]].',
-          icon: '/assets/icons/misc/zombie.png',
+          icon: '/assets/icons/misc/zombie.webp',
           search: 'chef zombie candlelight cooking hat spawn'
         }
       ]

@@ -388,7 +388,7 @@ html[data-mode='dark'] .brand::before {
 .aboutHeroBackgroundAU {
   position: absolute;
   inset: 0;
-  background-image: url('/assets/icons/hero_au.png');
+  background-image: url('/assets/icons/hero_au.webp');
   background-size: 75%;
   background-position: center 80%;
   background-repeat: no-repeat;
@@ -399,7 +399,7 @@ html[data-mode='dark'] .brand::before {
 .aboutHeroBackgroundFAQ {
   position: absolute;
   inset: 0;
-  background-image: url('/assets/icons/hero_faq.png');
+  background-image: url('/assets/icons/hero_faq.webp');
   background-size: 75%;
   background-position: center 80%;
   background-repeat: no-repeat;
@@ -420,7 +420,7 @@ html[data-mode='dark'] .brand::before {
 .heroBackground {
   position: absolute;
   inset: 0;
-  background-image: url('/assets/icons/hero_bg.png');
+  background-image: url('/assets/icons/hero_bg.webp');
   background-size: 100%;
   background-position: center 100%;
   background-repeat: no-repeat;
@@ -473,7 +473,7 @@ html[data-mode='dark'] .brand::before {
 .aboutHeroBackground {
   position: absolute;
   inset: 0;
-  background-image: url('/assets/icons/hero_au.png');
+  background-image: url('/assets/icons/hero_au.webp');
   background-size: 75%;
   background-position: center 80%;
   background-repeat: no-repeat;

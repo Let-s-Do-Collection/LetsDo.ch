@@ -1,7 +1,7 @@
 export default {
   slug: 'farm-and-charm',
   title: 'Farm & Charm',
-  logo: '/assets/mod-logos/farm_and_charm.png',
+  logo: '/assets/mod-logos/farm_and_charm.webp',
   aboutTitle: 'Welcome',
   aboutSubtitle: 'Everything you need, in one place',
   aboutText: `Welcome to the Farm & Charm Wiki.
@@ -24,7 +24,7 @@ And of course it also adds a lot of cozy farming content, from practical tools t
           title: 'Stove',
           namespace_id: 'farm_and_charm:stove',
           subtitle: 'Your main Station for Baking and a Heat Source for Cooking.',
-          icon: '/assets/icons/farm-and-charm/stove.png',
+          icon: '/assets/icons/farm-and-charm/stove.webp',
           search: 'stove baking fuel heat cooking roaster pot',
           details: true,
           detailsTitle: 'Usage',
@@ -50,7 +50,7 @@ Related: [[Cooking Pot|cooking_pot]].`,
           title: 'Cooking Pot',
           namespace_id: 'farm_and_charm:cooking_pot',
           subtitle: 'A cozy Station for preparing basic Meals, powered by Heat.',
-          icon: '/assets/icons/farm-and-charm/cooking_pot.png',
+          icon: '/assets/icons/farm-and-charm/cooking_pot.webp',
           search:
             'cooking pot meals basic hot surface stove magma campfire bubbles recipe book container slot output cooking',
           details: true,
@@ -78,7 +78,7 @@ Related: [[Roaster|roaster]].`,
           title: 'Roaster',
           namespace_id: 'farm_and_charm:roaster',
           subtitle: 'A large Cooking Station for preparing bigger Meals.',
-          icon: '/assets/icons/farm-and-charm/roaster.png',
+          icon: '/assets/icons/farm-and-charm/roaster.webp',
           search:
             'roaster bigger meals large hot surface stove magma campfire smoke recipe book container slot output cooking',
           details: true,
@@ -104,7 +104,7 @@ To function, the Roaster must be connected to a Heat Source, such as a [[Stove|s
           title: 'Mincer',
           namespace_id: 'farm_and_charm:mincer',
           subtitle: 'A crank-operated Tool for processing various Materials.',
-          icon: '/assets/icons/farm-and-charm/mincer.png',
+          icon: '/assets/icons/farm-and-charm/mincer.webp',
           search: 'mincer crank processing interact right click hold particles sound animation meat iron wood speed',
           details: true,
           detailsTitle: 'Usage',
@@ -130,7 +130,7 @@ Processing Time depends on the Material being processed. Meat is processed almos
           title: 'Crafting Bowl',
           namespace_id: 'farm_and_charm:crafting_bowl',
           subtitle: 'A manual Station for preparing Dough, Cereals, Salads, and more.',
-          icon: '/assets/icons/farm-and-charm/crafting_bowl.png',
+          icon: '/assets/icons/farm-and-charm/crafting_bowl.webp',
           search: 'crafting bowl dough cereals salads whisk stir interact no gui empty hand capacity animation',
           details: true,
           detailsTitle: 'Usage',
@@ -155,7 +155,7 @@ An empty Hand is required to begin the Mixing Process.`,
           title: 'Silo',
           namespace_id: 'farm_and_charm:silo_copper',
           subtitle: 'Modular Storage for drying Items, scaling with Size.',
-          icon: '/assets/icons/farm-and-charm/silo_copper.png',
+          icon: '/assets/icons/farm-and-charm/silo_copper.webp',
           search: 'silo modular expand width height capacity drying time hatch open close right click storage',
           details: true,
           detailsTitle: 'Usage',
@@ -185,7 +185,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Fertilized Soil',
           namespace_id: 'farm_and_charm:fertilized_soil',
           subtitle: 'Boost your Fields and upgrade Farmland.',
-          icon: '/assets/icons/farm-and-charm/fertilized_soil.png',
+          icon: '/assets/icons/farm-and-charm/fertilized_soil.webp',
           search: 'fertilized soil hoe convert fertilized farmland pitchfork bone meal effect radius crops uses 4'
         },
         {
@@ -193,7 +193,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Fertilized Farmland',
           namespace_id: 'farm_and_charm:fertilized_farmland',
           subtitle: 'Enhanced Farmland that supports faster Crop Growth.',
-          icon: '/assets/icons/farm-and-charm/fertilized_farmland.png',
+          icon: '/assets/icons/farm-and-charm/fertilized_farmland.webp',
           search: 'fertilized farmland enhanced cannot trample random bone meal chance crop growth',
           details: true,
           detailsTitle: 'Function',
@@ -210,7 +210,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Feeding Trough',
           namespace_id: 'farm_and_charm:feeding_trough',
           subtitle: 'Automatically feeds Animals and helps them get ready to Breed.',
-          icon: '/assets/icons/farm-and-charm/feeding_trough.png',
+          icon: '/assets/icons/farm-and-charm/feeding_trough.webp',
           search: 'feeding trough seeds capacity animals breeding automatic nearby eat periodically',
           details: true,
           detailsTitle: 'Usage',
@@ -228,7 +228,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Water Trough',
           namespace_id: 'farm_and_charm:water_trough',
           subtitle: 'A simple trough that provides water for nearby Animals.',
-          icon: '/assets/icons/farm-and-charm/water_trough.png',
+          icon: '/assets/icons/farm-and-charm/water_trough.webp',
           search: 'water trough animals farm utility hydration breeding cooldown',
           details: true,
           detailsTitle: 'Usage',
@@ -239,7 +239,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Water Sprinkler',
           namespace_id: 'farm_and_charm:water_sprinkler',
           subtitle: 'Automatically irrigates nearby Farmland without requiring a water source.',
-          icon: '/assets/icons/farm-and-charm/water_sprinkler.png',
+          icon: '/assets/icons/farm-and-charm/water_sprinkler.webp',
           search: 'water sprinkler irrigate farmland radius no water supply automatic farming utility decoration'
         },
         {
@@ -247,7 +247,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Pet Bowl',
           namespace_id: 'farm_and_charm:pet_bowl',
           subtitle: 'A cozy feeding spot for Pets, with support for Cat Food, Dog Food, and a custom Name Tag.',
-          icon: '/assets/icons/farm-and-charm/pet_bowl.png',
+          icon: '/assets/icons/farm-and-charm/pet_bowl.webp',
           search: 'pet bowl cat dog food feeding name tag shears shift right click screen rename decoration',
           details: true,
           detailsTitle: 'Usage',
@@ -264,7 +264,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Chicken Coop',
           namespace_id: 'farm_and_charm:chicken_coop',
           subtitle: 'Stores Chickens and collects Eggs for easy pickup.',
-          icon: '/assets/icons/farm-and-charm/chicken_coop.png',
+          icon: '/assets/icons/farm-and-charm/chicken_coop.webp',
           search: 'chicken coop store chickens eggs collect leash pitchfork release radius 7',
           details: true,
           detailsTitle: 'Usage',
@@ -281,7 +281,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Chicken Nest',
           namespace_id: 'farm_and_charm:chicken_nest',
           subtitle: 'A cozy Nest where nearby Chickens lay their Eggs safely.',
-          icon: '/assets/icons/farm-and-charm/chicken_nest.png',
+          icon: '/assets/icons/farm-and-charm/chicken_nest.webp',
           search: 'chicken nest coop farm eggs storage nearby chickens',
           details: true,
           detailsTitle: 'Usage',
@@ -304,7 +304,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Window Sill',
           namespace_id: 'farm_and_charm:window_sill',
           subtitle: 'Decorate your farmhouse. Fits up to two small flowers.',
-          icon: '/assets/icons/farm-and-charm/window_sill.png',
+          icon: '/assets/icons/farm-and-charm/window_sill.webp',
           search: 'window sill decorate farmhouse holds 2 small flowers tag #small_flowers'
         },
         {
@@ -312,7 +312,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Tool Rack',
           namespace_id: 'farm_and_charm:tool_rack',
           subtitle: 'The ideal storage solution for your tools and pans.',
-          icon: '/assets/icons/farm-and-charm/tool_rack.png',
+          icon: '/assets/icons/farm-and-charm/tool_rack.webp',
           search: 'tool rack toolrack storage tools pans kitchen decor'
         },
         {
@@ -320,7 +320,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Scarecrow',
           namespace_id: 'farm_and_charm:scarecrow',
           subtitle: 'A special Reward that boosts nearby Crop Growth.',
-          icon: '/assets/icons/farm-and-charm/scarecrow.png',
+          icon: '/assets/icons/farm-and-charm/scarecrow.webp',
           search:
             'scarecrow reward cook all meals dishes completion unlock growth boost 10 percent range animated sways wind weather dungarees overalls pants funny',
           details: true,
@@ -338,7 +338,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Rope',
           namespace_id: 'farm_and_charm:rope',
           subtitle: 'A flexible Utility Block for rustic Builds and Farming Setups.',
-          icon: '/assets/icons/farm-and-charm/rope.png',
+          icon: '/assets/icons/farm-and-charm/rope.webp',
           search:
             'rope rope knot knot utility building decoration lantern bell hang climbing crops support anchor connect corner vertical horizontal',
           details: true,
@@ -356,7 +356,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Packed Dirt',
           namespace_id: 'farm_and_charm:packed_dirt',
           subtitle: 'A compact Path Block for farms, yards, and rustic builds.',
-          icon: '/assets/icons/farm-and-charm/packed_dirt.png',
+          icon: '/assets/icons/farm-and-charm/packed_dirt.webp',
           search: 'packed dirt path farm yard decoration trail road'
         },
         {
@@ -364,7 +364,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Trampled Packed Dirt',
           namespace_id: 'farm_and_charm:trampled_packed_dirt',
           subtitle: 'A worn Packed Dirt variant for frequently used Paths.',
-          icon: '/assets/icons/farm-and-charm/trampled_packed_dirt.png',
+          icon: '/assets/icons/farm-and-charm/trampled_packed_dirt.webp',
           search: 'trampled packed dirt worn path farm yard trail road'
         },
         {
@@ -372,7 +372,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Stable Floor',
           namespace_id: 'farm_and_charm:stable_floor',
           subtitle: 'A clean Floor Block for stables, barns, and animal areas.',
-          icon: '/assets/icons/farm-and-charm/stable_floor.png',
+          icon: '/assets/icons/farm-and-charm/stable_floor.webp',
           search: 'stable floor barn stable building decor animals pen'
         },
         {
@@ -380,7 +380,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Trampled Stable Floor',
           namespace_id: 'farm_and_charm:trampled_stable_floor',
           subtitle: 'A worn Stable Floor variant for busy pens and walkways.',
-          icon: '/assets/icons/farm-and-charm/trampled_stable_floor.png',
+          icon: '/assets/icons/farm-and-charm/trampled_stable_floor.webp',
           search: 'trampled stable floor barn animals pen walkway worn'
         },
         {
@@ -388,21 +388,21 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Straw Stable Floor',
           namespace_id: 'farm_and_charm:straw_stable_floor',
           subtitle: 'A cozy Straw topped Floor Block for barns and stables.',
-          icon: '/assets/icons/farm-and-charm/straw_stable_floor.png',
+          icon: '/assets/icons/farm-and-charm/straw_stable_floor.webp',
           search: 'straw stable floor barn straw animals cozy stable'
         },
         {
           id: 'bag',
           title: 'Bag',
           subtitle: 'Decorative Bags representing different ingredients and farm goods.',
-          icon: '/assets/icons/farm-and-charm/onion_bag.png',
+          icon: '/assets/icons/farm-and-charm/onion_bag.webp',
           search: 'bag decoration ingredient sack strawberry carrot potato beetroot lettuce tomato corn onion flour'
         },
         {
           id: 'grain_ball',
           title: 'Grain Balls',
           subtitle: 'Decorative bundles of grains used to add detail and atmosphere to fields and storage areas.',
-          icon: '/assets/icons/farm-and-charm/oat_ball.png',
+          icon: '/assets/icons/farm-and-charm/oat_ball.webp',
           search: 'grain ball oat barley food ingredient'
         },
         {
@@ -410,14 +410,14 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Sturdy Ladder',
           namespace_id: 'farm_and_charm:sturdy_ladder',
           subtitle: 'A sturdier Ladder that can extend upward by placing more on top.',
-          icon: '/assets/icons/farm-and-charm/sturdy_ladder.png',
+          icon: '/assets/icons/farm-and-charm/sturdy_ladder.webp',
           search: 'sturdy ladder barn farm building climb extend stack place on ladder support walls ground'
         },
         {
           id: 'pet_food_bags',
           title: 'Pet Food Bags',
           subtitle: 'Decorative sacks for storing dog and cat food in a rustic way.',
-          icon: '/assets/icons/farm-and-charm/cat_food_bag.png',
+          icon: '/assets/icons/farm-and-charm/cat_food_bag.webp',
           search: 'pet food bags dog food cat food sacks decorative storage stackable'
         },
         {
@@ -425,7 +425,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Cattlegrid',
           namespace_id: 'farm_and_charm:cattlegrid',
           subtitle: 'A practical grid that blocks livestock while letting players pass.',
-          icon: '/assets/icons/farm-and-charm/cattlegrid.png',
+          icon: '/assets/icons/farm-and-charm/cattlegrid.webp',
           search: 'cattlegrid farm gate enclosure livestock cows sheep pigs horses block animals pass players',
           details: true,
           detailsTitle: 'Usage',
@@ -449,7 +449,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Fertilizer',
           namespace_id: 'farm_and_charm:fertilizer',
           subtitle: 'Enhanced bone meal that boosts crops over a large area.',
-          icon: '/assets/icons/farm-and-charm/fertilizer.png',
+          icon: '/assets/icons/farm-and-charm/fertilizer.webp',
           search: 'fertilizer enhanced bone meal apply large area crops growth farming'
         },
         {
@@ -457,7 +457,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Compost',
           namespace_id: 'farm_and_charm:compost',
           subtitle: 'A multi use growth boost for wide areas.',
-          icon: '/assets/icons/farm-and-charm/compost.png',
+          icon: '/assets/icons/farm-and-charm/compost.webp',
           search: 'compost 10 uses apply bone meal wide area crops growth farming'
         },
         {
@@ -465,7 +465,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Pitchfork',
           namespace_id: 'farm_and_charm:pitchfork',
           subtitle: 'A Farming Tool with a special use on Fertilized Soil.',
-          icon: '/assets/icons/farm-and-charm/pitchfork.png',
+          icon: '/assets/icons/farm-and-charm/pitchfork.webp',
           search: 'pitchfork hoe fertilized soil bone meal effect farming tool range crops uses durability',
           details: true,
           detailsTitle: 'Usage',
@@ -482,7 +482,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Dungarees',
           namespace_id: 'farm_and_charm:dungarees',
           subtitle: 'Workwear that rewards careful farming and provides subtle utility benefits.',
-          icon: '/assets/icons/farm-and-charm/dungarees.png',
+          icon: '/assets/icons/farm-and-charm/dungarees.webp',
           search: 'dungarees workwear farming armor saturation farmland villager wool repair',
           details: true,
           detailsTitle: 'Usage',
@@ -500,7 +500,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Supply Cart',
           namespace_id: 'farm_and_charm:supply_cart',
           subtitle: 'A placeable Cart you can attach to a Horse and use as mobile Storage.',
-          icon: '/assets/icons/farm-and-charm/supply_cart.png',
+          icon: '/assets/icons/farm-and-charm/supply_cart.webp',
           search: 'supply cart placeable attach horse detach storage open mobile transport move supplies farm utility',
           details: true,
           detailsTitle: 'Usage',
@@ -517,7 +517,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Plow',
           namespace_id: 'farm_and_charm:plow',
           subtitle: 'A placeable Cart Attachment for Horses that helps prepare fields faster.',
-          icon: '/assets/icons/farm-and-charm/plow.png',
+          icon: '/assets/icons/farm-and-charm/plow.webp',
           search: 'plow cart placeable attachment attach horse detach toggle plowing farming fields till soil',
           details: true,
           detailsTitle: 'Usage',
@@ -534,7 +534,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Yeast',
           namespace_id: 'farm_and_charm:yeast',
           subtitle: 'A key ingredient for baking and fermentation.',
-          icon: '/assets/icons/farm-and-charm/yeast.png',
+          icon: '/assets/icons/farm-and-charm/yeast.webp',
           search: 'yeast baking fermentation bread pastries ingredient'
         },
         {
@@ -542,7 +542,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Butter',
           namespace_id: 'farm_and_charm:butter',
           subtitle: 'A rich ingredient used in many recipes.',
-          icon: '/assets/icons/farm-and-charm/butter.png',
+          icon: '/assets/icons/farm-and-charm/butter.webp',
           search: 'butter ingredient cooking baking recipes dairy'
         },
         {
@@ -550,7 +550,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Dough',
           namespace_id: 'farm_and_charm:dough',
           subtitle: 'Base dough for breads and baked goods.',
-          icon: '/assets/icons/farm-and-charm/dough.png',
+          icon: '/assets/icons/farm-and-charm/dough.webp',
           search: 'dough bread baking base ingredient pastries'
         },
         {
@@ -558,7 +558,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Raw Pasta',
           namespace_id: 'farm_and_charm:raw_pasta',
           subtitle: 'Uncooked pasta, ready to be prepared into meals.',
-          icon: '/assets/icons/farm-and-charm/raw_pasta.png',
+          icon: '/assets/icons/farm-and-charm/raw_pasta.webp',
           search: 'raw pasta ingredient cooking meals noodles'
         },
         {
@@ -566,7 +566,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Flour',
           namespace_id: 'farm_and_charm:flour',
           subtitle: 'A basic ingredient for baking and cooking.',
-          icon: '/assets/icons/farm-and-charm/flour.png',
+          icon: '/assets/icons/farm-and-charm/flour.webp',
           search: 'flour wheat baking ingredient cooking recipes'
         },
         {
@@ -574,7 +574,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Minced Beef',
           namespace_id: 'farm_and_charm:minced_beef',
           subtitle: 'Processed meat used in various hearty meals.',
-          icon: '/assets/icons/farm-and-charm/minced_beef.png',
+          icon: '/assets/icons/farm-and-charm/minced_beef.webp',
           search: 'minced beef meat ingredient cooking meals'
         },
         {
@@ -582,7 +582,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Lamb Ham',
           namespace_id: 'farm_and_charm:lamb_ham',
           subtitle: 'A flavorful cut used in rustic dishes.',
-          icon: '/assets/icons/farm-and-charm/lamb_ham.png',
+          icon: '/assets/icons/farm-and-charm/lamb_ham.webp',
           search: 'lamb ham meat ingredient cooking meals'
         },
         {
@@ -590,7 +590,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Bacon',
           namespace_id: 'farm_and_charm:bacon',
           subtitle: 'A classic ingredient for savory meals.',
-          icon: '/assets/icons/farm-and-charm/bacon.png',
+          icon: '/assets/icons/farm-and-charm/bacon.webp',
           search: 'bacon pork meat ingredient cooking meals breakfast'
         },
         {
@@ -598,7 +598,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Chicken Parts',
           namespace_id: 'farm_and_charm:chicken_parts',
           subtitle: 'Useful for cooking and various recipes.',
-          icon: '/assets/icons/farm-and-charm/chicken_parts.png',
+          icon: '/assets/icons/farm-and-charm/chicken_parts.webp',
           search: 'chicken parts meat ingredient cooking recipes'
         },
         {
@@ -606,7 +606,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Cat Food',
           namespace_id: 'farm_and_charm:cat_food',
           subtitle: 'Helps tame cats and keeps wild cats from running away.',
-          icon: '/assets/icons/farm-and-charm/cat_food.png',
+          icon: '/assets/icons/farm-and-charm/cat_food.webp',
           search: 'cat food cats tame chance hold in hand wild cats wont run away pet'
         },
         {
@@ -614,7 +614,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Dog Food',
           namespace_id: 'farm_and_charm:dog_food',
           subtitle: 'Tames wolves instantly and grants a special effect.',
-          icon: '/assets/icons/farm-and-charm/dog_food.png',
+          icon: '/assets/icons/farm-and-charm/dog_food.webp',
           search: 'dog food wolves tame first try effect wolf pet'
         },
         {
@@ -622,7 +622,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Horse Fodder',
           namespace_id: 'farm_and_charm:horse_fodder',
           subtitle: 'Tames horses instantly and grants a special effect.',
-          icon: '/assets/icons/farm-and-charm/horse_fodder.png',
+          icon: '/assets/icons/farm-and-charm/horse_fodder.webp',
           search: 'horse fodder horses tame first try effect horse mount'
         },
         {
@@ -630,7 +630,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Chicken Feed',
           namespace_id: 'farm_and_charm:chicken_feed',
           subtitle: 'Feed chickens and gain a funny effect, even as a player.',
-          icon: '/assets/icons/farm-and-charm/chicken_feed.png',
+          icon: '/assets/icons/farm-and-charm/chicken_feed.webp',
           search: 'chicken feed chickens cluck effect player consume',
           details: true,
           detailsTitle: 'Effect',
@@ -641,7 +641,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Rotten Tomato',
           namespace_id: 'farm_and_charm:rotten_tomato',
           subtitle: 'Not edible, but a fun throwable that poisons targets.',
-          icon: '/assets/icons/farm-and-charm/rotten_tomato.png',
+          icon: '/assets/icons/farm-and-charm/rotten_tomato.webp',
           search: 'rotten tomato throwable weapon toss poison creatures friends prank'
         }
       ]
@@ -655,7 +655,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'tea',
           title: 'Tea',
           subtitle: 'Brewed from wild plants and water in a [[Cooking Pot|cooking_pot]].',
-          icon: '/assets/icons/farm-and-charm/strawberry_tea.png',
+          icon: '/assets/icons/farm-and-charm/strawberry_tea.webp',
           search: 'tea brew wild plants water cooking pot herbalbrews tea jug glass bottle right click share friends'
         },
         {
@@ -663,7 +663,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Food',
           namespace_id: '',
           subtitle: 'A small peek at the meal selection.',
-          icon: '/assets/icons/farm-and-charm/bacon_with_eggs.png',
+          icon: '/assets/icons/farm-and-charm/bacon_with_eggs.webp',
           search: 'food meals dishes soups pancakes bread meats saturation hunger effects',
           details: true,
           detailsTitle: 'All Meals',
@@ -673,189 +673,189 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               id: 'oat_pancake',
               title: 'Oat Pancake',
               subtitle: '',
-              icon: '/assets/icons/farm-and-charm/oat_pancake.png',
+              icon: '/assets/icons/farm-and-charm/oat_pancake.webp',
               search: 'oat pancake food meal'
             },
             {
               id: 'roasted_corn',
               title: 'Roasted Corn',
               subtitle: '',
-              icon: '/assets/icons/farm-and-charm/roasted_corn.png',
+              icon: '/assets/icons/farm-and-charm/roasted_corn.webp',
               search: 'roasted corn food meal'
             },
             {
               id: 'potato_with_roast_meat',
               title: 'Potato With Roast Meat',
               subtitle: '',
-              icon: '/assets/icons/farm-and-charm/potato_with_roast_meat.png',
+              icon: '/assets/icons/farm-and-charm/potato_with_roast_meat.webp',
               search: 'potato roast meat food meal'
             },
             {
               id: 'baked_lamb_ham',
               title: 'Baked Lamb Ham',
               subtitle: '',
-              icon: '/assets/icons/farm-and-charm/baked_lamb_ham.png',
+              icon: '/assets/icons/farm-and-charm/baked_lamb_ham.webp',
               search: 'baked lamb ham food meal'
             },
             {
               id: 'farmers_breakfast',
               title: "Farmer's Breakfast",
               subtitle: '',
-              icon: '/assets/icons/farm-and-charm/farmers_breakfast.png',
+              icon: '/assets/icons/farm-and-charm/farmers_breakfast.webp',
               search: 'farmers breakfast food meal'
             },
             {
               id: 'stuffed_chicken',
               title: 'Stuffed Chicken',
               subtitle: '',
-              icon: '/assets/icons/farm-and-charm/stuffed_chicken.png',
+              icon: '/assets/icons/farm-and-charm/stuffed_chicken.webp',
               search: 'stuffed chicken food meal'
             },
             {
               id: 'stuffed_rabbit',
               title: 'Stuffed Rabbit',
               subtitle: '',
-              icon: '/assets/icons/farm-and-charm/stuffed_rabbit.png',
+              icon: '/assets/icons/farm-and-charm/stuffed_rabbit.webp',
               search: 'stuffed rabbit food meal'
             },
             {
               id: 'farmers_bread',
               title: "Farmer's Bread",
               subtitle: '',
-              icon: '/assets/icons/farm-and-charm/farmers_bread.png',
+              icon: '/assets/icons/farm-and-charm/farmers_bread.webp',
               search: 'farmers bread food meal'
             },
             {
               id: 'grandmothers_strawberry_cake',
               title: "Grandmother's Strawberry Cake",
               subtitle: '',
-              icon: '/assets/icons/farm-and-charm/grandmothers_strawberry_cake.png',
+              icon: '/assets/icons/farm-and-charm/grandmothers_strawberry_cake.webp',
               search: 'strawberry cake food meal'
             },
             {
               id: 'farmer_salad',
               title: 'Farmer Salad',
               subtitle: '',
-              icon: '/assets/icons/farm-and-charm/farmer_salad.png',
+              icon: '/assets/icons/farm-and-charm/farmer_salad.webp',
               search: 'salad food meal'
             },
             {
               id: 'goulash',
               title: 'Goulash',
               subtitle: '',
-              icon: '/assets/icons/farm-and-charm/goulash.png',
+              icon: '/assets/icons/farm-and-charm/goulash.webp',
               search: 'goulash food meal'
             },
             {
               id: 'simple_tomato_soup',
               title: 'Simple Tomato Soup',
               subtitle: '',
-              icon: '/assets/icons/farm-and-charm/simple_tomato_soup.png',
+              icon: '/assets/icons/farm-and-charm/simple_tomato_soup.webp',
               search: 'tomato soup food meal'
             },
             {
               id: 'barley_soup',
               title: 'Barley Soup',
               subtitle: '',
-              icon: '/assets/icons/farm-and-charm/barley_soup.png',
+              icon: '/assets/icons/farm-and-charm/barley_soup.webp',
               search: 'barley soup food meal'
             },
             {
               id: 'onion_soup',
               title: 'Onion Soup',
               subtitle: '',
-              icon: '/assets/icons/farm-and-charm/onion_soup.png',
+              icon: '/assets/icons/farm-and-charm/onion_soup.webp',
               search: 'onion soup food meal'
             },
             {
               id: 'potato_soup',
               title: 'Potato Soup',
               subtitle: '',
-              icon: '/assets/icons/farm-and-charm/potato_soup.png',
+              icon: '/assets/icons/farm-and-charm/potato_soup.webp',
               search: 'potato soup food meal'
             },
             {
               id: 'pasta_with_onion_sauce',
               title: 'Pasta With Onion Sauce',
               subtitle: '',
-              icon: '/assets/icons/farm-and-charm/pasta_with_onion_sauce.png',
+              icon: '/assets/icons/farm-and-charm/pasta_with_onion_sauce.webp',
               search: 'pasta onion sauce food meal'
             },
             {
               id: 'corn_grits',
               title: 'Corn Grits',
               subtitle: '',
-              icon: '/assets/icons/farm-and-charm/corn_grits.png',
+              icon: '/assets/icons/farm-and-charm/corn_grits.webp',
               search: 'corn grits food meal'
             },
             {
               id: 'oatmeal_with_strawberries',
               title: 'Oatmeal With Strawberries',
               subtitle: '',
-              icon: '/assets/icons/farm-and-charm/oatmeal_with_strawberries.png',
+              icon: '/assets/icons/farm-and-charm/oatmeal_with_strawberries.webp',
               search: 'oatmeal strawberries food meal'
             },
             {
               id: 'sausage_with_oat_patty',
               title: 'Sausage With Oat Patty',
               subtitle: '',
-              icon: '/assets/icons/farm-and-charm/sausage_with_oat_patty.png',
+              icon: '/assets/icons/farm-and-charm/sausage_with_oat_patty.webp',
               search: 'sausage oat patty food meal'
             },
             {
               id: 'lamb_with_corn',
               title: 'Lamb With Corn',
               subtitle: '',
-              icon: '/assets/icons/farm-and-charm/lamb_with_corn.png',
+              icon: '/assets/icons/farm-and-charm/lamb_with_corn.webp',
               search: 'lamb corn food meal'
             },
             {
               id: 'beef_patty_with_vegetables',
               title: 'Beef Patty With Vegetables',
               subtitle: '',
-              icon: '/assets/icons/farm-and-charm/beef_patty_with_vegetables.png',
+              icon: '/assets/icons/farm-and-charm/beef_patty_with_vegetables.webp',
               search: 'beef patty vegetables food meal'
             },
             {
               id: 'barley_patties_with_potatoes',
               title: 'Barley Patties With Potatoes',
               subtitle: '',
-              icon: '/assets/icons/farm-and-charm/barley_patties_with_potatoes.png',
+              icon: '/assets/icons/farm-and-charm/barley_patties_with_potatoes.webp',
               search: 'barley patties potatoes food meal'
             },
             {
               id: 'bacon_with_eggs',
               title: 'Bacon With Eggs',
               subtitle: '',
-              icon: '/assets/icons/farm-and-charm/bacon_with_eggs.png',
+              icon: '/assets/icons/farm-and-charm/bacon_with_eggs.webp',
               search: 'bacon eggs food meal'
             },
             {
               id: 'chicken_wrapped_in_bacon',
               title: 'Chicken Wrapped In Bacon',
               subtitle: '',
-              icon: '/assets/icons/farm-and-charm/chicken_wrapped_in_bacon.png',
+              icon: '/assets/icons/farm-and-charm/chicken_wrapped_in_bacon.webp',
               search: 'chicken bacon food meal'
             },
             {
               id: 'cooked_salmon',
               title: 'Cooked Salmon',
               subtitle: '',
-              icon: '/assets/icons/farm-and-charm/cooked_salmon.png',
+              icon: '/assets/icons/farm-and-charm/cooked_salmon.webp',
               search: 'salmon food meal fish'
             },
             {
               id: 'cooked_cod',
               title: 'Cooked Cod',
               subtitle: '',
-              icon: '/assets/icons/farm-and-charm/cooked_cod.png',
+              icon: '/assets/icons/farm-and-charm/cooked_cod.webp',
               search: 'cod food meal fish'
             },
             {
               id: 'roasted_chicken',
               title: 'Roasted Chicken',
               subtitle: '',
-              icon: '/assets/icons/farm-and-charm/roasted_chicken.png',
+              icon: '/assets/icons/farm-and-charm/roasted_chicken.webp',
               search: 'roasted chicken food meal'
             }
           ]
@@ -872,7 +872,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Barley',
           namespace_id: 'farm_and_charm:wild_barley',
           subtitle: 'Naturally growing Barley found in Plains, Sunflower Plains, Rivers, and Savannas.',
-          icon: '/assets/icons/farm-and-charm/wild_barley.png',
+          icon: '/assets/icons/farm-and-charm/wild_barley.webp',
           search: 'barley grain wild barley farming',
           items: [
             {
@@ -880,7 +880,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               title: 'Barley Seeds',
               namespace_id: 'farm_and_charm:barley_seeds',
               subtitle: 'Used to cultivate Barley on farmland.',
-              icon: '/assets/icons/farm-and-charm/barley_seeds.png',
+              icon: '/assets/icons/farm-and-charm/barley_seeds.webp',
               search: 'barley seeds farming crop'
             },
             {
@@ -888,7 +888,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               title: 'Barley',
               namespace_id: 'farm_and_charm:barley',
               subtitle: 'A hardy grain used for soups and rustic meals.',
-              icon: '/assets/icons/farm-and-charm/barley.png',
+              icon: '/assets/icons/farm-and-charm/barley.webp',
               search: 'barley crop plant growth'
             },
             {
@@ -896,7 +896,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               title: 'Barley Crop',
               namespace_id: 'farm_and_charm:barley_crop',
               subtitle: 'A fully grown Barley plant waiting to be harvested.',
-              icon: '/assets/icons/farm-and-charm/barley_crop.png',
+              icon: '/assets/icons/farm-and-charm/barley_crop.webp',
               search: 'wild barley worldgen plant'
             }
           ]
@@ -907,7 +907,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           namespace_id: 'farm_and_charm:wild_emmer',
           subtitle:
             'An ancient ancestor of modern Wheat, growing in the wild in Plains, Sunflower Plains, Rivers, and Forests, offering an alternative way to obtain Wheat Seeds.',
-          icon: '/assets/icons/farm-and-charm/wild_emmer.png',
+          icon: '/assets/icons/farm-and-charm/wild_emmer.webp',
           search: 'emmer grain wild emmer wheat farming',
           items: [
             {
@@ -915,7 +915,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               title: 'Wheat Seeds',
               namespace_id: 'minecraft:wheat_seeds',
               subtitle: 'Used to cultivate Wheat on farmland.',
-              icon: '/assets/icons/farm-and-charm/wheat_seeds.png',
+              icon: '/assets/icons/farm-and-charm/wheat_seeds.webp',
               search: 'wheat seeds farming crop'
             },
             {
@@ -923,7 +923,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               title: 'Wheat',
               namespace_id: 'minecraft:wheat',
               subtitle: 'A cultivated grain descended from ancient Emmer.',
-              icon: '/assets/icons/farm-and-charm/wheat.png',
+              icon: '/assets/icons/farm-and-charm/wheat.webp',
               search: 'wheat grain crop'
             },
             {
@@ -931,7 +931,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               title: 'Wheat Crop',
               namespace_id: 'minecraft:wheat',
               subtitle: 'A fully grown Wheat plant ready for harvest.',
-              icon: '/assets/icons/farm-and-charm/wheat_crop.png',
+              icon: '/assets/icons/farm-and-charm/wheat_crop.webp',
               search: 'wheat crop plant growth'
             }
           ]
@@ -941,7 +941,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Oat',
           namespace_id: 'farm_and_charm:wild_oat',
           subtitle: 'A soft grain used for baking and warm breakfasts, generating naturally in Meadows and Taiga.',
-          icon: '/assets/icons/farm-and-charm/wild_oat.png',
+          icon: '/assets/icons/farm-and-charm/wild_oat.webp',
           search: 'oat grain wild oat farming',
           items: [
             {
@@ -949,7 +949,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               title: 'Oat Seeds',
               namespace_id: 'farm_and_charm:oat_seeds',
               subtitle: 'Used to cultivate Oat on farmland.',
-              icon: '/assets/icons/farm-and-charm/oat_seeds.png',
+              icon: '/assets/icons/farm-and-charm/oat_seeds.webp',
               search: 'oat seeds farming crop'
             },
             {
@@ -957,7 +957,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               title: 'Oat',
               namespace_id: 'farm_and_charm:oat',
               subtitle: 'A soft and nourishing grain used for baking and warm breakfasts.',
-              icon: '/assets/icons/farm-and-charm/oat.png',
+              icon: '/assets/icons/farm-and-charm/oat.webp',
               search: 'oat grain food'
             },
             {
@@ -965,7 +965,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               title: 'Oat Crop',
               namespace_id: 'farm_and_charm:oat_crop',
               subtitle: 'A fully grown Oat plant gently swaying in the wind, ready for harvest.',
-              icon: '/assets/icons/farm-and-charm/oat_crop.png',
+              icon: '/assets/icons/farm-and-charm/oat_crop.webp',
               search: 'oat crop plant growth'
             }
           ]
@@ -975,7 +975,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Corn',
           namespace_id: 'farm_and_charm:wild_corn',
           subtitle: 'A tall crop thriving in Plains, Savannas, and Badlands, well suited to warm and dry climates.',
-          icon: '/assets/icons/farm-and-charm/wild_corn.png',
+          icon: '/assets/icons/farm-and-charm/wild_corn.webp',
           search: 'corn crop wild corn farming',
           items: [
             {
@@ -983,7 +983,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               title: 'Corn Kernels',
               namespace_id: 'farm_and_charm:kernels',
               subtitle: 'Used to cultivate Corn on farmland.',
-              icon: '/assets/icons/farm-and-charm/kernels.png',
+              icon: '/assets/icons/farm-and-charm/kernels.webp',
               search: 'corn kernels farming crop'
             },
             {
@@ -991,7 +991,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               title: 'Corn',
               namespace_id: 'farm_and_charm:corn',
               subtitle: 'A versatile grain harvested from tall stalks and used in many hearty meals.',
-              icon: '/assets/icons/farm-and-charm/corn.png',
+              icon: '/assets/icons/farm-and-charm/corn.webp',
               search: 'corn grain food'
             },
             {
@@ -999,7 +999,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               title: 'Corn Crop',
               namespace_id: 'farm_and_charm:corn_crop',
               subtitle: 'A fully grown Corn plant standing tall and ready for harvest.',
-              icon: '/assets/icons/farm-and-charm/corn_crop.png',
+              icon: '/assets/icons/farm-and-charm/corn_crop.webp',
               search: 'corn crop plant growth'
             }
           ]
@@ -1010,7 +1010,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           namespace_id: 'farm_and_charm:tomato',
           subtitle:
             'A sun-loving crop found growing naturally in Plains, Savannas, and Badlands, capable of climbing [[Rope|rope]] when placed above and alongside the plant.',
-          icon: '/assets/icons/farm-and-charm/wild_tomatoes.png',
+          icon: '/assets/icons/farm-and-charm/wild_tomatoes.webp',
           search: 'tomato crop wild tomatoes farming',
           items: [
             {
@@ -1018,7 +1018,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               title: 'Tomato Seeds',
               namespace_id: 'farm_and_charm:tomato_seeds',
               subtitle: 'Used to cultivate Tomatoes on farmland.',
-              icon: '/assets/icons/farm-and-charm/tomato_seeds.png',
+              icon: '/assets/icons/farm-and-charm/tomato_seeds.webp',
               search: 'tomato seeds farming crop'
             },
             {
@@ -1026,7 +1026,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               title: 'Tomato',
               namespace_id: 'farm_and_charm:tomato',
               subtitle: 'A juicy and flavorful ingredient used in soups and rustic meals.',
-              icon: '/assets/icons/farm-and-charm/tomato.png',
+              icon: '/assets/icons/farm-and-charm/tomato.webp',
               search: 'tomato food ingredient'
             },
             {
@@ -1034,7 +1034,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               title: 'Tomato Crop',
               namespace_id: 'farm_and_charm:tomato_crop',
               subtitle: 'A fully grown Tomato plant heavy with ripe fruit, ready for harvest.',
-              icon: '/assets/icons/farm-and-charm/tomato_crop.png',
+              icon: '/assets/icons/farm-and-charm/tomato_crop.webp',
               search: 'tomato crop plant growth'
             }
           ]
@@ -1044,7 +1044,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Lettuce',
           namespace_id: 'farm_and_charm:lettuce',
           subtitle: 'A light leafy crop growing naturally in Plains, Swamps, Meadows, and Forests.',
-          icon: '/assets/icons/farm-and-charm/wild_lettuce.png',
+          icon: '/assets/icons/farm-and-charm/wild_lettuce.webp',
           search: 'lettuce crop wild lettuce farming',
           items: [
             {
@@ -1052,7 +1052,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               title: 'Lettuce Seeds',
               namespace_id: 'farm_and_charm:lettuce_seeds',
               subtitle: 'Used to cultivate Lettuce on farmland.',
-              icon: '/assets/icons/farm-and-charm/lettuce_seeds.png',
+              icon: '/assets/icons/farm-and-charm/lettuce_seeds.webp',
               search: 'lettuce seeds farming crop'
             },
             {
@@ -1060,7 +1060,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               title: 'Lettuce',
               namespace_id: 'farm_and_charm:lettuce',
               subtitle: 'A fresh and tender leaf used for salads and light meals.',
-              icon: '/assets/icons/farm-and-charm/lettuce.png',
+              icon: '/assets/icons/farm-and-charm/lettuce.webp',
               search: 'lettuce food ingredient'
             },
             {
@@ -1068,7 +1068,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               title: 'Lettuce Crop',
               namespace_id: 'farm_and_charm:lettuce_crop',
               subtitle: 'A fully grown Lettuce plant ready to be harvested.',
-              icon: '/assets/icons/farm-and-charm/lettuce_crop.png',
+              icon: '/assets/icons/farm-and-charm/lettuce_crop.webp',
               search: 'lettuce crop plant growth'
             }
           ]
@@ -1079,7 +1079,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           namespace_id: 'farm_and_charm:onion',
           subtitle:
             'A sharp and aromatic crop growing naturally in Plains, Swamps, Meadows, and Forests. The Onion itself can be planted to grow more.',
-          icon: '/assets/icons/farm-and-charm/wild_onions.png',
+          icon: '/assets/icons/farm-and-charm/wild_onions.webp',
           search: 'onion crop wild onions farming',
           items: [
             {
@@ -1087,7 +1087,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               title: 'Onion',
               namespace_id: 'farm_and_charm:onion',
               subtitle: 'A harvested Onion that can also be planted directly to grow a new crop.',
-              icon: '/assets/icons/farm-and-charm/onion.png',
+              icon: '/assets/icons/farm-and-charm/onion.webp',
               search: 'onion item seed'
             },
             {
@@ -1095,7 +1095,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               title: 'Onion Crop',
               namespace_id: 'farm_and_charm:onion_crop',
               subtitle: 'A fully grown Onion plant rooted just below the soil, ready for harvest.',
-              icon: '/assets/icons/farm-and-charm/onion_crop.png',
+              icon: '/assets/icons/farm-and-charm/onion_crop.webp',
               search: 'onion crop plant growth'
             }
           ]
@@ -1106,7 +1106,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           namespace_id: 'minecraft:potato',
           subtitle:
             'Wild Potatoes growing naturally in Meadows, Taiga, and Forests, offering an alternative way to obtain Potatoes.',
-          icon: '/assets/icons/farm-and-charm/wild_potatoes.png',
+          icon: '/assets/icons/farm-and-charm/wild_potatoes.webp',
           search: 'potato crop wild potatoes farming',
           items: [
             {
@@ -1114,7 +1114,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               title: 'Potato',
               namespace_id: 'minecraft:potato',
               subtitle: 'A harvested Potato that can also be planted directly to grow a new crop.',
-              icon: '/assets/icons/farm-and-charm/potato.png',
+              icon: '/assets/icons/farm-and-charm/potato.webp',
               search: 'potato item seed'
             },
             {
@@ -1122,7 +1122,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               title: 'Potato Crop',
               namespace_id: 'minecraft:potatoes',
               subtitle: 'A fully grown Potato plant hidden below the soil, ready for harvest.',
-              icon: '/assets/icons/farm-and-charm/potato_crop.png',
+              icon: '/assets/icons/farm-and-charm/potato_crop.webp',
               search: 'potato crop plant growth'
             }
           ]
@@ -1133,7 +1133,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           namespace_id: 'minecraft:carrot',
           subtitle:
             'Wild Carrots growing naturally in Plains, Swamps, Meadows, and Forests, offering an alternative way to obtain Carrots.',
-          icon: '/assets/icons/farm-and-charm/wild_carrots.png',
+          icon: '/assets/icons/farm-and-charm/wild_carrots.webp',
           search: 'carrot crop wild carrots farming',
           items: [
             {
@@ -1141,7 +1141,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               title: 'Carrot',
               namespace_id: 'minecraft:carrot',
               subtitle: 'A harvested Carrot that can also be planted directly to grow a new crop.',
-              icon: '/assets/icons/farm-and-charm/carrot.png',
+              icon: '/assets/icons/farm-and-charm/carrot.webp',
               search: 'carrot item seed'
             },
             {
@@ -1149,7 +1149,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               title: 'Carrot Crop',
               namespace_id: 'minecraft:carrots',
               subtitle: 'A fully grown Carrot plant hidden below ground, ready for harvest.',
-              icon: '/assets/icons/farm-and-charm/carrot_crop.png',
+              icon: '/assets/icons/farm-and-charm/carrot_crop.webp',
               search: 'carrot crop plant growth'
             }
           ]
@@ -1160,7 +1160,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           namespace_id: 'minecraft:beetroot',
           subtitle:
             'Wild Beetroots growing naturally in Plains, Swamps, Meadows, and Forests, offering an alternative way to obtain Beetroot Seeds.',
-          icon: '/assets/icons/farm-and-charm/wild_beetroots.png',
+          icon: '/assets/icons/farm-and-charm/wild_beetroots.webp',
           search: 'beetroot crop wild beetroots farming',
           items: [
             {
@@ -1168,7 +1168,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               title: 'Beetroot Seeds',
               namespace_id: 'minecraft:beetroot_seeds',
               subtitle: 'Used to cultivate Beetroots on farmland.',
-              icon: '/assets/icons/farm-and-charm/beetroot_seeds.png',
+              icon: '/assets/icons/farm-and-charm/beetroot_seeds.webp',
               search: 'beetroot seeds farming crop'
             },
             {
@@ -1176,7 +1176,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               title: 'Beetroot',
               namespace_id: 'minecraft:beetroot',
               subtitle: 'A harvested Beetroot used in hearty meals and soups.',
-              icon: '/assets/icons/farm-and-charm/beetroot.png',
+              icon: '/assets/icons/farm-and-charm/beetroot.webp',
               search: 'beetroot item food'
             },
             {
@@ -1184,7 +1184,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               title: 'Beetroot Crop',
               namespace_id: 'minecraft:beetroots',
               subtitle: 'A fully grown Beetroot plant hidden beneath the soil, ready for harvest.',
-              icon: '/assets/icons/farm-and-charm/beetroot_crop.png',
+              icon: '/assets/icons/farm-and-charm/beetroot_crop.webp',
               search: 'beetroot crop plant growth'
             }
           ]
@@ -1194,7 +1194,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Nettle',
           namespace_id: 'farm_and_charm:wild_nettle',
           subtitle: 'A wild herb growing in Swamps, commonly used for brewing simple herbal teas.',
-          icon: '/assets/icons/farm-and-charm/wild_nettle.png',
+          icon: '/assets/icons/farm-and-charm/wild_nettle.webp',
           search: 'nettle wild plant tea swamp'
         },
         {
@@ -1202,7 +1202,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Ribwort',
           namespace_id: 'farm_and_charm:wild_ribwort',
           subtitle: 'A hardy wild herb growing in Plains and Meadows, often used for brewing herbal teas.',
-          icon: '/assets/icons/farm-and-charm/wild_ribwort.png',
+          icon: '/assets/icons/farm-and-charm/wild_ribwort.webp',
           search: 'ribwort wild plant tea plains meadow'
         }
       ]
@@ -1212,56 +1212,56 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
       title: 'Animal Feeding',
       namespace_id: 'farm_and_charm:animal_feeding',
       subtitle: 'Many animals can be fed with Farm & Charm foods, unlocking new interactions and behaviors.',
-      icon: '/assets/icons/farm-and-charm/dog_food.png',
+      icon: '/assets/icons/farm-and-charm/dog_food.webp',
       search: 'animal feeding food pigs rabbits fox parrots chicken',
       entries: [
         {
           id: 'pigs',
           title: 'Pigs',
           subtitle: 'Pigs enjoy a wide variety of fresh farm produce.',
-          icon: '/assets/icons/farm-and-charm/entity/pig.png',
+          icon: '/assets/icons/farm-and-charm/entity/pig.webp',
           items: [
             {
               id: 'tomato',
               title: 'Tomato',
               namespace_id: 'farm_and_charm:tomato',
-              icon: '/assets/icons/farm-and-charm/tomato.png'
+              icon: '/assets/icons/farm-and-charm/tomato.webp'
             },
             {
               id: 'strawberry',
               title: 'Strawberry',
               namespace_id: 'farm_and_charm:strawberry',
-              icon: '/assets/icons/farm-and-charm/strawberry.png'
+              icon: '/assets/icons/farm-and-charm/strawberry.webp'
             },
             {
               id: 'onion',
               title: 'Onion',
               namespace_id: 'farm_and_charm:onion',
-              icon: '/assets/icons/farm-and-charm/onion.png'
+              icon: '/assets/icons/farm-and-charm/onion.webp'
             },
             {
               id: 'lettuce',
               title: 'Lettuce',
               namespace_id: 'farm_and_charm:lettuce',
-              icon: '/assets/icons/farm-and-charm/lettuce.png'
+              icon: '/assets/icons/farm-and-charm/lettuce.webp'
             },
             {
               id: 'barley',
               title: 'Barley',
               namespace_id: 'farm_and_charm:barley',
-              icon: '/assets/icons/farm-and-charm/barley.png'
+              icon: '/assets/icons/farm-and-charm/barley.webp'
             },
             {
               id: 'corn',
               title: 'Corn',
               namespace_id: 'farm_and_charm:corn',
-              icon: '/assets/icons/farm-and-charm/corn.png'
+              icon: '/assets/icons/farm-and-charm/corn.webp'
             },
             {
               id: 'oat',
               title: 'Oat',
               namespace_id: 'farm_and_charm:oat',
-              icon: '/assets/icons/farm-and-charm/oat.png'
+              icon: '/assets/icons/farm-and-charm/oat.webp'
             }
           ]
         },
@@ -1269,19 +1269,19 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'rabbits',
           title: 'Rabbits',
           subtitle: 'Rabbits prefer lighter crops and fresh greens.',
-          icon: '/assets/icons/farm-and-charm/entity/rabbit.png',
+          icon: '/assets/icons/farm-and-charm/entity/rabbit.webp',
           items: [
             {
               id: 'strawberry',
               title: 'Strawberry',
               namespace_id: 'farm_and_charm:strawberry',
-              icon: '/assets/icons/farm-and-charm/strawberry.png'
+              icon: '/assets/icons/farm-and-charm/strawberry.webp'
             },
             {
               id: 'lettuce',
               title: 'Lettuce',
               namespace_id: 'farm_and_charm:lettuce',
-              icon: '/assets/icons/farm-and-charm/lettuce.png'
+              icon: '/assets/icons/farm-and-charm/lettuce.webp'
             }
           ]
         },
@@ -1289,13 +1289,13 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'foxes',
           title: 'Foxes',
           subtitle: 'Foxes have developed a fondness for sweet berries.',
-          icon: '/assets/icons/farm-and-charm/entity/fox.png',
+          icon: '/assets/icons/farm-and-charm/entity/fox.webp',
           items: [
             {
               id: 'strawberry',
               title: 'Strawberry',
               namespace_id: 'farm_and_charm:strawberry',
-              icon: '/assets/icons/farm-and-charm/strawberry.png'
+              icon: '/assets/icons/farm-and-charm/strawberry.webp'
             }
           ]
         },
@@ -1303,13 +1303,13 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'parrots',
           title: 'Parrots',
           subtitle: 'Parrots can be tempted and fed with grains.',
-          icon: '/assets/icons/farm-and-charm/entity/parrot.png',
+          icon: '/assets/icons/farm-and-charm/entity/parrot.webp',
           items: [
             {
               id: 'corn',
               title: 'Corn',
               namespace_id: 'farm_and_charm:corn',
-              icon: '/assets/icons/farm-and-charm/corn.png'
+              icon: '/assets/icons/farm-and-charm/corn.webp'
             }
           ]
         },
@@ -1317,13 +1317,13 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'wolf',
           title: 'Wolf',
           subtitle: 'The following items can be fed to Wolves.',
-          icon: '/assets/icons/farm-and-charm/entity/wolf.png',
+          icon: '/assets/icons/farm-and-charm/entity/wolf.webp',
           items: [
             {
               id: 'dog_food',
               title: 'Dog Food',
               namespace_id: 'farm_and_charm:dog_food',
-              icon: '/assets/icons/farm-and-charm/dog_food.png'
+              icon: '/assets/icons/farm-and-charm/dog_food.webp'
             }
           ]
         },
@@ -1331,13 +1331,13 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'cats',
           title: 'Cats',
           subtitle: 'The following items can be fed to Cats.',
-          icon: '/assets/icons/farm-and-charm/entity/cat.png',
+          icon: '/assets/icons/farm-and-charm/entity/cat.webp',
           items: [
             {
               id: 'cat_food',
               title: 'Cat Food',
               namespace_id: 'farm_and_charm:cat_food',
-              icon: '/assets/icons/farm-and-charm/cat_food.png'
+              icon: '/assets/icons/farm-and-charm/cat_food.webp'
             }
           ]
         },
@@ -1345,13 +1345,13 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'horses',
           title: 'Horses',
           subtitle: 'The following items can be fed to Horses.',
-          icon: '/assets/icons/farm-and-charm/entity/horse.png',
+          icon: '/assets/icons/farm-and-charm/entity/horse.webp',
           items: [
             {
               id: 'horse_fodder',
               title: 'Horse Fodder',
               namespace_id: 'farm_and_charm:horse_fodder',
-              icon: '/assets/icons/farm-and-charm/horse_fodder.png'
+              icon: '/assets/icons/farm-and-charm/horse_fodder.webp'
             }
           ]
         }
@@ -1367,7 +1367,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Satiation',
           namespace_id: 'farm_and_charm:satiation',
           subtitle: 'Prevents hunger from draining too quickly by managing food exhaustion.',
-          icon: '/assets/icons/farm-and-charm/effects/satiation.png',
+          icon: '/assets/icons/farm-and-charm/effects/satiation.webp',
           search: 'satiation effect hunger exhaustion'
         },
         {
@@ -1375,7 +1375,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Rested',
           namespace_id: 'farm_and_charm:rested',
           subtitle: 'Increases Experience Points gained while the effect is active.',
-          icon: '/assets/icons/farm-and-charm/effects/rested.png',
+          icon: '/assets/icons/farm-and-charm/effects/rested.webp',
           search: 'rested effect experience xp'
         },
         {
@@ -1383,7 +1383,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Sustenance',
           namespace_id: 'farm_and_charm:sustenance',
           subtitle: 'Restores 1 Hunger every 6 seconds. If full, regenerates 1 Health instead.',
-          icon: '/assets/icons/farm-and-charm/effects/sustenance.png',
+          icon: '/assets/icons/farm-and-charm/effects/sustenance.webp',
           search: 'sustenance effect hunger health regen'
         },
         {
@@ -1391,7 +1391,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Feast',
           namespace_id: 'farm_and_charm:feast',
           subtitle: 'Combines Sustenance with Satiation in a single powerful buff.',
-          icon: '/assets/icons/farm-and-charm/effects/feast.png',
+          icon: '/assets/icons/farm-and-charm/effects/feast.webp',
           search: 'feast effect sustenance satiation'
         },
         {
@@ -1399,7 +1399,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: "Farmer's Blessing",
           namespace_id: 'farm_and_charm:farmers_blessing',
           subtitle: 'Removes all negative status effects for the duration of the effect.',
-          icon: '/assets/icons/farm-and-charm/effects/farmers_blessing.png',
+          icon: '/assets/icons/farm-and-charm/effects/farmers_blessing.webp',
           search: 'farmers blessing effect cleanse'
         },
         {
@@ -1407,7 +1407,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: "Grandma's Blessing",
           namespace_id: 'farm_and_charm:grandmas_blessing',
           subtitle: 'Removes all negative status effects and increases Luck by 2 while active.',
-          icon: '/assets/icons/farm-and-charm/effects/grandmas_blessing.png',
+          icon: '/assets/icons/farm-and-charm/effects/grandmas_blessing.webp',
           search: 'grandmas blessing effect cleanse luck'
         },
         {
@@ -1415,7 +1415,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Cluck',
           namespace_id: 'farm_and_charm:cluck',
           subtitle: 'Increases egg laying and feather shedding when Chicken Feed is given to chickens.',
-          icon: '/assets/icons/farm-and-charm/effects/cluck.png',
+          icon: '/assets/icons/farm-and-charm/effects/cluck.webp',
           search: 'cluck effect chicken eggs feathers'
         },
         {
@@ -1423,7 +1423,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Horse Fodder',
           namespace_id: 'farm_and_charm:horse_fodder',
           subtitle: 'Increases the movement speed and jump strength of Horses.',
-          icon: '/assets/icons/farm-and-charm/effects/horse_fodder.png',
+          icon: '/assets/icons/farm-and-charm/effects/horse_fodder.webp',
           search: 'horse fodder effect horse speed jump'
         },
         {
@@ -1431,7 +1431,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Dog Food',
           namespace_id: 'farm_and_charm:dog_food',
           subtitle: 'Increases Attack Damage, Attack Speed, and Knockback Resistance of Wolves.',
-          icon: '/assets/icons/farm-and-charm/effects/dog_food.png',
+          icon: '/assets/icons/farm-and-charm/effects/dog_food.webp',
           search: 'dog food effect wolf damage speed knockback'
         },
         {
@@ -1439,7 +1439,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Cat Food',
           namespace_id: 'farm_and_charm:cat_food',
           subtitle: 'Restores health. Cats only.',
-          icon: '/assets/icons/farm-and-charm/effects/cat_food.png',
+          icon: '/assets/icons/farm-and-charm/effects/cat_food.webp',
           search: 'cat food effect cat heal'
         }
       ]
@@ -1454,14 +1454,14 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Configuration',
           subtitle:
             'Most gameplay features of Farm & Charm can be adjusted via a configuration file, usually located at `config/farm_and_charm.json`.',
-          icon: '/assets/icons/misc/config.png',
+          icon: '/assets/icons/misc/config.webp',
           search: 'config configuration settings options balance json farm and charm'
         },
         {
           id: 'rain_growth',
           title: 'Rain Growth',
           subtitle: 'Crops can grow faster during rain. During thunderstorms, growth is boosted even further.',
-          icon: '/assets/icons/misc/weather.png',
+          icon: '/assets/icons/misc/weather.webp',
           search: 'rain crop growth faster thunderstorm'
         },
         {
@@ -1469,7 +1469,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Armed Zombies',
           subtitle:
             'Zombies have a small chance to spawn holding Farm & Charm tools, such as [[Pitchforks|pitchfork]].',
-          icon: '/assets/icons/misc/zombie.png',
+          icon: '/assets/icons/misc/zombie.webp',
           search: 'zombie pitchfork weapon spawn'
         },
         {
@@ -1477,7 +1477,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Animal Saturation',
           subtitle:
             "Feeding animals over time increases their saturation level, rewarding careful farming with increased loot drops. While wearing [[Dungarees|dungarees]], the animal's current saturation level becomes visible.",
-          icon: '/assets/icons/farm-and-charm/leather.png',
+          icon: '/assets/icons/farm-and-charm/leather.webp',
           search: 'animal saturation feeding bonus loot'
         },
         {
@@ -1485,7 +1485,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Soups and Effects',
           subtitle:
             'Vanilla soups such as Mushroom Stew, Beetroot Soup, and Rabbit Stew now grant Farm & Charm food effects, rewarding warm meals with additional nourishment.',
-          icon: '/assets/icons/farm-and-charm/soup.png',
+          icon: '/assets/icons/farm-and-charm/soup.webp',
           search: 'vanilla soup mushroom stew beetroot soup rabbit stew sustenance effect'
         },
         {
@@ -1493,7 +1493,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Planting Feedback',
           subtitle:
             'Planting crops on Farmland now creates subtle soil particles, visually showing that seeds are being pressed into the earth.',
-          icon: '/assets/icons/farm-and-charm/fertilized_farmland.png',
+          icon: '/assets/icons/farm-and-charm/fertilized_farmland.webp',
           search: 'farmland planting particles seeds wheat crop visual feedback soil effect block particles'
         },
         {
@@ -1501,14 +1501,14 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Expanded Trades',
           subtitle:
             'Certain Farm & Charm items have been added to Farmer Villager trade pools, allowing them to be obtained naturally through trading.',
-          icon: '/assets/icons/misc/emerald.png',
+          icon: '/assets/icons/misc/emerald.webp',
           search: 'farmer villager trades farm and charm items economy progression'
         },
         {
           id: 'loot',
           title: 'Loot and Exploration',
           subtitle: 'Certain items and ingredients can be found while exploring the world.',
-          icon: '/assets/icons/misc/chest.png',
+          icon: '/assets/icons/misc/chest.webp',
           search: 'loot chest dungeon village exploration items ingredients',
           details: true,
           detailsTitle: 'Where to find loot',
@@ -1527,12 +1527,12 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
   impressionsTitle: 'Everyday Scenes',
   impressionsSubtitle: 'A closer look at how everything comes together ingame',
   impressions: [
-    { src: '/assets/impressions/farm-and-charm/01.jpeg', caption: 'Tomatoes growing on a rope' },
-    { src: '/assets/impressions/farm-and-charm/02.jpeg', caption: 'A wooden cart in everyday use' },
-    { src: '/assets/impressions/farm-and-charm/03.jpeg', caption: 'Pigs waiting at a feeding trough' },
-    { src: '/assets/impressions/farm-and-charm/04.jpeg', caption: 'Crop fields with sprinklers' },
-    { src: '/assets/impressions/farm-and-charm/05.jpeg', caption: 'Walking through a barley field' },
-    { src: '/assets/impressions/farm-and-charm/06.jpeg', caption: 'A complete set of new kitchen tools' },
-    { src: '/assets/impressions/farm-and-charm/07.jpeg', caption: 'Preparing food in the kitchen' }
+    { src: '/assets/impressions/farm-and-charm/01.webp', caption: 'Tomatoes growing on a rope' },
+    { src: '/assets/impressions/farm-and-charm/02.webp', caption: 'A wooden cart in everyday use' },
+    { src: '/assets/impressions/farm-and-charm/03.webp', caption: 'Pigs waiting at a feeding trough' },
+    { src: '/assets/impressions/farm-and-charm/04.webp', caption: 'Crop fields with sprinklers' },
+    { src: '/assets/impressions/farm-and-charm/05.webp', caption: 'Walking through a barley field' },
+    { src: '/assets/impressions/farm-and-charm/06.webp', caption: 'A complete set of new kitchen tools' },
+    { src: '/assets/impressions/farm-and-charm/07.webp', caption: 'Preparing food in the kitchen' }
   ]
 }

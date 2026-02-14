@@ -1,7 +1,7 @@
 export default {
   slug: 'beachparty',
   title: 'Beachparty',
-  logo: '/assets/mod-logos/beachparty.png',
+  logo: '/assets/mod-logos/beachparty.webp',
   aboutTitle: 'Welcome',
   aboutSubtitle: 'Summer decor, beach furniture, and playful outdoor elements',
   aboutText: `Welcome to the Beachparty Wiki.
@@ -20,7 +20,7 @@ Beachparty focuses on warm weather building materials, beach furniture, and play
           title: 'Palm Bar',
           namespace_id: 'beachparty:palm_bar',
           subtitle: 'A bar counter used for mixing drinks and [[Cocktails|cocktails]].',
-          icon: '/assets/icons/beachparty/palm_bar.png',
+          icon: '/assets/icons/beachparty/palm_bar.webp',
           search: 'palm bar cocktails drinks mixing',
           details: true,
           detailsTitle: 'Mixing Drinks',
@@ -39,7 +39,7 @@ It provides multiple input slots for ingredients and a single output slot for th
           title: 'Mini Fridge',
           namespace_id: 'beachparty:mini_fridge',
           subtitle: 'A small cooling station for certain items into chilled results.',
-          icon: '/assets/icons/beachparty/mini_fridge.png',
+          icon: '/assets/icons/beachparty/mini_fridge.webp',
           search: 'mini fridge cooling ice processing',
           details: true,
           detailsTitle: 'Cooling',
@@ -65,7 +65,7 @@ It provides multiple input slots for ingredients and a single output slot for th
           title: 'Palm',
           namespace_id: 'beachparty:palm_log',
           subtitle: 'A complete wood building set including all standard block variants.',
-          icon: '/assets/icons/beachparty/palm_log.png',
+          icon: '/assets/icons/beachparty/palm_log.webp',
           search: 'palm wood set log planks door trapdoor beachparty',
           details: true,
           detailsMiniGallery: true,
@@ -79,19 +79,19 @@ It provides multiple input slots for ingredients and a single output slot for th
               id: 'palm_planks',
               title: 'Palm Planks',
               namespace_id: 'beachparty:palm_planks',
-              icon: '/assets/icons/beachparty/palm_planks.png'
+              icon: '/assets/icons/beachparty/palm_planks.webp'
             },
             {
               id: 'palm_door',
               title: 'Palm Door',
               namespace_id: 'beachparty:palm_door',
-              icon: '/assets/icons/beachparty/palm_door.png'
+              icon: '/assets/icons/beachparty/palm_door.webp'
             },
             {
               id: 'palm_trapdoor',
               title: 'Palm Trapdoor',
               namespace_id: 'beachparty:palm_trapdoor',
-              icon: '/assets/icons/beachparty/palm_trapdoor.png'
+              icon: '/assets/icons/beachparty/palm_trapdoor.webp'
             }
           ]
         },
@@ -100,7 +100,7 @@ It provides multiple input slots for ingredients and a single output slot for th
           title: 'Wet Hay Bale',
           namespace_id: 'beachparty:wet_hay_block',
           subtitle: 'A damp hay variant that dries over time.',
-          icon: '/assets/icons/beachparty/wet_hay_block.png',
+          icon: '/assets/icons/beachparty/wet_hay_block.webp',
           search: 'wet hay bale thatch hay water drying',
           details: true,
           detailsTitle: 'Creation and Drying',
@@ -119,19 +119,19 @@ When placed under open sky, it dries over time.`,
               id: 'thatch',
               title: 'Thatch',
               namespace_id: 'beachparty:thatch',
-              icon: '/assets/icons/beachparty/thatch.png'
+              icon: '/assets/icons/beachparty/thatch.webp'
             },
             {
               id: 'thatch_stairs',
               title: 'Thatch Stairs',
               namespace_id: 'beachparty:thatch_stairs',
-              icon: '/assets/icons/beachparty/thatch_stairs.png'
+              icon: '/assets/icons/beachparty/thatch_stairs.webp'
             },
             {
               id: 'thatch_slab',
               title: 'Thatch Slab',
               namespace_id: 'beachparty:thatch_slab',
-              icon: '/assets/icons/beachparty/thatch_slab.png'
+              icon: '/assets/icons/beachparty/thatch_slab.webp'
             }
           ]
         },
@@ -140,7 +140,7 @@ When placed under open sky, it dries over time.`,
           title: 'Palm Table',
           namespace_id: 'beachparty:palm_table',
           subtitle: 'A simple wooden table for meals, drinks, and gatherings.',
-          icon: '/assets/icons/beachparty/palm_table.png',
+          icon: '/assets/icons/beachparty/palm_table.webp',
           search: 'table palm furniture beach'
         },
         {
@@ -148,7 +148,7 @@ When placed under open sky, it dries over time.`,
           title: 'Palm Cabinet',
           namespace_id: 'beachparty:palm_cabinet',
           subtitle: 'A storage cabinet for keeping essentials close and tidy.',
-          icon: '/assets/icons/beachparty/palm_cabinet.png',
+          icon: '/assets/icons/beachparty/palm_cabinet.webp',
           search: 'cabinet storage palm furniture'
         },
         {
@@ -156,7 +156,7 @@ When placed under open sky, it dries over time.`,
           title: 'Palm Chair',
           namespace_id: 'beachparty:palm_chair',
           subtitle: 'A simple wooden chair for sitting down and staying a while.',
-          icon: '/assets/icons/beachparty/palm_chair.png',
+          icon: '/assets/icons/beachparty/palm_chair.webp',
           search: 'chair seating palm furniture'
         },
         {
@@ -164,7 +164,7 @@ When placed under open sky, it dries over time.`,
           title: 'Beach Chair',
           namespace_id: 'beachparty:beach_chair',
           subtitle: 'A laid-back chair for lazy afternoons by the water.',
-          icon: '/assets/icons/beachparty/beach_chair.png',
+          icon: '/assets/icons/beachparty/beach_chair.webp',
           search: 'beach chair seating relax'
         },
         {
@@ -172,7 +172,7 @@ When placed under open sky, it dries over time.`,
           title: 'Hooded Beach Chair',
           namespace_id: 'beachparty:hooded_beach_chair',
           subtitle: 'A covered beach chair that offers shade and a bit of privacy.',
-          icon: '/assets/icons/beachparty/hooded_beach_chair.png',
+          icon: '/assets/icons/beachparty/hooded_beach_chair.webp',
           search: 'hooded beach chair seating shade'
         },
         {
@@ -180,7 +180,7 @@ When placed under open sky, it dries over time.`,
           title: 'Beach Sun Lounger',
           namespace_id: 'beachparty:beach_sun_lounger',
           subtitle: 'A sun lounger made for doing absolutely nothing.',
-          icon: '/assets/icons/beachparty/beach_sun_lounger.png',
+          icon: '/assets/icons/beachparty/beach_sun_lounger.webp',
           search: 'sun lounger beach seating relax'
         },
         {
@@ -188,7 +188,7 @@ When placed under open sky, it dries over time.`,
           title: 'Palm Bar Stool',
           namespace_id: 'beachparty:palm_bar_stool',
           subtitle: 'A tall stool made to go with the Palm Bar.',
-          icon: '/assets/icons/beachparty/palm_bar_stool.png',
+          icon: '/assets/icons/beachparty/palm_bar_stool.webp',
           search: 'bar stool palm furniture'
         },
         {
@@ -196,7 +196,7 @@ When placed under open sky, it dries over time.`,
           title: 'Beach Parasol',
           namespace_id: 'beachparty:beach_parasol',
           subtitle: 'A tall parasol you can open and close. Sneak-use with an empty hand to toggle it.',
-          icon: '/assets/icons/beachparty/beach_parasol.png',
+          icon: '/assets/icons/beachparty/beach_parasol.webp',
           search: 'parasol umbrella shade open close sneak toggle'
         },
         {
@@ -205,14 +205,14 @@ When placed under open sky, it dries over time.`,
           namespace_id: 'beachparty:beach_towel',
           subtitle:
             'A thin towel you can sleep on and maybe wake up with back pain. It does not set your respawn point.',
-          icon: '/assets/icons/beachparty/beach_towel.png'
+          icon: '/assets/icons/beachparty/beach_towel.webp'
         },
         {
           id: 'sand_bucket',
           title: 'Sand Bucket',
           namespace_id: 'beachparty:sand_bucket_filled',
           subtitle: 'A bucket of sand for small builds, big dreams, and very serious sandcastles.',
-          icon: '/assets/icons/beachparty/sand_bucket_filled.png',
+          icon: '/assets/icons/beachparty/sand_bucket_filled.webp',
           search: 'sand bucket sandcastle towers petrified water bottle zombie',
           details: true,
           detailsTitle: 'Function',
@@ -247,13 +247,13 @@ When placed under open sky, it dries over time.`,
               id: 'sand_bucket_filled',
               title: 'Filled Sand Bucket',
               namespace_id: 'beachparty:sand_bucket_filled',
-              icon: '/assets/icons/beachparty/sand_bucket_filled.png'
+              icon: '/assets/icons/beachparty/sand_bucket_filled.webp'
             },
             {
               id: 'sand_bucket_empty',
               title: 'Empty Sand Bucket',
               namespace_id: 'beachparty:sand_bucket_empty',
-              icon: '/assets/icons/beachparty/sand_bucket_empty.png'
+              icon: '/assets/icons/beachparty/sand_bucket_empty.webp'
             }
           ]
         },
@@ -263,7 +263,7 @@ When placed under open sky, it dries over time.`,
           title: 'Radio',
           namespace_id: 'beachparty:radio',
           subtitle: 'A small radio for tuning through stations and playing music.',
-          icon: '/assets/icons/beachparty/radio.png',
+          icon: '/assets/icons/beachparty/radio.webp',
           search: 'radio music station tune toggle',
           details: true,
           detailsTitle: 'Tuning and Controls',
@@ -283,7 +283,7 @@ Sneak-use to stop the Radio.`,
           namespace_id: 'beachparty:beach_goal',
           subtitle:
             'Fancy a quick game of football? Score with a [[Beach Ball|beach_ball]] and enjoy a small celebratory firework.',
-          icon: '/assets/icons/beachparty/beach_goal.png',
+          icon: '/assets/icons/beachparty/beach_goal.webp',
           search: 'beach goal football soccer beach ball firework'
         },
         {
@@ -291,7 +291,7 @@ Sneak-use to stop the Radio.`,
           title: 'Seashells',
           namespace_id: 'beachparty:seashell',
           subtitle: 'Small beach shells hiding simple loot and the occasional surprise.',
-          icon: '/assets/icons/beachparty/seashell.png',
+          icon: '/assets/icons/beachparty/seashell.webp',
           search: 'seashell loot beach mussel meat',
           details: true,
           detailsTitle: 'Loot',
@@ -323,7 +323,7 @@ Rare Finds
           title: 'Beachparty Banner',
           namespace_id: 'beachparty:beachparty_banner',
           subtitle: 'A reward banner for collecting all rare Beachparty items.',
-          icon: '/assets/icons/beachparty/beachparty_banner.png',
+          icon: '/assets/icons/beachparty/beachparty_banner.webp',
           search: 'completionist banner reward beachparty water breathing',
           details: true,
           detailsTitle: 'Reward Effect',
@@ -350,7 +350,7 @@ Players standing nearby are granted Water Breathing as long as they remain withi
           title: 'Beach Hat',
           namespace_id: 'beachparty:beach_hat',
           subtitle: 'Wearable in a trinket slot. Reduces fire damage by 10%.',
-          icon: '/assets/icons/beachparty/beach_hat.png',
+          icon: '/assets/icons/beachparty/beach_hat.webp',
           search: 'beach hat trinket wearable loot chest fire damage'
         },
         {
@@ -358,7 +358,7 @@ Players standing nearby are granted Water Breathing as long as they remain withi
           title: 'Sunglasses',
           namespace_id: 'beachparty:sunglasses',
           subtitle: 'Wearable in a trinket slot. Reduces fire damage by 12%.',
-          icon: '/assets/icons/beachparty/sunglasses.png',
+          icon: '/assets/icons/beachparty/sunglasses.webp',
           search: 'sunglasses trinket wearable loot chest fire damage'
         },
         {
@@ -366,7 +366,7 @@ Players standing nearby are granted Water Breathing as long as they remain withi
           title: 'Pool Noodle',
           namespace_id: 'beachparty:pool_noodle',
           subtitle: 'A classic pool noodle. Mostly for fun, questionable decisions included.',
-          icon: '/assets/icons/beachparty/pool_noodle.png',
+          icon: '/assets/icons/beachparty/pool_noodle.webp',
           search: 'pool noodle summer fun'
         },
         {
@@ -374,7 +374,7 @@ Players standing nearby are granted Water Breathing as long as they remain withi
           title: 'Trunks',
           namespace_id: 'beachparty:trunks',
           subtitle: 'Wearable in a trinket slot. Increases swim speed by about 8%.',
-          icon: '/assets/icons/beachparty/trunks.png',
+          icon: '/assets/icons/beachparty/trunks.webp',
           search: 'trunks trinket wearable loot chest swim speed'
         },
         {
@@ -382,7 +382,7 @@ Players standing nearby are granted Water Breathing as long as they remain withi
           title: 'Bikini',
           namespace_id: 'beachparty:bikini',
           subtitle: 'Wearable in a trinket slot. Increases swim speed by about 8%.',
-          icon: '/assets/icons/beachparty/bikini.png',
+          icon: '/assets/icons/beachparty/bikini.webp',
           search: 'bikini trinket wearable loot chest swim speed'
         },
         {
@@ -390,7 +390,7 @@ Players standing nearby are granted Water Breathing as long as they remain withi
           title: 'Crocs',
           namespace_id: 'beachparty:crocs',
           subtitle: 'Wearable in a trinket slot. No bonuses, just confidence.',
-          icon: '/assets/icons/beachparty/crocs.png',
+          icon: '/assets/icons/beachparty/crocs.webp',
           search: 'crocs trinket wearable loot chest'
         },
         {
@@ -398,14 +398,14 @@ Players standing nearby are granted Water Breathing as long as they remain withi
           title: 'Swim Wings',
           namespace_id: 'beachparty:swim_wings',
           subtitle: 'Wearable in a trinket slot. Reduces fall damage by about 50%, with a cooldown.',
-          icon: '/assets/icons/beachparty/swim_wings.png',
+          icon: '/assets/icons/beachparty/swim_wings.webp',
           search: 'swim wings trinket wearable loot chest fall damage'
         },
         {
           id: 'rubber_rings',
           title: 'Rubber Rings',
           subtitle: 'Wearable floaties for water travel and summer drip.',
-          icon: '/assets/icons/beachparty/rubber_ring_blue.png',
+          icon: '/assets/icons/beachparty/rubber_ring_blue.webp',
           search: 'rubber ring trinket float water beachparty',
           details: true,
           detailsTitle: 'Trinket',
@@ -418,35 +418,35 @@ While in water, they keep you moving and help you stay afloat.`,
               id: 'rubber_ring_blue',
               title: 'Rubber Ring (Blue)',
               namespace_id: 'beachparty:rubber_ring_blue',
-              icon: '/assets/icons/beachparty/rubber_ring_blue.png',
+              icon: '/assets/icons/beachparty/rubber_ring_blue.webp',
               search: 'rubber ring blue trinket'
             },
             {
               id: 'rubber_ring_pink',
               title: 'Rubber Ring (Pink)',
               namespace_id: 'beachparty:rubber_ring_pink',
-              icon: '/assets/icons/beachparty/rubber_ring_pink.png',
+              icon: '/assets/icons/beachparty/rubber_ring_pink.webp',
               search: 'rubber ring pink trinket'
             },
             {
               id: 'rubber_ring_stripped',
               title: 'Rubber Ring (Striped)',
               namespace_id: 'beachparty:rubber_ring_stripped',
-              icon: '/assets/icons/beachparty/rubber_ring_stripped.png',
+              icon: '/assets/icons/beachparty/rubber_ring_stripped.webp',
               search: 'rubber ring striped trinket'
             },
             {
               id: 'rubber_ring_pelican',
               title: 'Rubber Ring (Pelican)',
               namespace_id: 'beachparty:rubber_ring_pelican',
-              icon: '/assets/icons/beachparty/rubber_ring_pelican.png',
+              icon: '/assets/icons/beachparty/rubber_ring_pelican.webp',
               search: 'rubber ring pelican trinket'
             },
             {
               id: 'rubber_ring_axolotl',
               title: 'Rubber Ring (Axolotl)',
               namespace_id: 'beachparty:rubber_ring_axolotl',
-              icon: '/assets/icons/beachparty/rubber_ring_axolotl.png',
+              icon: '/assets/icons/beachparty/rubber_ring_axolotl.webp',
               search: 'rubber ring axolotl trinket'
             }
           ]
@@ -456,14 +456,14 @@ While in water, they keep you moving and help you stay afloat.`,
           title: 'Beach Ball',
           namespace_id: 'beachparty:beach_ball',
           subtitle: 'A throwable beach ball for games, chaos, and very serious competitions.',
-          icon: '/assets/icons/beachparty/beach_ball.png',
+          icon: '/assets/icons/beachparty/beach_ball.webp',
           search: 'beach ball toy throwable'
         },
         {
           id: 'music_discs',
           title: 'Music Discs',
           subtitle: 'Rare tracks you can find as loot, and play in a Jukebox.',
-          icon: '/assets/icons/beachparty/music_disc_wild_veins.png',
+          icon: '/assets/icons/beachparty/music_disc_wild_veins.webp',
           search: 'music disc loot jukebox beachparty rare',
           details: true,
           detailsTitle: 'Loot',
@@ -477,42 +477,42 @@ Pop them into a Jukebox and let the beach vibes do their job.`,
               id: 'beachparty',
               title: 'Beachparty',
               subtitle: 'Kevin MacLeod',
-              icon: '/assets/icons/beachparty/music_disc_beachparty.png',
+              icon: '/assets/icons/beachparty/music_disc_beachparty.webp',
               src: '/assets/music/beachparty/beachparty_kevin_macleod.ogg'
             },
             {
               id: 'caribbean_beach',
               title: 'Caribbean Beach',
               subtitle: 'Pecan Pie',
-              icon: '/assets/icons/beachparty/music_disc_caribbean_beach.png',
+              icon: '/assets/icons/beachparty/music_disc_caribbean_beach.webp',
               src: '/assets/music/beachparty/caribbeanbeach_pecan_pie.ogg'
             },
             {
               id: 'pridelands',
               title: 'Pridelands',
               subtitle: 'Andey Rossi',
-              icon: '/assets/icons/beachparty/music_disc_pridelands.png',
+              icon: '/assets/icons/beachparty/music_disc_pridelands.webp',
               src: '/assets/music/beachparty/pridelands_andey_rossi.ogg'
             },
             {
               id: 'vocalista',
               title: 'Vocalista',
               subtitle: 'Pecan Pie',
-              icon: '/assets/icons/beachparty/music_disc_vocalista.png',
+              icon: '/assets/icons/beachparty/music_disc_vocalista.webp',
               src: '/assets/music/beachparty/vocalista_pecan_pie.ogg'
             },
             {
               id: 'wild_veins',
               title: 'Wild Veins',
               subtitle: 'Adams',
-              icon: '/assets/icons/beachparty/music_disc_wild_veins.png',
+              icon: '/assets/icons/beachparty/music_disc_wild_veins.webp',
               src: '/assets/music/beachparty/wildveins_adams.ogg'
             },
             {
               id: 'over_the_rainbow',
               title: 'Over the Rainbow',
               subtitle: 'MissLilitu',
-              icon: '/assets/icons/beachparty/overgrown_disc.png',
+              icon: '/assets/icons/beachparty/overgrown_disc.webp',
               src: '/assets/music/beachparty/over_the_rainbow.ogg'
             }
           ],
@@ -521,42 +521,42 @@ Pop them into a Jukebox and let the beach vibes do their job.`,
               id: 'music_disc_beachparty',
               title: 'Music Disc: Beachparty',
               namespace_id: 'beachparty:music_disc_beachparty',
-              icon: '/assets/icons/beachparty/music_disc_beachparty.png',
+              icon: '/assets/icons/beachparty/music_disc_beachparty.webp',
               search: 'music disc beachparty loot'
             },
             {
               id: 'music_disc_caribbean_beach',
               title: 'Music Disc: Caribbean Beach',
               namespace_id: 'beachparty:music_disc_caribbean_beach',
-              icon: '/assets/icons/beachparty/music_disc_caribbean_beach.png',
+              icon: '/assets/icons/beachparty/music_disc_caribbean_beach.webp',
               search: 'music disc caribbean beach loot'
             },
             {
               id: 'music_disc_pridelands',
               title: 'Music Disc: Pridelands',
               namespace_id: 'beachparty:music_disc_pridelands',
-              icon: '/assets/icons/beachparty/music_disc_pridelands.png',
+              icon: '/assets/icons/beachparty/music_disc_pridelands.webp',
               search: 'music disc pridelands loot'
             },
             {
               id: 'music_disc_vocalista',
               title: 'Music Disc: Vocalista',
               namespace_id: 'beachparty:music_disc_vocalista',
-              icon: '/assets/icons/beachparty/music_disc_vocalista.png',
+              icon: '/assets/icons/beachparty/music_disc_vocalista.webp',
               search: 'music disc vocalista loot'
             },
             {
               id: 'music_disc_wild_veins',
               title: 'Music Disc: Wild Veins',
               namespace_id: 'beachparty:music_disc_wild_veins',
-              icon: '/assets/icons/beachparty/music_disc_wild_veins.png',
+              icon: '/assets/icons/beachparty/music_disc_wild_veins.webp',
               search: 'music disc wild veins loot'
             },
             {
               id: 'overgrown_disc',
               title: 'Music Disc: Over the Rainbow',
               namespace_id: 'beachparty:overgrown_disc',
-              icon: '/assets/icons/beachparty/overgrown_disc.png',
+              icon: '/assets/icons/beachparty/overgrown_disc.webp',
               search: 'music disc over the rainbow loot'
             }
           ]
@@ -575,7 +575,7 @@ Pop them into a Jukebox and let the beach vibes do their job.`,
           namespace_id: 'beachparty:coconut',
           subtitle:
             'Coconuts can grow hanging below Palm Leaves. Bone meal Palm Leaves to spawn a young coconut underneath.',
-          icon: '/assets/icons/beachparty/palm_leaves.png',
+          icon: '/assets/icons/beachparty/palm_leaves.webp',
           search: 'coconut palm leaves hanging coconut bonemeal beachparty',
           details: true,
           detailsMiniGallery: true,
@@ -592,21 +592,21 @@ Using bone meal on Palm Leaves places a young coconut directly below it.`,
               id: 'palm_leaves',
               title: 'Palm Leaves',
               namespace_id: 'beachparty:palm_leaves',
-              icon: '/assets/icons/beachparty/palm_leaves.png',
+              icon: '/assets/icons/beachparty/palm_leaves.webp',
               search: 'palm leaves coconut growth bonemeal'
             },
             {
               id: 'coconut_item',
               title: 'Coconut',
               namespace_id: 'beachparty:coconut',
-              icon: '/assets/icons/beachparty/coconut.png',
+              icon: '/assets/icons/beachparty/coconut.webp',
               search: 'coconut item'
             },
             {
               id: 'coconut_open',
               title: 'Opened Coconut',
               namespace_id: 'beachparty:coconut_open',
-              icon: '/assets/icons/beachparty/coconut_open.png',
+              icon: '/assets/icons/beachparty/coconut_open.webp',
               search: 'opened coconut food'
             }
           ]
@@ -616,7 +616,7 @@ Using bone meal on Palm Leaves places a young coconut directly below it.`,
           title: 'Mussel Meat',
           namespace_id: 'beachparty:raw_mussel_meat',
           subtitle: 'Mussel Meat can be obtained from [[Seashells|seashells]] and prepared for food.',
-          icon: '/assets/icons/beachparty/raw_mussel_meat.png',
+          icon: '/assets/icons/beachparty/raw_mussel_meat.webp',
           search: 'mussel meat seashell food raw cooked',
           details: true,
           detailsTitle: 'Obtaining and Cooking',
@@ -629,14 +629,14 @@ It can be cooked to create Cooked Mussel Meat.`,
               id: 'raw_mussel_meat',
               title: 'Raw Mussel Meat',
               namespace_id: 'beachparty:raw_mussel_meat',
-              icon: '/assets/icons/beachparty/raw_mussel_meat.png',
+              icon: '/assets/icons/beachparty/raw_mussel_meat.webp',
               search: 'raw mussel meat'
             },
             {
               id: 'cooked_mussel_meat',
               title: 'Cooked Mussel Meat',
               namespace_id: 'beachparty:cooked_mussel_meat',
-              icon: '/assets/icons/beachparty/cooked_mussel_meat.png',
+              icon: '/assets/icons/beachparty/cooked_mussel_meat.webp',
               search: 'cooked mussel meat'
             }
           ]
@@ -645,7 +645,7 @@ It can be cooked to create Cooked Mussel Meat.`,
           id: 'cocktails',
           title: 'Cocktails',
           subtitle: 'Placeable drinks mixed at the [[Palm Bar|palm_bar]]. Each cocktail grants a temporary effect.',
-          icon: '/assets/icons/beachparty/coconut_cocktail.png',
+          icon: '/assets/icons/beachparty/coconut_cocktail.webp',
           search: 'cocktail drinks effects palm bar',
           details: true,
           detailsTitle: 'Effects',
@@ -663,7 +663,7 @@ It can be cooked to create Cooked Mussel Meat.`,
               title: 'Coconut Cocktail',
               namespace_id: 'beachparty:coconut_cocktail',
               subtitle: 'Grants Strength for 30 seconds.',
-              icon: '/assets/icons/beachparty/coconut_cocktail.png',
+              icon: '/assets/icons/beachparty/coconut_cocktail.webp',
               search: 'coconut cocktail strength'
             },
             {
@@ -671,7 +671,7 @@ It can be cooked to create Cooked Mussel Meat.`,
               title: 'Sweet Berries Cocktail',
               namespace_id: 'beachparty:sweetberries_cocktail',
               subtitle: 'Grants Absorption for 30 seconds.',
-              icon: '/assets/icons/beachparty/sweetberries_cocktail.png',
+              icon: '/assets/icons/beachparty/sweetberries_cocktail.webp',
               search: 'sweet berries cocktail absorption'
             },
             {
@@ -679,7 +679,7 @@ It can be cooked to create Cooked Mussel Meat.`,
               title: 'Cocoa Cocktail',
               namespace_id: 'beachparty:cocoa_cocktail',
               subtitle: 'Grants Regeneration for 30 seconds.',
-              icon: '/assets/icons/beachparty/cocoa_cocktail.png',
+              icon: '/assets/icons/beachparty/cocoa_cocktail.webp',
               search: 'cocoa cocktail regeneration'
             },
             {
@@ -687,7 +687,7 @@ It can be cooked to create Cooked Mussel Meat.`,
               title: 'Pumpkin Cocktail',
               namespace_id: 'beachparty:pumpkin_cocktail',
               subtitle: 'Grants Fire Resistance for 30 seconds.',
-              icon: '/assets/icons/beachparty/pumpkin_cocktail.png',
+              icon: '/assets/icons/beachparty/pumpkin_cocktail.webp',
               search: 'pumpkin cocktail fire resistance'
             },
             {
@@ -695,7 +695,7 @@ It can be cooked to create Cooked Mussel Meat.`,
               title: 'Honey Cocktail',
               namespace_id: 'beachparty:honey_cocktail',
               subtitle: 'Grants Haste for 30 seconds.',
-              icon: '/assets/icons/beachparty/honey_cocktail.png',
+              icon: '/assets/icons/beachparty/honey_cocktail.webp',
               search: 'honey cocktail haste'
             },
             {
@@ -703,7 +703,7 @@ It can be cooked to create Cooked Mussel Meat.`,
               title: 'Melon Cocktail',
               namespace_id: 'beachparty:melon_cocktail',
               subtitle: 'Grants Luck for 30 seconds.',
-              icon: '/assets/icons/beachparty/melon_cocktail.png',
+              icon: '/assets/icons/beachparty/melon_cocktail.webp',
               search: 'melon cocktail luck'
             }
           ]
@@ -720,7 +720,7 @@ It can be cooked to create Cooked Mussel Meat.`,
           title: 'Sandwaves',
           namespace_id: 'beachparty:sandwaves',
           subtitle: 'Sandwaves generate near water along beaches.',
-          icon: '/assets/icons/beachparty/sandwaves.png',
+          icon: '/assets/icons/beachparty/sandwaves.webp',
           search: 'sandwaves beach water worldgen'
         },
         {
@@ -728,7 +728,7 @@ It can be cooked to create Cooked Mussel Meat.`,
           title: 'Seashells',
           namespace_id: 'beachparty:seashells',
           subtitle: 'Seashells generate on sand blocks at beaches.',
-          icon: '/assets/icons/beachparty/seashell_block.png',
+          icon: '/assets/icons/beachparty/seashell_block.webp',
           search: 'seashells beach sand worldgen'
         },
         {
@@ -736,7 +736,7 @@ It can be cooked to create Cooked Mussel Meat.`,
           title: 'Palm Trees',
           namespace_id: 'beachparty:palm_sprout',
           subtitle: 'Palm Trees naturally generate along beaches. Their wood set is [[Palm|palm]].',
-          icon: '/assets/icons/beachparty/palm_sprout.png',
+          icon: '/assets/icons/beachparty/palm_sprout.webp',
           search: 'palm trees beach worldgen'
         },
         {
@@ -744,7 +744,7 @@ It can be cooked to create Cooked Mussel Meat.`,
           title: 'Message in a Bottle',
           namespace_id: 'beachparty:message_in_a_bottle',
           subtitle: 'A tiny beach treasure that can appear on sandy shores.',
-          icon: '/assets/icons/beachparty/message_in_a_bottle.png',
+          icon: '/assets/icons/beachparty/message_in_a_bottle.webp',
           search: 'message in a bottle beach loot shoreline sand spawn',
           details: true,
           detailsTitle: 'Spawning',
@@ -770,14 +770,14 @@ It can be cooked to create Cooked Mussel Meat.`,
           title: 'Configuration',
           subtitle:
             'Most gameplay features of Candlelight can be adjusted via a configuration file, usually located at `config/candlelight.json`.',
-          icon: '/assets/icons/misc/config.png',
+          icon: '/assets/icons/misc/config.webp',
           search: 'config configuration settings options json beachparty'
         },
         {
           id: 'villager_profession',
           title: 'Sandy Merchant',
           subtitle: 'A beach loving trader offering tropical goods and summer essentials.',
-          icon: '/assets/icons/misc/emerald.png',
+          icon: '/assets/icons/misc/emerald.webp',
           search: 'villager profession sandy merchant beachparty trades',
           details: true,
           detailsTitle: 'Sandy Merchant',

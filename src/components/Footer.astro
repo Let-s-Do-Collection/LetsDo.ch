@@ -16,30 +16,30 @@ const year = new Date().getFullYear();
           aria-label="Toggle light or dark mode"
           data-tooltip="Toggle Light or Dark"
         >
-          <img class="modeIcon" src="/assets/icons/ui/mode/sun.png" alt="Mode" />
+          <img class="modeIcon" src="/assets/icons/ui/mode/sun.webp" alt="Mode" />
         </button>
 
         <div class="themeSpacer"></div>
 
         <div class="themeRow" aria-label="Theme selection">
           <button class="themeHead" type="button" data-theme="blue" aria-label="Blue theme" data-tooltip="Marco's pick: Blue">
-            <img src="/assets/icons/ui/blue.png" alt="Blue" />
+            <img src="/assets/icons/ui/blue.webp" alt="Blue" />
           </button>
 
           <button class="themeHead" type="button" data-theme="gold" aria-label="Gold theme" data-tooltip="CR loves: Gold">
-            <img src="/assets/icons/ui/gold.png" alt="Gold" />
+            <img src="/assets/icons/ui/gold.webp" alt="Gold" />
           </button>
 
           <button class="themeHead" type="button" data-theme="pink" aria-label="Pink theme" data-tooltip="MissLilitus chose: Pink">
-            <img src="/assets/icons/ui/pink.png" alt="Pink" />
+            <img src="/assets/icons/ui/pink.webp" alt="Pink" />
           </button>
 
           <button class="themeHead" type="button" data-theme="neon" aria-label="Tsuyumori: Particle Party" data-tooltip="Tsuyumori: High-energy neon madness">
-            <img src="/assets/icons/ui/neon.png" alt="Neon" />
+            <img src="/assets/icons/ui/neon.webp" alt="Neon" />
           </button>
 
           <button class="themeHead" type="button" data-theme="green" aria-label="Green theme" data-tooltip="Lunar's chaos: Toxic Green">
-            <img src="/assets/icons/ui/green.png" alt="Green" />
+            <img src="/assets/icons/ui/green.webp" alt="Green" />
           </button>
         </div>
       </div>
@@ -61,15 +61,15 @@ const year = new Date().getFullYear();
 
     <div class="footerRight" aria-label="Social links">
       <a class="socialLink" href="https://github.com/Let-s-Do-Collection/Let-s-Do-Collection" target="_blank" rel="noopener noreferrer" aria-label="GitHub" data-tooltip="Source code & issues">
-        <img class="socialIcon" src="/assets/icons/ui/github.png" alt="GitHub" />
+        <img class="socialIcon" src="/assets/icons/ui/github.webp" alt="GitHub" />
       </a>
 
       <a class="socialLink" href="https://discord.gg/Jb2bgpYr" target="_blank" rel="noopener noreferrer" aria-label="Discord" data-tooltip="Join the community">
-        <img class="socialIcon" src="/assets/icons/ui/discord.png" alt="Discord" />
+        <img class="socialIcon" src="/assets/icons/ui/discord.webp" alt="Discord" />
       </a>
 
       <a class="socialLink" href="https://www.patreon.com/c/u78595058" target="_blank" rel="noopener noreferrer" aria-label="Patreon" data-tooltip="Support development">
-        <img class="socialIcon" src="/assets/icons/ui/patreon.png" alt="Patreon" />
+        <img class="socialIcon" src="/assets/icons/ui/patreon.webp" alt="Patreon" />
       </a>
     </div>
   </div>
@@ -121,8 +121,8 @@ const year = new Date().getFullYear();
       localStorage.setItem("theme", theme);
       localStorage.setItem("mode", mode);
       modeIcon.src = mode === "dark"
-        ? "/assets/icons/ui/mode/moon.png"
-        : "/assets/icons/ui/mode/sun.png";
+        ? "/assets/icons/ui/mode/moon.webp"
+        : "/assets/icons/ui/mode/sun.webp";
     }
 
     themeButtons.forEach((btn) => {

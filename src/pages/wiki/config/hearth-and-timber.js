@@ -1,7 +1,7 @@
 export default {
   slug: 'hearth-and-timber',
   title: 'Hearth & Timber',
-  logo: '/assets/mod-logos/hearth_and_timber.png',
+  logo: '/assets/mod-logos/hearth_and_timber.webp',
   aboutTitle: 'Welcome',
   aboutSubtitle: 'Building blocks, textures, and world features for detailed construction',
   aboutText: `Hearth & Timber focuses entirely on blocks.
@@ -18,7 +18,7 @@ It adds building materials, decorative construction pieces, and a small set of w
           title: 'Framework',
           subtitle:
             'A simple timber framework for scaffolding and quick structure work. Yes, it is basically a wooden scaffold.',
-          icon: '/assets/icons/hearth-and-timber/framework.png',
+          icon: '/assets/icons/hearth-and-timber/framework.webp',
           search: 'framework scaffold geruest extension platform collision',
           details: true,
           detailsTitle: 'Good to know',
@@ -35,7 +35,7 @@ Framework Extensions create a thin platform you can stand on while keeping the b
           id: 'timber_frames',
           title: 'Timber Frames',
           subtitle: 'Decorative timber frames used to shape classic half timbered buildings.',
-          icon: '/assets/icons/hearth-and-timber/timber_frame.png',
+          icon: '/assets/icons/hearth-and-timber/timber_frame.webp',
           search: 'timber frame half timbered framework mimic block apply pickaxe remove shift tooltip waterlogged',
           details: true,
           detailsTitle: 'Usage',
@@ -56,25 +56,25 @@ Apply a block to fill the frame. Use a pickaxe to remove it again.`,
             {
               id: 'timber_frame',
               title: 'Timber Frame',
-              icon: '/assets/icons/hearth-and-timber/timber_frame.png',
+              icon: '/assets/icons/hearth-and-timber/timber_frame.webp',
               search: 'timber frame straight'
             },
             {
               id: 'timber_frame_cross',
               title: 'Cross Timber Frame',
-              icon: '/assets/icons/hearth-and-timber/timber_crossl_frame.png',
+              icon: '/assets/icons/hearth-and-timber/timber_crossl_frame.webp',
               search: 'timber frame cross'
             },
             {
               id: 'timber_frame_diagonal',
               title: 'Diagonal Timber Frame',
-              icon: '/assets/icons/hearth-and-timber/timber_diagonal_frame.png',
+              icon: '/assets/icons/hearth-and-timber/timber_diagonal_frame.webp',
               search: 'timber frame diagonal'
             },
             {
               id: 'timber_frame_grid',
               title: 'Grid Timber Frame',
-              icon: '/assets/icons/hearth-and-timber/timber_grid_frame.png',
+              icon: '/assets/icons/hearth-and-timber/timber_grid_frame.webp',
               search: 'timber frame grid'
             }
           ]
@@ -83,7 +83,7 @@ Apply a block to fill the frame. Use a pickaxe to remove it again.`,
           id: 'timber_foundation_set',
           title: 'Timber Foundations',
           subtitle: 'Timber pieces that replace the full block instead of leaving visible framing.',
-          icon: '/assets/icons/hearth-and-timber/timber_foundation.png',
+          icon: '/assets/icons/hearth-and-timber/timber_foundation.webp',
           search: 'timber foundation base trim skirt timber framing',
           details: true,
           detailsTitle: 'How they work',
@@ -95,19 +95,19 @@ They take on the applied block visually, while keeping a clean, solid shape that
             {
               id: 'timber_foundation',
               title: 'Timber Foundation',
-              icon: '/assets/icons/hearth-and-timber/timber_foundation.png',
+              icon: '/assets/icons/hearth-and-timber/timber_foundation.webp',
               search: 'timber foundation block'
             },
             {
               id: 'timber_base_trim',
               title: 'Timber Base Trim',
-              icon: '/assets/icons/hearth-and-timber/timber_base_trim.png',
+              icon: '/assets/icons/hearth-and-timber/timber_base_trim.webp',
               search: 'timber base trim'
             },
             {
               id: 'timber_base_skirt',
               title: 'Timber Base Skirt',
-              icon: '/assets/icons/hearth-and-timber/timber_base_skirt.png',
+              icon: '/assets/icons/hearth-and-timber/timber_base_skirt.webp',
               search: 'timber base skirt'
             }
           ]
@@ -116,14 +116,14 @@ They take on the applied block visually, while keeping a clean, solid shape that
           id: 'plaster',
           title: 'Plaster',
           subtitle: 'A smooth building material crafted from quicklime and available in all 16 dye colors.',
-          icon: '/assets/icons/hearth-and-timber/white_plaster.png',
+          icon: '/assets/icons/hearth-and-timber/white_plaster.webp',
           search: 'plaster wall smooth quicklime colored dye'
         },
         {
           id: 'rubblestone_masonry',
           title: 'Rubblestone Masonry',
           subtitle: 'Stonework that shifts between worn ruins and freshly patched walls.',
-          icon: '/assets/icons/hearth-and-timber/covered_rubblestone.png',
+          icon: '/assets/icons/hearth-and-timber/covered_rubblestone.webp',
           search: 'rubblestone masonry covered plastered pointed groutless pickaxe quicklime shift tooltip cycle',
           details: true,
           detailsTitle: 'How it works',
@@ -141,25 +141,25 @@ It keeps matching block properties where possible and shows extra info while hol
             {
               id: 'covered_rubblestone',
               title: 'Covered Rubblestone',
-              icon: '/assets/icons/hearth-and-timber/covered_rubblestone.png',
+              icon: '/assets/icons/hearth-and-timber/covered_rubblestone.webp',
               search: 'covered rubblestone masonry'
             },
             {
               id: 'plastered_rubblestone',
               title: 'Plastered Rubblestone',
-              icon: '/assets/icons/hearth-and-timber/plastered_rubblestone.png',
+              icon: '/assets/icons/hearth-and-timber/plastered_rubblestone.webp',
               search: 'plastered rubblestone masonry'
             },
             {
               id: 'pointed_rubblestone',
               title: 'Pointed Rubblestone',
-              icon: '/assets/icons/hearth-and-timber/pointed_rubblestone.png',
+              icon: '/assets/icons/hearth-and-timber/pointed_rubblestone.webp',
               search: 'pointed rubblestone masonry'
             },
             {
               id: 'groutless_rubblestone',
               title: 'Groutless Rubblestone',
-              icon: '/assets/icons/hearth-and-timber/groutless_rubblestone.png',
+              icon: '/assets/icons/hearth-and-timber/groutless_rubblestone.webp',
               search: 'groutless rubblestone masonry'
             }
           ]
@@ -168,7 +168,7 @@ It keeps matching block properties where possible and shows extra info while hol
           id: 'thatch',
           title: 'Thatch',
           subtitle: 'A roof material that progresses through weathering stages, with waxed variants to stop changes.',
-          icon: '/assets/icons/hearth-and-timber/thatch.png',
+          icon: '/assets/icons/hearth-and-timber/thatch.webp',
           search: 'thatch weathering weathered drying aged waxed stairs slab',
           details: true,
           detailsTitle: 'Weathering',
@@ -191,25 +191,25 @@ Waxed variants permanently lock the current stage and prevent further changes.`,
             {
               id: 'thatch_block',
               title: 'Thatch',
-              icon: '/assets/icons/hearth-and-timber/thatch.png',
+              icon: '/assets/icons/hearth-and-timber/thatch.webp',
               search: 'thatch roof'
             },
             {
               id: 'drying_thatch',
               title: 'Drying Thatch',
-              icon: '/assets/icons/hearth-and-timber/drying_thatch.png',
+              icon: '/assets/icons/hearth-and-timber/drying_thatch.webp',
               search: 'drying thatch roof'
             },
             {
               id: 'weathered_thatch',
               title: 'Weathered Thatch',
-              icon: '/assets/icons/hearth-and-timber/weathered_thatch.png',
+              icon: '/assets/icons/hearth-and-timber/weathered_thatch.webp',
               search: 'weathered thatch roof'
             },
             {
               id: 'aged_thatch',
               title: 'Aged Thatch',
-              icon: '/assets/icons/hearth-and-timber/aged_thatch.png',
+              icon: '/assets/icons/hearth-and-timber/aged_thatch.webp',
               search: 'aged thatch roof'
             }
           ]
@@ -218,7 +218,7 @@ Waxed variants permanently lock the current stage and prevent further changes.`,
           id: 'shingles',
           title: 'Shingles',
           subtitle: 'Decorative roof blocks with matching stairs and slabs.',
-          icon: '/assets/icons/hearth-and-timber/oak_shingles.png',
+          icon: '/assets/icons/hearth-and-timber/oak_shingles.webp',
           search: 'shingles roof decorative stairs slab oak terracotta patchwork',
           details: true,
           detailsTitle: 'More info',
@@ -230,19 +230,19 @@ Wooden Shingles are available in all vanilla wood variants.`,
             {
               id: 'oak_shingles',
               title: 'Oak Shingles',
-              icon: '/assets/icons/hearth-and-timber/oak_shingles.png',
+              icon: '/assets/icons/hearth-and-timber/oak_shingles.webp',
               search: 'oak shingles roof'
             },
             {
               id: 'terracotta_shingles',
               title: 'Terracotta Shingles',
-              icon: '/assets/icons/hearth-and-timber/terracotta_shingles.png',
+              icon: '/assets/icons/hearth-and-timber/terracotta_shingles.webp',
               search: 'terracotta shingles roof'
             },
             {
               id: 'patchwork_shingles',
               title: 'Patchwork Shingles',
-              icon: '/assets/icons/hearth-and-timber/patchwork_shingles.png',
+              icon: '/assets/icons/hearth-and-timber/patchwork_shingles.webp',
               search: 'patchwork shingles roof'
             }
           ]
@@ -251,7 +251,7 @@ Wooden Shingles are available in all vanilla wood variants.`,
           id: 'beams',
           title: 'Beams',
           subtitle: 'Sturdy wooden beams used for visible support structures and classic timbered builds.',
-          icon: '/assets/icons/hearth-and-timber/oak_beam.png',
+          icon: '/assets/icons/hearth-and-timber/oak_beam.webp',
           search: 'beam timber structural support',
           details: true,
           detailsTitle: 'Good to know',
@@ -268,7 +268,7 @@ They are available in all vanilla wood variants.`,
           id: 'supports',
           title: 'Supports',
           subtitle: 'Small wooden helpers that hold things together when your build starts looking a bit… ambitious.',
-          icon: '/assets/icons/hearth-and-timber/oak_support.png',
+          icon: '/assets/icons/hearth-and-timber/oak_support.webp',
           search: 'support framing timber structural detail',
           details: true,
           detailsTitle: 'Usage',
@@ -292,7 +292,7 @@ Related: [[Pillars|pillars]].`,
           id: 'pillars',
           title: 'Pillars',
           subtitle: 'Clean vertical pillars used to anchor frames, supports, and ambitious timber builds.',
-          icon: '/assets/icons/hearth-and-timber/oak_pillar.png',
+          icon: '/assets/icons/hearth-and-timber/oak_pillar.webp',
           search: 'pillar timber framing structural interior',
           details: true,
           detailsTitle: 'Usage',
@@ -316,7 +316,7 @@ Pillars are available in all vanilla wood variants.`,
           id: 'railings',
           title: 'Railings',
           subtitle: 'Slim railings for balconies and edges. Use an axe to cycle the size when you inevitably misclick.',
-          icon: '/assets/icons/hearth-and-timber/oak_railing.png',
+          icon: '/assets/icons/hearth-and-timber/oak_railing.webp',
           search: 'railing balcony walkway edge waterlogged axe size full half quarter stairs shape corner',
           details: true,
           detailsTitle: 'Usage',
@@ -338,7 +338,7 @@ Railings are available in all vanilla wood variants.`,
           title: 'Window Casings',
           subtitle:
             'Slim wooden trims that automatically frame windows and politely disappear where they are not needed.',
-          icon: '/assets/icons/hearth-and-timber/oak_window_casing.png',
+          icon: '/assets/icons/hearth-and-timber/oak_window_casing.webp',
           search: 'window casing frame trim facade waterlogged axe toggle',
           details: true,
           detailsTitle: 'Usage',
@@ -365,7 +365,7 @@ Related: [[Windows|window_set]].`,
           id: 'boards',
           title: 'Boards',
           subtitle: 'Stackable wooden boards for subtle depth and tiny build lies we all tell ourselves.',
-          icon: '/assets/icons/hearth-and-timber/oak_board.png',
+          icon: '/assets/icons/hearth-and-timber/oak_board.webp',
           search: 'boards wooden board layers stackable detail',
           details: true,
           detailsTitle: 'Usage',
@@ -388,7 +388,7 @@ Boards are available in all vanilla wood variants.`,
           id: 'window_set',
           title: 'Windows',
           subtitle: 'Windows available as full blocks and panes.',
-          icon: '/assets/icons/hearth-and-timber/oak_window.png',
+          icon: '/assets/icons/hearth-and-timber/oak_window.webp',
           search: 'window pane block vertical connect timber wood glass',
           details: true,
           detailsTitle: 'More info',
@@ -402,13 +402,13 @@ All window variants are available in all vanilla wood variants.`,
             {
               id: 'window_block',
               title: 'Window Block',
-              icon: '/assets/icons/hearth-and-timber/oak_window.png',
+              icon: '/assets/icons/hearth-and-timber/oak_window.webp',
               search: 'window block timber wood glass'
             },
             {
               id: 'window_pane',
               title: 'Window Pane',
-              icon: '/assets/icons/hearth-and-timber/oak_window_pane.png',
+              icon: '/assets/icons/hearth-and-timber/oak_window_pane.webp',
               search: 'window pane timber wood glass'
             }
           ]
@@ -417,7 +417,7 @@ All window variants are available in all vanilla wood variants.`,
           id: 'sliding_doors',
           title: 'Sliding Doors',
           subtitle: 'Sliding doors for larger openings, available in multiple formats.',
-          icon: '/assets/icons/hearth-and-timber/sliding_barn_door.png',
+          icon: '/assets/icons/hearth-and-timber/sliding_barn_door.webp',
           search: 'sliding hayloft barn stable door',
           details: true,
           detailsTitle: 'Variants',
@@ -434,19 +434,19 @@ They slide horizontally and are suited for barns, stables, and haylofts.`,
             {
               id: 'sliding_barn_door',
               title: 'Sliding Barn Door',
-              icon: '/assets/icons/hearth-and-timber/sliding_barn_door.png',
+              icon: '/assets/icons/hearth-and-timber/sliding_barn_door.webp',
               search: 'sliding barn door'
             },
             {
               id: 'sliding_hayloft_door',
               title: 'Sliding Hayloft Door',
-              icon: '/assets/icons/hearth-and-timber/sliding_hayloft_door.png',
+              icon: '/assets/icons/hearth-and-timber/sliding_hayloft_door.webp',
               search: 'sliding hayloft door'
             },
             {
               id: 'sliding_stable_door',
               title: 'Sliding Stable Door',
-              icon: '/assets/icons/hearth-and-timber/sliding_stable_door.png',
+              icon: '/assets/icons/hearth-and-timber/sliding_stable_door.webp',
               search: 'sliding stable door'
             }
           ]
@@ -462,7 +462,7 @@ They slide horizontally and are suited for barns, stables, and haylofts.`,
           id: 'groutless_rubblestone',
           title: 'Groutless Rubblestone',
           subtitle: 'Generates naturally underground as a stone variant.',
-          icon: '/assets/icons/hearth-and-timber/groutless_rubblestone.png',
+          icon: '/assets/icons/hearth-and-timber/groutless_rubblestone.webp',
           search: 'groutless rubblestone worldgen overworld',
           details: true,
           detailsTitle: 'Generation',

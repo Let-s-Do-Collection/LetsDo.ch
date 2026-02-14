@@ -1,7 +1,7 @@
 export default {
   slug: 'herbalbrews',
   title: 'HerbalBrews',
-  logo: '/assets/mod-logos/herbalbrews.png',
+  logo: '/assets/mod-logos/herbalbrews.webp',
   aboutTitle: 'Welcome',
   aboutSubtitle: 'Tea, coffee, flasks, and brewing',
   aboutText: `Welcome to the HerbalBrews Wiki.
@@ -20,7 +20,7 @@ HerbalBrews focuses on tea, coffee, and magical brews, expanding the Let’s Do 
           title: 'Stove',
           namespace_id: 'herbalbrews:stove',
           subtitle: 'Provides heat for your [[Tea Kettle|tea_kettle]].',
-          icon: '/assets/icons/herbalbrews/stove.png',
+          icon: '/assets/icons/herbalbrews/stove.webp',
           search: 'stove heat hot surface kettle tea kettle heating station'
         },
         {
@@ -28,7 +28,7 @@ HerbalBrews focuses on tea, coffee, and magical brews, expanding the Let’s Do 
           title: 'Tea Kettle',
           namespace_id: 'herbalbrews:tea_kettle',
           subtitle: 'The primary station for brewing [[Tea|green_tea]] and [[Coffee|coffee]].',
-          icon: '/assets/icons/herbalbrews/tea_kettle.png',
+          icon: '/assets/icons/herbalbrews/tea_kettle.webp',
           search:
             'tea kettle tea coffee station heat items blaze powder water bottles bucket bottle slot output crafting',
           details: true,
@@ -55,7 +55,7 @@ Ingredients, bottles, and the brewed result are also visually displayed inside t
           title: 'Brewing Cauldron',
           namespace_id: 'herbalbrews:brewing_cauldron',
           subtitle: 'A brewing station for creating [[Flasks|flask]] from Potions.',
-          icon: '/assets/icons/herbalbrews/cauldron.png',
+          icon: '/assets/icons/herbalbrews/cauldron.webp',
           search: 'brewing cauldron flasks potions herbal infusion catalyst',
           details: true,
           detailsTitle: 'Usage',
@@ -88,7 +88,7 @@ The Potions placed inside the Cauldron are also visually displayed while brewing
           namespace_id: 'herbalbrews:coffee_beans',
           subtitle:
             'Obtained by harvesting [[Wild Coffee|wild_coffee]]. Can be planted on Farmland to grow Coffee Plants.',
-          icon: '/assets/icons/herbalbrews/coffee_beans.png',
+          icon: '/assets/icons/herbalbrews/coffee_beans.webp',
           search: 'coffee beans wild coffee harvest seeds coffee plant'
         },
         {
@@ -96,7 +96,7 @@ The Potions placed inside the Cauldron are also visually displayed while brewing
           title: 'Lavender Blossom',
           namespace_id: 'herbalbrews:lavender_blossom',
           subtitle: 'Obtained by harvesting [[Lavender|lavender]] with Shears.',
-          icon: '/assets/icons/herbalbrews/lavender_blossom.png',
+          icon: '/assets/icons/herbalbrews/lavender_blossom.webp',
           search: 'lavender blossom lavender shears harvesting ingredient lavender tea'
         },
         {
@@ -104,14 +104,14 @@ The Potions placed inside the Cauldron are also visually displayed while brewing
           title: 'Tea Blossoms',
           namespace_id: 'herbalbrews:tea_blossoms',
           subtitle: 'Obtained by harvesting flowers with Shears. Can be planted on Farmland to grow Tea Plants.',
-          icon: '/assets/icons/herbalbrews/tea_blossom.png',
+          icon: '/assets/icons/herbalbrews/tea_blossom.webp',
           search: 'tea blossoms flowers shears seeds tea plants farmland'
         },
         {
           id: 'witching_time_hats',
           title: 'Witching Time',
           subtitle: 'Wearable hats with magical protection.',
-          icon: '/assets/icons/herbalbrews/witch_hat.png',
+          icon: '/assets/icons/herbalbrews/witch_hat.webp',
           search: 'witch hat top hat herbalbrews magic damage reduction head armor witching time',
           details: true,
           detailsTitle: 'Overview',
@@ -127,7 +127,7 @@ The Potions placed inside the Cauldron are also visually displayed while brewing
               title: 'Witch Hat',
               namespace_id: 'herbalbrews:witch_hat',
               subtitle: 'A classic witch hat.',
-              icon: '/assets/icons/herbalbrews/witch_hat.png',
+              icon: '/assets/icons/herbalbrews/witch_hat.webp',
               search: 'witch hat herbalbrews head slot'
             },
             {
@@ -135,7 +135,7 @@ The Potions placed inside the Cauldron are also visually displayed while brewing
               title: 'Top Hat',
               namespace_id: 'herbalbrews:top_hat',
               subtitle: 'A classic top hat.',
-              icon: '/assets/icons/herbalbrews/top_hat.png',
+              icon: '/assets/icons/herbalbrews/top_hat.webp',
               search: 'top hat herbalbrews head slot'
             }
           ]
@@ -144,7 +144,7 @@ The Potions placed inside the Cauldron are also visually displayed while brewing
           id: 'tea_drying',
           title: 'Tea Drying',
           subtitle: 'Turns fresh tea leaves into dried tea ingredients over time.',
-          icon: '/assets/icons/herbalbrews/dried_green_tea.png',
+          icon: '/assets/icons/herbalbrews/dried_green_tea.webp',
           search: 'tea drying dry dried green tea black tea oolong tea leaf block stages',
           details: true,
           detailsTitle: 'Usage',
@@ -166,21 +166,21 @@ These dried tea ingredients are then used for brewing different tea variants.`,
               id: 'dried_green_tea',
               title: 'Dried Green Tea',
               subtitle: 'A dried tea ingredient used for brewing.',
-              icon: '/assets/icons/herbalbrews/dried_green_tea.png',
+              icon: '/assets/icons/herbalbrews/dried_green_tea.webp',
               search: 'dried green tea drying ingredient brew'
             },
             {
               id: 'dried_black_tea',
               title: 'Dried Black Tea',
               subtitle: 'A dried tea ingredient used for brewing.',
-              icon: '/assets/icons/herbalbrews/dried_black_tea.png',
+              icon: '/assets/icons/herbalbrews/dried_black_tea.webp',
               search: 'dried black tea drying ingredient brew'
             },
             {
               id: 'dried_oolong_tea',
               title: 'Dried Oolong Tea',
               subtitle: 'A dried tea ingredient used for brewing.',
-              icon: '/assets/icons/herbalbrews/dried_oolong_tea.png',
+              icon: '/assets/icons/herbalbrews/dried_oolong_tea.webp',
               search: 'dried oolong tea drying ingredient brew'
             }
           ]
@@ -198,7 +198,7 @@ These dried tea ingredients are then used for brewing different tea variants.`,
           title: 'Teas and Flasks',
           namespace_id: '',
           subtitle: 'A small peek at the brew selection.',
-          icon: '/assets/icons/herbalbrews/rooibos_tea.png',
+          icon: '/assets/icons/herbalbrews/rooibos_tea.webp',
           search: 'tea coffee drinks brews mugs cups effects herbalbrews flasks potion',
           details: true,
           detailsTitle: 'A Cup for Every Moment',
@@ -208,63 +208,63 @@ These dried tea ingredients are then used for brewing different tea variants.`,
               id: 'coffee',
               title: 'Coffee',
               namespace_id: 'herbalbrews:coffee',
-              icon: '/assets/icons/herbalbrews/coffee.png',
+              icon: '/assets/icons/herbalbrews/coffee.webp',
               search: 'coffee drink brew herbalbrews'
             },
             {
               id: 'hibiscus_tea',
               title: 'Hibiscus Tea',
               namespace_id: 'herbalbrews:hibiscus_tea',
-              icon: '/assets/icons/herbalbrews/hibiscus_tea.png',
+              icon: '/assets/icons/herbalbrews/hibiscus_tea.webp',
               search: 'hibiscus tea drink brew herbalbrews'
             },
             {
               id: 'lavender_tea',
               title: 'Lavender Tea',
               namespace_id: 'herbalbrews:lavender_tea',
-              icon: '/assets/icons/herbalbrews/lavender_tea.png',
+              icon: '/assets/icons/herbalbrews/lavender_tea.webp',
               search: 'lavender tea drink brew herbalbrews'
             },
             {
               id: 'rooibos_tea',
               title: 'Rooibos Tea',
               namespace_id: 'herbalbrews:rooibos_tea',
-              icon: '/assets/icons/herbalbrews/rooibos_tea.png',
+              icon: '/assets/icons/herbalbrews/rooibos_tea.webp',
               search: 'rooibos tea drink brew herbalbrews'
             },
             {
               id: 'yerba_mate_tea',
               title: 'Yerba Mate Tea',
               namespace_id: 'herbalbrews:yerba_mate_tea',
-              icon: '/assets/icons/herbalbrews/yerba_mate_tea.png',
+              icon: '/assets/icons/herbalbrews/yerba_mate_tea.webp',
               search: 'yerba mate tea drink brew herbalbrews'
             },
             {
               id: 'green_tea',
               title: 'Green Tea',
               namespace_id: 'herbalbrews:green_tea',
-              icon: '/assets/icons/herbalbrews/green_tea.png',
+              icon: '/assets/icons/herbalbrews/green_tea.webp',
               search: 'green tea drink brew herbalbrews'
             },
             {
               id: 'black_tea',
               title: 'Black Tea',
               namespace_id: 'herbalbrews:black_tea',
-              icon: '/assets/icons/herbalbrews/black_tea.png',
+              icon: '/assets/icons/herbalbrews/black_tea.webp',
               search: 'black tea drink brew herbalbrews'
             },
             {
               id: 'oolong_tea',
               title: 'Oolong Tea',
               namespace_id: 'herbalbrews:oolong_tea',
-              icon: '/assets/icons/herbalbrews/oolong_tea.png',
+              icon: '/assets/icons/herbalbrews/oolong_tea.webp',
               search: 'oolong tea drink brew herbalbrews'
             },
             {
               id: 'flask',
               title: 'Flasks',
               namespace_id: 'herbalbrews:flask',
-              icon: '/assets/icons/herbalbrews/flask.png',
+              icon: '/assets/icons/herbalbrews/flask.webp',
               search: 'flask flasks potion drink brew herbalbrews'
             }
           ]
@@ -283,7 +283,7 @@ These dried tea ingredients are then used for brewing different tea variants.`,
           namespace_id: 'herbalbrews:hibiscus',
           subtitle:
             'A decorative flower growing naturally in Jungles and similar lush biomes, commonly used for [[Hibiscus Tea|hibiscus_tea]].',
-          icon: '/assets/icons/herbalbrews/hibiscus.png',
+          icon: '/assets/icons/herbalbrews/hibiscus.webp',
           search: 'hibiscus flower jungle #is_jungle decorative tea hibiscus tea wild plant'
         },
         {
@@ -292,7 +292,7 @@ These dried tea ingredients are then used for brewing different tea variants.`,
           namespace_id: 'herbalbrews:lavender',
           subtitle:
             'A fragrant flower growing in Mountains, Windswept Hills, and other elevated biomes, harvested for [[Lavender Blossoms|lavender_blossom]].',
-          icon: '/assets/icons/herbalbrews/lavender.png',
+          icon: '/assets/icons/herbalbrews/lavender.webp',
           search: 'lavender flower mountains #is_hills #is_mountain decorative shears lavender blossoms lavender tea'
         },
         {
@@ -301,7 +301,7 @@ These dried tea ingredients are then used for brewing different tea variants.`,
           namespace_id: 'herbalbrews:wild_coffee',
           subtitle:
             'A wild coffee plant growing in Jungles and Bamboo Jungles, offering an alternative way to obtain [[Coffee Beans|coffee_beans]].',
-          icon: '/assets/icons/herbalbrews/wild_coffee_plant.png',
+          icon: '/assets/icons/herbalbrews/wild_coffee_plant.webp',
           search: 'wild coffee jungle #is_jungle coffee beans harvest break worldgen'
         },
         {
@@ -310,7 +310,7 @@ These dried tea ingredients are then used for brewing different tea variants.`,
           namespace_id: 'herbalbrews:wild_rooibos',
           subtitle:
             'A hardy wild plant growing in Savannas and Savanna Plateaus, used to brew [[Rooibos Tea|rooibos_tea]].',
-          icon: '/assets/icons/herbalbrews/wild_rooibos_plant.png',
+          icon: '/assets/icons/herbalbrews/wild_rooibos_plant.webp',
           search: 'wild rooibos savanna #is_savanna rooibos leafs harvest break worldgen'
         },
         {
@@ -319,7 +319,7 @@ These dried tea ingredients are then used for brewing different tea variants.`,
           namespace_id: 'herbalbrews:wild_yerba_mate',
           subtitle:
             'A wild plant growing in Mountains and Windswept biomes, providing Yerba Mate Leafs for [[Yerba Mate Tea|yerba_mate_tea]].',
-          icon: '/assets/icons/herbalbrews/wild_yerba_mate_plant.png',
+          icon: '/assets/icons/herbalbrews/wild_yerba_mate_plant.webp',
           search: 'wild yerba mate mountains #is_hills #is_mountain yerba mate leafs harvest break worldgen'
         }
       ]
@@ -335,7 +335,7 @@ These dried tea ingredients are then used for brewing different tea variants.`,
           title: 'Balanced',
           namespace_id: 'herbalbrews:balanced',
           subtitle: 'Grants nearby players Absorption.',
-          icon: '/assets/icons/herbalbrews/effects/balanced.png',
+          icon: '/assets/icons/herbalbrews/effects/balanced.webp',
           search: 'balanced effect absorption radius players'
         },
         {
@@ -343,7 +343,7 @@ These dried tea ingredients are then used for brewing different tea variants.`,
           title: 'Fortune',
           namespace_id: 'herbalbrews:fortune',
           subtitle: 'Increases Luck.',
-          icon: '/assets/icons/herbalbrews/effects/fortune.png',
+          icon: '/assets/icons/herbalbrews/effects/fortune.webp',
           search: 'fortune effect luck'
         },
         {
@@ -351,7 +351,7 @@ These dried tea ingredients are then used for brewing different tea variants.`,
           title: 'Tough',
           namespace_id: 'herbalbrews:tough',
           subtitle: 'Increases Absorption, Regeneration, and Damage Resistance.',
-          icon: '/assets/icons/herbalbrews/effects/tough.png',
+          icon: '/assets/icons/herbalbrews/effects/tough.webp',
           search: 'tough effect absorption regeneration damage resistance'
         },
         {
@@ -359,7 +359,7 @@ These dried tea ingredients are then used for brewing different tea variants.`,
           title: 'Bonding',
           namespace_id: 'herbalbrews:bonding',
           subtitle: 'Grants nearby players temporary Absorption and Regeneration.',
-          icon: '/assets/icons/herbalbrews/effects/bonding.png',
+          icon: '/assets/icons/herbalbrews/effects/bonding.webp',
           search: 'bonding effect absorption regeneration radius players',
           details: true,
           detailsTitle: 'Usage',
@@ -377,7 +377,7 @@ When multiple players are nearby, the effect scales down slightly to prevent sta
           title: 'Lifeleech',
           namespace_id: 'herbalbrews:lifeleech',
           subtitle: 'Drains health from nearby hostile entities and heals the user.',
-          icon: '/assets/icons/herbalbrews/effects/lifeleech.png',
+          icon: '/assets/icons/herbalbrews/effects/lifeleech.webp',
           search: 'lifeleech effect drain heal hostile entities radius',
           details: true,
           detailsTitle: 'Usage',
@@ -395,7 +395,7 @@ Nearby players may also be affected with reduced strength.`,
           title: 'Deeprush',
           namespace_id: 'herbalbrews:deeprush',
           subtitle: 'Increases mining speed based on depth.',
-          icon: '/assets/icons/herbalbrews/effects/deeprush.png',
+          icon: '/assets/icons/herbalbrews/effects/deeprush.webp',
           search: 'deeprush effect mining speed depth',
           details: true,
           detailsTitle: 'Usage',
@@ -421,14 +421,14 @@ The deeper you are, the stronger the effect becomes. When multiple players are n
           title: 'Configuration',
           subtitle:
             'Most gameplay features of HerbalBrews can be adjusted via a configuration file, usually located at `config/herbalbrews.json`.',
-          icon: '/assets/icons/misc/config.png',
+          icon: '/assets/icons/misc/config.webp',
           search: 'config configuration settings options balance json herbalbrews'
         },
         {
           id: 'hat_zombies',
           title: 'Hat Zombies',
           subtitle: 'Zombies have a small chance to spawn wearing a [[Witch Hat|witch_hat]] or [[Top Hat|top_hat]].',
-          icon: '/assets/icons/misc/zombie.png',
+          icon: '/assets/icons/misc/zombie.webp',
           search: 'zombie hat spawn witch hat top hat'
         }
       ]
