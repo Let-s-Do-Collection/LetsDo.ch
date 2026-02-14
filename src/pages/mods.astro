@@ -136,7 +136,10 @@ const mods = [
 ---
 
 <SiteLayout title="Mods">
-  <NavBar />
+  <Fragment slot="head">
+    <link rel="preload" as="image" href="/assets/icons/hero_mods.webp" />
+  </Fragment>
+    <NavBar />
 
   <main class="page">
     <section class="section sectionCentered">
