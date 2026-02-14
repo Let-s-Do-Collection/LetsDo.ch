@@ -333,44 +333,45 @@ import "../styles/faq.css";
       </div>
     </section>
 
-<script is:inline>
-  const input = document.getElementById("faqSearchInput")
-  const meta = document.getElementById("faqSearchMeta")
-  const empty = document.getElementById("faqEmpty")
-  const items = Array.from(document.querySelectorAll(".faqItem"))
+    <script is:inline>
+      const input = document.getElementById("faqSearchInput")
+      const meta = document.getElementById("faqSearchMeta")
+      const empty = document.getElementById("faqEmpty")
+      const items = Array.from(document.querySelectorAll(".faqItem"))
 
-  const update = () => {
-    const q = (input.value || "").trim().toLowerCase()
-    let visible = 0
+      const update = () => {
+        const q = (input.value || "").trim().toLowerCase()
+        let visible = 0
 
-    for (const item of items) {
-      const hay = (item.getAttribute("data-search") || item.innerText || "").toLowerCase()
-      const match = q.length === 0 || hay.includes(q)
+        for (const item of items) {
+          const hay = (item.getAttribute("data-search") || item.innerText || "").toLowerCase()
+          const match = q.length === 0 || hay.includes(q)
 
-      item.style.display = match ? "" : "none"
+          item.style.display = match ? "" : "none"
 
-      if (match) {
-        visible++
-        if (q.length > 0) {
-          item.open = true
-        } else {
-          item.open = false
+          if (match) {
+            visible++
+            if (q.length > 0) {
+              item.open = true
+            } else {
+              item.open = false
+            }
+          } else {
+            item.open = false
+          }
         }
-      } else {
-        item.open = false
+
+        meta.textContent = q.length === 0
+          ? `${items.length} questions`
+          : `${visible} of ${items.length}`
+
+        empty.style.display = visible === 0 ? "" : "none"
       }
-    }
 
-    meta.textContent = q.length === 0
-      ? `${items.length} questions`
-      : `${visible} of ${items.length}`
-
-    empty.style.display = visible === 0 ? "" : "none"
-  }
-
-  input.addEventListener("input", update)
-  update()
-</script>
+      input.addEventListener("input", update)
+      update()
+    </script>
+  </main>
 
   <Footer />
 </SiteLayout>
