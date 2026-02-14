@@ -1,0 +1,126 @@
+.downloadMenu {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.download {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.downloadDropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(calc(-50% - 5px));
+  padding: 14px 0;
+  min-width: 300px;
+
+  border-radius: 16px;
+  background: rgba(20, 24, 28, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 20px 55px rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(14px);
+  z-index: 200;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 120ms ease;
+}
+
+.downloadDropdown::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: 15px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0)
+  );
+  pointer-events: none;
+}
+
+:root[data-mode='light'] .downloadDropdown {
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(0, 0, 0, 0.10);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+}
+
+:root[data-mode='light'] .downloadDropdown::after {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.06),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.downloadMenu:hover .downloadDropdown,
+.downloadMenu:focus-within .downloadDropdown {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.downloadOption {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 22px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 16px;
+  white-space: nowrap;
+  border-radius: 14px;
+  margin: 0 10px;
+  z-index: 1;
+}
+
+:root[data-mode='light'] .downloadOption {
+  color: rgba(10, 12, 14, 0.92);
+}
+
+.downloadOption + .downloadOption {
+  margin-top: 10px;
+}
+
+.downloadOption + .downloadOption::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -10px;
+  right: -10px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+:root[data-mode='light'] .downloadOption + .downloadOption::before {
+  background: rgba(0, 0, 0, 0.10);
+}
+
+.downloadOption:hover,
+.downloadOption:focus-visible {
+  background: rgba(255, 255, 255, 0.10);
+  outline: none;
+}
+
+:root[data-mode='light'] .downloadOption:hover,
+:root[data-mode='light'] .downloadOption:focus-visible {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.downloadLogo {
+  width: 20px;
+  height: 20px;
+  display: block;
+}

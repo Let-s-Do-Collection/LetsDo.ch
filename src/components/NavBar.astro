@@ -1,4 +1,6 @@
 ---
+import "../styles/navbar.css";
+
 const { pathname } = Astro.url
 
 const isActive = (path) => {
@@ -22,34 +24,41 @@ const isActive = (path) => {
     </a>
 
     <div class="links">
-      <a href="/about/" class={isActive('/about') ? 'active' : ''}>
-        About
-      </a>
+      <a href="/about/" class={isActive('/about') ? 'active' : ''}>About</a>
+      <a href="/faq/" class={isActive('/faq') ? 'active' : ''}>FAQ</a>
+      <a href="/mods/" class={isActive('/mods') ? 'active' : ''}>Mods</a>
 
-      <a href="/faq/" class={isActive('/faq') ? 'active' : ''}>
-        FAQ
-      </a>
-
-      <a href="/mods/" class={isActive('/mods') ? 'active' : ''}>
-        Mods
-      </a>
-
-      <a
-        href="https://github.com/Let-s-Do-Collection"
-        target="_blank"
-        rel="noopener"
-      >
+      <a href="https://github.com/Let-s-Do-Collection" target="_blank" rel="noopener">
         GitHub
       </a>
 
-      <a
-        class="download"
-        href="https://modrinth.com/user/satisfyu"
-        target="_blank"
-        rel="noopener"
-      >
-        Download
-      </a>
+      <div class="downloadMenu">
+        <button class="download" type="button">
+          Download
+        </button>
+
+        <div class="downloadDropdown">
+          <a
+            class="downloadOption"
+            href="https://modrinth.com/user/satisfyu"
+            target="_blank"
+            rel="noopener"
+          >
+            <img class="downloadLogo" src="/assets/icons/brands/modrinth.png" alt="" />
+            <span>Download on Modrinth</span>
+          </a>
+
+          <a
+            class="downloadOption"
+            href="https://www.curseforge.com/members/satisfy/projects"
+            target="_blank"
+            rel="noopener"
+          >
+            <img class="downloadLogo" src="/assets/icons/brands/curseforge.png" alt="" />
+            <span>Download on CurseForge</span>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </nav>

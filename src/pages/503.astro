@@ -1,0 +1,38 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import NavBar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+import "../styles/404.css";
+---
+
+<SiteLayout title="503">
+  <div class="notFoundShell">
+    <NavBar />
+
+    <main class="notFoundMain">
+      <section class="notFoundSection">
+        <div class="notFoundWrapper">
+          <div class="notFoundTextBlock">
+            <div class="notFoundKicker">MAINTENANCE</div>
+
+            <h1 class="notFoundTitle">
+              We’re currently performing maintenance. Please check back soon.
+            </h1>
+
+            <div class="notFoundActions">
+              <a class="notFoundButtonPrimary" href="/">Back to Home</a>
+              <a class="notFoundButton" href="/mods/">Browse Mods</a>
+            </div>
+          </div>
+
+          <div class="notFoundVisual">
+            <img class="notFoundImage" src="/assets/renderers/cart.png" alt="Let’s Do" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </div>
+</SiteLayout>

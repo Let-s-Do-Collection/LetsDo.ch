@@ -1,0 +1,105 @@
+.imprintCard {
+  text-align: left;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 0;
+}
+
+.imprintBlock {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+.imprintBlockTitle {
+  font-weight: 700;
+  font-size: 1.28rem;
+  letter-spacing: 0.6px;
+  margin-bottom: 10px;
+  opacity: 0.98;
+}
+
+.imprintAddress {
+  font-style: normal;
+  display: grid;
+  gap: 6px;
+  line-height: 1.65;
+  opacity: 0.88;
+}
+
+.imprintName {
+  font-weight: 700;
+  font-size: 1.05rem;
+  opacity: 1;
+  margin-bottom: 4px;
+}
+
+.imprintDivider {
+  display: none;
+}
+
+.imprintRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.imprintLabel {
+  opacity: 0.65;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.imprintLink {
+  color: inherit;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 14px;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.06);
+  transition: transform 0.15s ease, background 0.15s ease, opacity 0.15s ease;
+}
+
+.imprintLink:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.imprintLink:active {
+  transform: translateY(0);
+  opacity: 0.85;
+}
+
+.imprintParagraph {
+  margin: 0;
+  line-height: 1.7;
+  opacity: 0.85;
+}
+
+.imprintMedia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imprintImage {
+  max-width: 560px;
+  opacity: 0.95;
+}
+
+.imprintNotice {
+  padding: 20px 24px;
+  border-radius: 18px;
+  line-height: 1.7;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.02)
+  );
+  backdrop-filter: blur(6px);
+  opacity: 0.9;
+}s

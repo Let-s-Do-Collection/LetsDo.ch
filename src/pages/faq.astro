@@ -3,6 +3,7 @@ import SiteLayout from "../layouts/SiteLayout.astro";
 import NavBar from "../components/NavBar.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
+import "../styles/faq.css";
 ---
 
 <SiteLayout title="FAQ">
@@ -16,20 +17,44 @@ import "../styles/global.css";
 
     <section class="section sectionCentered sectionTight">
       <div class="sectionTitle">
+        <span>Browse the FAQ</span>
+      </div>
+
+      <p class="sectionSubtitle">Search by question or keyword.</p>
+
+      <div class="modsSearch">
+        <input
+          id="faqSearchInput"
+          class="modsSearchInput"
+          type="search"
+          placeholder="Search FAQ..."
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <div id="faqSearchMeta" class="modsSearchMeta"></div>
+      </div>
+
+      <div id="faqEmpty" class="modsEmpty" style="display: none;">
+        No questions match your search.
+      </div>
+    </section>
+
+    <section class="section sectionCentered sectionTight">
+      <div class="sectionTitle">
         <span>General</span>
       </div>
     </section>
 
     <section class="faqBlock">
-      <div class="faqCategory">
-        <details class="faqItem">
+      <div class="faqCategory" data-faq-section>
+        <details class="faqItem" data-search="which modloader do i need modloader fabric neoforge architectury">
           <summary class="faqQ">Which modloader do I need?</summary>
           <div class="faqA">
             All Let’s Do mods are built on Architectury and work on both Fabric and NeoForge.
           </div>
         </details>
 
-        <details class="faqItem">
+        <details class="faqItem" data-search="what is architectury api and why is it required architectury api required dependency">
           <summary class="faqQ">What is Architectury API and why is it required?</summary>
           <div class="faqA">
             Architectury API is a shared library that allows mods to run on multiple modloaders using a single codebase.
@@ -38,7 +63,7 @@ import "../styles/global.css";
           </div>
         </details>
 
-        <details class="faqItem">
+        <details class="faqItem" data-search="why do i need fabric api when using fabric api required">
           <summary class="faqQ">Why do I need Fabric API when using Fabric?</summary>
           <div class="faqA">
             Fabric API provides core hooks and functionality used by many Fabric mods, including Let’s Do. When running
@@ -46,7 +71,7 @@ import "../styles/global.css";
           </div>
         </details>
 
-        <details class="faqItem">
+        <details class="faqItem" data-search="what happens if a required api is missing missing dependency">
           <summary class="faqQ">What happens if a required API is missing?</summary>
           <div class="faqA">
             If a required API is missing, Minecraft will usually fail to start and display an error message listing the
@@ -54,15 +79,15 @@ import "../styles/global.css";
           </div>
         </details>
 
-        <details class="faqItem">
+        <details class="faqItem" data-search="which minecraft versions are supported 1.21.1">
           <summary class="faqQ">Which Minecraft versions are supported?</summary>
           <div class="faqA">
             Development currently focuses on Minecraft 1.21.1 and will likely stay there for a while. We prefer to take
-            our time and do things properly – where it goes from here, we’ll see.
+            our time and do things properly. Where it goes from here, we’ll see.
           </div>
         </details>
 
-        <details class="faqItem">
+        <details class="faqItem" data-search="do i need other dependencies dependencies">
           <summary class="faqQ">Do I need other dependencies?</summary>
           <div class="faqA">
             Architectury API is always required. When using Fabric, Fabric API is required as well. Additional
@@ -70,7 +95,7 @@ import "../styles/global.css";
           </div>
         </details>
 
-        <details class="faqItem">
+        <details class="faqItem" data-search="is there a config file config">
           <summary class="faqQ">Is there a config file?</summary>
           <div class="faqA">
             Some mods already include configuration options. If you don’t see a config yet, it simply means it’s planned
@@ -78,11 +103,12 @@ import "../styles/global.css";
           </div>
         </details>
 
-        <details class="faqItem">
+        <details class="faqItem" data-search="can i use lets do in my modpack modpacks allowed reupload redistribute">
           <summary class="faqQ">Can I use Let’s Do in my modpack?</summary>
           <div class="faqA">
-            Yes, modpacks are absolutely allowed. You are free to include Let’s Do mods in modpacks distributed via
-            Modrinth or CurseForge. Please do not re-upload, redistribute, or modify the original mod files themselves.
+            Yes, modpacks are absolutely allowed. You may include Let’s Do mods in modpacks distributed via official
+            platforms such as Modrinth or CurseForge. However, re-uploading, redistributing, or modifying the original
+            mod files themselves is not permitted. Always link back to the official download page.
           </div>
         </details>
       </div>
@@ -90,81 +116,38 @@ import "../styles/global.css";
 
     <section class="section sectionCentered">
       <div class="sectionTitle">
-        <span>Datapacks</span>
+        <span>How to install</span>
       </div>
     </section>
 
     <section class="faqBlock">
-      <div class="faqCategory">
-        <details class="faqItem">
-          <summary class="faqQ">What are datapacks and how do they work?</summary>
+      <div class="faqCategory" data-faq-section>
+        <details class="faqItem" data-search="how do i install install mods fabric neoforge architectury api">
+          <summary class="faqQ">How do I install Let’s Do mods?</summary>
           <div class="faqA">
-            Datapacks are a vanilla Minecraft system that allows changing or extending game behavior using JSON files.
-            They operate on the server side and can modify recipes, loot tables, tags, advancements, and world
-            generation. Let’s Do mods expose many internal features through datapacks to allow customization without
-            code changes.
+            Install a compatible modloader such as Fabric or NeoForge. Then install Architectury API. If you are using
+            Fabric, Fabric API is required as well. Download the Let’s Do mod jar and place it into your Minecraft mods
+            folder. Launch the game and verify the mods show up in the Mods list.
           </div>
         </details>
 
-        <details class="faqItem">
-          <summary class="faqQ">How do I create a datapack for a Let’s Do mod?</summary>
+        <details class="faqItem" data-search="where can i download lets do mods download modrinth curseforge reupload redistribute">
+          <summary class="faqQ">Where can I download Let’s Do mods?</summary>
           <div class="faqA">
-            The easiest way is to look at the mod’s built-in datapack. You can open the mod jar and inspect the data
-            folder, or view it directly on GitHub. Copy the files you want to change and place them into your own
-            datapack. Only the files you modify need to be included.
+            Let’s Do mods are officially distributed via Modrinth and CurseForge. Please download mods only from these
+            official platforms. Re-uploading or redistributing the original mod files is not allowed. If you share the
+            mods, always link back to the official download page.
           </div>
         </details>
 
-        <details class="faqItem">
-          <summary class="faqQ">How can datapacks be loaded?</summary>
+        <details class="faqItem" data-search="fabric neoforge links modloader websites">
+          <summary class="faqQ">Where do I get Fabric or NeoForge?</summary>
           <div class="faqA">
-            Datapacks can be placed directly into a world’s datapacks folder. Alternatively, mods like OpenLoader or
-            Global Datapacks can load datapacks globally across all worlds. Datapacks are applied when a world is loaded
-            or reloaded.
-          </div>
-        </details>
-
-        <details class="faqItem">
-          <summary class="faqQ">What can I change using datapacks?</summary>
-          <div class="faqA">
-            Datapacks can be used to change recipes, loot tables, mob drops, tags, and world generation behavior. Many
-            Let’s Do features are controlled through tags, allowing you to enable, disable, or extend behavior. This
-            includes things like spawn rules, interactions, and structure placement.
-          </div>
-        </details>
-      </div>
-    </section>
-
-    <section class="section sectionCentered">
-      <div class="sectionTitle">
-        <span>Resource Packs</span>
-      </div>
-    </section>
-
-    <section class="faqBlock">
-      <div class="faqCategory">
-        <details class="faqItem">
-          <summary class="faqQ">What are resource packs?</summary>
-          <div class="faqA">
-            Resource packs are a vanilla Minecraft system used to change visuals and audio. They control textures,
-            models, animations, particles, UI elements, fonts, and sounds. Resource packs do not change gameplay logic.
-          </div>
-        </details>
-
-        <details class="faqItem">
-          <summary class="faqQ">How does Let’s Do use resource packs?</summary>
-          <div class="faqA">
-            Let’s Do mods include built-in resources for custom textures, models, particles, and animations. These
-            resources define the visual style of each mod and are loaded automatically. Custom resource packs can
-            override these assets if desired.
-          </div>
-        </details>
-
-        <details class="faqItem">
-          <summary class="faqQ">Can I create my own resource pack for Let’s Do?</summary>
-          <div class="faqA">
-            Yes. You can create a resource pack that overrides Let’s Do textures or models. This works the same way as
-            overriding vanilla assets. Only visual elements can be changed through resource packs.
+            Official websites:
+            <br />
+            <a href="https://fabricmc.net/" target="_blank" rel="noopener">fabricmc.net</a>
+            <br />
+            <a href="https://neoforged.net/" target="_blank" rel="noopener">neoforged.net</a>
           </div>
         </details>
       </div>
@@ -177,8 +160,8 @@ import "../styles/global.css";
     </section>
 
     <section class="faqBlock">
-      <div class="faqCategory">
-        <details class="faqItem">
+      <div class="faqCategory" data-faq-section>
+        <details class="faqItem" data-search="are lets do mods compatible with worldgen mods terralith">
           <summary class="faqQ">Are Let’s Do mods compatible with worldgen mods?</summary>
           <div class="faqA">
             Yes. As long as other mods rely on vanilla biome tags, Let’s Do world generation will integrate alongside
@@ -187,7 +170,7 @@ import "../styles/global.css";
           </div>
         </details>
 
-        <details class="faqItem">
+        <details class="faqItem" data-search="do lets do mods work with performance mods sodium rubidium">
           <summary class="faqQ">Do Let’s Do mods work with performance mods?</summary>
           <div class="faqA">
             Sodium- and Rubidium-based performance mods generally work well. In some cases, custom renderers may behave
@@ -195,7 +178,7 @@ import "../styles/global.css";
           </div>
         </details>
 
-        <details class="faqItem">
+        <details class="faqItem" data-search="why do i see no data fixer registered in the logs datafixerupper">
           <summary class="faqQ">Why do I see “No data fixer registered” in the logs?</summary>
           <div class="faqA">
             This message refers to Minecraft’s DataFixerUpper, a system Minecraft uses to update and convert very old
@@ -208,41 +191,125 @@ import "../styles/global.css";
 
     <section class="section sectionCentered">
       <div class="sectionTitle">
+        <span>Resource Packs</span>
+      </div>
+    </section>
+
+    <section class="faqBlock">
+      <div class="faqCategory" data-faq-section>
+        <details class="faqItem" data-search="what are resource packs">
+          <summary class="faqQ">What are resource packs?</summary>
+          <div class="faqA">
+            Resource packs are a vanilla Minecraft system used to change visuals and audio. They control textures,
+            models, animations, particles, UI elements, fonts, and sounds. Resource packs do not change gameplay logic.
+          </div>
+        </details>
+
+        <details class="faqItem" data-search="how does lets do use resource packs ctm bushy leaves built in packs">
+          <summary class="faqQ">How does Let’s Do use resource packs?</summary>
+          <div class="faqA">
+            Some Let’s Do mods include optional built-in resource packs for specific features such as bushy leaves
+            or CTM support. These packs are optional and can be enabled in the Resource Packs menu if available.
+          </div>
+        </details>
+
+        <details class="faqItem" data-search="can i create my own resource pack for lets do">
+          <summary class="faqQ">Can I create my own resource pack for Let’s Do?</summary>
+          <div class="faqA">
+            Yes. You can create a resource pack that overrides Let’s Do textures or models. This works the same way as
+            overriding vanilla assets. Only visual elements can be changed through resource packs.
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section sectionCentered">
+      <div class="sectionTitle">
+        <span>Data packs</span>
+      </div>
+    </section>
+
+    <section class="faqBlock">
+      <div class="faqCategory" data-faq-section>
+        <details class="faqItem" data-search="what are datapacks and how do they work">
+          <summary class="faqQ">What are datapacks and how do they work?</summary>
+          <div class="faqA">
+            Datapacks are a vanilla Minecraft system that allows changing or extending game behavior using JSON files.
+            They operate on the server side and can modify recipes, loot tables, tags, advancements, and world
+            generation. Let’s Do mods expose many internal features through datapacks to allow customization without
+            code changes.
+          </div>
+        </details>
+
+        <details class="faqItem" data-search="how do i create a datapack for a lets do mod">
+          <summary class="faqQ">How do I create a datapack for a Let’s Do mod?</summary>
+          <div class="faqA">
+            The easiest way is to look at the mod’s built-in datapack. You can open the mod jar and inspect the data
+            folder, or view it directly on GitHub. Copy the files you want to change and place them into your own
+            datapack. Only the files you modify need to be included.
+          </div>
+        </details>
+
+        <details class="faqItem" data-search="how can datapacks be loaded">
+          <summary class="faqQ">How can datapacks be loaded?</summary>
+          <div class="faqA">
+            Datapacks can be placed directly into a world’s datapacks folder. Alternatively, mods like OpenLoader or
+            Global Datapacks can load datapacks globally across all worlds. Datapacks are applied when a world is loaded
+            or reloaded.
+          </div>
+        </details>
+
+        <details class="faqItem" data-search="what can i change using datapacks recipes loot tables tags world generation">
+          <summary class="faqQ">What can I change using datapacks?</summary>
+          <div class="faqA">
+            Datapacks can be used to change recipes, loot tables, mob drops, tags, and world generation behavior. Many
+            Let’s Do features are controlled through tags, allowing you to enable, disable, or extend behavior. This
+            includes things like spawn rules, interactions, and structure placement.
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section class="section sectionCentered">
+      <div class="sectionTitle">
         <span>Licensing & Support</span>
       </div>
     </section>
 
     <section class="faqBlock">
-      <div class="faqCategory">
-        <details class="faqItem">
+      <div class="faqCategory" data-faq-section>
+        <details class="faqItem" data-search="what license do the mods use mit assets all rights reserved">
           <summary class="faqQ">What license do the mods use?</summary>
           <div class="faqA">
             The code is licensed under MIT. Assets are All Rights Reserved by default.
           </div>
         </details>
 
-        <details class="faqItem">
+        <details class="faqItem" data-search="can i ask about asset usage">
           <summary class="faqQ">Can I ask about asset usage?</summary>
           <div class="faqA">
             Yes. If you are unsure about asset usage, just ask.
           </div>
         </details>
 
-        <details class="faqItem">
+        <details class="faqItem" data-search="where should i report bugs or issues github discord">
           <summary class="faqQ">Where should I report bugs or issues?</summary>
           <div class="faqA">
-            If you find bugs, inconsistencies, or have suggestions, please use the Let’s Do Hub on GitHub for bug
-            reports:
+            Preferred: GitHub Issues
             <br />
             <a href="https://github.com/Let-s-Do-Collection/Let-s-Do-Collection/issues" target="_blank" rel="noopener">
               Let’s Do – GitHub Issues
             </a>
+            <br /><br />
+            Alternative: Discord
             <br />
-            This helps keep everything organized and easy to track.
+            <a href="https://discord.gg/Vqu6wYZwdZ" target="_blank" rel="noopener">
+              Let’s Do – Discord
+            </a>
           </div>
         </details>
 
-        <details class="faqItem">
+        <details class="faqItem" data-search="how should i report an issue steps to reproduce logs crash report">
           <summary class="faqQ">How should I report an issue?</summary>
           <div class="faqA">
             To help resolve issues faster, please include: Minecraft version, mod name and version, confirmation that you
@@ -250,22 +317,60 @@ import "../styles/global.css";
           </div>
         </details>
 
-        <details class="faqItem">
+        <details class="faqItem" data-search="can i help with translations">
           <summary class="faqQ">Can I help with translations?</summary>
           <div class="faqA">
             Yes. Community translations are always welcome and can be contributed via Pull Requests.
           </div>
         </details>
 
-        <details class="faqItem">
+        <details class="faqItem" data-search="can i support development patreon">
           <summary class="faqQ">Can I support development?</summary>
           <div class="faqA">
-            Support is possible via Patreon or PayPal. All mods remain fully playable without support.
+            Support is possible via Patreon. All mods remain fully playable without support.
           </div>
         </details>
       </div>
     </section>
-  </main>
+
+<script is:inline>
+  const input = document.getElementById("faqSearchInput")
+  const meta = document.getElementById("faqSearchMeta")
+  const empty = document.getElementById("faqEmpty")
+  const items = Array.from(document.querySelectorAll(".faqItem"))
+
+  const update = () => {
+    const q = (input.value || "").trim().toLowerCase()
+    let visible = 0
+
+    for (const item of items) {
+      const hay = (item.getAttribute("data-search") || item.innerText || "").toLowerCase()
+      const match = q.length === 0 || hay.includes(q)
+
+      item.style.display = match ? "" : "none"
+
+      if (match) {
+        visible++
+        if (q.length > 0) {
+          item.open = true
+        } else {
+          item.open = false
+        }
+      } else {
+        item.open = false
+      }
+    }
+
+    meta.textContent = q.length === 0
+      ? `${items.length} questions`
+      : `${visible} of ${items.length}`
+
+    empty.style.display = visible === 0 ? "" : "none"
+  }
+
+  input.addEventListener("input", update)
+  update()
+</script>
 
   <Footer />
 </SiteLayout>

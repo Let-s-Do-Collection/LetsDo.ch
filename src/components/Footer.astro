@@ -46,9 +46,17 @@ const year = new Date().getFullYear();
     </div>
 
     <div class="footerText">
-      © {year} Marco<br />
-      Let's Do is not affiliated with Mojang Studios.<br />
-      Created with heart, dedicated to MissLilitu.
+      <div class="footerLegalLine">
+        <span>© {year} Marco</span>
+        <span class="footerDot">·</span>
+        <a href="/imprint" class="footerLegalLink">Imprint</a>
+        <span class="footerDot">·</span>
+        <a href="/privacy" class="footerLegalLink">Privacy</a>
+      </div>
+
+      <div class="footerTagline">
+        Created with heart, dedicated to MissLilitu
+      </div>
     </div>
 
     <div class="footerRight" aria-label="Social links">

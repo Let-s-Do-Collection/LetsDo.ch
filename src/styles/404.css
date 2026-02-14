@@ -1,0 +1,133 @@
+.notFoundShell {
+  height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.notFoundMain {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+}
+
+.notFoundSection {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 24px;
+}
+
+.notFoundWrapper {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: clamp(22px, 4vw, 60px);
+}
+
+.notFoundTextBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 0;
+}
+
+.notFoundKicker {
+  font-size: 13px;
+  letter-spacing: 0.25em;
+  opacity: 0.6;
+  margin-bottom: 18px;
+}
+
+.notFoundTitle {
+  margin: 0;
+  line-height: 1.15;
+  font-size: clamp(26px, 3.2vw, 42px);
+  max-width: 32ch;
+}
+
+.notFoundActions {
+  display: flex;
+  gap: 14px;
+  margin-top: 26px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.notFoundButtonPrimary,
+.notFoundButton {
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 120ms ease;
+}
+
+.notFoundButtonPrimary {
+  background: var(--accent);
+  color: var(--accent-foreground, #000);
+}
+
+.notFoundButtonPrimary:hover {
+  opacity: 0.9;
+}
+
+.notFoundButton {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: inherit;
+}
+
+.notFoundButton:hover {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+:root[data-mode='light'] .notFoundButton {
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+:root[data-mode='light'] .notFoundButton:hover {
+  background: rgba(0, 0, 0, 0.07);
+}
+
+.notFoundVisual {
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notFoundImage {
+  display: block;
+  transform: scale(0.95) translateX(3%);
+  max-width: min(600px, 42vw);
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 22px 48px rgba(0, 0, 0, 0.18));
+}
+
+@media (max-width: 900px) {
+  .notFoundWrapper {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .notFoundImage {
+    max-width: min(520px, 78vw);
+  }
+}

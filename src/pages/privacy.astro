@@ -1,0 +1,68 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import NavBar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+import "../styles/privacy.css";
+---
+
+<SiteLayout title="Privacy Policy">
+  <NavBar />
+
+  <main class="page">
+    <section class="section sectionCentered">
+      <div class="aboutHero">
+        <div class="aboutHeroBackgroundAU"></div>
+        <h1>Privacy Policy</h1>
+      </div>
+    </section>
+
+    <section class="section sectionCentered">
+      <div class="privacyCard">
+
+        <h2>General information</h2>
+        <p>
+          Protecting your personal data is important to us. lets-do.ch is operated
+          in accordance with applicable Swiss data protection laws.
+        </p>
+
+        <h2>Hosting</h2>
+        <p>
+          lets-do.ch is hosted by a third-party hosting provider. When you visit
+          the site, technical data such as your IP address, browser type,
+          operating system, and access time may be processed automatically
+          for technical and security purposes.
+        </p>
+
+        <h2>No tracking or analytics</h2>
+        <p>
+          lets-do.ch does not use tracking tools, analytics services,
+          or advertising technologies.
+        </p>
+
+        <h2>External links</h2>
+        <p>
+          lets-do.ch may contain links to external platforms such as GitHub,
+          Discord, or Patreon. When visiting external websites,
+          their respective privacy policies apply.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          If you contact us via e-mail, the information you provide will be used
+          solely to respond to your request and will not be shared with third parties.
+        </p>
+
+        <h2>Your rights</h2>
+        <p>
+          Under Swiss data protection law, you have the right to request information
+          about the personal data stored about you and, where applicable,
+          the right to correction or deletion.
+        </p>
+
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</SiteLayout>

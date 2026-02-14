@@ -1,0 +1,85 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import NavBar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+import "../styles/imprint.css";
+---
+
+<SiteLayout title="Imprint">
+  <NavBar />
+
+  <main class="page">
+    <section class="section sectionCentered">
+      <div class="aboutHero">
+        <div class="aboutHeroBackgroundAU"></div>
+        <h1>Imprint</h1>
+      </div>
+    </section>
+
+    <section class="section sectionCentered">
+      <div class="sectionTitle">
+        <span>Legal Information</span>
+      </div>
+
+      <p class="sectionSubtitle">
+        Information in accordance with Swiss law.
+      </p>
+
+      <div class="expectGrid imprintGrid">
+        <div class="expectPoints">
+          <div class="expectPoint imprintCard">
+
+            <div class="imprintBlock">
+              <div class="imprintBlockTitle">Responsible for content</div>
+
+              <address class="imprintAddress">
+                <div class="imprintName">Marco Laube</div>
+                <div>Haus Gryffenberg</div>
+                <div>Postfach</div>
+                <div>Bahnhofstrasse 10</div>
+                <div>8001 Zurich</div>
+                <div>Switzerland</div>
+              </address>
+            </div>
+
+            <div class="imprintBlock">
+              <div class="imprintBlockTitle">Contact</div>
+              <div class="imprintLink">hello@lets-do.ch</div>
+            </div>
+
+            <div class="imprintBlock">
+              <div class="imprintBlockTitle">Legal notice</div>
+
+              <div class="imprintNotice">
+                Let’s Do is an independent project and is not affiliated with Mojang Studios.
+              </div>
+
+              <p class="imprintParagraph">
+                This website may contain links to external third-party platforms. We carefully select
+                the services we reference and aim to link only to trustworthy sources. However,
+                we have no control over external content and cannot assume liability for it.
+              </p>
+
+              <p class="imprintParagraph">
+                All content on this website, unless otherwise stated, is the property of Marco Laube.
+              </p>
+            </div>
+
+            <div class="imprintBlock">
+              <div class="imprintBlockTitle">Additional information</div>
+              <a class="imprintLink" href="/privacy">Privacy Policy</a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="expectMedia imprintMedia">
+          <img class="expectImage imprintImage" src="/assets/renderers/baker.png" alt="Let’s Do" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</SiteLayout>
