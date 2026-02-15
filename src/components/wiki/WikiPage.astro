@@ -142,140 +142,141 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
           {aboutText ? <div class="aboutText">{aboutText}</div> : null}
         </section>
 
-        {sections.map((section) => (
-          <section class="section sectionCentered sectionTight wikiSection" id={section.id} data-section={section.id}>
-            <div class="wikiSectionHeader">
-              <div class="sectionTitle">
-                <span>{section.title}</span>
+        {sections.map((section) => {
+          const sectionId = normalizeId(section.id);
+
+          return (
+            <section class="section sectionCentered sectionTight wikiSection" id={sectionId} data-section={sectionId}>
+              <div class="wikiSectionHeader">
+                <div class="sectionTitle">
+                  <span>{section.title}</span>
+                </div>
+
+                {section.subtitle ? <p class="sectionSubtitle">{section.subtitle}</p> : null}
               </div>
 
-              {section.subtitle ? <p class="sectionSubtitle">{section.subtitle}</p> : null}
-            </div>
+              <div class="gridWrapper">
+                <div class="grid wikiGrid">
+                  {(section.entries ?? []).map((entry) => {
+                    const hasDetails = entryHasDetails(entry);
+                    const iconSrc = entry.icon ? withBase(entry.icon) : "";
+                    const detailsOpenTitle = entry.detailsTitle ?? "Details";
+                    const tracks = Array.isArray(entry.tracks) ? entry.tracks : [];
+                    const entryId = normalizeId(entry.id);
 
-            <div class="gridWrapper">
-              <div class="grid wikiGrid">
-                {(section.entries ?? []).map((entry) => {
-                  const hasDetails = entryHasDetails(entry);
-                  const iconSrc = entry.icon ? withBase(entry.icon) : "";
-                  const detailsOpenTitle = entry.detailsTitle ?? "Details";
-                  const tracks = Array.isArray(entry.tracks) ? entry.tracks : [];
+                    return (
+                      <article
+                        class="card wikiCard"
+                        id={entryId}
+                        data-section={sectionId}
+                        data-search={entrySearch(entry)}
+                        data-has-details={hasDetails ? "true" : "false"}
+                        data-card-link="true"
+                        tabindex="0"
+                        role="link"
+                        aria-label={entry.title ?? "Open"}
+                      >
+                        <div class="cardContent wikiCardContent">
+                          {iconSrc ? (
+                            <img class="cardLogo wikiCardLogo" src={iconSrc} alt={entry.title} loading="lazy" />
+                          ) : (
+                            <div class="wikiCardLogoPlaceholder" aria-hidden="true" />
+                          )}
 
-                  return (
-                    <article
-                      class="card wikiCard"
-                      id={entry.id}
-                      data-section={section.id}
-                      data-search={entrySearch(entry)}
-                      data-has-details={hasDetails ? "true" : "false"}
-                    >
-                      <div class="cardContent wikiCardContent">
-                        {iconSrc ? (
-                          <img class="cardLogo wikiCardLogo" src={iconSrc} alt={entry.title} loading="lazy" />
-                        ) : (
-                          <div class="wikiCardLogoPlaceholder" aria-hidden="true" />
-                        )}
+                          <h3>{entry.title}</h3>
 
-                        <h3>{entry.title}</h3>
+                          {entry.namespace_id ? <div class="wikiCardNs">{entry.namespace_id}</div> : null}
 
-                        {entry.namespace_id ? <div class="wikiCardNs">{entry.namespace_id}</div> : null}
+                          {entry.subtitle ? <p set:html={linkifyText(entry.subtitle)} /> : null}
+                        </div>
 
-                        {entry.subtitle ? <p set:html={linkifyText(entry.subtitle)} /> : null}
-                      </div>
+                        {hasDetails ? (
+                          <div class="wikiCardDetails" aria-hidden="true">
+                            <div class="wikiDetailsHeader">
+                              <div class="wikiDetailsTitle">{detailsOpenTitle}</div>
+                              {entry.detailsSubtitle ? <div class="wikiDetailsSubtitle">{entry.detailsSubtitle}</div> : null}
+                            </div>
 
-                      {hasDetails ? (
-                        <div class="wikiCardDetails" aria-hidden="true">
-                          <div class="wikiDetailsHeader">
-                            <div class="wikiDetailsTitle">{detailsOpenTitle}</div>
-                            {entry.detailsSubtitle ? <div class="wikiDetailsSubtitle">{entry.detailsSubtitle}</div> : null}
+                            {entry.detailsText ? <div class="wikiDetailsText" set:html={linkifyText(entry.detailsText)} /> : null}
+
+                            {tracks.length ? <MusicPlayer tracks={tracks} /> : null}
+
+                            {Array.isArray(entry.detailsIds) && entry.detailsIds.length ? (
+                              <div class="wikiDetailsIds">
+                                {entry.detailsIds.map((id) => (
+                                  <div class="wikiDetailsId">{id}</div>
+                                ))}
+                              </div>
+                            ) : null}
+
+                            {Array.isArray(entry.detailsGallery) && entry.detailsGallery.length ? (
+                              <div class="wikiDetailsGallery">
+                                {entry.detailsGallery.map((g) => (
+                                  <div class="wikiGalleryItem">
+                                    <img class="wikiGalleryImg" src={g.icon ? withBase(g.icon) : ""} alt={g.title ?? ""} loading="lazy" />
+                                    <div class="wikiGalleryMeta">
+                                      <div class="wikiGalleryTitle">{g.title ?? ""}</div>
+                                      {g.namespace_id ? <div class="wikiGalleryNs">{g.namespace_id}</div> : null}
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+                            ) : null}
+
+                            {Array.isArray(entry.detailsBullets) && entry.detailsBullets.length ? (
+                              <ul class="wikiDetailsList">
+                                {entry.detailsBullets.map((line) => (
+                                  <li>{line}</li>
+                                ))}
+                              </ul>
+                            ) : null}
+
+                            {Array.isArray(entry.items) && entry.items.length ? (
+                              <div class="wikiMiniGrid">
+                                {entry.items.map((it) => {
+                                  const itemId = normalizeId(it.id);
+
+                                  return (
+                                    <article class="wikiMiniCard" id={itemId} data-search={entrySearch(it)}>
+                                      <img class="wikiMiniIcon" src={it.icon ? withBase(it.icon) : ""} alt={it.title ?? ""} loading="lazy" />
+                                      <div class="wikiMiniBody">
+                                        <div class="wikiMiniTitle">{it.title ?? titleCaseFromId(it.id)}</div>
+                                        {it.namespace_id ? <div class="wikiMiniNs">{it.namespace_id}</div> : null}
+                                        {it.subtitle ? <div class="wikiMiniSub">{it.subtitle}</div> : null}
+                                      </div>
+                                    </article>
+                                  );
+                                })}
+                              </div>
+                            ) : null}
                           </div>
+                        ) : null}
 
-                          {entry.detailsText ? (
-                            <div class="wikiDetailsText" set:html={linkifyText(entry.detailsText)} />
+                        <div class="cardAction">
+                          {hasDetails ? (
+                            <button class="btn btnSecondary wikiToggle" type="button" aria-expanded="false">
+                              More info
+                            </button>
                           ) : null}
 
-                          {tracks.length ? <MusicPlayer tracks={tracks} /> : null}
-
-                          {Array.isArray(entry.detailsIds) && entry.detailsIds.length ? (
-                            <div class="wikiDetailsIds">
-                              {entry.detailsIds.map((id) => (
-                                <div class="wikiDetailsId">{id}</div>
-                              ))}
-                            </div>
-                          ) : null}
-
-                          {Array.isArray(entry.detailsGallery) && entry.detailsGallery.length ? (
-                            <div class="wikiDetailsGallery">
-                              {entry.detailsGallery.map((g) => (
-                                <div class="wikiGalleryItem">
-                                  <img
-                                    class="wikiGalleryImg"
-                                    src={g.icon ? withBase(g.icon) : ""}
-                                    alt={g.title ?? ""}
-                                    loading="lazy"
-                                  />
-                                  <div class="wikiGalleryMeta">
-                                    <div class="wikiGalleryTitle">{g.title ?? ""}</div>
-                                    {g.namespace_id ? <div class="wikiGalleryNs">{g.namespace_id}</div> : null}
-                                  </div>
-                                </div>
-                              ))}
-                            </div>
-                          ) : null}
-
-                          {Array.isArray(entry.detailsBullets) && entry.detailsBullets.length ? (
-                            <ul class="wikiDetailsList">
-                              {entry.detailsBullets.map((line) => (
-                                <li>{line}</li>
-                              ))}
-                            </ul>
-                          ) : null}
-
-                          {Array.isArray(entry.items) && entry.items.length ? (
-                            <div class="wikiMiniGrid">
-                              {entry.items.map((it) => (
-                                <article class="wikiMiniCard" id={it.id} data-search={entrySearch(it)}>
-                                  <img
-                                    class="wikiMiniIcon"
-                                    src={it.icon ? withBase(it.icon) : ""}
-                                    alt={it.title ?? ""}
-                                    loading="lazy"
-                                  />
-                                  <div class="wikiMiniBody">
-                                    <div class="wikiMiniTitle">{it.title ?? titleCaseFromId(it.id)}</div>
-                                    {it.namespace_id ? <div class="wikiMiniNs">{it.namespace_id}</div> : null}
-                                    {it.subtitle ? <div class="wikiMiniSub">{it.subtitle}</div> : null}
-                                  </div>
-                                </article>
-                              ))}
-                            </div>
+                          {entry.wikiHref ? (
+                            <a class="btn btnPrimary" href={entry.wikiHref}>
+                              View
+                            </a>
                           ) : null}
                         </div>
-                      ) : null}
-
-                      <div class="cardAction">
-                        {hasDetails ? (
-                          <button class="btn btnSecondary wikiToggle" type="button" aria-expanded="false">
-                            More info
-                          </button>
-                        ) : null}
-
-                        {entry.wikiHref ? (
-                          <a class="btn btnPrimary" href={entry.wikiHref}>
-                            View
-                          </a>
-                        ) : null}
-                      </div>
-                    </article>
-                  );
-                })}
+                      </article>
+                    );
+                  })}
+                </div>
               </div>
-            </div>
 
-            <div class="modsEmpty" data-empty-for={section.id} style="display:none;">
-              No results in {section.title}.
-            </div>
-          </section>
-        ))}
+              <div class="modsEmpty" data-empty-for={sectionId} style="display:none;">
+                No results in {section.title}.
+              </div>
+            </section>
+          );
+        })}
 
         <Impressions id="impressions" title={impressionsTitle} subtitle={impressionsSubtitle} images={impressions} />
       </div>
@@ -336,6 +337,25 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
       });
     }
 
+    const getHashId = () => {
+      const raw = (window.location.hash || "").slice(1);
+      return raw ? raw.trim() : "";
+    };
+
+    const setHash = (hashId) => {
+      const cleanId = String(hashId || "").trim();
+      if (!cleanId) {
+        history.replaceState(null, "", window.location.pathname + window.location.search);
+        return;
+      }
+      history.replaceState(null, "", `#${cleanId}`);
+    };
+
+    const isInteractiveTarget = (target) => {
+      if (!target) return false;
+      return Boolean(target.closest("a, button, input, textarea, select, label, summary, details"));
+    };
+
     const setOpen = (card, open) => {
       const details = card.querySelector(".wikiCardDetails");
       const toggle = card.querySelector(".wikiToggle");
@@ -364,21 +384,85 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
       }
     };
 
-    document.addEventListener("click", (event) => {
-      const toggle = event.target.closest(".wikiToggle");
-      if (!toggle) return;
+    const openFromHash = () => {
+      const hashId = getHashId();
+      if (!hashId) return;
 
-      const card = toggle.closest(".wikiCard");
-      if (!card) return;
+      const target = document.getElementById(hashId);
+      if (!target) return;
 
-      const open = !card.classList.contains("isOpen");
-      setOpen(card, open);
+      const card = target.classList.contains("wikiCard") ? target : target.closest(".wikiCard");
+      if (card) {
+        const hasDetails = card.getAttribute("data-has-details") === "true";
+        if (hasDetails) setOpen(card, true);
 
-      if (open) {
         requestAnimationFrame(() => {
           card.scrollIntoView({ behavior: "smooth", block: "center" });
         });
+        return;
       }
+
+      requestAnimationFrame(() => {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    };
+
+    const activateCardLink = (card, openDetails) => {
+      if (!card || !card.id) return;
+
+      setHash(card.id);
+
+      if (openDetails) {
+        const hasDetails = card.getAttribute("data-has-details") === "true";
+        if (hasDetails) setOpen(card, true);
+      }
+
+      requestAnimationFrame(() => {
+        card.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+    };
+
+    document.addEventListener("click", (event) => {
+      const toggle = event.target.closest(".wikiToggle");
+      if (toggle) {
+        const card = toggle.closest(".wikiCard");
+        if (!card) return;
+
+        const open = !card.classList.contains("isOpen");
+        setOpen(card, open);
+
+        if (open && card.id) {
+          setHash(card.id);
+        } else if (!open && card.id && getHashId() === card.id) {
+          setHash("");
+        }
+
+        if (open) {
+          requestAnimationFrame(() => {
+            card.scrollIntoView({ behavior: "smooth", block: "center" });
+          });
+        }
+
+        return;
+      }
+
+      if (isInteractiveTarget(event.target)) return;
+
+      const card = event.target.closest('.wikiCard[data-card-link="true"]');
+      if (!card) return;
+
+      activateCardLink(card, false);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      if (isInteractiveTarget(event.target)) return;
+
+      const card = event.target.closest('.wikiCard[data-card-link="true"]');
+      if (!card) return;
+
+      event.preventDefault();
+      activateCardLink(card, false);
     });
 
     const updateActiveSection = () => {
@@ -421,10 +505,12 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
       }
     };
 
-    input.addEventListener("input", update);
+    if (input) input.addEventListener("input", update);
     window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("hashchange", openFromHash, { passive: true });
 
     update();
     updateActiveSection();
+    openFromHash();
   </script>
 </SiteLayout>

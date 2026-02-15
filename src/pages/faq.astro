@@ -208,8 +208,8 @@ import "../styles/faq.css";
         <details class="faqItem" data-search="how does lets do use resource packs ctm bushy leaves built in packs">
           <summary class="faqQ">How does Let’s Do use resource packs?</summary>
           <div class="faqA">
-            Some Let’s Do mods include optional built-in resource packs for specific features such as bushy leaves
-            or CTM support. These packs are optional and can be enabled in the Resource Packs menu if available.
+            Some Let’s Do mods include optional built-in resource packs for specific features such as bushy leaves or CTM
+            support. These packs are optional and can be enabled in the Resource Packs menu if available.
           </div>
         </details>
 
@@ -231,22 +231,26 @@ import "../styles/faq.css";
 
     <section class="faqBlock">
       <div class="faqCategory" data-faq-section>
-        <details class="faqItem" data-search="what are datapacks and how do they work">
+        <details class="faqItem" data-search="what are datapacks and how do they work datapack vanilla json recipes loot tables tags world generation lets do example pack">
           <summary class="faqQ">What are datapacks and how do they work?</summary>
           <div class="faqA">
             Datapacks are a vanilla Minecraft system that allows changing or extending game behavior using JSON files.
-            They operate on the server side and can modify recipes, loot tables, tags, advancements, and world
-            generation. Let’s Do mods expose many internal features through datapacks to allow customization without
-            code changes.
+            They operate on the server side and can modify recipes, loot tables, tags, advancements, and world generation.
+
+            Following we provide example datapacks in this FAQ to help you understand how overrides work and to make it easier
+            to experiment, test changes, and customize your worlds.
           </div>
         </details>
 
-        <details class="faqItem" data-search="how do i create a datapack for a lets do mod">
-          <summary class="faqQ">How do I create a datapack for a Let’s Do mod?</summary>
+        <details class="faqItem" data-search="how do i create a datapack for a lets do mod example tutorial override recipe worldgen json">
+          <summary class="faqQ">How do I create a datapack?</summary>
           <div class="faqA">
-            The easiest way is to look at the mod’s built-in datapack. You can open the mod jar and inspect the data
-            folder, or view it directly on GitHub. Copy the files you want to change and place them into your own
-            datapack. Only the files you modify need to be included.
+            Below in this FAQ, you will find step-by-step explanations and complete JSON examples
+            for recipes, loot tables, tags, and world generation.
+
+            Simply copy the structure shown here, create your own datapack folder,
+            and override the files you want to change. Only the files you modify need to exist
+            inside your datapack.
           </div>
         </details>
 
@@ -267,12 +271,554 @@ import "../styles/faq.css";
             includes things like spawn rules, interactions, and structure placement.
           </div>
         </details>
+
+        <details class="faqItem" data-search="datapack tutorial guide step by step example pack download install reload datapack list pack format description">
+          <summary class="faqQ">Datapack tutorial and example pack</summary>
+          <div class="faqA">
+            <div class="faqSteps">
+              <ol class="faqStepList">
+                <li>Create a folder in: <span class="inlineCode">saves/&lt;world&gt;/datapacks/</span></li>
+                <li>Add a <span class="inlineCode">pack.mcmeta</span> file</li>
+                <li>Add the files you want to override using the exact same path</li>
+                <li>Run <span class="inlineCode">/reload</span> and verify with <span class="inlineCode">/datapack list</span></li>
+              </ol>
+            </div>
+
+            <div class="faqCallout">
+              Example pack download:
+              <a href="/downloads/lets-do-example-datapack.zip" target="_blank" rel="noopener">
+                lets-do-example-datapack.zip
+              </a>
+            </div>
+
+            <div class="codeBlock">
+              <div class="codeBlockHeader">
+                <div class="codeBlockTitle">pack.mcmeta</div>
+                <button class="codeCopy" type="button" data-copy>Copy</button>
+              </div>
+              <pre class="codePre"><code>&#123;
+  "pack": &#123;
+    "pack_format": 48,
+    "description": "Let’s Do Datapack"
+  &#125;
+&#125;</code></pre>
+            </div>
+
+            <div class="faqExplanation">
+              <p><strong>pack_format</strong></p>
+              <p>
+                This defines which Minecraft version the datapack targets.
+                For Minecraft 1.21.1 the correct pack format is <span class="inlineCode">48</span>.
+                If this number does not match your Minecraft version, the pack will show as incompatible.
+              </p>
+
+              <p><strong>description</strong></p>
+              <p>
+                This is the display name shown in the datapack menu inside Minecraft.
+                It does not affect functionality and can be anything you like.
+              </p>
+
+              <div class="faqHint">
+                Note: World generation changes only apply to new chunks.
+                Existing terrain will not be retroactively updated.
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <details class="faqItem" data-search="how do i change recipes farm and charm shaped recipe override input output cooking pot type example highlight changed">
+          <summary class="faqQ">How do I change recipes?</summary>
+          <div class="faqA">
+            <p>
+              Let’s say we want to override a normal Farm &amp; Charm crafting recipe.
+              This is how the original recipe looks:
+            </p>
+
+            <div class="codeBlock">
+              <div class="codeBlockHeader">
+                <div class="codeBlockTitle">Original shaped recipe</div>
+                <button class="codeCopy" type="button" data-copy>Copy</button>
+              </div>
+              <pre class="codePre"><code>&#123;
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": &#123;
+    "#": &#123;
+      "item": "farm_and_charm:barley"
+    &#125;
+  &#125;,
+  "result": &#123;
+    "id": "farm_and_charm:barley_ball",
+    "count": 1
+  &#125;
+&#125;</code></pre>
+            </div>
+
+            <p>
+              If we want to change the output, we only modify the <span class="inlineCode">result</span> section:
+            </p>
+
+            <div class="codeBlock">
+              <div class="codeBlockHeader">
+                <div class="codeBlockTitle">Changing the output</div>
+                <button class="codeCopy" type="button" data-copy>Copy</button>
+              </div>
+              <pre class="codePre"><code>&#123;
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": &#123;
+    "#": &#123;
+      "item": "farm_and_charm:barley"
+    &#125;
+  &#125;,
+<span class="codeHighlight">  "result": &#123;</span>
+<span class="codeHighlight">    "id": "minecraft:diamond",</span>
+<span class="codeHighlight">    "count": 1</span>
+<span class="codeHighlight">  &#125;</span>
+&#125;</code></pre>
+            </div>
+
+            <p>
+              Now crafting nine barley will produce a diamond instead of a barley ball.
+            </p>
+
+            <p>
+              If we instead want to change the required ingredient, we modify the <span class="inlineCode">key</span> section:
+            </p>
+
+            <div class="codeBlock">
+              <div class="codeBlockHeader">
+                <div class="codeBlockTitle">Changing the input</div>
+                <button class="codeCopy" type="button" data-copy>Copy</button>
+              </div>
+              <pre class="codePre"><code>&#123;
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+<span class="codeHighlight">  "key": &#123;</span>
+<span class="codeHighlight">    "#": &#123;</span>
+<span class="codeHighlight">      "item": "minecraft:diamond"</span>
+<span class="codeHighlight">    &#125;</span>
+<span class="codeHighlight">  &#125;,</span>
+  "result": &#123;
+    "id": "farm_and_charm:barley_ball",
+    "count": 1
+  &#125;
+&#125;</code></pre>
+            </div>
+
+            <p>
+              Now the recipe requires diamonds instead of barley.
+            </p>
+
+            <div class="faqCallout">
+              <strong>Note:</strong><br />
+              In shaped recipes every row in the <span class="inlineCode">pattern</span> must have the exact same length. Spaces matter.
+              Each string represents one full row of the crafting grid.
+
+              <div class="codeMini">
+                <div class="codeBlock">
+                  <div class="codeBlockHeader">
+                    <div class="codeBlockTitle">Valid (row lengths match)</div>
+                    <button class="codeCopy" type="button" data-copy>Copy</button>
+                  </div>
+                  <pre class="codePre"><code>"pattern": [
+  "b  ",
+  "   ",
+  "   "
+]</code></pre>
+                </div>
+              </div>
+
+              <div class="codeMini">
+                <div class="codeBlock">
+                  <div class="codeBlockHeader">
+                    <div class="codeBlockTitle">Invalid (row lengths differ)</div>
+                    <button class="codeCopy" type="button" data-copy>Copy</button>
+                  </div>
+                  <pre class="codePre"><code>"pattern": [
+  "b",
+  "   ",
+  "   "
+]</code></pre>
+                </div>
+              </div>
+            </div>
+
+            <hr class="faqDivider" />
+
+            <p>
+              Not all recipes use <span class="inlineCode">minecraft:crafting_shaped</span>.
+              Custom crafting blocks use their own recipe types.
+            </p>
+
+            <p>
+              Example: A Cooking Pot recipe in Farm &amp; Charm:
+            </p>
+
+            <div class="codeBlock">
+              <div class="codeBlockHeader">
+                <div class="codeBlockTitle">Cooking Pot recipe</div>
+                <button class="codeCopy" type="button" data-copy>Copy</button>
+              </div>
+              <pre class="codePre"><code>&#123;
+  "type": "farm_and_charm:pot_cooking",
+  "ingredients": [
+    &#123; "tag": "farm_and_charm:corn" &#125;,
+    &#123; "tag": "farm_and_charm:corn" &#125;,
+    &#123; "tag": "farm_and_charm:flour" &#125;
+  ],
+  "requireContainer": true,
+  "container": &#123;
+    "id": "minecraft:bowl",
+    "count": 1
+  &#125;,
+  "result": &#123;
+    "id": "farm_and_charm:corn_grits",
+    "count": 1
+  &#125;,
+  "requiresLearning": false
+&#125;</code></pre>
+            </div>
+
+            <p>
+              Notice the <span class="inlineCode">type</span> is different.
+              Each custom crafting system defines its own structure and required fields.
+              Always check the original recipe to understand which keys are required.
+            </p>
+          </div>
+        </details>
+
+        <details class="faqItem" data-search="how do i change tags replace false values add items tag json extend hashtag">
+          <summary class="faqQ">How do I extend or change tags?</summary>
+          <div class="faqA">
+            <p>
+              Tags are one of the cleanest ways to tweak behavior.
+              In most cases you want to <span class="inlineCode">extend</span> an existing tag, not replace it.
+              Use <span class="inlineCode">"replace": false</span> to keep the original entries and only add your own.
+            </p>
+
+            <p>
+              Example: Let’s say we want the diamond block to be considered a valid heat source for the Cooking Pot.
+              We look for the heat source tag and add <span class="inlineCode">minecraft:diamond_block</span> to the list.
+            </p>
+
+            <div class="codeBlock">
+              <div class="codeBlockHeader">
+                <div class="codeBlockTitle">Heat source tag (extended)</div>
+                <button class="codeCopy" type="button" data-copy>Copy</button>
+              </div>
+              <pre class="codePre"><code>&#123;
+  "replace": false,
+  "values": [
+    "farm_and_charm:stove",
+    "minecraft:redstone_block",
+    "minecraft:magma_block",
+    "#minecraft:campfires",
+<span class="codeHighlight">    "minecraft:diamond_block",</span>
+    &#123;
+      "id": "farmersdelight:stove",
+      "required": false
+    &#125;,
+    &#123;
+      "id": "meadow:stove_tiles_wood",
+      "required": false
+    &#125;
+  ]
+&#125;</code></pre>
+            </div>
+
+            <p>
+              Tags can also reference other tags. When you want to include another tag, the <span class="inlineCode">#</span> prefix is required:
+            </p>
+
+            <div class="codeBlock">
+              <div class="codeBlockHeader">
+                <div class="codeBlockTitle">Referencing another tag</div>
+                <button class="codeCopy" type="button" data-copy>Copy</button>
+              </div>
+              <pre class="codePre"><code>&#123;
+  "replace": false,
+  "values": [
+<span class="codeHighlight">    "#c:grains/barleys"</span>
+  ]
+&#125;</code></pre>
+            </div>
+          </div>
+        </details>
+
+        <details class="faqItem" data-search="how do i change loot tables loot_table json override drops pools entries rolls bonus_rolls conditions survives_explosion block name must match">
+          <summary class="faqQ">How do I change loot tables?</summary>
+          <div class="faqA">
+            <p>
+              Loot tables control what blocks, chests, mobs, or other sources drop.
+              To change a drop, override the loot table JSON in your datapack using the exact same file path and name.
+            </p>
+
+            <p>
+              Here is a simple block loot table example:
+            </p>
+
+            <div class="codeBlock">
+              <div class="codeBlockHeader">
+                <div class="codeBlockTitle">Example block loot table</div>
+                <button class="codeCopy" type="button" data-copy>Copy</button>
+              </div>
+              <pre class="codePre"><code>&#123;
+  "type": "minecraft:block",
+  "pools": [
+    &#123;
+      "bonus_rolls": 0.0,
+      "conditions": [
+        &#123;
+          "condition": "minecraft:survives_explosion"
+        &#125;
+      ],
+      "entries": [
+        &#123;
+          "type": "minecraft:item",
+          "name": "farm_and_charm:fertilized_soil"
+        &#125;
+      ],
+      "rolls": 1
+    &#125;
+  ]
+&#125;</code></pre>
+            </div>
+
+            <div class="faqCallout">
+              <strong>What do these fields mean?</strong><br /><br />
+              <span class="inlineCode">pools</span>: A loot table can have multiple pools. Each pool is rolled separately.<br />
+              <span class="inlineCode">rolls</span>: How many times this pool is rolled. If <span class="inlineCode">rolls</span> is 1, the pool runs once.<br />
+              <span class="inlineCode">bonus_rolls</span>: Extra rolls added on top of <span class="inlineCode">rolls</span>.<br />
+              <span class="inlineCode">conditions</span>: Rules that decide if the pool is allowed to run.<br />
+              <span class="inlineCode">entries</span>: The actual things that can drop.
+            </div>
+
+            <hr class="faqDivider" />
+
+            <p>
+              Example: We want <span class="inlineCode">farm_and_charm:fertilized_soil</span> to drop a diamond instead.
+              We override the block loot table and change the item entry.
+            </p>
+
+            <div class="faqCallout">
+              <strong>Important:</strong> For block drops, the loot table file name must match the block id.<br />
+              Example path: <span class="inlineCode">data/farm_and_charm/loot_tables/blocks/fertilized_soil.json</span>
+            </div>
+
+            <div class="codeBlock">
+              <div class="codeBlockHeader">
+                <div class="codeBlockTitle">Fertilized Soil drops diamonds</div>
+                <button class="codeCopy" type="button" data-copy>Copy</button>
+              </div>
+              <pre class="codePre"><code>&#123;
+  "type": "minecraft:block",
+  "pools": [
+    &#123;
+      "bonus_rolls": 0.0,
+      "conditions": [
+        &#123;
+          "condition": "minecraft:survives_explosion"
+        &#125;
+      ],
+      "entries": [
+        &#123;
+          "type": "minecraft:item",
+<span class="codeHighlight">          "name": "minecraft:diamond"</span>
+        &#125;
+      ],
+      "rolls": 1
+    &#125;
+  ]
+&#125;</code></pre>
+            </div>
+
+            <p>
+              That’s it. Reload your datapacks and test the drop.
+            </p>
+          </div>
+        </details>
+
+        <details class="faqItem" data-search="how do i change worldgen world generation configured placed feature rarity_filter tries biome new chunks example">
+          <summary class="faqQ">How do I change world generation?</summary>
+          <div class="faqA">
+            <p>
+              World generation is fully data-driven. Most features consist of two parts:
+              <strong>configured features</strong> and <strong>placed features</strong>.
+            </p>
+
+            <div class="faqCallout">
+              <strong>Important:</strong><br />
+              World generation changes only apply to new chunks.
+              Existing terrain will not be retroactively updated.
+            </div>
+
+            <hr class="faqDivider" />
+
+            <h4>1. Configured Feature</h4>
+
+            <p>
+              The configured feature defines what is generated and how it behaves.
+              Example: wild barley patch from Farm &amp; Charm.
+            </p>
+
+            <div class="codeBlock">
+              <div class="codeBlockHeader">
+                <div class="codeBlockTitle">Configured Feature</div>
+                <button class="codeCopy" type="button" data-copy>Copy</button>
+              </div>
+              <pre class="codePre"><code>&#123;
+  "type": "minecraft:random_patch",
+  "config": &#123;
+    "feature": &#123;
+      "feature": &#123;
+        "type": "minecraft:simple_block",
+        "config": &#123;
+          "to_place": &#123;
+            "type": "minecraft:simple_state_provider",
+            "state": &#123;
+              "Name": "farm_and_charm:wild_barley"
+            &#125;
+          &#125;
+        &#125;
+      &#125;
+    &#125;,
+    "tries": 11,
+    "xz_spread": 7,
+    "y_spread": 2
+  &#125;
+&#125;</code></pre>
+            </div>
+
+            <div class="faqCallout">
+              <strong>Key fields explained:</strong><br /><br />
+              <span class="inlineCode">type</span>: Defines the feature logic. Here: random patch.<br />
+              <span class="inlineCode">Name</span>: The block that gets placed.<br />
+              <span class="inlineCode">tries</span>: How many placement attempts per patch.<br />
+              <span class="inlineCode">xz_spread</span>: Horizontal spread size.<br />
+              <span class="inlineCode">y_spread</span>: Vertical variation.
+            </div>
+
+            <hr class="faqDivider" />
+
+            <h4>2. Placed Feature</h4>
+
+            <p>
+              The placed feature defines where and how often the configured feature appears.
+            </p>
+
+            <div class="codeBlock">
+              <div class="codeBlockHeader">
+                <div class="codeBlockTitle">Placed Feature</div>
+                <button class="codeCopy" type="button" data-copy>Copy</button>
+              </div>
+              <pre class="codePre"><code>&#123;
+  "feature": "farm_and_charm:wild_barley_chance",
+  "placement": [
+    &#123;
+      "type": "minecraft:rarity_filter",
+      "chance": 40
+    &#125;,
+    &#123; "type": "minecraft:in_square" &#125;,
+    &#123;
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    &#125;,
+    &#123; "type": "minecraft:biome" &#125;
+  ]
+&#125;</code></pre>
+            </div>
+
+            <div class="faqCallout">
+              <strong>Key fields explained:</strong><br /><br />
+              <span class="inlineCode">feature</span>: Links to the configured feature.<br />
+              <span class="inlineCode">rarity_filter</span>: Controls how rare the feature is.<br />
+              <span class="inlineCode">chance</span>: 1 in X chunks. Lower number means more common.<br />
+              <span class="inlineCode">heightmap</span>: Controls vertical placement logic.<br />
+              <span class="inlineCode">biome</span>: Restricts to matching biomes.
+            </div>
+
+            <hr class="faqDivider" />
+
+            <h4>Example: Make Wild Barley Rarer</h4>
+
+            <p>
+              If the current rarity is <span class="inlineCode">"chance": 40</span> it means roughly 1 in 40 chunks.
+              To make it rarer, increase the value:
+            </p>
+
+            <div class="codeBlock">
+              <div class="codeBlockHeader">
+                <div class="codeBlockTitle">Rarer placement</div>
+                <button class="codeCopy" type="button" data-copy>Copy</button>
+              </div>
+              <pre class="codePre"><code>&#123;
+  "feature": "farm_and_charm:wild_barley_chance",
+  "placement": [
+    &#123;
+      "type": "minecraft:rarity_filter",
+<span class="codeHighlight">      "chance": 120</span>
+    &#125;,
+    &#123; "type": "minecraft:in_square" &#125;,
+    &#123;
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    &#125;,
+    &#123; "type": "minecraft:biome" &#125;
+  ]
+&#125;</code></pre>
+            </div>
+
+            <div class="faqCallout">
+              <strong>Tip:</strong><br />
+              If you want fewer plants per patch, reduce <span class="inlineCode">tries</span> in the configured feature.<br />
+              If you want fewer patches overall, increase <span class="inlineCode">chance</span> in the placed feature.
+            </div>
+          </div>
+        </details>
+
+        <details class="faqItem" data-search="where can i learn more about datapacks misode minecraft wiki documentation generator guide">
+          <summary class="faqQ">Where can I learn more about datapacks?</summary>
+          <div class="faqA">
+            If you want to dive deeper into datapack mechanics, these resources are very helpful:
+
+            <div class="faqCallout">
+              <strong>Misode Datapack Generator</strong><br />
+              <a href="https://misode.github.io/" target="_blank" rel="noopener">
+                https://misode.github.io/
+              </a>
+              <br /><br />
+              Interactive JSON generators for recipes, loot tables, worldgen and more.
+            </div>
+
+            <div class="faqCallout" style="margin-top:16px;">
+              <strong>Minecraft Wiki (unofficial)</strong><br />
+              <a href="https://minecraft.wiki/w/Data_pack" target="_blank" rel="noopener">
+                https://minecraft.wiki/w/Data_pack
+              </a>
+              <br /><br />
+              Detailed explanations of datapack structure, pack formats and file paths.
+            </div>
+          </div>
+        </details>
       </div>
     </section>
 
     <section class="section sectionCentered">
       <div class="sectionTitle">
-        <span>Licensing & Support</span>
+        <span>Licensing &amp; Support</span>
       </div>
     </section>
 
@@ -298,22 +844,49 @@ import "../styles/faq.css";
             Preferred: GitHub Issues
             <br />
             <a href="https://github.com/Let-s-Do-Collection/Let-s-Do-Collection/issues" target="_blank" rel="noopener">
-              Let’s Do – GitHub Issues
+              Let’s Do - GitHub Issues
             </a>
             <br /><br />
             Alternative: Discord
             <br />
             <a href="https://discord.gg/Vqu6wYZwdZ" target="_blank" rel="noopener">
-              Let’s Do – Discord
+              Let’s Do - Discord
             </a>
           </div>
         </details>
+
 
         <details class="faqItem" data-search="how should i report an issue steps to reproduce logs crash report">
           <summary class="faqQ">How should I report an issue?</summary>
           <div class="faqA">
             To help resolve issues faster, please include: Minecraft version, mod name and version, confirmation that you
             are on the latest version, a short description, steps to reproduce, and logs or crash reports if available.
+          </div>
+        </details>
+
+        <details class="faqItem" data-search="direct feedback criticism communication performance code quality compatibility discussion report issues">
+          <summary class="faqQ">Why is direct feedback important?</summary>
+          <div class="faqA">
+            <p>
+              Let’s Do is built with a lot of personal dedication. I constantly revisit older systems,
+              refactor them, improve performance, and try to raise the overall quality of the projects.
+            </p>
+
+            <p>
+              If you encounter bugs, performance issues, compatibility problems, or design flaws,
+              please tell me directly. Open an issue, share logs, describe the steps to reproduce it.
+              I genuinely want to improve things.
+            </p>
+
+            <p>
+              Public criticism without direct communication makes it harder to fix real problems.
+              Constructive feedback shared directly helps the project grow.
+            </p>
+
+            <div class="faqCallout">
+              <strong>Short version:</strong><br />
+              If something is wrong, tell me. I will listen.
+            </div>
           </div>
         </details>
 
@@ -338,6 +911,88 @@ import "../styles/faq.css";
       const meta = document.getElementById("faqSearchMeta")
       const empty = document.getElementById("faqEmpty")
       const items = Array.from(document.querySelectorAll(".faqItem"))
+      const copyButtons = Array.from(document.querySelectorAll("[data-copy]"))
+
+      const slugify = (value) => {
+        const s = (value || "").toLowerCase().trim()
+        const normalized = s
+          .normalize("NFKD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .replace(/[^a-z0-9\s-]/g, "")
+          .replace(/\s+/g, "-")
+          .replace(/-+/g, "-")
+          .replace(/^-|-$/g, "")
+        return normalized.length ? normalized : "faq"
+      }
+
+      const ensureIds = () => {
+        for (const item of items) {
+          if (item.id) continue
+          const summary = item.querySelector("summary")
+          const title = summary ? summary.textContent : ""
+          item.id = `faq-${slugify(title)}`
+        }
+      }
+
+      const openFromHash = () => {
+        const hash = (window.location.hash || "").replace("#", "")
+        if (!hash) return
+        const el = document.getElementById(hash)
+        if (!el) return
+        if (el.tagName && el.tagName.toLowerCase() === "details") {
+          el.open = true
+          el.scrollIntoView({ block: "start", behavior: "smooth" })
+        }
+      }
+
+      const updateHashFromOpenItem = (item) => {
+        if (!item?.id) return
+        const url = new URL(window.location.href)
+        url.hash = item.id
+        window.history.replaceState(null, "", url.toString())
+      }
+
+      const clearHashIfMatches = (item) => {
+        if (!item?.id) return
+        const current = (window.location.hash || "").replace("#", "")
+        if (current !== item.id) return
+        const url = new URL(window.location.href)
+        url.hash = ""
+        window.history.replaceState(null, "", url.toString())
+      }
+
+      const copyText = async (text) => {
+        try {
+          await navigator.clipboard.writeText(text)
+          return true
+        } catch {
+          return false
+        }
+      }
+
+      ensureIds()
+
+      for (const button of copyButtons) {
+        button.addEventListener("click", async () => {
+          const wrapper = button.closest(".codeBlock")
+          const code = wrapper?.querySelector("code")
+          const text = code?.innerText || ""
+          const ok = await copyText(text)
+          const old = button.textContent
+          button.textContent = ok ? "Copied" : "Failed"
+          window.setTimeout(() => (button.textContent = old), 900)
+        })
+      }
+
+      for (const item of items) {
+        item.addEventListener("toggle", () => {
+          if (item.open) {
+            updateHashFromOpenItem(item)
+          } else {
+            clearHashIfMatches(item)
+          }
+        })
+      }
 
       const update = () => {
         const q = (input.value || "").trim().toLowerCase()
@@ -361,12 +1016,12 @@ import "../styles/faq.css";
           }
         }
 
-        meta.textContent = q.length === 0
-          ? `${items.length} questions`
-          : `${visible} of ${items.length}`
-
+        meta.textContent = q.length === 0 ? `${items.length} questions` : `${visible} of ${items.length}`
         empty.style.display = visible === 0 ? "" : "none"
       }
+
+      window.addEventListener("hashchange", openFromHash)
+      openFromHash()
 
       input.addEventListener("input", update)
       update()
