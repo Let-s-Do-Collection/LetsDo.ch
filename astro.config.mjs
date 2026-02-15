@@ -8,6 +8,10 @@ export default defineConfig({
     starlight({
       title: "Let's Do"
     }),
-    sitemap()
+    sitemap({
+      filter: (page) =>
+        !page.includes("/403") &&
+        !page.includes("/503")
+    })
   ]
 })
