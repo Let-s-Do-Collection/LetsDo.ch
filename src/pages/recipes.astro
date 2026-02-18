@@ -17,6 +17,13 @@ const toTitle = (identifier) => {
     .join(" ");
 };
 
+const normalizeId = (value) =>
+  String(value ?? "")
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "_")
+    .replace(/[^\w\-]/g, "");
+
 const farmAndCharmEntries = flattenWikiEntries(farmAndCharm);
 const stationRegistry = buildStationRegistry({ farmAndCharmEntries });
 
@@ -90,14 +97,14 @@ const groupedStations = Object.values(
           <span>Inside our Crafting Stations</span>
         </div>
 
- <div class="recipesInfoText">
-   {`This page contains all custom crafting recipes added by the Let’s Do mods.
+        <div class="recipesInfoText">
+          {`This page contains all custom crafting recipes added by the Let’s Do mods.
 
- You will find every recipe for our unique crafting stations in one place. Regular crafting table recipes are not listed here, since they are already available in the vanilla recipe book inside the game.
+You will find every recipe for our unique crafting stations in one place. Regular crafting table recipes are not listed here, since they are already available in the vanilla recipe book inside the game.
 
- This overview is meant for anyone who wants to quickly check ingredients, outputs, or required containers outside of Minecraft — without browsing source code or relying on external tools.
- `}
- </div>
+This overview is meant for anyone who wants to quickly check ingredients, outputs, or required containers outside of Minecraft, without browsing source code or relying on external tools.
+`}
+        </div>
       </div>
     </section>
 
@@ -127,9 +134,9 @@ const groupedStations = Object.values(
             data-section
             data-station={group.key}
             data-search={group.search}
-            data-collapsed={index === 0 ? "false" : "true"}
+            data-collapsed="true"
           >
-            <button class="recipesSectionHeader" type="button" data-section-toggle aria-expanded={index === 0 ? "true" : "false"}>
+            <button class="recipesSectionHeader" type="button" data-section-toggle aria-expanded="false">
               <a class="recipesStationLink" href={group.wiki} aria-label={group.title} title={group.title} data-station-link>
                 <img class="recipesStationIcon" src={group.icon} alt={group.title} loading="lazy" />
               </a>
@@ -145,103 +152,116 @@ const groupedStations = Object.values(
             </button>
 
             <div class="recipesGrid" data-grid>
-              {group.recipes.map((recipe) => (
-                <article class="recipeCard" data-card data-search={recipe.search}>
-                  <div class="recipeHeader">
-                    <h3 class="recipeTitle">{recipe.outputTitle}</h3>
-                    <div class="recipeSubtitle">{recipe.outputSubtitle}</div>
-                  </div>
+              {group.recipes.map((recipe, recipeIndex) => {
+                const recipeCardId = normalizeId(`${group.key}_${recipe.outputTitle ?? "recipe"}_${recipeIndex}`);
 
-                  <div class="recipeBody">
-                    <div class={`recipeLayout ${recipe.station.layout}`}>
-                      <div class="recipeInputs" aria-label="Ingredients">
-                        {recipe.inputs.map((slot) =>
-                          slot && slot.icon ? (
-                            slot.href ? (
+                return (
+                  <article
+                    class="recipeCard"
+                    id={recipeCardId}
+                    data-card
+                    data-card-link="true"
+                    data-search={recipe.search}
+                    tabindex="0"
+                    role="link"
+                    aria-label={recipe.outputTitle ?? "Open"}
+                  >
+                    <div class="recipeHeader">
+                      <h3 class="recipeTitle">{recipe.outputTitle}</h3>
+                      <div class="recipeSubtitle">{recipe.outputSubtitle}</div>
+                    </div>
+
+                    <div class="recipeBody">
+                      <div class={`recipeLayout ${recipe.station.layout}`}>
+                        <div class="recipeInputs" aria-label="Ingredients">
+                          {recipe.inputs.map((slot) =>
+                            slot && slot.icon ? (
+                              slot.href ? (
+                                <a
+                                  class={`recipeSlot recipeSlotHasItem ${slot.isTag ? "recipeSlotTag" : ""}`}
+                                  href={slot.href}
+                                  aria-label={slot.title}
+                                  data-tip-title={slot.tooltipLine1}
+                                  data-tip-sub={slot.tooltipLine2}
+                                >
+                                  <img class="recipeSlotIcon" src={slot.icon} alt={slot.title} loading="lazy" />
+                                </a>
+                              ) : (
+                                <div
+                                  class={`recipeSlot recipeSlotHasItem ${slot.isTag ? "recipeSlotTag" : ""}`}
+                                  aria-label={slot.title}
+                                  data-tip-title={slot.tooltipLine1}
+                                  data-tip-sub={slot.tooltipLine2}
+                                >
+                                  <img class="recipeSlotIcon" src={slot.icon} alt={slot.title} loading="lazy" />
+                                </div>
+                              )
+                            ) : (
+                              <div class="recipeSlot" aria-hidden="true"></div>
+                            )
+                          )}
+
+                          {recipe.station.showContainerSlot ? (
+                            recipe.container && recipe.container.icon ? (
+                              recipe.container.href ? (
+                                <a
+                                  class="recipeSlot recipeSlotContainer recipeSlotHasItem"
+                                  href={recipe.container.href}
+                                  aria-label={recipe.container.title}
+                                  data-tip-title={recipe.container.tooltipLine1}
+                                  data-tip-sub={recipe.container.tooltipLine2}
+                                >
+                                  <img class="recipeSlotIcon" src={recipe.container.icon} alt={recipe.container.title} loading="lazy" />
+                                </a>
+                              ) : (
+                                <div
+                                  class="recipeSlot recipeSlotContainer recipeSlotHasItem"
+                                  aria-label={recipe.container.title}
+                                  data-tip-title={recipe.container.tooltipLine1}
+                                  data-tip-sub={recipe.container.tooltipLine2}
+                                >
+                                  <img class="recipeSlotIcon" src={recipe.container.icon} alt={recipe.container.title} loading="lazy" />
+                                </div>
+                              )
+                            ) : (
+                              <div class="recipeSlot recipeSlotContainer" aria-hidden="true"></div>
+                            )
+                          ) : null}
+                        </div>
+
+                        <div class="recipeArrow" aria-hidden="true">→</div>
+
+                        <div class="recipeOutput" aria-label="Output">
+                          {recipe.output && recipe.output.icon ? (
+                            recipe.output.href ? (
                               <a
-                                class={`recipeSlot recipeSlotHasItem ${slot.isTag ? "recipeSlotTag" : ""}`}
-                                href={slot.href}
-                                aria-label={slot.title}
-                                data-tip-title={slot.tooltipLine1}
-                                data-tip-sub={slot.tooltipLine2}
+                                class="recipeSlot recipeSlotHasItem"
+                                href={recipe.output.href}
+                                aria-label={recipe.output.title}
+                                data-tip-title={recipe.output.tooltipLine1}
+                                data-tip-sub={recipe.output.tooltipLine2}
                               >
-                                <img class="recipeSlotIcon" src={slot.icon} alt={slot.title} loading="lazy" />
+                                <img class="recipeSlotIcon" src={recipe.output.icon} alt={recipe.output.title} loading="lazy" />
                               </a>
                             ) : (
                               <div
-                                class={`recipeSlot recipeSlotHasItem ${slot.isTag ? "recipeSlotTag" : ""}`}
-                                aria-label={slot.title}
-                                data-tip-title={slot.tooltipLine1}
-                                data-tip-sub={slot.tooltipLine2}
+                                class="recipeSlot recipeSlotHasItem"
+                                aria-label={recipe.output.title}
+                                data-tip-title={recipe.output.tooltipLine1}
+                                data-tip-sub={recipe.output.tooltipLine2}
                               >
-                                <img class="recipeSlotIcon" src={slot.icon} alt={slot.title} loading="lazy" />
+                                <img class="recipeSlotIcon" src={recipe.output.icon} alt={recipe.output.title} loading="lazy" />
                               </div>
                             )
                           ) : (
                             <div class="recipeSlot" aria-hidden="true"></div>
-                          )
-                        )}
-
-                        {recipe.station.showContainerSlot ? (
-                          recipe.container && recipe.container.icon ? (
-                            recipe.container.href ? (
-                              <a
-                                class="recipeSlot recipeSlotContainer recipeSlotHasItem"
-                                href={recipe.container.href}
-                                aria-label={recipe.container.title}
-                                data-tip-title={recipe.container.tooltipLine1}
-                                data-tip-sub={recipe.container.tooltipLine2}
-                              >
-                                <img class="recipeSlotIcon" src={recipe.container.icon} alt={recipe.container.title} loading="lazy" />
-                              </a>
-                            ) : (
-                              <div
-                                class="recipeSlot recipeSlotContainer recipeSlotHasItem"
-                                aria-label={recipe.container.title}
-                                data-tip-title={recipe.container.tooltipLine1}
-                                data-tip-sub={recipe.container.tooltipLine2}
-                              >
-                                <img class="recipeSlotIcon" src={recipe.container.icon} alt={recipe.container.title} loading="lazy" />
-                              </div>
-                            )
-                          ) : (
-                            <div class="recipeSlot recipeSlotContainer" aria-hidden="true"></div>
-                          )
-                        ) : null}
-                      </div>
-
-                      <div class="recipeArrow" aria-hidden="true">→</div>
-
-                      <div class="recipeOutput" aria-label="Output">
-                        {recipe.output && recipe.output.icon ? (
-                          recipe.output.href ? (
-                            <a
-                              class="recipeSlot recipeSlotHasItem"
-                              href={recipe.output.href}
-                              aria-label={recipe.output.title}
-                              data-tip-title={recipe.output.tooltipLine1}
-                              data-tip-sub={recipe.output.tooltipLine2}
-                            >
-                              <img class="recipeSlotIcon" src={recipe.output.icon} alt={recipe.output.title} loading="lazy" />
-                            </a>
-                          ) : (
-                            <div
-                              class="recipeSlot recipeSlotHasItem"
-                              aria-label={recipe.output.title}
-                              data-tip-title={recipe.output.tooltipLine1}
-                              data-tip-sub={recipe.output.tooltipLine2}
-                            >
-                              <img class="recipeSlotIcon" src={recipe.output.icon} alt={recipe.output.title} loading="lazy" />
-                            </div>
-                          )
-                        ) : (
-                          <div class="recipeSlot" aria-hidden="true"></div>
-                        )}
+                          )}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </article>
-              ))}
+                  </article>
+                );
+              })}
             </div>
           </section>
         ))}
@@ -262,6 +282,31 @@ const groupedStations = Object.values(
     const cards = Array.from(document.querySelectorAll("[data-card][data-search]"))
     const sections = Array.from(document.querySelectorAll("[data-section]"))
     const toggles = Array.from(document.querySelectorAll("[data-section-toggle]"))
+
+    const getHashId = () => {
+      const raw = (window.location.hash || "").slice(1)
+      return raw ? raw.trim() : ""
+    }
+
+    const setHash = (hashId) => {
+      const cleanId = String(hashId || "").trim()
+      if (!cleanId) {
+        history.replaceState(null, "", window.location.pathname + window.location.search)
+        return
+      }
+      history.replaceState(null, "", `#${cleanId}`)
+    }
+
+    const isInteractiveTarget = (target) => {
+      if (!target) return false
+      return Boolean(target.closest("a, button, input, textarea, select, label, summary, details"))
+    }
+
+    const setCollapsed = (section, collapsed) => {
+      section.dataset.collapsed = collapsed ? "true" : "false"
+      const toggle = section.querySelector("[data-section-toggle]")
+      if (toggle) toggle.setAttribute("aria-expanded", collapsed ? "false" : "true")
+    }
 
     const update = () => {
       const q = (input.value || "").trim().toLowerCase()
@@ -286,10 +331,35 @@ const groupedStations = Object.values(
       empty.style.display = visible === 0 ? "" : "none"
     }
 
-    const setCollapsed = (section, collapsed) => {
-      section.dataset.collapsed = collapsed ? "true" : "false"
-      const toggle = section.querySelector("[data-section-toggle]")
-      if (toggle) toggle.setAttribute("aria-expanded", collapsed ? "false" : "true")
+    const openFromHash = () => {
+      const hashId = getHashId()
+      if (!hashId) return
+
+      const target = document.getElementById(hashId)
+      if (!target) return
+
+      const card = target.classList.contains("recipeCard") ? target : target.closest(".recipeCard")
+      if (!card) return
+
+      const section = card.closest("[data-section]")
+      if (section) setCollapsed(section, false)
+
+      requestAnimationFrame(() => {
+        card.scrollIntoView({ behavior: "smooth", block: "center" })
+      })
+    }
+
+    const activateCardLink = (card) => {
+      if (!card || !card.id) return
+
+      setHash(card.id)
+
+      const section = card.closest("[data-section]")
+      if (section) setCollapsed(section, false)
+
+      requestAnimationFrame(() => {
+        card.scrollIntoView({ behavior: "smooth", block: "center" })
+      })
     }
 
     for (const toggle of toggles) {
@@ -305,7 +375,30 @@ const groupedStations = Object.values(
       })
     }
 
+    document.addEventListener("click", (event) => {
+      if (isInteractiveTarget(event.target)) return
+
+      const card = event.target.closest('.recipeCard[data-card-link="true"]')
+      if (!card) return
+
+      activateCardLink(card)
+    })
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return
+      if (isInteractiveTarget(event.target)) return
+
+      const card = event.target.closest('.recipeCard[data-card-link="true"]')
+      if (!card) return
+
+      event.preventDefault()
+      activateCardLink(card)
+    })
+
     input.addEventListener("input", update)
+    window.addEventListener("hashchange", openFromHash, { passive: true })
+
     update()
+    openFromHash()
   </script>
 </SiteLayout>

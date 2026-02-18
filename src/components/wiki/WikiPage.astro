@@ -30,6 +30,8 @@ const escapeHtml = (value) =>
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
 
+const escapeHtmlWithBreaks = (value) => escapeHtml(value).replace(/\r\n|\r|\n/g, "<br />");
+
 const normalizeId = (value) =>
   String(value ?? "")
     .trim()
@@ -48,7 +50,7 @@ const linkifyText = (text) => {
     const match = part.match(/^\[\[(.+?)(?:\|(.+?))?\]\]$/);
 
     if (!match) {
-      out += escapeHtml(part);
+      out += escapeHtmlWithBreaks(part);
       continue;
     }
 
@@ -122,6 +124,7 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
       searchPlaceholder={searchPlaceholder}
       sections={sections}
       impressions={impressions}
+      recipesCta={config?.recipesCta}
     />
 
     <div class="wikiContent" data-wiki-content>
@@ -137,9 +140,9 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
             <span>{aboutTitle}</span>
           </div>
 
-          {aboutSubtitle ? <p class="sectionSubtitle">{aboutSubtitle}</p> : null}
+          {aboutSubtitle ? <p class="sectionSubtitle" set:html={escapeHtmlWithBreaks(aboutSubtitle)} /> : null}
 
-          {aboutText ? <div class="aboutText">{aboutText}</div> : null}
+          {aboutText ? <div class="aboutText" set:html={escapeHtmlWithBreaks(aboutText)} /> : null}
         </section>
 
         {sections.map((section) => {
@@ -152,7 +155,7 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
                   <span>{section.title}</span>
                 </div>
 
-                {section.subtitle ? <p class="sectionSubtitle">{section.subtitle}</p> : null}
+                {section.subtitle ? <p class="sectionSubtitle" set:html={escapeHtmlWithBreaks(section.subtitle)} /> : null}
               </div>
 
               <div class="gridWrapper">
@@ -194,7 +197,7 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
                           <div class="wikiCardDetails" aria-hidden="true">
                             <div class="wikiDetailsHeader">
                               <div class="wikiDetailsTitle">{detailsOpenTitle}</div>
-                              {entry.detailsSubtitle ? <div class="wikiDetailsSubtitle">{entry.detailsSubtitle}</div> : null}
+                              {entry.detailsSubtitle ? <div class="wikiDetailsSubtitle" set:html={escapeHtmlWithBreaks(entry.detailsSubtitle)} /> : null}
                             </div>
 
                             {entry.detailsText ? <div class="wikiDetailsText" set:html={linkifyText(entry.detailsText)} /> : null}
@@ -210,7 +213,7 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
                             ) : null}
 
                             {Array.isArray(entry.detailsGallery) && entry.detailsGallery.length ? (
-                              <div class="wikiDetailsGallery">
+                              <div class="wikiCardDetailsGallery">
                                 {entry.detailsGallery.map((g) => (
                                   <div class="wikiGalleryItem">
                                     <img class="wikiGalleryImg" src={g.icon ? withBase(g.icon) : ""} alt={g.title ?? ""} loading="lazy" />
@@ -242,7 +245,7 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
                                       <div class="wikiMiniBody">
                                         <div class="wikiMiniTitle">{it.title ?? titleCaseFromId(it.id)}</div>
                                         {it.namespace_id ? <div class="wikiMiniNs">{it.namespace_id}</div> : null}
-                                        {it.subtitle ? <div class="wikiMiniSub">{it.subtitle}</div> : null}
+                                        {it.subtitle ? <div class="wikiMiniSub" set:html={escapeHtmlWithBreaks(it.subtitle)} /> : null}
                                       </div>
                                     </article>
                                   );
@@ -277,6 +280,22 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
             </section>
           );
         })}
+
+        {config?.recipesCta?.enabled ? (
+          <section class="section sectionCentered sectionTight wikiSection wikiRecipesCta" id="recipes" data-section="recipes">
+            <div class="sectionTitle">
+              <span>{config.recipesCta.title ?? "Recipes"}</span>
+            </div>
+
+            {config.recipesCta.text ? <p class="sectionSubtitle" set:html={escapeHtmlWithBreaks(config.recipesCta.text)} /> : null}
+
+            <div class="wikiRecipesCtaAction">
+              <a class="btn btnPrimary" href={withBase(config.recipesCta.href ?? "/recipes/")}>
+                {config.recipesCta.buttonLabel ?? "Open Recipe Overview"}
+              </a>
+            </div>
+          </section>
+        ) : null}
 
         <Impressions id="impressions" title={impressionsTitle} subtitle={impressionsSubtitle} images={impressions} />
       </div>

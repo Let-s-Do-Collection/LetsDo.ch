@@ -1,5 +1,23 @@
 ---
-const { activeWikiTitle, wikis, activeSlug, wikiHref, searchPlaceholder, sections, impressions } = Astro.props;
+const {
+  activeWikiTitle,
+  wikis,
+  activeSlug,
+  wikiHref,
+  searchPlaceholder,
+  sections = [],
+  impressions = [],
+  recipesCta
+} = Astro.props;
+
+const normalizeId = (value) =>
+  String(value ?? "")
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "_")
+    .replace(/[^\w\-]/g, "");
+
+const showRecipesCta = !!(recipesCta?.enabled && recipesCta?.href);
 ---
 
 <aside class="wikiSidebarFixed" data-wiki-sidebar>
@@ -25,7 +43,9 @@ const { activeWikiTitle, wikis, activeSlug, wikiHref, searchPlaceholder, section
             data-wiki-slug={w.slug}
           >
             <span class="wikiDropdownItemTitle">{w.title}</span>
-            {w.slug === activeSlug ? <span class="wikiDropdownCheck" aria-hidden="true">✓</span> : null}
+            {w.slug === activeSlug ? (
+              <span class="wikiDropdownCheck" aria-hidden="true">✓</span>
+            ) : null}
           </a>
         ))}
       </div>
@@ -46,14 +66,36 @@ const { activeWikiTitle, wikis, activeSlug, wikiHref, searchPlaceholder, section
       <div class="wikiSideHeading">Content</div>
 
       <nav class="wikiSideNav">
-        {sections.map((section) => (
-          <a class="wikiSideLink" href={`#${section.id}`} data-section-link={section.id}>
-            {section.title}
+        {sections.map((section) => {
+          const sectionId = normalizeId(section.id);
+
+          return (
+            <a
+              class="wikiSideLink"
+              href={`#${sectionId}`}
+              data-section-link={sectionId}
+            >
+              {section.title}
+            </a>
+          );
+        })}
+
+        {showRecipesCta ? (
+          <a
+            class="wikiSideLink"
+            href="#recipes"
+            data-section-link="recipes"
+          >
+            Recipes
           </a>
-        ))}
+        ) : null}
 
         {impressions.length ? (
-          <a class="wikiSideLink" href="#impressions" data-section-link="impressions">
+          <a
+            class="wikiSideLink"
+            href="#impressions"
+            data-section-link="impressions"
+          >
             Impressions
           </a>
         ) : null}
