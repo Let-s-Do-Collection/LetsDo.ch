@@ -4,10 +4,12 @@ import { buildDryingStation } from "./grids/drying.js";
 import { buildMincerStation } from "./grids/mincer.js";
 import { buildRoasterStation } from "./grids/roaster.js";
 import { buildStoveStation } from "./grids/stove.js";
+import { buildBrewingStation } from "./grids/brewing.js";
 import { buildOtherStation } from "./grids/other.js";
 import {
   normalizeId,
   flattenWikiEntries,
+  mergeWikiEntries,
   createItemResolver,
   pickStationId,
   extractIngredients,
@@ -15,7 +17,7 @@ import {
   extractOutput
 } from "./recipe_logic.js";
 
-export { normalizeId, flattenWikiEntries };
+export { normalizeId, flattenWikiEntries, mergeWikiEntries };
 
 const stationKeyFromSourcePath = (sourcePath) => {
   const raw = String(sourcePath ?? "");
@@ -31,9 +33,9 @@ const stationKeyFromSourcePath = (sourcePath) => {
   return stationSegment ? String(stationSegment) : "";
 };
 
-export const buildStationRegistry = ({ farmAndCharmEntries }) => {
+export const buildStationRegistry = ({ wikiEntries }) => {
   const registry = new Map();
-  const itemResolver = createItemResolver({ farmAndCharmEntries });
+  const itemResolver = createItemResolver({ wikiEntries });
 
   const addStation = (station) => {
     if (!station || !station.key) return;
@@ -47,12 +49,13 @@ export const buildStationRegistry = ({ farmAndCharmEntries }) => {
     }
   };
 
-  addStation(buildCookingPotStation({ farmAndCharmEntries, itemResolver }));
-  addStation(buildRoasterStation({ farmAndCharmEntries, itemResolver }));
-  addStation(buildStoveStation({ farmAndCharmEntries, itemResolver }));
-  addStation(buildCraftingBowlStation({ farmAndCharmEntries, itemResolver }));
-  addStation(buildDryingStation({ farmAndCharmEntries, itemResolver }));
-  addStation(buildMincerStation({ farmAndCharmEntries, itemResolver }));
+  addStation(buildCookingPotStation({ wikiEntries, itemResolver }));
+  addStation(buildRoasterStation({ wikiEntries, itemResolver }));
+  addStation(buildStoveStation({ wikiEntries, itemResolver }));
+  addStation(buildCraftingBowlStation({ wikiEntries, itemResolver }));
+  addStation(buildDryingStation({ wikiEntries, itemResolver }));
+  addStation(buildMincerStation({ wikiEntries, itemResolver }));
+  addStation(buildBrewingStation({ wikiEntries, itemResolver }));
   addStation(buildOtherStation({ itemResolver }));
 
   return {
@@ -61,7 +64,7 @@ export const buildStationRegistry = ({ farmAndCharmEntries }) => {
   };
 };
 
-export const normalizeRecipes = ({ recipes, stationRegistry, farmAndCharmEntries, toTitle }) => {
+export const normalizeRecipes = ({ recipes, stationRegistry, wikiEntries, toTitle }) => {
   const out = [];
   const registry = stationRegistry?.registry;
   const itemResolver = stationRegistry?.itemResolver;
@@ -98,7 +101,8 @@ export const normalizeRecipes = ({ recipes, stationRegistry, farmAndCharmEntries
       output: outputRef,
       station,
       normalizeItemRef: (ref) => itemResolver.normalizeItemRef(ref, toTitle),
-      titleFn: (id) => toTitle(id)
+      titleFn: (id) => toTitle(id),
+      wikiEntries
     });
 
     if (!normalized || !normalized.output) continue;

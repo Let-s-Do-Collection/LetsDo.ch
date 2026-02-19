@@ -120,6 +120,77 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.recipesSearch {
+  max-width: 720px;
+  margin: 22px auto 28px;
+  display: grid;
+  gap: 10px;
+}
+
+.recipeStationIconBadge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  z-index: 3;
+  cursor: help;
+}
+
+.recipeStationIconBadgeIcon {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+
+.recipeStationIconBadge[data-tip-title]::after {
+  content: attr(data-tip-title);
+  position: absolute;
+  left: 0;
+  top: calc(100% + 10px);
+  white-space: nowrap;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  line-height: 1;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  opacity: 0;
+  transform: translateY(4px);
+  pointer-events: none;
+  transition: opacity 120ms ease, transform 120ms ease;
+}
+
+.recipeStationIconBadge[data-tip-sub]::before {
+  content: attr(data-tip-sub);
+  position: absolute;
+  left: 0;
+  top: calc(100% + 36px);
+  white-space: nowrap;
+  padding: 7px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  line-height: 1;
+  background: var(--card);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  box-shadow: var(--shadow);
+  opacity: 0;
+  transform: translateY(4px);
+  pointer-events: none;
+  transition: opacity 120ms ease, transform 120ms ease;
+}
+
+.recipeStationIconBadge[data-tip-title]:hover::after,
+.recipeStationIconBadge[data-tip-sub]:hover::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (max-width: 1040px) {
   .recipesGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));

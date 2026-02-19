@@ -4,8 +4,31 @@ import NavBar from "../components/NavBar.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/mods.css";
 import "../styles/recipes.css";
+
+import alpineWhispers from "./wiki/config/alpine-whispers.js";
+import bakery from "./wiki/config/bakery.js";
+import beachparty from "./wiki/config/beachparty.js";
+import bloomingnature from "./wiki/config/bloomingnature.js";
+import brewery from "./wiki/config/brewery.js";
+import camping from "./wiki/config/camping.js";
+import candlelight from "./wiki/config/candlelight.js";
 import farmAndCharm from "./wiki/config/farm-and-charm.js";
-import { buildStationRegistry, flattenWikiEntries, normalizeRecipes } from "./recipes/recipe_grids.js";
+import furniture from "./wiki/config/furniture.js";
+import hearthAndTimber from "./wiki/config/hearth-and-timber.js";
+import herbalbrews from "./wiki/config/herbalbrews.js";
+import lilisLuckyLures from "./wiki/config/lilis-lucky-lures.js";
+import lilisPottery from "./wiki/config/lilis-pottery.js";
+import meadow from "./wiki/config/meadow.js";
+import vinery from "./wiki/config/vinery.js";
+import wildernature from "./wiki/config/wildernature.js";
+
+import {
+  buildStationRegistry,
+  flattenWikiEntries,
+  mergeWikiEntries,
+  normalizeRecipes,
+  normalizeId
+} from "./recipes/recipe_grids.js";
 
 const toTitle = (identifier) => {
   const raw = String(identifier ?? "");
@@ -17,15 +40,29 @@ const toTitle = (identifier) => {
     .join(" ");
 };
 
-const normalizeId = (value) =>
-  String(value ?? "")
-    .trim()
-    .toLowerCase()
-    .replace(/\s+/g, "_")
-    .replace(/[^\w\-]/g, "");
+const allWikiConfigs = [
+  alpineWhispers,
+  bakery,
+  beachparty,
+  bloomingnature,
+  brewery,
+  camping,
+  candlelight,
+  farmAndCharm,
+  furniture,
+  hearthAndTimber,
+  herbalbrews,
+  lilisLuckyLures,
+  lilisPottery,
+  meadow,
+  vinery,
+  wildernature
+];
 
-const farmAndCharmEntries = flattenWikiEntries(farmAndCharm);
-const stationRegistry = buildStationRegistry({ farmAndCharmEntries });
+const wikiIndexes = allWikiConfigs.map((config) => flattenWikiEntries(config));
+const wikiEntries = mergeWikiEntries(wikiIndexes);
+
+const stationRegistry = buildStationRegistry({ wikiEntries });
 
 const recipeModules = import.meta.glob("../recipes/**/*.json", { eager: true });
 
@@ -52,7 +89,7 @@ const loadedRecipes = Object.entries(recipeModules)
 const normalizedRecipes = normalizeRecipes({
   recipes: loadedRecipes,
   stationRegistry,
-  farmAndCharmEntries,
+  wikiEntries,
   toTitle
 });
 
@@ -128,7 +165,7 @@ This overview is meant for anyone who wants to quickly check ingredients, output
       </div>
 
       <div class="recipesSections">
-        {groupedStations.map((group, index) => (
+        {groupedStations.map((group) => (
           <section
             class="recipesSection"
             data-section
@@ -165,7 +202,19 @@ This overview is meant for anyone who wants to quickly check ingredients, output
                     tabindex="0"
                     role="link"
                     aria-label={recipe.outputTitle ?? "Open"}
+                    style="position:relative;"
                   >
+                    {recipe.stationIcon ? (
+                      <img
+                        class="recipeStationIconBadge"
+                        src={recipe.stationIcon}
+                        alt={recipe.stationIconAlt}
+                        loading="lazy"
+                        data-tip-title={recipe.stationRequirementTitle}
+                        data-tip-sub={recipe.stationRequirementTier}
+                      />
+                    ) : null}
+
                     <div class="recipeHeader">
                       <h3 class="recipeTitle">{recipe.outputTitle}</h3>
                       <div class="recipeSubtitle">{recipe.outputSubtitle}</div>
@@ -313,7 +362,7 @@ This overview is meant for anyone who wants to quickly check ingredients, output
       let visible = 0
 
       for (const card of cards) {
-        const hay = card.getAttribute("data-search") || ""
+        const hay = (card.getAttribute("data-search") || "").toLowerCase()
         const show = q.length === 0 || hay.includes(q)
         card.style.display = show ? "" : "none"
         if (show) visible++

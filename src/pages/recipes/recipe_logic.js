@@ -14,28 +14,17 @@ const splitNamespacedId = (value) => {
   return { namespace: namespace ?? "", path: path ?? "" };
 };
 
-const tagIconName = (tagId) => {
-  if (!isNamespacedId(tagId)) return "";
-  const { path } = splitNamespacedId(tagId);
-  if (!path) return "";
-  return String(path).split("/").filter(Boolean).pop() ?? "";
-};
+export const iconFolderFromNamespace = (namespace) => String(namespace ?? "").replace(/_/g, "-");
 
-const iconFromItemId = (namespacedId) => {
+export const iconFromItemId = (namespacedId) => {
   if (!isNamespacedId(namespacedId)) return "";
   const { namespace, path } = splitNamespacedId(namespacedId);
   if (!namespace || !path) return "";
-  const folder = namespace === "farm_and_charm" ? "farm-and-charm" : namespace;
+  const folder = iconFolderFromNamespace(namespace);
   return `/assets/icons/${folder}/${path}.webp`;
 };
 
-const iconFromTagId = (tagId) => {
-  const name = tagIconName(tagId);
-  if (!name) return "";
-  return `/assets/icons/tags/${name}.webp`;
-};
-
-const wikiHrefForEntry = (wikiSlug, entryId) => {
+export const wikiHrefForEntry = (wikiSlug, entryId) => {
   const clean = normalizeId(entryId);
   if (!clean) return "";
   return `/wiki/${wikiSlug}/#${clean}`;
@@ -51,11 +40,17 @@ export const flattenWikiEntries = (wikiConfig) => {
 
     const id = entry.id ? String(entry.id) : "";
     const namespaceId = entry.namespace_id ? String(entry.namespace_id) : "";
+
     const normalizedEntry = { ...entry, __wikiSlug: wikiSlug };
 
-    if (id) byId.set(id, normalizedEntry);
-    if (namespaceId) byNamespaceId.set(namespaceId, normalizedEntry);
-    if (id || namespaceId) entries.push(normalizedEntry);
+    if (id) {
+      entries.push(normalizedEntry);
+      byId.set(id, normalizedEntry);
+      if (namespaceId) byNamespaceId.set(namespaceId, normalizedEntry);
+    } else if (namespaceId) {
+      entries.push(normalizedEntry);
+      byNamespaceId.set(namespaceId, normalizedEntry);
+    }
 
     const items = Array.isArray(entry.items) ? entry.items : [];
     for (const item of items) {
@@ -69,6 +64,7 @@ export const flattenWikiEntries = (wikiConfig) => {
         byId.set(itemId, normalizedItem);
         entries.push(normalizedItem);
       }
+
       if (itemNamespaceId) {
         byNamespaceId.set(itemNamespaceId, normalizedItem);
         entries.push(normalizedItem);
@@ -85,6 +81,53 @@ export const flattenWikiEntries = (wikiConfig) => {
   }
 
   return { entries, byNamespaceId, byId, wikiSlug };
+};
+
+export const mergeWikiEntries = (indexes) => {
+  const mergedEntries = [];
+  const byNamespaceId = new Map();
+  const byId = new Map();
+
+  const list = Array.isArray(indexes) ? indexes : [];
+  for (const index of list) {
+    const entries = Array.isArray(index?.entries) ? index.entries : [];
+    mergedEntries.push(...entries);
+
+    const mapNamespace = index?.byNamespaceId instanceof Map ? index.byNamespaceId : new Map();
+    for (const [key, value] of mapNamespace.entries()) {
+      if (!byNamespaceId.has(key)) byNamespaceId.set(key, value);
+    }
+
+    const mapId = index?.byId instanceof Map ? index.byId : new Map();
+    for (const [key, value] of mapId.entries()) {
+      if (!byId.has(key)) byId.set(key, value);
+    }
+  }
+
+  return { entries: mergedEntries, byNamespaceId, byId };
+};
+
+export const titleFromId = (identifier) => {
+  const raw = String(identifier ?? "");
+  const path = raw.includes(":") ? raw.split(":")[1] : raw;
+  return String(path ?? "")
+    .split("_")
+    .filter(Boolean)
+    .map((word) => word.slice(0, 1).toUpperCase() + word.slice(1))
+    .join(" ");
+};
+
+const tagIconName = (tagId) => {
+  if (!isNamespacedId(tagId)) return "";
+  const { path } = splitNamespacedId(tagId);
+  if (!path) return "";
+  return String(path).split("/").filter(Boolean).pop() ?? "";
+};
+
+const iconFromTagId = (tagId) => {
+  const name = tagIconName(tagId);
+  if (!name) return "";
+  return `/assets/icons/tags/${name}.webp`;
 };
 
 export const pickStationId = (recipe) => {
@@ -234,30 +277,30 @@ const tagDisplayName = (tagId) => {
   return `#${name}`;
 };
 
-const resolveTagToItemId = (tagId, farmAndCharmEntries) => {
+const resolveTagToItemId = (tagId, wikiEntries) => {
   if (!isNamespacedId(tagId)) return "";
 
   const { path } = splitNamespacedId(tagId);
   const base = String(path).split("/").filter(Boolean).pop() ?? "";
   if (!base) return "";
 
-  const preferred = ["farm_and_charm", "bakery", "candlelight", "vinery", "meadow", "minecraft"];
+  const preferred = ["farm_and_charm", "bakery", "candlelight", "vinery", "meadow", "brewery", "minecraft"];
 
   for (const namespace of preferred) {
     const candidate = `${namespace}:${base}`;
-    if (farmAndCharmEntries?.byNamespaceId?.has(candidate)) return candidate;
+    if (wikiEntries?.byNamespaceId?.has(candidate)) return candidate;
   }
 
-  for (const [key] of farmAndCharmEntries?.byNamespaceId?.entries?.() ?? []) {
+  for (const [key] of wikiEntries?.byNamespaceId?.entries?.() ?? []) {
     if (!isNamespacedId(key)) continue;
-    const { path: p } = splitNamespacedId(key);
-    if (p === base) return key;
+    const { path: candidatePath } = splitNamespacedId(key);
+    if (candidatePath === base) return key;
   }
 
   return "";
 };
 
-export const createItemResolver = ({ farmAndCharmEntries }) => {
+export const createItemResolver = ({ wikiEntries }) => {
   const normalizeItemRef = (ref, titleFn) => {
     if (!ref || !ref.id || !ref.kind) return null;
 
@@ -266,8 +309,9 @@ export const createItemResolver = ({ farmAndCharmEntries }) => {
       const title = titleFn ? titleFn(itemId) : itemId;
       const icon = iconFromItemId(itemId);
 
-      const wikiEntry = farmAndCharmEntries?.byNamespaceId?.get(itemId) ?? null;
-      const href = wikiEntry ? wikiHrefForEntry(farmAndCharmEntries.wikiSlug, wikiEntry.id ?? "") : "";
+      const wikiEntry = wikiEntries?.byNamespaceId?.get(itemId) ?? null;
+      const wikiSlug = wikiEntry?.__wikiSlug ? String(wikiEntry.__wikiSlug) : "";
+      const href = wikiEntry && wikiSlug ? wikiHrefForEntry(wikiSlug, wikiEntry.id ?? "") : "";
 
       return {
         kind: "item",
@@ -282,12 +326,13 @@ export const createItemResolver = ({ farmAndCharmEntries }) => {
 
     if (ref.kind === "tag") {
       const tagId = ref.id;
-      const resolvedItemId = resolveTagToItemId(tagId, farmAndCharmEntries);
+      const resolvedItemId = resolveTagToItemId(tagId, wikiEntries);
       const title = resolvedItemId ? (titleFn ? titleFn(resolvedItemId) : resolvedItemId) : tagDisplayName(tagId);
       const icon = iconFromTagId(tagId);
 
-      const wikiEntry = resolvedItemId ? farmAndCharmEntries?.byNamespaceId?.get(resolvedItemId) ?? null : null;
-      const href = wikiEntry ? wikiHrefForEntry(farmAndCharmEntries.wikiSlug, wikiEntry.id ?? "") : "";
+      const wikiEntry = resolvedItemId ? wikiEntries?.byNamespaceId?.get(resolvedItemId) ?? null : null;
+      const wikiSlug = wikiEntry?.__wikiSlug ? String(wikiEntry.__wikiSlug) : "";
+      const href = wikiEntry && wikiSlug ? wikiHrefForEntry(wikiSlug, wikiEntry.id ?? "") : "";
 
       return {
         kind: "tag",
