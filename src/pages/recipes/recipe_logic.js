@@ -200,6 +200,7 @@ export const extractItemOrTag = (value) => {
 export const extractIngredients = (recipe) => {
   const candidates = [
     recipe?.ingredients,
+    recipe?.ingredient,
     recipe?.inputs,
     recipe?.input,
     recipe?.items,
@@ -208,7 +209,11 @@ export const extractIngredients = (recipe) => {
 
   for (const candidate of candidates) {
     if (Array.isArray(candidate)) return candidate;
+
     if (typeof candidate === "object") {
+      const found = extractItemOrTag(candidate);
+      if (found.kind) return [candidate];
+
       const asArray = Object.values(candidate);
       if (asArray.length) return asArray;
     }
