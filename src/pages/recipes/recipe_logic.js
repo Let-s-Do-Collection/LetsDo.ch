@@ -5,7 +5,8 @@ export const normalizeId = (value) =>
     .replace(/\s+/g, "_")
     .replace(/[^\w\-]/g, "");
 
-const isNamespacedId = (value) => typeof value === "string" && value.includes(":") && value.split(":").length === 2;
+const isNamespacedId = (value) =>
+  typeof value === "string" && value.includes(":") && value.split(":").length === 2;
 
 const splitNamespacedId = (value) => {
   const raw = String(value ?? "");
@@ -14,7 +15,8 @@ const splitNamespacedId = (value) => {
   return { namespace: namespace ?? "", path: path ?? "" };
 };
 
-export const iconFolderFromNamespace = (namespace) => String(namespace ?? "").replace(/_/g, "-");
+export const iconFolderFromNamespace = (namespace) =>
+  String(namespace ?? "").replace(/_/g, "-");
 
 export const iconFromItemId = (namespacedId) => {
   if (!isNamespacedId(namespacedId)) return "";
@@ -196,7 +198,13 @@ export const extractItemOrTag = (value) => {
 };
 
 export const extractIngredients = (recipe) => {
-  const candidates = [recipe?.ingredients, recipe?.inputs, recipe?.input, recipe?.items, recipe?.itemInputs].filter(Boolean);
+  const candidates = [
+    recipe?.ingredients,
+    recipe?.inputs,
+    recipe?.input,
+    recipe?.items,
+    recipe?.itemInputs
+  ].filter(Boolean);
 
   for (const candidate of candidates) {
     if (Array.isArray(candidate)) return candidate;
@@ -210,16 +218,30 @@ export const extractIngredients = (recipe) => {
 };
 
 export const extractContainer = (recipe) => {
-  const candidates = [recipe?.container, recipe?.bottle, recipe?.vessel, recipe?.tool, recipe?.requires].filter(Boolean);
+  const candidates = [
+    recipe?.container,
+    recipe?.bottle,
+    recipe?.vessel,
+    recipe?.tool,
+    recipe?.requires
+  ].filter(Boolean);
+
   for (const candidate of candidates) {
     const found = extractItemOrTag(candidate);
     if (found.kind === "item") return found.value;
   }
+
   return "";
 };
 
 export const extractOutput = (recipe) => {
-  const candidates = [recipe?.result, recipe?.output, recipe?.item, recipe?.produces, recipe?.crafts].filter(Boolean);
+  const candidates = [
+    recipe?.result,
+    recipe?.output,
+    recipe?.item,
+    recipe?.produces,
+    recipe?.crafts
+  ].filter(Boolean);
 
   for (const candidate of candidates) {
     const found = extractItemOrTag(candidate);
@@ -283,10 +305,13 @@ export const buildTagSlot = ({ tagId, wikiEntries, fallbackNamespaces, tagAliasM
   const wikiSlug = wikiEntry?.__wikiSlug ? String(wikiEntry.__wikiSlug) : "";
   const href = wikiEntry && wikiSlug ? wikiHrefForEntry(wikiSlug, wikiEntry.id ?? "") : "";
 
+  const tagBase = normalizeId(tagPathBase(tagId));
+  const icon = tagBase ? `/assets/icons/misc/tags/${tagBase}.webp` : "/assets/icons/misc/tag.webp";
+
   return {
     id: String(tagId ?? ""),
     title,
-    icon: "/assets/icons/misc/tag.webp",
+    icon,
     href: href || "",
     tooltipLine1: title,
     tooltipLine2: `Uses tag ${tagText}`
