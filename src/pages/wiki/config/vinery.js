@@ -937,5 +937,17 @@ They may appear in various loot containers, such as village chests, dungeon ches
         }
       ]
     }
-  ]
-}
+  ],
+    recipesCta: {
+      enabled: true,
+      title: "Recipes",
+      text: `Feeling a little lost and not sure how to craft certain things?
+
+    Here you will find a helpful overview of all Let’s Do crafting stations and their recipes.
+
+    `,
+      buttonLabel: "Open Recipe Overview",
+      href: "/recipes/"
+    },
+  }
+

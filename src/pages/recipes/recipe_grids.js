@@ -5,6 +5,7 @@ import { buildMincerStation } from "./grids/mincer.js";
 import { buildRoasterStation } from "./grids/roaster.js";
 import { buildStoveStation } from "./grids/stove.js";
 import { buildBrewingStation } from "./grids/brewing.js";
+import { buildWineFermentationStation } from "./grids/wine_fermentation.js";
 import { buildOtherStation } from "./grids/other.js";
 import {
   normalizeId,
@@ -27,10 +28,9 @@ const stationKeyFromSourcePath = (sourcePath) => {
   const parts = normalized.split("/").filter(Boolean);
 
   const recipesIndex = parts.lastIndexOf("recipes");
-
   if (recipesIndex === -1) return "";
 
-  const stationSegment = parts[recipesIndex + 2] ?? "";
+  const stationSegment = parts[recipesIndex + 1] ?? "";
   return stationSegment ? String(stationSegment) : "";
 };
 
@@ -57,6 +57,7 @@ export const buildStationRegistry = ({ wikiEntries, tagAliasMap, fallbackNamespa
   addStation(buildDryingStation({ wikiEntries, itemResolver }));
   addStation(buildMincerStation({ wikiEntries, itemResolver }));
   addStation(buildBrewingStation({ wikiEntries, itemResolver }));
+  addStation(buildWineFermentationStation({ wikiEntries, itemResolver }));
   addStation(buildOtherStation({ itemResolver }));
 
   return {

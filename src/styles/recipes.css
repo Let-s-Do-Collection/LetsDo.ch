@@ -537,3 +537,51 @@
   border-top: 1px solid var(--recipe-tooltip-border);
   z-index: 51;
 }
+
+.recipeLayoutWineFermentation {
+  display: grid;
+  grid-template-columns: auto var(--recipe-arrow-size) var(--recipe-slot-size);
+  grid-template-rows: repeat(2, var(--recipe-slot-size));
+  column-gap: 18px;
+  row-gap: var(--recipe-slot-gap);
+  justify-content: center;
+  align-items: center;
+  padding-bottom: calc(var(--recipe-slot-size) + var(--recipe-slot-gap));
+}
+
+.recipeLayoutWineFermentation .recipeInputs {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  display: grid;
+  grid-template-columns: repeat(2, var(--recipe-slot-size));
+  grid-template-rows: repeat(2, var(--recipe-slot-size));
+  gap: var(--recipe-slot-gap);
+  justify-content: center;
+  align-items: center;
+}
+
+.recipeLayoutWineFermentation .recipeArrow {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  justify-self: center;
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+  color: var(--muted);
+}
+
+.recipeLayoutWineFermentation .recipeOutput {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.recipeLayoutWineFermentation .recipeSlotContainer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: var(--recipe-card-padding);
+}
