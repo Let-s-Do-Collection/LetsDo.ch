@@ -205,14 +205,13 @@ This overview is meant for anyone who wants to quickly check ingredients, output
                     style="position:relative;"
                   >
                     {recipe.stationIcon ? (
-                      <img
-                        class="recipeStationIconBadge"
-                        src={recipe.stationIcon}
-                        alt={recipe.stationIconAlt}
-                        loading="lazy"
-                        data-tip-title={recipe.stationRequirementTitle}
-                        data-tip-sub={recipe.stationRequirementTier}
-                      />
+                      <span class="recipeStationIconBadge" data-tip-title={recipe.stationRequirementTitle}>
+                  <img
+                    class="recipeStationIconBadgeIcon"
+                    src={recipe.stationIcon}
+                    alt={recipe.stationIconAlt}
+                  />
+                      </span>
                     ) : null}
 
                     <div class="recipeHeader">
@@ -341,9 +340,10 @@ This overview is meant for anyone who wants to quickly check ingredients, output
       const cleanId = String(hashId || "").trim()
       if (!cleanId) {
         history.replaceState(null, "", window.location.pathname + window.location.search)
-        return
+        return ""
       }
       history.replaceState(null, "", `#${cleanId}`)
+      return cleanId
     }
 
     const isInteractiveTarget = (target) => {
@@ -355,6 +355,18 @@ This overview is meant for anyone who wants to quickly check ingredients, output
       section.dataset.collapsed = collapsed ? "true" : "false"
       const toggle = section.querySelector("[data-section-toggle]")
       if (toggle) toggle.setAttribute("aria-expanded", collapsed ? "false" : "true")
+    }
+
+    const scrollToCard = (card) => {
+      if (!card) return
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          card.scrollIntoView({ behavior: "smooth", block: "center" })
+        })
+      })
+      setTimeout(() => {
+        card.scrollIntoView({ behavior: "smooth", block: "center" })
+      }, 80)
     }
 
     const update = () => {
@@ -380,6 +392,15 @@ This overview is meant for anyone who wants to quickly check ingredients, output
       empty.style.display = visible === 0 ? "" : "none"
     }
 
+    const openCard = (card) => {
+      if (!card) return
+
+      const section = card.closest("[data-section]")
+      if (section) setCollapsed(section, false)
+
+      scrollToCard(card)
+    }
+
     const openFromHash = () => {
       const hashId = getHashId()
       if (!hashId) return
@@ -390,25 +411,13 @@ This overview is meant for anyone who wants to quickly check ingredients, output
       const card = target.classList.contains("recipeCard") ? target : target.closest(".recipeCard")
       if (!card) return
 
-      const section = card.closest("[data-section]")
-      if (section) setCollapsed(section, false)
-
-      requestAnimationFrame(() => {
-        card.scrollIntoView({ behavior: "smooth", block: "center" })
-      })
+      openCard(card)
     }
 
     const activateCardLink = (card) => {
       if (!card || !card.id) return
-
       setHash(card.id)
-
-      const section = card.closest("[data-section]")
-      if (section) setCollapsed(section, false)
-
-      requestAnimationFrame(() => {
-        card.scrollIntoView({ behavior: "smooth", block: "center" })
-      })
+      openCard(card)
     }
 
     for (const toggle of toggles) {

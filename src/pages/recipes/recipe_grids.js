@@ -27,15 +27,16 @@ const stationKeyFromSourcePath = (sourcePath) => {
   const parts = normalized.split("/").filter(Boolean);
 
   const recipesIndex = parts.lastIndexOf("recipes");
+
   if (recipesIndex === -1) return "";
 
   const stationSegment = parts[recipesIndex + 2] ?? "";
   return stationSegment ? String(stationSegment) : "";
 };
 
-export const buildStationRegistry = ({ wikiEntries }) => {
+export const buildStationRegistry = ({ wikiEntries, tagAliasMap, fallbackNamespaces }) => {
   const registry = new Map();
-  const itemResolver = createItemResolver({ wikiEntries });
+  const itemResolver = createItemResolver({ wikiEntries, tagAliasMap, fallbackNamespaces });
 
   const addStation = (station) => {
     if (!station || !station.key) return;

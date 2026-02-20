@@ -145,50 +145,56 @@
   object-fit: contain;
 }
 
-.recipeStationIconBadge[data-tip-title]::after {
+.recipeStationIconBadge[data-tip-title]:hover::after {
   content: attr(data-tip-title);
-  position: absolute;
-  left: 0;
-  top: calc(100% + 10px);
   white-space: nowrap;
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 10px);
+  transform: translateX(-50%);
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--recipe-tooltip-border);
+  background: var(--recipe-tooltip-bg);
+  color: var(--recipe-tooltip-text);
+  font-size: 12px;
+  line-height: 1.2;
+  box-shadow: var(--recipe-tooltip-shadow);
+  z-index: 50;
+  width: max-content;
+}
+.recipeSlot[data-tip-title]:hover::after {
+  content: attr(data-tip-title) "\A" attr(data-tip-sub);
+  white-space: pre-line;
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 10px);
+  transform: translateX(-50%);
   padding: 8px 10px;
   border-radius: 10px;
+  border: 1px solid var(--recipe-tooltip-border);
+  background: var(--recipe-tooltip-bg);
+  color: var(--recipe-tooltip-text);
   font-size: 12px;
-  line-height: 1;
-  background: var(--card);
-  border: 1px solid var(--border);
-  color: var(--text);
-  box-shadow: var(--shadow);
-  opacity: 0;
-  transform: translateY(4px);
-  pointer-events: none;
-  transition: opacity 120ms ease, transform 120ms ease;
+  line-height: 1.25;
+  box-shadow: var(--recipe-tooltip-shadow);
+  z-index: 50;
+  width: max-content;
+  max-width: 260px;
 }
 
-.recipeStationIconBadge[data-tip-sub]::before {
-  content: attr(data-tip-sub);
+.recipeSlot[data-tip-title]:hover::before {
+  content: "";
   position: absolute;
-  left: 0;
-  top: calc(100% + 36px);
-  white-space: nowrap;
-  padding: 7px 10px;
-  border-radius: 10px;
-  font-size: 12px;
-  line-height: 1;
-  background: var(--card);
-  border: 1px solid var(--border);
-  color: var(--muted);
-  box-shadow: var(--shadow);
-  opacity: 0;
-  transform: translateY(4px);
-  pointer-events: none;
-  transition: opacity 120ms ease, transform 120ms ease;
-}
-
-.recipeStationIconBadge[data-tip-title]:hover::after,
-.recipeStationIconBadge[data-tip-sub]:hover::before {
-  opacity: 1;
-  transform: translateY(0);
+  left: 50%;
+  bottom: calc(100% + 4px);
+  transform: translateX(-50%) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background: var(--recipe-tooltip-bg);
+  border-left: 1px solid var(--recipe-tooltip-border);
+  border-top: 1px solid var(--recipe-tooltip-border);
+  z-index: 51;
 }
 
 @media (max-width: 1040px) {
@@ -516,26 +522,6 @@
     grid-column: auto;
     grid-row: auto;
   }
-}
-
-.recipeSlot[data-tip-title]:hover::after {
-  content: attr(data-tip-title) "\A" attr(data-tip-sub);
-  white-space: pre-line;
-  position: absolute;
-  left: 50%;
-  bottom: calc(100% + 10px);
-  transform: translateX(-50%);
-  padding: 8px 10px;
-  border-radius: 10px;
-  border: 1px solid var(--recipe-tooltip-border);
-  background: var(--recipe-tooltip-bg);
-  color: var(--recipe-tooltip-text);
-  font-size: 12px;
-  line-height: 1.25;
-  box-shadow: var(--recipe-tooltip-shadow);
-  z-index: 50;
-  width: max-content;
-  max-width: 260px;
 }
 
 .recipeSlot[data-tip-title]:hover::before {

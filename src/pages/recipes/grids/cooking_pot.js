@@ -44,6 +44,7 @@ export const buildCookingPotStation = ({ farmAndCharmEntries }) => {
   return {
     key: "cooking_pot",
     id: "farm_and_charm:cooking_pot",
+    ids: ["farm_and_charm:pot_cooking"],
     aliases: ["farm_and_charm:cooking_pot", "cooking_pot", "cookpot"],
     title: cookingPotEntry?.title ?? "Cooking Pot",
     subtitleHtml,

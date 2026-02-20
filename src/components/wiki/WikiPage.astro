@@ -197,7 +197,9 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
                           <div class="wikiCardDetails" aria-hidden="true">
                             <div class="wikiDetailsHeader">
                               <div class="wikiDetailsTitle">{detailsOpenTitle}</div>
-                              {entry.detailsSubtitle ? <div class="wikiDetailsSubtitle" set:html={escapeHtmlWithBreaks(entry.detailsSubtitle)} /> : null}
+                              {entry.detailsSubtitle ? (
+                                <div class="wikiDetailsSubtitle" set:html={escapeHtmlWithBreaks(entry.detailsSubtitle)} />
+                              ) : null}
                             </div>
 
                             {entry.detailsText ? <div class="wikiDetailsText" set:html={linkifyText(entry.detailsText)} /> : null}
@@ -375,6 +377,36 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
       return Boolean(target.closest("a, button, input, textarea, select, label, summary, details"));
     };
 
+    const getNavOffset = () => {
+      const raw = getComputedStyle(document.documentElement).getPropertyValue("--navHeight");
+      const parsed = Number(String(raw || "").replace("px", "").trim());
+      return Number.isFinite(parsed) && parsed > 0 ? parsed : 120;
+    };
+
+    const scrollToTarget = (target, align) => {
+      if (!target) return;
+      const navOffset = getNavOffset();
+      const extraOffset = 18;
+      const rect = target.getBoundingClientRect();
+      const y = window.scrollY + rect.top - navOffset - extraOffset;
+
+      window.scrollTo({
+        top: Math.max(0, Math.round(y)),
+        behavior: "smooth"
+      });
+
+      if (align === "center") {
+        requestAnimationFrame(() => {
+          const rect2 = target.getBoundingClientRect();
+          const centerY = window.scrollY + rect2.top - (window.innerHeight / 2) + (rect2.height / 2);
+          window.scrollTo({
+            top: Math.max(0, Math.round(centerY)),
+            behavior: "smooth"
+          });
+        });
+      }
+    };
+
     const setOpen = (card, open) => {
       const details = card.querySelector(".wikiCardDetails");
       const toggle = card.querySelector(".wikiToggle");
@@ -416,13 +448,18 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
         if (hasDetails) setOpen(card, true);
 
         requestAnimationFrame(() => {
-          card.scrollIntoView({ behavior: "smooth", block: "center" });
+          requestAnimationFrame(() => {
+            scrollToTarget(card, "center");
+          });
         });
+
         return;
       }
 
       requestAnimationFrame(() => {
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        requestAnimationFrame(() => {
+          scrollToTarget(target, "start");
+        });
       });
     };
 
@@ -437,7 +474,9 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
       }
 
       requestAnimationFrame(() => {
-        card.scrollIntoView({ behavior: "smooth", block: "center" });
+        requestAnimationFrame(() => {
+          scrollToTarget(card, "center");
+        });
       });
     };
 
@@ -458,7 +497,9 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
 
         if (open) {
           requestAnimationFrame(() => {
-            card.scrollIntoView({ behavior: "smooth", block: "center" });
+            requestAnimationFrame(() => {
+              scrollToTarget(card, "center");
+            });
           });
         }
 

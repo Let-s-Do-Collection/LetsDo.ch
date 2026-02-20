@@ -442,100 +442,239 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
   After the last piece is eaten, the box is removed.`,
           detailsBullets: ['Can be placed', 'Consumed in multiple bites', 'Restores hunger on use']
         },
-        {
-          id: 'breads',
-          title: 'Breads & Buns',
-          subtitle: 'Simple baked breads and loaves.',
-          icon: '/assets/icons/bakery/bread.webp',
-          search: 'bread bakery loaf baguette toast braided bread crusty bun sandwich',
-          details: true,
-          detailsTitle: 'Included Breads',
-          detailsText: `This entry covers all basic bread items added by Bakery.
+{
+  id: 'breads',
+  title: 'Breads & Buns',
+  namespace_id: 'bakery:breads',
+  subtitle: 'Simple baked breads and loaves.',
+  icon: '/assets/icons/bakery/bread.webp',
+  search: 'bread bakery loaf baguette toast braided bread crusty bun sandwich',
+  details: true,
+  detailsTitle: 'Included Breads',
+  detailsText: `This entry covers all basic bread items added by Bakery.
 
   All listed breads are simple food items and restore hunger when eaten.`,
-          detailsBullets: ['Croissant', 'Crusty Bread', 'Bread', 'Baguette', 'Toast', 'Braided Bread', 'Bun'],
-          detailsImages: [
-            '/assets/icons/bakery/croissant.webp',
-            '/assets/icons/bakery/crusty_bread.webp',
-            '/assets/icons/bakery/bread.webp',
-            '/assets/icons/bakery/baguette.webp',
-            '/assets/icons/bakery/toast.webp',
-            '/assets/icons/bakery/braided_bread.webp',
-            '/assets/icons/bakery/bun.webp'
-          ]
-        },
-        {
-          id: 'cakes',
-          title: 'Cakes & Slices',
-          subtitle: 'Cakes, pies, tarts, and their slices.',
-          icon: '/assets/icons/bakery/chocolate_cake_slice.webp',
-          search: 'cake slice tart pie gateau pudding bakery',
-          details: true,
-          detailsTitle: 'Included Cakes',
-          detailsText: `This entry includes all cake-based foods and their slice variants.
+  items: [
+    {
+      id: 'croissant',
+      title: 'Croissant',
+      namespace_id: 'bakery:croissant',
+      icon: '/assets/icons/bakery/croissant.webp',
+      search: 'croissant bread food'
+    },
+    {
+      id: 'crusty_bread',
+      title: 'Crusty Bread',
+      namespace_id: 'bakery:crusty_bread',
+      icon: '/assets/icons/bakery/crusty_bread.webp',
+      search: 'crusty bread food'
+    },
+    {
+      id: 'bread',
+      title: 'Bread',
+      namespace_id: 'bakery:bread',
+      icon: '/assets/icons/bakery/bread.webp',
+      search: 'bread food'
+    },
+    {
+      id: 'baguette',
+      title: 'Baguette',
+      namespace_id: 'bakery:baguette',
+      icon: '/assets/icons/bakery/baguette.webp',
+      search: 'baguette bread food'
+    },
+    {
+      id: 'toast',
+      title: 'Toast',
+      namespace_id: 'bakery:toast',
+      icon: '/assets/icons/bakery/toast.webp',
+      search: 'toast bread food'
+    },
+    {
+      id: 'braided_bread',
+      title: 'Braided Bread',
+      namespace_id: 'bakery:braided_bread',
+      icon: '/assets/icons/bakery/braided_bread.webp',
+      search: 'braided bread food'
+    },
+    {
+      id: 'bun',
+      title: 'Bun',
+      namespace_id: 'bakery:bun',
+      icon: '/assets/icons/bakery/bun.webp',
+      search: 'bun bread food'
+    }
+  ]
+},
+  {
+    id: 'cakes',
+    title: 'Cakes & Slices',
+    subtitle: 'Cakes, pies, tarts, and their slices.',
+    icon: '/assets/icons/bakery/chocolate_cake_slice.webp',
+    search: 'cake slice tart pie gateau pudding bakery',
+    details: true,
+    detailsTitle: 'Included Cakes',
+    detailsText: `This entry includes all cake-based foods and their slice variants.
 
-  Slices are typically obtained by cutting or serving whole cakes.`,
-          detailsBullets: [
-            'Strawberry Cake Slice',
-            'Sweetberry Cake Slice',
-            'Chocolate Cake Slice',
-            'Chocolate Gateau Slice',
-            'Bundt Cake Slice',
-            'Linzer Tart Slice',
-            'Apple Pie Slice',
-            'Glowberry Pie Slice',
-            'Chocolate Tart Slice',
-            'Pudding Slice'
-          ],
-          detailsImages: [
-            '/assets/icons/bakery/strawberry_cake_slice.webp',
-            '/assets/icons/bakery/sweetberry_cake_slice.webp',
-            '/assets/icons/bakery/chocolate_cake_slice.webp',
-            '/assets/icons/bakery/chocolate_gateau_slice.webp',
-            '/assets/icons/bakery/bundt_cake_slice.webp',
-            '/assets/icons/bakery/linzer_tart_slice.webp',
-            '/assets/icons/bakery/apple_pie_slice.webp',
-            '/assets/icons/bakery/glowberry_pie_slice.webp',
-            '/assets/icons/bakery/chocolate_tart_slice.webp',
-            '/assets/icons/bakery/pudding_slice.webp'
-          ]
-        },
-        {
-          id: 'pastries',
-          title: 'Pastries & Sweets',
-          subtitle: 'Cookies, cupcakes, rolls, and confectionery.',
-          icon: '/assets/icons/bakery/strawberry_cupcake.webp',
-          search: 'cookie cupcake pastry jam roll truffle waffle biscuit',
-          details: true,
-          detailsTitle: 'Included Sweets',
-          detailsText: `This entry contains all remaining baked goods and sweets added by Bakery.`,
-          detailsBullets: [
-            'Strawberry Glazed Cookie',
-            'Sweetberry Glazed Cookie',
-            'Chocolate Glazed Cookie',
-            'Strawberry Cupcake',
-            'Sweetberry Cupcake',
-            'Apple Cupcake',
-            'Jam Roll',
-            'Chocolate Truffle',
-            'MissLilitu Biscuit',
-            'Cornet',
-            'Waffle'
-          ],
-          detailsImages: [
-            '/assets/icons/bakery/strawberry_glazed_cookie.webp',
-            '/assets/icons/bakery/sweetberry_glazed_cookie.webp',
-            '/assets/icons/bakery/chocolate_glazed_cookie.webp',
-            '/assets/icons/bakery/strawberry_cupcake.webp',
-            '/assets/icons/bakery/sweetberry_cupcake.webp',
-            '/assets/icons/bakery/apple_cupcake.webp',
-            '/assets/icons/bakery/jam_roll.webp',
-            '/assets/icons/bakery/chocolate_truffle.webp',
-            '/assets/icons/bakery/misslilitu_biscuit.webp',
-            '/assets/icons/bakery/cornet.webp',
-            '/assets/icons/bakery/waffle.webp'
-          ]
-        }
+    Slices are typically obtained by cutting or serving whole cakes.`,
+    items: [
+      {
+        id: 'strawberry_cake_slice',
+        title: 'Strawberry Cake Slice',
+        namespace_id: 'bakery:strawberry_cake_slice',
+        icon: '/assets/icons/bakery/strawberry_cake_slice.webp',
+        search: 'strawberry cake slice'
+      },
+      {
+        id: 'sweetberry_cake_slice',
+        title: 'Sweetberry Cake Slice',
+        namespace_id: 'bakery:sweetberry_cake_slice',
+        icon: '/assets/icons/bakery/sweetberry_cake_slice.webp',
+        search: 'sweetberry cake slice'
+      },
+      {
+        id: 'chocolate_cake_slice',
+        title: 'Chocolate Cake Slice',
+        namespace_id: 'bakery:chocolate_cake_slice',
+        icon: '/assets/icons/bakery/chocolate_cake_slice.webp',
+        search: 'chocolate cake slice'
+      },
+      {
+        id: 'chocolate_gateau_slice',
+        title: 'Chocolate Gateau Slice',
+        namespace_id: 'bakery:chocolate_gateau_slice',
+        icon: '/assets/icons/bakery/chocolate_gateau_slice.webp',
+        search: 'chocolate gateau slice'
+      },
+      {
+        id: 'bundt_cake_slice',
+        title: 'Bundt Cake Slice',
+        namespace_id: 'bakery:bundt_cake_slice',
+        icon: '/assets/icons/bakery/bundt_cake_slice.webp',
+        search: 'bundt cake slice'
+      },
+      {
+        id: 'linzer_tart_slice',
+        title: 'Linzer Tart Slice',
+        namespace_id: 'bakery:linzer_tart_slice',
+        icon: '/assets/icons/bakery/linzer_tart_slice.webp',
+        search: 'linzer tart slice'
+      },
+      {
+        id: 'apple_pie_slice',
+        title: 'Apple Pie Slice',
+        namespace_id: 'bakery:apple_pie_slice',
+        icon: '/assets/icons/bakery/apple_pie_slice.webp',
+        search: 'apple pie slice'
+      },
+      {
+        id: 'glowberry_pie_slice',
+        title: 'Glowberry Pie Slice',
+        namespace_id: 'bakery:glowberry_pie_slice',
+        icon: '/assets/icons/bakery/glowberry_pie_slice.webp',
+        search: 'glowberry pie slice'
+      },
+      {
+        id: 'chocolate_tart_slice',
+        title: 'Chocolate Tart Slice',
+        namespace_id: 'bakery:chocolate_tart_slice',
+        icon: '/assets/icons/bakery/chocolate_tart_slice.webp',
+        search: 'chocolate tart slice'
+      },
+      {
+        id: 'pudding_slice',
+        title: 'Pudding Slice',
+        namespace_id: 'bakery:pudding_slice',
+        icon: '/assets/icons/bakery/pudding_slice.webp',
+        search: 'pudding slice'
+      }
+    ]
+  },
+   {
+     id: 'cakes',
+     title: 'Cakes & Slices',
+     namespace_id: 'bakery:cakes',
+     subtitle: 'Cakes, pies, tarts, and their slices.',
+     icon: '/assets/icons/bakery/chocolate_cake_slice.webp',
+     search: 'cake slice tart pie gateau pudding bakery',
+     details: true,
+     detailsTitle: 'Included Cakes',
+     detailsText: `This entry includes all cake-based foods and their slice variants.
+
+     Slices are typically obtained by cutting or serving whole cakes.`,
+     items: [
+       {
+         id: 'strawberry_cake_slice',
+         title: 'Strawberry Cake Slice',
+         namespace_id: 'bakery:strawberry_cake_slice',
+         icon: '/assets/icons/bakery/strawberry_cake_slice.webp',
+         search: 'strawberry cake slice'
+       },
+       {
+         id: 'sweetberry_cake_slice',
+         title: 'Sweetberry Cake Slice',
+         namespace_id: 'bakery:sweetberry_cake_slice',
+         icon: '/assets/icons/bakery/sweetberry_cake_slice.webp',
+         search: 'sweetberry cake slice'
+       },
+       {
+         id: 'chocolate_cake_slice',
+         title: 'Chocolate Cake Slice',
+         namespace_id: 'bakery:chocolate_cake_slice',
+         icon: '/assets/icons/bakery/chocolate_cake_slice.webp',
+         search: 'chocolate cake slice'
+       },
+       {
+         id: 'chocolate_gateau_slice',
+         title: 'Chocolate Gateau Slice',
+         namespace_id: 'bakery:chocolate_gateau_slice',
+         icon: '/assets/icons/bakery/chocolate_gateau_slice.webp',
+         search: 'chocolate gateau slice'
+       },
+       {
+         id: 'bundt_cake_slice',
+         title: 'Bundt Cake Slice',
+         namespace_id: 'bakery:bundt_cake_slice',
+         icon: '/assets/icons/bakery/bundt_cake_slice.webp',
+         search: 'bundt cake slice'
+       },
+       {
+         id: 'linzer_tart_slice',
+         title: 'Linzer Tart Slice',
+         namespace_id: 'bakery:linzer_tart_slice',
+         icon: '/assets/icons/bakery/linzer_tart_slice.webp',
+         search: 'linzer tart slice'
+       },
+       {
+         id: 'apple_pie_slice',
+         title: 'Apple Pie Slice',
+         namespace_id: 'bakery:apple_pie_slice',
+         icon: '/assets/icons/bakery/apple_pie_slice.webp',
+         search: 'apple pie slice'
+       },
+       {
+         id: 'glowberry_pie_slice',
+         title: 'Glowberry Pie Slice',
+         namespace_id: 'bakery:glowberry_pie_slice',
+         icon: '/assets/icons/bakery/glowberry_pie_slice.webp',
+         search: 'glowberry pie slice'
+       },
+       {
+         id: 'chocolate_tart_slice',
+         title: 'Chocolate Tart Slice',
+         namespace_id: 'bakery:chocolate_tart_slice',
+         icon: '/assets/icons/bakery/chocolate_tart_slice.webp',
+         search: 'chocolate tart slice'
+       },
+       {
+         id: 'pudding_slice',
+         title: 'Pudding Slice',
+         namespace_id: 'bakery:pudding_slice',
+         icon: '/assets/icons/bakery/pudding_slice.webp',
+         search: 'pudding slice'
+       }
+     ]
+   }
       ]
     },
     {
@@ -561,5 +700,16 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
         }
       ]
     }
-  ]
+  ],
+  recipesCta: {
+    enabled: true,
+    title: "Recipes",
+    text: `Feeling a little lost and not sure how to craft certain things?
+
+  Here you will find a helpful overview of all Let’s Do crafting stations and their recipes.
+
+  `,
+    buttonLabel: "Open Recipe Overview",
+    href: "/recipes/"
+  },
 }

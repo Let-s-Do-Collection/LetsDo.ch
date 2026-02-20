@@ -467,7 +467,7 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
               id: 'beer_haley',
               title: 'Beer Haley',
               namespace_id: 'brewery:beer_haley',
-              subtitle: 'Grants the [[Haley|haley]] effect.',
+              subtitle: '',
               icon: '/assets/icons/brewery/beer_haley.webp',
               search: 'beer haley flight effect'
             }
@@ -818,5 +818,17 @@ They may appear in various loot containers, such as village chests, dungeon ches
         }
       ]
     }
-  ]
-}
+  ],
+    recipesCta: {
+      enabled: true,
+      title: "Recipes",
+      text: `Feeling a little lost and not sure how to craft certain things?
+
+    Here you will find a helpful overview of all Let’s Do crafting stations and their recipes.
+
+    `,
+      buttonLabel: "Open Recipe Overview",
+      href: "/recipes/"
+    },
+  }
+

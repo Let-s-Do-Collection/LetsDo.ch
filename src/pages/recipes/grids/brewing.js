@@ -35,11 +35,13 @@ export const normalizeBrewingRecipe = ({ recipe, inputs, output, station, normal
       ? withBase("/assets/icons/brewery/netherite_brewingstation.webp")
       : withBase("/assets/icons/brewery/wooden_brewingstation.webp");
 
-  const stationRequirementTitle = "Requires: Brewing Station";
   const stationRequirementTier =
-    material === "copper" ? "Copper" : material === "netherite" ? "Netherite" : "Wood";
+    material === "copper" ? "Copper" :
+    material === "netherite" ? "Netherite" :
+    "Wooden";
 
-  const stationIconAlt = `${stationRequirementTitle} (${stationRequirementTier})`;
+  const stationRequirementTitle = `Requires: ${stationRequirementTier} Brewing Station`;
+  const stationIconAlt = stationRequirementTitle;
 
   const searchParts = [
     outputTitle,
@@ -47,9 +49,8 @@ export const normalizeBrewingRecipe = ({ recipe, inputs, output, station, normal
     station?.title || "",
     station?.key || "",
     stationRequirementTitle,
-    stationRequirementTier,
-    ...normalizedSlots.map((s) => s?.title || ""),
-    ...normalizedSlots.map((s) => s?.id || "")
+    ...normalizedSlots.map((slot) => slot?.title || ""),
+    ...normalizedSlots.map((slot) => slot?.id || "")
   ];
 
   return {
@@ -57,7 +58,6 @@ export const normalizeBrewingRecipe = ({ recipe, inputs, output, station, normal
     stationIcon,
     stationIconAlt,
     stationRequirementTitle,
-    stationRequirementTier,
     inputs: normalizedSlots,
     container: null,
     output: outputSlot,
@@ -75,9 +75,7 @@ export const buildBrewingStation = () => {
     id: "brewery:brewing",
     aliases: ["brewery:brewing", "brewing"],
     title: "Brewing",
-    subtitleHtml:
-      `These recipes can be prepared in ` +
-      `<a class="recipesInlineLink" href="${wikiHref}">Brewery: Brewingstation</a>.`,
+    subtitleHtml: `These recipes can be prepared in <a class="recipesInlineLink" href="${wikiHref}">Brewery: Brewingstation</a>.`,
     icon: withBase("/assets/icons/brewery/wooden_brewingstation.webp"),
     wiki: wikiHref,
     layout: "recipeLayoutBowl",

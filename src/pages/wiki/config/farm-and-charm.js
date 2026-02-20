@@ -668,197 +668,224 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           details: true,
           detailsTitle: 'All Meals',
           detailsText: '',
-          items: [
-            {
-              id: 'oat_pancake',
-              title: 'Oat Pancake',
-              subtitle: '',
-              icon: '/assets/icons/farm-and-charm/oat_pancake.webp',
-              search: 'oat pancake food meal'
-            },
-            {
-              id: 'roasted_corn',
-              title: 'Roasted Corn',
-              subtitle: '',
-              icon: '/assets/icons/farm-and-charm/roasted_corn.webp',
-              search: 'roasted corn food meal'
-            },
-            {
-              id: 'potato_with_roast_meat',
-              title: 'Potato With Roast Meat',
-              subtitle: '',
-              icon: '/assets/icons/farm-and-charm/potato_with_roast_meat.webp',
-              search: 'potato roast meat food meal'
-            },
-            {
-              id: 'baked_lamb_ham',
-              title: 'Baked Lamb Ham',
-              subtitle: '',
-              icon: '/assets/icons/farm-and-charm/baked_lamb_ham.webp',
-              search: 'baked lamb ham food meal'
-            },
-            {
-              id: 'farmers_breakfast',
-              title: "Farmer's Breakfast",
-              subtitle: '',
-              icon: '/assets/icons/farm-and-charm/farmers_breakfast.webp',
-              search: 'farmers breakfast food meal'
-            },
-            {
-              id: 'stuffed_chicken',
-              title: 'Stuffed Chicken',
-              subtitle: '',
-              icon: '/assets/icons/farm-and-charm/stuffed_chicken.webp',
-              search: 'stuffed chicken food meal'
-            },
-            {
-              id: 'stuffed_rabbit',
-              title: 'Stuffed Rabbit',
-              subtitle: '',
-              icon: '/assets/icons/farm-and-charm/stuffed_rabbit.webp',
-              search: 'stuffed rabbit food meal'
-            },
-            {
-              id: 'farmers_bread',
-              title: "Farmer's Bread",
-              subtitle: '',
-              icon: '/assets/icons/farm-and-charm/farmers_bread.webp',
-              search: 'farmers bread food meal'
-            },
-            {
-              id: 'grandmothers_strawberry_cake',
-              title: "Grandmother's Strawberry Cake",
-              subtitle: '',
-              icon: '/assets/icons/farm-and-charm/grandmothers_strawberry_cake.webp',
-              search: 'strawberry cake food meal'
-            },
-            {
-              id: 'farmer_salad',
-              title: 'Farmer Salad',
-              subtitle: '',
-              icon: '/assets/icons/farm-and-charm/farmer_salad.webp',
-              search: 'salad food meal'
-            },
-            {
-              id: 'goulash',
-              title: 'Goulash',
-              subtitle: '',
-              icon: '/assets/icons/farm-and-charm/goulash.webp',
-              search: 'goulash food meal'
-            },
-            {
-              id: 'simple_tomato_soup',
-              title: 'Simple Tomato Soup',
-              subtitle: '',
-              icon: '/assets/icons/farm-and-charm/simple_tomato_soup.webp',
-              search: 'tomato soup food meal'
-            },
-            {
-              id: 'barley_soup',
-              title: 'Barley Soup',
-              subtitle: '',
-              icon: '/assets/icons/farm-and-charm/barley_soup.webp',
-              search: 'barley soup food meal'
-            },
-            {
-              id: 'onion_soup',
-              title: 'Onion Soup',
-              subtitle: '',
-              icon: '/assets/icons/farm-and-charm/onion_soup.webp',
-              search: 'onion soup food meal'
-            },
-            {
-              id: 'potato_soup',
-              title: 'Potato Soup',
-              subtitle: '',
-              icon: '/assets/icons/farm-and-charm/potato_soup.webp',
-              search: 'potato soup food meal'
-            },
-            {
-              id: 'pasta_with_onion_sauce',
-              title: 'Pasta With Onion Sauce',
-              subtitle: '',
-              icon: '/assets/icons/farm-and-charm/pasta_with_onion_sauce.webp',
-              search: 'pasta onion sauce food meal'
-            },
-            {
-              id: 'corn_grits',
-              title: 'Corn Grits',
-              subtitle: '',
-              icon: '/assets/icons/farm-and-charm/corn_grits.webp',
-              search: 'corn grits food meal'
-            },
-            {
-              id: 'oatmeal_with_strawberries',
-              title: 'Oatmeal With Strawberries',
-              subtitle: '',
-              icon: '/assets/icons/farm-and-charm/oatmeal_with_strawberries.webp',
-              search: 'oatmeal strawberries food meal'
-            },
-            {
-              id: 'sausage_with_oat_patty',
-              title: 'Sausage With Oat Patty',
-              subtitle: '',
-              icon: '/assets/icons/farm-and-charm/sausage_with_oat_patty.webp',
-              search: 'sausage oat patty food meal'
-            },
-            {
-              id: 'lamb_with_corn',
-              title: 'Lamb With Corn',
-              subtitle: '',
-              icon: '/assets/icons/farm-and-charm/lamb_with_corn.webp',
-              search: 'lamb corn food meal'
-            },
-            {
-              id: 'beef_patty_with_vegetables',
-              title: 'Beef Patty With Vegetables',
-              subtitle: '',
-              icon: '/assets/icons/farm-and-charm/beef_patty_with_vegetables.webp',
-              search: 'beef patty vegetables food meal'
-            },
-            {
-              id: 'barley_patties_with_potatoes',
-              title: 'Barley Patties With Potatoes',
-              subtitle: '',
-              icon: '/assets/icons/farm-and-charm/barley_patties_with_potatoes.webp',
-              search: 'barley patties potatoes food meal'
-            },
-            {
-              id: 'bacon_with_eggs',
-              title: 'Bacon With Eggs',
-              subtitle: '',
-              icon: '/assets/icons/farm-and-charm/bacon_with_eggs.webp',
-              search: 'bacon eggs food meal'
-            },
-            {
-              id: 'chicken_wrapped_in_bacon',
-              title: 'Chicken Wrapped In Bacon',
-              subtitle: '',
-              icon: '/assets/icons/farm-and-charm/chicken_wrapped_in_bacon.webp',
-              search: 'chicken bacon food meal'
-            },
-            {
-              id: 'cooked_salmon',
-              title: 'Cooked Salmon',
-              subtitle: '',
-              icon: '/assets/icons/farm-and-charm/cooked_salmon.webp',
-              search: 'salmon food meal fish'
-            },
-            {
-              id: 'cooked_cod',
-              title: 'Cooked Cod',
-              subtitle: '',
-              icon: '/assets/icons/farm-and-charm/cooked_cod.webp',
-              search: 'cod food meal fish'
-            },
-            {
-              id: 'roasted_chicken',
-              title: 'Roasted Chicken',
-              subtitle: '',
-              icon: '/assets/icons/farm-and-charm/roasted_chicken.webp',
-              search: 'roasted chicken food meal'
-            }
-          ]
+   items: [
+     {
+       id: 'oat_pancake',
+       title: 'Oat Pancake',
+       namespace_id: 'farm_and_charm:oat_pancake',
+       subtitle: '',
+       icon: '/assets/icons/farm-and-charm/oat_pancake.webp',
+       search: 'oat pancake food meal'
+     },
+     {
+       id: 'roasted_corn',
+       title: 'Roasted Corn',
+       namespace_id: 'farm_and_charm:roasted_corn',
+       subtitle: '',
+       icon: '/assets/icons/farm-and-charm/roasted_corn.webp',
+       search: 'roasted corn food meal'
+     },
+     {
+       id: 'potato_with_roast_meat',
+       title: 'Potato With Roast Meat',
+       namespace_id: 'farm_and_charm:potato_with_roast_meat',
+       subtitle: '',
+       icon: '/assets/icons/farm-and-charm/potato_with_roast_meat.webp',
+       search: 'potato roast meat food meal'
+     },
+     {
+       id: 'baked_lamb_ham',
+       title: 'Baked Lamb Ham',
+       namespace_id: 'farm_and_charm:baked_lamb_ham',
+       subtitle: '',
+       icon: '/assets/icons/farm-and-charm/baked_lamb_ham.webp',
+       search: 'baked lamb ham food meal'
+     },
+     {
+       id: 'farmers_breakfast',
+       title: "Farmer's Breakfast",
+       namespace_id: 'farm_and_charm:farmers_breakfast',
+       subtitle: '',
+       icon: '/assets/icons/farm-and-charm/farmers_breakfast.webp',
+       search: 'farmers breakfast food meal'
+     },
+     {
+       id: 'stuffed_chicken',
+       title: 'Stuffed Chicken',
+       namespace_id: 'farm_and_charm:stuffed_chicken',
+       subtitle: '',
+       icon: '/assets/icons/farm-and-charm/stuffed_chicken.webp',
+       search: 'stuffed chicken food meal'
+     },
+     {
+       id: 'stuffed_rabbit',
+       title: 'Stuffed Rabbit',
+       namespace_id: 'farm_and_charm:stuffed_rabbit',
+       subtitle: '',
+       icon: '/assets/icons/farm-and-charm/stuffed_rabbit.webp',
+       search: 'stuffed rabbit food meal'
+     },
+     {
+       id: 'farmers_bread',
+       title: "Farmer's Bread",
+       namespace_id: 'farm_and_charm:farmers_bread',
+       subtitle: '',
+       icon: '/assets/icons/farm-and-charm/farmers_bread.webp',
+       search: 'farmers bread food meal'
+     },
+     {
+       id: 'grandmothers_strawberry_cake',
+       title: "Grandmother's Strawberry Cake",
+       namespace_id: 'farm_and_charm:grandmothers_strawberry_cake',
+       subtitle: '',
+       icon: '/assets/icons/farm-and-charm/grandmothers_strawberry_cake.webp',
+       search: 'strawberry cake food meal'
+     },
+     {
+       id: 'farmer_salad',
+       title: 'Farmer Salad',
+       namespace_id: 'farm_and_charm:farmer_salad',
+       subtitle: '',
+       icon: '/assets/icons/farm-and-charm/farmer_salad.webp',
+       search: 'salad food meal'
+     },
+     {
+       id: 'goulash',
+       title: 'Goulash',
+       namespace_id: 'farm_and_charm:goulash',
+       subtitle: '',
+       icon: '/assets/icons/farm-and-charm/goulash.webp',
+       search: 'goulash food meal'
+     },
+     {
+       id: 'simple_tomato_soup',
+       title: 'Simple Tomato Soup',
+       namespace_id: 'farm_and_charm:simple_tomato_soup',
+       subtitle: '',
+       icon: '/assets/icons/farm-and-charm/simple_tomato_soup.webp',
+       search: 'tomato soup food meal'
+     },
+     {
+       id: 'barley_soup',
+       title: 'Barley Soup',
+       namespace_id: 'farm_and_charm:barley_soup',
+       subtitle: '',
+       icon: '/assets/icons/farm-and-charm/barley_soup.webp',
+       search: 'barley soup food meal'
+     },
+     {
+       id: 'onion_soup',
+       title: 'Onion Soup',
+       namespace_id: 'farm_and_charm:onion_soup',
+       subtitle: '',
+       icon: '/assets/icons/farm-and-charm/onion_soup.webp',
+       search: 'onion soup food meal'
+     },
+     {
+       id: 'potato_soup',
+       title: 'Potato Soup',
+       namespace_id: 'farm_and_charm:potato_soup',
+       subtitle: '',
+       icon: '/assets/icons/farm-and-charm/potato_soup.webp',
+       search: 'potato soup food meal'
+     },
+     {
+       id: 'pasta_with_onion_sauce',
+       title: 'Pasta With Onion Sauce',
+       namespace_id: 'farm_and_charm:pasta_with_onion_sauce',
+       subtitle: '',
+       icon: '/assets/icons/farm-and-charm/pasta_with_onion_sauce.webp',
+       search: 'pasta onion sauce food meal'
+     },
+     {
+       id: 'corn_grits',
+       title: 'Corn Grits',
+       namespace_id: 'farm_and_charm:corn_grits',
+       subtitle: '',
+       icon: '/assets/icons/farm-and-charm/corn_grits.webp',
+       search: 'corn grits food meal'
+     },
+     {
+       id: 'oatmeal_with_strawberries',
+       title: 'Oatmeal With Strawberries',
+       namespace_id: 'farm_and_charm:oatmeal_with_strawberries',
+       subtitle: '',
+       icon: '/assets/icons/farm-and-charm/oatmeal_with_strawberries.webp',
+       search: 'oatmeal strawberries food meal'
+     },
+     {
+       id: 'sausage_with_oat_patty',
+       title: 'Sausage With Oat Patty',
+       namespace_id: 'farm_and_charm:sausage_with_oat_patty',
+       subtitle: '',
+       icon: '/assets/icons/farm-and-charm/sausage_with_oat_patty.webp',
+       search: 'sausage oat patty food meal'
+     },
+     {
+       id: 'lamb_with_corn',
+       title: 'Lamb With Corn',
+       namespace_id: 'farm_and_charm:lamb_with_corn',
+       subtitle: '',
+       icon: '/assets/icons/farm-and-charm/lamb_with_corn.webp',
+       search: 'lamb corn food meal'
+     },
+     {
+       id: 'beef_patty_with_vegetables',
+       title: 'Beef Patty With Vegetables',
+       namespace_id: 'farm_and_charm:beef_patty_with_vegetables',
+       subtitle: '',
+       icon: '/assets/icons/farm-and-charm/beef_patty_with_vegetables.webp',
+       search: 'beef patty vegetables food meal'
+     },
+     {
+       id: 'barley_patties_with_potatoes',
+       title: 'Barley Patties With Potatoes',
+       namespace_id: 'farm_and_charm:barley_patties_with_potatoes',
+       subtitle: '',
+       icon: '/assets/icons/farm-and-charm/barley_patties_with_potatoes.webp',
+       search: 'barley patties potatoes food meal'
+     },
+     {
+       id: 'bacon_with_eggs',
+       title: 'Bacon With Eggs',
+       namespace_id: 'farm_and_charm:bacon_with_eggs',
+       subtitle: '',
+       icon: '/assets/icons/farm-and-charm/bacon_with_eggs.webp',
+       search: 'bacon eggs food meal'
+     },
+     {
+       id: 'chicken_wrapped_in_bacon',
+       title: 'Chicken Wrapped In Bacon',
+       namespace_id: 'farm_and_charm:chicken_wrapped_in_bacon',
+       subtitle: '',
+       icon: '/assets/icons/farm-and-charm/chicken_wrapped_in_bacon.webp',
+       search: 'chicken bacon food meal'
+     },
+     {
+       id: 'cooked_salmon',
+       title: 'Cooked Salmon',
+       namespace_id: 'farm_and_charm:cooked_salmon',
+       subtitle: '',
+       icon: '/assets/icons/farm-and-charm/cooked_salmon.webp',
+       search: 'salmon food meal fish'
+     },
+     {
+       id: 'cooked_cod',
+       title: 'Cooked Cod',
+       namespace_id: 'farm_and_charm:cooked_cod',
+       subtitle: '',
+       icon: '/assets/icons/farm-and-charm/cooked_cod.webp',
+       search: 'cod food meal fish'
+     },
+     {
+       id: 'roasted_chicken',
+       title: 'Roasted Chicken',
+       namespace_id: 'farm_and_charm:roasted_chicken',
+       subtitle: '',
+       icon: '/assets/icons/farm-and-charm/roasted_chicken.webp',
+       search: 'roasted chicken food meal'
+     }
+   ]
         }
       ]
     },
