@@ -474,6 +474,84 @@ Related: [[Drunk|drunk]] and [[Blackout|blackout]].`,
           ]
         },
         {
+          id: 'whiskey',
+          title: 'Whiskey',
+          subtitle: 'Premium whiskeys brewed at higher station tiers.',
+          icon: '/assets/icons/brewery/whiskey_cristelwalker.webp',
+          search: 'whiskey brewery copper netherite brewingstation dried wheat barley oat corn yeast',
+          details: true,
+          detailsTitle: 'All Whiskeys',
+          detailsText: `All whiskeys are brewed at the [[Brewingstation|brewingstation]].
+
+Most require a Copper Brewingstation. Some premium variants require Netherite.`,
+          items: [
+            {
+              id: 'whiskey_cristelwalker',
+              title: 'Whiskey Cristelwalker',
+              namespace_id: 'brewery:whiskey_cristelwalker',
+              subtitle: '',
+              icon: '/assets/icons/brewery/whiskey_cristelwalker.webp',
+              search: 'whiskey cristelwalker corn'
+            },
+            {
+              id: 'whiskey_carrasconlabel',
+              title: 'Whiskey Carrascon Label',
+              namespace_id: 'brewery:whiskey_carrasconlabel',
+              subtitle: '',
+              icon: '/assets/icons/brewery/whiskey_carrasconlabel.webp',
+              search: 'whiskey carrascon label wheat corn'
+            },
+            {
+              id: 'whiskey_highland_hearth',
+              title: 'Whiskey Highland Hearth',
+              namespace_id: 'brewery:whiskey_highland_hearth',
+              subtitle: '',
+              icon: '/assets/icons/brewery/whiskey_highland_hearth.webp',
+              search: 'whiskey highland hearth wheat oat'
+            },
+            {
+              id: 'whiskey_jamesons_malt',
+              title: 'Whiskey Jamesons Malt',
+              namespace_id: 'brewery:whiskey_jamesons_malt',
+              subtitle: '',
+              icon: '/assets/icons/brewery/whiskey_jamesons_malt.webp',
+              search: 'whiskey jamesons malt barley oat netherite'
+            },
+            {
+              id: 'whiskey_jojannik',
+              title: 'Whiskey Jojannik',
+              namespace_id: 'brewery:whiskey_jojannik',
+              subtitle: '',
+              icon: '/assets/icons/brewery/whiskey_jojannik.webp',
+              search: 'whiskey jojannik barley'
+            },
+            {
+              id: 'whiskey_lilitusinglemalt',
+              title: 'Whiskey Lilitu Single Malt',
+              namespace_id: 'brewery:whiskey_lilitusinglemalt',
+              subtitle: '',
+              icon: '/assets/icons/brewery/whiskey_lilitusinglemalt.webp',
+              search: 'whiskey lilitu single malt wheat barley'
+            },
+            {
+              id: 'whiskey_maggoallan',
+              title: 'Whiskey Maggoallan',
+              namespace_id: 'brewery:whiskey_maggoallan',
+              subtitle: '',
+              icon: '/assets/icons/brewery/whiskey_maggoallan.webp',
+              search: 'whiskey maggoallan wheat'
+            },
+            {
+              id: 'whiskey_smokey_reverie',
+              title: 'Whiskey Smokey Reverie',
+              namespace_id: 'brewery:whiskey_smokey_reverie',
+              subtitle: '',
+              icon: '/assets/icons/brewery/whiskey_smokey_reverie.webp',
+              search: 'whiskey smokey reverie oat netherite'
+            }
+          ]
+        },
+        {
           id: 'food',
           title: 'Food',
           namespace_id: '',
