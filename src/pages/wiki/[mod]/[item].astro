@@ -1,0 +1,374 @@
+---
+import SiteLayout from "../../../layouts/SiteLayout.astro";
+import NavBar from "../../../components/NavBar.astro";
+import Footer from "../../../components/Footer.astro";
+import WikiSidebar from "../../../components/wiki/WikiSidebar.astro";
+import "../../../styles/mods.css";
+import "../../../styles/wiki.css";
+import "../../../styles/wikisidebar.css";
+
+import brewery from "../config/brewery.js";
+import farmandcharm from "../config/farm-and-charm.js";
+import herbalbrews from "../config/herbalbrews.js";
+import vinery from "../config/vinery.js";
+import candlelight from "../config/candlelight.js";
+import pottery from "../config/lilis-pottery.js";
+import alpinewhispers from "../config/alpine-whispers.js";
+import furniture from "../config/furniture.js";
+import camping from "../config/camping.js";
+import hearthandtimber from "../config/hearth-and-timber.js";
+import bakery from "../config/bakery.js";
+import lilisluckylures from "../config/lilis-lucky-lures.js";
+import wildernature from "../config/wildernature.js";
+import beachparty from "../config/beachparty.js";
+import bloomingnature from "../config/bloomingnature.js";
+import meadow from "../config/meadow.js";
+
+export function getStaticPaths() {
+  const wikiConfigs = {
+    brewery,
+    "farm-and-charm": farmandcharm,
+    "lilis-lucky-lures": lilisluckylures,
+    herbalbrews,
+    vinery,
+    camping,
+    beachparty,
+    candlelight,
+    bloomingnature,
+    wildernature,
+    furniture,
+    meadow,
+    bakery,
+    "hearth-and-timber": hearthandtimber,
+    "lilis-pottery": pottery,
+    "alpine-whispers": alpinewhispers,
+  };
+
+  const paths = [];
+
+  for (const [mod, config] of Object.entries(wikiConfigs)) {
+    for (const section of config.sections ?? []) {
+      for (const entry of section.entries ?? []) {
+        if (entry.id) {
+          paths.push({
+            params: {
+              mod,
+              item: String(entry.id).replace(/_/g, "-"),
+            },
+            props: { entry, section, config, mod },
+          });
+        }
+
+        for (const item of entry.items ?? []) {
+          if (!item.id) continue;
+
+          paths.push({
+            params: {
+              mod,
+              item: String(item.id).replace(/_/g, "-"),
+            },
+            props: { entry: item, section, config, mod },
+          });
+        }
+      }
+    }
+  }
+
+  return paths;
+}
+
+const wikiConfigs = {
+  brewery,
+  "farm-and-charm": farmandcharm,
+  "lilis-lucky-lures": lilisluckylures,
+  herbalbrews,
+  vinery,
+  camping,
+  beachparty,
+  candlelight,
+  bloomingnature,
+  wildernature,
+  furniture,
+  meadow,
+  bakery,
+  "hearth-and-timber": hearthandtimber,
+  "lilis-pottery": pottery,
+  "alpine-whispers": alpinewhispers,
+};
+
+const { entry, section, config, mod } = Astro.props;
+
+const withBase = (path) => {
+  if (!path) return "";
+  if (path.startsWith("http://") || path.startsWith("https://")) return path;
+
+  const base = import.meta.env.BASE_URL || "/";
+  const cleanBase = base.endsWith("/") ? base.slice(0, -1) : base;
+  const cleanPath = path.startsWith("/") ? path : `/${path}`;
+
+  return `${cleanBase}${cleanPath}`;
+};
+
+const escapeHtml = (value) =>
+  String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+
+const escapeHtmlWithBreaks = (value) => escapeHtml(value).replace(/\r\n|\r|\n/g, "<br />");
+
+const relatedEntries = (section.entries ?? [])
+  .filter((relatedEntry) => relatedEntry.id && relatedEntry.id !== entry.id)
+  .slice(0, 4);
+
+const wikiIndex = Object.entries(wikiConfigs)
+  .map(([wikiSlug, wikiConfig]) => ({
+    slug: wikiSlug,
+    title: wikiConfig?.title ?? wikiSlug,
+  }))
+  .sort((firstWiki, secondWiki) => String(firstWiki.title).localeCompare(String(secondWiki.title)));
+
+const itemSlug = String(entry.id).replace(/_/g, "-");
+const pageTitle = `${entry.title} – ${config.title}`;
+const pageDescription = entry.detailsText
+  ? `${String(entry.detailsText).slice(0, 155).replace(/\n/g, " ")}…`
+  : entry.subtitle
+    ? String(entry.subtitle).slice(0, 155)
+    : `${entry.title} from ${config.title} in the Let's Do mod series.`;
+
+const canonicalUrl = `https://lets-do.ch/wiki/${mod}/${itemSlug}/`;
+---
+
+<SiteLayout title={pageTitle}>
+  <Fragment slot="head">
+    <meta name="description" content={pageDescription} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+  </Fragment>
+
+  <NavBar />
+
+  <main class="page wikiShell">
+    <WikiSidebar
+      activeWikiTitle={config.title}
+      wikis={wikiIndex}
+      activeSlug={mod}
+      wikiHref={(slug) => withBase(`/wiki/${slug}/`)}
+      searchPlaceholder="Search items, blocks, features..."
+      sections={config.sections ?? []}
+      impressions={config.impressions ?? []}
+    />
+
+    <div class="wikiContent">
+      <div class="wikiMain">
+        <nav class="itemBreadcrumb">
+          <a href={withBase("/wiki/")}>Wiki</a>
+          <span>›</span>
+          <a href={withBase(`/wiki/${mod}/`)}>{config.title}</a>
+          <span>›</span>
+          <span>{entry.title}</span>
+        </nav>
+
+        <section class="section sectionTight itemHeader">
+          {entry.icon && <img class="itemIcon" src={withBase(entry.icon)} alt={entry.title} loading="eager" />}
+
+          <div class="itemMeta">
+            <h1>{entry.title}</h1>
+
+            {entry.namespace_id && <div class="wikiCardNs">{entry.namespace_id}</div>}
+
+            {entry.subtitle && <p class="itemSubtitle" set:html={escapeHtmlWithBreaks(entry.subtitle)} />}
+          </div>
+        </section>
+
+        {(entry.detailsTitle || entry.detailsText || entry.detailsBullets?.length) && (
+          <section class="section sectionTight itemDetails">
+            {entry.detailsTitle && <h2>{entry.detailsTitle}</h2>}
+
+            {entry.detailsText && <div class="wikiDetailsText" set:html={escapeHtmlWithBreaks(entry.detailsText)} />}
+
+            {Array.isArray(entry.detailsBullets) && entry.detailsBullets.length > 0 && (
+              <ul class="wikiDetailsList">
+                {entry.detailsBullets.map((line) => <li>{line}</li>)}
+              </ul>
+            )}
+          </section>
+        )}
+
+        {Array.isArray(entry.items) && entry.items.length > 0 && (
+          <section class="section sectionTight">
+            <h2>Variants</h2>
+
+            <div class="wikiMiniGrid">
+              {entry.items.filter((item) => item.id).map((item) => (
+                <div class="wikiMiniCard">
+                  {item.icon && (
+                    <img class="wikiMiniIcon" src={withBase(item.icon)} alt={item.title ?? item.id} loading="lazy" />
+                  )}
+
+                  <div class="wikiMiniBody">
+                    <div class="wikiMiniTitle">{item.title ?? item.id}</div>
+
+                    {item.namespace_id && <div class="wikiMiniNs">{item.namespace_id}</div>}
+
+                    {item.subtitle && <div class="wikiMiniSub">{item.subtitle}</div>}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {relatedEntries.length > 0 && (
+          <section class="section sectionTight itemRelated">
+            <h2>More in {section.title}</h2>
+
+            <div class="itemRelatedGrid">
+              {relatedEntries.map((relatedEntry) => (
+                <a class="itemRelatedCard" href={withBase(`/wiki/${mod}/${String(relatedEntry.id).replace(/_/g, "-")}/`)}>
+                  {relatedEntry.icon && <img src={withBase(relatedEntry.icon)} alt={relatedEntry.title ?? relatedEntry.id} loading="lazy" />}
+
+                  <div>
+                    <strong>{relatedEntry.title}</strong>
+                    {relatedEntry.subtitle && <p>{relatedEntry.subtitle}</p>}
+                  </div>
+                </a>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <a class="itemBackLink" href={withBase(`/wiki/${mod}/`)}>
+          ← Back to {config.title}
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</SiteLayout>
+
+<style>
+  .itemBreadcrumb {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 0.875rem;
+    opacity: 0.65;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .itemBreadcrumb a:hover {
+    opacity: 1;
+    text-decoration: underline;
+  }
+
+  .itemHeader {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .itemIcon {
+    width: 88px;
+    height: 88px;
+    image-rendering: pixelated;
+    flex-shrink: 0;
+  }
+
+  .itemMeta h1 {
+    margin: 0 0 0.25rem;
+    font-size: 2rem;
+  }
+
+  .itemSubtitle {
+    margin: 0.5rem 0 0;
+    opacity: 0.8;
+    line-height: 1.6;
+  }
+
+  .itemDetails {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+  }
+
+  .itemDetails h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  .itemRelatedGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .itemRelatedCard {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+    background: var(--card);
+    transition: transform 150ms ease, box-shadow 150ms ease;
+  }
+
+  .itemRelatedCard:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+  }
+
+  .itemRelatedCard img {
+    width: 44px;
+    height: 44px;
+    image-rendering: pixelated;
+    flex-shrink: 0;
+  }
+
+  .itemRelatedCard strong {
+    display: block;
+    font-size: 0.95rem;
+  }
+
+  .itemRelatedCard p {
+    margin: 0.2rem 0 0;
+    font-size: 0.82rem;
+    opacity: 0.65;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+  }
+
+  .itemBackLink {
+    display: inline-block;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    opacity: 0.6;
+    transition: opacity 150ms ease;
+  }
+
+  .itemBackLink:hover {
+    opacity: 1;
+  }
+
+  @media (max-width: 600px) {
+    .itemHeader {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .itemMeta h1 {
+      font-size: 1.5rem;
+    }
+  }
+</style>

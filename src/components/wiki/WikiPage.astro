@@ -39,6 +39,8 @@ const normalizeId = (value) =>
     .replace(/\s+/g, "_")
     .replace(/[^\w\-]/g, "");
 
+const toItemSlug = (value) => String(value ?? "").replace(/_/g, "-");
+
 const linkifyText = (text) => {
   if (!text) return "";
 
@@ -80,7 +82,7 @@ const sections = Array.isArray(config?.sections) ? config.sections : [];
 const wikis = Array.isArray(wikiIndex) ? wikiIndex : [];
 
 const activeSlug = typeof currentSlug === "string" ? currentSlug : "";
-const activeWiki = wikis.find((w) => w.slug === activeSlug) ?? null;
+const activeWiki = wikis.find((wiki) => wiki.slug === activeSlug) ?? null;
 const activeWikiTitle = activeWiki?.title ?? title;
 
 const searchPlaceholder = "Search items, blocks, features...";
@@ -106,10 +108,11 @@ const titleCaseFromId = (id) =>
   String(id ?? "")
     .split("_")
     .filter(Boolean)
-    .map((p) => p.slice(0, 1).toUpperCase() + p.slice(1))
+    .map((part) => part.slice(0, 1).toUpperCase() + part.slice(1))
     .join(" ");
 
 const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
+const itemHref = (id) => withBase(`/wiki/${activeSlug}/${toItemSlug(id)}/`);
 ---
 
 <SiteLayout title={title}>
@@ -170,6 +173,7 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
                     const detailsOpenTitle = entry.detailsTitle ?? "Details";
                     const tracks = Array.isArray(entry.tracks) ? entry.tracks : [];
                     const entryId = normalizeId(entry.id);
+                    const entryHref = itemHref(entry.id);
 
                     return (
                       <article
@@ -185,7 +189,9 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
                       >
                         <div class="cardContent wikiCardContent">
                           {iconSrc ? (
-                            <img class="cardLogo wikiCardLogo" src={iconSrc} alt={entry.title} loading="lazy" />
+                            <a class="wikiCardLogoLink" href={entryHref} aria-label={entry.title ?? "Open item"}>
+                              <img class="cardLogo wikiCardLogo" src={iconSrc} alt={entry.title} loading="lazy" />
+                            </a>
                           ) : (
                             <div class="wikiCardLogoPlaceholder" aria-hidden="true" />
                           )}
@@ -220,12 +226,12 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
 
                             {Array.isArray(entry.detailsGallery) && entry.detailsGallery.length ? (
                               <div class="wikiCardDetailsGallery">
-                                {entry.detailsGallery.map((g) => (
+                                {entry.detailsGallery.map((galleryItem) => (
                                   <div class="wikiGalleryItem">
-                                    <img class="wikiGalleryImg" src={g.icon ? withBase(g.icon) : ""} alt={g.title ?? ""} loading="lazy" />
+                                    <img class="wikiGalleryImg" src={galleryItem.icon ? withBase(galleryItem.icon) : ""} alt={galleryItem.title ?? ""} loading="lazy" />
                                     <div class="wikiGalleryMeta">
-                                      <div class="wikiGalleryTitle">{g.title ?? ""}</div>
-                                      {g.namespace_id ? <div class="wikiGalleryNs">{g.namespace_id}</div> : null}
+                                      <div class="wikiGalleryTitle">{galleryItem.title ?? ""}</div>
+                                      {galleryItem.namespace_id ? <div class="wikiGalleryNs">{galleryItem.namespace_id}</div> : null}
                                     </div>
                                   </div>
                                 ))}
@@ -242,16 +248,19 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
 
                             {Array.isArray(entry.items) && entry.items.length ? (
                               <div class="wikiMiniGrid">
-                                {entry.items.map((it) => {
-                                  const itemId = normalizeId(it.id);
+                                {entry.items.map((item) => {
+                                  const itemId = normalizeId(item.id);
+                                  const childItemHref = itemHref(item.id);
 
                                   return (
-                                    <article class="wikiMiniCard" id={itemId} data-search={entrySearch(it)}>
-                                      <img class="wikiMiniIcon" src={it.icon ? withBase(it.icon) : ""} alt={it.title ?? ""} loading="lazy" />
+                                    <article class="wikiMiniCard" id={itemId} data-search={entrySearch(item)}>
+                                      <a class="wikiMiniIconLink" href={childItemHref} aria-label={item.title ?? "Open item"}>
+                                        <img class="wikiMiniIcon" src={item.icon ? withBase(item.icon) : ""} alt={item.title ?? ""} loading="lazy" />
+                                      </a>
                                       <div class="wikiMiniBody">
-                                        <div class="wikiMiniTitle">{it.title ?? titleCaseFromId(it.id)}</div>
-                                        {it.namespace_id ? <div class="wikiMiniNs">{it.namespace_id}</div> : null}
-                                        {it.subtitle ? <div class="wikiMiniSub" set:html={escapeHtmlWithBreaks(it.subtitle)} /> : null}
+                                        <div class="wikiMiniTitle">{item.title ?? titleCaseFromId(item.id)}</div>
+                                        {item.namespace_id ? <div class="wikiMiniNs">{item.namespace_id}</div> : null}
+                                        {item.subtitle ? <div class="wikiMiniSub" set:html={escapeHtmlWithBreaks(item.subtitle)} /> : null}
                                       </div>
                                     </article>
                                   );
@@ -268,8 +277,8 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
                             </button>
                           ) : null}
 
-                          {entry.wikiHref ? (
-                            <a class="btn btnPrimary" href={entry.wikiHref}>
+                          {entry.id ? (
+                            <a class="btn btnPrimary" href={entryHref}>
                               View
                             </a>
                           ) : null}
@@ -577,4 +586,16 @@ const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
     updateActiveSection();
     openFromHash();
   </script>
+
+  <style>
+    .wikiCardLogoLink,
+    .wikiMiniIconLink {
+      display: inline-flex;
+    }
+
+    .wikiCardLogoLink:hover,
+    .wikiMiniIconLink:hover {
+      transform: scale(1.06);
+    }
+  </style>
 </SiteLayout>

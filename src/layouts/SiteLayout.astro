@@ -13,6 +13,15 @@ const { title = "Let's Do" } = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYW466FBCL"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-CYW466FBCL');
+    </script>
+
     <!-- Ezoic Privacy Scripts -->
     <script data-cfasync="false" is:inline src="https://cmp.gatekeeperconsent.com/min.js"></script>
     <script data-cfasync="false" is:inline src="https://the.gatekeeperconsent.com/cmp.min.js"></script>
