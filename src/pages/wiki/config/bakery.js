@@ -19,19 +19,18 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           id: 'baker_station',
           title: 'Baker Station',
           namespace_id: 'bakery:baker_station',
-          subtitle:
-            'The main work surface for shaping, cutting, and finishing baked goods. Works with [[Rolling Pin|rolling_pin]] and [[Bread Knife|bread_knife]].',
+          subtitle: 'The main work surface for shaping, cutting, and finishing baked goods. Works with [[Rolling Pin|rolling_pin]] and [[Bread Knife|bread_knife]].',
           icon: '/assets/icons/bakery/baker_station.webp',
           search: 'baker station baking cake cupcake cookie dough jam rolling pin knife',
           details: true,
           detailsTitle: 'How baking works',
           detailsText: `The Baker Station is a hands-on baking surface. It does not use a crafting interface.
 
-  Baking is done by placing a Blank Cake on top of the station and interacting with it using tools and toppings.
+Baking is done by placing a Blank Cake on top of the station and interacting with it using tools and toppings.
 
-  Use a [[Bread Knife|bread_knife]] to cut, and a [[Rolling Pin|rolling_pin]] to shape.
+Use a [[Bread Knife|bread_knife]] to cut, and a [[Rolling Pin|rolling_pin]] to shape.
 
-  What you get depends entirely on the order of interactions.`,
+What you get depends entirely on the order of interactions.`,
           detailsBullets: [
             'Place a Blank Cake on top of the Baker Station',
             'Using Jam or a Spread directly creates a finished Cake',
@@ -52,13 +51,13 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           detailsTitle: 'Usage',
           detailsText: `The Small Cooking Pot functions similarly to other Crafting Stations, but focuses on preparing basic Meals. It requires a Heat Source to operate and cannot be used on its own.
 
-   The Small Cooking Pot has six Ingredient Input Slots, one Container Slot, and one Output Slot.
+The Small Cooking Pot has six Ingredient Input Slots, one Container Slot, and one Output Slot.
 
-   After placing the Ingredients into the Input Slots, the Cooking Process takes about thirty seconds. Once completed, the prepared Meal appears in the Output Slot.
+After placing the Ingredients into the Input Slots, the Cooking Process takes about thirty seconds. Once completed, the prepared Meal appears in the Output Slot.
 
-   To function, the Small Cooking Pot must be placed on a Hot Surface, such as a Stove, a Magma Block, or other Heat Sources. In some cases, it can also be placed directly on a Campfire. When active, this is indicated by rising Bubbles, Cooking Sounds, and a colored Fire Indicator in the Cooking Pot Interface.
+To function, the Small Cooking Pot must be placed on a Hot Surface, such as a Stove, a Magma Block, or other Heat Sources. In some cases, it can also be placed directly on a Campfire. When active, this is indicated by rising Bubbles, Cooking Sounds, and a colored Fire Indicator in the Cooking Pot Interface.
 
-   Despite its cozy purpose, the Small Cooking Pot can also be wielded as a weapon if absolutely necessary.`,
+Despite its cozy purpose, the Small Cooking Pot can also be wielded as a weapon if absolutely necessary.`,
           detailsBullets: [
             'Six Ingredient Input Slots',
             'One Container Slot and one Output Slot',
@@ -81,7 +80,17 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           namespace_id: 'bakery:brick_counter',
           subtitle: 'A brick counter block that connects vertically to form continuous counter lines.',
           icon: '/assets/icons/bakery/brick_counter.webp',
-          search: 'brick counter vertical connect bakery'
+          search: 'brick counter vertical connect bakery',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Brick Counter is a decorative counter block designed to build continuous kitchen and bakery work surfaces. It connects vertically to adjacent Brick Counters for a clean, unified look.
+
+It pairs well with the Brick Sink and other bakery furniture to create a complete preparation area.`,
+          detailsBullets: [
+            'Connects vertically to adjacent Brick Counters',
+            'Decorative counter block for bakery interiors',
+            'Pairs well with the Brick Sink and kitchen furniture'
+          ]
         },
         {
           id: 'kitchen_sink',
@@ -94,7 +103,7 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           detailsTitle: 'Function',
           detailsText: `Use a Water Bucket or Glass Bottle on the lower half to fill it.
 
-        If it is filled, use an empty Bucket to get a Water Bucket, or a Glass Bottle to get a Water Potion.`,
+If it is filled, use an empty Bucket to get a Water Bucket, or a Glass Bottle to get a Water Potion.`,
           detailsBullets: [
             'Use Water Bucket or Glass Bottle to fill',
             'Use empty Bucket for a Water Bucket',
@@ -108,7 +117,15 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           namespace_id: 'bakery:cabinet',
           subtitle: 'A storage cabinet for bakery interiors.',
           icon: '/assets/icons/bakery/cabinet.webp',
-          search: 'cabinet storage bakery'
+          search: 'cabinet storage bakery',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Cabinet is a functional storage block for bakery kitchens and preparation rooms. It provides a tidy inventory for storing ingredients, tools, and baked goods.`,
+          detailsBullets: [
+            'Right-click to open and access storage',
+            'Fits naturally in bakery kitchens and interiors',
+            'Pairs well with the Drawer and Wall Cabinet'
+          ]
         },
         {
           id: 'drawer',
@@ -116,7 +133,15 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           namespace_id: 'bakery:drawer',
           subtitle: 'A compact storage drawer for ingredients and tools.',
           icon: '/assets/icons/bakery/drawer.webp',
-          search: 'drawer storage bakery'
+          search: 'drawer storage bakery',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Drawer is a compact storage block designed for bakery counters and preparation areas. It slides open for quick access to ingredients and small tools.`,
+          detailsBullets: [
+            'Right-click to open and access storage',
+            'Compact design fits under counters',
+            'Pairs well with the Cabinet and Brick Counter'
+          ]
         },
         {
           id: 'wall_cabinet',
@@ -124,7 +149,15 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           namespace_id: 'bakery:wall_cabinet',
           subtitle: 'Wall mounted storage to keep counters clear.',
           icon: '/assets/icons/bakery/wall_cabinet.webp',
-          search: 'wall cabinet storage bakery'
+          search: 'wall cabinet storage bakery',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Wall Cabinet mounts directly onto walls, keeping counter space free for baking and preparation. It provides accessible storage for ingredients and utensils without occupying floor space.`,
+          detailsBullets: [
+            'Mounts on walls',
+            'Right-click to open and access storage',
+            'Keeps counter space clear for baking'
+          ]
         },
         {
           id: 'iron_bench',
@@ -132,7 +165,15 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           namespace_id: 'bakery:iron_bench',
           subtitle: 'Simple iron seating.',
           icon: '/assets/icons/bakery/iron_bench.webp',
-          search: 'iron bench seating bakery'
+          search: 'iron bench seating bakery',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Iron Bench is a simple decorative seating block made from iron. Right-click to sit down. It fits naturally in bakery dining areas and outdoor spaces alongside the Iron Table and Iron Chair.`,
+          detailsBullets: [
+            'Right-click to sit',
+            'Decorative iron seating block',
+            'Pairs well with the Iron Table and Iron Chair'
+          ]
         },
         {
           id: 'iron_chair',
@@ -140,7 +181,15 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           namespace_id: 'bakery:iron_chair',
           subtitle: 'A simple iron chair.',
           icon: '/assets/icons/bakery/iron_chair.webp',
-          search: 'iron chair seating bakery'
+          search: 'iron chair seating bakery',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Iron Chair is a simple decorative seating block made from iron. Right-click to sit down. It pairs naturally with the Iron Table for a complete cafe or bakery dining setup.`,
+          detailsBullets: [
+            'Right-click to sit',
+            'Decorative iron seating block',
+            'Pairs well with the Iron Table'
+          ]
         },
         {
           id: 'iron_table',
@@ -148,7 +197,15 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           namespace_id: 'bakery:iron_table',
           subtitle: 'A sturdy iron table.',
           icon: '/assets/icons/bakery/iron_table.webp',
-          search: 'iron table bakery'
+          search: 'iron table bakery',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Iron Table is a sturdy decorative table block made from iron. It suits bakery dining areas, outdoor patios, and cafe setups. Pair it with Iron Chairs or Iron Benches for a complete seating arrangement.`,
+          detailsBullets: [
+            'Decorative iron table block',
+            'Pairs well with Iron Chairs and Iron Benches',
+            'Suits bakery dining areas and outdoor spaces'
+          ]
         },
         {
           id: 'street_sign',
@@ -161,9 +218,9 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           detailsTitle: 'Usage',
           detailsText: `The Street Sign is a writable sign piece intended for streets, shops, and bakery fronts.
 
-    Right-click the sign to open the text screen and write short messages such as shop names, menus, or directions.
+Right-click the sign to open the text screen and write short messages such as shop names, menus, or directions.
 
-    Glow Ink can be applied to make the text glow, improving visibility at night or indoors.`,
+Glow Ink can be applied to make the text glow, improving visibility at night or indoors.`,
           detailsBullets: [
             'Writable sign decoration',
             'Right-click to open the text interface',
@@ -183,8 +240,8 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           detailsTitle: 'Usage',
           detailsText: `The Cake Stand can display either a single whole cake block or up to three food items.
 
-   Hold a valid item and right-click the Cake Stand to place it.
-   Right-click with an empty hand to take items back.`,
+Hold a valid item and right-click the Cake Stand to place it.
+Right-click with an empty hand to take items back.`,
           detailsBullets: [
             'Displays one full cake block or up to 3 food items',
             'Right-click with item to place',
@@ -195,15 +252,14 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           id: 'cake_display',
           title: 'Cake Display',
           namespace_id: 'bakery:cake_display',
-          subtitle:
-            'A glass display for showcasing baked goods, especially [[Cakes and slices|cakes]] and [[Pastries and sweets|pastries]].',
+          subtitle: 'A glass display for showcasing baked goods, especially [[Cakes and slices|cakes]] and [[Pastries and sweets|pastries]].',
           icon: '/assets/icons/bakery/cake_display.webp',
           search: 'cake display bakery shelf',
           details: true,
           detailsTitle: 'Usage',
           detailsText: `The Cake Display renders food items on two shelves.
 
-   Up to three food items can be placed on the lower shelf and three on the upper shelf.`,
+Up to three food items can be placed on the lower shelf and three on the upper shelf.`,
           detailsBullets: [
             'Displays up to 6 food items',
             '3 items on the lower shelf',
@@ -241,7 +297,7 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           detailsTitle: 'Usage',
           detailsText: `The Breadbox displays a single bread item as a 3D model.
 
-   Use Shift + Right-click to open or close the lid.`,
+Use Shift + Right-click to open or close the lid.`,
           detailsBullets: [
             'Displays one bread item as a 3D model',
             'Shift + Right-click to open or close the lid',
@@ -253,8 +309,7 @@ Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a
           id: 'tray',
           title: 'Tray',
           namespace_id: 'bakery:tray',
-          subtitle:
-            'A serving tray for bread and baked goods. Perfect with [[Breads and buns|breads]] and [[Pastries and sweets|pastries]].',
+          subtitle: 'A serving tray for bread and baked goods. Perfect with [[Breads and buns|breads]] and [[Pastries and sweets|pastries]].',
           icon: '/assets/icons/bakery/tray.webp',
           search: 'tray bakery serving',
           details: true,
@@ -341,7 +396,6 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
             }
           ]
         },
-
         {
           id: 'bakery_banner',
           title: 'Completionist Banner',
@@ -353,7 +407,7 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
           detailsTitle: 'Reward',
           detailsText: `The Completionist Banner is awarded to players who have crafted all different Bakery Foods.
 
-    While placed, it grants nearby players a temporary Resistance effect.`,
+While placed, it grants nearby players a temporary Resistance effect.`,
           detailsBullets: [
             'Reward for crafting all Bakery Foods',
             'Tracked through advancements',
@@ -371,10 +425,19 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
           id: 'rolling_pin',
           title: 'Rolling Pin',
           namespace_id: 'bakery:rolling_pin',
-          subtitle:
-            'Used to flatten dough and occasionally your expectations. Used at the [[Baker Station|baker_station]]. Can be used as a weapon, just not a very good one.',
+          subtitle: 'Used to flatten dough and occasionally your expectations. Used at the [[Baker Station|baker_station]]. Can be used as a weapon, just not a very good one.',
           icon: '/assets/icons/bakery/rolling_pin.webp',
-          search: 'rolling pin tool weapon'
+          search: 'rolling pin tool weapon',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Rolling Pin is a baking tool used at the [[Baker Station|baker_station]] to shape dough into cookies and flat pastries.
+
+It can also be used as a melee weapon in a pinch, though it is not particularly effective in combat.`,
+          detailsBullets: [
+            'Used at the Baker Station to shape dough',
+            'Turns Cupcakes into Cookies when combined with a Bread Knife',
+            'Can be used as a melee weapon'
+          ]
         },
         {
           id: 'bread_knife',
@@ -382,7 +445,17 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
           namespace_id: 'bakery:bread_knife',
           subtitle: 'Cuts bread and doubles as a very unambitious sword. Used at the [[Baker Station|baker_station]].',
           icon: '/assets/icons/bakery/bread_knife.webp',
-          search: 'bread knife tool weapon'
+          search: 'bread knife tool weapon',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Bread Knife is a baking tool used at the [[Baker Station|baker_station]] to cut cakes into cupcakes and prepare other baked goods.
+
+It also functions as a sword, though it is not a particularly threatening weapon.`,
+          detailsBullets: [
+            'Used at the Baker Station to cut cakes',
+            'Cuts Blank Cakes into Cupcakes',
+            'Can be used as a melee weapon'
+          ]
         },
         {
           id: 'cake_dough',
@@ -390,7 +463,15 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
           namespace_id: 'bakery:cake_dough',
           subtitle: 'Base dough used for cakes. Used at the [[Baker Station|baker_station]].',
           icon: '/assets/icons/bakery/cake_dough.webp',
-          search: 'cake dough ingredient'
+          search: 'cake dough ingredient',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `Cake Dough is the base ingredient for all cake-based baked goods. It is prepared and then used at the [[Baker Station|baker_station]] to create a variety of cakes, cupcakes, and cookies depending on the tools and toppings applied.`,
+          detailsBullets: [
+            'Base ingredient for cakes, cupcakes, and cookies',
+            'Used at the Baker Station',
+            'Final result depends on tools and toppings applied'
+          ]
         },
         {
           id: 'sweet_dough',
@@ -398,7 +479,15 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
           namespace_id: 'bakery:sweet_dough',
           subtitle: 'Base dough used for pastries.',
           icon: '/assets/icons/bakery/sweet_dough.webp',
-          search: 'sweet dough ingredient'
+          search: 'sweet dough ingredient',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `Sweet Dough is the base ingredient for pastries and sweet baked goods. It is used at the [[Baker Station|baker_station]] to create a variety of pastry items depending on the toppings and finishing steps applied.`,
+          detailsBullets: [
+            'Base ingredient for pastries and sweet baked goods',
+            'Used at the Baker Station',
+            'Final result depends on toppings and finishing steps'
+          ]
         }
       ]
     },
@@ -418,8 +507,8 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
           detailsTitle: 'Usage',
           detailsText: `The Bread Crate can be placed in the world and eaten directly.
 
-  Each bite restores hunger and advances the bite stage.
-  Once fully consumed, the Bread Crate is removed and drops its tray, which was used to craft it.`,
+Each bite restores hunger and advances the bite stage.
+Once fully consumed, the Bread Crate is removed and drops its tray, which was used to craft it.`,
           detailsBullets: [
             'Can be placed',
             'Consumed in multiple bites',
@@ -438,243 +527,162 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
           detailsTitle: 'Usage',
           detailsText: `The Chocolate Box can be placed in the world and eaten directly.
 
-  Each bite restores a small amount of hunger.
-  After the last piece is eaten, the box is removed.`,
-          detailsBullets: ['Can be placed', 'Consumed in multiple bites', 'Restores hunger on use']
+Each bite restores a small amount of hunger.
+After the last piece is eaten, the box is removed.`,
+          detailsBullets: [
+            'Can be placed',
+            'Consumed in multiple bites',
+            'Restores hunger on use'
+          ]
         },
-{
-  id: 'breads',
-  title: 'Breads & Buns',
-  namespace_id: 'bakery:breads',
-  subtitle: 'Simple baked breads and loaves.',
-  icon: '/assets/icons/bakery/bread.webp',
-  search: 'bread bakery loaf baguette toast braided bread crusty bun sandwich',
-  details: true,
-  detailsTitle: 'Included Breads',
-  detailsText: `This entry covers all basic bread items added by Bakery.
+        {
+          id: 'breads',
+          title: 'Breads & Buns',
+          namespace_id: 'bakery:breads',
+          subtitle: 'Simple baked breads and loaves.',
+          icon: '/assets/icons/bakery/bread.webp',
+          search: 'bread bakery loaf baguette toast braided bread crusty bun sandwich',
+          details: true,
+          detailsTitle: 'Included Breads',
+          detailsText: `This entry covers all basic bread items added by Bakery.
 
-  All listed breads are simple food items and restore hunger when eaten.`,
-  items: [
-    {
-      id: 'croissant',
-      title: 'Croissant',
-      namespace_id: 'bakery:croissant',
-      icon: '/assets/icons/bakery/croissant.webp',
-      search: 'croissant bread food'
-    },
-    {
-      id: 'crusty_bread',
-      title: 'Crusty Bread',
-      namespace_id: 'bakery:crusty_bread',
-      icon: '/assets/icons/bakery/crusty_bread.webp',
-      search: 'crusty bread food'
-    },
-    {
-      id: 'bread',
-      title: 'Bread',
-      namespace_id: 'bakery:bread',
-      icon: '/assets/icons/bakery/bread.webp',
-      search: 'bread food'
-    },
-    {
-      id: 'baguette',
-      title: 'Baguette',
-      namespace_id: 'bakery:baguette',
-      icon: '/assets/icons/bakery/baguette.webp',
-      search: 'baguette bread food'
-    },
-    {
-      id: 'toast',
-      title: 'Toast',
-      namespace_id: 'bakery:toast',
-      icon: '/assets/icons/bakery/toast.webp',
-      search: 'toast bread food'
-    },
-    {
-      id: 'braided_bread',
-      title: 'Braided Bread',
-      namespace_id: 'bakery:braided_bread',
-      icon: '/assets/icons/bakery/braided_bread.webp',
-      search: 'braided bread food'
-    },
-    {
-      id: 'bun',
-      title: 'Bun',
-      namespace_id: 'bakery:bun',
-      icon: '/assets/icons/bakery/bun.webp',
-      search: 'bun bread food'
-    }
-  ]
-},
-  {
-    id: 'cakes',
-    title: 'Cakes & Slices',
-    subtitle: 'Cakes, pies, tarts, and their slices.',
-    icon: '/assets/icons/bakery/chocolate_cake_slice.webp',
-    search: 'cake slice tart pie gateau pudding bakery',
-    details: true,
-    detailsTitle: 'Included Cakes',
-    detailsText: `This entry includes all cake-based foods and their slice variants.
+All listed breads are simple food items and restore hunger when eaten.`,
+          items: [
+            {
+              id: 'croissant',
+              title: 'Croissant',
+              namespace_id: 'bakery:croissant',
+              icon: '/assets/icons/bakery/croissant.webp',
+              search: 'croissant bread food'
+            },
+            {
+              id: 'crusty_bread',
+              title: 'Crusty Bread',
+              namespace_id: 'bakery:crusty_bread',
+              icon: '/assets/icons/bakery/crusty_bread.webp',
+              search: 'crusty bread food'
+            },
+            {
+              id: 'bread',
+              title: 'Bread',
+              namespace_id: 'bakery:bread',
+              icon: '/assets/icons/bakery/bread.webp',
+              search: 'bread food'
+            },
+            {
+              id: 'baguette',
+              title: 'Baguette',
+              namespace_id: 'bakery:baguette',
+              icon: '/assets/icons/bakery/baguette.webp',
+              search: 'baguette bread food'
+            },
+            {
+              id: 'toast',
+              title: 'Toast',
+              namespace_id: 'bakery:toast',
+              icon: '/assets/icons/bakery/toast.webp',
+              search: 'toast bread food'
+            },
+            {
+              id: 'braided_bread',
+              title: 'Braided Bread',
+              namespace_id: 'bakery:braided_bread',
+              icon: '/assets/icons/bakery/braided_bread.webp',
+              search: 'braided bread food'
+            },
+            {
+              id: 'bun',
+              title: 'Bun',
+              namespace_id: 'bakery:bun',
+              icon: '/assets/icons/bakery/bun.webp',
+              search: 'bun bread food'
+            }
+          ]
+        },
+        {
+          id: 'cakes',
+          title: 'Cakes & Slices',
+          subtitle: 'Cakes, pies, tarts, and their slices.',
+          icon: '/assets/icons/bakery/chocolate_cake_slice.webp',
+          search: 'cake slice tart pie gateau pudding bakery',
+          details: true,
+          detailsTitle: 'Included Cakes',
+          detailsText: `This entry includes all cake-based foods and their slice variants.
 
-    Slices are typically obtained by cutting or serving whole cakes.`,
-    items: [
-      {
-        id: 'strawberry_cake_slice',
-        title: 'Strawberry Cake Slice',
-        namespace_id: 'bakery:strawberry_cake_slice',
-        icon: '/assets/icons/bakery/strawberry_cake_slice.webp',
-        search: 'strawberry cake slice'
-      },
-      {
-        id: 'sweetberry_cake_slice',
-        title: 'Sweetberry Cake Slice',
-        namespace_id: 'bakery:sweetberry_cake_slice',
-        icon: '/assets/icons/bakery/sweetberry_cake_slice.webp',
-        search: 'sweetberry cake slice'
-      },
-      {
-        id: 'chocolate_cake_slice',
-        title: 'Chocolate Cake Slice',
-        namespace_id: 'bakery:chocolate_cake_slice',
-        icon: '/assets/icons/bakery/chocolate_cake_slice.webp',
-        search: 'chocolate cake slice'
-      },
-      {
-        id: 'chocolate_gateau_slice',
-        title: 'Chocolate Gateau Slice',
-        namespace_id: 'bakery:chocolate_gateau_slice',
-        icon: '/assets/icons/bakery/chocolate_gateau_slice.webp',
-        search: 'chocolate gateau slice'
-      },
-      {
-        id: 'bundt_cake_slice',
-        title: 'Bundt Cake Slice',
-        namespace_id: 'bakery:bundt_cake_slice',
-        icon: '/assets/icons/bakery/bundt_cake_slice.webp',
-        search: 'bundt cake slice'
-      },
-      {
-        id: 'linzer_tart_slice',
-        title: 'Linzer Tart Slice',
-        namespace_id: 'bakery:linzer_tart_slice',
-        icon: '/assets/icons/bakery/linzer_tart_slice.webp',
-        search: 'linzer tart slice'
-      },
-      {
-        id: 'apple_pie_slice',
-        title: 'Apple Pie Slice',
-        namespace_id: 'bakery:apple_pie_slice',
-        icon: '/assets/icons/bakery/apple_pie_slice.webp',
-        search: 'apple pie slice'
-      },
-      {
-        id: 'glowberry_pie_slice',
-        title: 'Glowberry Pie Slice',
-        namespace_id: 'bakery:glowberry_pie_slice',
-        icon: '/assets/icons/bakery/glowberry_pie_slice.webp',
-        search: 'glowberry pie slice'
-      },
-      {
-        id: 'chocolate_tart_slice',
-        title: 'Chocolate Tart Slice',
-        namespace_id: 'bakery:chocolate_tart_slice',
-        icon: '/assets/icons/bakery/chocolate_tart_slice.webp',
-        search: 'chocolate tart slice'
-      },
-      {
-        id: 'pudding_slice',
-        title: 'Pudding Slice',
-        namespace_id: 'bakery:pudding_slice',
-        icon: '/assets/icons/bakery/pudding_slice.webp',
-        search: 'pudding slice'
-      }
-    ]
-  },
-   {
-     id: 'cakes',
-     title: 'Cakes & Slices',
-     namespace_id: 'bakery:cakes',
-     subtitle: 'Cakes, pies, tarts, and their slices.',
-     icon: '/assets/icons/bakery/chocolate_cake_slice.webp',
-     search: 'cake slice tart pie gateau pudding bakery',
-     details: true,
-     detailsTitle: 'Included Cakes',
-     detailsText: `This entry includes all cake-based foods and their slice variants.
-
-     Slices are typically obtained by cutting or serving whole cakes.`,
-     items: [
-       {
-         id: 'strawberry_cake_slice',
-         title: 'Strawberry Cake Slice',
-         namespace_id: 'bakery:strawberry_cake_slice',
-         icon: '/assets/icons/bakery/strawberry_cake_slice.webp',
-         search: 'strawberry cake slice'
-       },
-       {
-         id: 'sweetberry_cake_slice',
-         title: 'Sweetberry Cake Slice',
-         namespace_id: 'bakery:sweetberry_cake_slice',
-         icon: '/assets/icons/bakery/sweetberry_cake_slice.webp',
-         search: 'sweetberry cake slice'
-       },
-       {
-         id: 'chocolate_cake_slice',
-         title: 'Chocolate Cake Slice',
-         namespace_id: 'bakery:chocolate_cake_slice',
-         icon: '/assets/icons/bakery/chocolate_cake_slice.webp',
-         search: 'chocolate cake slice'
-       },
-       {
-         id: 'chocolate_gateau_slice',
-         title: 'Chocolate Gateau Slice',
-         namespace_id: 'bakery:chocolate_gateau_slice',
-         icon: '/assets/icons/bakery/chocolate_gateau_slice.webp',
-         search: 'chocolate gateau slice'
-       },
-       {
-         id: 'bundt_cake_slice',
-         title: 'Bundt Cake Slice',
-         namespace_id: 'bakery:bundt_cake_slice',
-         icon: '/assets/icons/bakery/bundt_cake_slice.webp',
-         search: 'bundt cake slice'
-       },
-       {
-         id: 'linzer_tart_slice',
-         title: 'Linzer Tart Slice',
-         namespace_id: 'bakery:linzer_tart_slice',
-         icon: '/assets/icons/bakery/linzer_tart_slice.webp',
-         search: 'linzer tart slice'
-       },
-       {
-         id: 'apple_pie_slice',
-         title: 'Apple Pie Slice',
-         namespace_id: 'bakery:apple_pie_slice',
-         icon: '/assets/icons/bakery/apple_pie_slice.webp',
-         search: 'apple pie slice'
-       },
-       {
-         id: 'glowberry_pie_slice',
-         title: 'Glowberry Pie Slice',
-         namespace_id: 'bakery:glowberry_pie_slice',
-         icon: '/assets/icons/bakery/glowberry_pie_slice.webp',
-         search: 'glowberry pie slice'
-       },
-       {
-         id: 'chocolate_tart_slice',
-         title: 'Chocolate Tart Slice',
-         namespace_id: 'bakery:chocolate_tart_slice',
-         icon: '/assets/icons/bakery/chocolate_tart_slice.webp',
-         search: 'chocolate tart slice'
-       },
-       {
-         id: 'pudding_slice',
-         title: 'Pudding Slice',
-         namespace_id: 'bakery:pudding_slice',
-         icon: '/assets/icons/bakery/pudding_slice.webp',
-         search: 'pudding slice'
-       }
-     ]
-   }
+Slices are typically obtained by cutting or serving whole cakes.`,
+          items: [
+            {
+              id: 'strawberry_cake_slice',
+              title: 'Strawberry Cake Slice',
+              namespace_id: 'bakery:strawberry_cake_slice',
+              icon: '/assets/icons/bakery/strawberry_cake_slice.webp',
+              search: 'strawberry cake slice'
+            },
+            {
+              id: 'sweetberry_cake_slice',
+              title: 'Sweetberry Cake Slice',
+              namespace_id: 'bakery:sweetberry_cake_slice',
+              icon: '/assets/icons/bakery/sweetberry_cake_slice.webp',
+              search: 'sweetberry cake slice'
+            },
+            {
+              id: 'chocolate_cake_slice',
+              title: 'Chocolate Cake Slice',
+              namespace_id: 'bakery:chocolate_cake_slice',
+              icon: '/assets/icons/bakery/chocolate_cake_slice.webp',
+              search: 'chocolate cake slice'
+            },
+            {
+              id: 'chocolate_gateau_slice',
+              title: 'Chocolate Gateau Slice',
+              namespace_id: 'bakery:chocolate_gateau_slice',
+              icon: '/assets/icons/bakery/chocolate_gateau_slice.webp',
+              search: 'chocolate gateau slice'
+            },
+            {
+              id: 'bundt_cake_slice',
+              title: 'Bundt Cake Slice',
+              namespace_id: 'bakery:bundt_cake_slice',
+              icon: '/assets/icons/bakery/bundt_cake_slice.webp',
+              search: 'bundt cake slice'
+            },
+            {
+              id: 'linzer_tart_slice',
+              title: 'Linzer Tart Slice',
+              namespace_id: 'bakery:linzer_tart_slice',
+              icon: '/assets/icons/bakery/linzer_tart_slice.webp',
+              search: 'linzer tart slice'
+            },
+            {
+              id: 'apple_pie_slice',
+              title: 'Apple Pie Slice',
+              namespace_id: 'bakery:apple_pie_slice',
+              icon: '/assets/icons/bakery/apple_pie_slice.webp',
+              search: 'apple pie slice'
+            },
+            {
+              id: 'glowberry_pie_slice',
+              title: 'Glowberry Pie Slice',
+              namespace_id: 'bakery:glowberry_pie_slice',
+              icon: '/assets/icons/bakery/glowberry_pie_slice.webp',
+              search: 'glowberry pie slice'
+            },
+            {
+              id: 'chocolate_tart_slice',
+              title: 'Chocolate Tart Slice',
+              namespace_id: 'bakery:chocolate_tart_slice',
+              icon: '/assets/icons/bakery/chocolate_tart_slice.webp',
+              search: 'chocolate tart slice'
+            },
+            {
+              id: 'pudding_slice',
+              title: 'Pudding Slice',
+              namespace_id: 'bakery:pudding_slice',
+              icon: '/assets/icons/bakery/pudding_slice.webp',
+              search: 'pudding slice'
+            }
+          ]
+        }
       ]
     },
     {
@@ -688,7 +696,17 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
           namespace_id: 'bakery:vitality',
           subtitle: 'Reduces exhaustion over time. Scales with effect level.',
           icon: '/assets/icons/bakery/effects/vitality.webp',
-          search: 'vitality effect bakery exhaustion reduction interval scales amplifier'
+          search: 'vitality effect bakery exhaustion reduction interval scales amplifier',
+          details: true,
+          detailsTitle: 'Effect',
+          detailsText: `Vitality is a positive status effect granted by certain Bakery foods. It reduces food exhaustion over time, helping hunger drain more slowly.
+
+The strength of the reduction scales with the effect level, so higher amplifiers provide stronger hunger preservation.`,
+          detailsBullets: [
+            'Reduces food exhaustion over time',
+            'Effect strength scales with amplifier level',
+            'Granted by certain Bakery foods'
+          ]
         },
         {
           id: 'sugar_rush',
@@ -696,20 +714,31 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
           namespace_id: 'bakery:sugar_rush',
           subtitle: 'Stacks up to 10. Grants Movement Speed up to 5 stacks, then Attack Speed for remaining stacks.',
           icon: '/assets/icons/bakery/effects/sugar_rush.webp',
-          search: 'sugar rush effect bakery stacks movement speed attack speed up to 10'
+          search: 'sugar rush effect bakery stacks movement speed attack speed up to 10',
+          details: true,
+          detailsTitle: 'Effect',
+          detailsText: `Sugar Rush is a stackable status effect granted by sweet Bakery foods. It can stack up to 10 times, with each stack adding a bonus.
+
+The first 5 stacks grant increasing Movement Speed. Stacks 6 through 10 grant increasing Attack Speed instead.`,
+          detailsBullets: [
+            'Stackable up to 10 times',
+            'Stacks 1–5 grant increasing Movement Speed',
+            'Stacks 6–10 grant increasing Attack Speed',
+            'Granted by sweet Bakery foods'
+          ]
         }
       ]
     }
   ],
   recipesCta: {
     enabled: true,
-    title: "Recipes",
+    title: 'Recipes',
     text: `Feeling a little lost and not sure how to craft certain things?
 
-  Here you will find a helpful overview of all Let’s Do crafting stations and their recipes.
+Here you will find a helpful overview of all Let's Do crafting stations and their recipes.
 
-  `,
-    buttonLabel: "Open Recipe Overview",
-    href: "/recipes/"
-  },
+`,
+    buttonLabel: 'Open Recipe Overview',
+    href: '/recipes/'
+  }
 }

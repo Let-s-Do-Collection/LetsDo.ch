@@ -45,7 +45,7 @@ It provides multiple input slots for ingredients and a single output slot for th
           detailsTitle: 'Cooling',
           detailsText: `The Mini Fridge is a simple processing block with one input slot and one output slot.
 
-  Items placed inside are cooled over time and converted into their chilled variants.`,
+Items placed inside are cooled over time and converted into their chilled variants.`,
           detailsBullets: [
             'One input slot and one output slot',
             'Processes items over time',
@@ -72,7 +72,7 @@ It provides multiple input slots for ingredients and a single output slot for th
           detailsTitle: 'Included Blocks',
           detailsText: `Palm is a complete wood building set used across Beachparty builds.
 
-        Palm Trees generate naturally as a world feature. See [[Palm Trees|palm_trees]].`,
+Palm Trees generate naturally as a world feature. See [[Palm Trees|palm_trees]].`,
           detailsBullets: ['Full wood set with matching variants'],
           items: [
             {
@@ -141,7 +141,17 @@ When placed under open sky, it dries over time.`,
           namespace_id: 'beachparty:palm_table',
           subtitle: 'A simple wooden table for meals, drinks, and gatherings.',
           icon: '/assets/icons/beachparty/palm_table.webp',
-          search: 'table palm furniture beach'
+          search: 'table palm furniture beach',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Palm Table is a decorative wooden table crafted from Palm wood. It fits naturally in beach bars, outdoor dining areas, and tropical builds.
+
+Pair it with Palm Chairs or Palm Bar Stools for a complete beach setup.`,
+          detailsBullets: [
+            'Decorative dining table',
+            'Crafted from Palm wood',
+            'Pairs well with Palm Chairs and Bar Stools'
+          ]
         },
         {
           id: 'palm_cabinet',
@@ -149,7 +159,15 @@ When placed under open sky, it dries over time.`,
           namespace_id: 'beachparty:palm_cabinet',
           subtitle: 'A storage cabinet for keeping essentials close and tidy.',
           icon: '/assets/icons/beachparty/palm_cabinet.webp',
-          search: 'cabinet storage palm furniture'
+          search: 'cabinet storage palm furniture',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Palm Cabinet is a functional storage block crafted from Palm wood. It provides accessible storage for beach bars, outdoor kitchens, and coastal builds.`,
+          detailsBullets: [
+            'Right-click to open and access storage',
+            'Crafted from Palm wood',
+            'Fits naturally in beach bars and coastal builds'
+          ]
         },
         {
           id: 'palm_chair',
@@ -157,7 +175,17 @@ When placed under open sky, it dries over time.`,
           namespace_id: 'beachparty:palm_chair',
           subtitle: 'A simple wooden chair for sitting down and staying a while.',
           icon: '/assets/icons/beachparty/palm_chair.webp',
-          search: 'chair seating palm furniture'
+          search: 'chair seating palm furniture',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Palm Chair is a simple seating block crafted from Palm wood. Right-click to sit down.
+
+It pairs naturally with the Palm Table for a complete outdoor dining setup.`,
+          detailsBullets: [
+            'Right-click to sit',
+            'Crafted from Palm wood',
+            'Pairs well with the Palm Table'
+          ]
         },
         {
           id: 'beach_chair',
@@ -165,7 +193,17 @@ When placed under open sky, it dries over time.`,
           namespace_id: 'beachparty:beach_chair',
           subtitle: 'A laid-back chair for lazy afternoons by the water.',
           icon: '/assets/icons/beachparty/beach_chair.webp',
-          search: 'beach chair seating relax'
+          search: 'beach chair seating relax',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Beach Chair is a relaxed seating block designed for beach setups and waterside scenes. Right-click to sit down and enjoy the view.
+
+Pair it with a Beach Parasol and Beach Towel for the full beach experience.`,
+          detailsBullets: [
+            'Right-click to sit',
+            'Designed for beach and waterside builds',
+            'Pairs well with Beach Parasol and Beach Towel'
+          ]
         },
         {
           id: 'hooded_beach_chair',
@@ -173,7 +211,17 @@ When placed under open sky, it dries over time.`,
           namespace_id: 'beachparty:hooded_beach_chair',
           subtitle: 'A covered beach chair that offers shade and a bit of privacy.',
           icon: '/assets/icons/beachparty/hooded_beach_chair.webp',
-          search: 'hooded beach chair seating shade'
+          search: 'hooded beach chair seating shade',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Hooded Beach Chair is a covered seating block with a built-in shade canopy. Right-click to sit down.
+
+It is ideal for beach scenes where you want a bit more visual detail and shelter.`,
+          detailsBullets: [
+            'Right-click to sit',
+            'Features a built-in shade canopy',
+            'Ideal for detailed beach builds'
+          ]
         },
         {
           id: 'beach_sun_lounger',
@@ -181,7 +229,17 @@ When placed under open sky, it dries over time.`,
           namespace_id: 'beachparty:beach_sun_lounger',
           subtitle: 'A sun lounger made for doing absolutely nothing.',
           icon: '/assets/icons/beachparty/beach_sun_lounger.webp',
-          search: 'sun lounger beach seating relax'
+          search: 'sun lounger beach seating relax',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Beach Sun Lounger is a reclined seating block designed for lazy beach scenes. Right-click to lie down and relax.
+
+Pair it with a Beach Parasol for the classic sun lounger setup.`,
+          detailsBullets: [
+            'Right-click to lie down',
+            'Designed for beach and poolside builds',
+            'Pairs well with the Beach Parasol'
+          ]
         },
         {
           id: 'palm_bar_stool',
@@ -189,7 +247,15 @@ When placed under open sky, it dries over time.`,
           namespace_id: 'beachparty:palm_bar_stool',
           subtitle: 'A tall stool made to go with the Palm Bar.',
           icon: '/assets/icons/beachparty/palm_bar_stool.webp',
-          search: 'bar stool palm furniture'
+          search: 'bar stool palm furniture',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Palm Bar Stool is a tall seating block crafted from Palm wood, designed to pair with the Palm Bar. Right-click to sit down.`,
+          detailsBullets: [
+            'Right-click to sit',
+            'Designed to pair with the Palm Bar',
+            'Crafted from Palm wood'
+          ]
         },
         {
           id: 'beach_parasol',
@@ -197,15 +263,35 @@ When placed under open sky, it dries over time.`,
           namespace_id: 'beachparty:beach_parasol',
           subtitle: 'A tall parasol you can open and close. Sneak-use with an empty hand to toggle it.',
           icon: '/assets/icons/beachparty/beach_parasol.webp',
-          search: 'parasol umbrella shade open close sneak toggle'
+          search: 'parasol umbrella shade open close sneak toggle',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Beach Parasol is a decorative shade structure that can be opened and closed. Sneak right-click with an empty hand to toggle it between open and closed.
+
+It pairs naturally with Beach Chairs and Beach Sun Loungers for a complete beach scene.`,
+          detailsBullets: [
+            'Sneak right-click with empty hand to toggle open or closed',
+            'Provides shade and atmosphere',
+            'Pairs well with Beach Chairs and Sun Loungers'
+          ]
         },
         {
           id: 'beach_towel',
           title: 'Beach Towel',
           namespace_id: 'beachparty:beach_towel',
-          subtitle:
-            'A thin towel you can sleep on and maybe wake up with back pain. It does not set your respawn point.',
-          icon: '/assets/icons/beachparty/beach_towel.webp'
+          subtitle: 'A thin towel you can sleep on and maybe wake up with back pain. It does not set your respawn point.',
+          icon: '/assets/icons/beachparty/beach_towel.webp',
+          search: 'beach towel sleep respawn beach',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Beach Towel is a placeable sleeping surface that allows you to sleep through the night without setting a respawn point.
+
+It is purely for convenience and atmosphere — your respawn point remains unchanged.`,
+          detailsBullets: [
+            'Right-click to sleep',
+            'Does not set your respawn point',
+            'Decorative beach atmosphere piece'
+          ]
         },
         {
           id: 'sand_bucket',
@@ -218,21 +304,21 @@ When placed under open sky, it dries over time.`,
           detailsTitle: 'Function',
           detailsText: `Place the Sand Bucket to start a Sandcastle.
 
-        Use a Filled Sand Bucket on the Sandcastle to add towers.
-        The clicked corner decides which tower is added.
-        Use an Empty Sand Bucket on the Sandcastle to remove a tower and get a Filled Sand Bucket back.
-        If the castle has no towers left, it gets picked up completely.
+Use a Filled Sand Bucket on the Sandcastle to add towers.
+The clicked corner decides which tower is added.
+Use an Empty Sand Bucket on the Sandcastle to remove a tower and get a Filled Sand Bucket back.
+If the castle has no towers left, it gets picked up completely.
 
-        Use a Water Potion on the Sandcastle to petrify it.
-        Petrified sandcastles do not collapse from rain or being stepped on.
+Use a Water Potion on the Sandcastle to petrify it.
+Petrified sandcastles do not collapse from rain or being stepped on.
 
-        Non-petrified sandcastles collapse when stepped on and turn into a Sand Pile.
-        Rain can also wash them down into a Sand Pile.
+Non-petrified sandcastles collapse when stepped on and turn into a Sand Pile.
+Rain can also wash them down into a Sand Pile.
 
-        Sand Piles slow most living entities that walk through them.
-        Turtles are not slowed.
+Sand Piles slow most living entities that walk through them.
+Turtles are not slowed.
 
-        Zombies enjoy destroying sandcastles on sight.`,
+Zombies enjoy destroying sandcastles on sight.`,
           detailsBullets: [
             'Place to create a Sandcastle',
             'Filled Sand Bucket adds towers based on the clicked corner',
@@ -257,7 +343,6 @@ When placed under open sky, it dries over time.`,
             }
           ]
         },
-
         {
           id: 'radio',
           title: 'Radio',
@@ -281,10 +366,20 @@ Sneak-use to stop the Radio.`,
           id: 'beach_goal',
           title: 'Beach Goal',
           namespace_id: 'beachparty:beach_goal',
-          subtitle:
-            'Fancy a quick game of football? Score with a [[Beach Ball|beach_ball]] and enjoy a small celebratory firework.',
+          subtitle: 'Fancy a quick game of football? Score with a [[Beach Ball|beach_ball]] and enjoy a small celebratory firework.',
           icon: '/assets/icons/beachparty/beach_goal.webp',
-          search: 'beach goal football soccer beach ball firework'
+          search: 'beach goal football soccer beach ball firework',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Beach Goal is a decorative and interactive block for beach football. Throw a Beach Ball into the goal to score and trigger a small celebratory firework.
+
+Place two goals facing each other for a proper match.`,
+          detailsBullets: [
+            'Score by throwing a Beach Ball into the goal',
+            'Triggers a celebratory firework on score',
+            'Place two goals for a proper match',
+            'Works with the Beach Ball item'
+          ]
         },
         {
           id: 'seashells',
@@ -302,14 +397,14 @@ Breaking a placed Seashell drops a random selection of loot.
 Possible contents include:
 
 Food
-• [[Raw Mussel Meat|raw_mussel_meat]]
+- [[Raw Mussel Meat|raw_mussel_meat]]
 
 Valuables
-• Gold Ingot
-• Emerald
+- Gold Ingot
+- Emerald
 
 Rare Finds
-• Diamond`,
+- Diamond`,
           detailsBullets: [
             'Sneak-right-click to place as a decorative block',
             'Breaking it drops loot from its loot table',
@@ -339,7 +434,6 @@ Players standing nearby are granted Water Breathing as long as they remain withi
         }
       ]
     },
-
     {
       id: 'items',
       title: 'Items, Ingredients, and Tools',
@@ -351,7 +445,17 @@ Players standing nearby are granted Water Breathing as long as they remain withi
           namespace_id: 'beachparty:beach_hat',
           subtitle: 'Wearable in a trinket slot. Reduces fire damage by 10%.',
           icon: '/assets/icons/beachparty/beach_hat.webp',
-          search: 'beach hat trinket wearable loot chest fire damage'
+          search: 'beach hat trinket wearable loot chest fire damage',
+          details: true,
+          detailsTitle: 'Trinket',
+          detailsText: `The Beach Hat is worn in a Trinket slot and reduces fire damage by 10% while equipped.
+
+It can be found as loot in chests.`,
+          detailsBullets: [
+            'Worn in a Trinket slot',
+            'Reduces fire damage by 10%',
+            'Found as loot in chests'
+          ]
         },
         {
           id: 'sunglasses',
@@ -359,7 +463,17 @@ Players standing nearby are granted Water Breathing as long as they remain withi
           namespace_id: 'beachparty:sunglasses',
           subtitle: 'Wearable in a trinket slot. Reduces fire damage by 12%.',
           icon: '/assets/icons/beachparty/sunglasses.webp',
-          search: 'sunglasses trinket wearable loot chest fire damage'
+          search: 'sunglasses trinket wearable loot chest fire damage',
+          details: true,
+          detailsTitle: 'Trinket',
+          detailsText: `Sunglasses are worn in a Trinket slot and reduce fire damage by 12% while equipped. They are slightly more protective than the Beach Hat.
+
+They can be found as loot in chests.`,
+          detailsBullets: [
+            'Worn in a Trinket slot',
+            'Reduces fire damage by 12%',
+            'Found as loot in chests'
+          ]
         },
         {
           id: 'pool_noodle',
@@ -367,7 +481,17 @@ Players standing nearby are granted Water Breathing as long as they remain withi
           namespace_id: 'beachparty:pool_noodle',
           subtitle: 'A classic pool noodle. Mostly for fun, questionable decisions included.',
           icon: '/assets/icons/beachparty/pool_noodle.webp',
-          search: 'pool noodle summer fun'
+          search: 'pool noodle summer fun',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Pool Noodle is a fun novelty item with no serious purpose. It can be wielded and used for lighthearted beach antics.
+
+It makes a satisfying sound when used.`,
+          detailsBullets: [
+            'Novelty item with no serious function',
+            'Fun beach prop',
+            'Makes a satisfying sound when used'
+          ]
         },
         {
           id: 'trunks',
@@ -375,7 +499,17 @@ Players standing nearby are granted Water Breathing as long as they remain withi
           namespace_id: 'beachparty:trunks',
           subtitle: 'Wearable in a trinket slot. Increases swim speed by about 8%.',
           icon: '/assets/icons/beachparty/trunks.webp',
-          search: 'trunks trinket wearable loot chest swim speed'
+          search: 'trunks trinket wearable loot chest swim speed',
+          details: true,
+          detailsTitle: 'Trinket',
+          detailsText: `Trunks are worn in a Trinket slot and increase swim speed by about 8% while equipped.
+
+They can be found as loot in chests.`,
+          detailsBullets: [
+            'Worn in a Trinket slot',
+            'Increases swim speed by ~8%',
+            'Found as loot in chests'
+          ]
         },
         {
           id: 'bikini',
@@ -383,7 +517,17 @@ Players standing nearby are granted Water Breathing as long as they remain withi
           namespace_id: 'beachparty:bikini',
           subtitle: 'Wearable in a trinket slot. Increases swim speed by about 8%.',
           icon: '/assets/icons/beachparty/bikini.webp',
-          search: 'bikini trinket wearable loot chest swim speed'
+          search: 'bikini trinket wearable loot chest swim speed',
+          details: true,
+          detailsTitle: 'Trinket',
+          detailsText: `The Bikini is worn in a Trinket slot and increases swim speed by about 8% while equipped.
+
+It can be found as loot in chests.`,
+          detailsBullets: [
+            'Worn in a Trinket slot',
+            'Increases swim speed by ~8%',
+            'Found as loot in chests'
+          ]
         },
         {
           id: 'crocs',
@@ -391,7 +535,17 @@ Players standing nearby are granted Water Breathing as long as they remain withi
           namespace_id: 'beachparty:crocs',
           subtitle: 'Wearable in a trinket slot. No bonuses, just confidence.',
           icon: '/assets/icons/beachparty/crocs.webp',
-          search: 'crocs trinket wearable loot chest'
+          search: 'crocs trinket wearable loot chest',
+          details: true,
+          detailsTitle: 'Trinket',
+          detailsText: `Crocs are worn in a Trinket slot. They provide no gameplay bonuses whatsoever, but the confidence boost is immeasurable.
+
+They can be found as loot in chests.`,
+          detailsBullets: [
+            'Worn in a Trinket slot',
+            'No gameplay bonuses',
+            'Found as loot in chests'
+          ]
         },
         {
           id: 'swim_wings',
@@ -399,7 +553,18 @@ Players standing nearby are granted Water Breathing as long as they remain withi
           namespace_id: 'beachparty:swim_wings',
           subtitle: 'Wearable in a trinket slot. Reduces fall damage by about 50%, with a cooldown.',
           icon: '/assets/icons/beachparty/swim_wings.webp',
-          search: 'swim wings trinket wearable loot chest fall damage'
+          search: 'swim wings trinket wearable loot chest fall damage',
+          details: true,
+          detailsTitle: 'Trinket',
+          detailsText: `Swim Wings are worn in a Trinket slot and reduce fall damage by about 50% while equipped. After triggering, they go on a short cooldown before activating again.
+
+They can be found as loot in chests.`,
+          detailsBullets: [
+            'Worn in a Trinket slot',
+            'Reduces fall damage by ~50%',
+            'Short cooldown after triggering',
+            'Found as loot in chests'
+          ]
         },
         {
           id: 'rubber_rings',
@@ -412,7 +577,11 @@ Players standing nearby are granted Water Breathing as long as they remain withi
           detailsText: `Rubber Rings can be worn as Trinkets.
 
 While in water, they keep you moving and help you stay afloat.`,
-          detailsBullets: ['Wearable as a Trinket', 'Helps you float in water', 'Makes water travel smoother'],
+          detailsBullets: [
+            'Wearable as a Trinket',
+            'Helps you float in water',
+            'Makes water travel smoother'
+          ],
           items: [
             {
               id: 'rubber_ring_blue',
@@ -457,7 +626,17 @@ While in water, they keep you moving and help you stay afloat.`,
           namespace_id: 'beachparty:beach_ball',
           subtitle: 'A throwable beach ball for games, chaos, and very serious competitions.',
           icon: '/assets/icons/beachparty/beach_ball.webp',
-          search: 'beach ball toy throwable'
+          search: 'beach ball toy throwable',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Beach Ball is a throwable item used for beach games and casual fun. Throw it to send it bouncing across the sand.
+
+Use it with a Beach Goal for a proper game of beach football.`,
+          detailsBullets: [
+            'Throwable item',
+            'Bounces when thrown',
+            'Used with Beach Goal for beach football'
+          ]
         },
         {
           id: 'music_discs',
@@ -470,7 +649,11 @@ While in water, they keep you moving and help you stay afloat.`,
           detailsText: `These music discs are available as loot.
 
 Pop them into a Jukebox and let the beach vibes do their job.`,
-          detailsBullets: ['Found as loot', 'Playable in a Jukebox', 'Rare collectibles'],
+          detailsBullets: [
+            'Found as loot',
+            'Playable in a Jukebox',
+            'Rare collectibles'
+          ],
           musicdisc: true,
           tracks: [
             {
@@ -563,7 +746,6 @@ Pop them into a Jukebox and let the beach vibes do their job.`,
         }
       ]
     },
-
     {
       id: 'consumables',
       title: 'Consumables',
@@ -573,8 +755,7 @@ Pop them into a Jukebox and let the beach vibes do their job.`,
           id: 'coconut',
           title: 'Coconuts',
           namespace_id: 'beachparty:coconut',
-          subtitle:
-            'Coconuts can grow hanging below Palm Leaves. Bone meal Palm Leaves to spawn a young coconut underneath.',
+          subtitle: 'Coconuts can grow hanging below Palm Leaves. Bone meal Palm Leaves to spawn a young coconut underneath.',
           icon: '/assets/icons/beachparty/palm_leaves.webp',
           search: 'coconut palm leaves hanging coconut bonemeal beachparty',
           details: true,
@@ -623,7 +804,10 @@ Using bone meal on Palm Leaves places a young coconut directly below it.`,
           detailsText: `Mussel Meat is obtained by processing [[Seashells|seashells]].
 
 It can be cooked to create Cooked Mussel Meat.`,
-          detailsBullets: ['Obtained from Seashells', 'Can be cooked for better food value'],
+          detailsBullets: [
+            'Obtained from Seashells',
+            'Can be cooked for better food value'
+          ],
           items: [
             {
               id: 'raw_mussel_meat',
@@ -651,7 +835,7 @@ It can be cooked to create Cooked Mussel Meat.`,
           detailsTitle: 'Effects',
           detailsText: `Cocktails are mixed at the [[Palm Bar|palm_bar]] and placed as blocks.
 
-       Each cocktail grants a specific status effect for 30 seconds.`,
+Each cocktail grants a specific status effect for 30 seconds.`,
           detailsBullets: [
             'Mixed at the Palm Bar',
             'Placed as drink blocks',
@@ -721,7 +905,15 @@ It can be cooked to create Cooked Mussel Meat.`,
           namespace_id: 'beachparty:sandwaves',
           subtitle: 'Sandwaves generate near water along beaches.',
           icon: '/assets/icons/beachparty/sandwaves.webp',
-          search: 'sandwaves beach water worldgen'
+          search: 'sandwaves beach water worldgen',
+          details: true,
+          detailsTitle: 'Worldgen',
+          detailsText: `Sandwaves are decorative terrain blocks that generate naturally near water along beach biomes. They add visual variety and a natural wave-like pattern to sandy shores.`,
+          detailsBullets: [
+            'Generates near water along beaches',
+            'Decorative terrain block',
+            'Adds natural detail to sandy shores'
+          ]
         },
         {
           id: 'seashells',
@@ -729,7 +921,15 @@ It can be cooked to create Cooked Mussel Meat.`,
           namespace_id: 'beachparty:seashells',
           subtitle: 'Seashells generate on sand blocks at beaches.',
           icon: '/assets/icons/beachparty/seashell_block.webp',
-          search: 'seashells beach sand worldgen'
+          search: 'seashells beach sand worldgen',
+          details: true,
+          detailsTitle: 'Worldgen',
+          detailsText: `Seashell blocks generate naturally on sand along beaches. They can be broken to obtain individual Seashell items which may contain loot.`,
+          detailsBullets: [
+            'Generates on sand in beach biomes',
+            'Break to obtain individual Seashell items',
+            'Seashell items can contain loot'
+          ]
         },
         {
           id: 'palm_trees',
@@ -737,7 +937,18 @@ It can be cooked to create Cooked Mussel Meat.`,
           namespace_id: 'beachparty:palm_sprout',
           subtitle: 'Palm Trees naturally generate along beaches. Their wood set is [[Palm|palm]].',
           icon: '/assets/icons/beachparty/palm_sprout.webp',
-          search: 'palm trees beach worldgen'
+          search: 'palm trees beach worldgen',
+          details: true,
+          detailsTitle: 'Worldgen',
+          detailsText: `Palm Trees generate naturally along beach biomes and provide the Palm wood set used throughout Beachparty builds.
+
+Palm Sprouts can be collected and grown on your own land. Coconuts can grow hanging below Palm Leaves.`,
+          detailsBullets: [
+            'Generates naturally along beach biomes',
+            'Source of Palm wood and building materials',
+            'Palm Sprouts can be collected and replanted',
+            'Coconuts can grow below Palm Leaves'
+          ]
         },
         {
           id: 'message_in_a_bottle',
@@ -750,7 +961,7 @@ It can be cooked to create Cooked Mussel Meat.`,
           detailsTitle: 'Spawning',
           detailsText: `Messages in a Bottle can spawn naturally on beaches.
 
-    They appear on sand, close to where players are, and only up to a limited amount in the area.`,
+They appear on sand, close to where players are, and only up to a limited amount in the area.`,
           detailsBullets: [
             'Spawns naturally in beach biomes',
             'Appears on sand',
@@ -768,10 +979,19 @@ It can be cooked to create Cooked Mussel Meat.`,
         {
           id: 'config',
           title: 'Configuration',
-          subtitle:
-            'Most gameplay features of Candlelight can be adjusted via a configuration file, usually located at `config/candlelight.json`.',
+          subtitle: 'Most gameplay features of Beachparty can be adjusted via a configuration file, usually located at `config/beachparty.json`.',
           icon: '/assets/icons/misc/config.webp',
-          search: 'config configuration settings options json beachparty'
+          search: 'config configuration settings options json beachparty',
+          details: true,
+          detailsTitle: 'Configuration File',
+          detailsText: `Most gameplay features of Beachparty can be adjusted or disabled via the configuration file, usually located at config/beachparty.json.
+
+This includes worldgen features, entity behavior, and gameplay tweaks.`,
+          detailsBullets: [
+            'Config file located at config/beachparty.json',
+            'Most gameplay features can be toggled or adjusted',
+            'Includes worldgen and gameplay settings'
+          ]
         },
         {
           id: 'villager_profession',
@@ -783,7 +1003,7 @@ It can be cooked to create Cooked Mussel Meat.`,
           detailsTitle: 'Sandy Merchant',
           detailsText: `The Sandy Merchant is a new Villager profession found near beaches.
 
-       Using the Palm Bar as their work station, Sandy Merchants offer a wide range of beach themed items, from building materials and decor to food, tools, and collectibles.`,
+Using the Palm Bar as their work station, Sandy Merchants offer a wide range of beach themed items, from building materials and decor to food, tools, and collectibles.`,
           detailsBullets: [
             'Uses the [[Palm Bar|palm_bar]] as work station',
             'Sells beach themed blocks, decor, and items',
