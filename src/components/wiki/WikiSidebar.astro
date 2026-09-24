@@ -5,6 +5,8 @@ const {
   activeSlug,
   wikiHref,
   searchPlaceholder,
+  sectionHref = (sectionId) => `#${sectionId}`,
+  showSearch = true,
   sections = [],
   impressions = [],
   recipesCta
@@ -52,16 +54,18 @@ const showRecipesCta = !!(recipesCta?.enabled && recipesCta?.href);
     </div>
 
     <div class="wikiSidebarScroll">
-      <div class="wikiSideSearch">
-        <input
-          id="wikiSearchInput"
-          class="wikiSideSearchInput"
-          type="search"
-          placeholder={searchPlaceholder}
-          autocomplete="off"
-          spellcheck="false"
-        />
-      </div>
+      {showSearch ? (
+        <div class="wikiSideSearch">
+          <input
+            id="wikiSearchInput"
+            class="wikiSideSearchInput"
+            type="search"
+            placeholder={searchPlaceholder}
+            autocomplete="off"
+            spellcheck="false"
+          />
+        </div>
+      ) : null}
 
       <div class="wikiSideHeading">Content</div>
 
@@ -72,7 +76,7 @@ const showRecipesCta = !!(recipesCta?.enabled && recipesCta?.href);
           return (
             <a
               class="wikiSideLink"
-              href={`#${sectionId}`}
+              href={sectionHref(sectionId)}
               data-section-link={sectionId}
             >
               {section.title}
@@ -83,7 +87,7 @@ const showRecipesCta = !!(recipesCta?.enabled && recipesCta?.href);
         {showRecipesCta ? (
           <a
             class="wikiSideLink"
-            href="#recipes"
+            href={sectionHref("recipes")}
             data-section-link="recipes"
           >
             Recipes
@@ -93,7 +97,7 @@ const showRecipesCta = !!(recipesCta?.enabled && recipesCta?.href);
         {impressions.length ? (
           <a
             class="wikiSideLink"
-            href="#impressions"
+            href={sectionHref("impressions")}
             data-section-link="impressions"
           >
             Impressions
@@ -103,3 +107,36 @@ const showRecipesCta = !!(recipesCta?.enabled && recipesCta?.href);
     </div>
   </div>
 </aside>
+
+<script is:inline>
+  (() => {
+    const dropdown = document.getElementById("wikiDropdown");
+    const dropdownButton = document.getElementById("wikiDropdownButton");
+    const dropdownMenu = document.getElementById("wikiDropdownMenu");
+    if (!dropdown || !dropdownButton || !dropdownMenu) return;
+
+    const setDropdownOpen = (open) => {
+      dropdown.dataset.open = open ? "true" : "false";
+      dropdownButton.setAttribute("aria-expanded", open ? "true" : "false");
+      dropdownMenu.hidden = !open;
+    };
+
+    dropdownButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      setDropdownOpen(dropdown.dataset.open !== "true");
+    });
+
+    dropdownMenu.addEventListener("click", (event) => {
+      if (event.target.closest("a")) setDropdownOpen(false);
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!dropdown.contains(event.target)) setDropdownOpen(false);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") setDropdownOpen(false);
+    });
+  })();
+</script>

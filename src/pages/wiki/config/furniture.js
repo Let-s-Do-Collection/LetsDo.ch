@@ -3,12 +3,12 @@ export default {
   title: 'Furniture',
   logo: '/assets/mod-logos/furniture.webp',
   aboutTitle: 'Welcome',
-  aboutSubtitle: 'Everyday furniture and decorative items',
-  aboutText: `Furniture focuses on everyday interiors, seating, storage, and decorative elements.
+  aboutSubtitle: 'Everyday furniture for cozy homes',
+  aboutText: `Furniture fills your home with sofas, desks, wardrobes, clocks, curtains and many small details, from a gramophone to a fish tank.
 
-The mod adds a wide range of pieces designed for cozy living spaces and practical builds.
+Wooden pieces come in the vanilla wood types from oak to cherry. With other Let's Do mods installed, they also come in their woods, such as Palm, Arolla Pine, Dark Cherry or the BloomingNature trees. Fabric pieces come in all sixteen colours, plus the wool patterns from Meadow and Alpine Whispers.
 
-Most furniture is available in all vanilla wood types or all dye colors, depending on the piece.`,
+Some pieces do more than look nice: the Blueprints work as a crafting table, the Tool Box as a smithing table, and the Pells training dummy shows how hard you hit.`,
   sections: [
     {
       id: 'decor',
@@ -19,14 +19,14 @@ Most furniture is available in all vanilla wood types or all dye colors, dependi
           id: 'sofa',
           title: 'Sofa',
           subtitle:
-            'A decorative sofa for seating, available in all dye colors. Connects horizontally with sofas of the same color.',
+            'A sofa in every colour. Sofas of the same colour placed side by side join up.',
           icon: '/assets/icons/furniture/sofa_white.webp',
           search: 'sofa furniture seating connect horizontal dye colors'
         },
         {
           id: 'pouffe',
           title: 'Pouffe',
-          subtitle: 'A small cushioned seat, available in all dye colors.',
+          subtitle: 'A small cushioned seat, in every colour and wool pattern.',
           icon: '/assets/icons/furniture/pouffe_white.webp',
           search: 'pouffe furniture seating dye colors'
         },
@@ -34,14 +34,14 @@ Most furniture is available in all vanilla wood types or all dye colors, dependi
           id: 'bench',
           title: 'Bench',
           subtitle:
-            'A simple seating piece, available in all vanilla wood types. Connects horizontally. Shift right click to remove the backrest.',
+            'A wooden bench that joins with its neighbours. Sneak and right click to take off the backrest.',
           icon: '/assets/icons/furniture/oak_bench.webp',
           search: 'bench furniture seating connect horizontal backrest shift right click wood types'
         },
         {
           id: 'desk_chair',
           title: 'Desk Chair',
-          subtitle: 'A simple desk chair, available in all vanilla wood types.',
+          subtitle: 'A wooden desk chair.',
           icon: '/assets/icons/furniture/oak_desk_chair.webp',
           search: 'desk chair furniture wood types'
         },
@@ -49,29 +49,44 @@ Most furniture is available in all vanilla wood types or all dye colors, dependi
           id: 'desk',
           title: 'Desk',
           subtitle:
-            'A desk for workspaces, available in all vanilla wood types. Connects with Dressers and other Tables.',
+            'A writing desk that lines up with dressers and other desks.',
           icon: '/assets/icons/furniture/oak_desk.webp',
           search: 'desk furniture connects dresser table wood types'
         },
         {
           id: 'dresser',
           title: 'Dresser',
-          subtitle: 'A storage dresser, available in all vanilla wood types. Connects with Desks and other Dressers.',
+          subtitle: 'A chest of drawers with storage that lines up with desks and other dressers.',
           icon: '/assets/icons/furniture/oak_dresser.webp',
           search: 'dresser storage furniture connects desk wood types'
         },
         {
           id: 'cabinet',
           title: 'Cabinet',
-          subtitle: 'A storage cabinet, available in all vanilla wood types.',
+          subtitle: 'A base cabinet with storage.',
           icon: '/assets/icons/furniture/oak_cabinet.webp',
           search: 'cabinet storage furniture wood types'
+        },
+        {
+          id: 'wardrobe',
+          title: 'Wardrobe',
+          subtitle: 'A tall wardrobe that shows off a full set of armor.',
+          search: 'wardrobe armor storage furniture wood types',
+          details: true,
+          detailsTitle: 'Armor Storage',
+          detailsText: `Use a piece of armor on the Wardrobe to hang it inside. Sneak and right click to take everything out again, and right click with an empty hand to open or close the doors.`,
+          detailsBullets: [
+            'Holds a helmet, chestplate, leggings and boots',
+            'Use armor on it to store it',
+            'Sneak right click to take it out',
+            'Two blocks tall'
+          ]
         },
         {
           id: 'curtains',
           title: 'Curtains',
           subtitle:
-            'Decorative curtains, available in all dye colors. Connect vertically and can be opened or closed with right click.',
+            'Curtains in every colour and wool pattern. They stack into long drapes and open with a right click or a redstone signal.',
           icon: '/assets/icons/furniture/curtain_white.webp',
           search: 'curtains decoration furniture open close right click vertical dye colors'
         },
@@ -79,7 +94,7 @@ Most furniture is available in all vanilla wood types or all dye colors, dependi
           id: 'shutters',
           title: 'Shutters',
           subtitle:
-            'Window shutters, available in all vanilla wood types. Connect vertically and can be opened or closed with right click.',
+            'Wooden window shutters that stack vertically and open with a right click or a redstone signal.',
           icon: '/assets/icons/furniture/oak_shutter.webp',
           search: 'shutters decoration furniture open close right click vertical wood types'
         },
@@ -87,7 +102,7 @@ Most furniture is available in all vanilla wood types or all dye colors, dependi
           id: 'lamp',
           title: 'Lamp',
           subtitle:
-            'A decorative lamp, available in all dye colors. Connects vertically with lamps of the same color and can also be placed on walls. Shift right click to turn it on or off.',
+            'A lamp in every colour and wool pattern. Stacks into a floor lamp, also hangs on walls. Sneak and right click to switch it on or off.',
           icon: '/assets/icons/furniture/lamp_white.webp',
           search: 'lamp lighting furniture connect vertical wall toggle shift right click dye colors'
         },
@@ -95,7 +110,7 @@ Most furniture is available in all vanilla wood types or all dye colors, dependi
           id: 'clock',
           title: 'Clock',
           subtitle:
-            'A decorative clock, available in all vanilla wood types. Displays the current time visually. Right click to show the current time in chat.',
+            'A wall clock with moving hands. Right click it to see the exact time.',
           icon: '/assets/icons/furniture/oak_clock.webp',
           search: 'clock furniture time right click chat wood types'
         },
@@ -103,42 +118,47 @@ Most furniture is available in all vanilla wood types or all dye colors, dependi
           id: 'grandfather_clock',
           title: 'Grandfather Clock',
           subtitle:
-            'A tall decorative clock, available in all vanilla wood types. Displays the current time visually. Right click to show the current time in chat.',
+            'A tall standing clock with moving hands. Right click it to see the exact time.',
           icon: '/assets/icons/furniture/oak_grandfather_clock.webp',
           search: 'grandfather clock furniture time right click chat wood types'
         },
         {
           id: 'mirror',
           title: 'Mirror',
-          subtitle: 'A decorative wall mirror, available in all vanilla wood types.',
+          subtitle: 'A framed wall mirror.',
           icon: '/assets/icons/furniture/oak_mirror.webp',
           search: 'mirror decoration furniture wall wood types'
         },
         {
           id: 'display_case',
           title: 'Display Case',
-          subtitle: 'A display case that shows placed items visually.',
+          subtitle: 'A glass case to show off your favourite item.',
           icon: '/assets/icons/furniture/display.webp',
           search: 'display case furniture items visually showcase'
         },
         {
           id: 'terrarium',
           title: 'Terrarium',
-          subtitle: 'A decorative glass terrarium for plants.',
+          subtitle: 'A little glass world full of plants.',
           icon: '/assets/icons/furniture/terrarium.webp',
           search: 'terrarium decoration furniture glass plants'
         },
         {
           id: 'chimneys',
           title: 'Chimneys',
-          subtitle: 'Decorative chimneys for adding atmosphere to builds.',
+          subtitle: 'Smoking chimneys for your rooftops.',
           icon: '/assets/icons/furniture/brick_chimney.webp',
-          search: 'chimney furniture decorative brick stone copper',
+          search: 'chimney furniture smoke soot brush black dye brick stone copper',
           details: true,
-          detailsTitle: 'Variants',
-          detailsText: `Chimneys are decorative pieces used to add detail and atmosphere to builds.
+          detailsTitle: 'Usage',
+          detailsText: `Chimneys puff out smoke. Sneak and right click to switch between different kinds of smoke.
 
-They are available in multiple material variants.`,
+Over time a chimney gets sooty. Clean it with a Brush and you get Black Dye.`,
+          detailsBullets: [
+            'Sneak right click to change the smoke',
+            'Gets sooty over time',
+            'Brush it clean for Black Dye'
+          ],
           items: [
             {
               id: 'brick_chimney',
@@ -163,14 +183,12 @@ They are available in multiple material variants.`,
         {
           id: 'planter',
           title: 'Planter',
-          subtitle: 'A decorative planter that can occasionally boost growth for bonemealable crops planted above it.',
+          subtitle: 'A planter box you can grow crops in. It helps them grow now and then.',
           icon: '/assets/icons/furniture/wooden_planter.webp',
           search: 'planter furniture crop growth bonemeal chance',
           details: true,
           detailsTitle: 'Variants',
-          detailsText: `Planters can occasionally apply a bonemeal growth tick to bonemealable crops planted above them.
-
-They are available in multiple material variants.`,
+          detailsText: `Crops can be planted straight into a Planter, no farmland needed. Every now and then the planter gives the crop in it a growth boost, like Bone Meal.`,
           items: [
             {
               id: 'wooden_planter',
@@ -189,36 +207,30 @@ They are available in multiple material variants.`,
         {
           id: 'street_lanterns',
           title: 'Street Lanterns',
-          subtitle: 'Decorative outdoor lanterns that can be stacked vertically and also placed on walls.',
+          subtitle: 'Old-fashioned street lanterns for paths and squares.',
           icon: '/assets/icons/furniture/street_lantern_item.webp',
           search: 'street lantern furniture outdoor light wall vertical bulb',
           details: true,
           detailsTitle: 'Variants and Behavior',
-          detailsText: `Street Lanterns are decorative outdoor light sources used for streets, paths, and courtyards.
-
-They are available as regular and gold plated variants.
-
-Street Lanterns connect vertically when stacked and can also be placed on walls.
-
-Placing a second lantern adds an additional bulb.`,
+          detailsText: `Stack Street Lanterns to build a lamp post, or hang them on a wall. Sneak and place a second lantern on one to give it a second bulb.`,
           detailsBullets: [
-            'Available as regular and gold plated variants',
-            'Can be stacked vertically',
-            'Can be placed on walls',
-            'Placing a second lantern adds an additional bulb'
+            'Plain and gold plated',
+            'Stack them into a lamp post',
+            'Can hang on walls',
+            'Sneak-place a second lantern for two bulbs'
           ],
           items: [
             {
               id: 'street_lantern_wall',
               title: 'Street Lantern',
-              subtitle: 'A french inspired street lantern with a classic look.',
+              subtitle: 'A classic street lantern.',
               icon: '/assets/icons/furniture/street_lantern_item.webp',
               search: 'street lantern furniture classic french style'
             },
             {
               id: 'plated_street_lantern_wall',
-              title: 'Gold Plated Street Lantern',
-              subtitle: 'An elegant gold plated street lantern with a luxurious look.',
+              title: 'Plated Street Lantern',
+              subtitle: 'A gold plated street lantern.',
               icon: '/assets/icons/furniture/plated_street_lantern_item.webp',
               search: 'gold plated street lantern furniture elegant'
             }
@@ -228,14 +240,14 @@ Placing a second lantern adds an additional bulb.`,
           id: 'bin',
           title: 'Bin',
           subtitle:
-            'Dispose of unwanted items by throwing them into the Bin. Items are destroyed instantly with no way to recover them. When the Bin is full, it has a chance to drop a [[Trash Bag|trash_bag]].',
+            'Right click with anything to throw it away for good. When the bin is full, it empties itself, and one time in four a [[Trash Bag|trash_bag]] falls out.',
           icon: '/assets/icons/furniture/bin.webp',
           search: 'bin trash furniture dispose destroy trash bag chance'
         },
         {
           id: 'boat_in_a_jar',
           title: 'Boat in a Jar',
-          subtitle: 'A small decorative display piece.',
+          subtitle: 'A tiny ship in a bottle for the shelf.',
           icon: '/assets/icons/furniture/boat_in_a_jar.webp',
           search: 'boat in a jar decoration furniture'
         },
@@ -243,14 +255,14 @@ Placing a second lantern adds an additional bulb.`,
           id: 'gramophone',
           title: 'Gramophone',
           subtitle:
-            'A stylish jukebox alternative. Insert a music disc to play it. The disc is displayed and spins while playing. Right click toggles repeat mode, shift right click ejects the disc.',
+            'A jukebox with style. The record spins while it plays, and it sends out a redstone signal. Right click to toggle repeat, sneak and right click to take the disc out.',
           icon: '/assets/icons/furniture/gramophone.webp',
           search: 'gramophone furniture jukebox music disc repeat toggle eject spinning displayed'
         },
         {
           id: 'telescope',
           title: 'Telescope',
-          subtitle: 'A decorative telescope for interiors.',
+          subtitle: 'A brass telescope for the study.',
           icon: '/assets/icons/furniture/telescope.webp',
           search: 'telescope furniture decoration'
         },
@@ -258,42 +270,42 @@ Placing a second lantern adds an additional bulb.`,
           id: 'coffer',
           title: 'Coffer',
           subtitle:
-            'Portable storage. Break it to pick it up with its contents safely kept inside, making it ideal for transporting items.',
+            'A small chest that keeps its contents when you break it. Perfect for moving house.',
           icon: '/assets/icons/furniture/coffer.webp',
           search: 'coffer furniture portable storage transport contents saved'
         },
         {
           id: 'explorers_box',
-          title: "Explorer's Box",
-          subtitle: 'An explorer themed storage piece that functions like a Cartography Table.',
+          title: 'Explorers Box',
+          subtitle: 'An explorer\'s chest that works as a Cartography Table.',
           icon: '/assets/icons/furniture/explorers_box.webp',
           search: 'explorers box furniture cartography table'
         },
         {
           id: 'cash_register',
           title: 'Cash Register',
-          subtitle: 'A decorative cash register without any functionality.',
+          subtitle: 'A cash register for your shop counter. Purely decorative.',
           icon: '/assets/icons/furniture/cash_register.webp',
           search: 'cash register furniture decoration'
         },
         {
           id: 'tool_box',
           title: 'Tool Box',
-          subtitle: 'A tool box with the functionality of a Smithing Table.',
+          subtitle: 'A tool box that works as a Smithing Table.',
           icon: '/assets/icons/furniture/tool_box.webp',
           search: 'tool box furniture smithing table'
         },
         {
           id: 'blueprints',
           title: 'Blueprints',
-          subtitle: 'Blueprints with the functionality of a Crafting Table.',
+          subtitle: 'A table of blueprints that works as a Crafting Table.',
           icon: '/assets/icons/furniture/blueprints.webp',
           search: 'blueprints furniture crafting table'
         },
         {
           id: 'sewing_kit',
           title: 'Sewing Kit',
-          subtitle: 'A sewing kit with the functionality of a Loom.',
+          subtitle: 'A sewing kit that works as a Loom.',
           icon: '/assets/icons/furniture/sewing_kit.webp',
           search: 'sewing kit furniture loom banners'
         },
@@ -301,31 +313,24 @@ Placing a second lantern adds an additional bulb.`,
           id: 'steam_vent',
           title: 'Steam Vent',
           subtitle:
-            'A decorative steam vent that connects horizontally. Can be turned on to emit a visible particle airflow.',
+            'A steam vent that stacks into a pipe. Right click to let off steam.',
           icon: '/assets/icons/furniture/steam_vent.webp',
           search: 'steam vent furniture decoration connect horizontal toggle particles airflow visual'
         },
         {
           id: 'fish_tanks',
           title: 'Fish Tanks',
-          subtitle: 'Decorative fish tanks available in multiple metal variants.',
+          subtitle: 'A two block aquarium for cod, salmon and pufferfish.',
           icon: '/assets/icons/furniture/copper_fish_tank.webp',
           search: 'fish tank furniture copper iron cod salmon pufferfish bucket animation',
           details: true,
           detailsTitle: 'Variants and Usage',
-          detailsText: `Fish Tanks are two block long decorative tanks that can be filled with fish using buckets.
-
-Using a Cod Bucket, Salmon Bucket, or Pufferfish Bucket adds the matching fish to the tank and returns an empty Bucket.
-
-Inserted fish swim around inside the tank with a cute animation.
-
-Breaking the tank releases any stored fish back into the world.`,
+          detailsText: `Empty a bucket of cod, salmon or pufferfish into the tank and watch them swim. You get the empty bucket back. When the tank is broken, the fish are set free.`,
           detailsBullets: [
-            'Two block long tank',
-            'Add Cod, Salmon, or Pufferfish using the matching bucket',
-            'Returns an empty Bucket after placing a fish',
-            'Fish swim around inside with a cute animation',
-            'Breaking the tank releases stored fish'
+            'Two blocks long',
+            'Fill with a Cod, Salmon or Pufferfish Bucket',
+            'Returns the empty Bucket',
+            'Breaking it sets the fish free'
           ],
           items: [
             {
@@ -352,14 +357,14 @@ Breaking the tank releases any stored fish back into the world.`,
         {
           id: 'canvas',
           title: 'Canvas',
-          subtitle: 'Place canvases with different motifs and sizes.',
+          subtitle: 'Paintings in different sizes and motifs.',
           icon: '/assets/icons/furniture/canvas.webp',
           search: 'canvas furniture painting place motifs sizes variants'
         },
         {
           id: 'music_disc_cphs_pride',
           title: "CPH's Pride",
-          subtitle: 'A dark and powerful track with a heavy, looming atmosphere. Drops from Creepers.',
+          subtitle: 'A dark, powerful track. Dropped by Creepers killed by a Skeleton.',
           namespace_id: 'furniture:music_disc_cphs_pride',
           icon: '/assets/icons/furniture/cphs_pride.webp',
           search: 'music disc cphs pride furniture creeper drop',
@@ -376,7 +381,7 @@ Breaking the tank releases any stored fish back into the world.`,
         {
           id: 'music_disc_letsdo_theme',
           title: "Let's Do Theme",
-          subtitle: "The signature track of the Let's Do mod collection. Drops from Creepers.",
+          subtitle: "The signature tune of the Let's Do collection. Dropped by Creepers killed by a Skeleton.",
           namespace_id: 'furniture:music_disc_letsdo_theme',
           icon: '/assets/icons/furniture/letsdo_theme.webp',
           search: 'music disc lets do theme furniture creeper drop',
@@ -394,21 +399,18 @@ Breaking the tank releases any stored fish back into the world.`,
           id: 'trash_bag',
           title: 'Trash Bag',
           namespace_id: 'furniture:trash_bag',
-          subtitle: 'What others throw away? Thats still great!',
+          subtitle: 'What others throw away? That’s still great!',
           icon: '/assets/icons/furniture/trash_bag.webp',
           search: 'trash bag furniture random item cooldown blacklist tag',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Using a Trash Bag spawns a random discarded item.
+          detailsText: `Open a Trash Bag to find a random item inside. After that you have to wait a minute before you can open the next one.
 
-   After use, it goes on cooldown before it can be used again.
-
-   Items can be excluded from dropping by adding them to the trash bag blacklist tag.`,
+Modpacks can keep items out of trash bags with the trash_bag_blacklist item tag.`,
           detailsBullets: [
-            'Spawns a random discarded item on use',
-            'Has a cooldown between uses',
-            'Blacklist items via the trash_bag_blacklist item tag',
-            'Tag location data/furniture/tags/items/trash_bag_blacklist.json'
+            'Gives a random item',
+            'One minute cooldown',
+            'Found in the Bin'
           ]
         }
       ]
@@ -426,11 +428,9 @@ Breaking the tank releases any stored fish back into the world.`,
           search: 'pells training dummy furniture damage test damage number crit indicator shift right click remove',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Pells is a training dummy that shows the damage of your last hit, including whether it was a critical strike.
+          detailsText: `Pells is a training dummy that shows how much damage your last hit did, and whether it was a critical hit. Perfect for testing weapons and enchantments.
 
-    Use it to test weapon damage, enchantments, and timing without fighting real mobs.
-
-    Shift right click to remove it. This drops the Pells item so you can place it again.`,
+Sneak and right click to pick it up again.`,
           detailsBullets: [
             'Displays the last hit damage',
             'Indicates critical hits',
@@ -442,7 +442,7 @@ Breaking the tank releases any stored fish back into the world.`,
     }
   ],
   impressionsTitle: 'Everyday Scenes',
-  impressionsSubtitle: 'A closer look at how everything comes together ingame',
+  impressionsSubtitle: 'A closer look at how everything comes together in game',
   impressions: [
     {
       src: '/assets/impressions/furniture/01.webp',
@@ -458,7 +458,7 @@ Breaking the tank releases any stored fish back into the world.`,
     },
     {
       src: '/assets/impressions/furniture/04.webp',
-      caption: 'Taking in the Blacksmith Scenery '
+      caption: 'Taking in the blacksmith scenery'
     },
     {
       src: '/assets/impressions/furniture/05.webp',
@@ -474,11 +474,11 @@ Breaking the tank releases any stored fish back into the world.`,
     },
     {
       src: '/assets/impressions/furniture/08.webp',
-      caption: 'Clouds forming during a city stroll '
+      caption: 'Clouds forming during a city stroll'
     },
     {
       src: '/assets/impressions/furniture/09.webp',
-      caption: 'Crimson Waiting Room after a days finish'
+      caption: 'Crimson Waiting Room after a long day’s work'
     },
     {
       src: '/assets/impressions/furniture/10.webp',

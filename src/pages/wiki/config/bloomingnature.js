@@ -4,13 +4,16 @@ export default {
   logo: '/assets/mod-logos/bloomingnature.webp',
 
   aboutTitle: 'Welcome',
-  aboutSubtitle: 'Natural landscapes, turned up a notch',
-  aboutText: `BloomingNature focuses on atmosphere and density.
+  aboutSubtitle: 'Denser, wilder and more alive',
+  aboutText: `BloomingNature reworks almost every vanilla biome with new tree shapes, richer vegetation, small terrain changes and more atmosphere. Biome placement and the overall world layout stay the same.
 
-This page is intentionally visual.
-Scroll through the impressions below to experience how landscapes change.`,
+It also adds new biomes: larger forests such as the Aspen Forest and Larch Forest, and smaller transition biomes like the Flower Glade, Forest Edge, Fen, Marshland and Desert Oasis.
+
+Along the way you will find 26 new flowers, new grass variants, new stone types such as Laterite, Travertine and Marlstone, as well as Mushroom Bricks, Quicksand, Marsh Blocks and Forest Moss.
+
+The pictures below show how the landscapes change.`,
   impressionsTitle: 'Everyday Scenes',
-  impressionsSubtitle: 'Natural landscapes, dense vegetation, and quiet details',
+  impressionsSubtitle: 'Dense vegetation and quiet details',
   impressions: [
     { src: '/assets/impressions/bloomingnature/01.webp', caption: 'A reworked beach with richer vegetation' },
     { src: '/assets/impressions/bloomingnature/02.webp', caption: 'A newly introduced Aspen Forest' },

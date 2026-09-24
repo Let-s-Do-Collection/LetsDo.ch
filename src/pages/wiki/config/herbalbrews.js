@@ -3,91 +3,75 @@ export default {
   title: 'HerbalBrews',
   logo: '/assets/mod-logos/herbalbrews.webp',
   aboutTitle: 'Welcome',
-  aboutSubtitle: 'Tea, coffee, flasks, and brewing',
-  aboutText: `Welcome to the HerbalBrews Wiki.
+  aboutSubtitle: 'Tea, coffee and a pinch of magic',
+  aboutText: `HerbalBrews is about tea and coffee. Gather wild plants, grow your own tea, dry the leaves and brew them in the tea kettle.
 
-This is your home for blocks, items, mechanics, and quick guidance for HerbalBrews.
+Every cup comes with an effect, and many of them are shared with the players around you, so tea time is best enjoyed together.
 
-HerbalBrews focuses on tea, coffee, and magical brews, expanding the Let’s Do ecosystem with brewing, infusion, and drink-based effects. It introduces shared systems around plants, processing, and potion-like consumables.`,
+For the witches among you, the Brewing Cauldron combines three potions into a single flask, and the Witch Hat and Top Hat protect you from magic.`,
   sections: [
     {
       id: 'stations',
       title: 'Stations and Processing',
-      subtitle: 'Workstations and interactive elements used for brewing, processing, and ingredient preparation.',
+      subtitle: 'Where the tea is made.',
       entries: [
         {
           id: 'stove',
           title: 'Stove',
           namespace_id: 'herbalbrews:stove',
-          subtitle: 'Provides heat for your [[Tea Kettle|tea_kettle]].',
+          subtitle: 'A tiled stove that cooks like a Smoker and keeps a [[Tea Kettle|tea_kettle]] on top warm.',
           icon: '/assets/icons/herbalbrews/stove.webp',
-          search: 'stove heat hot surface kettle tea kettle heating station'
+          search: 'stove heat hot surface kettle tea kettle heating smoker fuel'
         },
         {
           id: 'tea_kettle',
           title: 'Tea Kettle',
           namespace_id: 'herbalbrews:tea_kettle',
-          subtitle: 'The primary station for brewing [[Tea|green_tea]] and [[Coffee|coffee]].',
+          subtitle: 'Brews every tea and coffee. Needs water and heat.',
           icon: '/assets/icons/herbalbrews/tea_kettle.webp',
-          search:
-            'tea kettle tea coffee station heat items blaze powder water bottles bucket bottle slot output crafting',
+          search: 'tea kettle copper tea coffee station heat blaze powder water bucket bottle',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Tea Kettle works similarly to other brewing stations.
+          detailsText: `The Tea Kettle has five ingredient slots, a water slot, a heat slot and an output slot.
 
-It has four Ingredient Input Slots, one Bottle Slot, one Heat Slot, one Water Input Slot, and one Output Slot.
+Fill it with water through the water slot. For heat, place it on a lit [[Stove|stove]] or another heat source, or add Blaze Powder to the heat slot. The menu shows the water and heat level. Each recipe needs a certain amount of both.
 
-Place the required Ingredients into the Input Slots, add a valid Heat Item and Water, and wait for the brewing process to complete. The finished drink then appears in the Output Slot.
-
-Ingredients, bottles, and the brewed result are also visually displayed inside the block while brewing.`,
+There is also a Copper Tea Kettle, which works the same way.`,
           detailsBullets: [
-            'Four Ingredient Input Slots',
-            'One Bottle Slot',
-            'One Heat Item Slot',
-            'One Water Input Slot',
-            'One Output Slot',
-            'Requires Heat and Water to brew',
-            'Input and Output Items are visible in the Block Model'
+            'Five ingredient slots',
+            'Water slot and heat slot',
+            'Heat from a stove below or from Blaze Powder',
+            'Copper and regular version'
           ]
         },
         {
           id: 'brewing_cauldron',
           title: 'Brewing Cauldron',
-          namespace_id: 'herbalbrews:brewing_cauldron',
-          subtitle: 'A brewing station for creating [[Flasks|flask]] from Potions.',
+          namespace_id: 'herbalbrews:cauldron',
+          subtitle: 'Combines three potions into one [[Flask|flask]].',
           icon: '/assets/icons/herbalbrews/cauldron.webp',
           search: 'brewing cauldron flasks potions herbal infusion catalyst',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Brewing Cauldron is used to combine multiple Potions into a single Flask.
-
-It has three Potion Input Slots, one Catalyst Slot, and one Output Slot.
-
-Place three Potions into the Input Slots and add [[Herbal Infusion|herbal_infusion]] as the catalyst. After the brewing process finishes, the resulting Flask appears in the Output Slot.
-
-The Potions placed inside the Cauldron are also visually displayed while brewing.`,
+          detailsText: `Put three potions and a Herbal Infusion into the Brewing Cauldron. After a while it turns them into a single [[Flask|flask]] that holds all three effects.`,
           detailsBullets: [
-            'Three Potion Input Slots',
-            'One Catalyst Slot: Herbal Infusion',
-            'One Output Slot',
-            'Combines multiple Potion effects into a single Flask',
-            'Input Potions are visible in the Block Model'
+            'Three potion slots',
+            'Herbal Infusion as catalyst',
+            'Result: one Flask with all effects'
           ]
         }
       ]
     },
-
     {
       id: 'items',
       title: 'Items, Ingredients, and Tools',
-      subtitle: 'Everyday items, ingredients, and tools used across brewing and processing.',
+      subtitle: 'Leaves, beans and hats.',
       entries: [
         {
           id: 'coffee_beans',
           title: 'Coffee Beans',
           namespace_id: 'herbalbrews:coffee_beans',
-          subtitle:
-            'Obtained by harvesting [[Wild Coffee|wild_coffee]]. Can be planted on Farmland to grow Coffee Plants.',
+          subtitle: 'Harvested from [[Wild Coffee|wild_coffee]]. Plant them to grow your own coffee.',
           icon: '/assets/icons/herbalbrews/coffee_beans.webp',
           search: 'coffee beans wild coffee harvest seeds coffee plant'
         },
@@ -95,38 +79,37 @@ The Potions placed inside the Cauldron are also visually displayed while brewing
           id: 'lavender_blossom',
           title: 'Lavender Blossom',
           namespace_id: 'herbalbrews:lavender_blossom',
-          subtitle: 'Obtained by harvesting [[Lavender|lavender]] with Shears.',
+          subtitle: 'Cut from [[Lavender|lavender]] with Shears.',
           icon: '/assets/icons/herbalbrews/lavender_blossom.webp',
           search: 'lavender blossom lavender shears harvesting ingredient lavender tea'
         },
         {
           id: 'tea_blossoms',
-          title: 'Tea Blossoms',
-          namespace_id: 'herbalbrews:tea_blossoms',
-          subtitle: 'Obtained by harvesting flowers with Shears. Can be planted on Farmland to grow Tea Plants.',
+          title: 'Tea Blossom',
+          namespace_id: 'herbalbrews:tea_blossom',
+          subtitle: 'Cut from small flowers with Shears. Plant it to grow tea bushes that give Green Tea Leaves.',
           icon: '/assets/icons/herbalbrews/tea_blossom.webp',
-          search: 'tea blossoms flowers shears seeds tea plants farmland'
+          search: 'tea blossom flowers shears seeds tea plants green tea leaf'
         },
         {
           id: 'witching_time_hats',
           title: 'Witching Time',
-          subtitle: 'Wearable hats with magical protection.',
+          subtitle: 'Two hats that shield you from magic.',
           icon: '/assets/icons/herbalbrews/witch_hat.webp',
           search: 'witch hat top hat herbalbrews magic damage reduction head armor witching time',
           details: true,
           detailsTitle: 'Overview',
-          detailsText: `HerbalBrews includes two wearable hats.`,
+          detailsText: `The Witch Hat and the Top Hat are worn in the helmet slot and reduce magic damage by 40%.`,
           detailsBullets: [
-            'Includes [[Witch Hat|witch_hat]] and [[Top Hat|top_hat]]',
-            'Worn in the head slot',
-            'Reduces magic damage'
+            'Worn in the helmet slot',
+            'Magic damage -40%'
           ],
           items: [
             {
               id: 'witch_hat',
               title: 'Witch Hat',
               namespace_id: 'herbalbrews:witch_hat',
-              subtitle: 'A classic witch hat.',
+              subtitle: 'A classic pointy witch hat.',
               icon: '/assets/icons/herbalbrews/witch_hat.webp',
               search: 'witch hat herbalbrews head slot'
             },
@@ -134,7 +117,7 @@ The Potions placed inside the Cauldron are also visually displayed while brewing
               id: 'top_hat',
               title: 'Top Hat',
               namespace_id: 'herbalbrews:top_hat',
-              subtitle: 'A classic top hat.',
+              subtitle: 'An elegant top hat.',
               icon: '/assets/icons/herbalbrews/top_hat.webp',
               search: 'top hat herbalbrews head slot'
             }
@@ -143,43 +126,40 @@ The Potions placed inside the Cauldron are also visually displayed while brewing
         {
           id: 'tea_drying',
           title: 'Tea Drying',
-          subtitle: 'Turns fresh tea leaves into dried tea ingredients over time.',
+          subtitle: 'Fresh tea leaves are dried into green, black and oolong tea.',
           icon: '/assets/icons/herbalbrews/dried_green_tea.webp',
           search: 'tea drying dry dried green tea black tea oolong tea leaf block stages',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Tea drying is a processing step for turning tea leaf blocks into dried tea ingredients.
+          detailsText: `Craft Green Tea Leaves into a Green Tea Leaf Block and place it. Over time it dries through several stages.
 
-Place a tea leaf block and let it dry over time. The block progresses through drying stages, and once fully dried it converts into its final form depending on the starting block.
+What comes out depends on the block you started with:
+- Green Tea Leaf Block turns into dried green tea
+- Mixed Tea Leaf Block turns into Oolong Tea Leaf Block
+- Dried Green Tea Leaf Block ferments further into Black Tea Leaf Block
 
-These dried tea ingredients are then used for brewing different tea variants.`,
+The dried blocks are then crafted into dried tea for the [[Tea Kettle|tea_kettle]].`,
           detailsBullets: [
-            'Tea leaf blocks dry over time in multiple stages',
-            'When fully dried, the block converts into its final form',
-            'Green Tea Leaf Block dries into Dried Out Green Tea Leaf Block',
-            'Mixed Tea Leaf Block dries into Oolong Tea Leaf Block',
-            'Dried Green Tea Leaf Block dries into Black Tea Leaf Block',
-            'Drying produces dried tea ingredients used for brewing'
+            'Place tea leaf blocks and wait',
+            'Several drying stages',
+            'Gives green, black and oolong tea'
           ],
           items: [
             {
               id: 'dried_green_tea',
               title: 'Dried Green Tea',
-              subtitle: 'A dried tea ingredient used for brewing.',
               icon: '/assets/icons/herbalbrews/dried_green_tea.webp',
               search: 'dried green tea drying ingredient brew'
             },
             {
               id: 'dried_black_tea',
               title: 'Dried Black Tea',
-              subtitle: 'A dried tea ingredient used for brewing.',
               icon: '/assets/icons/herbalbrews/dried_black_tea.webp',
               search: 'dried black tea drying ingredient brew'
             },
             {
               id: 'dried_oolong_tea',
               title: 'Dried Oolong Tea',
-              subtitle: 'A dried tea ingredient used for brewing.',
               icon: '/assets/icons/herbalbrews/dried_oolong_tea.webp',
               search: 'dried oolong tea drying ingredient brew'
             }
@@ -187,83 +167,100 @@ These dried tea ingredients are then used for brewing different tea variants.`,
         }
       ]
     },
-
     {
       id: 'consumables',
       title: 'Consumables',
-      subtitle: 'Meals, drinks, soups, and other consumable food items.',
+      subtitle: 'Teas, coffee and flasks.',
       entries: [
         {
           id: 'drinks',
           title: 'Teas and Flasks',
-          namespace_id: '',
-          subtitle: 'A small peek at the brew selection.',
+          subtitle: 'Every cup comes with its own effect.',
           icon: '/assets/icons/herbalbrews/rooibos_tea.webp',
           search: 'tea coffee drinks brews mugs cups effects herbalbrews flasks potion',
           details: true,
           detailsTitle: 'A Cup for Every Moment',
-          detailsText: ``,
+          detailsText: `All teas and coffees are brewed in the [[Tea Kettle|tea_kettle]]. Drink them straight away or place the cup on a table.
+
+Most of their effects also reach other players nearby, but get a little weaker the more players share them.`,
           items: [
             {
               id: 'coffee',
               title: 'Coffee',
               namespace_id: 'herbalbrews:coffee',
+              subtitle: 'Deeprush',
               icon: '/assets/icons/herbalbrews/coffee.webp',
-              search: 'coffee drink brew herbalbrews'
+              search: 'coffee drink brew herbalbrews deeprush'
+            },
+            {
+              id: 'milk_coffee',
+              title: 'Milk Coffee',
+              namespace_id: 'herbalbrews:milk_coffee',
+              subtitle: 'Deeprush',
+              icon: '/assets/icons/herbalbrews/milk_coffee.webp',
+              search: 'milk coffee drink brew herbalbrews deeprush'
             },
             {
               id: 'hibiscus_tea',
               title: 'Hibiscus Tea',
               namespace_id: 'herbalbrews:hibiscus_tea',
+              subtitle: 'Lifeleech',
               icon: '/assets/icons/herbalbrews/hibiscus_tea.webp',
-              search: 'hibiscus tea drink brew herbalbrews'
+              search: 'hibiscus tea drink brew herbalbrews lifeleech'
             },
             {
               id: 'lavender_tea',
               title: 'Lavender Tea',
               namespace_id: 'herbalbrews:lavender_tea',
+              subtitle: 'Feral',
               icon: '/assets/icons/herbalbrews/lavender_tea.webp',
-              search: 'lavender tea drink brew herbalbrews'
+              search: 'lavender tea drink brew herbalbrews feral'
             },
             {
               id: 'rooibos_tea',
               title: 'Rooibos Tea',
               namespace_id: 'herbalbrews:rooibos_tea',
+              subtitle: 'Regeneration',
               icon: '/assets/icons/herbalbrews/rooibos_tea.webp',
-              search: 'rooibos tea drink brew herbalbrews'
+              search: 'rooibos tea drink brew herbalbrews regeneration'
             },
             {
               id: 'yerba_mate_tea',
               title: 'Yerba Mate Tea',
               namespace_id: 'herbalbrews:yerba_mate_tea',
+              subtitle: 'Bonding',
               icon: '/assets/icons/herbalbrews/yerba_mate_tea.webp',
-              search: 'yerba mate tea drink brew herbalbrews'
+              search: 'yerba mate tea drink brew herbalbrews bonding'
             },
             {
               id: 'green_tea',
               title: 'Green Tea',
               namespace_id: 'herbalbrews:green_tea',
+              subtitle: 'Balanced',
               icon: '/assets/icons/herbalbrews/green_tea.webp',
-              search: 'green tea drink brew herbalbrews'
+              search: 'green tea drink brew herbalbrews balanced'
             },
             {
               id: 'black_tea',
               title: 'Black Tea',
               namespace_id: 'herbalbrews:black_tea',
+              subtitle: 'Tough',
               icon: '/assets/icons/herbalbrews/black_tea.webp',
-              search: 'black tea drink brew herbalbrews'
+              search: 'black tea drink brew herbalbrews tough'
             },
             {
               id: 'oolong_tea',
               title: 'Oolong Tea',
               namespace_id: 'herbalbrews:oolong_tea',
+              subtitle: 'Fortune',
               icon: '/assets/icons/herbalbrews/oolong_tea.webp',
-              search: 'oolong tea drink brew herbalbrews'
+              search: 'oolong tea drink brew herbalbrews fortune'
             },
             {
               id: 'flask',
-              title: 'Flasks',
+              title: 'Flask',
               namespace_id: 'herbalbrews:flask',
+              subtitle: 'Three potion effects in one bottle, from the [[Brewing Cauldron|brewing_cauldron]].',
               icon: '/assets/icons/herbalbrews/flask.webp',
               search: 'flask flasks potion drink brew herbalbrews'
             }
@@ -271,165 +268,158 @@ These dried tea ingredients are then used for brewing different tea variants.`,
         }
       ]
     },
-
     {
       id: 'crops',
       title: 'Crops, Wild Plants, and Worldgen',
-      subtitle: 'Crops and plants found growing naturally in the world, ready to be harvested or cultivated.',
+      subtitle: 'Where the ingredients grow.',
       entries: [
         {
           id: 'hibiscus',
           title: 'Hibiscus',
           namespace_id: 'herbalbrews:hibiscus',
-          subtitle:
-            'A decorative flower growing naturally in Jungles and similar lush biomes, commonly used for [[Hibiscus Tea|hibiscus_tea]].',
+          subtitle: 'A red flower from the jungle, used for [[Hibiscus Tea|hibiscus_tea]]. Bone Meal makes more of it.',
           icon: '/assets/icons/herbalbrews/hibiscus.webp',
-          search: 'hibiscus flower jungle #is_jungle decorative tea hibiscus tea wild plant'
+          search: 'hibiscus flower jungle decorative tea hibiscus tea wild plant bone meal'
         },
         {
           id: 'lavender',
           title: 'Lavender',
           namespace_id: 'herbalbrews:lavender',
-          subtitle:
-            'A fragrant flower growing in Mountains, Windswept Hills, and other elevated biomes, harvested for [[Lavender Blossoms|lavender_blossom]].',
+          subtitle: 'A fragrant flower of the mountains. Cut it with Shears for [[Lavender Blossoms|lavender_blossom]].',
           icon: '/assets/icons/herbalbrews/lavender.webp',
-          search: 'lavender flower mountains #is_hills #is_mountain decorative shears lavender blossoms lavender tea'
+          search: 'lavender flower mountains decorative shears lavender blossoms lavender tea bone meal'
         },
         {
           id: 'wild_coffee',
           title: 'Wild Coffee',
-          namespace_id: 'herbalbrews:wild_coffee',
-          subtitle:
-            'A wild coffee plant growing in Jungles and Bamboo Jungles, offering an alternative way to obtain [[Coffee Beans|coffee_beans]].',
+          namespace_id: 'herbalbrews:wild_coffee_plant',
+          subtitle: 'Grows in jungles and gives your first [[Coffee Beans|coffee_beans]].',
           icon: '/assets/icons/herbalbrews/wild_coffee_plant.webp',
-          search: 'wild coffee jungle #is_jungle coffee beans harvest break worldgen'
+          search: 'wild coffee jungle coffee beans harvest break worldgen'
         },
         {
           id: 'wild_rooibos',
           title: 'Wild Rooibos',
-          namespace_id: 'herbalbrews:wild_rooibos',
-          subtitle:
-            'A hardy wild plant growing in Savannas and Savanna Plateaus, used to brew [[Rooibos Tea|rooibos_tea]].',
+          namespace_id: 'herbalbrews:wild_rooibos_plant',
+          subtitle: 'Grows in savannas and gives Rooibos Leaves for [[Rooibos Tea|rooibos_tea]].',
           icon: '/assets/icons/herbalbrews/wild_rooibos_plant.webp',
-          search: 'wild rooibos savanna #is_savanna rooibos leafs harvest break worldgen'
+          search: 'wild rooibos savanna rooibos leafs harvest break worldgen'
         },
         {
           id: 'wild_yerba_mate',
           title: 'Wild Yerba Mate',
-          namespace_id: 'herbalbrews:wild_yerba_mate',
-          subtitle:
-            'A wild plant growing in Mountains and Windswept biomes, providing Yerba Mate Leafs for [[Yerba Mate Tea|yerba_mate_tea]].',
+          namespace_id: 'herbalbrews:wild_yerba_mate_plant',
+          subtitle: 'Grows in the mountains and gives Yerba Mate Leaves for [[Yerba Mate Tea|yerba_mate_tea]].',
           icon: '/assets/icons/herbalbrews/wild_yerba_mate_plant.webp',
-          search: 'wild yerba mate mountains #is_hills #is_mountain yerba mate leafs harvest break worldgen'
+          search: 'wild yerba mate mountains yerba mate leafs harvest break worldgen'
         }
       ]
     },
-
     {
       id: 'mob_effects',
       title: 'Mob Effects',
-      subtitle: 'Status effects granted by HerbalBrews teas, coffee, and flasks.',
+      subtitle: 'Effects from tea and coffee. Most of them are shared with players nearby.',
       entries: [
         {
           id: 'balanced',
           title: 'Balanced',
           namespace_id: 'herbalbrews:balanced',
-          subtitle: 'Grants nearby players Absorption.',
+          subtitle: 'Gives you and nearby players Absorption.',
           icon: '/assets/icons/herbalbrews/effects/balanced.webp',
-          search: 'balanced effect absorption radius players'
+          search: 'balanced effect absorption radius players green tea'
         },
         {
           id: 'fortune',
           title: 'Fortune',
           namespace_id: 'herbalbrews:fortune',
-          subtitle: 'Increases Luck.',
+          subtitle: 'More Luck for you and nearby players, for better loot.',
           icon: '/assets/icons/herbalbrews/effects/fortune.webp',
-          search: 'fortune effect luck'
+          search: 'fortune effect luck oolong'
         },
         {
           id: 'tough',
           title: 'Tough',
           namespace_id: 'herbalbrews:tough',
-          subtitle: 'Increases Absorption, Regeneration, and Damage Resistance.',
+          subtitle: 'Kicks in when you drop to four hearts: Regeneration and Resistance until you are safe.',
           icon: '/assets/icons/herbalbrews/effects/tough.webp',
-          search: 'tough effect absorption regeneration damage resistance'
+          search: 'tough effect regeneration resistance low health black tea'
+        },
+        {
+          id: 'feral',
+          title: 'Feral',
+          namespace_id: 'herbalbrews:feral',
+          subtitle: 'More attack damage and extra hearts for you and nearby players.',
+          icon: '/assets/icons/herbalbrews/effects/feral.webp',
+          search: 'feral effect attack damage health lavender tea'
         },
         {
           id: 'bonding',
           title: 'Bonding',
           namespace_id: 'herbalbrews:bonding',
-          subtitle: 'Grants nearby players temporary Absorption and Regeneration.',
+          subtitle: 'Absorption and Regeneration for the players around you.',
           icon: '/assets/icons/herbalbrews/effects/bonding.webp',
-          search: 'bonding effect absorption regeneration radius players',
+          search: 'bonding effect absorption regeneration radius players yerba mate',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Bonding grants nearby players temporary Absorption and Regeneration.
-
-When multiple players are nearby, the effect scales down slightly to prevent stacking abuse.`,
+          detailsText: `Bonding keeps giving Absorption and Regeneration to the players around you. The more players share it, the weaker it gets.`,
           detailsBullets: [
-            'Applies to nearby players',
-            'Grants Absorption and Regeneration',
-            'Strength scales down with multiple players'
+            'Affects nearby players',
+            'Absorption and Regeneration',
+            'Weaker when shared by many players'
           ]
         },
         {
           id: 'lifeleech',
           title: 'Lifeleech',
           namespace_id: 'herbalbrews:lifeleech',
-          subtitle: 'Drains health from nearby hostile entities and heals the user.',
+          subtitle: 'Drains health from nearby enemies and heals you with it.',
           icon: '/assets/icons/herbalbrews/effects/lifeleech.webp',
-          search: 'lifeleech effect drain heal hostile entities radius',
+          search: 'lifeleech effect drain heal hostile entities radius hibiscus',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Lifeleech periodically drains health from nearby hostile entities and transfers it to the user.
-
-Nearby players may also be affected with reduced strength.`,
+          detailsText: `Lifeleech steadily takes health from enemies around you and adds it to yours. Players nearby get a weaker version.`,
           detailsBullets: [
-            'Drains health from hostile entities',
-            'Heals the user',
-            'Can affect nearby players with reduced strength'
+            'Drains health from enemies nearby',
+            'Heals you',
+            'Weaker for other players nearby'
           ]
         },
         {
           id: 'deeprush',
           title: 'Deeprush',
           namespace_id: 'herbalbrews:deeprush',
-          subtitle: 'Increases mining speed based on depth.',
+          subtitle: 'The deeper you are, the faster you mine.',
           icon: '/assets/icons/herbalbrews/effects/deeprush.webp',
-          search: 'deeprush effect mining speed depth',
+          search: 'deeprush effect mining speed depth coffee',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Deeprush increases mining speed depending on the user's depth.
-
-The deeper you are, the stronger the effect becomes. When multiple players are nearby, the strength is slightly reduced.`,
+          detailsText: `Deeprush gives you Haste that grows stronger the deeper you dig. Players mining nearby profit too, a little less the more of you there are.`,
           detailsBullets: [
-            'Mining speed scales with depth',
-            'Stronger effects at lower Y-levels',
-            'Reduced strength with multiple nearby players'
+            'Haste that scales with depth',
+            'Shared with nearby players'
           ]
         }
       ]
     },
-
     {
       id: 'misc_changes',
       title: 'Miscellaneous Changes & Features',
-      subtitle: 'Small but meaningful tweaks and additions that subtly enhance gameplay and atmosphere.',
+      subtitle: 'Small extras.',
       entries: [
         {
           id: 'config',
           title: 'Configuration',
-          subtitle:
-            'Most gameplay features of HerbalBrews can be adjusted via a configuration file, usually located at `config/herbalbrews.json`.',
+          subtitle: 'The hat protection, drying time and banner effect can be adjusted in the config.',
           icon: '/assets/icons/misc/config.webp',
-          search: 'config configuration settings options balance json herbalbrews'
-        },
-        {
-          id: 'hat_zombies',
-          title: 'Hat Zombies',
-          subtitle: 'Zombies have a small chance to spawn wearing a [[Witch Hat|witch_hat]] or [[Top Hat|top_hat]].',
-          icon: '/assets/icons/misc/zombie.webp',
-          search: 'zombie hat spawn witch hat top hat'
+          search: 'config configuration settings options herbalbrews',
+          details: true,
+          detailsTitle: 'Options',
+          detailsText: `The config lets you change a few details.`,
+          detailsBullets: [
+            'Magic protection of the hats on or off, and how strong',
+            'How long tea leaves take to dry',
+            'Completionist Banner effect and tooltip'
+          ]
         }
       ]
     }

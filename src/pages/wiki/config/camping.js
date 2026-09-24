@@ -3,34 +3,37 @@ export default {
   title: 'Camping',
   logo: '/assets/mod-logos/camping.webp',
   aboutTitle: 'Welcome',
-  aboutSubtitle: 'Small camping essentials for your adventures',
-  aboutText: `Camping is a small mod that adds a few cozy outdoor essentials.
+  aboutSubtitle: 'Everything you need for a night under the stars',
+  aboutText: `Camping packs a few cozy outdoor essentials for your adventures.
 
-It focuses on portable gear, simple camp setups, and a handful of useful items for travel and exploration.`,
+Carry your belongings in a backpack, pitch a tent, roll out a sleeping bag and grill your dinner. Round the evening off with marshmallows over the campfire.
+
+Some backpacks are crafted, others are hidden in strongholds, End cities or sold by the Wandering Trader.`,
   sections: [
     {
       id: 'stations',
       title: 'Stations and Processing',
-      subtitle: 'Blocks and stations used while camping.',
+      subtitle: 'Cooking out in the open.',
       entries: [
         {
           id: 'grill',
           title: 'Grill',
-          subtitle: 'A small open-flame grill. Toss cookable food on top and let the fire do the rest.',
+          subtitle: 'A small charcoal grill. Food cooked on it is more filling.',
           icon: '/assets/icons/camping/grill.webp',
           search: 'grill camping cook food campfire no gui grilled tooltip nutrition saturation',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Food prepared on the Grill is marked as Grilled and becomes noticeably more nourishing.
+          detailsText: `Right click the Grill with raw food to put it on. It uses the same recipes as the Campfire and holds up to four items at once. When they are done, they pop off the grill.
 
-Grilled food restores more hunger and saturation and shows its improved state directly in the tooltip.`,
+Grilled food is marked as flame grilled and restores 25% more hunger and saturation. The tooltip shows the bonus.
+
+Careful: stepping on a lit grill burns.`,
           detailsBullets: [
-            'No GUI interaction',
-            'Right click with cookable food',
-            'Uses Campfire Cooking recipes',
-            'Marks items as Grilled',
-            'Increases nutrition to 125%',
-            'Shows improved values directly in the tooltip'
+            'No menu, right click with raw food',
+            'Holds four items',
+            'Uses Campfire recipes',
+            '+25% hunger and saturation',
+            'Hurts when you step on it'
           ]
         }
       ]
@@ -38,19 +41,19 @@ Grilled food restores more hunger and saturation and shows its improved state di
     {
       id: 'decor',
       title: 'Decor & Building',
-      subtitle: 'Camping themed blocks and placeables.',
+      subtitle: 'Tents and sleeping bags.',
       entries: [
         {
           id: 'tents',
           title: 'Tents',
-          subtitle: 'A cozy placeable tent for camps and outdoor scenes, available in all dye colors.',
+          subtitle: 'A tent for your camp, in every dye colour.',
           icon: '/assets/icons/camping/tent_pink.webp',
           search: 'tent camping decorative dye colors',
           details: true,
           detailsTitle: 'More info',
-          detailsText: `Tents are purely decorative and meant to add atmosphere to camps and outdoor scenes.
+          detailsText: `Tents are decorative and bring a campsite to life. They come in all sixteen dye colours.
 
-They are available in all standard dye colors.`,
+To actually sleep, roll out a [[Sleeping Bag|sleeping_bags]] inside.`,
           items: [
             'white',
             'orange',
@@ -78,14 +81,14 @@ They are available in all standard dye colors.`,
         {
           id: 'sleeping_bags',
           title: 'Sleeping Bags',
-          subtitle: 'Quickly placeable sleeping bags for rest. Does not set a respawn point.',
+          subtitle: 'A bed for on the go. Lying down gives a short Regeneration boost.',
           icon: '/assets/icons/camping/sleeping_bag_light_blue.webp',
-          search: 'sleeping bag camping dye colors',
+          search: 'sleeping bag camping dye colors bed regeneration respawn',
           details: true,
           detailsTitle: 'More info',
-          detailsText: `Sleeping Bags allow you to sleep without setting a respawn point.
+          detailsText: `Sleeping Bags work like beds: sleep through the night and set your spawn point wherever you camp. Every time you lie down you also get Regeneration II for ten seconds.
 
-They are available in all standard dye colors.`,
+They come in all sixteen dye colours.`,
           items: [
             'white',
             'orange',
@@ -115,75 +118,75 @@ They are available in all standard dye colors.`,
     {
       id: 'items',
       title: 'Items, Ingredients, and Tools',
-      subtitle: 'Items added by Camping.',
+      subtitle: 'Handy tools for the trail.',
       entries: [
         {
           id: 'multitool',
           title: 'Multitool',
-          subtitle: 'A compact travel tool for quick block rotation.',
+          subtitle: 'Turns blocks around. Sneak to turn them the other way.',
           icon: '/assets/icons/camping/multitool.webp',
-          search: 'multitool camping rotate block fire resistant durable'
+          search: 'multitool camping rotate block turn'
         },
         {
           id: 'walking_stick',
           title: 'Walking Stick',
-          subtitle: 'A sturdy walking stick that slightly boosts movement speed.',
+          subtitle: 'Makes you walk 5% faster while you hold it, and clears cobwebs in no time.',
           icon: '/assets/icons/camping/walking_stick.webp',
-          search: 'walking stick camping durability movement speed'
+          search: 'walking stick camping durability movement speed cobweb'
         }
       ]
     },
     {
       id: 'backpacks',
       title: 'Backpacks',
-      subtitle: 'All backpacks share the same storage size.',
+      subtitle: 'Every backpack holds 24 slots. They only differ in looks and how you get them.',
       entries: [
         {
           id: 'small_backpack',
           title: 'Small Backpack',
-          subtitle: 'Can be crafted.',
+          subtitle: 'Crafted. Sometimes waiting in the bonus chest at spawn.',
           icon: '/assets/icons/camping/small_backpack.webp'
         },
         {
           id: 'large_backpack',
-          title: 'Large Backpack',
-          subtitle: 'Looks larger, but is not.',
+          title: 'Hiking Backpack',
+          subtitle: 'Crafted. Looks bigger, holds the same.',
           icon: '/assets/icons/camping/large_backpack.webp'
+        },
+        {
+          id: 'sheepbag',
+          title: 'Sheepbag',
+          subtitle: 'Crafted from white wool, string and leather.',
+          icon: '/assets/icons/camping/sheepbag.webp'
         },
         {
           id: 'wanderer_backpack',
           title: 'Wanderer Backpack',
-          subtitle: 'Obtained through [[Wandering Trader|trader_trades]].',
+          subtitle: 'Sometimes sold by the [[Wandering Trader|trader_trades]].',
           icon: '/assets/icons/camping/wanderer_backpack.webp'
         },
         {
           id: 'wanderer_bag',
           title: 'Wanderer Bag',
-          subtitle: 'Obtained through [[Wandering Trader|trader_trades]].',
+          subtitle: 'The travelling companion of the Wanderer Backpack.',
           icon: '/assets/icons/camping/wanderer_bag.webp'
-        },
-        {
-          id: 'sheepbag',
-          title: 'Sheepbag',
-          subtitle: 'Obtained through [[Shepherd Villagers|trader_trades]].',
-          icon: '/assets/icons/camping/sheepbag.webp'
         },
         {
           id: 'enderbag',
           title: 'Enderbag',
-          subtitle: 'Found in [[Strongholds|loot]]. Grants Ender Chest access.',
+          subtitle: 'Found in [[strongholds|loot]]. Opens your Ender Chest.',
           icon: '/assets/icons/camping/enderbag.webp'
         },
         {
           id: 'enderpack',
           title: 'Enderpack',
-          subtitle: 'Found in [[The End|loot]]. Grants Ender Chest access.',
+          subtitle: 'Found in [[End cities|loot]]. Opens your Ender Chest.',
           icon: '/assets/icons/camping/enderpack.webp'
         },
         {
           id: 'goodybag',
           title: 'Goodybag',
-          subtitle: 'Reward for collecting all backpacks.',
+          subtitle: 'The reward for collecting every other backpack.',
           icon: '/assets/icons/camping/goodybag.webp'
         }
       ]
@@ -191,71 +194,79 @@ They are available in all standard dye colors.`,
     {
       id: 'food',
       title: 'Food',
-      subtitle: 'Small treats and campfire snacks.',
+      subtitle: 'Campfire treats.',
       entries: [
         {
           id: 'marshmallow',
           title: 'Marshmallow',
-          subtitle: 'A small sweet snack with a chance to grant Speed.',
+          subtitle: 'A sweet little snack that sometimes gives a burst of Speed.',
           icon: '/assets/icons/camping/marshmallow.webp'
         },
         {
           id: 'roasted_marshmallow',
           title: 'Roasted Marshmallow',
-          subtitle: 'Grilled to perfection. Always grants Speed.',
+          subtitle: 'Toasted just right. Always gives a short Speed II boost.',
           icon: '/assets/icons/camping/roasted_marshmallow.webp'
         },
         {
           id: 'marshmallow_on_a_stick',
           title: 'Marshmallow on a Stick',
-          subtitle: 'Hold it over a Campfire and manage the heat.',
-          icon: '/assets/icons/camping/marshmallow_on_a_stick.webp'
+          subtitle: 'Hold it over a lit Campfire and pull it away at the right moment.',
+          icon: '/assets/icons/camping/marshmallow_on_a_stick.webp',
+          details: true,
+          detailsTitle: 'Roasting',
+          detailsText: `Hold right click on a lit Campfire to roast the marshmallow. Every few seconds it gets one step darker, and the tooltip tells you how it is doing. Let go and eat it when you are happy with it.`,
+          detailsBullets: [
+            'Untoasted and Warmed: a small snack',
+            'Melted: perfect, as filling as bread and gives Speed',
+            'Charred: gives Hunger',
+            'Totally Burnt: gives strong Hunger'
+          ]
         }
       ]
     },
     {
       id: 'misc_changes',
       title: 'Miscellaneous Changes & Features',
-      subtitle: 'Small but meaningful additions.',
+      subtitle: 'How backpacks work and where to find them.',
       entries: [
         {
           id: 'backpack_general',
           title: 'Backpacks in General',
-          subtitle: 'Shared behavior across all backpack variants.',
+          subtitle: 'What all backpacks have in common.',
           icon: '/assets/icons/misc/tip.webp',
           details: true,
           detailsTitle: 'Good to know',
-          detailsText: `All backpacks added by Camping behave the same in terms of functionality.`,
+          detailsText: `All backpacks work the same way. Wear one in the back slot of Trinkets (Fabric) or Curios (NeoForge) and press B to open it.
+
+You can also place a backpack on the ground and right click it to open. Sneak and right click to pick it up again with all its contents.`,
           detailsBullets: [
-            'All backpacks share the same storage size',
-            'Backpacks are worn in Trinkets or Curios slots',
-            'Default keybind is B (configurable)',
-            'Backpacks can be placed as blocks'
+            '24 slots each',
+            'Worn in a Trinkets or Curios slot',
+            'Press B to open (can be changed in the controls)',
+            'Place it and right click to open',
+            'Sneak right click to pick it up with its contents'
           ]
         },
         {
           id: 'trader_trades',
           title: 'Trading',
-          subtitle: 'Some items are obtained via traders.',
+          subtitle: 'The Wandering Trader sometimes has a backpack for sale.',
           icon: '/assets/icons/misc/emerald.webp',
           details: true,
-          detailsText: `Some backpacks are not craftable and are instead obtained through trading.
-
-     - [[Wanderer Backpack|wanderer_backpack]] via Wandering Trader
-     - [[Wanderer Bag|wanderer_bag]] via Wandering Trader
-     - [[Sheepbag|sheepbag]] via Shepherd Villagers`
+          detailsText: `Every now and then the Wandering Trader offers a [[Wanderer Backpack|wanderer_backpack]] for 27 to 53 emeralds.`
         },
         {
           id: 'loot',
           title: 'Loot and Exploration',
-          subtitle: 'Some items are found through exploration.',
+          subtitle: 'Some backpacks are found while exploring.',
           icon: '/assets/icons/misc/chest.webp',
           details: true,
-          detailsText: `Some backpacks are discovered through exploration.
+          detailsText: `Some backpacks are found in chests:
 
-     - [[Enderbag|enderbag]] in Strongholds
-     - [[Enderpack|enderpack]] in The End
-     - [[Goodybag|goodybag]] for collecting all backpacks`
+- [[Small Backpack|small_backpack]] in the bonus chest at spawn
+- [[Enderbag|enderbag]] in stronghold libraries, corridors and crossings
+- [[Enderpack|enderpack]] in End city treasure`
         }
       ]
     }

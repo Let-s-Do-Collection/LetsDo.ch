@@ -1,12 +1,14 @@
 export default {
   slug: 'lilis-lucky-lures',
-  title: 'Lili’s Lucky Lures',
+  title: 'Lili\'s Lucky Lures',
   logo: '/assets/mod-logos/lucky_lures.webp',
   aboutTitle: 'Welcome',
-  aboutSubtitle: 'Fishing focused additions and playful extras',
-  aboutText: `Lili’s Lucky Lures expands fishing with interactive blocks, useful gear, and fish based meals.
+  aboutSubtitle: 'More to catch, more to find',
+  aboutText: `Lili's Lucky Lures makes fishing more rewarding. Floating pools of fish, books and driftwood drift on rivers and oceans, waiting to be fished out.
 
-The mod focuses on playful fishing mechanics, small world interactions, and a handful of tools and rewards tied to water and catches.`,
+Set up fish traps with bait, scoop debris with a net, show off your best catch on the wall, and cook hearty fish meals that bring you luck.
+
+And if you want your pond defended, the Redstone Coil zaps whatever comes too close.`,
   sections: [
     {
       id: 'decor_building',
@@ -17,7 +19,7 @@ The mod focuses on playful fishing mechanics, small world interactions, and a ha
           id: 'fish_bag',
           title: 'Fish Bag',
           namespace_id: 'lilis_lucky_lures:fish_bag',
-          subtitle: 'A simple bag stuffed with slightly questionable fish.',
+          subtitle: 'A sack stuffed with slightly questionable fish. Purely decorative.',
           icon: '/assets/icons/lilis-lucky-lures/fish_bag.webp',
           search: 'fish bag fish storage lilis lucky lures'
         },
@@ -25,47 +27,37 @@ The mod focuses on playful fishing mechanics, small world interactions, and a ha
           id: 'fish_trap',
           title: 'Fish Trap',
           namespace_id: 'lilis_lucky_lures:fish_trap',
-          subtitle: 'A waterlogged trap that visibly holds bait and catches over time.',
+          subtitle: 'Bait it, leave it in the water, and come back for your catch.',
           icon: '/assets/icons/lilis-lucky-lures/fish_trap.webp',
           search: 'fish trap bait catch waterlogged hanging ropes net fence bubble',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Place the Fish Trap in water or hang it below [[Rope|rope]] or [[Fish Net Fence|fish_net_fence]].
-
-Right-click with a bait item to insert it. The trap visually shows the inserted bait and later the caught fish.
-
-When a catch is ready, subtle bubbles appear. Right-click with an empty hand to take out the fish. If no fish is present yet, the bait is returned instead.`,
+          detailsText: `Place the Fish Trap in water, or hang it from a rope or a [[Fish Net Fence|fish_net_fence]]. Right click with bait to load it. After a minute or so, bubbles rise and the catch is ready. Right click with an empty hand to take it out; if nothing has bitten yet, you get the bait back.`,
           detailsBullets: [
-            'Placeable in water or hanging from ropes and nets',
-            'Visually displays inserted bait and caught fish',
-            'Right-click with bait to load the trap',
-            'Right-click with empty hand to retrieve fish or bait',
-            'Bubbles indicate a completed catch'
+            'Wheat Seeds: 3 Cod',
+            'Sweet Berries: 3 Salmon',
+            'Melon Seeds: 2 Tropical Fish',
+            'Beetroot Seeds: 2 Pufferfish',
+            'Bubbles show that the catch is ready'
           ]
         },
         {
           id: 'fish_net',
           title: 'Fish Net',
           namespace_id: 'lilis_lucky_lures:fish_net',
-          subtitle: 'A configurable fishing net that switches between net and fence.',
+          subtitle: 'One item, two blocks: a bouncy net or a net fence.',
           icon: '/assets/icons/lilis-lucky-lures/fish_net.webp',
           search: 'fish net lilis lucky lures elastic fence water fishing net',
           details: true,
           detailsMiniGallery: true,
           detailsTitle: 'Usage',
-          detailsText: `The Fish Net item can place two different blocks.
+          detailsText: `Sneak and right click with the Fish Net to switch between placing an [[Elastic Fishing Net|elastic_fishing_net]] and a [[Fish Net Fence|fish_net_fence]].
 
-Use Shift + Right-click while holding it to switch between [[Elastic Fishing Net|elastic_fishing_net]] and [[Fish Net Fence|fish_net_fence]].
-
-The Elastic Fishing Net cushions falls and bounces entities back up.
-
-The Fish Net Fence connects to nearby blocks, can be waterlogged, and may resonate bells placed above it.`,
+The Elastic Fishing Net catches falls and bounces you back up. The Fish Net Fence connects like a fence, can be waterlogged, and rings a bell hanging from it.`,
           detailsBullets: [
-            'Shift + Right-click to switch placement mode',
-            'Places Elastic Fishing Net or Fish Net Fence',
-            'Elastic Net reduces fall damage and bounces entities',
-            'Fence connects to blocks and can be waterlogged',
-            'Fence can trigger bells placed above it'
+            'Sneak right click to switch the mode',
+            'Elastic Fishing Net: cushions falls and bounces',
+            'Fish Net Fence: connects like a fence, can be waterlogged'
           ],
           items: [
             {
@@ -79,7 +71,7 @@ The Fish Net Fence connects to nearby blocks, can be waterlogged, and may resona
               id: 'fish_net_fence',
               title: 'Fish Net Fence',
               namespace_id: 'lilis_lucky_lures:fish_net_fence',
-              icon: '/assets/icons/lilis-lucky-lures/fish_net_fence.webp',
+              icon: '/assets/icons/lilis-lucky-lures/fishing_net_fence.webp',
               search: 'fish net fence waterlogged bell'
             }
           ]
@@ -88,83 +80,69 @@ The Fish Net Fence connects to nearby blocks, can be waterlogged, and may resona
           id: 'fish_trophy_frame',
           title: 'Fish Trophy Frame',
           namespace_id: 'lilis_lucky_lures:fish_trophy_frame',
-          subtitle: 'A wall mounted frame for proudly displaying your catch.',
+          subtitle: 'Hang your best catch on the wall.',
           icon: '/assets/icons/lilis-lucky-lures/fish_trophy_frame.webp',
           search: 'fish trophy frame display wall lilis lucky lures',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Fish Trophy Frame can be placed on walls and is used to display a single fish item.
-
-Right-click the frame while holding a fish to mount it inside the frame.
-
-Right-click with an empty hand to remove the displayed item again.`,
+          detailsText: `Hang the frame on a wall and right click it with a fish to mount it. Right click with an empty hand to take it down again.`,
           detailsBullets: [
-            'Wall mounted display block',
-            'Displays a single fish as a decorative centerpiece',
-            'Right-click with item to place it',
-            'Right-click with empty hand to remove it',
-            'Requires a solid block behind it'
+            'Hangs on walls',
+            'Shows one fish',
+            'Right click with a fish to mount it'
           ]
         },
         {
           id: 'hanging_frame',
           title: 'Hanging Frame',
           namespace_id: 'lilis_lucky_lures:hanging_frame',
-          subtitle: 'A double-height hanging frame for showing off your catches.',
+          subtitle: 'A drying rack for up to six fish.',
           icon: '/assets/icons/lilis-lucky-lures/hanging_frame.webp',
           search: 'hanging frame fish display lilis lucky lures',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Hanging Frame is a double-height block used to display multiple fish.
-
-It features two hanging ropes. You can place up to three fish on the upper rope and three more on the lower rope.`,
+          detailsText: `The Hanging Frame is two blocks tall with two ropes. Hang up to three fish on each rope by right clicking with them, and right click with an empty hand to take them off.`,
           detailsBullets: [
-            'Double-height hanging block',
-            'Displays up to six fish in total',
-            'Three fish on the upper rope',
-            'Three fish on the lower rope',
-            'Right-click with a fish to hang it',
-            'Right-click with empty hand to remove fish'
+            'Two blocks tall',
+            'Three fish per rope, six in total',
+            'Right click with a fish to hang it up'
           ]
         },
         {
           id: 'redstone_coil',
           title: 'Redstone Coil',
           namespace_id: 'lilis_lucky_lures:redstone_coil',
-          subtitle: 'A humming coil that crackles to life when powered.',
+          subtitle: 'A slow but reliable defence tower that zaps anything in range.',
           icon: '/assets/icons/lilis-lucky-lures/redstone_coil.webp',
           search: 'redstone coil lilis lucky lures defense electricity',
           details: true,
           detailsTitle: 'Function',
-          detailsText: `The Redstone Coil reacts to a redstone signal and activates with a visible electric spark effect.
+          detailsText: `Give the Redstone Coil a redstone signal and it starts zapping targets around it. Right click to choose what it goes after: water creatures, monsters, players outside your team, or nothing.
 
-Right-clicking the coil cycles its current focus, allowing it to switch between different target types.
-
-When powered, the coil becomes active and applies its behavior based on the selected target.`,
+A stronger signal means more damage and a larger range. Targets in water or wearing iron armor take extra damage.`,
           detailsBullets: [
-            'Activates when powered by redstone',
-            'Right-click to cycle targeting modes',
-            'Shows electrical particle effects while active',
-            'Tall, two-block structure'
+            'Needs a redstone signal',
+            'Modes: Fishes, Monster, Player, None',
+            'Damage and range grow with signal strength',
+            'Extra damage against targets in water or in iron armor',
+            'Two blocks tall'
           ]
         },
         {
           id: 'lilis_lucky_lures_banner',
           title: 'Completionist Banner',
           namespace_id: 'lilis_lucky_lures:lilis_lucky_lures_banner',
-          subtitle: 'A reward banner for dedicated anglers.',
+          subtitle: 'The reward for collecting every rare catch.',
           icon: '/assets/icons/lilis-lucky-lures/lilis_lucky_lures_banner.webp',
           search: 'completionist banner lilis lucky lures reward fishing',
           details: true,
           detailsTitle: 'Reward',
-          detailsText: `The Completionist Banner is a special reward for players who have fully explored what Lili’s Lucky Lures has to offer.
+          detailsText: `Collect every treasure from fishing, netting and Soaked Bags to complete the final advancement and receive the Completionist Banner.
 
-While placed, it grants nearby players a Luck bonus, giving a subtle but fitting boost to fishing related activities.`,
+Once placed, it gives Luck to all players within eight blocks.`,
           detailsBullets: [
-            'Reward for completing Lili’s Lucky Lures progression',
-            'Grants Luck to nearby players',
-            'Effect radius of 8 blocks',
-            'Purely a reward piece with a cozy, brag-worthy touch'
+            'Reward for collecting all rare items',
+            'Gives Luck within 8 blocks'
           ]
         }
       ]
@@ -177,23 +155,21 @@ While placed, it grants nearby players a Luck bonus, giving a subtle but fitting
       entries: [
         {
           id: 'anglers_hat',
-          title: 'Angler’s Hat',
+          title: 'Anglers Hat',
           namespace_id: 'lilis_lucky_lures:anglers_hat',
-          subtitle: 'A well-worn fishing hat that brings a bit of extra luck.',
+          subtitle: 'A well-worn fishing hat that brings a little luck.',
           icon: '/assets/icons/lilis-lucky-lures/anglers_hat.webp',
           search: 'angler hat armor luck fishing',
           details: true,
           detailsTitle: 'Effect',
-          detailsText: `The Angler’s Hat is a rare piece of fishing gear made for those who spend more time near water than on land.
-
-While worn, it grants a constant Luck bonus, subtly improving fishing outcomes without any extra interaction.`,
-          detailsBullets: ['Grants Luck while worn', 'Effect is always active', 'Equippable as a helmet']
+          detailsText: `A rare find from floating debris, Soaked Bags and the Fishing Net. Wear it in the helmet slot for +1 Luck, which improves your fishing catches.`,
+          detailsBullets: ['+1 Luck while worn', 'Worn in the helmet slot', 'Found, not crafted']
         },
         {
           id: 'bamboo_fishing_rod',
           title: 'Bamboo Fishing Rod',
           namespace_id: 'lilis_lucky_lures:bamboo_fishing_rod',
-          subtitle: 'A lightweight fishing rod made from bamboo.',
+          subtitle: 'A cheap fishing rod made from bamboo. Works like a normal rod, but wears out faster.',
           icon: '/assets/icons/lilis-lucky-lures/bamboo_fishing_rod.webp',
           search: 'bamboo fishing rod'
         },
@@ -201,32 +177,25 @@ While worn, it grants a constant Luck bonus, subtly improving fishing outcomes w
           id: 'fishing_net',
           title: 'Fishing Net',
           namespace_id: 'lilis_lucky_lures:fishing_net',
-          subtitle: 'A handheld net for scooping up loot from [[Floating Debris|floating_debris]].',
+          subtitle: 'A hand net for scooping loot out of [[Floating Debris|floating_debris]].',
           icon: '/assets/icons/lilis-lucky-lures/fishing_net.webp',
           search: 'fishing net debris loot scoop lilis lucky lures hold right click icon changes empty',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Fishing Net is used on floating loot pools like [[Floating Debris|floating_debris]] and [[Floating Books|floating_books]].
+          detailsText: `Get close to [[Floating Debris|floating_debris]] and hold right click to fish around in it. If you are lucky, the net comes up full.
 
-Get close to a pool, then Right-click and hold to try pulling something out.
-On success, the net becomes filled and its icon changes.
-
-Right-click again to empty the net and collect the loot.
-
-Different pools can yield different loot.`,
+Right click again to empty it. Besides the debris loot, the net sometimes holds extras of its own: fish, gold, emeralds, a Soaked Bag, or even a Heart of the Sea.`,
           detailsBullets: [
-            'Right-click and hold near a floating pool',
-            'Has a chance to pull loot out',
-            'Net icon changes when filled',
-            'Right-click to empty and collect the loot',
-            'Loot depends on the pool type'
+            'Hold right click next to Floating Debris',
+            'Right click again to empty the full net',
+            'Can bring up Soaked Bags and rare treasures'
           ]
         },
         {
           id: 'spear',
           title: 'Spear',
           namespace_id: 'lilis_lucky_lures:spear',
-          subtitle: 'A budget trident: less damage, still gets the job done.',
+          subtitle: 'A budget trident: less damage, but it still flies.',
           icon: '/assets/icons/lilis-lucky-lures/spear.webp',
           search: 'spear weapon'
         },
@@ -239,26 +208,23 @@ Different pools can yield different loot.`,
           search: 'dynamite explosive throw utility lilis lucky lures',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Dynamite is a throwable explosive item.
-
-Right-click to light and throw it in the direction you are facing. After a short fuse, it explodes on its own.`,
+          detailsText: `Right click to light the Dynamite and throw it. After a short fuse, it explodes. It can be crafted, even from TNT.`,
           detailsBullets: [
-            'Right-click to light and throw',
+            'Right click to light and throw',
             'Explodes after a short fuse',
-            'Thrown as a projectile',
-            'Single-use item'
+            'Can be crafted from TNT'
           ]
         },
         {
           id: 'soaked_bag',
           title: 'Soaked Bag',
           namespace_id: 'lilis_lucky_lures:soaked_bag',
-          subtitle: 'A waterlogged bag packed with fish, scraps, and the occasional jackpot.',
+          subtitle: 'A soggy bag full of fish, scraps and the occasional jackpot.',
           icon: '/assets/icons/lilis-lucky-lures/soaked_bag.webp',
           search: 'soaked bag loot fishing treasure lilis lucky lures',
           details: true,
           detailsTitle: 'Loot',
-          detailsText: `Right-click to open the Soaked Bag and receive a random selection of loot.
+          detailsText: `Soaked Bags come up in the [[Fishing Net|fishing_net]]. Right click to open one.
 
 Possible contents include:
 
@@ -276,18 +242,16 @@ Supplies
 Gear
 • Enchanted Book
 • Spear (damaged)
-• Angler’s Hat (damaged)
+• Anglers Hat (damaged)
 • Iron Armor Pieces (damaged, may be enchanted)
 • Chainmail Armor Pieces (damaged, may be enchanted)
 
 Rare Finds
 • Diamond`,
           detailsBullets: [
-            'Right-click to open',
-            'Drops a random selection from its loot table',
-            'Includes fish, supplies, and gear',
-            'Some gear may be enchanted',
-            'Very rare items can appear'
+            'Found with the Fishing Net',
+            'Right click to open',
+            'Fish, supplies and gear, sometimes enchanted'
           ]
         }
       ]
@@ -296,7 +260,7 @@ Rare Finds
     {
       id: 'food',
       title: 'Food',
-      subtitle: 'Fish based meals added by Lili’s Lucky Lures.',
+      subtitle: 'Fish meals. Cook them first.',
       entries: [
         {
           id: 'cod_meal',
@@ -306,13 +270,7 @@ Rare Finds
           search: 'cod meal fish bowl uncooked cooked luck hunger lilis lucky lures',
           details: true,
           detailsTitle: 'Variants',
-          detailsText: `Cod Meals exist in two states.
-
-Uncooked meals restore only a small amount of hunger and apply Hunger.
-
-Cooked meals restore more hunger and grant Luck for a while.
-
-Both variants return an empty Bowl after eating.`,
+          detailsText: `Craft an Uncooked Cod Meal and cook it. Eaten raw, it gives you Hunger. Cooked, it fills you up well and brings Luck for three minutes. You get the bowl back.`,
           detailsBullets: [
             'Uncooked: low nutrition, applies Hunger',
             'Cooked: better nutrition, grants Luck',
@@ -343,13 +301,7 @@ Both variants return an empty Bowl after eating.`,
           search: 'tropical fish meal uncooked cooked luck hunger',
           details: true,
           detailsTitle: 'Variants',
-          detailsText: `Tropical Fish Meals come in uncooked and cooked versions.
-
-Uncooked meals apply Hunger.
-
-Cooked meals grant Luck and restore more hunger.
-
-Both return an empty Bowl.`,
+          detailsText: `Craft Uncooked Tropical Fish and grill it. Eaten raw, it gives you Hunger. Grilled, it brings Luck for three minutes. You get the bowl back.`,
           detailsBullets: ['Uncooked: applies Hunger', 'Cooked: grants Luck', 'Always returns an empty Bowl'],
           items: [
             {
@@ -369,20 +321,14 @@ Both return an empty Bowl.`,
           ]
         },
         {
-          id: 'puffer_plater',
-          title: 'Puffer Plater',
-          subtitle: 'Suspicious stew with unpredictable results.',
+          id: 'puffer_plater_meal',
+          title: 'Puffer Platter',
+          subtitle: 'A suspicious dish with unpredictable results.',
           icon: '/assets/icons/lilis-lucky-lures/puffer_plater.webp',
           search: 'puffer plater suspicious stew uncooked cooked',
           details: true,
           detailsTitle: 'Variants',
-          detailsText: `Puffer Platers behave very differently depending on preparation.
-
-Uncooked versions apply Poison.
-
-Cooked versions grant one random status effect.
-
-Both return an empty Bowl.`,
+          detailsText: `Raw, the Puffer Platter poisons you. Cooked, it gives you one random effect, like a suspicious stew. You get the bowl back.`,
           detailsBullets: [
             'Uncooked: applies Poison',
             'Cooked: grants a random status effect',
@@ -391,14 +337,14 @@ Both return an empty Bowl.`,
           items: [
             {
               id: 'uncooked_puffer_plater',
-              title: 'Uncooked Puffer Plater',
+              title: 'Uncooked Puffer Platter',
               namespace_id: 'lilis_lucky_lures:uncooked_puffer_plater',
               icon: '/assets/icons/lilis-lucky-lures/uncooked_puffer_plater.webp',
               search: 'uncooked puffer plater'
             },
             {
               id: 'puffer_plater',
-              title: 'Cooked Puffer Plater',
+              title: 'Puffer Platter',
               namespace_id: 'lilis_lucky_lures:puffer_plater',
               icon: '/assets/icons/lilis-lucky-lures/puffer_plater.webp',
               search: 'cooked puffer plater'
@@ -413,12 +359,8 @@ Both return an empty Bowl.`,
           search: 'salmon rolls fish meal luck lilis lucky lures',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Salmon Rolls are a prepared fish meal.
-
-They restore a large amount of hunger and grant Luck for a while.
-
-An empty Bowl is returned after eating.`,
-          detailsBullets: ['Restores a high amount of hunger', 'Grants Luck', 'Always returns an empty Bowl']
+          detailsText: `The most filling fish meal. Salmon Rolls bring Luck for four minutes, and you get the bowl back.`,
+          detailsBullets: ['Very filling', 'Luck for four minutes', 'Returns the bowl']
         }
       ]
     },
@@ -426,7 +368,7 @@ An empty Bowl is returned after eating.`,
     {
       id: 'entities',
       title: 'Entities',
-      subtitle: 'Floating loot pools found in water.',
+      subtitle: 'Floating pools on rivers and oceans.',
       entries: [
         {
           id: 'floating_books',
@@ -437,9 +379,7 @@ An empty Bowl is returned after eating.`,
           search: 'floating books fishing pool loot lilis lucky lures',
           details: true,
           detailsTitle: 'Loot',
-          detailsText: `Floating Books can be fished from using a Fishing Rod or a [[Fishing Net|fishing_net]].
-
-The bobber must land inside the pool, or the net must be used nearby.
+          detailsText: `Cast your fishing rod so the bobber lands in the pool.
 
 Possible contents include:
 
@@ -456,9 +396,8 @@ Scraps
 The pool can only be looted a few times before breaking apart and disappearing.`,
           detailsBullets: [
             'Fishable floating loot pool',
-            'Works with Fishing Rod or Fishing Net',
-            'Bobber must land inside the pool',
-            'Contains books, paper, and scraps',
+            'Fish it with a fishing rod',
+            'Books, paper and scraps',
             'Disappears after several interactions'
           ]
         },
@@ -471,9 +410,7 @@ The pool can only be looted a few times before breaking apart and disappearing.`
           search: 'floating debris fishing pool loot lilis lucky lures',
           details: true,
           detailsTitle: 'Loot',
-          detailsText: `Floating Debris can be fished from using a Fishing Rod or a [[Fishing Net|fishing_net]].
-
-The bobber must land inside the pool, or the net must be used nearby.
+          detailsText: `Cast your fishing rod so the bobber lands in the debris, or scoop it with a [[Fishing Net|fishing_net]].
 
 Possible contents include:
 
@@ -494,7 +431,7 @@ Supplies
 Gear
 • Dynamite
 • Spear (sometimes damaged, sometimes enchanted)
-• Angler’s Hat (damaged, may be enchanted)
+• Anglers Hat (damaged, may be enchanted)
 • Iron Axe (damaged, enchanted)
 • Shield (damaged, enchanted)
 • Chainmail Armor Pieces (damaged, enchanted)
@@ -509,9 +446,8 @@ Rare Finds
 The pool can only be looted a few times before breaking apart and disappearing.`,
           detailsBullets: [
             'Fishable floating loot pool',
-            'Works with Fishing Rod or Fishing Net',
-            'Bobber must land inside the pool',
-            'Mostly wood and building bits, with occasional gear',
+            'Fish it with a rod or a Fishing Net',
+            'Mostly wood, with the occasional gear',
             'Some items can be damaged and enchanted',
             'Disappears after several interactions'
           ]
@@ -525,9 +461,7 @@ The pool can only be looted a few times before breaking apart and disappearing.`
           search: 'ocean fish pool fishing loot lilis lucky lures',
           details: true,
           detailsTitle: 'Loot',
-          detailsText: `Ocean Fish Pools can be fished from using a Fishing Rod or a [[Fishing Net|fishing_net]].
-
-The bobber must land inside the pool, or the net must be used nearby.
+          detailsText: `Cast your fishing rod so the bobber lands in the pool.
 
 Possible contents include:
 
@@ -536,8 +470,7 @@ Fish
 • Pufferfish (2 to 3)`,
           detailsBullets: [
             'Fishable floating loot pool',
-            'Works with Fishing Rod or Fishing Net',
-            'Bobber must land inside the pool',
+            'Fish it with a fishing rod',
             'Drops a random fish stack'
           ]
         },
@@ -550,9 +483,7 @@ Fish
           search: 'river fish pool fishing loot lilis lucky lures',
           details: true,
           detailsTitle: 'Loot',
-          detailsText: `River Fish Pools can be fished from using a Fishing Rod or a [[Fishing Net|fishing_net]].
-
-The bobber must land inside the pool, or the net must be used nearby.
+          detailsText: `Cast your fishing rod so the bobber lands in the pool.
 
 Possible contents include:
 
@@ -561,8 +492,7 @@ Fish
 • Salmon (3 to 5)`,
           detailsBullets: [
             'Fishable floating loot pool',
-            'Works with Fishing Rod or Fishing Net',
-            'Bobber must land inside the pool',
+            'Fish it with a fishing rod',
             'Drops common river fish'
           ]
         }
@@ -576,23 +506,14 @@ Fish
         {
           id: 'floating_pools',
           title: 'Floating Pools',
-          namespace_id: 'lilis_lucky_lures:floating_pools',
-          subtitle: 'Small floating spots that spawn near players on rivers and oceans.',
+          subtitle: 'Fish, books and debris drift in on rivers and oceans near players.',
           icon: '/assets/icons/lilis-lucky-lures/river.webp',
           search: 'floating pools worldgen spawn river ocean fish pool debris books lilis lucky lures',
           details: true,
           detailsTitle: 'Spawning Rules',
-          detailsText: `Floating Pools are spawned periodically near a random player.
+          detailsText: `Every five minutes a new floating pool may appear on a river or ocean within about 100 blocks of a random player, as long as there are fewer than three nearby.
 
-A spawn position is searched within about 100 blocks, and only river or ocean biomes are considered. The pool is placed slightly below the surface level.
-
-At most three floating pools are allowed in a large area around the spawn point.
-
-Depending on the biome, a fish pool can appear:
-Ocean biomes may spawn an [[Ocean Fish Pool|ocean_fish_pool]].
-River biomes may spawn a [[River Fish Pool|river_fish_pool]].
-
-[[Floating Books|floating_books]] and [[Floating Debris|floating_debris]] can also appear from the same spawner.`,
+Oceans get [[Ocean Fish Pools|ocean_fish_pool]], rivers get [[River Fish Pools|river_fish_pool]], and both can get [[Floating Books|floating_books]] and [[Floating Debris|floating_debris]].`,
           detailsBullets: [
             'Spawns every 5 minutes',
             'Chooses a random player as the center',

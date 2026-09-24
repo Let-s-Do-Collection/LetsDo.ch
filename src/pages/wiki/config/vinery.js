@@ -1,104 +1,101 @@
+const wine = (id, title, how, effect) => ({
+  id,
+  title,
+  namespace_id: `vinery:${id}`,
+  subtitle: `${effect}. ${how}`,
+  icon: `/assets/icons/vinery/${id}.webp`,
+  search: `${title} ${how} ${effect} wine`.toLowerCase()
+})
+
 export default {
   slug: 'vinery',
   title: 'Vinery',
   logo: '/assets/mod-logos/vinery.webp',
   aboutTitle: 'Welcome',
-  aboutSubtitle: 'Everything about wine and vineyards',
-  aboutText: `Welcome to the Vinery Wiki.
+  aboutSubtitle: 'From the grapevine to the wine cellar',
+  aboutText: `Vinery is all about wine. Find wild grapes in forests, savannas, taigas and jungles, plant them on grapevine stems or lattices and harvest them by the handful.
 
-This is your home for blocks, items, mechanics, and quick guidance for Vinery.
+Stomp the grapes into juice in the Grapevine Pot, press apples in the Apple Press and let everything ferment in the Fermentation Barrel. More than two dozen wines await, each with its own effect, and the longer a bottle rests, the stronger it gets.
 
-Vinery adds new wild plants and crops to discover in newly generated chunks, introduces winemaking stations for juice processing and fermentation, and offers a large selection of placeable wines.
-
-Alongside that, you get practical vineyard and cellar decor, dedicated storage options for bottles, and a few unique entities that can help you obtain Vinery items in survival.
-`,
+For the cellar there are wine racks in every wood type, a dark cherry wood set with furniture, and apple and cherry trees you can harvest right from the leaves.`,
   sections: [
     {
       id: 'stations',
       title: 'Stations and Processing',
-      subtitle: 'Workstations and interactive elements used for winemaking, processing, and ingredient preparation.',
+      subtitle: 'From grape to bottle in three steps.',
       entries: [
         {
           id: 'grapevine_pot',
           title: 'Grapevine Pot',
           namespace_id: 'vinery:grapevine_pot',
-          subtitle: 'Stomp grapes into must and collect fresh grape juice with bottles.',
+          subtitle: 'Hop in and stomp your grapes into juice.',
           icon: '/assets/icons/vinery/grapevine_pot.webp',
-          search: 'grapevine pot stomp grapes must grape juice bottle jump move around cannot mix variants',
+          search: 'grapevine pot stomp jump grapes juice wine bottle',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Grapevine Pot is used to process grapes into grape juice.
+          detailsText: `Right click the pot with grapes until it holds six. The first grape decides which juice you will get.
 
-Fill the pot with a single grape variant until it is full. Jump in and move around to stomp the grapes into must. Once the juice is ready, collect it using wine bottles.
-
-You cannot mix different grape variants in the same pot.`,
+Then jump into the pot a few times to stomp the grapes. When they are fully crushed, right click with an empty Wine Bottle to fill it. Six grapes make two bottles of juice.`,
           detailsBullets: [
-            'Processes grapes into grape juice',
-            'Fill fully with a single grape variant',
-            'Stomp by jumping and moving in the pot',
-            'Collect juice with wine bottles',
-            'Cannot mix grape variants'
+            'Six grapes per batch',
+            'The first grape sets the juice type',
+            'Jump in the pot to stomp',
+            'Fill with empty Wine Bottles, two per batch'
           ]
         },
         {
           id: 'fermentation_barrel',
           title: 'Fermentation Barrel',
           namespace_id: 'vinery:fermentation_barrel',
-          subtitle: 'Main station for fermenting juice into wine.',
+          subtitle: 'Where juice turns into wine.',
           icon: '/assets/icons/vinery/fermentation_barrel.webp',
-          search:
-            'fermentation barrel wine crafting station juice fill slot container wine bottle empty shift right click workstation winemaker',
+          search: 'fermentation barrel wine juice ferment bottle winemaker workstation',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Open the Fermentation Barrel to ferment wine.
+          detailsText: `Pour juice into the barrel through the juice slot. Each bottle of juice fills a quarter of the barrel, and the empty bottle lands in the bottle slot so it can be used right away. Only one kind of juice fits at a time. Hover over the gauge to see what is inside.
 
-Add the required ingredients, insert a container item such as a Wine Bottle, then add the matching juice via the fill slot. Hovering the juice slot shows which juice is stored and how much is left.
+Add the ingredients for your wine to the three ingredient slots. Most recipes also need an empty Wine Bottle. After five minutes the finished wine appears in the output slot.
 
-When everything is set up correctly, the output slot will produce the finished wine after processing.
-
-To empty the stored juice, shift-right-click the block.`,
+Sneak and right click the barrel to pour out the juice. The barrel is also the workstation of the [[Winemaker|winemaker_villager]].`,
           detailsBullets: [
-            'Ferments stored juice into wine',
-            'Insert ingredients, then add a container item (for example a Wine Bottle)',
-            'Fill the barrel with the correct juice using the fill slot',
-            'Hover the juice slot to see stored type and amount',
-            'Shift-right-click the block to empty stored juice',
-            'Workstation for Winemaker Villagers'
+            'Holds four bottles of juice of one kind',
+            'Three ingredient slots and a bottle slot',
+            'Five minutes per wine',
+            'Sneak + right click empties the juice'
           ]
         },
         {
           id: 'apple_press',
           title: 'Apple Press',
           namespace_id: 'vinery:apple_press',
-          subtitle: 'Crafting station for mashing apples and fermenting apple products.',
+          subtitle: 'Mashes apples and turns the mash into Apple Juice.',
           icon: '/assets/icons/vinery/apple_press.webp',
-          search: 'apple press crafting station apple mash fermenting input slots output slot apple juice wine bottle',
+          search: 'apple press mash apple juice honeycomb honey bottle',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Apple Press is used for two processes: mashing and fermenting.
+          detailsText: `The press works in two steps. Put apples into the top slot and they turn into [[Apple Mash|apple_mash]] after 30 seconds. The mash then moves on by itself.
 
-To mash apples, place them into the upper left input slot. After a short time, Apple Mash is produced and moved into the fermenting input slot.
+With an empty Wine Bottle in the bottle slot, the mash becomes [[Apple Juice|apple_juice]] after another 40 seconds.
 
-To ferment, use the middle input slots with ingredients and containers such as wine bottles. The output slot provides the finished product after processing.`,
+The press can also handle honey: a Honeycomb Block becomes four Honeycombs, and Honeycomb plus a bottle becomes a Honey Bottle.`,
           detailsBullets: [
-            'Two processes: mashing and fermenting',
-            'Mashing produces Apple Mash automatically',
-            'Fermenting uses ingredients plus a container',
-            'Finished product appears in the output slot'
+            'Apple → Apple Mash (30 s)',
+            'Apple Mash + Wine Bottle → Apple Juice (40 s)',
+            'Honeycomb Block → 4 Honeycomb',
+            'Honeycomb + Wine Bottle → Honey Bottle'
           ]
         }
       ]
     },
-
     {
       id: 'decor',
       title: 'Decor and Building',
-      subtitle: 'Decorative and structural elements used to build vineyards, taverns, and cozy cellar spaces.',
+      subtitle: 'For vineyards, taverns and wine cellars.',
       entries: [
         {
           id: 'lattice',
           title: 'Lattice',
-          subtitle: 'Wall decor that can also be used to cultivate jungle grapes.',
+          subtitle: 'A wooden trellis for walls and archways, and the place where Jungle Grapes grow.',
           icon: '/assets/icons/vinery/oak_lattice.webp',
           textures: [
             '/assets/icons/vinery/acacia_lattice.webp',
@@ -113,841 +110,535 @@ To ferment, use the middle input slots with ingredients and containers such as w
             '/assets/icons/vinery/spruce_lattice.webp'
           ],
           carousel: true,
-          search:
-            'lattice decoration wall passageway cultivate jungle grapes seeds connects toggle supports axe top side placement',
+          search: 'lattice trellis jungle grapes wood axe support',
           details: true,
-          detailsTitle: 'Usage',
-          detailsText: `Lattice is a decorative block that can be used to cultivate Jungle Grapes.
+          detailsText: `Lattices come in every vanilla wood type and in Dark Cherry. Neighbouring lattices connect, and you can place them against a wall or flat on the floor. Right click with an axe to add or remove the support posts.
 
-  Right-click the lattice while holding Jungle Grape Seeds to plant them.
-
-  Lattice connects to adjacent lattice blocks. With an axe, right-click to toggle supports on or off. It also supports different placement options, including on top of a block or on the side of another block.`,
+Right click a lattice with [[Jungle Grape Seeds|grapes]] to plant them. Once the grapes are ripe, right click to harvest. Shears remove the plant and give the seeds back.`,
           detailsBullets: [
-            'Decor block for walls and passageways',
-            'Used to cultivate Jungle Grapes',
-            'Right-click with Jungle Grape Seeds to plant',
-            'Connects to adjacent lattice blocks',
-            'Axe interaction toggles supports',
-            'Supports multiple placement styles'
+            'All vanilla woods plus Dark Cherry',
+            'Connects to neighbouring lattices',
+            'Axe toggles the support posts',
+            'Jungle Grapes only grow on lattices'
           ]
         },
         {
           id: 'wine_racks',
           title: 'Wine Racks',
-          subtitle: 'Dedicated storage blocks for displaying wine bottles.',
+          subtitle: 'Racks and storage for your bottles, in three sizes and every wood type.',
           icon: '/assets/icons/vinery/oak_wine_rack_small.webp',
-          search: 'wine racks storage bottles display wood variants small large cellar',
+          search: 'wine rack bottle storage small big display',
           details: true,
-          detailsTitle: 'Usage',
-          detailsText: `Wine Racks are designed to store and display wine bottles as part of your cellar or interior builds.
-
-  They come in different sizes and wood variants, and each rack supports specific bottle formats.`,
+          detailsText: `Right click a rack with a wine to put it in, and right click again to take it out. The tooltip tells you which bottles fit.`,
           detailsBullets: [
-            'Multiple rack sizes',
-            'Available in different wood variants',
-            'Designed for wine display and organization',
-            'Some bottles require specific rack sizes'
+            'Small Wine Bottle Storage: 4 small bottles',
+            'Big Wine Bottle Storage: 9 small bottles',
+            'Wine Rack: 1 bottle of any size, opens with sneak + right click',
+            'Every vanilla wood type plus Dark Cherry'
+          ],
+          items: [
+            { id: 'oak_wine_rack_small', title: 'Small Oak Wine Bottle Storage', namespace_id: 'vinery:oak_wine_rack_small', icon: '/assets/icons/vinery/oak_wine_rack_small.webp' },
+            { id: 'oak_wine_rack_big', title: 'Big Oak Wine Bottle Storage', namespace_id: 'vinery:oak_wine_rack_big', icon: '/assets/icons/vinery/oak_wine_rack_big.webp' },
+            { id: 'oak_wine_rack_mid', title: 'Oak Wine Rack', namespace_id: 'vinery:oak_wine_rack_mid', icon: '/assets/icons/vinery/oak_wine_rack_mid.webp' }
           ]
         },
         {
           id: 'wine_box',
           title: 'Wine Box',
           namespace_id: 'vinery:wine_box',
-          subtitle: 'A compact storage and decoration option for smaller wines.',
+          subtitle: 'A gift box for a single small bottle.',
           icon: '/assets/icons/vinery/wine_box.webp',
-          search: 'wine box storage decoration smaller wines',
+          search: 'wine box gift bottle open close',
           details: true,
-          detailsTitle: 'Usage',
-          detailsText: `The Wine Box can be opened and closed to access its contents.`,
+          detailsText: `Sneak and right click with an empty hand to open or close the lid. While it is open, right click with a small wine bottle to put it in.`,
           detailsBullets: [
-            'Shift right-click to open and close',
-            'Compact storage for smaller wines',
-            'Decorative block for cellars and storage rooms'
+            'Holds one small bottle',
+            'Sneak + right click opens and closes the lid'
           ]
+        },
+        {
+          id: 'storage_pot',
+          title: 'Storage Pot',
+          namespace_id: 'vinery:storage_pot',
+          subtitle: 'A wooden pot with room for your supplies.',
+          icon: '/assets/icons/vinery/storage_pot.webp',
+          search: 'storage pot container'
+        },
+        {
+          id: 'stackable_log',
+          title: 'Stackable Log',
+          namespace_id: 'vinery:stackable_log',
+          subtitle: 'Stack two and light them up for a cosy log fire.',
+          icon: '/assets/icons/vinery/stackable_log.webp',
+          search: 'stackable log fire flint and steel shovel campfire light',
+          details: true,
+          detailsText: `Place a second log on top to make a full stack. A full stack can be lit with Flint and Steel and gives off light. A shovel puts the fire out.`
         },
         {
           id: 'vinery_slabs',
           title: 'Vineyard Slabs',
-          subtitle: 'Terrain slabs used for vineyard paths and tiered fields.',
+          subtitle: 'Grass, dirt and path slabs for terraced vineyards.',
           icon: '/assets/icons/vinery/dirt_slab.webp',
-          search: 'slabs grass dirt coarse dirt vineyard tier expand',
+          search: 'grass slab dirt slab coarse dirt slab path slab vineyard terrace',
           details: true,
-          detailsTitle: 'Usage',
-          detailsText: `Vinery offers multiple slabs for building vineyards and paths, including Grass, Dirt, and Coarse Dirt.`,
-          detailsBullets: ['Grass slab', 'Dirt slab', 'Coarse dirt slab'],
+          detailsText: `Half-height ground blocks for gentle slopes and terraces. Grass spreads onto Dirt Slabs just like on normal dirt, and a shovel turns a Grass Slab into a Dirt Path Slab.`,
           items: [
-            {
-              id: 'vineyard_grass_slab',
-              title: 'Grass Slab',
-              namespace_id: 'vinery:grass_slab',
-              subtitle: '',
-              icon: '/assets/icons/vinery/grass_slab.webp',
-              search: 'grass slab vineyard'
-            },
-            {
-              id: 'vineyard_dirt_slab',
-              title: 'Dirt Slab',
-              namespace_id: 'vinery:dirt_slab',
-              subtitle: '',
-              icon: '/assets/icons/vinery/dirt_slab.webp',
-              search: 'dirt slab vineyard'
-            },
-            {
-              id: 'vineyard_coarse_dirt_slab',
-              title: 'Coarse Dirt Slab',
-              namespace_id: 'vinery:coarse_dirt_slab',
-              subtitle: '',
-              icon: '/assets/icons/vinery/coarse_dirt_slab.webp',
-              search: 'coarse dirt slab vineyard'
-            }
+            { id: 'vineyard_grass_slab', title: 'Grass Slab', namespace_id: 'vinery:grass_slab', icon: '/assets/icons/vinery/grass_slab.webp' },
+            { id: 'vineyard_dirt_slab', title: 'Dirt Slab', namespace_id: 'vinery:dirt_slab', icon: '/assets/icons/vinery/dirt_slab.webp' },
+            { id: 'vineyard_coarse_dirt_slab', title: 'Coarse Dirt Slab', namespace_id: 'vinery:coarse_dirt_slab', icon: '/assets/icons/vinery/coarse_dirt_slab.webp' },
+            { id: 'vineyard_dirt_path_slab', title: 'Dirt Path Slab', namespace_id: 'vinery:dirt_path_slab', icon: '/assets/icons/vinery/dirt_path_slab.webp' }
           ]
+        },
+        {
+          id: 'dark_cherry_wood',
+          title: 'Dark Cherry Wood',
+          namespace_id: 'vinery:dark_cherry_planks',
+          subtitle: 'A dark red wood set with matching tavern furniture.',
+          search: 'dark cherry wood planks log floorboard beam chair table big table cabinet drawer shelf barrel boat',
+          details: true,
+          detailsText: `Dark Cherry trees give a full wood set: logs, planks, stairs, slabs, doors, trapdoors, fences, signs and boats, plus Floorboards and a Beam.
+
+The matching furniture includes a chair, a table, a big table, a cabinet, a drawer, a shelf and a barrel.`
         }
       ]
     },
-
     {
       id: 'items',
       title: 'Items, Ingredients, and Tools',
-      subtitle: 'Everyday items, ingredients, and tools used across winemaking, farming, and processing.',
+      subtitle: 'Juices, bottles and the winemaker outfit.',
       entries: [
         {
           id: 'stem',
-          title: 'Stem',
+          title: 'Grapevine Stem',
           namespace_id: 'vinery:grapevine_stem',
-          subtitle: 'Required to cultivate normal, taiga, and savanna grapes.',
+          subtitle: 'A two-block stem for growing grapes in neat rows.',
           icon: '/assets/icons/vinery/grapevine_stem.webp',
-          search: 'stem required cultivate normal taiga savanna grapes two blocks high click upper part seeds',
+          search: 'grapevine stem grape seeds plant two blocks shears',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Stem is required to cultivate normal, taiga, and savanna grapes.
+          detailsText: `Place a stem while holding at least two and it grows two blocks tall. Right click the upper part with grape seeds to plant them. Ripe grapes are harvested with a right click, and shears remove the plant and give the seeds back.
 
-It is two blocks high. To place the respective seeds, click the upper part while holding the seeds.`,
+Red and White Grapes slowly grow leaves over the stem as well. All grapes except Jungle Grapes grow on stems.`,
           detailsBullets: [
-            'Required for grape cultivation',
-            'Two blocks high',
-            'Plant seeds by clicking the upper part'
+            'Two blocks tall',
+            'Plant seeds on the upper part',
+            'Right click to harvest ripe grapes',
+            'Shears remove the plant'
           ]
         },
         {
           id: 'grape_juice',
           title: 'Grape Juice',
-          subtitle: 'Processing ingredient used for wine production.',
+          subtitle: 'Fresh from the Grapevine Pot, ready for the barrel.',
           icon: '/assets/icons/vinery/red_grapejuice.webp',
-          search: 'grape juice ingredient fermentation barrel wine production red white savanna taiga jungle',
+          search: 'grape juice red white savanna taiga jungle grapejuice',
           details: true,
-          detailsTitle: 'Variants',
-          detailsText: ``,
+          detailsText: `There is a red and a white juice for each grape family. Each wine needs one specific juice.`,
           items: [
-            {
-              id: 'red_grapejuice',
-              title: 'Red Grape Juice',
-              subtitle: '',
-              icon: '/assets/icons/vinery/red_grapejuice.webp',
-              search: 'red grape juice'
-            },
-            {
-              id: 'white_grapejuice',
-              title: 'White Grape Juice',
-              subtitle: '',
-              icon: '/assets/icons/vinery/white_grapejuice.webp',
-              search: 'white grape juice'
-            },
-            {
-              id: 'red_savanna_grapejuice',
-              title: 'Red Savanna Grape Juice',
-              subtitle: '',
-              icon: '/assets/icons/vinery/red_savanna_grapejuice.webp',
-              search: 'red savanna grape juice'
-            },
-            {
-              id: 'white_savanna_grapejuice',
-              title: 'White Savanna Grape Juice',
-              subtitle: '',
-              icon: '/assets/icons/vinery/white_savanna_grapejuice.webp',
-              search: 'white savanna grape juice'
-            },
-            {
-              id: 'red_taiga_grapejuice',
-              title: 'Red Taiga Grape Juice',
-              subtitle: '',
-              icon: '/assets/icons/vinery/red_taiga_grapejuice.webp',
-              search: 'red taiga grape juice'
-            },
-            {
-              id: 'white_taiga_grapejuice',
-              title: 'White Taiga Grape Juice',
-              subtitle: '',
-              icon: '/assets/icons/vinery/white_taiga_grapejuice.webp',
-              search: 'white taiga grape juice'
-            },
-            {
-              id: 'red_jungle_grapejuice',
-              title: 'Red Jungle Grape Juice',
-              subtitle: '',
-              icon: '/assets/icons/vinery/red_jungle_grapejuice.webp',
-              search: 'red jungle grape juice'
-            },
-            {
-              id: 'white_jungle_grapejuice',
-              title: 'White Jungle Grape Juice',
-              subtitle: '',
-              icon: '/assets/icons/vinery/white_jungle_grapejuice.webp',
-              search: 'white jungle grape juice'
-            }
+            { id: 'red_grapejuice', title: 'Red Grapejuice', namespace_id: 'vinery:red_grapejuice', icon: '/assets/icons/vinery/red_grapejuice.webp' },
+            { id: 'white_grapejuice', title: 'White Grapejuice', namespace_id: 'vinery:white_grapejuice', icon: '/assets/icons/vinery/white_grapejuice.webp' },
+            { id: 'red_savanna_grapejuice', title: 'Red Savanna Grapejuice', namespace_id: 'vinery:red_savanna_grapejuice', icon: '/assets/icons/vinery/red_savanna_grapejuice.webp' },
+            { id: 'white_savanna_grapejuice', title: 'White Savanna Grapejuice', namespace_id: 'vinery:white_savanna_grapejuice', icon: '/assets/icons/vinery/white_savanna_grapejuice.webp' },
+            { id: 'red_taiga_grapejuice', title: 'Red Taiga Grapejuice', namespace_id: 'vinery:red_taiga_grapejuice', icon: '/assets/icons/vinery/red_taiga_grapejuice.webp' },
+            { id: 'white_taiga_grapejuice', title: 'White Taiga Grapejuice', namespace_id: 'vinery:white_taiga_grapejuice', icon: '/assets/icons/vinery/white_taiga_grapejuice.webp' },
+            { id: 'red_jungle_grapejuice', title: 'Red Jungle Grapejuice', namespace_id: 'vinery:red_jungle_grapejuice', icon: '/assets/icons/vinery/red_jungle_grapejuice.webp' },
+            { id: 'white_jungle_grapejuice', title: 'White Jungle Grapejuice', namespace_id: 'vinery:white_jungle_grapejuice', icon: '/assets/icons/vinery/white_jungle_grapejuice.webp' }
           ]
         },
         {
           id: 'apple_juice',
           title: 'Apple Juice',
           namespace_id: 'vinery:apple_juice',
-          subtitle: 'Processing ingredient used for apple-based recipes.',
+          subtitle: 'The base for Cider, Apple Wine and Mead.',
           icon: '/assets/icons/vinery/apple_juice.webp',
-          search: 'apple juice ingredient apple press fermenting wine production',
+          search: 'apple juice apple press cider apple wine mead',
           details: true,
-          detailsTitle: 'Usage',
-          detailsText: `Apple Juice is used as an ingredient for apple-based fermentation recipes.`,
-          detailsBullets: ['Ingredient for apple fermentation']
+          detailsText: `Made from [[Apple Mash|apple_mash]] in the [[Apple Press|apple_press]]. Pour it into the [[Fermentation Barrel|fermentation_barrel]] like grape juice.`
         },
         {
           id: 'wine_bottle',
           title: 'Wine Bottle',
           namespace_id: 'vinery:wine_bottle',
-          subtitle: 'A crafting ingredient used for bottling wines and juices.',
+          subtitle: 'The empty bottle for juice and wine. Every emptied wine gives it back.',
           icon: '/assets/icons/vinery/wine_bottle.webp',
-          search: 'wine bottle crafting ingredient bottling wines juices'
+          search: 'wine bottle empty glass'
         },
         {
           id: 'apple_mash',
           title: 'Apple Mash',
           namespace_id: 'vinery:apple_mash',
-          subtitle: 'A crafting ingredient used for making apple-based juices and wines.',
+          subtitle: 'Mashed apples, the first step towards Apple Juice.',
           icon: '/assets/icons/vinery/apple_mash.webp',
-          search: 'apple mash crafting ingredient apple press apples juice wine',
+          search: 'apple mash apple press',
           details: true,
-          detailsTitle: 'How to obtain',
-          detailsText: `Apple Mash is obtained using the Apple Press.`,
-          detailsBullets: ['Obtained from the Apple Press', 'Used as a crafting ingredient for juices and wines']
+          detailsText: `The [[Apple Press|apple_press]] makes it from apples and turns it into [[Apple Juice|apple_juice]] in the second step.`
         },
         {
           id: 'winemaker_armor',
           title: 'Winemaker Armor',
-          subtitle: 'Armor set designed for grape cultivation with a full set bonus.',
+          subtitle: 'The full outfit saves you Bone Meal.',
           icon: '/assets/icons/vinery/straw_hat.webp',
-          search: 'winemaker armor set bonus bone meal not consumed durability loss',
+          search: 'winemaker armor straw hat apron leggings boots bone meal set bonus',
           details: true,
-          detailsTitle: 'Usage',
-          detailsText: `When wearing the full Winemaker Armor Set, you gain a set bonus that prevents bone meal from being consumed.
-
-Instead, the armor loses durability in exchange.`,
-          detailsBullets: ['Full set bonus prevents bone meal consumption', 'Armor loses durability instead'],
+          detailsText: `While you wear all four pieces, Bone Meal is not used up. Instead, each armor piece loses a little durability every time.`,
+          detailsBullets: [
+            'Full set: Bone Meal is not consumed',
+            'Each use costs the armor some durability'
+          ],
           items: [
-            {
-              id: 'winemaker_helmet',
-              title: 'Straw Hat',
-              icon: '/assets/icons/vinery/straw_hat.webp',
-              search: 'winemaker hat helmet armor'
-            },
-            {
-              id: 'winemaker_chestplate',
-              title: 'Winemaker Apron',
-              icon: '/assets/icons/vinery/winemaker_apron.webp',
-              search: 'winemaker jacket chestplate armor'
-            },
-            {
-              id: 'winemaker_leggings',
-              title: 'Winemaker Leggings',
-              icon: '/assets/icons/vinery/winemaker_leggings.webp',
-              search: 'winemaker pants leggings armor'
-            },
-            {
-              id: 'winemaker_boots',
-              title: 'Winemaker Boots',
-              icon: '/assets/icons/vinery/winemaker_boots.webp',
-              search: 'winemaker boots armor'
-            }
+            { id: 'winemaker_helmet', title: 'Straw Hat', namespace_id: 'vinery:straw_hat', icon: '/assets/icons/vinery/straw_hat.webp' },
+            { id: 'winemaker_chestplate', title: 'Winemaker Apron', namespace_id: 'vinery:winemaker_apron', icon: '/assets/icons/vinery/winemaker_apron.webp' },
+            { id: 'winemaker_leggings', title: 'Winemaker Leggings', namespace_id: 'vinery:winemaker_leggings', icon: '/assets/icons/vinery/winemaker_leggings.webp' },
+            { id: 'winemaker_boots', title: 'Winemaker Boots', namespace_id: 'vinery:winemaker_boots', icon: '/assets/icons/vinery/winemaker_boots.webp' }
           ]
         },
         {
           id: 'completionist_banner',
           title: 'Completionist Banner',
-          namespace_id: 'vinery:completionist_banner',
-          subtitle: 'A trophy banner unlocked by crafting every Vinery wine at least once.',
+          namespace_id: 'vinery:vinery_standard',
+          subtitle: 'The reward for collecting every wine.',
           icon: '/assets/icons/vinery/vinery_standard.webp',
-          search: 'completionist banner craft all wines advancement inventory same time trophy thank you tooltip',
+          search: 'completionist banner wine sommelier advancement regeneration smithing',
           details: true,
-          detailsTitle: 'Reward',
-          detailsText: `The Completionist Banner is a special trophy for true Vinery completionists.
+          detailsText: `Have every Vinery wine in your inventory at the same time to complete the advancement "Wine Sommelier". You get two Completionist Banners and a good amount of experience.
 
-You unlock it by crafting every Vinery wine at least once. To trigger the advancement, you must have all wines in your inventory at the same time.
-
-When tooltips are enabled, the banner also shows a small thank you message in its tooltip.`,
+When placed, the banner gives Regeneration II to all players within 8 blocks. More copies can be made at the Smithing Table with a Netherite Upgrade and a Netherite Ingot.`,
           detailsBullets: [
-            'Reward for crafting every Vinery wine at least once',
-            'Advancement requires all wines in your inventory at the same time',
-            'Displays a thank you tooltip message when tooltips are enabled',
-            'Placeable trophy banner for builds'
+            'Reward for collecting all wines',
+            'Regeneration II within 8 blocks',
+            'Can be copied at the Smithing Table'
           ]
         }
       ]
     },
-
     {
       id: 'consumables',
       title: 'Consumables',
-      subtitle: 'Meals, drinks, soups, and other consumable food items.',
+      subtitle: 'Fruit and, of course, wine.',
       entries: [
         {
           id: 'cherry',
           title: 'Cherry',
           namespace_id: 'vinery:cherry',
-          subtitle: 'Fresh fruit harvested from cherry trees.',
+          subtitle: 'A sweet snack picked from Dark Cherry leaves, and an ingredient for several wines.',
           icon: '/assets/icons/vinery/cherry.webp',
-          search: 'cherry fruit harvest tree leaves empty hand'
+          search: 'cherry fruit dark cherry tree'
         },
         {
           id: 'rotten_cherry',
           title: 'Rotten Cherry',
           namespace_id: 'vinery:rotten_cherry',
-          subtitle: 'An unpleasant cherry with a small chance to drop during harvesting.',
+          subtitle: 'Not for eating, but great for throwing at friends.',
           icon: '/assets/icons/vinery/rotten_cherry.webp',
-          search: 'rotten cherry harvest chance throw at creatures friends',
-          details: true,
-          detailsTitle: 'Usage',
-          detailsText: `Rotten Cherry has a small chance to drop when harvesting cherries.
-
-It is not meant to be eaten. It can be thrown at unwanted creatures or friends.`,
-          detailsBullets: ['Rare harvest outcome', 'Not meant for eating', 'Throwable item']
+          search: 'rotten cherry throw'
         },
         {
           id: 'wine',
           title: 'Wine',
-          subtitle: 'A wide selection of wines with unique effects.',
+          subtitle: 'Over two dozen wines, each with its own effect.',
           icon: '/assets/icons/vinery/cristel_wine.webp',
-          search: 'wine effects drink placeable aging bottle',
+          search: 'wine effects drink placeable aging bottle age year',
+          details: true,
+          detailsTitle: 'Drinking, placing and aging',
+          detailsText: `Every wine is made in the [[Fermentation Barrel|fermentation_barrel]] from one specific juice plus a few ingredients. Drink it for its effect, or sneak and right click to place the bottle as decoration.
+
+Wine gets better with age. A fresh bottle's effect lasts 90 seconds. Every in-game year (24 days) adds 10 seconds, and every six years raises the effect by one level, up to level V. The tooltip shows the age and how many days are left until the next level. Chorus Wine, Creeper's Crush and Mellohi Wine are instant and do not age.
+
+Each item below lists its effect, the juice and the extra ingredients.`,
+          detailsBullets: [
+            'Sneak + right click to place',
+            'Fresh: 90 seconds of effect',
+            '+10 seconds per year (24 in-game days)',
+            '+1 effect level every 6 years, up to V'
+          ],
           items: [
-            {
-              id: 'apple_cider',
-              title: 'Apple Cider',
-              subtitle: '',
-              icon: '/assets/icons/vinery/apple_cider.webp',
-              search: 'apple cider wine'
-            },
-            {
-              id: 'apple_wine',
-              title: 'Apple Wine',
-              subtitle: '',
-              icon: '/assets/icons/vinery/apple_wine.webp',
-              search: 'apple wine'
-            },
-            { id: 'mead', title: 'Mead', subtitle: '', icon: '/assets/icons/vinery/mead.webp', search: 'mead' },
-            {
-              id: 'glowing_wine',
-              title: 'Glowing Wine',
-              subtitle: '',
-              icon: '/assets/icons/vinery/glowing_wine.webp',
-              search: 'glowing wine'
-            },
-            {
-              id: 'solaris_wine',
-              title: 'Solaris Wine',
-              subtitle: '',
-              icon: '/assets/icons/vinery/solaris_wine.webp',
-              search: 'solaris wine'
-            },
-            {
-              id: 'kelp_cider',
-              title: 'Kelp Cider',
-              subtitle: '',
-              icon: '/assets/icons/vinery/kelp_cider.webp',
-              search: 'kelp cider'
-            },
-            {
-              id: 'eiswein',
-              title: 'Eiswein',
-              subtitle: '',
-              icon: '/assets/icons/vinery/eiswein.webp',
-              search: 'eiswein'
-            },
-            {
-              id: 'aegis_wine',
-              title: 'Aegis Wine',
-              subtitle: '',
-              icon: '/assets/icons/vinery/aegis_wine.webp',
-              search: 'aegis wine'
-            },
-            {
-              id: 'villagers_fright',
-              title: "Villager's Fright",
-              subtitle: '',
-              icon: '/assets/icons/vinery/villagers_fright.webp',
-              search: 'villagers fright'
-            },
-            {
-              id: 'clark_wine',
-              title: 'Clark Wine',
-              subtitle: '',
-              icon: '/assets/icons/vinery/clark_wine.webp',
-              search: 'clark wine'
-            },
-            {
-              id: 'jellie_wine',
-              title: 'Jellie Wine',
-              subtitle: '',
-              icon: '/assets/icons/vinery/jellie_wine.webp',
-              search: 'jellie wine'
-            },
-            {
-              id: 'noir_wine',
-              title: 'Noir Wine',
-              subtitle: '',
-              icon: '/assets/icons/vinery/noir_wine.webp',
-              search: 'noir wine'
-            },
-            {
-              id: 'red_wine',
-              title: 'Red Wine',
-              subtitle: '',
-              icon: '/assets/icons/vinery/red_wine.webp',
-              search: 'red wine'
-            },
-            {
-              id: 'strad_wine',
-              title: 'Strad Wine',
-              subtitle: '',
-              icon: '/assets/icons/vinery/strad_wine.webp',
-              search: 'strad wine'
-            },
-            {
-              id: 'cherry_wine',
-              title: 'Cherry Wine',
-              subtitle: '',
-              icon: '/assets/icons/vinery/cherry_wine.webp',
-              search: 'cherry wine'
-            },
-            {
-              id: 'cristel_wine',
-              title: 'Cristel Wine',
-              subtitle: '',
-              icon: '/assets/icons/vinery/cristel_wine.webp',
-              search: 'cristel wine'
-            },
-            {
-              id: 'lilitu_wine',
-              title: 'Lilitu Wine',
-              subtitle: '',
-              icon: '/assets/icons/vinery/lilitu_wine.webp',
-              search: 'lilitu wine'
-            },
-            {
-              id: 'jo_special_mixture',
-              title: 'Jo Special Mixture',
-              subtitle: '',
-              icon: '/assets/icons/vinery/jo_special_mixture.webp',
-              search: 'jo special mixture'
-            },
-            {
-              id: 'bolvar_wine',
-              title: 'Bolvar Wine',
-              subtitle: '',
-              icon: '/assets/icons/vinery/bolvar_wine.webp',
-              search: 'bolvar wine'
-            },
-            {
-              id: 'magnetic_wine',
-              title: 'Magnetic Wine',
-              subtitle: '',
-              icon: '/assets/icons/vinery/magnetic_wine.webp',
-              search: 'magnetic wine'
-            },
-            {
-              id: 'stal_wine',
-              title: 'Stal Wine',
-              subtitle: '',
-              icon: '/assets/icons/vinery/stal_wine.webp',
-              search: 'stal wine'
-            },
-            {
-              id: 'chenet_wine',
-              title: 'Chenet Wine',
-              subtitle: '',
-              icon: '/assets/icons/vinery/chenet_wine.webp',
-              search: 'chenet wine'
-            },
-            {
-              id: 'bottle_mojang_noir',
-              title: 'Bottle Mojang Noir',
-              subtitle: '',
-              icon: '/assets/icons/vinery/bottle_mojang_noir.webp',
-              search: 'mojang noir bottle'
-            },
-            {
-              id: 'chorus_wine',
-              title: 'Chorus Wine',
-              subtitle: '',
-              icon: '/assets/icons/vinery/chorus_wine.webp',
-              search: 'chorus wine'
-            },
-            {
-              id: 'creepers_crush',
-              title: "Creeper's Crush",
-              subtitle: '',
-              icon: '/assets/icons/vinery/creepers_crush.webp',
-              search: 'creepers crush'
-            },
-            {
-              id: 'mellohi_wine',
-              title: 'Mellohi Wine',
-              subtitle: '',
-              icon: '/assets/icons/vinery/mellohi_wine.webp',
-              search: 'mellohi wine'
-            }
+            wine('apple_cider', 'Cider', 'Apple Juice + Sugar', 'Strength'),
+            wine('apple_wine', 'Apple Wine', 'Apple Juice + an Apple Juice bottle', 'Resistance'),
+            wine('mead', 'Mead', 'a splash of Apple Juice + Honey Bottle, Sugar', 'Haste'),
+            wine('glowing_wine', 'Sun-kissed Wine', 'White Grapejuice + Glow Berries', 'Glowing'),
+            wine('solaris_wine', 'Solaris Wine', 'White Grapejuice + Honey Bottle, Sweet Berries', 'Health Boost'),
+            wine('kelp_cider', 'Kelp Cider', 'White Savanna Grapejuice + Kelp', 'Water Walker'),
+            wine('eiswein', 'Eiswein', 'White Taiga Grapejuice + Snowball', 'Frosty Armor'),
+            wine('aegis_wine', 'Aegis Wine', 'White Taiga Grapejuice + Sugar, Kelp, Iron Ingot', 'Armor'),
+            wine('villagers_fright', "A Bottle of 'Villagers Fright'", 'White Jungle Grapejuice + Arrow', 'Bad Omen'),
+            wine('clark_wine', 'Clark Wine', 'White Jungle Grapejuice + Sugar', 'Double Jump'),
+            wine('jellie_wine', 'Jellie Wine', 'White Grapejuice + Apple Wine, Chenet Wine, Bolvar Wine', 'Better than Golden Apples'),
+            wine('noir_wine', 'Noir Wine', 'Red Grapejuice + Sweet Berries', 'Jump Boost'),
+            wine('red_wine', 'Red Wine', 'Red Grapejuice + Sugar', 'Slow Falling'),
+            wine('strad_wine', 'Strad Wine', 'Red Grapejuice + Cocoa Beans, Sugar', 'Night Vision'),
+            wine('cherry_wine', 'Cherry Wine', 'Red Grapejuice + Cherry', 'Invisibility'),
+            wine('cristel_wine', 'Cristel Wine', 'Red Grapejuice + Sugar, Feather, Blaze Rod', 'Water Breathing'),
+            wine('lilitu_wine', 'Miss Lilitus Wine', 'Red Savanna Grapejuice + Honey Bottle, Cherry', 'Partystarter'),
+            wine('jo_special_mixture', "Jo's Special Mixture", 'Red Savanna Grapejuice + Fermented Spider Eye', 'Climbing'),
+            wine('bolvar_wine', 'Bolvar Wine', 'Red Taiga Grapejuice + Honey Bottle, Cherry', 'Lava Walker'),
+            wine('magnetic_wine', 'Magnetic Wine', 'Red Jungle Grapejuice + Iron Ingot', 'Magnet'),
+            wine('stal_wine', 'Stal Wine', 'Red Jungle Grapejuice + Cocoa Beans, Sugar', 'Health'),
+            wine('chenet_wine', 'Chenet Wine', 'Red Jungle Grapejuice + Spider Eye, Honey Bottle', 'Climbing'),
+            wine('bottle_mojang_noir', "A Bottle of 'Mojang Noir'", 'Red Grapejuice + Honey Bottle, Cherry, Red Wine', 'Experience'),
+            wine('chorus_wine', 'Chorus Wine', 'Red Taiga Grapejuice + Chorus Fruit', 'Teleport'),
+            wine('creepers_crush', "A Bottle of 'Creepers Crush'", 'White Savanna Grapejuice + Gunpowder', 'Explosion'),
+            wine('mellohi_wine', 'Mellohi Wine', 'White Grapejuice + Sugar, Glowstone Dust', 'Instant Health')
           ]
         }
       ]
     },
-
     {
       id: 'crops',
       title: 'Crops, Wild Plants, and Worldgen',
-      subtitle: 'Crops and plants found growing naturally in the world, ready to be harvested or cultivated.',
+      subtitle: 'What grows in the wild, and where.',
       entries: [
         {
           id: 'apple_cherry_trees',
           title: 'Apple and Cherry Trees',
-          subtitle: 'Fruit trees that generate naturally and can be harvested directly from their leaves.',
+          subtitle: 'Fruit trees you harvest straight from the leaves.',
           icon: '/assets/icons/vinery/apple_tree_sapling.webp',
-          search:
-            'apple tree cherry tree worldgen plains meadow sunflower plains fruit leaves harvest right click empty hand rotten cherry',
+          search: 'apple tree cherry tree dark cherry sapling fruit leaves harvest bone meal plains meadow',
           details: true,
-          detailsTitle: 'How it works',
-          detailsText: `Apple and Cherry Trees generate naturally in specific overworld biomes.
+          detailsText: `Apple trees and Dark Cherry trees grow in Plains, Sunflower Plains and Meadows. Their saplings can be planted anywhere.
 
-     Some leaf blocks are able to grow fruit over time. Fruit progresses through multiple growth stages and becomes harvestable at the final stage.
+Some of their leaves bear fruit. Over time the fruit ripens; once it is fully grown, right click the leaf with an empty hand to pick one to three apples or cherries. The leaf then starts over.
 
-     To harvest fruit, keep your main hand empty and right-click the leaf block that visually shows fruit. The fruit drops instantly and the leaf resets, allowing it to regrow fruit later.
-
-     For apple trees, not every leaf can grow fruit. Some leaves are marked when generated or placed and are eligible for fruit growth. Bone meal can enable fruit growth on a leaf and speed up its growth stages.
-
-     Cherry leaves behave similarly, but only cherry leaves can drop rotten cherries.`,
+Bone Meal speeds up ripening and can even make a leaf start bearing fruit.`,
           detailsBullets: [
-            'Generates naturally in the following biomes:',
-            'Plains, Meadow, Sunflower Plains',
-            'Fruit grows directly on specific leaf blocks',
-            'Harvest with empty main hand by right-clicking fruit leaves',
-            'Leaves reset after harvesting and can regrow fruit',
-            'Bone meal can enable and speed up fruit growth',
-            'Small chance to obtain a rotten cherry from cherry leaves'
+            'Plains, Sunflower Plains and Meadow',
+            'Only some leaves bear fruit',
+            'Right click ripe leaves with an empty hand',
+            'Bone Meal speeds things up'
+          ],
+          items: [
+            { id: 'apple_tree_sapling', title: 'Apple Tree Sapling', namespace_id: 'vinery:apple_tree_sapling', icon: '/assets/icons/vinery/apple_tree_sapling.webp' },
+            { id: 'dark_cherry_sapling', title: 'Dark Cherry Sapling', namespace_id: 'vinery:dark_cherry_sapling', icon: '/assets/icons/vinery/dark_cherry_sapling.webp' }
           ]
         },
         {
           id: 'grapes',
           title: 'Grapes',
-          subtitle: 'Wild and cultivated grape varieties found across different overworld biomes.',
+          subtitle: 'Four grape families in red and white, each from its own biomes.',
           icon: '/assets/icons/vinery/red_grape.webp',
-          search:
-            'grapes worldgen forest plains swamp birch forest meadow sunflower plains river taiga savanna jungle red white lattice stems bushes',
+          search: 'grapes red white savanna taiga jungle seeds bush forest plains river swamp meadow badlands',
           details: true,
-          detailsTitle: 'How it works',
-          detailsText: `Vinery adds several grape variants that generate naturally in the overworld.
+          detailsText: `Wild grape bushes grow across the Overworld. Right click a ripe bush to pick grapes. Grape seeds can be planted as a new bush on any solid block, on a [[Grapevine Stem|stem]] or, for Jungle Grapes, on a [[Lattice|lattice]].
 
-Common grapes can be found in Forest, Plains, Swamp, Birch Forest, Meadow, Sunflower Plains, and River biomes.
-
-Taiga Grapes generate in taiga biomes and are rarer than common grapes.
-Savanna Grapes generate in savanna biomes and are very rare.
-Jungle Grapes generate in jungle biomes and are relatively common.
-
-Grape seeds can either be planted as grape bushes or grown on grapevine stems. Savanna grapes require lattice blocks to grow properly.`,
+Bushes need daylight to grow; Savanna Grapes want full sun. Foxes like grapes just as much as sweet berries.`,
           detailsBullets: [
-            'Common grapes generate in Forest, Plains, Swamp, Birch Forest, Meadow, Sunflower Plains, and River biomes',
-            'Taiga grapes generate in taiga biomes and are rare',
-            'Savanna grapes generate in savanna biomes and are very rare',
-            'Jungle grapes generate in jungle biomes and are common',
-            'Seeds can be planted as grape bushes or on grapevine stems',
-            'Savanna grapes require lattice blocks for cultivation'
+            'Red and White Grapes: forests, plains, rivers, swamps, meadows and mountains',
+            'Taiga Grapes: taigas and mountains',
+            'Savanna Grapes: savannas and Wooded Badlands',
+            'Jungle Grapes: jungles and Wooded Badlands, grow only on lattices'
           ],
           items: [
-            {
-              id: 'red_grape',
-              title: 'Red Grape',
-              subtitle: '',
-              icon: '/assets/icons/vinery/red_grape.webp',
-              search: 'red grape'
-            },
-            {
-              id: 'white_grape',
-              title: 'White Grape',
-              subtitle: '',
-              icon: '/assets/icons/vinery/white_grape.webp',
-              search: 'white grape'
-            },
-            {
-              id: 'savanna_grapes_red',
-              title: 'Savanna Red Grapes',
-              subtitle: '',
-              icon: '/assets/icons/vinery/savanna_grapes_red.webp',
-              search: 'savanna red grapes'
-            },
-            {
-              id: 'savanna_grapes_white',
-              title: 'Savanna White Grapes',
-              subtitle: '',
-              icon: '/assets/icons/vinery/savanna_grapes_white.webp',
-              search: 'savanna white grapes'
-            },
-            {
-              id: 'taiga_grapes_red',
-              title: 'Taiga Red Grapes',
-              subtitle: '',
-              icon: '/assets/icons/vinery/taiga_grapes_red.webp',
-              search: 'taiga red grapes'
-            },
-            {
-              id: 'taiga_grapes_white',
-              title: 'Taiga White Grapes',
-              subtitle: '',
-              icon: '/assets/icons/vinery/taiga_grapes_white.webp',
-              search: 'taiga white grapes'
-            },
-            {
-              id: 'jungle_grapes_red',
-              title: 'Jungle Red Grapes',
-              subtitle: '',
-              icon: '/assets/icons/vinery/jungle_grapes_red.webp',
-              search: 'jungle red grapes'
-            },
-            {
-              id: 'jungle_grapes_white',
-              title: 'Jungle White Grapes',
-              subtitle: '',
-              icon: '/assets/icons/vinery/jungle_grapes_white.webp',
-              search: 'jungle white grapes'
-            }
+            { id: 'red_grape', title: 'Red Grape', namespace_id: 'vinery:red_grape', icon: '/assets/icons/vinery/red_grape.webp' },
+            { id: 'white_grape', title: 'White Grape', namespace_id: 'vinery:white_grape', icon: '/assets/icons/vinery/white_grape.webp' },
+            { id: 'savanna_grapes_red', title: 'Red Savanna Grapes', namespace_id: 'vinery:savanna_grapes_red', icon: '/assets/icons/vinery/savanna_grapes_red.webp' },
+            { id: 'savanna_grapes_white', title: 'White Savanna Grapes', namespace_id: 'vinery:savanna_grapes_white', icon: '/assets/icons/vinery/savanna_grapes_white.webp' },
+            { id: 'taiga_grapes_red', title: 'Red Taiga Grapes', namespace_id: 'vinery:taiga_grapes_red', icon: '/assets/icons/vinery/taiga_grapes_red.webp' },
+            { id: 'taiga_grapes_white', title: 'White Taiga Grapes', namespace_id: 'vinery:taiga_grapes_white', icon: '/assets/icons/vinery/taiga_grapes_white.webp' },
+            { id: 'jungle_grapes_red', title: 'Red Jungle Grapes', namespace_id: 'vinery:jungle_grapes_red', icon: '/assets/icons/vinery/jungle_grapes_red.webp' },
+            { id: 'jungle_grapes_white', title: 'White Jungle Grapes', namespace_id: 'vinery:jungle_grapes_white', icon: '/assets/icons/vinery/jungle_grapes_white.webp' }
           ]
         }
       ]
     },
-
     {
       id: 'entities',
       title: 'Entities',
-      subtitle: 'New entities that find their way into your world through Vinery.',
+      subtitle: 'A travelling wine merchant and a new villager.',
       entries: [
         {
           id: 'wandering_winemaker',
           title: 'Wandering Winemaker',
           namespace_id: 'vinery:wandering_winemaker',
-          subtitle: 'A trader that can offer Vinery items in exchange for emeralds.',
+          subtitle: 'A travelling merchant with seeds, saplings and juice.',
           icon: '/assets/icons/vinery/entity/wandering_winemaker.webp',
-          search:
-            'wandering winemaker trader spawn chance shares with wandering trader offers vinery items emeralds config',
+          search: 'wandering winemaker trader seeds saplings juice emeralds mules',
           details: true,
-          detailsTitle: 'Usage',
-          detailsText: `Having trouble finding specific seeds or grapes? Keep an eye out for the Wandering Winemaker.
+          detailsText: `Whenever a Wandering Trader would show up, there is a chance the Wandering Winemaker comes instead, usually with two [[Mules|winemaker_donkey]] in tow.
 
-He can appear from time to time and offers Vinery items in exchange for emeralds. His offers vary each visit.
-
-The Wandering Winemaker shares the spawn chance with the Minecraft Wandering Trader. This can be adjusted in the config.`,
+He sells grape seeds of every kind, apple and cherry saplings, grapes, juices, vineyard slabs, Dark Cherry Planks and Cherry Wine. Each visit he picks eight of these offers.`,
           detailsBullets: [
-            'Offers Vinery items for emeralds',
-            'Offers vary each visit',
-            'Shares spawn chance with Wandering Trader',
-            'Spawn chance configurable'
+            'Replaces some Wandering Trader visits',
+            'Sells seeds, saplings, juice and more',
+            'Eight random offers per visit',
+            'Spawn chance adjustable in the config'
           ]
         },
         {
           id: 'winemaker_villager',
-          title: 'Winemaker Villager',
+          title: 'Winemaker',
           namespace_id: 'vinery:winemaker',
-          subtitle: 'A villager profession that sells Vinery items and uses the Apple Press as a workstation.',
+          subtitle: 'A villager profession that works at the Fermentation Barrel.',
           icon: '/assets/icons/vinery/entity/winemaker_villager.webp',
-          search: 'winemaker villager profession trades sells vinery items apple press workstation',
+          search: 'winemaker villager profession trades fermentation barrel',
           details: true,
-          detailsTitle: 'Usage',
-          detailsText: `The Winemaker Villager is a Vinery profession that sells Vinery items.
+          detailsText: `Place a [[Fermentation Barrel|fermentation_barrel]] near an unemployed villager to get a Winemaker.
 
-The Apple Press acts as the workstation for this profession.`,
-          detailsBullets: ['Vinery profession', 'Sells Vinery items', 'Apple Press is the workstation']
+Winemakers buy grapes and cherries and sell seeds, Wine Bottles, Apple Mash, fruit bags, the Grapevine Pot, the Wine Box, the winemaker outfit and more. All trades can be changed in the config.`
         },
         {
           id: 'winemaker_donkey',
-          title: 'Winemaker Donkey',
-          namespace_id: 'vinery:winemaker_donkey',
-          subtitle: 'A donkey that accompanies the Wandering Winemaker.',
+          title: 'Mule',
+          namespace_id: 'vinery:mule',
+          subtitle: 'The pack animal of the Wandering Winemaker.',
           icon: '/assets/icons/vinery/entity/winemaker_donkey.webp',
-          search: 'winemaker donkey entity vinery wandering winemaker rideable',
+          search: 'mule donkey wandering winemaker ride',
           details: true,
-          detailsTitle: 'Usage',
-          detailsText: `The Winemaker Donkey spawns together with the Wandering Winemaker.
-
-It behaves like a normal donkey and can be mounted and ridden by the player.`,
-          detailsBullets: ['Spawns alongside the Wandering Winemaker', 'Rideable like a normal donkey']
+          detailsText: `Two mules usually arrive on a lead with the [[Wandering Winemaker|wandering_winemaker]]. They can be ridden like normal mules.`
         }
       ]
     },
     {
       id: 'mob_effects',
       title: 'Mob Effects',
-      subtitle: 'Status effects granted by Vinery foods, wines, and interactions.',
+      subtitle: 'The effects behind the wines.',
       entries: [
         {
           id: 'teleport',
           title: 'Teleport',
-          subtitle: 'Teleports the player randomly forward.',
+          subtitle: 'Teleports you to a random safe spot nearby. From Chorus Wine.',
           icon: '/assets/icons/vinery/effects/teleport.webp',
-          search: 'teleport random forward'
+          search: 'teleport effect chorus wine'
         },
         {
           id: 'magnet',
           title: 'Magnet',
-          subtitle: 'Pulls nearby items towards the player.',
+          subtitle: 'Pulls nearby items towards you. Sneak to pause it. From Magnetic Wine.',
           icon: '/assets/icons/vinery/effects/magnet.webp',
-          search: 'magnet pull items radius'
+          search: 'magnet effect items pull magnetic wine'
         },
         {
           id: 'party_effect',
           title: 'Partystarter',
-          subtitle: 'Melee hits emit firework particles and deal a small amount of extra damage.',
+          subtitle: 'Your hits set off fireworks that deal extra damage. From Miss Lilitus Wine.',
           icon: '/assets/icons/vinery/effects/party_effect.webp',
-          search: 'party effect fireworks melee extra damage'
+          search: 'partystarter party effect fireworks lilitu'
         },
         {
           id: 'lava_walker',
           title: 'Lava Walker',
-          subtitle: 'Walk over lava without taking damage.',
+          subtitle: 'Walk on lava. From Bolvar Wine.',
           icon: '/assets/icons/vinery/effects/lava_walker.webp',
-          search: 'lava walker walk on lava'
+          search: 'lava walker effect bolvar wine'
         },
         {
           id: 'double_jump',
           title: 'Double Jump',
-          subtitle: 'Jump a second time while in the air.',
+          subtitle: 'Jump a second time in mid-air. From Clark Wine.',
           icon: '/assets/icons/vinery/effects/double_jump.webp',
-          search: 'double jump mid air'
+          search: 'double jump effect clark wine'
         },
         {
           id: 'jellie',
-          title: 'Jellie',
-          subtitle:
-            'A small tribute to Jellie, the beloved cat of GoodTimesWithScar. Grants comforting, powerful effects similar to a Golden Apple.',
+          title: 'Better than Golden Apples!',
+          subtitle: 'Heals you steadily and adds extra absorption hearts. A tribute to Jellie, the cat of GoodTimesWithScar. From Jellie Wine.',
           icon: '/assets/icons/vinery/effects/jellie.webp',
-          search: 'jellie GoodTimesWithScar tribute cat golden apple'
+          search: 'jellie effect golden apple absorption regeneration jellie wine'
         },
         {
           id: 'creeper_effect',
-          title: 'Creeper Effect',
-          subtitle: 'Triggers an explosion on the affected player.',
+          title: 'Explosion',
+          subtitle: 'Kaboom. You explode. From Creeper’s Crush, drink with care.',
           icon: '/assets/icons/vinery/effects/creeper_effect.webp',
-          search: 'creeper effect explosion'
+          search: 'explosion creeper effect creepers crush'
         },
         {
           id: 'experience_effect',
           title: 'Experience',
-          subtitle: 'Increases gained experience.',
+          subtitle: 'Experience orbs give you 25% more per effect level. From Mojang Noir.',
           icon: '/assets/icons/vinery/effects/experience_effect.webp',
-          search: 'experience effect increased gained xp'
+          search: 'experience effect xp bonus mojang noir'
         },
         {
           id: 'climbing_effect',
           title: 'Climbing',
-          subtitle: 'Lets you climb steep walls.',
+          subtitle: 'Climb up walls like a spider. From Jo’s Special Mixture and Chenet Wine.',
           icon: '/assets/icons/vinery/effects/climbing_effect.webp',
-          search: 'climbing effect climb walls'
+          search: 'climbing effect walls jo special mixture chenet'
         },
         {
           id: 'water_walker',
           title: 'Water Walker',
-          subtitle: 'Walk over water.',
+          subtitle: 'Walk on water. From Kelp Cider.',
           icon: '/assets/icons/vinery/effects/water_walker.webp',
-          search: 'water walker walk on water'
+          search: 'water walker effect kelp cider'
         },
-
         {
           id: 'armor_effect',
           title: 'Armor',
-          subtitle: 'Increases armor and armor toughness.',
+          subtitle: 'More armor and armor toughness. From Aegis Wine.',
           icon: '/assets/icons/vinery/effects/armor_effect.webp',
-          search: 'armor effect armor toughness'
+          search: 'armor effect toughness aegis wine'
         },
         {
           id: 'frosty_armor',
           title: 'Frosty Armor',
-          subtitle: 'Grants armor and damage, but slows you down and makes you freeze.',
+          subtitle: '+4 armor and +2 attack damage, but you move slower and start to freeze. From Eiswein.',
           icon: '/assets/icons/vinery/effects/frosty_armor.webp',
-          search: 'frosty armor effect freeze slow damage armor'
+          search: 'frosty armor effect freeze slow damage eiswein'
         },
         {
           id: 'health_effect',
-          title: 'Health',
-          subtitle: 'Increases maximum health.',
+          title: 'Health Effect',
+          subtitle: 'Raises your maximum health while it lasts. From Stal Wine.',
           icon: '/assets/icons/vinery/effects/health_effect.webp',
-          search: 'health effect increase max health'
+          search: 'health effect max health stal wine'
         },
         {
           id: 'luck_effect',
           title: 'Luck',
-          subtitle: 'Increases luck.',
+          subtitle: 'Increases luck. No Vinery wine gives this effect at the moment.',
           icon: '/assets/icons/vinery/effects/luck_effect.webp',
-          search: 'luck effect loot chance'
+          search: 'luck effect'
         },
         {
           id: 'resistance_effect',
           title: 'Resistance',
-          subtitle: 'Reduces incoming damage.',
+          subtitle: 'More armor toughness and damage resistance. No Vinery wine gives this effect at the moment.',
           icon: '/assets/icons/vinery/effects/resistance_effect.webp',
-          search: 'resistance effect reduce damage'
+          search: 'resistance effect'
         }
       ]
     },
     {
       id: 'misc_changes',
       title: 'Miscellaneous Changes & Features',
-      subtitle: 'Small but meaningful tweaks and additions that subtly enhance gameplay and atmosphere.',
+      subtitle: 'Settings and fruit storage.',
       entries: [
         {
           id: 'config',
           title: 'Configuration',
-          subtitle:
-            'Most Vinery features can be adjusted via a configuration file, usually located at `config/vinery.json`.',
+          subtitle: 'Fermentation time, growth chances, wine aging, villager trades and the Wandering Winemaker can all be adjusted.',
           icon: '/assets/icons/misc/config.webp',
-          search: 'config configuration settings options balance json vinery'
-        },
-        {
-          id: 'winemaker_zombies',
-          title: 'Winemaker Zombies',
-          subtitle: 'Sometimes zombies spawn wearing a winemaker apron.',
-          icon: '/assets/icons/misc/zombie.webp',
-          search: 'winemaker zombie vinery apron spawn'
+          search: 'config configuration settings fermentation time growth aging trades trader',
+          details: true,
+          detailsText: `The config file lets you change, among other things:`,
+          detailsBullets: [
+            'Fermentation time and barrel capacity',
+            'Apple Press mashing and fermenting time',
+            'Growth chances for grapes, apples and cherries',
+            'Wine aging: base duration, days per year, years per level, maximum level',
+            'All Winemaker trades',
+            'Spawn chance and mules of the Wandering Winemaker',
+            'Completionist Banner effect and tooltip'
+          ]
         },
         {
           id: 'loot',
-          title: 'Loot and Exploration',
-          subtitle: 'Certain items and ingredients can be found while exploring the world.',
+          title: 'Fruit Bags',
+          subtitle: 'Decorative sacks full of grapes, cherries or apples.',
           icon: '/assets/icons/misc/chest.webp',
-          search: 'loot chest dungeon village exploration items ingredients vinery',
+          search: 'grape bag cherry bag apple bag decoration storage block',
           details: true,
-          detailsTitle: 'Where to find loot',
-          detailsText: `Some items and ingredients can be found naturally while exploring the world.
-
-They may appear in various loot containers, such as village chests, dungeon chests, or other generated structures.`,
-          detailsBullets: [
-            'Items and ingredients can appear in loot chests',
-            'Found in villages, dungeons, and other structures',
-            'Encourages exploration alongside fermenting'
-          ]
+          detailsText: `Every grape type, cherries and apples come in a decorative bag block. The Winemaker sells some of them, and they are also crafted from the fruit.`
         }
       ]
     }
   ],
-    recipesCta: {
-      enabled: true,
-      title: "Recipes",
-      text: `Feeling a little lost and not sure how to craft certain things?
-
-    Here you will find a helpful overview of all Let’s Do crafting stations and their recipes.
-
-    `,
-      buttonLabel: "Open Recipe Overview",
-      href: "/recipes/"
-    },
+  recipesCta: {
+    enabled: true,
+    title: 'Recipes',
+    text: `Feeling a little lost and not sure how to craft certain things?
+Here you will find a helpful overview of all Let’s Do crafting stations and their recipes.`,
+    buttonLabel: 'Open Recipe Overview',
+    href: '/recipes/'
   }
-
+}

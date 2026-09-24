@@ -1,16 +1,14 @@
 export default {
   slug: 'pottery',
-  title: 'Lili’s Pottery',
+  title: 'Lili\'s Pottery',
   logo: '/assets/mod-logos/lilis_pottery.webp',
   aboutTitle: 'Welcome',
-  aboutSubtitle: 'Clay, fire and handcrafted pottery',
-  aboutText: `Welcome to the Pottery Wiki.
+  aboutSubtitle: 'Clay, fire and handmade pottery',
+  aboutText: `Lili's Pottery is about working with clay. Dig up coloured clay, shape it on the Pottery Table into pots, vases and urns, and fire it in the Kiln with the colours of your choice.
 
-This is your home for blocks, items, mechanics, and quick guidance for Pottery.
+Fill your pots with flowers, glaze them with honeycomb, build with coloured bricks, and carry an Urn with you to keep your belongings safe when you die.
 
-Pottery focuses on working with clay, shaping ceramic storage and decor, and firing finished pieces in dedicated stations. Color and dye modifiers can be used to tint finished pieces, and many pottery blocks support painted states for extra visual variety.
-
-`,
+The Clayworker villager trades clay and pottery, and Lili's Statue waits for everyone who collects it all.`,
   sections: [
     {
       id: 'stations',
@@ -21,53 +19,37 @@ Pottery focuses on working with clay, shaping ceramic storage and decor, and fir
           id: 'pottery_table',
           title: 'Pottery Table',
           namespace_id: 'lilis_pottery:pottery_table',
-          subtitle: 'A shaping Station for turning pottery inputs into finished pieces, with a recipe selection list.',
+          subtitle: 'Shapes clay into pots, vases and urns, like a Stonecutter for clay.',
           icon: '/assets/icons/pottery/pottery_table.webp',
           search:
             'pottery table shaping station pottering recipe selection scroll list stonecutter clay shaping output',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Pottery Table works similarly to other Crafting Stations.
+          detailsText: `Put clay into the Pottery Table and pick what you want to make from the list, just like with a Stonecutter. Take the result to use up the clay.
 
-It has one Input Slot and one Output Slot, and provides a recipe selection list based on the inserted Item.
-
-Recipes usually use Clay Balls as their input. Place a Clay Ball into the Input Slot to populate the recipe list. Select a recipe to preview the output, then take the finished Item from the Output Slot to consume the input and craft the result.
-
-The Interface behaves similarly to a Stonecutter: it shows a scrollable recipe grid, highlights the selected recipe, and plays a sound when taking the result.`,
+The Pottery Table is also the workstation of the [[Clayworker|clayworker]]. There is also Lili's Pottery Table, a fancier version.`,
           detailsBullets: [
-            'One Input Slot and one Output Slot',
-            'Recipes usually use Clay Balls as their input',
-            'Selecting a recipe updates the Output Slot',
-            'Crafting consumes one Input Item when taking the result',
-            'Recipe list is based on the inserted Item',
-            'Scrollable recipe selection grid',
-            'Plays a sound when taking the crafted result'
+            'One input slot and one output slot',
+            'Choose the shape from a list',
+            'Workstation of the Clayworker'
           ]
         },
         {
           id: 'kiln',
           title: 'Kiln',
           namespace_id: 'lilis_pottery:kiln',
-          subtitle: 'A hot firing kiln used to burn patterns and colors permanently into pottery.',
+          subtitle: 'Fires your pottery and burns colours into it for good.',
           icon: '/assets/icons/pottery/kiln.webp',
           search: 'kiln firing station fuel dye painted glaze preview pottery urn storage',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Kiln works similarly to other Crafting Stations.
+          detailsText: `Put a pottery piece in the base slot, a Dye in the modifier slot if you want to colour it, and fuel in the fuel slot. The menu shows a live preview of the result.
 
-It has one Base Input Slot, one Modifier Slot, one Fuel Slot, and one Output Slot.
-
-Place a valid pottery Base Block into the Base Slot, optionally add a Dye as a Modifier, then insert a valid Fuel Item to start the Firing Process. The Kiln will automatically consume fuel, process the recipe, and place the finished result into the Output Slot.
-
-While active, the Kiln lights up and plays furnace sounds. The Interface also shows a live Preview of the finished Block, including dye tinting and painted states.`,
+Fire a piece several times with different dyes to mix new shades. See [[Glazing and Coloring|glazing]].`,
           detailsBullets: [
-            'One Base Input Slot, one Modifier Slot, one Fuel Slot, and one Output Slot',
-            'Base Slot accepts pottery storage blocks and urns',
-            'Modifier Slot accepts Dyes to tint the result',
-            'Powered by any valid Fuel Item',
-            'Firing time depends on the selected recipe',
-            'Active State is shown by the lit Kiln and furnace sounds',
-            'Shows a live Preview of the finished Block in the Interface'
+            'Base slot, dye slot, fuel slot and output slot',
+            'Live preview of the finished piece',
+            'Fire again with another dye to mix colours'
           ]
         }
       ]
@@ -80,19 +62,16 @@ While active, the Kiln lights up and plays furnace sounds. The Interface also sh
         {
           id: 'clay_balls',
           title: 'Clay Balls',
-          subtitle: 'Colored clay pieces used as the base material for shaping pottery.',
+          subtitle: 'Coloured clay, the raw material for all pottery.',
           icon: '/assets/icons/pottery/red_clay_ball.webp',
           search: 'clay ball colored clay pottery red yellow white blue black',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Clay Balls are basic materials used throughout Pottery. They are obtained by breaking Clay Blocks found in the world.
-
-Different Clay Blocks yield differently colored Clay Balls, which are then used as the primary input for shaping pottery pieces at the Pottery Table.`,
+          detailsText: `Break the coloured [[clay deposits|red_clay]] to get Clay Balls in five colours. They are shaped on the [[Pottery Table|pottery_table]] and fired into Bricks.`,
           detailsBullets: [
-            'Obtained by breaking Clay Blocks',
-            'Available in multiple color variants',
-            'Used as the base material for pottery crafting',
-            'Primary input for the Pottery Table'
+            'Dropped by coloured clay',
+            'Red, yellow, white, blue and black',
+            'Shaped on the Pottery Table'
           ],
           items: [
             {
@@ -135,19 +114,16 @@ Different Clay Blocks yield differently colored Clay Balls, which are then used 
         {
           id: 'bricks',
           title: 'Bricks',
-          subtitle: 'Fired pottery materials created by smelting Clay Balls.',
+          subtitle: 'Clay Balls fired in a furnace.',
           icon: '/assets/icons/pottery/red_brick.webp',
           search: 'brick pottery fired clay red yellow white blue black furnace smelting',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Bricks are refined pottery materials created by smelting Clay Balls in a Furnace.
-
-Place any Clay Ball into a Furnace to fire it into a Brick of the corresponding color. Bricks are used as building materials and as crafting components for various pottery related blocks and decorations.`,
+          detailsText: `Smelt a Clay Ball in a Furnace to get a Brick of the same colour. Bricks are crafted into [[brick blocks|brick_blocks]].`,
           detailsBullets: [
-            'Obtained by smelting Clay Balls in a Furnace',
-            'Each Clay Ball produces a matching colored Brick',
-            'Used for crafting pottery blocks and decorative elements',
-            'Acts as a refined material step after Clay Balls'
+            'Smelt Clay Balls in a Furnace',
+            'Five colours',
+            'Used for brick blocks'
           ],
           items: [
             {
@@ -177,6 +153,12 @@ Place any Clay Ball into a Furnace to fire it into a Brick of the corresponding 
               namespace_id: 'lilis_pottery:blue_brick',
               icon: '/assets/icons/pottery/blue_brick.webp',
               search: 'blue brick pottery material'
+            },
+            {
+              id: 'black_brick',
+              title: 'Black Brick',
+              namespace_id: 'lilis_pottery:black_brick',
+              search: 'black brick pottery material'
             }
           ]
         }
@@ -190,20 +172,15 @@ Place any Clay Ball into a Furnace to fire it into a Brick of the corresponding 
         {
           id: 'small_flower_pots',
           title: 'Small Flower Pots',
-          subtitle: 'Compact pottery flower pots for small plants and details.',
+          subtitle: 'Small pots for single flowers.',
           icon: '/assets/icons/pottery/white_cupella.webp',
           search: 'small flower pot pottery decor',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Small Flower Pots are compact pottery pots made for single block Flowers and small plants.
-
-All Flowers tagged with #small_flowers can be placed inside.
-
-They are ideal for tables, shelves, and small decorative touches that make a space feel lived in.`,
+          detailsText: `Small pots take any small flower. They look great on tables, shelves and windowsills.`,
           detailsBullets: [
-            'Holds Flowers tagged with #small_flowers',
-            'Perfect for small decorative details',
-            'Available in multiple color variants'
+            'Hold small flowers',
+            'Plain or in five clay colours, and can be dyed in the Kiln'
           ],
           items: [
             {
@@ -241,20 +218,15 @@ They are ideal for tables, shelves, and small decorative touches that make a spa
         {
           id: 'large_flower_pots',
           title: 'Large Flower Pots',
-          subtitle: 'Tall pottery flower pots made for larger plants and statement pieces.',
+          subtitle: 'Large pots for tall flowers.',
           icon: '/assets/icons/pottery/white_square_pot.webp',
           search: 'large flower pot tall flowers two block high pottery decor',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Large Flower Pots are tall pottery pots made for two block high Flowers and similar plants.
-
-All Flowers tagged with #tall_flowers can be placed inside.
-
-They are perfect for filling open spaces, framing doorways, or simply adding a bit of height and character to your builds.`,
+          detailsText: `Large pots take two block tall flowers such as sunflowers, lilacs and peonies. Perfect next to doors and in corners.`,
           detailsBullets: [
-            'Holds Flowers tagged with #tall_flowers',
-            'Ideal for interiors, gardens, and entryways',
-            'Available in multiple color variants'
+            'Hold tall flowers',
+            'Plain or in five clay colours, and can be dyed in the Kiln'
           ],
           items: [
             {
@@ -274,23 +246,21 @@ They are perfect for filling open spaces, framing doorways, or simply adding a b
         {
           id: 'urns',
           title: 'Urns and Amphores',
-          subtitle: 'A special pottery piece that protects your belongings after death.',
+          subtitle: 'Carry an Urn and your belongings are safe when you die.',
           icon: '/assets/icons/pottery/blue_amphore.webp',
           search: 'urn amphore death storage grave pottery painted glazed honeycomb',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Urns are special pottery blocks with a unique purpose.
+          detailsText: `If you die with an Urn in your inventory, it is placed where you died and your whole inventory goes inside it. No scattered items, no despawning. Go back and collect everything from the Urn.
 
-When a player dies, their items are placed inside a nearby Urn, keeping them safe and neatly stored, as long as there is enough space. This turns the Urn into a calm recovery point instead of scattered drops.
+This does not happen when the keepInventory game rule is on.
 
-Like other pottery pieces, Urns can be painted and crafted in different colors. If a painted Urn is glazed using Honeycomb, it gains a soft glow and keeps its finished look.`,
+Urns and Amphores also work as storage and can be coloured and glazed like other pottery.`,
           detailsBullets: [
-            "Safely stores a player's items after death",
-            'Acts as a calm recovery point',
-            'Can be crafted in different colors',
-            'Can be painted',
-            'Painted Urns can be glazed with Honeycomb',
-            'Glazed Urns emit a subtle glow'
+            'Keep an Urn in your inventory',
+            'On death it is placed with all your items inside',
+            'Also works as storage',
+            'Can be coloured and glazed'
           ],
           items: [
             {
@@ -310,47 +280,44 @@ Like other pottery pieces, Urns can be painted and crafted in different colors. 
         {
           id: 'brick_blocks',
           title: 'Brick Blocks',
-          subtitle: 'Decorative building blocks for cozy walls, trims, and pottery themed builds.',
+          subtitle: 'Coloured bricks for walls and floors.',
           icon: '/assets/icons/pottery/red_bricks.webp',
           search: 'brick blocks wall stairs slabs decorative pottery building',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Brick Blocks are decorative building blocks crafted from Bricks.
-
-They come in Wall, Stair, and Slab variants.`,
+          detailsText: `Brick blocks come in the five clay colours, plus Handmade Bricks. Each has stairs, slabs, walls and a chiseled variant.`,
           detailsBullets: [
-            'Purely decorative building blocks',
-            'Available as Walls, Stairs, and Slabs',
-            'Crafted from matching Brick items'
+            'Five colours plus Handmade Bricks',
+            'Stairs, slabs, walls and chiseled blocks'
           ],
           items: [
             {
               id: 'red_bricks',
-              title: 'Red Brick Blocks',
+              title: 'Red Bricks',
               icon: '/assets/icons/pottery/red_bricks.webp',
               search: 'red brick blocks wall stair slab'
             },
             {
               id: 'yellow_bricks',
-              title: 'Yellow Brick Blocks',
+              title: 'Yellow Bricks',
               icon: '/assets/icons/pottery/yellow_bricks.webp',
               search: 'yellow brick blocks wall stair slab'
             },
             {
               id: 'white_bricks',
-              title: 'White Brick Blocks',
+              title: 'White Bricks',
               icon: '/assets/icons/pottery/white_bricks.webp',
               search: 'white brick blocks wall stair slab'
             },
             {
               id: 'blue_bricks',
-              title: 'Blue Brick Blocks',
+              title: 'Blue Bricks',
               icon: '/assets/icons/pottery/blue_bricks.webp',
               search: 'blue brick blocks wall stair slab'
             },
             {
               id: 'black_bricks',
-              title: 'Black Brick Blocks',
+              title: 'Black Bricks',
               icon: '/assets/icons/pottery/black_bricks.webp',
               search: 'black brick blocks wall stair slab'
             }
@@ -359,19 +326,16 @@ They come in Wall, Stair, and Slab variants.`,
         {
           id: 'lilis_statue',
           title: "Lili's Statue",
-          namespace_id: 'pottery:lilis_statue',
-          subtitle: 'A reward statue for completing all Pottery.',
+          namespace_id: 'lilis_pottery:lilis_statue',
+          subtitle: 'The reward for collecting all the pottery.',
           icon: '/assets/icons/pottery/lilis_statue.webp',
           search: 'completionist statue reward pottery all pots colors shapes firework interaction tooltip',
           details: true,
           detailsTitle: 'Function',
-          detailsText: `Lili's Statue is a unique reward for completing all Pottery currently available.
-
-When interacting with the top half of the statue, it launches a large celebratory firework show and displays the title "Lili's Pottery".`,
+          detailsText: `Collect all the pottery to receive Lili's Statue. Right click it to launch a firework that writes "Lili's Pottery" into the sky.`,
           detailsBullets: [
-            'Reward for completing all Pottery',
-            'Interact with the top half to trigger a large celebratory firework show',
-            'Displays the title "Lili\'s Pottery"'
+            'Reward for collecting all the pottery',
+            'Right click for a firework show with a message'
           ]
         }
       ]
@@ -379,13 +343,13 @@ When interacting with the top half of the statue, it launches a large celebrator
     {
       id: 'worldgen',
       title: 'Clay Deposits and Worldgen',
-      subtitle: 'Colored clay deposits found in the world, ready to be dug up and turned into pottery.',
+      subtitle: 'Where to dig up coloured clay.',
       entries: [
         {
           id: 'red_clay',
           title: 'Red Clay',
           namespace_id: 'lilis_pottery:red_clay',
-          subtitle: 'Warm red clay that feels right at home in rugged landscapes and riverbeds.',
+          subtitle: 'Warm red clay from the badlands and riverbeds.',
           icon: '/assets/icons/pottery/red_clay.webp',
           search: 'red clay badlands eroded wooded badlands river swamp mangrove swamp',
           details: true,
@@ -406,7 +370,7 @@ When interacting with the top half of the statue, it launches a large celebrator
           id: 'yellow_clay',
           title: 'Yellow Clay',
           namespace_id: 'lilis_pottery:yellow_clay',
-          subtitle: 'Sunny clay that shows up in warmer regions and near flowing water.',
+          subtitle: 'Sunny yellow clay from savannas and rivers.',
           icon: '/assets/icons/pottery/yellow_clay.webp',
           search: 'yellow clay savanna savanna plateau windswept savanna river swamp mangrove swamp',
           details: true,
@@ -427,7 +391,7 @@ When interacting with the top half of the statue, it launches a large celebrator
           id: 'white_clay',
           title: 'White Clay',
           namespace_id: 'lilis_pottery:white_clay',
-          subtitle: 'Pale clay found in colder biomes, perfect for clean and bright pottery tones.',
+          subtitle: 'Pale clay from snowy lands.',
           icon: '/assets/icons/pottery/white_clay.webp',
           search: 'white clay snowy plains ice spikes snowy taiga frozen river swamp mangrove swamp',
           details: true,
@@ -448,7 +412,7 @@ When interacting with the top half of the statue, it launches a large celebrator
           id: 'blue_clay',
           title: 'Blue Clay',
           namespace_id: 'lilis_pottery:blue_clay',
-          subtitle: 'Cool toned clay found in forests, windswept hills, and even deeper underground.',
+          subtitle: 'Cool blue clay from taigas, windswept hills and lush caves.',
           icon: '/assets/icons/pottery/blue_clay.webp',
           search:
             'blue clay taiga old growth pine taiga old growth spruce taiga windswept hills windswept forest river swamp mangrove swamp lush caves',
@@ -476,7 +440,7 @@ When interacting with the top half of the statue, it launches a large celebrator
           id: 'black_clay',
           title: 'Black Clay',
           namespace_id: 'lilis_pottery:black_clay',
-          subtitle: 'Deep clay that feels at home in wetlands and muddy waterlogged ground.',
+          subtitle: 'Dark clay from the swamps.',
           icon: '/assets/icons/pottery/black_clay.webp',
           search: 'black clay swamp mangrove swamp',
           details: true,
@@ -498,62 +462,74 @@ When interacting with the top half of the statue, it launches a large celebrator
     {
       id: 'misc_changes',
       title: 'Miscellaneous Changes & Features',
-      subtitle: 'Small features that round out the Pottery experience.',
+      subtitle: 'Villagers, colours and a little secret.',
       entries: [
         {
           id: 'clayworker',
           title: 'Clayworker Villager',
-          subtitle: 'A new villager profession centered around clay and pottery.',
+          subtitle: 'A villager who trades clay, bricks and pottery.',
           icon: '/assets/icons/misc/emerald.webp',
           search: 'clayworker villager pottery clay bricks pots',
           details: true,
           detailsTitle: 'Clayworker',
-          detailsText: `Pottery introduces a new Villager profession: the Clayworker.
-
-Clayworkers use the Pottery Table as their work station and focus on everything related to clay. They trade Clay, Bricks, and finished pottery pieces, making them a helpful source for both materials and decoration.`,
+          detailsText: `Villagers who claim a [[Pottery Table|pottery_table]] become Clayworkers. They trade clay, bricks and finished pottery.`,
           detailsBullets: [
-            'Uses the Pottery Table as work station',
-            'Trades Clay, Bricks, and pottery pieces',
-            'Helpful for building and decoration focused worlds'
+            'Uses the Pottery Table as workstation',
+            'Trades clay, bricks and pottery'
           ]
         },
         {
           id: 'glazing',
           title: 'Glazing and Coloring',
-          subtitle: 'Experiment with colors and give your pottery a finished look.',
+          subtitle: 'Mix colours in the Kiln and give your pottery a glossy finish.',
           icon: '/assets/icons/pottery/honeycomb.webp',
           search: 'pottery glazing dye mixing honeycomb brush kiln firing colors glow',
           details: true,
           detailsTitle: 'Glazing',
-          detailsText: `All pottery pieces can be colored and fired in the Kiln.
+          detailsText: `Fire pottery in the [[Kiln|kiln]] with a dye to colour it. Fire it again with another dye to mix the colours and discover new shades.
 
-Colors can be layered by firing a piece multiple times, allowing you to mix shades and discover unique variations along the way. For a finished look, painted pottery can be glazed using Honeycomb. Glazing only has a visible effect on certain colors and enhances their surface with a subtle sheen.
+Use Honeycomb on coloured pottery to glaze it. Every Honeycomb makes the glaze a little stronger, up to eight layers. Glaze only shows on some colours.
 
-Each application of Honeycomb increases the glaze strength by 0.25, up to a maximum of 2.0. Once the maximum strength is reached, additional Honeycomb can no longer be applied.
-
-If you want to start fresh, a Brush can be used to remove the color again.`,
+To start over, brush the colour off with a Brush.`,
           detailsBullets: [
             'Pottery can be colored and fired in the Kiln',
             'Colors can be mixed through repeated firing',
             'Glazing only affects certain colors visually',
-            'Each Honeycomb application adds 0.25 glaze strength',
-            'Glaze strength is capped at 2.0',
+            'Honeycomb glazes coloured pottery, up to eight times',
             'Colors can be removed using a Brush'
+          ]
+        },
+        {
+          id: 'dripstone_clay',
+          title: 'Dripping Clay',
+          subtitle: 'Water dripping through dyed terracotta slowly turns sand, gravel and clay into coloured clay.',
+          icon: '/assets/icons/pottery/blue_clay.webp',
+          search: 'dripstone terracotta water sand gravel clay coloured farm renewable',
+          details: true,
+          detailsTitle: 'How it works',
+          detailsText: `Build a small drip: water on top, a block of red, yellow, white, blue or black terracotta below it, then a pointed dripstone hanging down. Leave one block of air and put sand, gravel or clay underneath.
+
+Over time the dripping water turns the block at the bottom into clay of the terracotta's colour. A renewable source of coloured clay.`,
+          detailsBullets: [
+            'Water, then terracotta, then pointed dripstone',
+            'One block of air',
+            'Sand, gravel or clay at the bottom',
+            'Turns into clay of the terracotta colour'
           ]
         }
       ]
     }
   ],
   impressionsTitle: 'Everyday Scenes',
-  impressionsSubtitle: 'A closer look at how everything comes together ingame',
+  impressionsSubtitle: 'A closer look at how everything comes together in game',
   impressions: [
     {
       src: '/assets/impressions/pottery/01.webp',
-      caption: 'Lili’s Bloom Shop'
+      caption: 'Lili\'s Bloom Shop'
     },
     {
       src: '/assets/impressions/pottery/02.webp',
-      caption: 'Lili’s Statue'
+      caption: 'Lili\'s Statue'
     },
     {
       src: '/assets/impressions/pottery/03.webp',

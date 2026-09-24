@@ -23,6 +23,7 @@ import wildernature from "../config/wildernature.js";
 import beachparty from "../config/beachparty.js";
 import bloomingnature from "../config/bloomingnature.js";
 import meadow from "../config/meadow.js";
+import smoker from "../config/smoker.js";
 
 export function getStaticPaths() {
   const wikiConfigs = {
@@ -42,33 +43,33 @@ export function getStaticPaths() {
     "hearth-and-timber": hearthandtimber,
     "lilis-pottery": pottery,
     "alpine-whispers": alpinewhispers,
+    smoker,
   };
 
   const paths = [];
 
   for (const [mod, config] of Object.entries(wikiConfigs)) {
+    const seenSlugs = new Set();
+
+    const addPath = (entry, section) => {
+      if (!entry.id) return;
+
+      const item = String(entry.id).replace(/_/g, "-");
+      if (seenSlugs.has(item)) return;
+      seenSlugs.add(item);
+
+      paths.push({
+        params: { mod, item },
+        props: { entry, section, config, mod },
+      });
+    };
+
     for (const section of config.sections ?? []) {
       for (const entry of section.entries ?? []) {
-        if (entry.id) {
-          paths.push({
-            params: {
-              mod,
-              item: String(entry.id).replace(/_/g, "-"),
-            },
-            props: { entry, section, config, mod },
-          });
-        }
+        addPath(entry, section);
 
         for (const item of entry.items ?? []) {
-          if (!item.id) continue;
-
-          paths.push({
-            params: {
-              mod,
-              item: String(item.id).replace(/_/g, "-"),
-            },
-            props: { entry: item, section, config, mod },
-          });
+          addPath(item, section);
         }
       }
     }
@@ -119,6 +120,51 @@ const escapeHtml = (value) =>
 
 const escapeHtmlWithBreaks = (value) => escapeHtml(value).replace(/\r\n|\r|\n/g, "<br />");
 
+const normalizeId = (value) =>
+  String(value ?? "")
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, "_")
+    .replace(/[^\w\-]/g, "");
+
+const toItemSlug = (value) => String(value ?? "").replace(/_/g, "-");
+
+const linkifyText = (text) => {
+  if (!text) return "";
+
+  const parts = String(text).split(/(\[\[.*?\]\])/g);
+  let out = "";
+
+  for (const part of parts) {
+    const match = part.match(/^\[\[(.+?)(?:\|(.+?))?\]\]$/);
+
+    if (!match) {
+      out += escapeHtmlWithBreaks(part);
+      continue;
+    }
+
+    const label = match[1] ?? "";
+    const targetId = normalizeId(match[2] ?? match[1] ?? "");
+
+    if (!targetId) {
+      out += escapeHtml(label);
+      continue;
+    }
+
+    const href = withBase(`/wiki/${mod}/${toItemSlug(targetId)}/`);
+    out += `<a class="wikiInlineLink" href="${escapeHtml(href)}">${escapeHtml(label)}</a>`;
+  }
+
+  return out;
+};
+
+const stripLinks = (text) => String(text ?? "").replace(/\[\[(.+?)(?:\|.+?)?\]\]/g, "$1");
+
+const toDescription = (text) => {
+  const clean = stripLinks(text).replace(/\s+/g, " ").trim();
+  return clean.length > 155 ? `${clean.slice(0, 155).trimEnd()}…` : clean;
+};
+
 const relatedEntries = (section.entries ?? [])
   .filter((relatedEntry) => relatedEntry.id && relatedEntry.id !== entry.id)
   .slice(0, 4);
@@ -130,12 +176,12 @@ const wikiIndex = Object.entries(wikiConfigs)
   }))
   .sort((firstWiki, secondWiki) => String(firstWiki.title).localeCompare(String(secondWiki.title)));
 
-const itemSlug = String(entry.id).replace(/_/g, "-");
+const itemSlug = toItemSlug(entry.id);
 const pageTitle = `${entry.title} – ${config.title}`;
 const pageDescription = entry.detailsText
-  ? `${String(entry.detailsText).slice(0, 155).replace(/\n/g, " ")}…`
+  ? toDescription(entry.detailsText)
   : entry.subtitle
-    ? String(entry.subtitle).slice(0, 155)
+    ? toDescription(entry.subtitle)
     : `${entry.title} from ${config.title} in the Let's Do mod series.`;
 
 const canonicalUrl = `https://lets-do.ch/wiki/${mod}/${itemSlug}/`;
@@ -157,7 +203,8 @@ const canonicalUrl = `https://lets-do.ch/wiki/${mod}/${itemSlug}/`;
       wikis={wikiIndex}
       activeSlug={mod}
       wikiHref={(slug) => withBase(`/wiki/${slug}/`)}
-      searchPlaceholder="Search items, blocks, features..."
+      sectionHref={(sectionId) => withBase(`/wiki/${mod}/#${sectionId}`)}
+      showSearch={false}
       sections={config.sections ?? []}
       impressions={config.impressions ?? []}
     />
@@ -165,7 +212,7 @@ const canonicalUrl = `https://lets-do.ch/wiki/${mod}/${itemSlug}/`;
     <div class="wikiContent">
       <div class="wikiMain">
         <nav class="itemBreadcrumb">
-          <a href={withBase("/wiki/")}>Wiki</a>
+          <span>Wiki</span>
           <span>›</span>
           <a href={withBase(`/wiki/${mod}/`)}>{config.title}</a>
           <span>›</span>
@@ -180,7 +227,7 @@ const canonicalUrl = `https://lets-do.ch/wiki/${mod}/${itemSlug}/`;
 
             {entry.namespace_id && <div class="wikiCardNs">{entry.namespace_id}</div>}
 
-            {entry.subtitle && <p class="itemSubtitle" set:html={escapeHtmlWithBreaks(entry.subtitle)} />}
+            {entry.subtitle && <p class="itemSubtitle" set:html={linkifyText(entry.subtitle)} />}
           </div>
         </section>
 
@@ -188,11 +235,11 @@ const canonicalUrl = `https://lets-do.ch/wiki/${mod}/${itemSlug}/`;
           <section class="section sectionTight itemDetails">
             {entry.detailsTitle && <h2>{entry.detailsTitle}</h2>}
 
-            {entry.detailsText && <div class="wikiDetailsText" set:html={escapeHtmlWithBreaks(entry.detailsText)} />}
+            {entry.detailsText && <div class="wikiDetailsText" set:html={linkifyText(entry.detailsText)} />}
 
             {Array.isArray(entry.detailsBullets) && entry.detailsBullets.length > 0 && (
               <ul class="wikiDetailsList">
-                {entry.detailsBullets.map((line) => <li>{line}</li>)}
+                {entry.detailsBullets.map((line) => <li set:html={linkifyText(line)} />)}
               </ul>
             )}
           </section>
@@ -214,7 +261,7 @@ const canonicalUrl = `https://lets-do.ch/wiki/${mod}/${itemSlug}/`;
 
                     {item.namespace_id && <div class="wikiMiniNs">{item.namespace_id}</div>}
 
-                    {item.subtitle && <div class="wikiMiniSub">{item.subtitle}</div>}
+                    {item.subtitle && <div class="wikiMiniSub" set:html={linkifyText(item.subtitle)} />}
                   </div>
                 </div>
               ))}
@@ -228,12 +275,12 @@ const canonicalUrl = `https://lets-do.ch/wiki/${mod}/${itemSlug}/`;
 
             <div class="itemRelatedGrid">
               {relatedEntries.map((relatedEntry) => (
-                <a class="itemRelatedCard" href={withBase(`/wiki/${mod}/${String(relatedEntry.id).replace(/_/g, "-")}/`)}>
+                <a class="itemRelatedCard" href={withBase(`/wiki/${mod}/${toItemSlug(relatedEntry.id)}/`)}>
                   {relatedEntry.icon && <img src={withBase(relatedEntry.icon)} alt={relatedEntry.title ?? relatedEntry.id} loading="lazy" />}
 
                   <div>
                     <strong>{relatedEntry.title}</strong>
-                    {relatedEntry.subtitle && <p>{relatedEntry.subtitle}</p>}
+                    {relatedEntry.subtitle && <p>{stripLinks(relatedEntry.subtitle)}</p>}
                   </div>
                 </a>
               ))}

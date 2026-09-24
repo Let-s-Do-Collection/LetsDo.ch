@@ -52,7 +52,9 @@ const linkifyText = (text) => {
     const match = part.match(/^\[\[(.+?)(?:\|(.+?))?\]\]$/);
 
     if (!match) {
-      out += escapeHtmlWithBreaks(part);
+      out += escapeHtmlWithBreaks(part)
+        .replace(/`([^`]+)`/g, '<code class="wikiInlineCode">$1</code>')
+        .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
       continue;
     }
 
@@ -88,16 +90,18 @@ const activeWikiTitle = activeWiki?.title ?? title;
 const searchPlaceholder = "Search items, blocks, features...";
 
 const impressionsTitle = config?.impressionsTitle ?? "Impressions";
-const impressionsSubtitle = config?.impressionsSubtitle ?? "Thats how it looks ingame";
+const impressionsSubtitle = config?.impressionsSubtitle ?? "That's how it looks in-game";
 const impressions = Array.isArray(config?.impressions) ? config.impressions : [];
 
 const entrySearch = (entry) =>
-  `${entry.title ?? ""} ${entry.subtitle ?? ""} ${entry.namespace_id ?? ""} ${entry.search ?? ""}`.toLowerCase();
+  `${entry.title ?? ""} ${entry.subtitle ?? ""} ${entry.namespace_id ?? ""} ${entry.search ?? ""}`
+    .replace(/\[\[(.+?)(?:\|.+?)?\]\]/g, "$1")
+    .toLowerCase();
 
 const entryHasDetails = (entry) =>
-  Boolean(entry.details) ||
-  Boolean(entry.detailsTitle) ||
   Boolean(entry.detailsText) ||
+  Boolean(entry.detailsSubtitle) ||
+  Boolean(entry.detailsCode) ||
   (Array.isArray(entry.detailsBullets) && entry.detailsBullets.length) ||
   (Array.isArray(entry.detailsIds) && entry.detailsIds.length) ||
   (Array.isArray(entry.detailsGallery) && entry.detailsGallery.length) ||
@@ -110,6 +114,13 @@ const titleCaseFromId = (id) =>
     .filter(Boolean)
     .map((part) => part.slice(0, 1).toUpperCase() + part.slice(1))
     .join(" ");
+
+const usedAnchorIds = new Set();
+const claimAnchorId = (id) => {
+  if (!id || usedAnchorIds.has(id)) return undefined;
+  usedAnchorIds.add(id);
+  return id;
+};
 
 const wikiHref = (slug) => withBase(`/wiki/${slug}/`);
 const itemHref = (id) => withBase(`/wiki/${activeSlug}/${toItemSlug(id)}/`);
@@ -172,7 +183,7 @@ const itemHref = (id) => withBase(`/wiki/${activeSlug}/${toItemSlug(id)}/`);
                     const iconSrc = entry.icon ? withBase(entry.icon) : "";
                     const detailsOpenTitle = entry.detailsTitle ?? "Details";
                     const tracks = Array.isArray(entry.tracks) ? entry.tracks : [];
-                    const entryId = normalizeId(entry.id);
+                    const entryId = claimAnchorId(normalizeId(entry.id));
                     const entryHref = itemHref(entry.id);
 
                     return (
@@ -214,6 +225,12 @@ const itemHref = (id) => withBase(`/wiki/${activeSlug}/${toItemSlug(id)}/`);
 
                             {entry.detailsText ? <div class="wikiDetailsText" set:html={linkifyText(entry.detailsText)} /> : null}
 
+                            {entry.detailsCode ? (
+                              <pre class="wikiDetailsCode"><code>{entry.detailsCode}</code></pre>
+                            ) : null}
+
+                            {entry.detailsTextAfter ? <div class="wikiDetailsText" set:html={linkifyText(entry.detailsTextAfter)} /> : null}
+
                             {tracks.length ? <MusicPlayer tracks={tracks} /> : null}
 
                             {Array.isArray(entry.detailsIds) && entry.detailsIds.length ? (
@@ -241,7 +258,7 @@ const itemHref = (id) => withBase(`/wiki/${activeSlug}/${toItemSlug(id)}/`);
                             {Array.isArray(entry.detailsBullets) && entry.detailsBullets.length ? (
                               <ul class="wikiDetailsList">
                                 {entry.detailsBullets.map((line) => (
-                                  <li>{line}</li>
+                                  <li set:html={linkifyText(line)} />
                                 ))}
                               </ul>
                             ) : null}
@@ -249,14 +266,16 @@ const itemHref = (id) => withBase(`/wiki/${activeSlug}/${toItemSlug(id)}/`);
                             {Array.isArray(entry.items) && entry.items.length ? (
                               <div class="wikiMiniGrid">
                                 {entry.items.map((item) => {
-                                  const itemId = normalizeId(item.id);
+                                  const itemId = claimAnchorId(normalizeId(item.id));
                                   const childItemHref = itemHref(item.id);
 
                                   return (
                                     <article class="wikiMiniCard" id={itemId} data-search={entrySearch(item)}>
-                                      <a class="wikiMiniIconLink" href={childItemHref} aria-label={item.title ?? "Open item"}>
-                                        <img class="wikiMiniIcon" src={item.icon ? withBase(item.icon) : ""} alt={item.title ?? ""} loading="lazy" />
-                                      </a>
+                                      {item.icon ? (
+                                        <a class="wikiMiniIconLink" href={childItemHref} aria-label={item.title ?? "Open item"}>
+                                          <img class="wikiMiniIcon" src={withBase(item.icon)} alt={item.title ?? ""} loading="lazy" />
+                                        </a>
+                                      ) : null}
                                       <div class="wikiMiniBody">
                                         <div class="wikiMiniTitle">{item.title ?? titleCaseFromId(item.id)}</div>
                                         {item.namespace_id ? <div class="wikiMiniNs">{item.namespace_id}</div> : null}
@@ -335,42 +354,6 @@ const itemHref = (id) => withBase(`/wiki/${activeSlug}/${toItemSlug(id)}/`);
     const sections = Array.from(document.querySelectorAll(".wikiSection"));
     const sectionLinks = Array.from(document.querySelectorAll("[data-section-link]"));
 
-    const dropdown = document.getElementById("wikiDropdown");
-    const dropdownButton = document.getElementById("wikiDropdownButton");
-    const dropdownMenu = document.getElementById("wikiDropdownMenu");
-
-    const setDropdownOpen = (open) => {
-      if (!dropdown || !dropdownButton || !dropdownMenu) return;
-      dropdown.dataset.open = open ? "true" : "false";
-      dropdownButton.setAttribute("aria-expanded", open ? "true" : "false");
-      dropdownMenu.hidden = !open;
-    };
-
-    if (dropdownButton && dropdownMenu) {
-      dropdownButton.addEventListener("click", (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-        const openNow = dropdown.dataset.open === "true";
-        setDropdownOpen(!openNow);
-      });
-
-      dropdownMenu.addEventListener("click", (event) => {
-        const link = event.target.closest("a");
-        if (!link) return;
-        setDropdownOpen(false);
-      });
-
-      document.addEventListener("click", (event) => {
-        if (!dropdown) return;
-        if (dropdown.contains(event.target)) return;
-        setDropdownOpen(false);
-      });
-
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") setDropdownOpen(false);
-      });
-    }
-
     const getHashId = () => {
       const raw = (window.location.hash || "").slice(1);
       return raw ? raw.trim() : "";
@@ -420,13 +403,57 @@ const itemHref = (id) => withBase(`/wiki/${activeSlug}/${toItemSlug(id)}/`);
       }
     };
 
-    const setOpen = (card, open) => {
+    const animateDetails = (details, open) => {
+      details.style.maxHeight = `${details.scrollHeight}px`;
+      if (open) {
+        const onEnd = (event) => {
+          if (event.propertyName !== "max-height") return;
+          details.removeEventListener("transitionend", onEnd);
+          if (details.closest(".wikiCard")?.classList.contains("isOpen")) details.style.maxHeight = "none";
+        };
+        details.addEventListener("transitionend", onEnd);
+      } else {
+        void details.offsetHeight;
+        details.style.maxHeight = "0px";
+      }
+    };
+
+    const wikiCardsReduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const flipCards = (grid, change) => {
+      if (wikiCardsReduceMotion || !grid) {
+        change();
+        return;
+      }
+      const viewportHeight = window.innerHeight;
+      const before = new Map();
+      for (const item of grid.children) {
+        const rect = item.getBoundingClientRect();
+        if (rect.bottom > -200 && rect.top < viewportHeight + 200) before.set(item, rect);
+      }
+      change();
+      for (const [item, first] of before) {
+        const last = item.getBoundingClientRect();
+        const dx = first.left - last.left;
+        const dy = first.top - last.top;
+        if (Math.abs(dx) < 1 && Math.abs(dy) < 1) continue;
+        item.animate(
+          [{ translate: `${dx}px ${dy}px` }, { translate: "0 0" }],
+          { duration: 360, easing: "cubic-bezier(0.22, 1, 0.36, 1)" }
+        );
+      }
+    };
+
+    const setOpen = (card, open) => flipCards(card.closest(".wikiGrid"), () => applyOpen(card, open));
+
+    const applyOpen = (card, open) => {
       const details = card.querySelector(".wikiCardDetails");
       const toggle = card.querySelector(".wikiToggle");
       if (!details || !toggle) return;
 
       card.classList.toggle("isOpen", open);
       card.classList.toggle("isExpanded", open);
+      animateDetails(details, open);
 
       details.setAttribute("aria-hidden", open ? "false" : "true");
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
@@ -435,8 +462,9 @@ const itemHref = (id) => withBase(`/wiki/${activeSlug}/${toItemSlug(id)}/`);
       if (open) {
         for (const other of cards) {
           if (other !== card) {
-            other.classList.remove("isOpen", "isExpanded");
             const otherDetails = other.querySelector(".wikiCardDetails");
+            if (other.classList.contains("isOpen") && otherDetails) animateDetails(otherDetails, false);
+            other.classList.remove("isOpen", "isExpanded");
             const otherToggle = other.querySelector(".wikiToggle");
             if (otherDetails) otherDetails.setAttribute("aria-hidden", "true");
             if (otherToggle) {

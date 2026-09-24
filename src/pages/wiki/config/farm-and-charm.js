@@ -3,16 +3,12 @@ export default {
   title: 'Farm & Charm',
   logo: '/assets/mod-logos/farm_and_charm.webp',
   aboutTitle: 'Welcome',
-  aboutSubtitle: 'Everything you need, in one place',
-  aboutText: `Welcome to the Farm & Charm Wiki.
+  aboutSubtitle: 'The heart of the Let\'s Do kitchen and farm',
+  aboutText: `Farm & Charm is the foundation of the Let's Do food mods. It adds the shared kitchen stations, crops and farming tools that Bakery, Brewery, Candlelight and others build on.
 
-This is your home for blocks, items, mechanics, and quick guidance for Farm & Charm.
+Grow barley, oat, corn, tomatoes, lettuce, onions and strawberries, or find them growing wild. Cook hearty meals on the stove, in the cooking pot and in the roaster, and dry grain in the silo.
 
-Farm & Charm is the food focused foundation of the Let’s Do Food ecosystem. It helps shared systems work together across mods, especially around cooking, processing, storage, and agriculture.
-
-And of course it also adds a lot of cozy farming content, from practical tools to decorative details that feel right at home in survival gameplay.
-
-`,
+Look after your animals with troughs, a chicken coop and pet bowls, pull carts and plows with your horse, and keep your fields growing with compost, fertilized soil and a scarecrow.`,
   sections: [
     {
       id: 'stations',
@@ -23,154 +19,116 @@ And of course it also adds a lot of cozy farming content, from practical tools t
           id: 'stove',
           title: 'Stove',
           namespace_id: 'farm_and_charm:stove',
-          subtitle: 'Your main Station for Baking and a Heat Source for Cooking.',
+          subtitle: 'The station for baking, and a heat source for pots and roasters.',
           icon: '/assets/icons/farm-and-charm/stove.webp',
           search: 'stove baking fuel heat cooking roaster pot',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `
-The Stove works similarly to other Crafting Stations. It has three Ingredient Input Slots, one Fuel Slot, and one Output Slot.
+          detailsText: `The Stove has three ingredient slots, a fuel slot and an output slot. Add ingredients and fuel such as coal, and a recipe is done after about twelve seconds. The ingredients and the result are visible on the stove.
 
-Place the required Ingredients into the Input Slots, add a valid Fuel Item, and wait about twelve seconds for the Crafting Process to complete. The crafted Item then appears in the Output Slot.
-
-Items located in both the Input Slots and the Output Slot are also visually displayed inside the Block in the World.
-
-Related: [[Cooking Pot|cooking_pot]].`,
+A lit stove also heats a [[Cooking Pot|cooking_pot]] or [[Roaster|roaster]] placed on top of it.`,
           detailsBullets: [
-            'Three Ingredient Input Slots',
-            'One Fuel Slot and one Output Slot',
-            'Crafting takes about twelve seconds',
-            'Requires a valid Fuel Item such as Coal or Charcoal',
-            'Input and Output Items are visible in the Block Model',
-            'Related: [[Cooking Pot|cooking_pot]]'
+            'Three ingredient slots, one fuel slot, one output slot',
+            'About twelve seconds per recipe',
+            'Needs fuel such as coal or charcoal',
+            'Heat source for the Cooking Pot and Roaster'
           ]
         },
         {
           id: 'cooking_pot',
           title: 'Cooking Pot',
           namespace_id: 'farm_and_charm:cooking_pot',
-          subtitle: 'A cozy Station for preparing basic Meals, powered by Heat.',
+          subtitle: 'A pot for soups, teas and everyday meals. Needs heat from below.',
           icon: '/assets/icons/farm-and-charm/cooking_pot.webp',
           search:
             'cooking pot meals basic hot surface stove magma campfire bubbles recipe book container slot output cooking',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Cooking Pot functions similarly to other Crafting Stations, but focuses on preparing basic Meals. It requires a Heat Source to operate and cannot be used on its own.
+          detailsText: `The Cooking Pot has six ingredient slots, one slot for the container, such as a bowl or bottle, and one output slot. A meal takes 45 seconds.
 
-The Cooking Pot has six Ingredient Input Slots, one Container Slot, and one Output Slot.
+It only cooks on a heat source, such as a lit [[Stove|stove]], a Magma Block or a Lava Cauldron. Rising bubbles, cooking sounds and a lit flame in the menu show that it is working.
 
-After placing the Ingredients into the Input Slots, the Cooking Process takes about thirty seconds. Once completed, the prepared Meal appears in the Output Slot.
-
-To function, the Cooking Pot must be placed on a Hot Surface, such as a [[Stove|stove]], a Magma Block, or other Heat Sources. In some cases, it can also be placed directly on a Campfire. When active, this is indicated by rising Bubbles, Cooking Sounds, and a colored Fire Indicator in the Cooking Pot Interface.
-
-Related: [[Roaster|roaster]].`,
+Ingredients that carry effects pass them on to the finished meal.`,
           detailsBullets: [
-            'Six Ingredient Input Slots',
-            'One Container Slot and one Output Slot',
-            'Requires a valid Heat Source',
-            'Cooking takes about thirty seconds',
-            'Active State is shown by Bubbles, Sounds, and a colored Fire Indicator',
-            'Related: [[Roaster|roaster]]'
+            'Six ingredient slots, one container slot, one output slot',
+            '45 seconds per meal',
+            'Needs a heat source below it',
+            'Bubbles, sounds and a flame icon show it is cooking'
           ]
         },
         {
           id: 'roaster',
           title: 'Roaster',
           namespace_id: 'farm_and_charm:roaster',
-          subtitle: 'A large Cooking Station for preparing bigger Meals.',
+          subtitle: 'A roasting pan for meat, fish and hearty dishes. Needs heat from below.',
           icon: '/assets/icons/farm-and-charm/roaster.webp',
           search:
             'roaster bigger meals large hot surface stove magma campfire smoke recipe book container slot output cooking',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Roaster works similarly to the [[Cooking Pot|cooking_pot]], but is designed for larger and more complex Meals. It requires a Heat Source and cannot operate on its own.
+          detailsText: `The Roaster works like the [[Cooking Pot|cooking_pot]], with six ingredient slots, one container slot, one output slot and 45 seconds per dish. It is used for roasts, fish and other hearty meals.
 
-The Roaster provides six Ingredient Input Slots, one Container Slot, and one Output Slot.
-
-After placing the required Ingredients into the Input Slots, the Cooking Process takes about sixty seconds. Once completed, the prepared Meal appears in the Output Slot.
-
-To function, the Roaster must be connected to a Heat Source, such as a [[Stove|stove]], a Magma Block, or other Hot Surfaces. It can also be used when positioned above a Campfire. When active, the Roaster emits rising Smoke and Cooking Sounds, and the Fire Indicator in the Interface changes from grayscale to colored.`,
+It needs a heat source below it, such as a lit [[Stove|stove]]. Smoke rises and the flame in the menu lights up while it is roasting.`,
           detailsBullets: [
-            'Designed for larger and more complex Meals',
-            'Six Ingredient Input Slots',
-            'One Container Slot and one Output Slot',
-            'Requires a valid Heat Source',
-            'Cooking takes about sixty seconds',
-            'Active State is shown by Smoke, Sounds, and a colored Fire Indicator'
+            'Six ingredient slots, one container slot, one output slot',
+            '45 seconds per dish',
+            'Needs a heat source below it'
           ]
         },
         {
           id: 'mincer',
           title: 'Mincer',
           namespace_id: 'farm_and_charm:mincer',
-          subtitle: 'A crank-operated Tool for processing various Materials.',
+          subtitle: 'A hand-cranked mincer for meat, flour and more.',
           icon: '/assets/icons/farm-and-charm/mincer.webp',
           search: 'mincer crank processing interact right click hold particles sound animation meat iron wood speed',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Mincer is an all-purpose Processing Tool that operates entirely through direct Interaction and does not provide a Graphical Interface.
+          detailsText: `The Mincer has no menu. Right click it with an ingredient to put it in, then hold right click to turn the crank. When it is done, the result drops out at the bottom.
 
-Valid Items can be inserted by Right-Clicking the Mincer. Once an Item is inside, the Crank can be operated by targeting the Mincer and holding the Right Mouse Button.
-
-The Processing Process is indicated through the Crank Animation, Particles, and Sound Effects. Once fully processed, the resulting Item exits through the Opening at the Bottom of the Mincer.
-
-Processing Time depends on the Material being processed. Meat is processed almost instantly, while harder Materials such as Wood or Iron require more time. The Processing Speed can be increased by holding another Item of the same type in your Hand while cranking.`,
+Soft things like meat are minced almost instantly, harder materials take longer. Holding another item of the same kind while cranking speeds things up.`,
           detailsBullets: [
-            'No Interface, operates through direct Interaction',
-            'Insert Items via Right-Click',
-            'Operate the Crank by holding Right Mouse Button',
-            'Processing is shown through Animation, Particles, and Sounds',
-            'Output exits at the Bottom',
-            'Processing Time varies by Material',
-            'Holding an additional Item increases Processing Speed'
+            'Right click with an item to put it in',
+            'Hold right click to turn the crank',
+            'The result drops out at the bottom',
+            'Harder materials take longer'
           ]
         },
         {
           id: 'crafting_bowl',
           title: 'Crafting Bowl',
           namespace_id: 'farm_and_charm:crafting_bowl',
-          subtitle: 'A manual Station for preparing Dough, Cereals, Salads, and more.',
+          subtitle: 'A mixing bowl for dough, salads, feed and more.',
           icon: '/assets/icons/farm-and-charm/crafting_bowl.webp',
           search: 'crafting bowl dough cereals salads whisk stir interact no gui empty hand capacity animation',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Crafting Bowl is used to prepare various Ingredients such as Dough, Cereals, and Salads. Like the Mincer, it does not feature a Graphical Interface and relies entirely on direct Interaction.
-
-The Crafting Bowl can hold up to four Items at a time. Ingredients are added by placing them directly into the Bowl.
-
-Once the correct Ingredients are inside, the Mixing Process is started by stirring the Whisk inside the Bowl. This Process is visually represented through an Animation.
-
-An empty Hand is required to begin the Mixing Process.`,
+          detailsText: `The Crafting Bowl has no menu. Right click it with ingredients to drop up to four of them in. Once the right ingredients are inside, stir the whisk with an empty hand until the result is ready.`,
           detailsBullets: [
-            'No Interface, direct Interaction only',
-            'Holds up to four Ingredients',
-            'Used for Dough, Cereals, Salads, and similar Recipes',
-            'Start Mixing by stirring the Whisk',
-            'Mixing is shown through an Animation',
-            'Requires an empty Hand to operate'
+            'Holds up to four ingredients',
+            'Stir with an empty hand',
+            'Used for dough, salads, animal feed and similar recipes'
           ]
         },
         {
           id: 'silo_copper',
           title: 'Silo',
           namespace_id: 'farm_and_charm:silo_copper',
-          subtitle: 'Modular Storage for drying Items, scaling with Size.',
+          subtitle: 'A silo for drying grain. The bigger you build it, the more it holds.',
           icon: '/assets/icons/farm-and-charm/silo_copper.webp',
           search: 'silo modular expand width height capacity drying time hatch open close right click storage',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Silo is a modular Storage Block used for drying Items. It can be expanded both in Width and Height. A larger Silo provides higher Storage Capacity and reduces the required Drying Time.
+          detailsText: `Silo blocks placed together form one large silo, up to three blocks wide and nine blocks tall. The bigger it is, the more it can hold.
 
-Items can be inserted directly by Right-Clicking the Silo with a valid Item. The Hatch of the Silo can be opened or closed through Interaction.
+Right click the silo with grain or other dryable items to fill it. Open the hatch to let the dried items out; while it is closed, they stay inside. Drying continues either way.
 
-Drying continues regardless of whether the Hatch is open or closed. However, when the Hatch is closed, dried Items will not be automatically released.`,
+Brewery uses the silo to dry grain for beer and whiskey, and Podzol dries into Fertilized Soil.`,
           detailsBullets: [
-            'Modular Structure expandable in Width and Height',
-            'Larger Silos increase Capacity and reduce Drying Time',
-            'Insert Items via Right-Click',
-            'Right-Click to open or close the Hatch',
-            'Drying occurs even with the Hatch open',
-            'Closed Hatch prevents automatic Item Output'
+            'Combines up to 3 x 3 x 9 blocks',
+            'Right click with items to fill it',
+            'Open the hatch to release dried items',
+            'Comes in wood and copper'
           ]
         }
       ]
@@ -184,69 +142,91 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'fertilized_soil',
           title: 'Fertilized Soil',
           namespace_id: 'farm_and_charm:fertilized_soil',
-          subtitle: 'Boost your Fields and upgrade Farmland.',
+          subtitle: 'Nutrient-rich soil that boosts the fields around it.',
           icon: '/assets/icons/farm-and-charm/fertilized_soil.webp',
-          search: 'fertilized soil hoe convert fertilized farmland pitchfork bone meal effect radius crops uses 4'
+          search: 'fertilized soil hoe convert fertilized farmland pitchfork bone meal effect radius crops uses 4 podzol sugar cane',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `Fertilized Soil is crafted, or made by drying Podzol in a [[Silo|silo_copper]].
+
+Use a [[Pitchfork|pitchfork]] on it to spread the nutrients: every crop within five blocks has a chance to grow a stage. Each block of soil lasts for four uses.
+
+A fresh, full block can be turned into [[Fertilized Farmland|fertilized_farmland]] with a hoe. Full soil also helps nearby sugar cane grow.`,
+          detailsBullets: [
+            'Pitchfork: boosts crops within five blocks',
+            'Four uses per block',
+            'Hoe on full soil: Fertilized Farmland',
+            'Speeds up nearby sugar cane'
+          ]
         },
         {
           id: 'fertilized_farmland',
           title: 'Fertilized Farmland',
           namespace_id: 'farm_and_charm:fertilized_farmland',
-          subtitle: 'Enhanced Farmland that supports faster Crop Growth.',
+          subtitle: 'Farmland that cannot be trampled and helps crops grow faster.',
           icon: '/assets/icons/farm-and-charm/fertilized_farmland.webp',
           search: 'fertilized farmland enhanced cannot trample random bone meal chance crop growth',
           details: true,
           detailsTitle: 'Function',
           detailsText:
-            'Fertilized Farmland is an upgraded version of regular Farmland. It cannot be trampled and provides passive support for Crops planted on it.',
+            'Fertilized Farmland is made by using a hoe on full [[Fertilized Soil|fertilized_soil]]. Crops grow faster on it, and it can never be trampled.',
           detailsBullets: [
-            'Cannot be trampled by Players or Mobs',
-            'Has a small chance to randomly apply the Bone Meal effect to the planted Crop',
-            'Works automatically without Player interaction'
+            'Cannot be trampled',
+            'Crops grow faster and sometimes get an extra growth boost'
           ]
         },
         {
           id: 'feeding_trough',
           title: 'Feeding Trough',
           namespace_id: 'farm_and_charm:feeding_trough',
-          subtitle: 'Automatically feeds Animals and helps them get ready to Breed.',
+          subtitle: 'Fill it with seeds and nearby animals help themselves.',
           icon: '/assets/icons/farm-and-charm/feeding_trough.webp',
           search: 'feeding trough seeds capacity animals breeding automatic nearby eat periodically',
           details: true,
           detailsTitle: 'Usage',
           detailsText:
-            'The Feeding Trough automatically feeds Animals in the surrounding area and helps them get ready to Breed.',
+            'Put up to four seeds of one kind into the Feeding Trough. Animals nearby walk over to eat, and after eating they are ready to breed.',
           detailsBullets: [
-            'Can be filled with up to 4 Seed Items',
-            'Friendly and Neutral Animals will periodically walk to the Feeding Trough to eat',
-            'After eating, Animals become ready to Mate',
-            'All Seed Types work for all Animals'
+            'Holds up to four seeds of one kind',
+            'Animals nearby come over to eat',
+            'Animals that ate are ready to breed',
+            'Any seed works for every animal'
           ]
         },
         {
           id: 'water_trough',
           title: 'Water Trough',
           namespace_id: 'farm_and_charm:water_trough',
-          subtitle: 'A simple trough that provides water for nearby Animals.',
+          subtitle: 'A trough full of water that lets animals breed again sooner.',
           icon: '/assets/icons/farm-and-charm/water_trough.webp',
           search: 'water trough animals farm utility hydration breeding cooldown',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Water Trough supplies Nearby Animals with Water. Animals that drink from it have their Breeding Cooldown reduced by 10 seconds.`
+          detailsText: `Fill the Water Trough with a Water Bucket. Animals nearby come to drink, which shortens their breeding cooldown by ten seconds. Take the water out again with an empty Bucket.`
         },
         {
           id: 'water_sprinkler',
           title: 'Water Sprinkler',
           namespace_id: 'farm_and_charm:water_sprinkler',
-          subtitle: 'Automatically irrigates nearby Farmland without requiring a water source.',
+          subtitle: 'Keeps the farmland around it moist, no water source needed.',
           icon: '/assets/icons/farm-and-charm/water_sprinkler.webp',
-          search: 'water sprinkler irrigate farmland radius no water supply automatic farming utility decoration'
+          search: 'water sprinkler irrigate farmland radius no water supply automatic farming fire campfire candles',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `The Water Sprinkler waters the farmland around it, so you do not need water nearby. It also puts out fires, campfires and candles in its spray, so place it carefully.
+
+Onions and lettuce next to a sprinkler can grow into [[big crops|big_crops]].`,
+          detailsBullets: [
+            'Keeps nearby farmland wet',
+            'Puts out fire, campfires and candles',
+            'Helps crops grow big'
+          ]
         },
         {
           id: 'pet_bowl',
           title: 'Pet Bowl',
           namespace_id: 'farm_and_charm:pet_bowl',
-          subtitle: 'A cozy feeding spot for Pets, with support for Cat Food, Dog Food, and a custom Name Tag.',
+          subtitle: 'A food bowl for your cat or dog, with room for a name.',
           icon: '/assets/icons/farm-and-charm/pet_bowl.webp',
           search: 'pet bowl cat dog food feeding name tag shears shift right click screen rename decoration',
           details: true,
@@ -263,33 +243,35 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'chicken_coop',
           title: 'Chicken Coop',
           namespace_id: 'farm_and_charm:chicken_coop',
-          subtitle: 'Stores Chickens and collects Eggs for easy pickup.',
+          subtitle: 'A home for up to three chickens that collects their eggs.',
           icon: '/assets/icons/farm-and-charm/chicken_coop.webp',
           search: 'chicken coop store chickens eggs collect leash pitchfork release radius 7',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Chicken Coop can store nearby Chickens and collects their Eggs inside. Interact to pick up Eggs, or use a [[Pitchfork|pitchfork]] to release stored Chickens.`,
+          detailsText: `Up to three chickens can live in the coop. Chickens nearby look for it on their own, or you can lead one there on a leash. The eggs they lay are collected inside, up to nine.
+
+Right click the coop to take all eggs at once. Use a [[Pitchfork|pitchfork]] on it to let the chickens out again.`,
           detailsBullets: [
-            'Collect Eggs by interacting: All stored Eggs are given to you at once.',
-            'Leash a Chicken to yourself and bring it close: If the Coop has space, it will take the leashed Chicken in a 7 Block radius.',
-            'Use a Pitchfork on the Coop to release all stored Chickens.',
-            'Eggs are tracked visually on the Block in Stages.'
+            'Houses up to three chickens',
+            'Stores up to nine eggs',
+            'Right click to collect all eggs',
+            'Lead chickens in on a leash, or let them find it',
+            'Pitchfork releases the chickens'
           ]
         },
         {
           id: 'chicken_nest',
           title: 'Chicken Nest',
           namespace_id: 'farm_and_charm:chicken_nest',
-          subtitle: 'A cozy Nest where nearby Chickens lay their Eggs safely.',
+          subtitle: 'A nest where chickens lay their eggs instead of on the ground.',
           icon: '/assets/icons/farm-and-charm/chicken_nest.webp',
           search: 'chicken nest coop farm eggs storage nearby chickens',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Chickens in the surrounding area will naturally lay their Eggs inside the Chicken Nest instead of on the ground.`,
+          detailsText: `Chickens nearby lay their eggs into the nest instead of dropping them on the ground.`,
           detailsBullets: [
-            'Nearby Chickens place their Eggs directly into the Nest.',
-            'Prevents Eggs from dropping on the ground.',
-            'Can store up to 2 Eggs at a time.'
+            'Chickens lay their eggs into it',
+            'Holds up to two eggs'
           ]
         }
       ]
@@ -303,7 +285,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'window_sill',
           title: 'Window Sill',
           namespace_id: 'farm_and_charm:window_sill',
-          subtitle: 'Decorate your farmhouse. Fits up to two small flowers.',
+          subtitle: 'A flower box for the window, with room for two small flowers.',
           icon: '/assets/icons/farm-and-charm/window_sill.webp',
           search: 'window sill decorate farmhouse holds 2 small flowers tag #small_flowers'
         },
@@ -311,7 +293,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'tool_rack',
           title: 'Tool Rack',
           namespace_id: 'farm_and_charm:tool_rack',
-          subtitle: 'The ideal storage solution for your tools and pans.',
+          subtitle: 'Hang your tools and pans on the wall.',
           icon: '/assets/icons/farm-and-charm/tool_rack.webp',
           search: 'tool rack toolrack storage tools pans kitchen decor'
         },
@@ -319,59 +301,85 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'scarecrow',
           title: 'Scarecrow',
           namespace_id: 'farm_and_charm:scarecrow',
-          subtitle: 'A special Reward that boosts nearby Crop Growth.',
+          subtitle: 'The reward for cooking every meal. Helps the crops around it grow.',
           icon: '/assets/icons/farm-and-charm/scarecrow.webp',
           search:
             'scarecrow reward cook all meals dishes completion unlock growth boost 10 percent range animated sways wind weather dungarees overalls pants funny',
           details: true,
           detailsTitle: 'Reward',
-          detailsText: `The Scarecrow is a special Reward for true completionists: Cook every Farm And Charm Meal at least once to unlock it. Once placed, it boosts nearby Crop Growth by 10 Percent and brings a little life to your fields with subtle animations.`,
+          detailsText: `Collect every Farm & Charm meal to complete the final advancement and receive two Scarecrows. More can be crafted from an existing Scarecrow, a Barley Ball and sticks.
+
+Every 25 seconds the Scarecrow helps all crops within eight blocks grow a little. It sways gently in the wind, and it wears [[Dungarees|dungarees]] that you can take off or put back on.`,
           detailsBullets: [
-            'Reward for Cooking every Farm And Charm Meal.',
-            'Boosts nearby Crop Growth by 10 Percent.',
-            'Animated: Sways gently with wind and weather.',
-            'It also has Dungarees: Take them off by interacting, or put them back on by using [[Dungarees|dungarees]] on the Scarecrow.'
+            'Reward for collecting every meal',
+            'Gives crops within 8 blocks an extra growth tick every 25 seconds',
+            'Can be copied with a Barley Ball and sticks',
+            'Right click to take off or put on its Dungarees'
           ]
         },
         {
           id: 'rope',
           title: 'Rope',
           namespace_id: 'farm_and_charm:rope',
-          subtitle: 'A flexible Utility Block for rustic Builds and Farming Setups.',
+          subtitle: 'Rope for fences, hanging decorations and climbing crops.',
           icon: '/assets/icons/farm-and-charm/rope.webp',
           search:
             'rope rope knot knot utility building decoration lantern bell hang climbing crops support anchor connect corner vertical horizontal',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Rope connects to nearby Blocks and can be used to build hanging lines, supports, and simple structures. It must be attached to something sturdy, or to a Rope Knot, otherwise it will not stay in place.`,
+          detailsText: `Rope connects in every direction and can be tied to fences and sturdy blocks. It needs an anchor somewhere along its length, such as a solid block or a Rope Knot, or it falls down.
+
+Lanterns and bells can hang from it, and climbing crops such as [[tomatoes|wild_tomato]] and Brewery's hops grow up along it.`,
           detailsBullets: [
-            'Connects in all Directions: North, South, East, West, Up, and Down.',
-            'Requires an Anchor: A sturdy Block Face, or a Rope Knot somewhere in the connected Rope Network.',
-            'Can support hanging Attachments like Lanterns and Bells.',
-            'Works with Climbing Crops: Rope can connect vertically to Climbing Crops above or below.'
+            'Connects in all six directions',
+            'Needs an anchor: a solid block or a Rope Knot',
+            'Holds lanterns and bells',
+            'Supports climbing crops'
           ]
         },
         {
           id: 'packed_dirt',
           title: 'Packed Dirt',
           namespace_id: 'farm_and_charm:packed_dirt',
-          subtitle: 'A compact Path Block for farms, yards, and rustic builds.',
+          subtitle: 'Hard-packed dirt for farm paths and yards. Wears down where people and animals walk.',
           icon: '/assets/icons/farm-and-charm/packed_dirt.webp',
-          search: 'packed dirt path farm yard decoration trail road'
+          search: 'packed dirt path farm yard trail road trampled wear shovel hoe seal stable floor',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `Paths made from it wear down over time: whenever people or animals walk or land on it, it gets a little more worn and eventually turns into [[Trampled Packed Dirt|trampled_packed_dirt]].
+
+Use a shovel or hoe on Packed Dirt to seal it. Sealed dirt no longer wears down. Use the tool again to undo it.
+
+It is also the base for [[Stable Floor|stable_floor]].`,
+          detailsBullets: [
+            'Slowly wears down into Trampled Packed Dirt',
+            'Shovel or hoe seals it against wear',
+            'Ingredient for Stable Floor'
+          ]
         },
         {
           id: 'trampled_packed_dirt',
           title: 'Trampled Packed Dirt',
           namespace_id: 'farm_and_charm:trampled_packed_dirt',
-          subtitle: 'A worn Packed Dirt variant for frequently used Paths.',
+          subtitle: 'Packed dirt, worn down by many feet. A shovel or hoe smooths it back into Packed Dirt.',
           icon: '/assets/icons/farm-and-charm/trampled_packed_dirt.webp',
           search: 'trampled packed dirt worn path farm yard trail road'
+        },
+        {
+          id: 'pen_fences',
+          title: 'Chicken Fence and Iron Divider',
+          subtitle: 'Low pen fences for coops and stables.',
+          search: 'chicken fence iron divider pen fence coop stable animals',
+          items: [
+            { id: 'chicken_fence', title: 'Chicken Fence', namespace_id: 'farm_and_charm:chicken_fence' },
+            { id: 'iron_divider', title: 'Iron Divider', namespace_id: 'farm_and_charm:iron_divider' }
+          ]
         },
         {
           id: 'stable_floor',
           title: 'Stable Floor',
           namespace_id: 'farm_and_charm:stable_floor',
-          subtitle: 'A clean Floor Block for stables, barns, and animal areas.',
+          subtitle: 'A floor for stables and barns. Wears down over time; a shovel or hoe seals it.',
           icon: '/assets/icons/farm-and-charm/stable_floor.webp',
           search: 'stable floor barn stable building decor animals pen'
         },
@@ -379,7 +387,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'trampled_stable_floor',
           title: 'Trampled Stable Floor',
           namespace_id: 'farm_and_charm:trampled_stable_floor',
-          subtitle: 'A worn Stable Floor variant for busy pens and walkways.',
+          subtitle: 'A stable floor, worn down by animals. A shovel or hoe restores it.',
           icon: '/assets/icons/farm-and-charm/trampled_stable_floor.webp',
           search: 'trampled stable floor barn animals pen walkway worn'
         },
@@ -387,21 +395,32 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'straw_stable_floor',
           title: 'Straw Stable Floor',
           namespace_id: 'farm_and_charm:straw_stable_floor',
-          subtitle: 'A cozy Straw topped Floor Block for barns and stables.',
+          subtitle: 'A stable floor covered in straw. Appears on its own next to Hay Bales.',
           icon: '/assets/icons/farm-and-charm/straw_stable_floor.webp',
-          search: 'straw stable floor barn straw animals cozy stable'
+          search: 'straw stable floor barn straw animals cozy stable hay bale wheat',
+          details: true,
+          detailsTitle: 'How to get it',
+          detailsText: `Straw Stable Floor cannot be crafted. Place a Hay Bale right next to an unsealed [[Stable Floor|stable_floor]] (up to one block away, including diagonally). Over time the floor picks up straw by itself: there is a chance each time it is placed, a neighbouring block changes or something walks on it.
+
+Use a shovel or hoe to sweep the straw away. You get Wheat back and the plain Stable Floor remains. Breaking it drops a Stable Floor and Wheat.`,
+          detailsBullets: [
+            'Not craftable',
+            'Stable Floor next to a Hay Bale turns into it over time',
+            'Sealed Stable Floor stays straw-free',
+            'Shovel or hoe: back to Stable Floor, drops Wheat'
+          ]
         },
         {
           id: 'bag',
           title: 'Bag',
-          subtitle: 'Decorative Bags representing different ingredients and farm goods.',
+          subtitle: 'Sacks full of produce. Store nine items in one block and put it on display.',
           icon: '/assets/icons/farm-and-charm/onion_bag.webp',
           search: 'bag decoration ingredient sack strawberry carrot potato beetroot lettuce tomato corn onion flour'
         },
         {
           id: 'grain_ball',
           title: 'Grain Balls',
-          subtitle: 'Decorative bundles of grains used to add detail and atmosphere to fields and storage areas.',
+          subtitle: 'Bundles of oat and barley, for storage and decoration.',
           icon: '/assets/icons/farm-and-charm/oat_ball.webp',
           search: 'grain ball oat barley food ingredient'
         },
@@ -409,14 +428,14 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'sturdy_ladder',
           title: 'Sturdy Ladder',
           namespace_id: 'farm_and_charm:sturdy_ladder',
-          subtitle: 'A sturdier Ladder that can extend upward by placing more on top.',
+          subtitle: 'A free-standing ladder that can be extended from the bottom.',
           icon: '/assets/icons/farm-and-charm/sturdy_ladder.webp',
           search: 'sturdy ladder barn farm building climb extend stack place on ladder support walls ground'
         },
         {
           id: 'pet_food_bags',
           title: 'Pet Food Bags',
-          subtitle: 'Decorative sacks for storing dog and cat food in a rustic way.',
+          subtitle: 'Sacks of cat and dog food, for storage and decoration.',
           icon: '/assets/icons/farm-and-charm/cat_food_bag.webp',
           search: 'pet food bags dog food cat food sacks decorative storage stackable'
         },
@@ -424,17 +443,16 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'cattlegrid',
           title: 'Cattlegrid',
           namespace_id: 'farm_and_charm:cattlegrid',
-          subtitle: 'A practical grid that blocks livestock while letting players pass.',
+          subtitle: 'Lets you walk through while your animals stay in.',
           icon: '/assets/icons/farm-and-charm/cattlegrid.webp',
           search: 'cattlegrid farm gate enclosure livestock cows sheep pigs horses block animals pass players',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Cattlegrid is designed to control animal movement without the need for gates or doors.`,
+          detailsText: `A Cattlegrid keeps your animals inside without a gate. Use it for farm entrances and paddocks.`,
           detailsBullets: [
-            'Livestock such as Cows, Sheep, Pigs, Chickens, and Horses are unable to cross the Cattlegrid and will stop when stepping onto it.',
-            'Players can walk across the Cattlegrid, but their movement is slightly slowed unless they are in Creative Mode.',
-            'Cats can cross the grid freely and even move slightly faster across it.',
-            'Ideal for farm entrances, paddocks, and animal enclosures where you want to keep animals contained while maintaining easy access.'
+            'Farm animals cannot cross it',
+            'Players can walk over it, a little slower',
+            'Cats cross it easily'
           ]
         }
       ]
@@ -448,7 +466,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'fertilizer',
           title: 'Fertilizer',
           namespace_id: 'farm_and_charm:fertilizer',
-          subtitle: 'Enhanced bone meal that boosts crops over a large area.',
+          subtitle: 'Works just like Bone Meal.',
           icon: '/assets/icons/farm-and-charm/fertilizer.webp',
           search: 'fertilizer enhanced bone meal apply large area crops growth farming'
         },
@@ -456,84 +474,93 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'compost',
           title: 'Compost',
           namespace_id: 'farm_and_charm:compost',
-          subtitle: 'A multi use growth boost for wide areas.',
+          subtitle: 'Fertilizes several crops around you at once. Lasts for ten uses.',
           icon: '/assets/icons/farm-and-charm/compost.webp',
-          search: 'compost 10 uses apply bone meal wide area crops growth farming'
+          search: 'compost 10 uses apply bone meal wide area crops growth farming big giant',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `Use Compost on a crop and two to six random crops in a 5 x 5 area around it grow a stage. One Compost lasts for ten uses.
+
+Compost is also the way to grow [[giant onions and lettuce|big_crops]].`,
+          detailsBullets: [
+            'Boosts two to six crops in a 5 x 5 area',
+            'Ten uses',
+            'Can make onions and lettuce grow big or giant'
+          ]
         },
         {
           id: 'pitchfork',
           title: 'Pitchfork',
           namespace_id: 'farm_and_charm:pitchfork',
-          subtitle: 'A Farming Tool with a special use on Fertilized Soil.',
+          subtitle: 'A hoe with a special trick on Fertilized Soil.',
           icon: '/assets/icons/farm-and-charm/pitchfork.webp',
           search: 'pitchfork hoe fertilized soil bone meal effect farming tool range crops uses durability',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Pitchfork is a versatile Farming Tool. It behaves like a regular Hoe for field work, but its unique feature is interacting with [[Fertilized Soil|fertilized_soil]] to boost nearby crops.`,
+          detailsText: `The Pitchfork tills soil like an iron hoe. Its real job is spreading [[Fertilized Soil|fertilized_soil]]: use it on the soil and every crop within five blocks has a 20% chance to grow a stage. Each block of soil can be used four times.
+
+It also releases the chickens from a [[Chicken Coop|chicken_coop]], and makes a decent weapon. Some zombies carry one.`,
           detailsBullets: [
-            'Fertilized Soil Interaction: Use the Pitchfork on Fertilized Soil to trigger a Bone Meal like Growth Boost in an area around the block.',
-            'Charges: Each Fertilized Soil Block has multiple Uses. Each Pitchfork activation consumes one Size level until the block is depleted.',
-            'Area of Effect: The Growth Boost affects Crops within a configurable Range around the Fertilized Soil Block.',
-            'Chance Based Growth: Each Crop in range has a chance to receive the Bone Meal effect, so repeated Uses are most effective on larger fields.'
+            'Works as a hoe',
+            'Spreads Fertilized Soil: 20% chance per crop within 5 blocks',
+            'Releases chickens from the Chicken Coop'
           ]
         },
         {
           id: 'dungarees',
           title: 'Dungarees',
           namespace_id: 'farm_and_charm:dungarees',
-          subtitle: 'Workwear that rewards careful farming and provides subtle utility benefits.',
+          subtitle: 'Farm workwear that protects your fields and shows how well fed your animals are.',
           icon: '/assets/icons/farm-and-charm/dungarees.webp',
           search: 'dungarees workwear farming armor saturation farmland villager wool repair',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Dungarees are a lightweight piece of farming workwear designed to support long-term agricultural gameplay. While worn, they unlock additional information and small quality-of-life improvements without replacing proper armor.`,
+          detailsText: `Dungarees are worn in the leggings slot. They give only a little protection, but they make farm work easier.`,
           detailsBullets: [
-            'Saturation Insight: While wearing Dungarees, the current Saturation Level of nearby Animals becomes visible.',
-            'Farmland Protection: Farmland will not be trampled while you are wearing Dungarees.',
-            'Light Protection: Provides a small amount of Armor, offering minor protection during farm work.',
-            'Repairable: Dungarees can be repaired using Wool.',
-            'Villager Trade: Can be purchased from Farmer Villagers.'
+            'You do not trample farmland while wearing them',
+            'Shows how well fed your farm animals are',
+            'A little armor'
           ]
         },
         {
           id: 'supply_cart',
           title: 'Supply Cart',
           namespace_id: 'farm_and_charm:supply_cart',
-          subtitle: 'A placeable Cart you can attach to a Horse and use as mobile Storage.',
+          subtitle: 'A cart with a chest, pulled by a horse, a donkey or yourself.',
           icon: '/assets/icons/farm-and-charm/supply_cart.webp',
           search: 'supply cart placeable attach horse detach storage open mobile transport move supplies farm utility',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Supply Cart is a placeable Cart Item. Place it on the ground to spawn the Cart, then attach it to a Horse to move supplies around your Farm.`,
+          detailsText: `Place the Supply Cart on the ground. Right click it to pull it yourself, or right click a tamed horse or donkey to hitch it up.`,
           detailsBullets: [
-            'Place: Use the Item on the ground to place the Cart.',
-            'Attach: Attach the Cart to a Horse to start pulling it.',
-            'Detach: Detach the Cart at any time to park it.',
-            'Storage: Open the Cart to access its Storage while using it.'
+            'Right click to pull it yourself',
+            'Right click a tamed horse or donkey to hitch it',
+            'Sneak and right click to open the chest',
+            'Sneak and right click to unhitch it'
           ]
         },
         {
           id: 'plow',
           title: 'Plow',
           namespace_id: 'farm_and_charm:plow',
-          subtitle: 'A placeable Cart Attachment for Horses that helps prepare fields faster.',
+          subtitle: 'A plow that tills the ground as you pull it.',
           icon: '/assets/icons/farm-and-charm/plow.webp',
           search: 'plow cart placeable attachment attach horse detach toggle plowing farming fields till soil',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Plow is a placeable Cart Attachment. Place it to spawn the Plow, attach it to a Horse, then toggle it while pulling to work your fields.`,
+          detailsText: `Place the Plow on the ground and hitch it to yourself or to a tamed horse or donkey. Lower it and it tills the ground as you go.`,
           detailsBullets: [
-            'Place: Use the Item on the ground to place the Plow.',
-            'Attach: Attach the Plow to a Horse to pull it.',
-            'Toggle: Toggle the Plow while pulling to enable or disable plowing.',
-            'Detach: Detach the Plow to stop using it and park it.'
+            'Right click to pull it yourself',
+            'Right click a tamed horse or donkey to hitch it',
+            'Sneak and right click to lower or raise the plow',
+            'Sneak and right click to unhitch it'
           ]
         },
         {
           id: 'yeast',
           title: 'Yeast',
           namespace_id: 'farm_and_charm:yeast',
-          subtitle: 'A key ingredient for baking and fermentation.',
+          subtitle: 'Needed for bread, pastries and brewing.',
           icon: '/assets/icons/farm-and-charm/yeast.webp',
           search: 'yeast baking fermentation bread pastries ingredient'
         },
@@ -541,7 +568,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'butter',
           title: 'Butter',
           namespace_id: 'farm_and_charm:butter',
-          subtitle: 'A rich ingredient used in many recipes.',
+          subtitle: 'A rich ingredient for many recipes.',
           icon: '/assets/icons/farm-and-charm/butter.webp',
           search: 'butter ingredient cooking baking recipes dairy'
         },
@@ -549,7 +576,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'dough',
           title: 'Dough',
           namespace_id: 'farm_and_charm:dough',
-          subtitle: 'Base dough for breads and baked goods.',
+          subtitle: 'The base for bread and baked goods.',
           icon: '/assets/icons/farm-and-charm/dough.webp',
           search: 'dough bread baking base ingredient pastries'
         },
@@ -557,7 +584,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'raw_pasta',
           title: 'Raw Pasta',
           namespace_id: 'farm_and_charm:raw_pasta',
-          subtitle: 'Uncooked pasta, ready to be prepared into meals.',
+          subtitle: 'Fresh pasta, ready to be cooked.',
           icon: '/assets/icons/farm-and-charm/raw_pasta.webp',
           search: 'raw pasta ingredient cooking meals noodles'
         },
@@ -565,7 +592,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'flour',
           title: 'Flour',
           namespace_id: 'farm_and_charm:flour',
-          subtitle: 'A basic ingredient for baking and cooking.',
+          subtitle: 'Milled grain for baking and cooking.',
           icon: '/assets/icons/farm-and-charm/flour.webp',
           search: 'flour wheat baking ingredient cooking recipes'
         },
@@ -573,7 +600,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'minced_beef',
           title: 'Minced Beef',
           namespace_id: 'farm_and_charm:minced_beef',
-          subtitle: 'Processed meat used in various hearty meals.',
+          subtitle: 'Minced in the Mincer, used in hearty meals.',
           icon: '/assets/icons/farm-and-charm/minced_beef.webp',
           search: 'minced beef meat ingredient cooking meals'
         },
@@ -581,7 +608,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'lamb_ham',
           title: 'Lamb Ham',
           namespace_id: 'farm_and_charm:lamb_ham',
-          subtitle: 'A flavorful cut used in rustic dishes.',
+          subtitle: 'A cut of lamb for rustic dishes.',
           icon: '/assets/icons/farm-and-charm/lamb_ham.webp',
           search: 'lamb ham meat ingredient cooking meals'
         },
@@ -589,7 +616,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'bacon',
           title: 'Bacon',
           namespace_id: 'farm_and_charm:bacon',
-          subtitle: 'A classic ingredient for savory meals.',
+          subtitle: 'A breakfast classic.',
           icon: '/assets/icons/farm-and-charm/bacon.webp',
           search: 'bacon pork meat ingredient cooking meals breakfast'
         },
@@ -597,7 +624,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'chicken_parts',
           title: 'Chicken Parts',
           namespace_id: 'farm_and_charm:chicken_parts',
-          subtitle: 'Useful for cooking and various recipes.',
+          subtitle: 'For chicken dishes and animal feed.',
           icon: '/assets/icons/farm-and-charm/chicken_parts.webp',
           search: 'chicken parts meat ingredient cooking recipes'
         },
@@ -605,15 +632,26 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'cat_food',
           title: 'Cat Food',
           namespace_id: 'farm_and_charm:cat_food',
-          subtitle: 'Helps tame cats and keeps wild cats from running away.',
+          subtitle: 'Makes taming cats easier. Wild cats stop running away while you hold it.',
           icon: '/assets/icons/farm-and-charm/cat_food.webp',
-          search: 'cat food cats tame chance hold in hand wild cats wont run away pet'
+          search: 'cat food cats tame chance hold in hand wild cats wont run away pet bowl gift heal breed',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `While you hold Cat Food, wild cats no longer flee from you. Feed it to a wild cat for a one in three chance to tame it.
+
+Tamed cats are healed by it and get ready to breed. Cats that ate from a [[Pet Bowl|pet_bowl]] are sure to bring their owner a morning gift.`,
+          detailsBullets: [
+            'Wild cats stay put while you hold it',
+            '1 in 3 chance to tame per feeding',
+            'Heals tamed cats and lets them breed',
+            'Fed from a Pet Bowl: guaranteed morning gift'
+          ]
         },
         {
           id: 'dog_food',
           title: 'Dog Food',
           namespace_id: 'farm_and_charm:dog_food',
-          subtitle: 'Tames wolves instantly and grants a special effect.',
+          subtitle: 'Tames a wolf on the first try, heals it and makes it stronger for three minutes.',
           icon: '/assets/icons/farm-and-charm/dog_food.webp',
           search: 'dog food wolves tame first try effect wolf pet'
         },
@@ -621,7 +659,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'horse_fodder',
           title: 'Horse Fodder',
           namespace_id: 'farm_and_charm:horse_fodder',
-          subtitle: 'Tames horses instantly and grants a special effect.',
+          subtitle: 'Tames a horse on the first try, heals it and makes it faster for five minutes.',
           icon: '/assets/icons/farm-and-charm/horse_fodder.webp',
           search: 'horse fodder horses tame first try effect horse mount'
         },
@@ -629,18 +667,18 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'chicken_feed',
           title: 'Chicken Feed',
           namespace_id: 'farm_and_charm:chicken_feed',
-          subtitle: 'Feed chickens and gain a funny effect, even as a player.',
+          subtitle: 'Makes chickens lay more eggs. Players can eat it too, with funny results.',
           icon: '/assets/icons/farm-and-charm/chicken_feed.webp',
           search: 'chicken feed chickens cluck effect player consume',
           details: true,
           detailsTitle: 'Effect',
-          detailsText: `Chicken Feed grants the [[Cluck|mob_effects:cluck]] effect when consumed and also improves chicken related behavior when fed to Chickens.`
+          detailsText: `Feed it to a chicken and it gets [[Cluck|cluck]] for a minute, laying extra eggs and shedding feathers. Eat it yourself and you get Cluck for 20 seconds. Try it.`
         },
         {
           id: 'rotten_tomato',
           title: 'Rotten Tomato',
           namespace_id: 'farm_and_charm:rotten_tomato',
-          subtitle: 'Not edible, but a fun throwable that poisons targets.',
+          subtitle: 'Throw it at someone. It stings a little and makes them feel sick.',
           icon: '/assets/icons/farm-and-charm/rotten_tomato.webp',
           search: 'rotten tomato throwable weapon toss poison creatures friends prank'
         }
@@ -654,20 +692,34 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
         {
           id: 'tea',
           title: 'Tea',
-          subtitle: 'Brewed from wild plants and water in a [[Cooking Pot|cooking_pot]].',
+          subtitle: 'Strawberry, nettle and ribwort tea, brewed with a water bottle in the [[Cooking Pot|cooking_pot]].',
           icon: '/assets/icons/farm-and-charm/strawberry_tea.webp',
-          search: 'tea brew wild plants water cooking pot herbalbrews tea jug glass bottle right click share friends'
+          search: 'tea brew wild plants water cooking pot herbalbrews tea jug glass bottle right click share friends cup',
+          details: true,
+          detailsTitle: 'Sharing tea',
+          detailsText: `Place a jug of tea and right click it with an empty Glass Bottle to pour a cup. Each jug fills two cups, which makes it easy to share with friends. A cup has a smaller effect than the whole jug and gives the bottle back.`,
+          detailsBullets: [
+            'Strawberry Tea Cup: Haste',
+            'Nettle Tea Cup: Instant Health',
+            'Ribwort Tea Cup: Regeneration',
+            'Two cups per jug'
+          ],
+          items: [
+            { id: 'strawberry_tea_cup', title: 'Strawberry Tea Cup', namespace_id: 'farm_and_charm:strawberry_tea_cup', icon: '/assets/icons/farm-and-charm/strawberry_tea_cup.webp' },
+            { id: 'nettle_tea_cup', title: 'Nettle Tea Cup', namespace_id: 'farm_and_charm:nettle_tea_cup', icon: '/assets/icons/farm-and-charm/nettle_tea_cup.webp' },
+            { id: 'ribwort_tea_cup', title: 'Ribwort Tea Cup', namespace_id: 'farm_and_charm:ribwort_tea_cup', icon: '/assets/icons/farm-and-charm/ribwort_tea_cup.webp' }
+          ]
         },
         {
           id: 'food',
           title: 'Food',
           namespace_id: '',
-          subtitle: 'A small peek at the meal selection.',
+          subtitle: 'Hearty farmhouse cooking. Every meal comes with an effect.',
           icon: '/assets/icons/farm-and-charm/bacon_with_eggs.webp',
           search: 'food meals dishes soups pancakes bread meats saturation hunger effects',
           details: true,
           detailsTitle: 'All Meals',
-          detailsText: '',
+          detailsText: `Every Farm & Charm meal gives one of the [[food effects|mob_effects]]: soups give Rested, breakfasts and cakes a blessing, and hearty dishes Sustenance, Satiation or Feast. Many meals can also be placed on the table.`,
    items: [
      {
        id: 'oat_pancake',
@@ -687,7 +739,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
      },
      {
        id: 'potato_with_roast_meat',
-       title: 'Potato With Roast Meat',
+       title: 'Potato with Roast Meat',
        namespace_id: 'farm_and_charm:potato_with_roast_meat',
        subtitle: '',
        icon: '/assets/icons/farm-and-charm/potato_with_roast_meat.webp',
@@ -791,7 +843,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
      },
      {
        id: 'pasta_with_onion_sauce',
-       title: 'Pasta With Onion Sauce',
+       title: 'Pasta with Onion Sauce',
        namespace_id: 'farm_and_charm:pasta_with_onion_sauce',
        subtitle: '',
        icon: '/assets/icons/farm-and-charm/pasta_with_onion_sauce.webp',
@@ -807,7 +859,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
      },
      {
        id: 'oatmeal_with_strawberries',
-       title: 'Oatmeal With Strawberries',
+       title: 'Oatmeal with Strawberries',
        namespace_id: 'farm_and_charm:oatmeal_with_strawberries',
        subtitle: '',
        icon: '/assets/icons/farm-and-charm/oatmeal_with_strawberries.webp',
@@ -815,7 +867,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
      },
      {
        id: 'sausage_with_oat_patty',
-       title: 'Sausage With Oat Patty',
+       title: 'Sausage with Oat Patty',
        namespace_id: 'farm_and_charm:sausage_with_oat_patty',
        subtitle: '',
        icon: '/assets/icons/farm-and-charm/sausage_with_oat_patty.webp',
@@ -823,7 +875,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
      },
      {
        id: 'lamb_with_corn',
-       title: 'Lamb With Corn',
+       title: 'Lamb with Corn',
        namespace_id: 'farm_and_charm:lamb_with_corn',
        subtitle: '',
        icon: '/assets/icons/farm-and-charm/lamb_with_corn.webp',
@@ -831,7 +883,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
      },
      {
        id: 'beef_patty_with_vegetables',
-       title: 'Beef Patty With Vegetables',
+       title: 'Beef Patty with Vegetables',
        namespace_id: 'farm_and_charm:beef_patty_with_vegetables',
        subtitle: '',
        icon: '/assets/icons/farm-and-charm/beef_patty_with_vegetables.webp',
@@ -839,7 +891,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
      },
      {
        id: 'barley_patties_with_potatoes',
-       title: 'Barley Patties With Potatoes',
+       title: 'Barley Patty with Potatoes',
        namespace_id: 'farm_and_charm:barley_patties_with_potatoes',
        subtitle: '',
        icon: '/assets/icons/farm-and-charm/barley_patties_with_potatoes.webp',
@@ -847,7 +899,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
      },
      {
        id: 'bacon_with_eggs',
-       title: 'Bacon With Eggs',
+       title: 'Bacon with Eggs',
        namespace_id: 'farm_and_charm:bacon_with_eggs',
        subtitle: '',
        icon: '/assets/icons/farm-and-charm/bacon_with_eggs.webp',
@@ -855,7 +907,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
      },
      {
        id: 'chicken_wrapped_in_bacon',
-       title: 'Chicken Wrapped In Bacon',
+       title: 'Chicken Wrapped in Bacon with Noodles',
        namespace_id: 'farm_and_charm:chicken_wrapped_in_bacon',
        subtitle: '',
        icon: '/assets/icons/farm-and-charm/chicken_wrapped_in_bacon.webp',
@@ -895,10 +947,10 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
       subtitle: 'Crops and plants found growing naturally in the world, ready to be harvested or cultivated.',
       entries: [
         {
-          id: 'barley',
+          id: 'wild_barley',
           title: 'Barley',
           namespace_id: 'farm_and_charm:wild_barley',
-          subtitle: 'Naturally growing Barley found in Plains, Sunflower Plains, Rivers, and Savannas.',
+          subtitle: 'Wild Barley grows in plains, sunflower plains, savannas and along rivers.',
           icon: '/assets/icons/farm-and-charm/wild_barley.webp',
           search: 'barley grain wild barley farming',
           items: [
@@ -919,7 +971,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               search: 'barley crop plant growth'
             },
             {
-              id: 'wild_crop',
+              id: 'barley_crop',
               title: 'Barley Crop',
               namespace_id: 'farm_and_charm:barley_crop',
               subtitle: 'A fully grown Barley plant waiting to be harvested.',
@@ -933,7 +985,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           title: 'Emmer',
           namespace_id: 'farm_and_charm:wild_emmer',
           subtitle:
-            'An ancient ancestor of modern Wheat, growing in the wild in Plains, Sunflower Plains, Rivers, and Forests, offering an alternative way to obtain Wheat Seeds.',
+            'An ancient ancestor of wheat. Wild Emmer grows in plains, sunflower plains, forests and along rivers, and gives you Wheat Seeds.',
           icon: '/assets/icons/farm-and-charm/wild_emmer.webp',
           search: 'emmer grain wild emmer wheat farming',
           items: [
@@ -964,10 +1016,10 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           ]
         },
         {
-          id: 'oat',
+          id: 'wild_oat',
           title: 'Oat',
           namespace_id: 'farm_and_charm:wild_oat',
-          subtitle: 'A soft grain used for baking and warm breakfasts, generating naturally in Meadows and Taiga.',
+          subtitle: 'A soft grain for baking and warm breakfasts. Wild Oat grows in meadows and taigas.',
           icon: '/assets/icons/farm-and-charm/wild_oat.webp',
           search: 'oat grain wild oat farming',
           items: [
@@ -998,10 +1050,10 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           ]
         },
         {
-          id: 'corn',
+          id: 'wild_corn',
           title: 'Corn',
           namespace_id: 'farm_and_charm:wild_corn',
-          subtitle: 'A tall crop thriving in Plains, Savannas, and Badlands, well suited to warm and dry climates.',
+          subtitle: 'A tall crop for warm, dry places. Wild Corn grows in plains, savannas and badlands.',
           icon: '/assets/icons/farm-and-charm/wild_corn.webp',
           search: 'corn crop wild corn farming',
           items: [
@@ -1032,11 +1084,11 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           ]
         },
         {
-          id: 'tomato',
+          id: 'wild_tomato',
           title: 'Tomato',
           namespace_id: 'farm_and_charm:tomato',
           subtitle:
-            'A sun-loving crop found growing naturally in Plains, Savannas, and Badlands, capable of climbing [[Rope|rope]] when placed above and alongside the plant.',
+            'A sun-loving climber. Wild Tomatoes grow in plains, savannas and badlands, and planted tomatoes climb up [[Rope|rope]].',
           icon: '/assets/icons/farm-and-charm/wild_tomatoes.webp',
           search: 'tomato crop wild tomatoes farming',
           items: [
@@ -1067,10 +1119,10 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           ]
         },
         {
-          id: 'lettuce',
+          id: 'wild_lettuce',
           title: 'Lettuce',
           namespace_id: 'farm_and_charm:lettuce',
-          subtitle: 'A light leafy crop growing naturally in Plains, Swamps, Meadows, and Forests.',
+          subtitle: 'A leafy crop that can grow [[big|big_crops]]. Wild Lettuce grows in plains, meadows, forests, taigas, swamps and along rivers.',
           icon: '/assets/icons/farm-and-charm/wild_lettuce.webp',
           search: 'lettuce crop wild lettuce farming',
           items: [
@@ -1091,7 +1143,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               search: 'lettuce food ingredient'
             },
             {
-              id: 'wild_crop',
+              id: 'lettuce_crop',
               title: 'Lettuce Crop',
               namespace_id: 'farm_and_charm:lettuce_crop',
               subtitle: 'A fully grown Lettuce plant ready to be harvested.',
@@ -1101,11 +1153,11 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           ]
         },
         {
-          id: 'onion',
+          id: 'wild_onion',
           title: 'Onion',
           namespace_id: 'farm_and_charm:onion',
           subtitle:
-            'A sharp and aromatic crop growing naturally in Plains, Swamps, Meadows, and Forests. The Onion itself can be planted to grow more.',
+            'A sharp, aromatic crop that can grow [[big|big_crops]]. Wild Onions grow in plains, meadows, forests, taigas, swamps and along rivers. Plant an onion to grow more.',
           icon: '/assets/icons/farm-and-charm/wild_onions.webp',
           search: 'onion crop wild onions farming',
           items: [
@@ -1118,7 +1170,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               search: 'onion item seed'
             },
             {
-              id: 'wild_crop',
+              id: 'onion_crop',
               title: 'Onion Crop',
               namespace_id: 'farm_and_charm:onion_crop',
               subtitle: 'A fully grown Onion plant rooted just below the soil, ready for harvest.',
@@ -1128,11 +1180,11 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           ]
         },
         {
-          id: 'potato',
+          id: 'wild_potato',
           title: 'Potato',
           namespace_id: 'minecraft:potato',
           subtitle:
-            'Wild Potatoes growing naturally in Meadows, Taiga, and Forests, offering an alternative way to obtain Potatoes.',
+            'Wild Potatoes grow in meadows, forests and taigas, another way to find your first potatoes.',
           icon: '/assets/icons/farm-and-charm/wild_potatoes.webp',
           search: 'potato crop wild potatoes farming',
           items: [
@@ -1145,7 +1197,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               search: 'potato item seed'
             },
             {
-              id: 'wild_crop',
+              id: 'potato_crop',
               title: 'Potato Crop',
               namespace_id: 'minecraft:potatoes',
               subtitle: 'A fully grown Potato plant hidden below the soil, ready for harvest.',
@@ -1155,11 +1207,11 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           ]
         },
         {
-          id: 'carrot',
+          id: 'wild_carrot',
           title: 'Carrot',
           namespace_id: 'minecraft:carrot',
           subtitle:
-            'Wild Carrots growing naturally in Plains, Swamps, Meadows, and Forests, offering an alternative way to obtain Carrots.',
+            'Wild Carrots grow in plains, meadows, forests, taigas, swamps and along rivers, another way to find your first carrots.',
           icon: '/assets/icons/farm-and-charm/wild_carrots.webp',
           search: 'carrot crop wild carrots farming',
           items: [
@@ -1172,7 +1224,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               search: 'carrot item seed'
             },
             {
-              id: 'wild_crop',
+              id: 'carrot_crop',
               title: 'Carrot Crop',
               namespace_id: 'minecraft:carrots',
               subtitle: 'A fully grown Carrot plant hidden below ground, ready for harvest.',
@@ -1182,11 +1234,11 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           ]
         },
         {
-          id: 'beetroot',
+          id: 'wild_beetroot',
           title: 'Beetroot',
           namespace_id: 'minecraft:beetroot',
           subtitle:
-            'Wild Beetroots growing naturally in Plains, Swamps, Meadows, and Forests, offering an alternative way to obtain Beetroot Seeds.',
+            'Wild Beetroots grow in plains, meadows, forests, taigas, swamps and along rivers, and give you Beetroot Seeds.',
           icon: '/assets/icons/farm-and-charm/wild_beetroots.webp',
           search: 'beetroot crop wild beetroots farming',
           items: [
@@ -1207,7 +1259,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
               search: 'beetroot item food'
             },
             {
-              id: 'wild_crop',
+              id: 'beetroot_crop',
               title: 'Beetroot Crop',
               namespace_id: 'minecraft:beetroots',
               subtitle: 'A fully grown Beetroot plant hidden beneath the soil, ready for harvest.',
@@ -1217,10 +1269,62 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           ]
         },
         {
+          id: 'wild_strawberry',
+          title: 'Strawberry',
+          namespace_id: 'farm_and_charm:strawberry',
+          subtitle: 'Wild Strawberries grow in plains, meadows, forests, taigas, savannas and jungles.',
+          icon: '/assets/icons/farm-and-charm/wild_strawberries.webp',
+          search: 'strawberry crop wild strawberries farming',
+          items: [
+            {
+              id: 'strawberry_seeds',
+              title: 'Strawberry Seeds',
+              namespace_id: 'farm_and_charm:strawberry_seeds',
+              subtitle: 'Used to grow Strawberries on farmland.',
+              icon: '/assets/icons/farm-and-charm/strawberry_seeds.webp',
+              search: 'strawberry seeds farming crop'
+            },
+            {
+              id: 'strawberry',
+              title: 'Strawberry',
+              namespace_id: 'farm_and_charm:strawberry',
+              subtitle: 'A sweet berry for cakes, tea and breakfast.',
+              icon: '/assets/icons/farm-and-charm/strawberry.webp',
+              search: 'strawberry food ingredient'
+            },
+            {
+              id: 'strawberry_crop',
+              title: 'Strawberry Crop',
+              namespace_id: 'farm_and_charm:strawberry_crop',
+              subtitle: 'A strawberry plant ready for harvest.',
+              icon: '/assets/icons/farm-and-charm/strawberry_crop.webp',
+              search: 'strawberry crop plant growth'
+            }
+          ]
+        },
+        {
+          id: 'big_crops',
+          title: 'Big and Giant Crops',
+          subtitle: 'Well watered onions and lettuce can grow big, and with compost even giant.',
+          icon: '/assets/icons/farm-and-charm/lettuce_crop.webp',
+          search: 'big giant crops onion lettuce compost water sprinkler harvest',
+          details: true,
+          detailsTitle: 'How it works',
+          detailsText: `Fully grown onions and lettuce sometimes turn into big crops if there is water or a [[Water Sprinkler|water_sprinkler]] close by. In warm, sunny rain they can grow big too.
+
+Big crops that you treat with [[Compost|compost]] have a chance to become giant.`,
+          detailsBullets: [
+            'Normal: 1 to 2 crops',
+            'Big: 2 to 6 crops',
+            'Giant: 4 to 8 crops',
+            'Needs water or a sprinkler nearby'
+          ]
+        },
+        {
           id: 'nettle',
           title: 'Nettle',
           namespace_id: 'farm_and_charm:wild_nettle',
-          subtitle: 'A wild herb growing in Swamps, commonly used for brewing simple herbal teas.',
+          subtitle: 'A wild herb from forests and swamps, used for nettle tea and nettle beer from Brewery.',
           icon: '/assets/icons/farm-and-charm/wild_nettle.webp',
           search: 'nettle wild plant tea swamp'
         },
@@ -1228,7 +1332,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'ribwort',
           title: 'Ribwort',
           namespace_id: 'farm_and_charm:wild_ribwort',
-          subtitle: 'A hardy wild herb growing in Plains and Meadows, often used for brewing herbal teas.',
+          subtitle: 'A hardy wild herb from forests and swamps, used for ribwort tea.',
           icon: '/assets/icons/farm-and-charm/wild_ribwort.webp',
           search: 'ribwort wild plant tea plains meadow'
         }
@@ -1315,7 +1419,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
         {
           id: 'foxes',
           title: 'Foxes',
-          subtitle: 'Foxes have developed a fondness for sweet berries.',
+          subtitle: 'Foxes have developed a fondness for strawberries.',
           icon: '/assets/icons/farm-and-charm/entity/fox.webp',
           items: [
             {
@@ -1329,7 +1433,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
         {
           id: 'parrots',
           title: 'Parrots',
-          subtitle: 'Parrots can be tempted and fed with grains.',
+          subtitle: 'Parrots love corn.',
           icon: '/assets/icons/farm-and-charm/entity/parrot.webp',
           items: [
             {
@@ -1393,7 +1497,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'satiation',
           title: 'Satiation',
           namespace_id: 'farm_and_charm:satiation',
-          subtitle: 'Prevents hunger from draining too quickly by managing food exhaustion.',
+          subtitle: 'Heals you a little every two seconds while you are well fed.',
           icon: '/assets/icons/farm-and-charm/effects/satiation.webp',
           search: 'satiation effect hunger exhaustion'
         },
@@ -1401,7 +1505,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'rested',
           title: 'Rested',
           namespace_id: 'farm_and_charm:rested',
-          subtitle: 'Increases Experience Points gained while the effect is active.',
+          subtitle: 'Experience orbs are worth more.',
           icon: '/assets/icons/farm-and-charm/effects/rested.webp',
           search: 'rested effect experience xp'
         },
@@ -1409,7 +1513,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'sustenance',
           title: 'Sustenance',
           namespace_id: 'farm_and_charm:sustenance',
-          subtitle: 'Restores 1 Hunger every 6 seconds. If full, regenerates 1 Health instead.',
+          subtitle: 'Fills your hunger bar a little every ten seconds. When it is full, it heals you instead.',
           icon: '/assets/icons/farm-and-charm/effects/sustenance.webp',
           search: 'sustenance effect hunger health regen'
         },
@@ -1417,15 +1521,15 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'feast',
           title: 'Feast',
           namespace_id: 'farm_and_charm:feast',
-          subtitle: 'Combines Sustenance with Satiation in a single powerful buff.',
+          subtitle: 'Sustenance and Satiation in one.',
           icon: '/assets/icons/farm-and-charm/effects/feast.webp',
           search: 'feast effect sustenance satiation'
         },
         {
           id: 'farmers_blessing',
-          title: "Farmer's Blessing",
+          title: 'Farmers Blessing',
           namespace_id: 'farm_and_charm:farmers_blessing',
-          subtitle: 'Removes all negative status effects for the duration of the effect.',
+          subtitle: 'Removes all harmful effects while it lasts.',
           icon: '/assets/icons/farm-and-charm/effects/farmers_blessing.webp',
           search: 'farmers blessing effect cleanse'
         },
@@ -1433,7 +1537,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'grandmas_blessing',
           title: "Grandma's Blessing",
           namespace_id: 'farm_and_charm:grandmas_blessing',
-          subtitle: 'Removes all negative status effects and increases Luck by 2 while active.',
+          subtitle: 'Removes all harmful effects and gives +2 Luck while it lasts.',
           icon: '/assets/icons/farm-and-charm/effects/grandmas_blessing.webp',
           search: 'grandmas blessing effect cleanse luck'
         },
@@ -1441,33 +1545,25 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'cluck',
           title: 'Cluck',
           namespace_id: 'farm_and_charm:cluck',
-          subtitle: 'Increases egg laying and feather shedding when Chicken Feed is given to chickens.',
+          subtitle: 'Now and then you drop an egg or a feather. Works on chickens and on players.',
           icon: '/assets/icons/farm-and-charm/effects/cluck.webp',
           search: 'cluck effect chicken eggs feathers'
         },
         {
-          id: 'horse_fodder',
+          id: 'horse_fodder_effect',
           title: 'Horse Fodder',
           namespace_id: 'farm_and_charm:horse_fodder',
-          subtitle: 'Increases the movement speed and jump strength of Horses.',
+          subtitle: 'Horses run faster and jump higher.',
           icon: '/assets/icons/farm-and-charm/effects/horse_fodder.webp',
           search: 'horse fodder effect horse speed jump'
         },
         {
-          id: 'dog_food',
+          id: 'dog_food_effect',
           title: 'Dog Food',
           namespace_id: 'farm_and_charm:dog_food',
-          subtitle: 'Increases Attack Damage, Attack Speed, and Knockback Resistance of Wolves.',
+          subtitle: 'Wolves hit harder and faster and are harder to knock back.',
           icon: '/assets/icons/farm-and-charm/effects/dog_food.webp',
           search: 'dog food effect wolf damage speed knockback'
-        },
-        {
-          id: 'cat_food',
-          title: 'Cat Food',
-          namespace_id: 'farm_and_charm:cat_food',
-          subtitle: 'Restores health. Cats only.',
-          icon: '/assets/icons/farm-and-charm/effects/cat_food.webp',
-          search: 'cat food effect cat heal'
         }
       ]
     },
@@ -1479,15 +1575,24 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
         {
           id: 'config',
           title: 'Configuration',
-          subtitle:
-            'Most gameplay features of Farm & Charm can be adjusted via a configuration file, usually located at `config/farm_and_charm.json`.',
+          subtitle: 'Growth boosts, taming, effects and the food values of every meal can be adjusted in the config.',
           icon: '/assets/icons/misc/config.webp',
-          search: 'config configuration settings options balance json farm and charm'
+          search: 'config configuration settings options balance farm and charm',
+          details: true,
+          detailsTitle: 'Configuration File',
+          detailsText: `On Fabric the settings are in config/farm_and_charm.json, on NeoForge in the mod's config file.`,
+          detailsBullets: [
+            'Ranges of Fertilized Soil, Water Sprinkler and Feeding Trough',
+            'Rain growth on or off, and how strong it is',
+            'Taming with animal food, horse and chicken effects',
+            'Hunger and saturation of every meal',
+            'Timings of the food effects'
+          ]
         },
         {
           id: 'rain_growth',
           title: 'Rain Growth',
-          subtitle: 'Crops can grow faster during rain. During thunderstorms, growth is boosted even further.',
+          subtitle: 'Crops out in the rain grow faster, and even faster during a thunderstorm.',
           icon: '/assets/icons/misc/weather.webp',
           search: 'rain crop growth faster thunderstorm'
         },
@@ -1495,7 +1600,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'armed_zombies',
           title: 'Armed Zombies',
           subtitle:
-            'Zombies have a small chance to spawn holding Farm & Charm tools, such as [[Pitchforks|pitchfork]].',
+            'About 3% of zombies spawn with a [[Pitchfork|pitchfork]] in hand.',
           icon: '/assets/icons/misc/zombie.webp',
           search: 'zombie pitchfork weapon spawn'
         },
@@ -1503,7 +1608,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'animal_saturation',
           title: 'Animal Saturation',
           subtitle:
-            "Feeding animals over time increases their saturation level, rewarding careful farming with increased loot drops. While wearing [[Dungarees|dungarees]], the animal's current saturation level becomes visible.",
+            'Well fed farm animals drop more loot. Wear [[Dungarees|dungarees]] to see how well fed they are.',
           icon: '/assets/icons/farm-and-charm/leather.webp',
           search: 'animal saturation feeding bonus loot'
         },
@@ -1511,7 +1616,7 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'vanilla_soups_effects',
           title: 'Soups and Effects',
           subtitle:
-            'Vanilla soups such as Mushroom Stew, Beetroot Soup, and Rabbit Stew now grant Farm & Charm food effects, rewarding warm meals with additional nourishment.',
+            'Mushroom Stew, Beetroot Soup and Rabbit Stew now give [[Sustenance|sustenance]].',
           icon: '/assets/icons/farm-and-charm/soup.webp',
           search: 'vanilla soup mushroom stew beetroot soup rabbit stew sustenance effect'
         },
@@ -1519,34 +1624,9 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
           id: 'farmland_planting_particles',
           title: 'Planting Feedback',
           subtitle:
-            'Planting crops on Farmland now creates subtle soil particles, visually showing that seeds are being pressed into the earth.',
+            'Planting seeds on farmland kicks up a few crumbs of soil.',
           icon: '/assets/icons/farm-and-charm/fertilized_farmland.webp',
           search: 'farmland planting particles seeds wheat crop visual feedback soil effect block particles'
-        },
-        {
-          id: 'farmer_trades',
-          title: 'Expanded Trades',
-          subtitle:
-            'Certain Farm & Charm items have been added to Farmer Villager trade pools, allowing them to be obtained naturally through trading.',
-          icon: '/assets/icons/misc/emerald.webp',
-          search: 'farmer villager trades farm and charm items economy progression'
-        },
-        {
-          id: 'loot',
-          title: 'Loot and Exploration',
-          subtitle: 'Certain items and ingredients can be found while exploring the world.',
-          icon: '/assets/icons/misc/chest.webp',
-          search: 'loot chest dungeon village exploration items ingredients',
-          details: true,
-          detailsTitle: 'Where to find loot',
-          detailsText: `Some items and ingredients can be found naturally while exploring the world.
-
-  They may appear in various loot containers, such as village chests, dungeon chests, or other generated structures.`,
-          detailsBullets: [
-            'Items and ingredients can appear in loot chests',
-            'Found in villages, dungeons, and other structures',
-            'Encourages exploration alongside farming'
-          ]
         }
       ]
     }
@@ -1554,16 +1634,14 @@ Drying continues regardless of whether the Hatch is open or closed. However, whe
 recipesCta: {
   enabled: true,
   title: "Recipes",
-  text: `Feeling a little lost and not sure how to craft certain things?
+  text: `Not sure how to make something?
 
-Here you will find a helpful overview of all Let’s Do crafting stations and their recipes.
-
-`,
+The recipe overview lists every Let's Do crafting station and its recipes.`,
   buttonLabel: "Open Recipe Overview",
   href: "/recipes/"
 },
   impressionsTitle: 'Everyday Scenes',
-  impressionsSubtitle: 'A closer look at how everything comes together ingame',
+  impressionsSubtitle: 'A closer look at how everything comes together in game',
   impressions: [
     { src: '/assets/impressions/farm-and-charm/01.webp', caption: 'Tomatoes growing on a rope' },
     { src: '/assets/impressions/farm-and-charm/02.webp', caption: 'A wooden cart in everyday use' },

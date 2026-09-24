@@ -3,67 +3,64 @@ export default {
   title: 'Bakery',
   logo: '/assets/mod-logos/bakery.webp',
   aboutTitle: 'Welcome',
-  aboutSubtitle: 'Baking, pastries, and bakery essentials',
-  aboutText: `Welcome to the Bakery Wiki.
+  aboutSubtitle: 'Fresh bread, cakes and a bakery to sell them in',
+  aboutText: `Bakery is all about baking: breads and buns, cakes, cupcakes and cookies, tarts, jams and spreads.
 
-This is your home for items, stations, food, and mechanics added by Bakery.
+Cakes are decorated by hand on the Caking Station, everyday meals simmer in the Small Cooking Pot, and a range of displays, trays and cabinets lets you set up a proper bakery shop.
 
-Bakery focuses on baking workflows: dough, jams, pastries, serving pieces, and a small set of bakery furniture for preparation and storage.`,
+Many baked goods also give special effects. Bread keeps you going for longer, and sweets give you a sugar rush.`,
   sections: [
     {
       id: 'stations',
       title: 'Stations and Processing',
-      subtitle: 'Interactive pieces used for baking and preparation.',
+      subtitle: 'Where the baking happens.',
       entries: [
         {
           id: 'baker_station',
-          title: 'Baker Station',
+          title: 'Caking Station',
           namespace_id: 'bakery:baker_station',
-          subtitle: 'The main work surface for shaping, cutting, and finishing baked goods. Works with [[Rolling Pin|rolling_pin]] and [[Bread Knife|bread_knife]].',
+          subtitle: 'A work surface for decorating cakes, cupcakes and cookies by hand, using the [[Rolling Pin|rolling_pin]] and [[Bread Knife|bread_knife]].',
           icon: '/assets/icons/bakery/baker_station.webp',
-          search: 'baker station baking cake cupcake cookie dough jam rolling pin knife',
+          search: 'caking station baker station baking cake cupcake cookie dough jam spread truffle gateau rolling pin knife',
           details: true,
           detailsTitle: 'How baking works',
-          detailsText: `The Baker Station is a hands-on baking surface. It does not use a crafting interface.
+          detailsText: `The Caking Station has no crafting menu. Everything happens on top of it.
 
-Baking is done by placing a Blank Cake on top of the station and interacting with it using tools and toppings.
+Use [[Cake Dough|cake_dough]] on the station to put a Blank Cake on it. What it turns into depends on what you use next:
 
-Use a [[Bread Knife|bread_knife]] to cut, and a [[Rolling Pin|rolling_pin]] to shape.
+Jam or Chocolate Spread turns it into a finished cake right away. A Chocolate Truffle makes a Chocolate Gateau.
+A [[Bread Knife|bread_knife]] cuts it into cupcakes. Finish them with Strawberry, Sweetberry or Apple Jam.
+Roll the cupcakes flat with a [[Rolling Pin|rolling_pin]] to get cookies. Glaze them with Strawberry Jam, Sweetberry Jam or Chocolate Spread.
 
-What you get depends entirely on the order of interactions.`,
+You get the empty Jar back every time.`,
           detailsBullets: [
-            'Place a Blank Cake on top of the Baker Station',
-            'Using Jam or a Spread directly creates a finished Cake',
-            'Using a Knife cuts the cake into Cupcakes',
-            'Using a Knife followed by a Rolling Pin turns it into Cookies',
-            'Cupcakes and Cookies must be finished with a glaze or spread',
-            'Examples include Jam or Chocolate Spread'
+            'Use Cake Dough on the station to start a Blank Cake',
+            'Jam or Chocolate Spread: Strawberry, Sweetberry or Chocolate Cake',
+            'Chocolate Truffle: Chocolate Gateau',
+            'Bread Knife: cupcakes, finished with Strawberry, Sweetberry or Apple Jam',
+            'Knife, then Rolling Pin: cookies, glazed with Strawberry, Sweetberry or Chocolate',
+            'Empty Jars are returned'
           ]
         },
         {
           id: 'small_cooking_pot',
           title: 'Small Cooking Pot',
           namespace_id: 'bakery:small_cooking_pot',
-          subtitle: 'A cozy Station for preparing basic Meals, powered by Heat. Doubles as an emergency weapon.',
+          subtitle: 'A small pot for simple meals. Needs heat from below, and makes a decent club in a pinch.',
           icon: '/assets/icons/bakery/small_cooking_pot.webp',
-          search: 'small cooking pot meals basic hot surface stove magma campfire bubbles recipe weapon',
+          search: 'small cooking pot meals heat stove magma lava cauldron recipe weapon',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Small Cooking Pot functions similarly to other Crafting Stations, but focuses on preparing basic Meals. It requires a Heat Source to operate and cannot be used on its own.
+          detailsText: `The Small Cooking Pot has six ingredient slots, one container slot and one output slot. A meal takes 45 seconds.
 
-The Small Cooking Pot has six Ingredient Input Slots, one Container Slot, and one Output Slot.
+It only cooks while it sits on a heat source, such as a Magma Block, a Lava Cauldron or a stove from other Let's Do mods. Rising bubbles, cooking sounds and a lit flame in the menu show that it is working.
 
-After placing the Ingredients into the Input Slots, the Cooking Process takes about thirty seconds. Once completed, the prepared Meal appears in the Output Slot.
-
-To function, the Small Cooking Pot must be placed on a Hot Surface, such as a Stove, a Magma Block, or other Heat Sources. In some cases, it can also be placed directly on a Campfire. When active, this is indicated by rising Bubbles, Cooking Sounds, and a colored Fire Indicator in the Cooking Pot Interface.
-
-Despite its cozy purpose, the Small Cooking Pot can also be wielded as a weapon if absolutely necessary.`,
+Held in the hand, the pot also works as a weapon.`,
           detailsBullets: [
-            'Six Ingredient Input Slots',
-            'One Container Slot and one Output Slot',
-            'Requires a valid Heat Source',
-            'Cooking takes about thirty seconds',
-            'Active State is shown by Bubbles, Sounds, and a colored Fire Indicator',
+            'Six ingredient slots, one container slot, one output slot',
+            'A meal takes 45 seconds',
+            'Needs a heat source below it',
+            'Bubbles, sounds and a flame icon show it is cooking',
             'Can be used as a melee weapon'
           ]
         }
@@ -72,42 +69,39 @@ Despite its cozy purpose, the Small Cooking Pot can also be wielded as a weapon 
     {
       id: 'decor',
       title: 'Decor and Building',
-      subtitle: 'Furniture, storage, and display pieces.',
+      subtitle: 'Furniture, storage and displays for your bakery.',
       entries: [
         {
           id: 'brick_counter',
           title: 'Brick Counter',
           namespace_id: 'bakery:brick_counter',
-          subtitle: 'A brick counter block that connects vertically to form continuous counter lines.',
+          subtitle: 'A brick counter that joins with its neighbours into one long work surface.',
           icon: '/assets/icons/bakery/brick_counter.webp',
-          search: 'brick counter vertical connect bakery',
+          search: 'brick counter connect bakery',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Brick Counter is a decorative counter block designed to build continuous kitchen and bakery work surfaces. It connects vertically to adjacent Brick Counters for a clean, unified look.
-
-It pairs well with the Brick Sink and other bakery furniture to create a complete preparation area.`,
+          detailsText: `Place Brick Counters side by side and they join into one continuous counter. Goes well with the [[Brick Sink|kitchen_sink]].`,
           detailsBullets: [
-            'Connects vertically to adjacent Brick Counters',
-            'Decorative counter block for bakery interiors',
-            'Pairs well with the Brick Sink and kitchen furniture'
+            'Connects with neighbouring counters',
+            'Decorative'
           ]
         },
         {
           id: 'kitchen_sink',
           title: 'Brick Sink',
           namespace_id: 'bakery:kitchen_sink',
-          subtitle: 'A functional sink you can fill and empty with buckets and bottles.',
+          subtitle: 'A brick sink you can fill with water and draw from.',
           icon: '/assets/icons/bakery/kitchen_sink.webp',
-          search: 'kitchen sink bakery filled bucket bottle water potion',
+          search: 'kitchen sink brick bakery filled bucket bottle water',
           details: true,
           detailsTitle: 'Function',
-          detailsText: `Use a Water Bucket or Glass Bottle on the lower half to fill it.
+          detailsText: `Right click the lower half with an empty hand to turn on the tap, or pour in a Water Bucket.
 
-If it is filled, use an empty Bucket to get a Water Bucket, or a Glass Bottle to get a Water Potion.`,
+Once it is filled, draw water with an empty Bucket or a Glass Bottle.`,
           detailsBullets: [
-            'Use Water Bucket or Glass Bottle to fill',
-            'Use empty Bucket for a Water Bucket',
-            'Use Glass Bottle for a Water Potion',
+            'Fill with an empty hand or a Water Bucket',
+            'Empty Bucket gives a Water Bucket',
+            'Glass Bottle gives a Water Bottle',
             'Interact with the lower half'
           ]
         },
@@ -115,242 +109,221 @@ If it is filled, use an empty Bucket to get a Water Bucket, or a Glass Bottle to
           id: 'cabinet',
           title: 'Cabinet',
           namespace_id: 'bakery:cabinet',
-          subtitle: 'A storage cabinet for bakery interiors.',
+          subtitle: 'A wooden cabinet with 36 slots of storage.',
           icon: '/assets/icons/bakery/cabinet.webp',
           search: 'cabinet storage bakery',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Cabinet is a functional storage block for bakery kitchens and preparation rooms. It provides a tidy inventory for storing ingredients, tools, and baked goods.`,
+          detailsText: `Right click to open its 36 slots. Plenty of room for flour, sugar and tools.`,
           detailsBullets: [
-            'Right-click to open and access storage',
-            'Fits naturally in bakery kitchens and interiors',
-            'Pairs well with the Drawer and Wall Cabinet'
+            'Right click to open',
+            '36 storage slots'
           ]
         },
         {
           id: 'drawer',
           title: 'Drawer',
           namespace_id: 'bakery:drawer',
-          subtitle: 'A compact storage drawer for ingredients and tools.',
+          subtitle: 'A chest of drawers with 36 slots of storage.',
           icon: '/assets/icons/bakery/drawer.webp',
           search: 'drawer storage bakery',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Drawer is a compact storage block designed for bakery counters and preparation areas. It slides open for quick access to ingredients and small tools.`,
+          detailsText: `Works like the [[Cabinet|cabinet]], with drawers instead of doors.`,
           detailsBullets: [
-            'Right-click to open and access storage',
-            'Compact design fits under counters',
-            'Pairs well with the Cabinet and Brick Counter'
+            'Right click to open',
+            '36 storage slots'
           ]
         },
         {
           id: 'wall_cabinet',
           title: 'Wall Cabinet',
           namespace_id: 'bakery:wall_cabinet',
-          subtitle: 'Wall mounted storage to keep counters clear.',
+          subtitle: 'A cabinet that hangs on the wall above your counters.',
           icon: '/assets/icons/bakery/wall_cabinet.webp',
           search: 'wall cabinet storage bakery',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Wall Cabinet mounts directly onto walls, keeping counter space free for baking and preparation. It provides accessible storage for ingredients and utensils without occupying floor space.`,
+          detailsText: `Hangs on the wall and keeps the counters below free for work.`,
           detailsBullets: [
-            'Mounts on walls',
-            'Right-click to open and access storage',
-            'Keeps counter space clear for baking'
+            'Mounted on walls',
+            'Right click to open'
           ]
         },
         {
           id: 'iron_bench',
           title: 'Iron Bench',
           namespace_id: 'bakery:iron_bench',
-          subtitle: 'Simple iron seating.',
+          subtitle: 'A wrought iron bench for cafés and gardens.',
           icon: '/assets/icons/bakery/iron_bench.webp',
-          search: 'iron bench seating bakery',
+          search: 'iron bench seating bakery cafe',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Iron Bench is a simple decorative seating block made from iron. Right-click to sit down. It fits naturally in bakery dining areas and outdoor spaces alongside the Iron Table and Iron Chair.`,
+          detailsText: `Right click to sit down. Part of the iron café set with the [[Iron Chair|iron_chair]] and [[Iron Table|iron_table]].`,
           detailsBullets: [
-            'Right-click to sit',
-            'Decorative iron seating block',
-            'Pairs well with the Iron Table and Iron Chair'
+            'Right click to sit'
           ]
         },
         {
           id: 'iron_chair',
           title: 'Iron Chair',
           namespace_id: 'bakery:iron_chair',
-          subtitle: 'A simple iron chair.',
+          subtitle: 'A wrought iron café chair.',
           icon: '/assets/icons/bakery/iron_chair.webp',
-          search: 'iron chair seating bakery',
+          search: 'iron chair seating bakery cafe',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Iron Chair is a simple decorative seating block made from iron. Right-click to sit down. It pairs naturally with the Iron Table for a complete cafe or bakery dining setup.`,
+          detailsText: `Right click to sit down. Pairs with the [[Iron Table|iron_table]].`,
           detailsBullets: [
-            'Right-click to sit',
-            'Decorative iron seating block',
-            'Pairs well with the Iron Table'
+            'Right click to sit'
           ]
         },
         {
           id: 'iron_table',
           title: 'Iron Table',
           namespace_id: 'bakery:iron_table',
-          subtitle: 'A sturdy iron table.',
+          subtitle: 'A small wrought iron café table.',
           icon: '/assets/icons/bakery/iron_table.webp',
-          search: 'iron table bakery',
+          search: 'iron table bakery cafe',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Iron Table is a sturdy decorative table block made from iron. It suits bakery dining areas, outdoor patios, and cafe setups. Pair it with Iron Chairs or Iron Benches for a complete seating arrangement.`,
+          detailsText: `A decorative table for cafés, terraces and shop windows. Add [[Iron Chairs|iron_chair]] or an [[Iron Bench|iron_bench]].`,
           detailsBullets: [
-            'Decorative iron table block',
-            'Pairs well with Iron Chairs and Iron Benches',
-            'Suits bakery dining areas and outdoor spaces'
+            'Decorative table'
           ]
         },
         {
           id: 'street_sign',
           title: 'Street Sign',
           namespace_id: 'bakery:street_sign',
-          subtitle: 'A writable sign for streets, storefronts, and small notices.',
+          subtitle: 'A sign you can write on, for shop names, menus and directions.',
           icon: '/assets/icons/bakery/street_sign.webp',
-          search: 'street sign storefront writable bakery',
+          search: 'street sign storefront writable glow ink bakery',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Street Sign is a writable sign piece intended for streets, shops, and bakery fronts.
-
-Right-click the sign to open the text screen and write short messages such as shop names, menus, or directions.
-
-Glow Ink can be applied to make the text glow, improving visibility at night or indoors.`,
+          detailsText: `Right click the sign to write on it. Use a Glow Ink Sac to make the text glow in the dark.`,
           detailsBullets: [
-            'Writable sign decoration',
-            'Right-click to open the text interface',
-            'Supports glowing text using Glow Ink',
-            'Ideal for storefronts, streets, and menus',
-            'Requires a supporting block'
+            'Right click to write on it',
+            'Glow Ink Sac makes the text glow'
           ]
         },
         {
           id: 'cake_stand',
           title: 'Cake Stand',
           namespace_id: 'bakery:cake_stand',
-          subtitle: 'A serving stand for cakes and baked goods. Great for presenting [[Cakes and slices|cakes]].',
+          subtitle: 'A glass stand for one whole cake or three small treats. Made for [[cakes|cakes]].',
           icon: '/assets/icons/bakery/cake_stand.webp',
-          search: 'cake stand bakery display',
+          search: 'cake stand bakery display glass',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Cake Stand can display either a single whole cake block or up to three food items.
+          detailsText: `The Cake Stand holds either one whole cake or up to three smaller food items.
 
-Hold a valid item and right-click the Cake Stand to place it.
-Right-click with an empty hand to take items back.`,
+Right click with an item to put it on the stand. Sneak and right click to take it off again.`,
           detailsBullets: [
-            'Displays one full cake block or up to 3 food items',
-            'Right-click with item to place',
-            'Right-click with empty hand to remove items'
+            'One whole cake or up to three food items',
+            'Right click with an item to place it',
+            'Sneak right click to take it off'
           ]
         },
         {
           id: 'cake_display',
           title: 'Cake Display',
           namespace_id: 'bakery:cake_display',
-          subtitle: 'A glass display for showcasing baked goods, especially [[Cakes and slices|cakes]] and [[Pastries and sweets|pastries]].',
+          subtitle: 'A glass counter with two shelves for slices and pastries.',
           icon: '/assets/icons/bakery/cake_display.webp',
-          search: 'cake display bakery shelf',
+          search: 'cake display bakery shelf glass counter',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Cake Display renders food items on two shelves.
+          detailsText: `The Cake Display holds up to six items, three on each shelf. It takes food items such as [[slices|cakes]], cupcakes and cookies, but no whole cakes. Displays placed side by side connect.
 
-Up to three food items can be placed on the lower shelf and three on the upper shelf.`,
+Right click an empty spot with an item to place it, and right click a filled spot to take it back.`,
           detailsBullets: [
-            'Displays up to 6 food items',
-            '3 items on the lower shelf',
-            '3 items on the upper shelf',
-            'Right-click with item to place',
-            'Right-click with empty hand to remove items'
+            'Six spots, three per shelf',
+            'For items, not for whole cakes',
+            'Connects with neighbouring displays',
+            'Right click a spot to place or take an item'
           ]
         },
         {
           id: 'cupcake_display',
           title: 'Cupcake Display',
           namespace_id: 'bakery:cupcake_display',
-          subtitle: 'A compact display for cupcakes and small pastries. Pairs with [[Pastries and sweets|pastries]].',
+          subtitle: 'A wooden display with two shelves for cupcakes and other treats.',
           icon: '/assets/icons/bakery/cupcake_display.webp',
           search: 'cupcake display bakery shelf',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Cupcake Display works the same way as the Cake Display, using two shelves to present baked goods.`,
+          detailsText: `Holds up to six items, three on each shelf. Unlike the [[Cake Display|cake_display]], it accepts any item.
+
+Right click an empty spot with an item to place it, and right click a filled spot to take it back.`,
           detailsBullets: [
-            'Displays up to 6 food items',
-            '3 items on the lower shelf',
-            '3 items on the upper shelf',
-            'Right-click with item to place',
-            'Right-click with empty hand to remove items'
+            'Six spots, three per shelf',
+            'Accepts any item',
+            'Right click a spot to place or take an item'
           ]
         },
         {
           id: 'breadbox',
-          title: 'Breadbox',
+          title: 'Bread Box',
           namespace_id: 'bakery:breadbox',
-          subtitle: 'A wooden breadbox with an opening lid.',
+          subtitle: 'A wooden box with a lid that keeps one loaf fresh.',
           icon: '/assets/icons/bakery/breadbox.webp',
-          search: 'breadbox bakery bread storage',
+          search: 'breadbox bread box bakery bread storage lid',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Breadbox displays a single bread item as a 3D model.
+          detailsText: `The Bread Box holds a single loaf or other food item and shows it inside.
 
-Use Shift + Right-click to open or close the lid.`,
+Right click with the item to put it in and right click again to take it out. Sneak and right click to open or close the lid.`,
           detailsBullets: [
-            'Displays one bread item as a 3D model',
-            'Shift + Right-click to open or close the lid',
-            'Right-click with item to place bread',
-            'Right-click with empty hand to remove bread'
+            'Holds one food item',
+            'Right click to put it in or take it out',
+            'Sneak right click to open or close the lid'
           ]
         },
         {
           id: 'tray',
           title: 'Tray',
           namespace_id: 'bakery:tray',
-          subtitle: 'A serving tray for bread and baked goods. Perfect with [[Breads and buns|breads]] and [[Pastries and sweets|pastries]].',
+          subtitle: 'A wooden tray to present up to five baked goods in a row. Perfect for [[breads|breads]].',
           icon: '/assets/icons/bakery/tray.webp',
-          search: 'tray bakery serving',
+          search: 'tray bakery serving bread',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Tray can display either a single bread item as a 3D model or multiple food items in a row.`,
+          detailsText: `The Tray holds up to five items side by side. Right click a free spot with an item to place it and right click it again to take it back.
+
+A Tray is also used to craft the [[Basket of Bread|bread_crate]] and comes back once the basket is empty.`,
           detailsBullets: [
-            'Displays one bread item as a 3D model or up to 5 food items',
-            'Food items are rendered in a row',
-            'Right-click with item to place',
-            'Right-click with empty hand to remove items'
+            'Up to five items in a row',
+            'Right click a spot to place or take an item'
           ]
         },
         {
           id: 'wall_display',
           title: 'Wall Display',
           namespace_id: 'bakery:wall_display',
-          subtitle: 'A wall mounted display shelf for baked goods.',
+          subtitle: 'A wall shelf for bread and pastries.',
           icon: '/assets/icons/bakery/wall_display.webp',
-          search: 'wall display bakery shelf',
+          search: 'wall display bakery shelf bread',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Wall Display presents food items across two shelves.`,
+          detailsText: `The Wall Display hangs on the wall and holds four items, two on each shelf. It takes food items and all Bakery breads.`,
           detailsBullets: [
-            'Displays up to 4 food items',
-            '2 items on the lower shelf',
-            '2 items on the upper shelf',
-            'Right-click with item to place',
-            'Right-click with empty hand to remove items'
+            'Four spots, two per shelf',
+            'Takes food items and Bakery breads',
+            'Right click a spot to place or take an item'
           ]
         },
         {
           id: 'jars',
-          title: 'Jars and Jam',
-          subtitle: 'Stackable jar pieces and jam variants.',
+          title: 'Jars, Jams and Spreads',
+          subtitle: 'Jars and their fillings, stackable up to four high.',
           icon: '/assets/icons/bakery/jar.webp',
-          search: 'jar jam strawberry glowberry sweetberry chocolate apple stackable',
+          search: 'jar jam spread strawberry glowberry sweetberry chocolate apple stackable',
           details: true,
           detailsTitle: 'Included Pieces',
-          detailsText: `A small set of jar pieces used for kitchens and shelves.
+          detailsText: `Jars can be placed and stacked up to four high, which looks great on shelves.
 
-Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]].`,
+Jams and Chocolate Spread decorate cakes, cupcakes and cookies on the [[Caking Station|baker_station]]. The empty Jar comes back afterwards.`,
           items: [
             {
               id: 'jar',
@@ -382,10 +355,10 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
             },
             {
               id: 'chocolate_jam',
-              title: 'Chocolate Jam',
+              title: 'Chocolate Spread',
               namespace_id: 'bakery:chocolate_jam',
               icon: '/assets/icons/bakery/chocolate_jam.webp',
-              search: 'chocolate jam'
+              search: 'chocolate spread jam'
             },
             {
               id: 'apple_jam',
@@ -400,18 +373,18 @@ Jam is commonly used to finish baked goods at the [[Baker Station|baker_station]
           id: 'bakery_banner',
           title: 'Completionist Banner',
           namespace_id: 'bakery:bakery_banner',
-          subtitle: 'A reward banner for completing Bakery foods.',
+          subtitle: 'The reward for collecting every Bakery treat.',
           icon: '/assets/icons/bakery/bakery_banner.webp',
-          search: 'completionist banner reward foods advancements bakery',
+          search: 'completionist banner reward foods advancement resistance bakery smithing',
           details: true,
           detailsTitle: 'Reward',
-          detailsText: `The Completionist Banner is awarded to players who have crafted all different Bakery Foods.
+          detailsText: `Collect every Bakery food to complete the final advancement and receive the Completionist Banner.
 
-While placed, it grants nearby players a temporary Resistance effect.`,
+Once placed, it gives Resistance to all players within eight blocks. At a Smithing Table you can copy it with a Netherite Upgrade and a Netherite Ingot, which gives you two banners.`,
           detailsBullets: [
-            'Reward for crafting all Bakery Foods',
-            'Tracked through advancements',
-            'Grants Resistance to nearby players when placed'
+            'Reward for the advancement that asks for every Bakery food',
+            'Gives Resistance to players within 8 blocks',
+            'Can be copied at a Smithing Table'
           ]
         }
       ]
@@ -419,23 +392,22 @@ While placed, it grants nearby players a temporary Resistance effect.`,
     {
       id: 'items',
       title: 'Items, Ingredients, and Tools',
-      subtitle: 'Everyday items and baking tools.',
+      subtitle: 'Tools and doughs.',
       entries: [
         {
           id: 'rolling_pin',
           title: 'Rolling Pin',
           namespace_id: 'bakery:rolling_pin',
-          subtitle: 'Used to flatten dough and occasionally your expectations. Used at the [[Baker Station|baker_station]]. Can be used as a weapon, just not a very good one.',
+          subtitle: 'Flattens dough and, occasionally, your expectations. Used at the [[Caking Station|baker_station]]. It also works as a weapon, just not a very good one.',
           icon: '/assets/icons/bakery/rolling_pin.webp',
-          search: 'rolling pin tool weapon',
+          search: 'rolling pin tool weapon cookies',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Rolling Pin is a baking tool used at the [[Baker Station|baker_station]] to shape dough into cookies and flat pastries.
+          detailsText: `On the [[Caking Station|baker_station]], the Rolling Pin rolls freshly cut cupcakes flat into cookies.
 
-It can also be used as a melee weapon in a pinch, though it is not particularly effective in combat.`,
+It can also be swung as a slow, weak weapon.`,
           detailsBullets: [
-            'Used at the Baker Station to shape dough',
-            'Turns Cupcakes into Cookies when combined with a Bread Knife',
+            'Turns cupcakes into cookies on the Caking Station',
             'Can be used as a melee weapon'
           ]
         },
@@ -443,17 +415,16 @@ It can also be used as a melee weapon in a pinch, though it is not particularly 
           id: 'bread_knife',
           title: 'Bread Knife',
           namespace_id: 'bakery:bread_knife',
-          subtitle: 'Cuts bread and doubles as a very unambitious sword. Used at the [[Baker Station|baker_station]].',
+          subtitle: 'Cuts bread and doubles as a very unambitious sword. Used at the [[Caking Station|baker_station]].',
           icon: '/assets/icons/bakery/bread_knife.webp',
-          search: 'bread knife tool weapon',
+          search: 'bread knife tool weapon cupcakes',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Bread Knife is a baking tool used at the [[Baker Station|baker_station]] to cut cakes into cupcakes and prepare other baked goods.
+          detailsText: `On the [[Caking Station|baker_station]], the Bread Knife cuts a Blank Cake into cupcakes.
 
-It also functions as a sword, though it is not a particularly threatening weapon.`,
+It can also be swung as a slow, weak weapon.`,
           detailsBullets: [
-            'Used at the Baker Station to cut cakes',
-            'Cuts Blank Cakes into Cupcakes',
+            'Cuts a Blank Cake into cupcakes',
             'Can be used as a melee weapon'
           ]
         },
@@ -461,32 +432,34 @@ It also functions as a sword, though it is not a particularly threatening weapon
           id: 'cake_dough',
           title: 'Cake Dough',
           namespace_id: 'bakery:cake_dough',
-          subtitle: 'Base dough used for cakes. Used at the [[Baker Station|baker_station]].',
+          subtitle: 'The start of every cake, cupcake and cookie.',
           icon: '/assets/icons/bakery/cake_dough.webp',
           search: 'cake dough ingredient',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Cake Dough is the base ingredient for all cake-based baked goods. It is prepared and then used at the [[Baker Station|baker_station]] to create a variety of cakes, cupcakes, and cookies depending on the tools and toppings applied.`,
+          detailsText: `Use Cake Dough on the [[Caking Station|baker_station]] to place a Blank Cake, which you then decorate or cut into cupcakes and cookies.
+
+You can also eat it raw, but it will not fill you up much.`,
           detailsBullets: [
-            'Base ingredient for cakes, cupcakes, and cookies',
-            'Used at the Baker Station',
-            'Final result depends on tools and toppings applied'
+            'Starts a Blank Cake on the Caking Station',
+            'Edible, but not very filling'
           ]
         },
         {
           id: 'sweet_dough',
           title: 'Sweet Dough',
           namespace_id: 'bakery:sweet_dough',
-          subtitle: 'Base dough used for pastries.',
+          subtitle: 'A sweet dough for pastries and tarts.',
           icon: '/assets/icons/bakery/sweet_dough.webp',
-          search: 'sweet dough ingredient',
+          search: 'sweet dough ingredient pastry tart',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Sweet Dough is the base ingredient for pastries and sweet baked goods. It is used at the [[Baker Station|baker_station]] to create a variety of pastry items depending on the toppings and finishing steps applied.`,
+          detailsText: `Sweet Dough is used in crafting recipes for pastries and tarts. Check the [[recipe overview|recipes]] for details.
+
+You can also eat it raw, but it will not fill you up much.`,
           detailsBullets: [
-            'Base ingredient for pastries and sweet baked goods',
-            'Used at the Baker Station',
-            'Final result depends on toppings and finishing steps'
+            'Ingredient for pastries and tarts',
+            'Edible, but not very filling'
           ]
         }
       ]
@@ -494,59 +467,51 @@ It also functions as a sword, though it is not a particularly threatening weapon
     {
       id: 'consumables',
       title: 'Consumables',
-      subtitle: 'A small peek at the Bakery selection.',
+      subtitle: 'A taste of what the bakery has to offer.',
       entries: [
         {
           id: 'bread_crate',
-          title: 'Bread Crate',
+          title: 'Basket of Bread',
           namespace_id: 'bakery:bread_crate',
-          subtitle: 'A placeable bread box you can eat from.',
+          subtitle: 'A basket of bread to put on the table and share.',
           icon: '/assets/icons/bakery/bread_crate.webp',
-          search: 'bread_crate bread food eatable placeable',
+          search: 'basket of bread crate food eatable placeable tray',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Bread Crate can be placed in the world and eaten directly.
+          detailsText: `Place the basket and right click it to eat. It has five servings, each worth three drumsticks.
 
-Each bite restores hunger and advances the bite stage.
-Once fully consumed, the Bread Crate is removed and drops its tray, which was used to craft it.`,
+When the last piece is gone, you get the [[Tray|tray]] back.`,
           detailsBullets: [
-            'Can be placed',
-            'Consumed in multiple bites',
-            'Restores hunger on use',
-            'Drops the tray after being fully eaten'
+            'Placeable',
+            'Five servings',
+            'Returns the Tray when empty'
           ]
         },
         {
           id: 'chocolate_box',
           title: 'Chocolate Box',
           namespace_id: 'bakery:chocolate_box',
-          subtitle: 'A small box of chocolates you can eat piece by piece.',
+          subtitle: 'A box of chocolates to nibble one piece at a time.',
           icon: '/assets/icons/bakery/chocolate_box.webp',
           search: 'chocolate box food eatable placeable',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Chocolate Box can be placed in the world and eaten directly.
-
-Each bite restores a small amount of hunger.
-After the last piece is eaten, the box is removed.`,
+          detailsText: `Place the box and right click it to eat a chocolate. Each piece restores a little hunger, and the box disappears once it is empty.`,
           detailsBullets: [
-            'Can be placed',
-            'Consumed in multiple bites',
-            'Restores hunger on use'
+            'Placeable',
+            'Eaten piece by piece',
+            'Each piece restores a little hunger'
           ]
         },
         {
           id: 'breads',
           title: 'Breads & Buns',
-          namespace_id: 'bakery:breads',
-          subtitle: 'Simple baked breads and loaves.',
+          subtitle: 'Loaves, buns and pastries that keep you going for longer.',
           icon: '/assets/icons/bakery/bread.webp',
-          search: 'bread bakery loaf baguette toast braided bread crusty bun sandwich',
+          search: 'bread bakery loaf baguette toast braided bread crusty bun croissant vitality',
           details: true,
           detailsTitle: 'Included Breads',
-          detailsText: `This entry covers all basic bread items added by Bakery.
-
-All listed breads are simple food items and restore hunger when eaten.`,
+          detailsText: `Bakery breads fill you up and give [[Vitality|vitality]], which slows down hunger for a while. Most loaves can also be placed as decoration, and the Wall Display and Tray show them off nicely.`,
           items: [
             {
               id: 'croissant',
@@ -564,10 +529,10 @@ All listed breads are simple food items and restore hunger when eaten.`,
             },
             {
               id: 'bread',
-              title: 'Bread',
+              title: 'Bakers Bread',
               namespace_id: 'bakery:bread',
               icon: '/assets/icons/bakery/bread.webp',
-              search: 'bread food'
+              search: 'bakers bread food'
             },
             {
               id: 'baguette',
@@ -602,81 +567,81 @@ All listed breads are simple food items and restore hunger when eaten.`,
         {
           id: 'cakes',
           title: 'Cakes & Slices',
-          subtitle: 'Cakes, pies, tarts, and their slices.',
+          subtitle: 'Cakes, pies, tarts and their slices.',
           icon: '/assets/icons/bakery/chocolate_cake_slice.webp',
           search: 'cake slice tart pie gateau pudding bakery',
           details: true,
           detailsTitle: 'Included Cakes',
-          detailsText: `This entry includes all cake-based foods and their slice variants.
+          detailsText: `Place a whole cake, pie or tart and right click it with a [[Bread Knife|bread_knife]] to cut off a slice. Sneak and right click to eat a piece straight from the plate.
 
-Slices are typically obtained by cutting or serving whole cakes.`,
+An untouched cake can be picked up again with an empty hand.`,
           items: [
             {
               id: 'strawberry_cake_slice',
-              title: 'Strawberry Cake Slice',
+              title: 'Slice of Strawberry Cake',
               namespace_id: 'bakery:strawberry_cake_slice',
               icon: '/assets/icons/bakery/strawberry_cake_slice.webp',
               search: 'strawberry cake slice'
             },
             {
               id: 'sweetberry_cake_slice',
-              title: 'Sweetberry Cake Slice',
+              title: 'Slice of Sweetberry Cake',
               namespace_id: 'bakery:sweetberry_cake_slice',
               icon: '/assets/icons/bakery/sweetberry_cake_slice.webp',
               search: 'sweetberry cake slice'
             },
             {
               id: 'chocolate_cake_slice',
-              title: 'Chocolate Cake Slice',
+              title: 'Slice of Chocolate Cake',
               namespace_id: 'bakery:chocolate_cake_slice',
               icon: '/assets/icons/bakery/chocolate_cake_slice.webp',
               search: 'chocolate cake slice'
             },
             {
               id: 'chocolate_gateau_slice',
-              title: 'Chocolate Gateau Slice',
+              title: 'Slice of Chocolate Gateau',
               namespace_id: 'bakery:chocolate_gateau_slice',
               icon: '/assets/icons/bakery/chocolate_gateau_slice.webp',
               search: 'chocolate gateau slice'
             },
             {
               id: 'bundt_cake_slice',
-              title: 'Bundt Cake Slice',
+              title: 'Slice of Bundt Cake',
               namespace_id: 'bakery:bundt_cake_slice',
               icon: '/assets/icons/bakery/bundt_cake_slice.webp',
               search: 'bundt cake slice'
             },
             {
               id: 'linzer_tart_slice',
-              title: 'Linzer Tart Slice',
+              title: 'Slice of Linzer Tart',
               namespace_id: 'bakery:linzer_tart_slice',
               icon: '/assets/icons/bakery/linzer_tart_slice.webp',
               search: 'linzer tart slice'
             },
             {
               id: 'apple_pie_slice',
-              title: 'Apple Pie Slice',
+              title: 'Slice of Apple Pie',
               namespace_id: 'bakery:apple_pie_slice',
               icon: '/assets/icons/bakery/apple_pie_slice.webp',
               search: 'apple pie slice'
             },
             {
               id: 'glowberry_pie_slice',
-              title: 'Glowberry Pie Slice',
+              title: 'Slice of Glowberry Tart',
               namespace_id: 'bakery:glowberry_pie_slice',
               icon: '/assets/icons/bakery/glowberry_pie_slice.webp',
-              search: 'glowberry pie slice'
+              search: 'glowberry tart pie slice'
             },
             {
               id: 'chocolate_tart_slice',
-              title: 'Chocolate Tart Slice',
+              title: 'Slice of Chocolate Tart',
               namespace_id: 'bakery:chocolate_tart_slice',
               icon: '/assets/icons/bakery/chocolate_tart_slice.webp',
               search: 'chocolate tart slice'
             },
             {
               id: 'pudding_slice',
-              title: 'Pudding Slice',
+              title: 'Slice of Pudding',
               namespace_id: 'bakery:pudding_slice',
               icon: '/assets/icons/bakery/pudding_slice.webp',
               search: 'pudding slice'
@@ -688,43 +653,41 @@ Slices are typically obtained by cutting or serving whole cakes.`,
     {
       id: 'mob_effects',
       title: 'Mob Effects',
-      subtitle: 'Status effects tied to Bakery foods.',
+      subtitle: 'Effects from Bakery food.',
       entries: [
         {
           id: 'vitality',
           title: 'Vitality',
           namespace_id: 'bakery:vitality',
-          subtitle: 'Reduces exhaustion over time. Scales with effect level.',
+          subtitle: 'Slows down hunger. Stronger at higher levels.',
           icon: '/assets/icons/bakery/effects/vitality.webp',
-          search: 'vitality effect bakery exhaustion reduction interval scales amplifier',
+          search: 'vitality effect bakery bread exhaustion hunger',
           details: true,
           detailsTitle: 'Effect',
-          detailsText: `Vitality is a positive status effect granted by certain Bakery foods. It reduces food exhaustion over time, helping hunger drain more slowly.
-
-The strength of the reduction scales with the effect level, so higher amplifiers provide stronger hunger preservation.`,
+          detailsText: `Vitality comes from Bakery [[breads|breads]]. At regular intervals it removes some of the exhaustion you have built up, so your hunger bar drains more slowly. Every extra level makes it stronger.`,
           detailsBullets: [
-            'Reduces food exhaustion over time',
-            'Effect strength scales with amplifier level',
-            'Granted by certain Bakery foods'
+            'Slows down hunger',
+            'Stronger at higher levels',
+            'Granted by breads and buns'
           ]
         },
         {
           id: 'sugar_rush',
           title: 'Sugar Rush',
           namespace_id: 'bakery:sugar_rush',
-          subtitle: 'Stacks up to 10. Grants Movement Speed up to 5 stacks, then Attack Speed for remaining stacks.',
+          subtitle: 'Each sweet adds a stack, up to ten. First you get faster, then you hit faster.',
           icon: '/assets/icons/bakery/effects/sugar_rush.webp',
-          search: 'sugar rush effect bakery stacks movement speed attack speed up to 10',
+          search: 'sugar rush effect bakery stacks movement speed attack speed sweets',
           details: true,
           detailsTitle: 'Effect',
-          detailsText: `Sugar Rush is a stackable status effect granted by sweet Bakery foods. It can stack up to 10 times, with each stack adding a bonus.
+          detailsText: `Every sweet treat you eat adds one stack of Sugar Rush and refreshes its timer, up to ten stacks.
 
-The first 5 stacks grant increasing Movement Speed. Stacks 6 through 10 grant increasing Attack Speed instead.`,
+Stacks one to five each add 2% movement speed. Stacks six to ten each add 2% attack speed on top.`,
           detailsBullets: [
-            'Stackable up to 10 times',
-            'Stacks 1–5 grant increasing Movement Speed',
-            'Stacks 6–10 grant increasing Attack Speed',
-            'Granted by sweet Bakery foods'
+            'One stack per sweet, up to 10',
+            'Stacks 1 to 5: +2% movement speed each',
+            'Stacks 6 to 10: +2% attack speed each',
+            'Eating another sweet refreshes the timer'
           ]
         }
       ]
@@ -733,11 +696,9 @@ The first 5 stacks grant increasing Movement Speed. Stacks 6 through 10 grant in
   recipesCta: {
     enabled: true,
     title: 'Recipes',
-    text: `Feeling a little lost and not sure how to craft certain things?
+    text: `Not sure how to make something?
 
-Here you will find a helpful overview of all Let's Do crafting stations and their recipes.
-
-`,
+The recipe overview lists every Let's Do crafting station and its recipes.`,
     buttonLabel: 'Open Recipe Overview',
     href: '/recipes/'
   }

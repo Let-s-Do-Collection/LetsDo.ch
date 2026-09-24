@@ -16,6 +16,7 @@ import wildernature from "./config/wildernature.js";
 import beachparty from "./config/beachparty.js";
 import bloomingnature from "./config/bloomingnature.js";
 import meadow from "./config/meadow.js";
+import smoker from "./config/smoker.js";
 
 export function getStaticPaths() {
   return [
@@ -35,6 +36,7 @@ export function getStaticPaths() {
     { params: { slug: "bakery" } },
     { params: { slug: "bloomingnature" } },
     { params: { slug: "wildernature" } },
+    { params: { slug: "smoker" } },
   ];
 }
 
@@ -53,6 +55,7 @@ const configs = {
   wildernature,
   furniture,
   meadow,
+  smoker,
   bakery,
   "hearth-and-timber": hearthandtimber,
   "lilis-pottery": pottery,

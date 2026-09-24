@@ -13,6 +13,7 @@ import lilisluckylures from "./wiki/config/lilis-lucky-lures.js";
 import wildernature from "./wiki/config/wildernature.js";
 import beachparty from "./wiki/config/beachparty.js";
 import bloomingnature from "./wiki/config/bloomingnature.js";
+import smoker from "./wiki/config/smoker.js";
 import meadow from "./wiki/config/meadow.js";
 
 const configs = {
@@ -26,6 +27,7 @@ const configs = {
   candlelight,
   bloomingnature,
   wildernature,
+  smoker,
   furniture,
   meadow,
   bakery,
@@ -42,11 +44,7 @@ export async function GET() {
 
     for (const section of config.sections ?? []) {
       for (const entry of section.entries ?? []) {
-        if (entry.id) {
-          urls.push(`https://lets-do.ch/wiki/${mod}/${entry.id.replace(/_/g, "-")}/`);
-        }
-
-        for (const item of entry.items ?? []) {
+        for (const item of [entry, ...(entry.items ?? [])]) {
           if (!item.id) continue;
           urls.push(`https://lets-do.ch/wiki/${mod}/${item.id.replace(/_/g, "-")}/`);
         }
@@ -54,9 +52,11 @@ export async function GET() {
     }
   }
 
+  const uniqueUrls = [...new Set(urls)];
+
   const body = `<?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    ${urls.map((url) => `<url><loc>${url}</loc></url>`).join("")}
+    ${uniqueUrls.map((url) => `<url><loc>${url}</loc></url>`).join("")}
   </urlset>`;
 
   return new Response(body, {

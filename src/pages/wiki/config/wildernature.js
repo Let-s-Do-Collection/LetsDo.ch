@@ -3,113 +3,171 @@ export default {
   title: 'WilderNature',
   logo: '/assets/mod-logos/wildernature.webp',
   aboutTitle: 'Welcome',
-  aboutSubtitle: 'Wildlife, trophies, and a bit of chaos',
-  aboutText: `Welcome to the WilderNature Wiki.
+  aboutSubtitle: 'Wild animals, hunting bounties and a busy ecosystem',
+  aboutText: `WilderNature fills the Overworld with animals that have lives of their own. Deer sleep in the grass and bolt when you sprint, raccoons raid your chests, squirrels hoard hazelnuts, and lions doze through the savanna heat.
 
-This is your home for blocks, items, food, entities, and world features added by WilderNature.
+Many animals react to you: some grow to trust you, some can be ridden, and a few are best left alone. Around them the world changes too, with termite mounds, beaver dams, hollow tree stumps and mushroom colonies.
 
-WilderNature focuses on new animals with biome tag based spawning, a small set of hunting themed blocks, and a few tools and rewards to collect along the way.`,
+At the Bounty Board you can take on hunting, gathering and exploration contracts and earn rewards such as the Blunderbuss, banners and the Fur Cloak.`,
   sections: [
     {
       id: 'blocks',
       title: 'Decor and Building',
-      subtitle: 'Blocks, decorations, and collectible rewards.',
+      subtitle: 'The Bounty Board, trophies and blocks from the wild.',
       entries: [
         {
           id: 'bounty_board',
           title: 'Bounty Board',
           namespace_id: 'wildernature:bounty_board',
-          subtitle: 'A quest board for bounties, rewards, and collectibles.',
+          subtitle: 'Take on contracts, complete them and collect your reward.',
           icon: '/assets/icons/wildernature/bounty_board.webp',
-          search: 'bounty board quest board bounties rewards reroll collectibles experience',
+          search: 'bounty board contract hunt gather observe explore guild commission reward',
           details: true,
-          detailsTitle: 'Important',
-          detailsText: `Currently disabled in Minecraft 1.21.1. The Bounty Board has no functionality in this version.`,
-          detailsBullets: ['Currently disabled in Minecraft 1.21.1', 'Will be re-enabled once updated']
+          detailsTitle: 'How bounties work',
+          detailsText: `Open the Bounty Board to see the current contracts. Accept one and you receive a contract item that tracks your progress. When it is complete, bring it back to the board to claim the reward.
+
+There are four kinds of everyday contracts: Tracking Orders (hunting), Provision Requests (gathering), Field Notes (observing an animal through a Spyglass) and Pathfinder's Calls (finding a biome). Bigger tasks pay better.
+
+Guild Commissions are special, larger contracts with unique rewards, such as the Blunderbuss, the Fur Cloak, the Bison Horn or one of the banners.
+
+The board gets new contracts every three in-game days. If you lose a contract, you can restore it at the board for one Emerald.`,
+          detailsBullets: [
+            'Hunt, Gather, Observe and Explore contracts',
+            'Guild Commissions with unique rewards',
+            'New contracts every 3 in-game days',
+            'Lost contract? One Emerald restores it'
+          ]
+        },
+        {
+          id: 'custom_commissions',
+          title: 'Custom Guild Commissions',
+          subtitle: 'Add your own Guild Commissions to the Bounty Board with a datapack.',
+          icon: '/assets/icons/misc/config.webp',
+          search: 'custom guild commission datapack json bounty contract hunt gather observe explore reward modpack',
+          details: true,
+          detailsTitle: 'How a commission works',
+          detailsText: `Every Guild Commission is a JSON file in \`data/<namespace>/guild_commission/\`. Add a new file to create your own, or override an existing one with a datapack to change or disable it.
+
+Example (Horn of the Plains):`,
+          detailsCode: `{
+  "id": "wildernature:horn_of_the_plains",
+  "enabled": true,
+  "title": "guild.wildernature.horn_of_the_plains.title",
+  "description": "guild.wildernature.horn_of_the_plains.desc",
+  "type": "hunt",
+  "target": "wildernature:bison",
+  "amount": 18,
+  "allow_peaceful": false,
+  "icon": "wildernature:guild_commission",
+  "reward": {
+    "item": "wildernature:bison_horn",
+    "count": 1,
+    "experience": 24
+  },
+  "weight": 1,
+  "repeatable": true
+}`,
+          detailsTextAfter: `\`title\` and \`description\` can be translation keys from a resource pack or plain text.`,
+          detailsBullets: [
+            '`id`: a unique ID for the commission',
+            '`enabled`: `false` turns the commission off',
+            '`type`: `hunt`, `gather`, `observe` or `explore`',
+            '`target`: an entity for `hunt` and `observe`, an item for `gather`, a biome for `explore`',
+            '`amount`: how many kills, items or sightings are needed',
+            '`allow_peaceful` (optional): read by the mod, but currently has no effect',
+            '`icon`: item shown on the Bounty Board',
+            '`reward`: `item`, `count` and optional `experience`',
+            '`weight` (optional): how often it is picked, default `1`',
+            '`repeatable` (optional): `true` brings it back for a player on the next 3-day refresh, `false` means only once per player; default `true`'
+          ]
         },
         {
           id: 'collectibles',
-          title: 'Collectibles',
-          subtitle: 'Decorative rewards earned from completed bounties.',
+          title: 'Trophies and Banners',
+          subtitle: 'Trophies with a special use, and banners to show off your Guild Commissions.',
           icon: '/assets/icons/wildernature/deer_trophy.webp',
-          search: 'collectibles trophies rewards bounty board decoration interactive effects',
+          search: 'trophy banner deer bison swift fox bunny stalker cod catcher fox trapper',
           details: true,
-          detailsTitle: 'Overview',
-          detailsText: `Collectibles are decorative reward blocks from bounties. Some collectibles also have unique interactions. There are more variants than shown here.`,
+          detailsText: `The banners are rewards from Guild Commissions: 50 rabbits for the Bunny-Stalker Banner, 40 cod for the Cod-Catcher Banner and 30 Swift Foxes for the Fox-Trapper Banner.
+
+The trophies are currently only available in Creative mode. Right click one to use it. The Deer Trophy marks animals within 32 blocks as prey and gives you Hunter's Sense, so you deal more damage to them. The Swift Fox Trophy makes nearby chests, spawners and other special blocks glow. The Bison Trophy lets out a roar that pushes back creatures in front of it and briefly gives you Resistance, at the cost of a little dizziness.`,
+          detailsBullets: [
+            'Deer Trophy: Marked Prey and Hunter’s Sense',
+            'Swift Fox Trophy: reveals nearby special blocks',
+            'Bison Trophy: pushes creatures back',
+            'Banners: Guild Commission rewards'
+          ],
           items: [
-            {
-              id: 'deer_trophy',
-              title: 'Deer Trophy',
-              namespace_id: 'wildernature:deer_trophy',
-              subtitle: 'Highlights nearby creatures.',
-              icon: '/assets/icons/wildernature/deer_trophy.webp',
-              search: 'deer trophy collectible decoration interaction glowing reveal entities',
-              details: true,
-              detailsTitle: 'Interaction',
-              detailsText: `Interacting with the Deer Trophy applies Glowing to nearby living entities.`,
-              detailsBullets: [
-                'Range: 32 blocks',
-                'Applies Glowing for 30 seconds',
-                'Affects living entities in the area'
-              ]
-            },
-            {
-              id: 'red_wolf_trophy',
-              title: 'Red Wolf Trophy',
-              namespace_id: 'wildernature:red_wolf_trophy',
-              subtitle: 'Marks special blocks with glow particles.',
-              icon: '/assets/icons/wildernature/red_wolf_trophy.webp',
-              search: 'red wolf trophy collectible decoration interaction glow particles tagged blocks',
-              details: true,
-              detailsTitle: 'Interaction',
-              detailsText: `Interacting with the Red Wolf Trophy spawns glow particle clouds on nearby blocks that match the tag.`,
-              detailsBullets: [
-                'Range: 32 blocks',
-                'Targets blocks tagged as MAKES_BLOCK_GLOW',
-                'Spawns glow particle clouds for 30 seconds'
-              ]
-            },
-            {
-              id: 'bison_trophy',
-              title: 'Bison Trophy',
-              namespace_id: 'wildernature:bison_trophy',
-              subtitle: 'Triggers a shockwave that pushes back nearby creatures.',
-              icon: '/assets/icons/wildernature/bison_trophy.webp',
-              search: 'bison trophy collectible decoration interaction knockback damage cooldown particles',
-              details: true,
-              detailsTitle: 'Interaction',
-              detailsText: `Interacting with the Bison Trophy creates a cloud shockwave and pushes back nearby living entities, dealing minor damage.`,
-              detailsBullets: [
-                'Range: 20 blocks',
-                'Applies knockback and deals 1 damage to nearby living entities',
-                'Shows a cloud particle shockwave',
-                'Cooldown: 3 minutes per player'
-              ]
-            },
-            {
-              id: 'wolf_trapper_banner',
-              title: 'Wolf Trapper Banner',
-              namespace_id: 'wildernature:wolf_trapper_banner',
-              subtitle: 'A collectible banner reward.',
-              icon: '/assets/icons/wildernature/wolf_trapper_banner.webp',
-              search: 'wolf trapper banner collectible decoration'
-            },
-            {
-              id: 'bunny_stalker_banner',
-              title: 'Bunny Stalker Banner',
-              namespace_id: 'wildernature:bunny_stalker_banner',
-              subtitle: 'A collectible banner reward.',
-              icon: '/assets/icons/wildernature/bunny_stalker_banner.webp',
-              search: 'bunny stalker banner collectible decoration'
-            },
-            {
-              id: 'cod_catcher_banner',
-              title: 'Cod Catcher Banner',
-              namespace_id: 'wildernature:cod_catcher_banner',
-              subtitle: 'A collectible banner reward.',
-              icon: '/assets/icons/wildernature/cod_catcher_banner.webp',
-              search: 'cod catcher banner collectible decoration'
-            }
+            { id: 'deer_trophy', title: 'Deer Trophy', namespace_id: 'wildernature:deer_trophy', icon: '/assets/icons/wildernature/deer_trophy.webp' },
+            { id: 'swift_fox_trophy', title: 'Swift Fox Trophy', namespace_id: 'wildernature:swift_fox_trophy', icon: '/assets/icons/wildernature/red_wolf_trophy.webp' },
+            { id: 'bison_trophy', title: 'Bison Trophy', namespace_id: 'wildernature:bison_trophy', icon: '/assets/icons/wildernature/bison_trophy.webp' },
+            { id: 'fox_trapper_banner', title: 'Fox-Trapper Banner', namespace_id: 'wildernature:fox_trapper_banner', icon: '/assets/icons/wildernature/wolf_trapper_banner.webp' },
+            { id: 'bunny_stalker_banner', title: 'Bunny-Stalker Banner', namespace_id: 'wildernature:bunny_stalker_banner', icon: '/assets/icons/wildernature/bunny_stalker_banner.webp' },
+            { id: 'cod_catcher_banner', title: 'Cod-Catcher Banner', namespace_id: 'wildernature:cod_catcher_banner', icon: '/assets/icons/wildernature/cod_catcher_banner.webp' }
+          ]
+        },
+        {
+          id: 'termite_mound',
+          title: 'Termite Mound',
+          namespace_id: 'wildernature:termite_mound',
+          subtitle: 'A savanna mound full of termites, and sometimes a hidden storage chamber.',
+          icon: '/assets/icons/wildernature/termite_mound.webp',
+          search: 'termite mound savanna termites woodmeal rotten log storage',
+          details: true,
+          detailsText: `Termite Mounds stand in the savanna. Their [[Termites|termite]] gather wood from nearby logs and carry it home. Some mounds hide a storage chamber inside.
+
+Logs near a mound slowly turn into [[Rotten Logs|rotten_log]].`
+        },
+        {
+          id: 'rotten_log',
+          title: 'Rotten Log',
+          namespace_id: 'wildernature:rotten_log',
+          subtitle: 'A log eaten hollow by termites. Clean it out, fill it with dirt and farm in it.',
+          search: 'rotten log termites infested shovel woodmeal dirt farmland planter',
+          details: true,
+          detailsText: `Termites turn logs near their mound into Rotten Logs and sometimes move in. Use a shovel on an infested log to drive them out; you get some [[Woodmeal|woodmeal]] for your trouble.
+
+Right click an upright hollow log with Dirt to fill it, then till it into farmland. Crops, stems and [[Mushroom Colonies|mushroom_colony]] grow in it, faster when it is kept moist.`
+        },
+        {
+          id: 'hollow_cache',
+          title: 'Hollow Cache',
+          namespace_id: 'wildernature:hollow_cache',
+          subtitle: 'An old tree stump with a hiding place inside.',
+          search: 'hollow cache stump storage loot squirrel forest plains',
+          details: true,
+          detailsText: `Hollow Caches are tree stumps found in forests and plains. Open them like a chest; they often hold nuts, fruit, sticks and bones, and sometimes a Truffle or a [[Loot Bag|loot_bag]].
+
+Squirrels and raccoons use them as pantries, and injured raccoons and boars eat from them.`
+        },
+        {
+          id: 'burrow',
+          title: 'Burrow',
+          namespace_id: 'wildernature:burrow',
+          subtitle: 'The dog’s stash. Tamed dogs bury what they find here.',
+          search: 'burrow dog storage stash',
+          details: true,
+          detailsText: `Tamed [[Dogs|dog]] dig a Burrow and store the things they carry around in it. You can open it like a chest.`
+        },
+        {
+          id: 'beaver_dam',
+          title: 'Beaver Dam',
+          namespace_id: 'wildernature:beaver_dam',
+          subtitle: 'Built by beavers in and around rivers. A handy source of sticks.',
+          search: 'beaver dam sticks river',
+          details: true,
+          detailsText: `[[Beavers|beaver]] build these piles of branches near water. Break them for sticks.`
+        },
+        {
+          id: 'mushroom_colony',
+          title: 'Mushroom Colonies',
+          subtitle: 'A renewable patch of mushrooms that slowly spreads.',
+          search: 'mushroom colony brown red renewable spread bone meal',
+          details: true,
+          detailsText: `Plant a colony on dirt, grass, podzol, mycelium or a tilled [[Rotten Log|rotten_log]]. Once it is fully grown, right click it to harvest mushrooms; the colony stays and grows back. Mature colonies slowly spread to nearby ground. Bone Meal speeds up growth.`,
+          items: [
+            { id: 'brown_mushroom_colony', title: 'Brown Mushroom Colony', namespace_id: 'wildernature:brown_mushroom_colony' },
+            { id: 'red_mushroom_colony', title: 'Red Mushroom Colony', namespace_id: 'wildernature:red_mushroom_colony' }
           ]
         }
       ]
@@ -117,610 +175,503 @@ WilderNature focuses on new animals with biome tag based spawning, a small set o
     {
       id: 'items',
       title: 'Items, Ingredients, and Tools',
-      subtitle: 'Tools, equipment, and useful items.',
+      subtitle: 'Tools, equipment and bounty rewards.',
       entries: [
         {
           id: 'blunderbuss',
           title: 'Blunderbuss',
           namespace_id: 'wildernature:blunderbuss',
-          subtitle: 'A ranged weapon built for loud solutions. PENG!',
+          subtitle: 'A loud old gun. The reward for hunting eight elephants.',
           icon: '/assets/icons/wildernature/blunderbuss.webp',
-          search: 'blunderbuss weapon ranged gun ammunition flint diamond cooldown reload',
-          musicdisc: true,
-          tracks: [
-            {
-              title: 'Blunderbuss Shot',
-              subtitle: 'This solves problems.',
-              icon: '/assets/icons/wildernature/blunderbuss.webp',
-              src: '/assets/sound_effect/blunderbuss_fire.ogg'
-            },
-            {
-              title: 'Blunderbuss Reload',
-              subtitle: 'One second. This will only take a moment.',
-              icon: '/assets/icons/wildernature/blunderbuss.webp',
-              src: '/assets/sound_effect/blunderbuss_load.ogg'
-            }
-          ],
+          search: 'blunderbuss gun ammunition flint diamond pellets guild commission elephant',
           details: true,
-          detailsTitle: 'Overview',
-          detailsText: `The Blunderbuss is a ranged weapon that consumes ammunition and has a short firing delay between shots. It fires either a spread of pellets or a single bullet depending on the ammo used. The Blunderbuss itself is obtained as a reward from bounties.`,
+          detailsText: `The Blunderbuss is the reward of the "Big Game Hunter" Guild Commission. It needs ammunition in your inventory and has to be reloaded for a moment after every shot.
+
+Flint Ammunition fires a spray of four to eight small pellets, great at close range. Diamond Ammunition fires a single, hard-hitting bullet. Both are crafted from Gunpowder plus Flint or a Diamond, sixteen at a time.`,
           detailsBullets: [
-            'Consumes ammunition',
-            'Has a short delay between shots',
-            'Creates flame and smoke particles when firing',
-            'Plays a reload sound shortly after firing'
+            'Flint: 4 to 8 pellets, 2 damage each',
+            'Diamond: one bullet, 12 damage',
+            '1.5 second reload',
+            'Repair with Iron Ingots'
           ],
           items: [
-            {
-              id: 'flint_ammunition',
-              title: 'Flint Ammunition',
-              namespace_id: 'wildernature:flint_ammunition',
-              subtitle: 'Shot pellets for extreme close range.',
-              icon: '/assets/icons/wildernature/flint_ammunition.webp',
-              search: 'flint ammunition blunderbuss shotgun pellets close range',
-              details: true,
-              detailsTitle: 'Ammo Type',
-              detailsText: `Flint Ammunition fires a burst of multiple pellets with heavy spread. It is strongest at very short range.`,
-              detailsBullets: ['Fires multiple pellets per shot', 'Very high spread', 'Best at extreme close range']
-            },
-            {
-              id: 'diamond_ammunition',
-              title: 'Diamond Ammunition',
-              namespace_id: 'wildernature:diamond_ammunition',
-              subtitle: 'A piercing round for longer shots.',
-              icon: '/assets/icons/wildernature/diamond_ammunition.webp',
-              search: 'diamond ammunition blunderbuss piercing bullet long range',
-              details: true,
-              detailsTitle: 'Ammo Type',
-              detailsText: `Diamond Ammunition fires a single, more reliable shot designed for better reach and penetration.`,
-              detailsBullets: ['Fires a single projectile', 'More reliable at distance', 'Designed as a piercing round']
-            }
+            { id: 'flint_ammunition', title: 'Flint Ammunition', namespace_id: 'wildernature:flint_ammunition', icon: '/assets/icons/wildernature/flint_ammunition.webp' },
+            { id: 'diamond_ammunition', title: 'Diamond Ammunition', namespace_id: 'wildernature:diamond_ammunition', icon: '/assets/icons/wildernature/diamond_ammunition.webp' }
           ]
         },
         {
           id: 'bison_horn',
           title: 'Bison Horn',
           namespace_id: 'wildernature:bison_horn',
-          subtitle: 'Dropped by [[Bisons|bison]] or rewarded from bounties.',
+          subtitle: 'Blow it to scatter nearby monsters. Dropped by [[Bison|bison]].',
           icon: '/assets/icons/wildernature/bison_horn.webp',
-          search: 'bison horn sound horn item drop buffalo bounty reward',
-          musicdisc: true,
-          tracks: [
-            {
-              title: 'Bison Horn',
-              subtitle: 'TOOOOOOOHOOOOOOOOOOT! ',
-              icon: '/assets/icons/wildernature/bison_horn.webp',
-              src: '/assets/sound_effect/bison_horn.ogg'
-            }
-          ]
+          search: 'bison horn blow monsters scare cooldown',
+          details: true,
+          detailsText: `Blowing the horn makes monsters within ten blocks forget you and stumble away. It then needs ten seconds to recover.
+
+Bison sometimes drop one, and the "Horn of the Plains" Guild Commission gives one as a reward.`
         },
         {
           id: 'loot_bag',
           title: 'Loot Bag',
           namespace_id: 'wildernature:loot_bag',
-          subtitle: 'A rugged bag packed with food, scraps, and the occasional lucky find.',
+          subtitle: 'A raccoon’s stash. You never know what is inside.',
           icon: '/assets/icons/wildernature/loot_bag.webp',
-          search: 'loot bag random loot food reward raccoon bounty',
+          search: 'loot bag raccoon random food hazelnut emerald diamond',
           details: true,
-          detailsTitle: 'Loot',
-          detailsText: `Right-click to open the Loot Bag and receive a random item.
+          detailsText: `Right click to open the bag and get one random item. Most of the time it is something to eat, often a Hazelnut, now and then an Emerald and, very rarely, a Diamond.
 
-    Loot Bags can be obtained as bounty rewards or may drop from raccoons.
-
-    Possible contents include:
-
-    Food
-    • Random edible items
-
-    Supplies
-    • Hazelnut
-
-    Rare Finds
-    • Emerald
-    • Diamond`,
+Raccoons drop Loot Bags and sometimes leave them in their caches.`,
           detailsBullets: [
-            'Right-click to open',
-            'Obtained from bounties or dropped by raccoons',
-            'Drops a random item',
-            'Rare items can appear'
+            'Usually a random food',
+            '20% Hazelnut',
+            '1% Emerald',
+            'Very rarely a Diamond'
           ]
         },
         {
           id: 'fish_oil',
           title: 'Fish Oil',
           namespace_id: 'wildernature:fish_oil',
-          subtitle: 'A craftable oil and highly efficient fuel.',
+          subtitle: 'Crafted from two fish. Burns as long as coal.',
           icon: '/assets/icons/wildernature/fish_oil.webp',
-          search: 'fish oil item fuel furnace craft'
+          search: 'fish oil fuel fish'
+        },
+        {
+          id: 'thick_leather',
+          title: 'Thick Leather',
+          namespace_id: 'wildernature:thick_leather',
+          subtitle: 'Dropped by elephants, giraffes and hippos. Cut it into regular leather with shears.',
+          search: 'thick leather shears elephant giraffe hippo',
+          details: true,
+          detailsText: `Throw Thick Leather on the ground and right click it with shears to cut it into three Leather.`
+        },
+        {
+          id: 'woodmeal',
+          title: 'Woodmeal',
+          namespace_id: 'wildernature:woodmeal',
+          subtitle: 'Wood dust from termite work. A small fuel.',
+          search: 'woodmeal termite fuel rotten log'
         },
         {
           id: 'fur_cloak',
           title: 'Fur Cloak',
           namespace_id: 'wildernature:fur_cloak',
-          subtitle: 'A wearable fur cloak that scares away creepers. A bounty reward.',
+          subtitle: 'A warm swift fox cloak. The reward for the "Winter Pelt" Guild Commission.',
           icon: '/assets/icons/wildernature/fur_cloak.webp',
-          search: 'fur cloak armor clothing creeper repel'
+          search: 'fur cloak cape swift fox guild commission winter pelt'
         },
         {
           id: 'stylin_purple_hat',
-          title: 'Stylin Purple Hat',
+          title: 'Stylin’ Purple Hat',
           namespace_id: 'wildernature:stylin_purple_hat',
-          subtitle: 'So stylin it almost hurts. A bounty reward.',
+          subtitle: 'So stylin’ it almost hurts. The reward for finding a savanna.',
           icon: '/assets/icons/wildernature/stylin_purple_hat.webp',
-          search: 'stylin purple hat cosmetic fashion funny bounty reward'
+          search: 'stylin purple hat guild commission savanna'
+        },
+        {
+          id: 'field_guide',
+          title: 'Field Guide',
+          namespace_id: 'wildernature:field_guide',
+          subtitle: 'A little book about the animals around you. Your first reward from the Bounty Board.',
+          search: 'field guide animals book'
+        },
+        {
+          id: 'burst_of_experience',
+          title: 'Burst of Experience',
+          namespace_id: 'wildernature:burst_of_experience',
+          subtitle: 'A bounty reward. Use it to receive the experience stored inside.',
+          search: 'burst of experience xp bounty reward'
         },
         {
           id: 'turkey_egg',
           title: 'Turkey Egg',
           namespace_id: 'wildernature:turkey_egg',
-          subtitle: 'An egg laid by turkeys.',
-          icon: '/assets/icons/wildernature/turkey_egg.webp',
-          search: 'turkey egg item'
+          subtitle: 'Laid by [[turkeys|turkey]]. Throw it and a baby turkey may hatch.',
+          search: 'turkey egg throw'
         }
       ]
     },
     {
       id: 'food',
       title: 'Food',
-      subtitle: 'Raw and cooked meats, plus a few special finds.',
+      subtitle: 'Game meat, nuts and truffles.',
       entries: [
         {
           id: 'bison_meat',
           title: 'Bison Meat',
           namespace_id: 'wildernature:bison_meat',
-          subtitle: 'Raw meat dropped by bisons.',
+          subtitle: 'Dropped by bison. Cooked, it is as filling as a steak.',
           icon: '/assets/icons/wildernature/bison_meat.webp',
-          search: 'bison meat raw food drop',
-          details: true,
-          detailsTitle: 'Cooked Variant',
-          detailsText: `Bison Meat can be cooked to obtain Cooked Bison Meat, a more nutritious food item.`,
+          search: 'bison meat cooked',
           items: [
-            {
-              id: 'cooked_bison_meat',
-              title: 'Cooked Bison Meat',
-              namespace_id: 'wildernature:cooked_bison_meat',
-              subtitle: 'A cooked and more filling variant.',
-              icon: '/assets/icons/wildernature/cooked_bison_meat.webp',
-              search: 'bison meat cooked food'
-            }
+            { id: 'cooked_bison_meat', title: 'Cooked Bison Meat', namespace_id: 'wildernature:cooked_bison_meat', icon: '/assets/icons/wildernature/cooked_bison_meat.webp' }
           ]
         },
         {
           id: 'venison',
           title: 'Venison',
           namespace_id: 'wildernature:venison',
-          subtitle: 'Raw meat dropped by deer.',
+          subtitle: 'Dropped by deer. Cooked, it is as filling as mutton.',
           icon: '/assets/icons/wildernature/venison.webp',
-          search: 'venison raw food drop deer',
-          details: true,
-          detailsTitle: 'Cooked Variant',
-          detailsText: `Venison can be cooked to obtain Cooked Venison, a more filling food item.`,
+          search: 'venison deer meat cooked',
           items: [
-            {
-              id: 'cooked_venison',
-              title: 'Cooked Venison',
-              namespace_id: 'wildernature:cooked_venison',
-              subtitle: 'A cooked and more nutritious variant.',
-              icon: '/assets/icons/wildernature/cooked_venison.webp',
-              search: 'venison cooked food deer'
-            }
+            { id: 'cooked_venison', title: 'Cooked Venison', namespace_id: 'wildernature:cooked_venison', icon: '/assets/icons/wildernature/cooked_venison.webp' }
           ]
         },
         {
           id: 'turkey_meat',
           title: 'Turkey Meat',
           namespace_id: 'wildernature:turkey_meat',
-          subtitle: 'Raw turkey meat.',
+          subtitle: 'Dropped by turkeys. Works like chicken.',
           icon: '/assets/icons/wildernature/turkey_meat.webp',
-          search: 'turkey meat raw food',
-          details: true,
-          detailsTitle: 'Cooked Variant',
-          detailsText: `Turkey Meat can be cooked to obtain Cooked Turkey Meat.`,
+          search: 'turkey meat cooked',
           items: [
-            {
-              id: 'cooked_turkey_meat',
-              title: 'Cooked turkey meat.',
-              namespace_id: 'wildernature:cooked_turkey_meat',
-              subtitle: 'Cooked turkey meat.',
-              icon: '/assets/icons/wildernature/cooked_turkey_meat.webp',
-              search: 'turkey meat cooked food'
-            }
-          ]
-        },
-        {
-          id: 'pelican_meat',
-          title: 'Pelican Meat',
-          namespace_id: 'wildernature:pelican_meat',
-          subtitle: 'Raw pelican meat.',
-          icon: '/assets/icons/wildernature/pelican_meat.webp',
-          search: 'pelican meat raw food',
-          details: true,
-          detailsTitle: 'Cooked Variant',
-          detailsText: `Pelican Meat can be cooked to obtain Cooked Pelican Meat.`,
-          items: [
-            {
-              id: 'cooked_pelican_meat',
-              title: 'Cooked Pelican Meat',
-              namespace_id: 'wildernature:cooked_pelican_meat',
-              subtitle: 'Cooked pelican meat.',
-              icon: '/assets/icons/wildernature/cooked_pelican_meat.webp',
-              search: 'pelican meat cooked food'
-            }
+            { id: 'cooked_turkey_meat', title: 'Cooked Turkey Meat', namespace_id: 'wildernature:cooked_turkey_meat', icon: '/assets/icons/wildernature/cooked_turkey_meat.webp' }
           ]
         },
         {
           id: 'cassowary_meat',
           title: 'Cassowary Meat',
           namespace_id: 'wildernature:cassowary_meat',
-          subtitle: 'Raw cassowary meat.',
+          subtitle: 'Dropped by cassowaries. Works like rabbit.',
           icon: '/assets/icons/wildernature/cassowary_meat.webp',
-          search: 'cassowary meat raw food',
-          details: true,
-          detailsTitle: 'Cooked Variant',
-          detailsText: `Cassowary Meat can be cooked to obtain Cooked Cassowary Meat.`,
+          search: 'cassowary meat cooked',
           items: [
-            {
-              id: 'cooked_cassowary_meat',
-              title: 'Cooked Cassowary Meat',
-              namespace_id: 'wildernature:cooked_cassowary_meat',
-              subtitle: 'Cooked cassowary meat.',
-              icon: '/assets/icons/wildernature/cooked_cassowary_meat.webp',
-              search: 'cassowary meat cooked food'
-            }
+            { id: 'cooked_cassowary_meat', title: 'Cooked Cassowary Meat', namespace_id: 'wildernature:cooked_cassowary_meat', icon: '/assets/icons/wildernature/cooked_cassowary_meat.webp' }
           ]
+        },
+        {
+          id: 'hunting_note',
+          title: 'Fire Aspect',
+          subtitle: 'Bison, boars, cassowaries, deer, minisheep and turkeys drop their meat already cooked when hunted with a Fire Aspect weapon.',
+          icon: '/assets/icons/misc/tip.webp',
+          search: 'fire aspect cooked meat hunting'
         },
         {
           id: 'truffle',
           title: 'Truffle',
           namespace_id: 'wildernature:truffle',
-          subtitle:
-            'A rare delicacy dug up by boars that can be applied to any food, increasing nutrition and saturation by 20%.',
+          subtitle: 'A rare find that makes any food 20% more filling.',
           icon: '/assets/icons/wildernature/truffle.webp',
-          search: 'truffle rare food boar truffled nutrition saturation'
+          search: 'truffle boar rooting food nutrition saturation truffle bag',
+          details: true,
+          detailsText: `[[Boars|boar]] sometimes dig up Truffles while rooting, and they can turn up in Hollow Caches.
+
+Combine a Truffle with any food in the crafting grid to refine it: the food then restores 20% more hunger and saturation. Nine Truffles can be packed into a Truffle Bag.`
+        },
+        {
+          id: 'hazelnut_bush',
+          title: 'Hazelnut',
+          namespace_id: 'wildernature:hazelnut',
+          subtitle: 'A quick snack from Hazelnut Bushes, and the favourite food of squirrels.',
+          icon: '/assets/icons/wildernature/hazelnut.webp',
+          search: 'hazelnut bush squirrel plains forest river',
+          details: true,
+          detailsText: `Hazelnut Bushes grow in plains, forests, flower forests, birch forests and along rivers. Pick them like Sweet Berry Bushes. Plant a Hazelnut to grow your own bush.`
         }
       ]
     },
     {
       id: 'entities',
       title: 'Entities',
-      subtitle: 'New animals and critters.',
+      subtitle: 'Where to find them and how they behave.',
       entries: [
         {
           id: 'deer',
           title: 'Deer',
           namespace_id: 'wildernature:deer',
-          subtitle: 'Shy forest animals that flee when they spot you.',
+          subtitle: 'Shy herd animals of forests and taigas.',
           icon: '/assets/icons/wildernature/entity/deer.webp',
-          search: 'deer forest shy venison leather breed grass tag spawns_deer',
+          search: 'deer forest taiga venison leather white deer herd sleep',
           details: true,
-          detailsTitle: 'Behavior',
-          detailsText: `Deer are shy and will run away if they see or smell a player. Sometimes they sniff the air and seek cover if something is nearby.
+          detailsText: `Deer notice when you sprint or hold a weapon and the whole herd runs off. At night they look for shelter and sleep, preferably on grass.
 
-They drop Venison and occasionally Leather.`,
+Very rarely you meet a white deer. Hunting one brings bad luck: you get Bad Omen and Slowness.`,
           detailsBullets: [
-            'Spawn biomes controlled by wildernature:spawns_deer',
-            'Drops 1 to 2 Venison, sometimes Leather',
-            'Breeding item: minecraft:grass',
-            'Approach slowly to spook them less'
+            'Forests and taigas',
+            'Drops Venison and Leather',
+            'Breed with Short Grass'
           ]
         },
         {
           id: 'bison',
           title: 'Bison',
           namespace_id: 'wildernature:bison',
-          subtitle: 'Big herds, big knockback, and a bad attitude.',
+          subtitle: 'Big savanna herds that defend each other.',
           icon: '/assets/icons/wildernature/entity/bison.webp',
-          search: 'bison savanna herd knockback leather meat tag spawns_bison',
+          search: 'bison savanna herd horn meat leather wheat',
           details: true,
-          detailsTitle: 'Behavior',
-          detailsText: `Bison are neutral but do not like players. If you approach, they can attack as a group.
-
-They deal low damage but have strong knockback.`,
+          detailsText: `Bison live in herds in the savanna. Attack one and the others may join in, and if one panics, the whole herd stampedes.`,
           detailsBullets: [
-            'Spawn biomes controlled by wildernature:spawns_bison',
-            'Drops 2 to 3 Bison Meat, often Leather',
-            'Cannot be tamed or bred'
+            'Savanna',
+            'Drops Bison Meat, Leather and sometimes a Bison Horn',
+            'Breed with Wheat or Hay Bales'
           ]
         },
         {
           id: 'boar',
           title: 'Boar',
           namespace_id: 'wildernature:boar',
-          subtitle: 'If enabled, boars replace pigs in forests and savannas.',
+          subtitle: 'Roots around in the dirt and sometimes finds truffles.',
           icon: '/assets/icons/wildernature/entity/boar.webp',
-          search: 'boar pig replacement forest savanna peaceful truffle roots coarse dirt tag spawns_boar',
+          search: 'boar forest savanna taiga rooting truffle porkchop',
           details: true,
-          detailsTitle: 'Behavior',
-          detailsText: `Boars roam around and sometimes dig up items like roots, coarse dirt, or even truffles.
+          detailsText: `Boars dig through grass and dirt looking for food. They turn up mushrooms, roots, seeds, vegetables and now and then a [[Truffle|truffle]]. Handing them a Truffle encourages them to dig.
 
-They share the same loot table and breeding behavior as pigs.`,
+With Farm & Charm installed, their digging turns dirt into Fertilized Soil.`,
           detailsBullets: [
-            'Spawn biomes controlled by wildernature:spawns_boar',
-            'May replace pigs if enabled in config',
-            'Can find roots, coarse dirt, and truffles',
-            'Same breeding and loot behavior as pigs'
+            'Forests, savannas and taigas',
+            'Drops Porkchops',
+            'Digging respects the mobGriefing rule'
           ]
         },
         {
           id: 'cassowary',
           title: 'Cassowary',
           namespace_id: 'wildernature:cassowary',
-          subtitle: 'Loud, aggressive, and dangerously sharp.',
+          subtitle: 'Territorial and dangerous, especially near its chicks.',
           icon: '/assets/icons/wildernature/entity/cassowary.webp',
-          search: 'cassowary aggressive savanna group hunt claws armor piercing meat feathers tag spawns_cassowary',
+          search: 'cassowary savanna territorial meat feather seeds',
           details: true,
-          detailsTitle: 'Behavior',
-          detailsText: `Cassowaries are aggressive and may hunt players in groups. They hit hard and can penetrate strong armor.
-
-They drop feathers and cassowary meat.`,
+          detailsText: `Cassowaries warn you first, then attack if you stay too close. Their hits slow you down, and they are even more aggressive when chicks are nearby.`,
           detailsBullets: [
-            'Spawn biomes controlled by wildernature:spawns_cassowary',
-            'Aggressive, can hunt in groups',
-            'Drops feathers and cassowary meat',
-            'Cannot be tamed or bred'
-          ]
-        },
-        {
-          id: 'flamingo',
-          title: 'Flamingo',
-          namespace_id: 'wildernature:flamingo',
-          subtitle: 'Beach birds that mostly exist to drop feathers.',
-          icon: '/assets/icons/wildernature/entity/flamingo.webp',
-          search: 'flamingo beach feathers breed fishes tag spawns_flamingo',
-          details: true,
-          detailsTitle: 'Good to know',
-          detailsText: `Flamingos populate beach biomes and drop a lot of feathers.
-
-They can be bred using items tagged as minecraft:fishes.`,
-          detailsBullets: [
-            'Spawn biomes controlled by wildernature:spawns_flamingo',
-            'Drops many feathers',
-            'Breeding item: minecraft:fishes tag'
+            'Savanna',
+            'Drops Cassowary Meat and Feathers',
+            'Breed with seeds'
           ]
         },
         {
           id: 'dog',
           title: 'Dog',
           namespace_id: 'wildernature:dog',
-          subtitle: 'Found near villages or plains. Usually alone.',
+          subtitle: 'A loyal companion that fetches, hunts skeletons and hides its treasures.',
           icon: '/assets/icons/wildernature/entity/dog.webp',
-          search: 'dog village plains neutral cat chase bones tag spawns_dog',
+          search: 'dog tame cooked meat fetch burrow skeleton plains',
           details: true,
-          detailsTitle: 'Behavior',
-          detailsText: `Dogs are neutral and mostly mind their own business, unless they see a cat, then the chase begins.
-
-They share loot and breeding behavior with wolves.`,
+          detailsText: `Tame a dog with cooked meat. Tamed dogs chase skeletons, pick up items and either bring them to you or bury them in their [[Burrow|burrow]]. They warn you about creepers and raccoons, look for shelter when it rains and like to nap near their owner.`,
           detailsBullets: [
-            'Spawn biomes controlled by wildernature:spawns_dog',
-            'Commonly found in villages or plains',
-            'Drops bones',
-            'Same breeding and loot behavior as wolves'
+            'Plains',
+            'Tame and breed with cooked meat',
+            'Drops Bones'
           ]
         },
         {
           id: 'hedgehog',
           title: 'Hedgehog',
           namespace_id: 'wildernature:hedgehog',
-          subtitle: 'Cute, clumsy, and drops nothing.',
+          subtitle: 'Curls into a spiky ball when threatened.',
           icon: '/assets/icons/wildernature/entity/hedgehog.webp',
-          search: 'hedgehog forest cute breed rotten flesh drops nothing tag spawns_hedgehog',
+          search: 'hedgehog forest taiga mushroom curl spikes',
           details: true,
-          detailsTitle: 'Behavior',
-          detailsText: `Hedgehogs have poor eyesight and sometimes bump into blocks and obstacles.
-
-They drop nothing.`,
+          detailsText: `Hedgehogs sleep during the day and sniff around for mushrooms and berries at night. When threatened they curl up, take less damage and prick anything that touches them.`,
           detailsBullets: [
-            'Spawn biomes controlled by wildernature:spawns_hedgehog',
-            'Found in forests',
+            'Forests and taigas',
             'Drops nothing',
-            'Breeding item: minecraft:rotten_flesh'
+            'Breed with mushrooms'
           ]
         },
         {
           id: 'minisheep',
           title: 'Minisheep',
           namespace_id: 'wildernature:minisheep',
-          subtitle: 'Fluffy sheep for colder mountain regions.',
+          subtitle: 'Small, fluffy and surprisingly protective of each other.',
           icon: '/assets/icons/wildernature/entity/minisheep.webp',
-          search: 'minisheep mountains cold wool mutton shear tag spawns_minisheep',
+          search: 'minisheep meadow wool shear mutton herd',
           details: true,
-          detailsTitle: 'Good to know',
-          detailsText: `Minisheep can be sheared for wool and drop wool and mutton on death.
-
-They share loot and breeding behavior with sheep.`,
+          detailsText: `Minisheep follow a leader and sleep at night. If one is attacked, the rest of the herd defends it. Shear them for wool.`,
           detailsBullets: [
-            'Spawn biomes controlled by wildernature:spawns_minisheep',
-            'Found in mountainous areas',
-            'Can be sheared for wool',
-            'Same breeding and loot behavior as sheep'
-          ]
-        },
-        {
-          id: 'owl',
-          title: 'Owl',
-          namespace_id: 'wildernature:owl',
-          subtitle: 'Sleeps by day, hunts by night.',
-          icon: '/assets/icons/wildernature/entity/owl.webp',
-          search: 'owl forest night hunter tame rotten flesh shoulder targets tag spawns_owl owl_targets',
-          details: true,
-          detailsTitle: 'Behavior',
-          detailsText: `Owls sleep during the day and hunt at night. They can target various critters.
-
-Targets can be changed via the wildernature:owl_targets tag.`,
-          detailsBullets: [
-            'Spawn biomes controlled by wildernature:spawns_owl',
-            'Tame with minecraft:rotten_flesh',
-            'Can sit on shoulders',
-            'Targets controlled by wildernature:owl_targets'
-          ]
-        },
-        {
-          id: 'pelican',
-          title: 'Pelican',
-          namespace_id: 'wildernature:pelican',
-          subtitle: 'Beach birds that now fight back.',
-          icon: '/assets/icons/wildernature/entity/pelican.webp',
-          search: 'pelican beach aggressive call help feathers meat breed fishes tag spawns_pelican',
-          details: true,
-          detailsTitle: 'Behavior',
-          detailsText: `Pelicans live in beach biomes. If attacked, they can fight back and may call others for help.
-
-They drop feathers and pelican meat.`,
-          detailsBullets: [
-            'Spawn biomes controlled by wildernature:spawns_pelican',
-            'Drops feathers and pelican meat',
-            'Breeding item: minecraft:fishes tag'
-          ]
-        },
-        {
-          id: 'turkey',
-          title: 'Turkey',
-          namespace_id: 'wildernature:turkey',
-          subtitle: 'A familiar bird with familiar drops.',
-          icon: '/assets/icons/wildernature/entity/turkey.webp',
-          search: 'turkey feathers meat chicken breeding tag spawns_turkey',
-          details: true,
-          detailsTitle: 'Good to know',
-          detailsText: `Turkeys drop feathers and turkey meat.
-
-They share loot and breeding behavior with chickens.`,
-          detailsBullets: [
-            'Spawn biomes controlled by wildernature:spawns_turkey',
-            'Drops feathers and turkey meat',
-            'Same breeding and loot behavior as chickens'
-          ]
-        },
-        {
-          id: 'penguin',
-          title: 'Penguin',
-          namespace_id: 'wildernature:penguin',
-          subtitle: 'A boat loving passenger that makes boats faster.',
-          icon: '/assets/icons/wildernature/entity/penguin.webp',
-          search: 'penguin icy biomes boat steal speed 10 percent tag spawns_penguin',
-          details: true,
-          detailsTitle: 'Behavior',
-          detailsText: `Penguins love boats, especially yours. If they see a boat nearby, they can hop in and take off.
-
-They increase the speed of the boat they are in by 10 percent.`,
-          detailsBullets: [
-            'Spawn biomes controlled by wildernature:spawns_penguin',
-            'Found in icy biomes',
-            'Can hop into boats',
-            'Boat speed bonus: 10 percent'
+            'Meadow',
+            'Shear for wool, drops Mutton',
+            'Breed with Wheat'
           ]
         },
         {
           id: 'raccoon',
           title: 'Raccoon',
           namespace_id: 'wildernature:raccoon',
-          subtitle: 'Sneaky, everywhere, and capable of opening doors.',
+          subtitle: 'A cheeky thief that raids chests and nibbles your crops.',
           icon: '/assets/icons/wildernature/entity/raccoon.webp',
-          search:
-            'raccoon villages doors loot bag breed apple beetroot sweet berries potato cooked cod cooked salmon carrot tag spawns_raccoon',
+          search: 'raccoon plains thief chest loot bag doors crops',
           details: true,
-          detailsTitle: 'Behavior',
-          detailsText: `Raccoons can be found in many biomes and often roam around villages. They can open doors.
-
-They have a chance to drop a loot bag on death.`,
+          detailsText: `Raccoons open doors, loot containers and stash their finds in caches. At night they nibble on crops without destroying them. With Farm & Charm installed, they also steal eggs from chicken coops.`,
           detailsBullets: [
-            'Spawn biomes controlled by wildernature:spawns_raccoon',
-            'Can open doors',
-            'May drop a loot bag',
-            'Breeding items: apple, beetroot, sweet berries, potato, cooked cod, cooked salmon, carrot'
-          ]
-        },
-        {
-          id: 'red_wolf',
-          title: 'Red Wolf',
-          namespace_id: 'wildernature:red_wolf',
-          subtitle: 'Improved wolves with more animations and sneak attacks.',
-          icon: '/assets/icons/wildernature/entity/red_wolf.webp',
-          search: 'red wolf improved wolf sneak more damage tag spawns_red_wolf',
-          details: true,
-          detailsTitle: 'Behavior',
-          detailsText: `Red Wolves behave like wolves but with improved animations. When they spot prey, they can sneak up and deal more damage initially.
-
-They share loot and breeding behavior with wolves.`,
-          detailsBullets: [
-            'Spawn biomes controlled by wildernature:spawns_red_wolf',
-            'Sneaks when hunting and hits harder initially',
-            'Same breeding and loot behavior as wolves'
+            'Plains and Sunflower Plains',
+            'Drops Loot Bags',
+            'Breed with fruit, vegetables or cooked fish'
           ]
         },
         {
           id: 'squirrel',
           title: 'Squirrel',
           namespace_id: 'wildernature:squirrel',
-          subtitle: 'Hazelnut fans that steal saplings and run around nonstop.',
+          subtitle: 'Hazelnut hoarders that bring gifts to their friends.',
           icon: '/assets/icons/wildernature/entity/squirrel.webp',
-          search:
-            'squirrel hazelnut steal saplings holdable temporary tame breed tag spawns_squirrel squirrel_holdable',
+          search: 'squirrel hazelnut trust gift plains forest taiga',
           details: true,
-          detailsTitle: 'Behavior',
-          detailsText: `Squirrels love hazelnuts, can temporarily be tamed, and are generally busy doing squirrel things.
-
-To temporarily tame them, give them an item from the wildernature:squirrel_holdable tag.`,
+          detailsText: `Squirrels pick hazelnuts from bushes and hide them in Hollow Caches. Offer them seeds, sticks, saplings or hazelnuts: if they accept, they trust you a bit more. Trusted squirrels bring you little gifts.`,
           detailsBullets: [
-            'Spawn biomes controlled by wildernature:spawns_squirrel',
-            'Temporary tame: wildernature:squirrel_holdable',
-            'Breeding item: wildernature:hazelnut'
+            'Plains, forests and taigas',
+            'Drops Hazelnuts',
+            'Breed with Hazelnuts'
           ]
+        },
+        {
+          id: 'swift_fox',
+          title: 'Swift Fox',
+          namespace_id: 'wildernature:swift_fox',
+          subtitle: 'A sly little fox that steals from your hands.',
+          icon: '/assets/icons/wildernature/entity/red_wolf.webp',
+          search: 'swift fox steal items trust gift old growth pine taiga',
+          details: true,
+          detailsText: `Swift Foxes snatch items from the ground and even from your hand, then hide them somewhere. Bribe them with berries, chicken, rabbit or eggs to win their trust; trusted foxes return what they took and sometimes bring gifts.`,
+          detailsBullets: [
+            'Old Growth Pine Taiga',
+            'Bribe with berries, chicken, rabbit or eggs',
+            'Breed with cooked meat once they trust you'
+          ]
+        },
+        {
+          id: 'turkey',
+          title: 'Turkey',
+          namespace_id: 'wildernature:turkey',
+          subtitle: 'A plump forest bird that lays Turkey Eggs.',
+          icon: '/assets/icons/wildernature/entity/turkey.webp',
+          search: 'turkey forest feather meat egg seeds',
+          details: true,
+          detailsBullets: [
+            'Forests',
+            'Drops Turkey Meat and Feathers',
+            'Lays Turkey Eggs',
+            'Breed with seeds or Bread'
+          ]
+        },
+        {
+          id: 'elephant',
+          title: 'Elephant',
+          namespace_id: 'wildernature:elephant',
+          subtitle: 'A gentle giant you can ride once it trusts you.',
+          search: 'elephant savanna ride trust thick leather melon',
+          details: true,
+          detailsText: `Elephants roam the savanna and defend themselves when attacked. Feed one to earn its trust, and it will let you ride it.`,
+          detailsBullets: [
+            'Savanna',
+            'Feed with melon, pumpkin, apples or sugar cane',
+            'Rideable once it trusts you',
+            'Drops Thick Leather'
+          ]
+        },
+        {
+          id: 'giraffe',
+          title: 'Giraffe',
+          namespace_id: 'wildernature:giraffe',
+          subtitle: 'Peaceful herds that flee fast and kick hard.',
+          search: 'giraffe savanna herd ride kick thick leather',
+          details: true,
+          detailsText: `Giraffes stay together in small herds and avoid players. If threatened they run far, and they can defend themselves with a powerful kick. They can be ridden.`,
+          detailsBullets: [
+            'Savanna',
+            'Breed with Short Grass',
+            'Rideable',
+            'Drops Thick Leather'
+          ]
+        },
+        {
+          id: 'hippo',
+          title: 'Hippo',
+          namespace_id: 'wildernature:hippo',
+          subtitle: 'Looks sleepy. Is not.',
+          search: 'hippo river threat boat fish thick leather',
+          details: true,
+          detailsText: `Hippos graze on land and head for the water during the day. They get more and more annoyed when you come close, give a warning yawn and then attack. They also snap at fish and attack boats. Feeding them fish or raw meat calms them down.`,
+          detailsBullets: [
+            'Rivers',
+            'Feed with fish or raw meat',
+            'Drops Thick Leather'
+          ]
+        },
+        {
+          id: 'lion',
+          title: 'Lion',
+          namespace_id: 'wildernature:lion',
+          subtitle: 'Prides of lions and lionesses that nap through the day.',
+          search: 'lion lioness savanna pride',
+          details: true,
+          detailsText: `Lions live in small prides in the savanna and rest during the day. Disturb them or threaten the pride and they fight back.`,
+          detailsBullets: [
+            'Savanna',
+            'Breed with raw beef'
+          ]
+        },
+        {
+          id: 'beaver',
+          title: 'Beaver',
+          namespace_id: 'wildernature:beaver',
+          subtitle: 'Busy river builders that will trade you their stripped logs.',
+          search: 'beaver river dam sticks stripped logs trade',
+          details: true,
+          detailsText: `Beavers build [[dams|beaver_dam]] along rivers and collect stripped logs. Hand one an apple, sweet berries, a sapling or a Loot Bag and it gives you the logs it has collected.`,
+          detailsBullets: [
+            'Rivers',
+            'Breed with sticks',
+            'Drops sticks'
+          ]
+        },
+        {
+          id: 'scorpion',
+          title: 'Scorpion',
+          namespace_id: 'wildernature:scorpion',
+          subtitle: 'Hides in the sand and strikes with neurotoxin. Can be tamed with patience.',
+          search: 'scorpion desert neurotoxin tame spider eye fermented',
+          details: true,
+          detailsText: `Scorpions burrow into sand and dirt and ambush anything that comes close. Their sting inflicts Neurotoxin, which deals damage over time, slows you and makes you stagger.
+
+To tame one, sneak and feed it Spider Eyes or Rotten Flesh to slowly earn its trust, then finish with a Fermented Spider Eye.`,
+          detailsBullets: [
+            'Desert',
+            'Sting causes Neurotoxin',
+            'Tame with Spider Eyes or Rotten Flesh, then a Fermented Spider Eye'
+          ]
+        },
+        {
+          id: 'termite',
+          title: 'Termite',
+          namespace_id: 'wildernature:termite',
+          subtitle: 'Tiny workers that live in Termite Mounds.',
+          icon: '/assets/icons/wildernature/entity/termite.webp',
+          search: 'termite mound savanna woodmeal',
+          details: true,
+          detailsText: `Termites leave their [[mound|termite_mound]] to gnaw on nearby logs and carry the wood home. Sometimes you catch one carrying [[Woodmeal|woodmeal]].`
         }
       ]
     },
     {
       id: 'worldgen',
       title: 'Worldgen and Natural Features',
-      subtitle: 'Naturally spawning content and biome control.',
+      subtitle: 'What WilderNature changes in the world.',
       entries: [
         {
-          id: 'hazelnut_bush',
-          title: 'Hazelnut Bush',
-          subtitle: 'A naturally growing bush that can be harvested for Hazelnuts.',
-          icon: '/assets/icons/wildernature/hazelnut_bush.webp',
-          search: 'hazelnut bush plains harvest sweet berry bush',
+          id: 'spawn_tags',
+          title: 'Animal Spawns',
+          subtitle: 'Where the animals live, and which vanilla animals make room for them.',
+          icon: '/assets/icons/wildernature/entity/deer.webp',
+          search: 'spawn biome tags config remove vanilla animals savanna forest swamp jungle',
           details: true,
-          detailsTitle: 'Usage',
-          detailsText: `Hazelnut Bushes function similarly to Sweet Berry Bushes.
+          detailsText: `Most animal spawns are controlled by biome tags such as wildernature:spawns_deer, so datapacks can add or remove biomes.
 
-  They generate naturally in plains biomes and can be harvested for Hazelnuts.`,
-          items: [
-            {
-              id: 'hazelnut',
-              title: 'Hazelnut',
-              namespace_id: 'wildernature:hazelnut',
-              subtitle: 'A simple food item dropped by Hazelnut Bushes.',
-              icon: '/assets/icons/wildernature/hazelnut.webp',
-              search: 'hazelnut food'
-            }
-          ]
+By default, pigs and chickens no longer spawn in forests, farm animals are removed from savannas, swamps and jungles, and frogs are added to jungles. All of this can be turned off in the config.`
         },
         {
-          id: 'spawn_tags',
-          title: 'Entity Spawn Tags',
-          subtitle: 'All animal spawns are controlled via biome tags.',
-          icon: '/assets/icons/wildernature/entity/deer.webp',
-          search:
-            'spawn tags biome tags spawns_deer spawns_bison spawns_boar spawns_cassowary spawns_flamingo spawns_dog spawns_hedgehog spawns_minisheep spawns_owl spawns_pelican spawns_turkey spawns_penguin spawns_raccoon spawns_red_wolf spawns_squirrel',
+          id: 'config',
+          title: 'Configuration',
+          subtitle: 'Spawn weights, group sizes and world features can be adjusted.',
+          icon: '/assets/icons/misc/config.webp',
+          search: 'config spawn weight group size hazelnut termite mound hollow cache',
           details: true,
-          detailsTitle: 'Tags',
-          detailsText: `WilderNature uses biome tags to control where animals spawn. You can edit these tags to add or remove biomes.`,
           detailsBullets: [
-            'wildernature:spawns_deer',
-            'wildernature:spawns_bison',
-            'wildernature:spawns_boar',
-            'wildernature:spawns_cassowary',
-            'wildernature:spawns_flamingo',
-            'wildernature:spawns_dog',
-            'wildernature:spawns_hedgehog',
-            'wildernature:spawns_minisheep',
-            'wildernature:spawns_owl',
-            'wildernature:spawns_pelican',
-            'wildernature:spawns_turkey',
-            'wildernature:spawns_penguin',
-            'wildernature:spawns_raccoon',
-            'wildernature:spawns_red_wolf',
-            'wildernature:spawns_squirrel'
+            'Spawn weight and group size for every animal',
+            'Remove vanilla animals from savannas, forests, swamps and jungles',
+            'Turn Hazelnut Bushes, Termite Mounds and Hollow Caches on or off'
           ]
         }
       ]

@@ -3,39 +3,31 @@ export default {
   title: 'Alpine Whispers',
   logo: '/assets/mod-logos/alpine_whispers.webp',
   aboutTitle: 'Welcome',
-  aboutSubtitle: 'Building blocks, furniture, and small gameplay additions',
-  aboutText: `Welcome to the Alpine Whispers Wiki.
+  aboutSubtitle: 'Alpine building, cozy interiors and a colder winter',
+  aboutText: `Alpine Whispers brings the look of traditional alpine homes into Minecraft.
 
-This is your home for blocks, items, entities, and mechanics added by Alpine Whispers.
+It adds a stone and a wood building set, furniture for every room, winter decorations, two new animals and a reworked winter landscape.
 
-Alpine Whispers introduces building blocks, furniture, and decorative elements inspired by traditional alpine architecture from the Alpine foothills.
-
-Snowy Plains and Grove biomes are adjusted to include Alpine Whispers materials.
-
-The mod focuses on classic alpine building materials and interiors, expanding building options with a small selection of functional items, food, and animals.`,
+Snowy Plains and Groves are reshaped with Arolla Pines, gneiss boulders, frozen ground and icicles. Cold biomes also get denser fog, and Groves an ambient snowfall of their own.`,
   sections: [
     {
       id: 'stations',
       title: 'Stations and Processing',
-      subtitle: 'Blocks used for basic item processing.',
+      subtitle: 'Blocks used to process items.',
       entries: [
         {
           id: 'smoker',
-          title: 'Smoker',
+          title: 'Arolla Pine Smoker',
           namespace_id: 'alpinewhispers:arolla_pine_smoker',
-          subtitle: 'Functions like a Smoker.',
+          subtitle: 'A Smoker in Arolla Pine style.',
           icon: '/assets/icons/alpine-whispers/arolla_pine_smoker.webp',
           search: 'smoker alpine whispers arolla pine cooking furnace',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Alpine Whispers Smoker functions identically to the vanilla Smoker, but is crafted from Arolla Pine materials to match the alpine aesthetic.
-
-It cooks food items at twice the speed of a regular Furnace and can be used as a heat source for other cooking stations.`,
+          detailsText: `The Arolla Pine Smoker works exactly like the vanilla Smoker. Only the look is different, so it blends into alpine kitchens.`,
           detailsBullets: [
-            'Cooks food twice as fast as a regular Furnace',
-            'Crafted from Arolla Pine materials',
-            'Can serve as a heat source for nearby cooking stations',
-            'Accepts all standard fuel items'
+            'Cooks food twice as fast as a Furnace',
+            'Uses the same fuels and recipes as the vanilla Smoker'
           ]
         }
       ]
@@ -43,27 +35,25 @@ It cooks food items at twice the speed of a regular Furnace and can be used as a
     {
       id: 'decor',
       title: 'Decor and Building',
-      subtitle: 'Building blocks and interior furniture.',
+      subtitle: 'Building sets, furniture and decorations.',
       entries: [
         {
           id: 'alpine_gneiss',
           title: 'Alpine Gneiss',
           namespace_id: 'alpinewhispers:alpine_gneiss',
-          subtitle: 'A complete stone building set including all standard block variants.',
+          subtitle: 'A stone building set with bricks, layered bricks and mossy variants.',
           icon: '/assets/icons/alpine-whispers/alpine_gneiss_bricks.webp',
-          search: 'alpine gneiss stone set bricks layered mossy frosty',
+          search: 'alpine gneiss stone set bricks layered mossy frosty stairs slab wall stonecutter',
           details: true,
           detailsMiniGallery: true,
-          detailsTitle: 'Variants and Worldgen',
-          detailsText: `Alpine Gneiss is a complete stone building set covering standard structural variants.
+          detailsTitle: 'Variants',
+          detailsText: `Alpine Gneiss comes in five variants, each with stairs, slabs and walls. All of them can also be made in the Stonecutter.
 
-In the world, Alpine Gneiss can partially replace regular stone in Snowy Plains and Grove biomes.
-
-Mossy variants can be turned frosty by using a snowball on them, or by hitting them with a snowball.`,
+Mossy variants are crafted with Moss or Vines. Use a snowball on them, or hit them with a thrown one, to make them frosty.`,
           detailsBullets: [
-            'Includes all standard stone block variants',
-            'Can partially replace regular stone in Snowy Plains and Grove biomes',
-            'Mossy variants can be turned frosty using snowballs'
+            'Gneiss, Bricks, Layered Bricks, Mossy Bricks and Mossy Layered Bricks',
+            'Stairs, slabs and walls for every variant',
+            'Mossy variants turn frosty with snowballs'
           ],
           items: [
             {
@@ -98,8 +88,8 @@ Mossy variants can be turned frosty by using a snowball on them, or by hitting t
             },
             {
               id: 'frosty_alpine_gneiss_bricks',
-              title: 'Frosty Alpine Gneiss Bricks',
-              namespace_id: 'alpinewhispers:frosty_alpine_gneiss_bricks',
+              title: 'Frosty Mossy Alpine Gneiss Bricks',
+              subtitle: 'Mossy bricks after a snowball.',
               icon: '/assets/icons/alpine-whispers/mossy_alpine_gneiss_bricks.webp'
             }
           ]
@@ -108,18 +98,20 @@ Mossy variants can be turned frosty by using a snowball on them, or by hitting t
           id: 'arolla_pine',
           title: 'Arolla Pine',
           namespace_id: 'alpinewhispers:arolla_pine_log',
-          subtitle: 'A complete wood building set including all standard block variants.',
+          subtitle: 'A wood building set from the native tree of Snowy Plains and Groves.',
           icon: '/assets/icons/alpine-whispers/arolla_pine_log.webp',
-          search: 'arolla pine wood set log planks door trapdoor snowy plains grove',
+          search: 'arolla pine wood set log planks stairs slab fence gate door trapdoor button pressure plate stripped',
           details: true,
           detailsMiniGallery: true,
           detailsTitle: 'Included Blocks',
-          detailsText: `Arolla Pine is a complete wood building set used across Alpine Whispers builds.
+          detailsText: `Arolla Pine wood comes from [[Arolla Pines|arolla_pine_sapling]], which grow naturally in Snowy Plains and Groves.
 
-It represents the wood of the Arolla Pine and is the native wood type found in snowy regions, where it grows naturally as [[Arolla Pines|arolla_pine_sapling]].`,
+The set covers logs, wood, stripped variants, planks, stairs, slabs, fences, fence gates, doors, trapdoors, buttons and pressure plates.`,
           detailsBullets: [
-            'Native wood type of Snowy Plains and Grove biomes',
-            'Full wood set with matching variants'
+            'Grows in Snowy Plains and Groves',
+            'Logs, wood and stripped variants',
+            'Planks, stairs, slabs, fences and fence gates',
+            'Doors, trapdoors, buttons and pressure plates'
           ],
           items: [
             {
@@ -145,12 +137,12 @@ It represents the wood of the Arolla Pine and is the native wood type found in s
         {
           id: 'windows',
           title: 'Windows',
-          subtitle: 'Available as blocks and panes. Keeps the winter outside, at least visually.',
+          subtitle: 'Arolla Pine windows as full blocks and panes.',
           icon: '/assets/icons/alpine-whispers/arolla_pine_window.webp',
           search: 'window pane glass alpine whispers',
           details: true,
           detailsTitle: 'Included Blocks',
-          detailsText: `Clean glass variants made for alpine builds and interiors.`,
+          detailsText: `Framed windows for alpine houses, available as a full block and as a pane.`,
           items: [
             {
               id: 'arolla_pine_window',
@@ -170,454 +162,440 @@ It represents the wood of the Arolla Pine and is the native wood type found in s
         },
         {
           id: 'bed',
-          title: 'Bed',
+          title: 'Arolla Pine Bed',
           namespace_id: 'alpinewhispers:arolla_pine_bed',
-          subtitle: 'A bed variant used for players and interior builds.',
+          subtitle: 'A wooden bed that works like any other bed.',
           icon: '/assets/icons/alpine-whispers/arolla_pine_bed.webp',
-          search: 'bed arolla pine alpine whispers',
+          search: 'bed arolla pine alpine whispers sleep spawn',
           details: true,
           detailsTitle: 'Note',
-          detailsText: `Due to Minecraft's villager POI system, villagers are unable to recognize and use this bed.`
+          detailsText: `You can sleep in it and set your spawn point as usual.
+
+Villagers do not recognise it as a bed, because Minecraft only lets them claim vanilla beds.`
         },
         {
           id: 'sofa',
-          title: 'Sofa',
+          title: 'Arolla Pine Sofa',
           namespace_id: 'alpinewhispers:arolla_pine_sofa',
-          subtitle: 'A decorative sofa for seating.',
+          subtitle: 'A soft sofa that connects to the sofas next to it.',
           icon: '/assets/icons/alpine-whispers/arolla_pine_sofa.webp',
-          search: 'sofa seating alpine whispers',
+          search: 'sofa seating couch connect bounce alpine whispers',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Sofa is a decorative seating block crafted from Arolla Pine. Right-click to sit down and enjoy the cozy alpine interior.
+          detailsText: `Right click to sit down. Sofas placed side by side join into one long couch.
 
-It pairs well with the Chair and Table to furnish living spaces and common rooms.`,
+The cushions are soft: falling onto a sofa halves the fall damage and bounces you back up a little.`,
           detailsBullets: [
-            'Right-click to sit',
-            'Decorative seating for alpine interiors',
-            'Crafted from Arolla Pine materials'
+            'Right click to sit',
+            'Connects with neighbouring sofas',
+            'Halves fall damage and makes you bounce'
           ]
         },
         {
           id: 'chair',
-          title: 'Chair',
+          title: 'Arolla Pine Chair',
           namespace_id: 'alpinewhispers:arolla_pine_chair',
-          subtitle: 'Simple seating.',
+          subtitle: 'A tall-backed chair to sit on.',
           icon: '/assets/icons/alpine-whispers/arolla_pine_chair.webp',
           search: 'chair seating alpine whispers',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Chair is a simple seating block made from Arolla Pine. Right-click to sit down.
-
-It fits naturally around the Table and pairs with other alpine furniture for a complete interior.`,
+          detailsText: `Right click the seat to sit down. The high backrest takes up two blocks, so leave some room above.`,
           detailsBullets: [
-            'Right-click to sit',
-            'Pairs well with the Table',
-            'Crafted from Arolla Pine materials'
+            'Right click to sit',
+            'Two blocks tall'
           ]
         },
         {
           id: 'table',
-          title: 'Table',
+          title: 'Arolla Pine Table',
           namespace_id: 'alpinewhispers:arolla_pine_table',
-          subtitle: 'A dining table.',
+          subtitle: 'A dining table that grows longer when placed in a row.',
           icon: '/assets/icons/alpine-whispers/arolla_pine_table.webp',
-          search: 'table alpine whispers',
+          search: 'table connect waterlogged alpine whispers',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Table is a decorative block crafted from Arolla Pine, designed for dining rooms and common areas.
-
-It connects visually with nearby alpine furniture and looks best surrounded by Chairs.`,
+          detailsText: `Tables placed next to each other connect into one long table.`,
           detailsBullets: [
-            'Decorative dining table',
-            'Crafted from Arolla Pine materials',
-            'Pairs well with Chairs and other alpine furniture'
+            'Connects with neighbouring tables',
+            'Can be waterlogged'
           ]
         },
         {
           id: 'dresser',
-          title: 'Dresser',
+          title: 'Arolla Pine Dresser',
           namespace_id: 'alpinewhispers:arolla_pine_dresser',
-          subtitle: 'A storage dresser.',
+          subtitle: 'A dresser with 36 slots of storage.',
           icon: '/assets/icons/alpine-whispers/arolla_pine_dresser.webp',
-          search: 'dresser storage alpine whispers',
+          search: 'dresser storage connect alpine whispers',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Dresser is a functional storage block crafted from Arolla Pine. It provides a small inventory for storing everyday items and fits naturally into alpine bedrooms and living spaces.`,
+          detailsText: `Right click to open its 36 slots. Dressers placed side by side connect visually.`,
           detailsBullets: [
-            'Right-click to open and access storage',
-            'Crafted from Arolla Pine materials',
-            'Fits naturally in bedrooms and living areas'
+            'Right click to open',
+            '36 storage slots',
+            'Connects with neighbouring dressers',
+            'Can be waterlogged'
           ]
         },
         {
           id: 'wardrobe',
-          title: 'Wardrobe',
+          title: 'Arolla Pine Wardrobe',
           namespace_id: 'alpinewhispers:arolla_pine_wardrobe',
-          subtitle: 'A tall two-block wardrobe that stores armor pieces.',
+          subtitle: 'A two block tall wardrobe that displays your armor.',
           icon: '/assets/icons/alpine-whispers/arolla_pine_wardrobe.webp',
           search: 'wardrobe arolla pine armor storage tall furniture alpine whispers',
           details: true,
           detailsTitle: 'Armor Storage',
-          detailsText: `Use an armor piece on the Wardrobe to store it.
+          detailsText: `Use an armor piece on the Wardrobe to hang it inside.
 
-Sneak-use to take stored items back out.
-
-Use without an item to open and close it.`,
+Sneak and use it to take the stored pieces back out. Use it with an empty hand to open or close the doors.`,
           detailsBullets: [
-            'Stores helmet, chestplate, leggings, and boots',
-            'Place armor by using it on the Wardrobe',
-            'Sneak-use to retrieve stored items',
-            'Use without an item to open and close'
+            'Holds a helmet, chestplate, leggings and boots',
+            'Use armor on it to store it',
+            'Sneak-use to take armor out',
+            'Use with an empty hand to open or close it'
           ]
         },
         {
           id: 'cabinet',
-          title: 'Cabinet',
+          title: 'Arolla Pine Cabinet',
           namespace_id: 'alpinewhispers:arolla_pine_cabinet',
-          subtitle: 'A storage block for keeping supplies close and organized.',
+          subtitle: 'A kitchen cabinet with 36 slots of storage.',
           icon: '/assets/icons/alpine-whispers/arolla_pine_cabinet.webp',
-          search: 'cabinet storage alpine whispers',
+          search: 'cabinet storage comparator alpine whispers',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Cabinet is a storage block crafted from Arolla Pine. It provides accessible storage for kitchens, hallways, and workrooms.
-
-Pair it with the Wall Cabinet and Cooking Aisle for a complete kitchen setup.`,
+          detailsText: `Right click to open its 36 slots. Combine it with the [[Wall Cabinet|wall_cabinet]] and [[Cooking Aisle|cooking_aisle]] for a full kitchen.`,
           detailsBullets: [
-            'Right-click to open and access storage',
-            'Crafted from Arolla Pine materials',
-            'Pairs well with Wall Cabinet and Cooking Aisle'
+            'Right click to open',
+            '36 storage slots',
+            'Comparators read how full it is'
           ]
         },
         {
           id: 'wall_cabinet',
-          title: 'Wall Cabinet',
+          title: 'Arolla Pine Wall Cabinet',
           namespace_id: 'alpinewhispers:arolla_pine_wall_cabinet',
-          subtitle: 'Wall mounted storage to free up floor space.',
+          subtitle: 'A cabinet for the wall above your counters.',
           icon: '/assets/icons/alpine-whispers/arolla_pine_wall_cabinet.webp',
           search: 'wall cabinet storage alpine whispers',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Wall Cabinet mounts directly onto walls and provides storage without taking up floor space. Ideal for kitchens, entryways, and compact alpine interiors.`,
+          detailsText: `Works like the Cabinet but is meant to hang above counters, keeping the floor free.`,
           detailsBullets: [
-            'Mounts on walls',
-            'Right-click to open and access storage',
-            'Frees up floor space in smaller rooms'
+            'Right click to open',
+            '36 storage slots',
+            'Comparators read how full it is'
           ]
         },
         {
           id: 'cooking_aisle',
-          title: 'Cooking Aisle',
+          title: 'Arolla Pine Cooking Aisle',
           namespace_id: 'alpinewhispers:arolla_pine_cooking_aisle',
-          subtitle: 'A cabinet style block for building longer kitchen lines.',
+          subtitle: 'A kitchen counter with storage that joins into long rows.',
           icon: '/assets/icons/alpine-whispers/arolla_pine_cooking_aisle.webp',
-          search: 'cooking aisle cabinet connectible alpine whispers',
+          search: 'cooking aisle counter cabinet connect storage alpine whispers',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Cooking Aisle is a connectable cabinet block designed to build continuous kitchen counters. It connects seamlessly to adjacent Cooking Aisles and other kitchen blocks for a clean, unified look.`,
+          detailsText: `Place several Cooking Aisles next to each other to build one continuous counter. Each one also has storage inside.`,
           detailsBullets: [
-            'Connects to adjacent Cooking Aisles for a continuous counter',
-            'Decorative kitchen counter block',
-            'Pairs well with the Sink and other kitchen furniture'
+            'Connects with neighbouring Cooking Aisles',
+            'Right click to open',
+            '36 storage slots'
           ]
         },
         {
           id: 'kitchen_sink',
           title: 'Arolla Pine Sink',
           namespace_id: 'alpinewhispers:arolla_pine_sink',
-          subtitle: 'A functional sink you can fill and empty with buckets and bottles.',
+          subtitle: 'A stone sink you can fill with water and draw from.',
           icon: '/assets/icons/alpine-whispers/arolla_pine_sink.webp',
-          search: 'kitchen sink alpine whispers filled bucket bottle water potion',
+          search: 'kitchen sink alpine whispers filled bucket bottle water',
           details: true,
           detailsTitle: 'Function',
-          detailsText: `Use a Water Bucket or Glass Bottle on the lower half to fill it.
+          detailsText: `Right click the lower half with an empty hand to turn on the tap, or pour in a Water Bucket.
 
-If it is filled, use an empty Bucket to get a Water Bucket, or a Glass Bottle to get a Water Potion.`,
+Once it is filled, draw water with an empty Bucket or a Glass Bottle.`,
           detailsBullets: [
-            'Use Water Bucket or Glass Bottle to fill',
-            'Use empty Bucket for a Water Bucket',
-            'Use Glass Bottle for a Water Potion',
+            'Fill with an empty hand or a Water Bucket',
+            'Empty Bucket gives a Water Bucket',
+            'Glass Bottle gives a Water Bottle',
             'Interact with the lower half'
           ]
         },
         {
           id: 'washbasin',
-          title: 'Washbasin Sink',
+          title: 'Arolla Pine Washbasin',
           namespace_id: 'alpinewhispers:arolla_pine_washbasin',
-          subtitle: 'A wooden washbasin sink you can fill and empty with buckets and bottles.',
+          subtitle: 'A washbasin on wooden legs, used just like the sink.',
           icon: '/assets/icons/alpine-whispers/arolla_pine_washbasin.webp',
-          search: 'washbasin sink alpine whispers bucket bottle water potion',
+          search: 'washbasin sink alpine whispers bucket bottle water',
           details: true,
           detailsTitle: 'Function',
-          detailsText: `Use a Water Bucket or Glass Bottle on the lower half to fill it.
+          detailsText: `Right click the lower half with an empty hand to turn on the tap, or pour in a Water Bucket.
 
-If it is filled, use an empty Bucket to get a Water Bucket, or a Glass Bottle to get a Water Potion.`,
+Once it is filled, draw water with an empty Bucket or a Glass Bottle.`,
           detailsBullets: [
-            'Use Water Bucket or Glass Bottle to fill',
-            'Use empty Bucket for a Water Bucket',
-            'Use Glass Bottle for a Water Potion',
+            'Fill with an empty hand or a Water Bucket',
+            'Empty Bucket gives a Water Bucket',
+            'Glass Bottle gives a Water Bottle',
             'Interact with the lower half'
           ]
         },
         {
           id: 'bathtub',
-          title: 'Bathtub',
+          title: 'Arolla Pine Bathtub',
           namespace_id: 'alpinewhispers:arolla_pine_bathtub',
-          subtitle: 'A fillable bathtub you can soak in, and drain with buckets or bottles.',
+          subtitle: 'A bathtub you can fill, soak in and drain again.',
           icon: '/assets/icons/alpine-whispers/arolla_pine_bathtub.webp',
-          search: 'bathtub alpine whispers fill drain bucket bottle water potion soak remove negative effects zombie drowned enderman',
+          search: 'bathtub alpine whispers fill drain bucket bottle water soak remove negative effects zombie drowned enderman',
           details: true,
           detailsTitle: 'Function',
-          detailsText: `The Bathtub is a two part block.
+          detailsText: `The Bathtub is two blocks long. Right click the head end with an empty hand or a Water Bucket and it slowly fills up over about 45 seconds.
 
-Fill it with a Water Bucket or Glass Bottle, or start filling with an empty hand.
-Drain it with an empty Bucket or a Glass Bottle.
+Once it is full you can sit in it. A bath washes off all harmful effects and slows you down while you are in the water. Zombies that fall in turn into Drowned, and Endermen get hurt.
 
-While filled, you can sit in the bathtub. Entities inside are affected: harmful effects are removed.
-Zombies convert to Drowned, and Endermen take damage from the water.`,
+An empty Bucket takes out half of the water, a Glass Bottle a quarter.`,
           detailsBullets: [
-            'Two part block, interact with the head',
-            'Fill with Water Bucket or Glass Bottle, or start filling with empty hand',
-            'Drain with empty Bucket for a Water Bucket',
-            'Drain with Glass Bottle for a Water Potion',
-            'While filled: removes harmful effects and slows movement',
-            'Zombies convert to Drowned, Endermen take damage'
+            'Two blocks long, interact with the head end',
+            'Fill with an empty hand or a Water Bucket',
+            'Right click when full to sit in it',
+            'Removes harmful effects and slows movement',
+            'Zombies turn into Drowned, Endermen take damage',
+            'Bucket drains half, Glass Bottle drains a quarter'
           ]
         },
         {
           id: 'privy',
-          title: 'Privy',
+          title: 'Arolla Pine Privy',
           namespace_id: 'alpinewhispers:arolla_pine_privy',
-          subtitle: 'A usable privy.',
+          subtitle: 'An outhouse seat that slowly turns food into Bone Meal.',
           icon: '/assets/icons/alpine-whispers/arolla_pine_privy.webp',
-          search: 'privy toilet alpine whispers sit smelly flies absorb food redstone comparator',
+          search: 'privy toilet outhouse alpine whispers sit smelly flies food bone meal rotten flesh compost redstone comparator speed',
           details: true,
           detailsTitle: 'Function',
-          detailsText: `The Privy can be used like a seat.
+          detailsText: `Right click to sit down. While seated you get a short Speed boost, but you also lose a little saturation.
 
-Most food items can be inserted by right clicking with them.
-Dropped food items that touch the Privy can also be absorbed.
+Right click with food to drop it in, or toss items onto it. After 30 seconds each item comes out again as Bone Meal or, less often, as Rotten Flesh. Once there is something waiting inside, the privy gets smelly, with flies and buzzing.
 
-As it fills up, it may become smelly, spawning fly particles and buzzing sounds.
-
-Sneak right click to release all stored items.
-The fill level can be read using a comparator.`,
+Sneak and right click with an empty hand to take everything out. A comparator reads how full it is.`,
           detailsBullets: [
             'Right click to sit',
-            'Stores most food items via interaction or item pickup',
-            'Can become smelly with particle and sound effects',
-            'Sneak right click to release stored items',
-            'Comparator output reflects how full it is'
+            'Sitting gives Speed but drains saturation',
+            'Turns food into Bone Meal or Rotten Flesh after 30 seconds',
+            'Gets smelly while holding its output',
+            'Sneak right click to empty it',
+            'Comparators read how full it is'
           ]
         },
         {
           id: 'frozen_dirt',
           title: 'Frozen Dirt',
           namespace_id: 'alpinewhispers:frozen_dirt',
-          subtitle: 'A frozen dirt variant used for terrain and builds.',
+          subtitle: 'Dirt frozen solid, found in patches under the snow.',
           icon: '/assets/icons/alpine-whispers/frozen_dirt.webp',
-          search: 'frozen dirt block alpine whispers',
+          search: 'frozen dirt block snowball craft icicle alpine whispers',
           details: true,
-          detailsTitle: 'Usage',
-          detailsText: `Frozen Dirt is a terrain block that generates naturally in cold biomes as part of the Alpine Whispers worldgen. It can also be used as a building material for naturalistic frozen landscapes and outdoor builds.
+          detailsTitle: 'Obtaining',
+          detailsText: `Frozen Dirt forms small patches in Snowy Plains and Groves. You can also craft it from Dirt and Snowballs.
 
-Alpine Sheep will graze on Frozen Dirt, slowly converting it back to regular dirt.`,
+When an [[Icicle|icicles]] hangs from Frozen Dirt, it can thaw back into regular Dirt. See [[Alpine Gneiss Growth|alpine_gneiss_reproduction]].`,
           detailsBullets: [
-            'Generates naturally in cold and snowy biomes',
-            'Can be used as a building block for frozen terrain',
-            'Alpine Sheep graze on it and convert it to regular dirt'
+            'Generates in patches in Snowy Plains and Groves',
+            'Crafted from Dirt and Snowballs',
+            'Can thaw into Dirt through Icicles'
           ]
         },
         {
           id: 'icicles',
           title: 'Icicles',
           namespace_id: 'alpinewhispers:icicles',
-          subtitle: 'Hanging ice formations found in cold environments.',
+          subtitle: 'Icicles that hang from the underside of blocks.',
           icon: '/assets/icons/alpine-whispers/icicles.webp',
-          search: 'icicles alpine whispers decoration caves leaves snow',
+          search: 'icicles alpine whispers decoration leaves stone blue ice craft',
           details: true,
           detailsTitle: 'Behavior',
-          detailsText: `Icicles generate naturally in snowy biomes, commonly hanging from leaves and around cave entrances.
+          detailsText: `Icicles generate in Snowy Plains and Groves, hanging from stone, gneiss, frozen dirt and Arolla Pine leaves. Eight of them can be crafted from one Blue Ice.
 
-They are primarily decorative, but over time they can trigger small changes to the terrain beneath them.`,
+They can only be placed on the underside of a block and drop when that block is removed. Tiny snowflakes drift down from them.`,
           detailsBullets: [
-            'Generates in snowy biomes',
-            'Can spawn hanging from leaves or cave ceilings',
-            'Slowly affects nearby terrain over time',
-            'May disappear after triggering its effect'
+            'Generates in Snowy Plains and Groves',
+            'Crafted from Blue Ice',
+            'Placed on the underside of blocks',
+            'Can turn stone into Alpine Gneiss'
           ]
         },
         {
           id: 'homespun_wool',
           title: 'Homespun Wool',
           namespace_id: 'alpinewhispers:homespun_wool',
-          subtitle: 'A wool variant obtained by shearing Alpine Sheep.',
+          subtitle: 'Rustic wool shorn from Alpine Sheep.',
           icon: '/assets/icons/alpine-whispers/homespun_wool.webp',
-          search: 'homespun wool alpine whispers alpine sheep',
+          search: 'homespun wool alpine whispers alpine sheep shears',
           details: true,
           detailsTitle: 'Obtaining',
-          detailsText: `Homespun Wool is obtained by shearing Alpine Sheep with Shears. It has a rougher, more rustic appearance than regular wool and is used to craft Homespun Carpet.`,
+          detailsText: `Shear an [[Alpine Sheep|alpine_sheep]] to get Homespun Wool. It can be placed as a block or turned into [[Homespun Carpet|homespun_carpet]].`,
           detailsBullets: [
             'Obtained by shearing Alpine Sheep',
-            'Used to craft Homespun Carpet',
-            'Has a distinct rustic texture'
+            'Used to craft Homespun Carpet'
           ]
         },
         {
           id: 'homespun_carpet',
           title: 'Homespun Carpet',
           namespace_id: 'alpinewhispers:homespun_carpet',
-          subtitle: 'A fluffy, shaggy carpet made out of Homespun Wool.',
+          subtitle: 'A shaggy carpet made from Homespun Wool.',
           icon: '/assets/icons/alpine-whispers/homespun_carpet.webp',
           search: 'homespun carpet alpine whispers homespun wool',
           details: true,
           detailsTitle: 'Crafting',
-          detailsText: `Homespun Carpet is crafted from Homespun Wool obtained by shearing Alpine Sheep. It adds a cozy, rustic feel to alpine floors and interiors.`,
+          detailsText: `Crafted from [[Homespun Wool|homespun_wool]]. A warm, shaggy floor for alpine rooms.`,
           detailsBullets: [
-            'Crafted from Homespun Wool',
-            'Adds a rustic, cozy texture to floors',
-            'Pairs well with alpine wood and stone materials'
+            'Crafted from Homespun Wool'
           ]
         },
         {
           id: 'snow_globe',
           title: 'Snow Globe',
           namespace_id: 'alpinewhispers:snow_globe',
-          subtitle: 'A decorative element. Right-click to unleash a small snowstorm inside the globe!',
+          subtitle: 'Give it a shake and watch the snow swirl inside.',
           icon: '/assets/icons/alpine-whispers/snow_globe.webp',
-          search: 'snow globe decoration alpine whispers',
+          search: 'snow globe decoration shake redstone signal alpine whispers',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Snow Globe is a decorative block that can be placed on surfaces. Right-clicking it triggers a small particle snowstorm inside the globe, adding a charming seasonal touch to any interior.`,
+          detailsText: `Right click to shake the globe and set the snow swirling. Shaking it again makes the flurry stronger, then it slowly settles.
+
+While the snow is swirling, the globe also gives off a redstone signal that fades as it settles.`,
           detailsBullets: [
-            'Purely decorative block',
-            'Right-click to trigger a snowstorm particle effect',
-            'Great for seasonal and cozy interior builds'
+            'Right click to shake it',
+            'Shake repeatedly for a stronger flurry',
+            'Emits a fading redstone signal',
+            'Needs a solid block underneath for the snow to show'
           ]
         },
         {
           id: 'fireplace_cornice',
           title: 'Fireplace Cornice',
           namespace_id: 'alpinewhispers:fireplace_cornice',
-          subtitle: 'A connectable trim block that can copy the look of other full blocks.',
+          subtitle: 'A connecting trim that can take on the look of other blocks.',
           icon: '/assets/icons/alpine-whispers/fireplace_cornice.webp',
-          search: 'fireplace cornice trim alpine whispers connectable applied mimic chisel pickaxe waterlogged',
+          search: 'fireplace cornice trim alpine whispers connectable applied mimic pickaxe waterlogged',
           details: true,
           detailsTitle: 'Function',
-          detailsText: `Fireplace Cornice connects to neighboring cornices and hides edge parts automatically.
+          detailsText: `Cornices placed next to or on top of each other connect and hide their inner edges.
 
-You can apply a full block to it by right clicking with that block, making the cornice mimic its look.
-Use a pickaxe to remove the applied block again.`,
+Right click with a full block to give the cornice that block's look. Right click with a pickaxe to get the block back.`,
           detailsBullets: [
-            'Connects to adjacent cornices and adapts its shape',
-            'Right click with a full block to apply and mimic its look',
-            'Use a pickaxe to remove the applied block',
-            'Waterloggable'
+            'Connects sideways and vertically',
+            'Right click with a full block to copy its look',
+            'Right click with a pickaxe to remove it again',
+            'Can be waterlogged'
           ]
         },
         {
           id: 'candle_wreath',
           title: 'Candle Wreath',
           namespace_id: 'alpinewhispers:candle_wreath',
-          subtitle: 'A wall wreath with four candles you can light individually.',
+          subtitle: 'A table wreath with four candles you light one by one.',
           icon: '/assets/icons/alpine-whispers/candle_wreath.webp',
-          search: 'candle wreath wall decoration light candles flint and steel fire charge bucket waterlogged projectile',
+          search: 'candle wreath advent table decoration light candles flint and steel fire charge bucket waterlogged projectile',
           details: true,
           detailsTitle: 'Function',
-          detailsText: `The Candle Wreath has four separate candles. You can light each one by right clicking it with Flint and Steel or a Fire Charge.
+          detailsText: `Place the wreath on a table or any other solid surface. Each of its four candles is lit separately by right clicking it with Flint and Steel or a Fire Charge. Burning arrows light a candle too.
 
-To put a candle out, right click that candle with an empty Bucket. If the block gets waterlogged, all candles go out automatically.
+Right click a candle with an empty Bucket to put it out. If the wreath gets waterlogged, all candles go out at once.
 
-More lit candles means more light. Burning projectiles can light a candle on hit.`,
+The more candles burn, the brighter it gets, up to full light with all four.`,
           detailsBullets: [
-            'Light individual candles with Flint and Steel or Fire Charge',
-            'Extinguish a single candle with an empty Bucket',
-            'Waterlogging extinguishes all candles',
-            'Light level depends on how many candles are lit'
+            'Placed on top of a solid block',
+            'Light each candle with Flint and Steel or a Fire Charge',
+            'Put a candle out with an empty Bucket',
+            'Waterlogging puts out all candles',
+            'Brighter with every lit candle'
           ]
         },
         {
           id: 'wall_wreath',
           title: 'Wall Wreath',
           namespace_id: 'alpinewhispers:wall_wreath',
-          subtitle: 'A wall mounted wreath decoration.',
+          subtitle: 'An evergreen wreath for walls and doors.',
           icon: '/assets/icons/alpine-whispers/wall_wreath.webp',
-          search: 'wall wreath decoration alpine whispers',
+          search: 'wall wreath decoration door alpine whispers',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Wall Wreath is a purely decorative block that mounts onto walls. It adds a festive and natural touch to alpine homes and entranceways.
+          detailsText: `A purely decorative wreath. It hangs on walls or from the ceiling.
 
-For a lit version, use the Candle Wreath instead.`,
+For candles and light, use the [[Candle Wreath|candle_wreath]].`,
           detailsBullets: [
-            'Mounts on walls',
-            'Purely decorative',
-            'Use the Candle Wreath for a version with lighting'
+            'Hangs on walls or from ceilings',
+            'Purely decorative'
           ]
         },
         {
           id: 'fairy_lights',
           title: 'Fairy Lights',
           namespace_id: 'alpinewhispers:fairy_lights',
-          subtitle: 'A decorative light string that emits a soft glow.',
+          subtitle: 'A glowing string of lights for walls and ceilings.',
           icon: '/assets/icons/alpine-whispers/fairy_lights.webp',
           search: 'fairy lights decoration light alpine whispers',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Fairy Lights are a decorative lighting block that can be draped across builds to add a warm, soft glow. They work well for cozy interiors, outdoor patios, and seasonal builds.`,
+          detailsText: `Fairy Lights hang on walls or from the ceiling and give off a warm light.`,
           detailsBullets: [
-            'Emits a soft ambient light',
-            'Decorative string light block',
-            'Works well indoors and outdoors'
+            'Hangs on walls or from ceilings',
+            'Light level 9'
           ]
         },
         {
           id: 'garland',
           title: 'Garland',
           namespace_id: 'alpinewhispers:garland',
-          subtitle: 'A decorative garland that also emits light.',
+          subtitle: 'An evergreen garland that glows softly and wraps around corners.',
           icon: '/assets/icons/alpine-whispers/garland.webp',
-          search: 'garland decoration light alpine whispers',
+          search: 'garland decoration light corners alpine whispers',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Garland is a decorative block that adds a festive, natural look to builds while also emitting a small amount of light. It is ideal for seasonal alpine builds and cozy interiors.`,
+          detailsText: `Garlands hang on walls or from the ceiling. Placed in a row they join up, including around inner and outer corners.`,
           detailsBullets: [
-            'Decorative garland with light emission',
-            'Great for festive and seasonal builds',
-            'Pairs well with other alpine decorations'
+            'Hangs on walls or from ceilings',
+            'Connects in rows and around corners',
+            'Light level 4'
           ]
         },
         {
           id: 'star_topper',
           title: 'Star Topper',
           namespace_id: 'alpinewhispers:star_topper',
-          subtitle: 'A decorative star topper that emits light.',
+          subtitle: 'A bright star for the top of your tree.',
           icon: '/assets/icons/alpine-whispers/star_topper.webp',
-          search: 'star topper decoration light alpine whispers',
+          search: 'star topper decoration light tree christmas alpine whispers',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Star Topper is a decorative block designed to sit atop builds as a glowing accent piece. It emits a soft light and is perfect as a finishing touch for seasonal builds and alpine tree decorations.`,
+          detailsText: `The Star Topper shines brightly and sends small sparkles up into the air. It is the finishing touch for a decorated tree.`,
           detailsBullets: [
-            'Emits a soft glow',
-            'Designed as a topper for builds and decorations',
-            'Works great with Garlands, Fairy Lights, and Tree Baubles'
+            'Light level 14',
+            'Gives off sparkle particles',
+            'Goes well with [[Tree Baubles|tree_baubles]], [[Garlands|garland]] and [[Fairy Lights|fairy_lights]]'
           ]
         },
         {
           id: 'tree_baubles',
           title: 'Tree Baubles',
           namespace_id: 'alpinewhispers:tree_baubles',
-          subtitle: 'A small seasonal decoration you attach to leaf blocks.',
+          subtitle: 'Glowing baubles you hang directly into leaves.',
           icon: '/assets/icons/alpine-whispers/tree_baubles.webp',
-          search: 'tree baubles decoration alpine whispers leaves shears',
+          search: 'tree baubles decoration alpine whispers leaves shears christmas',
           details: true,
           detailsTitle: 'Placement and Removal',
-          detailsText: `Tree Baubles are small seasonal decorations that are attached directly to leaves.
+          detailsText: `Use Tree Baubles on any leaf block to decorate it. The leaves stay in place and the baubles give off a soft glow.
 
-Once placed, they sit in the foliage until you decide to remove them again.`,
+To take them down, use Shears or sneak and right click with an empty hand. You get the baubles back and the leaves remain.`,
           detailsBullets: [
-            'Can only be placed on leaf blocks',
-            'Attached directly to the leaves',
-            'Removed with shears to get the baubles back',
-            'Can also be popped off by sneaking and interacting'
+            'Can only be placed on leaves',
+            'Light level 4',
+            'Remove with Shears or by sneak right clicking',
+            'The leaves are kept when you remove them'
           ]
         }
       ]
@@ -625,49 +603,49 @@ Once placed, they sit in the foliage until you decide to remove them again.`,
     {
       id: 'items',
       title: 'Items, Ingredients, and Tools',
-      subtitle: 'Everyday items, ingredients, and tools added by Alpine Whispers.',
+      subtitle: 'Wearables, tools and music.',
       entries: [
         {
           id: 'winter_hat',
           title: 'Winter Hat',
           namespace_id: 'alpinewhispers:winter_hat',
-          subtitle: 'A wearable hat item.',
+          subtitle: 'A cozy knitted hat.',
           icon: '/assets/icons/alpine-whispers/winter_hat.webp',
           search: 'winter hat armor helmet alpine whispers',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Winter Hat is a wearable cosmetic item that occupies the helmet slot. It provides minimal armor protection but adds a cozy, seasonal look to your character.`,
+          detailsText: `The Winter Hat is worn in the helmet slot. It is mostly for looks and gives a single point of armor. It can be repaired with wool.`,
           detailsBullets: [
             'Worn in the helmet slot',
-            'Cosmetic item with minimal armor value',
-            'Adds a festive alpine look to your character'
+            '1 armor point',
+            'Repaired with wool'
           ]
         },
         {
           id: 'bread_on_a_stick',
           title: 'Bread on a Stick',
           namespace_id: 'alpinewhispers:bread_on_a_stick',
-          subtitle: 'A handheld food item used to control Alpine Sheep.',
+          subtitle: 'Lets you steer a ridden Alpine Sheep.',
           icon: '/assets/icons/alpine-whispers/bread_on_a_stick.webp',
-          search: 'bread on a stick food alpine whispers alpine sheep ride control',
+          search: 'bread on a stick alpine whispers alpine sheep ride control steer boost',
           details: true,
           detailsTitle: 'Function',
-          detailsText: `Bread on a Stick works similar to a Carrot on a Stick.
+          detailsText: `Bread on a Stick works like a Carrot on a Stick, but for [[Alpine Sheep|alpine_sheep]].
 
-It can be used to ride and control [[Alpine Sheep|alpine_sheep]].`,
+Hold it while riding to steer the sheep. Use it for a short speed boost, which costs one point of durability. When it is used up, you are left with a Fishing Rod.`,
           detailsBullets: [
-            'Works similar to Carrot on a Stick',
-            'Used to ride Alpine Sheep',
-            'Controls Alpine Sheep movement'
+            'Hold it to steer a ridden Alpine Sheep',
+            'Use it for a short speed boost',
+            '25 uses, turns back into a Fishing Rod'
           ]
         },
         {
           id: 'winter_magic_music_disc',
-          title: 'Winter Magic Music Disc',
-          subtitle: 'Plays Marco\'s absolute favorite track and usually runs on repeat. For over a year. Craftable.',
+          title: 'Music Disc: Winter Magic',
+          subtitle: 'Marco\'s favourite track, and it has been on repeat for over a year. Craftable.',
           namespace_id: 'alpinewhispers:winter_magic_music_disc',
           icon: '/assets/icons/alpine-whispers/winter_magic_music_disc.webp',
-          search: 'music disc winter magic alpine whispers craftable favorite track',
+          search: 'music disc winter magic alpine whispers craftable favorite track icicles glowstone',
           musicdisc: true,
           tracks: [
             {
@@ -683,24 +661,24 @@ It can be used to ride and control [[Alpine Sheep|alpine_sheep]].`,
     {
       id: 'consumables',
       title: 'Consumables',
-      subtitle: 'Food items tied to alpine survival and colder biomes.',
+      subtitle: 'Food from the cold.',
       entries: [
         {
           id: 'reindeer_meat',
           title: 'Reindeer Meat',
           namespace_id: 'alpinewhispers:reindeer',
-          subtitle: 'Raw meat dropped by reindeer.',
+          subtitle: 'Raw meat dropped by Reindeer.',
           icon: '/assets/icons/alpine-whispers/reindeer.webp',
-          search: 'reindeer meat raw food',
+          search: 'reindeer meat raw food cooked',
           details: true,
           detailsTitle: 'Cooked Variant',
-          detailsText: `Reindeer Meat can be cooked to obtain Cooked Reindeer Meat.`,
+          detailsText: `Called simply "Reindeer" in game. It is as filling as Mutton and can be cooked in a Furnace, Smoker or on a Campfire.`,
           items: [
             {
               id: 'cooked_reindeer',
-              title: 'Cooked Reindeer Meat',
+              title: 'Cooked Reindeer',
               namespace_id: 'alpinewhispers:cooked_reindeer',
-              subtitle: 'Cooked reindeer meat.',
+              subtitle: 'As filling as Cooked Mutton.',
               icon: '/assets/icons/alpine-whispers/cooked_reindeer.webp',
               search: 'reindeer meat cooked food'
             }
@@ -710,18 +688,18 @@ It can be used to ride and control [[Alpine Sheep|alpine_sheep]].`,
           id: 'cooked_reindeer_dish',
           title: 'Cooked Reindeer Dish',
           namespace_id: 'alpinewhispers:cooked_reindeer_dish',
-          subtitle: 'A reindeer dish you can place down and eat bite by bite.',
+          subtitle: 'A festive roast you can serve on the table.',
           icon: '/assets/icons/alpine-whispers/cooked_reindeer_dish.webp',
           search: 'cooked reindeer dish placeable food bites alpine whispers',
           details: true,
           detailsTitle: 'Function',
-          detailsText: `Sneak while placing to set the dish down as a block.
+          detailsText: `Eat it straight from your hand, or sneak while placing to put it down as a dish.
 
-Once placed, right click it to eat. Each bite removes a portion until it is gone.`,
+Once placed, right click it to eat. The dish lasts for four servings.`,
           detailsBullets: [
-            'Sneak-place to place it as a block',
-            'Right click to eat',
-            'Consumed in multiple bites'
+            'Can be eaten from the hand',
+            'Sneak-place to set it down',
+            'Four servings when placed'
           ]
         }
       ]
@@ -729,128 +707,133 @@ Once placed, right click it to eat. Each bite removes a portion until it is gone
     {
       id: 'crops',
       title: 'Worldgen and Natural Features',
-      subtitle: 'Crops, plants, and terrain features that generate naturally in the world.',
+      subtitle: 'What changes in Snowy Plains and Groves.',
       entries: [
         {
           id: 'snow_gentian',
           title: 'Snow Gentian',
-          subtitle: 'Snow Gentian can generate naturally in cold alpine regions.',
+          namespace_id: 'alpinewhispers:snow_gentian',
+          subtitle: 'A blue flower of the Snowy Plains.',
           icon: '/assets/icons/alpine-whispers/snow_gentian.webp',
-          search: 'snow gentian flower alpine whispers',
+          search: 'snow gentian flower blue dye alpine whispers',
           details: true,
           detailsTitle: 'Worldgen',
-          detailsText: `Snow Gentian is a small decorative flower that generates naturally in cold alpine biomes such as Snowy Plains and Grove. It adds natural variety to frozen landscapes and can be collected and replanted.`,
+          detailsText: `Snow Gentians grow in patches across Snowy Plains, often together with [[Christmas Roses|christmas_rose]]. They can be potted and crafted into Blue Dye.`,
           detailsBullets: [
-            'Generates naturally in cold alpine biomes',
-            'Can be collected and replanted',
-            'Purely decorative flora'
+            'Grows in Snowy Plains',
+            'Can be put in a Flower Pot',
+            'Crafts into Blue Dye'
           ]
         },
         {
           id: 'christmas_rose',
           title: 'Christmas Rose',
-          subtitle: 'Christmas Roses can generate naturally in snowy environments.',
+          namespace_id: 'alpinewhispers:christmas_rose',
+          subtitle: 'A white flower that blooms in the snow.',
           icon: '/assets/icons/alpine-whispers/christmas_rose.webp',
-          search: 'christmas rose flower alpine whispers',
+          search: 'christmas rose flower white dye alpine whispers',
           details: true,
           detailsTitle: 'Worldgen',
-          detailsText: `Christmas Roses are decorative flowers that generate naturally in snowy environments. They bring a touch of life and color to otherwise barren winter landscapes and can be collected for builds.`,
+          detailsText: `Christmas Roses grow in patches across Snowy Plains, often together with [[Snow Gentians|snow_gentian]]. They can be potted and crafted into White Dye.`,
           detailsBullets: [
-            'Generates naturally in snowy biomes',
-            'Can be collected and replanted',
-            'Adds color to cold winter landscapes'
+            'Grows in Snowy Plains',
+            'Can be put in a Flower Pot',
+            'Crafts into White Dye'
           ]
         },
         {
           id: 'hoarfrost_grass',
           title: 'Hoarfrost Grass',
-          subtitle: 'Hoarfrost Grass can generate naturally across frozen terrain.',
+          namespace_id: 'alpinewhispers:hoarfrost_grass',
+          subtitle: 'Frost-covered grass of Snowy Plains and Groves.',
           icon: '/assets/icons/alpine-whispers/hoarfrost_grass.webp',
           search: 'hoarfrost grass alpine whispers',
           details: true,
           detailsTitle: 'Worldgen',
-          detailsText: `Hoarfrost Grass is a frost-covered ground cover that generates across frozen terrain in cold biomes. Alpine Sheep will graze on it as part of their natural behavior.`,
+          detailsText: `Hoarfrost Grass covers the ground in Snowy Plains and Groves. In cold places, fine snowflakes sometimes drift up from it during the day. [[Alpine Sheep|alpine_sheep]] like to graze on it.`,
           detailsBullets: [
-            'Generates on frozen terrain in cold biomes',
-            'Grazed on by Alpine Sheep',
-            'Decorative ground cover for cold builds'
+            'Grows in Snowy Plains and Groves',
+            'Eaten by Alpine Sheep'
           ]
         },
         {
           id: 'tall_hoarfrost_grass',
           title: 'Tall Hoarfrost Grass',
-          subtitle: 'A taller variant of Hoarfrost Grass found in cold regions.',
+          namespace_id: 'alpinewhispers:tall_hoarfrost_grass',
+          subtitle: 'A two block tall version of Hoarfrost Grass.',
           icon: '/assets/icons/alpine-whispers/tall_hoarfrost_grass.webp',
           search: 'tall hoarfrost grass alpine whispers',
           details: true,
           detailsTitle: 'Worldgen',
-          detailsText: `Tall Hoarfrost Grass is a two-block-tall frost-covered plant that generates in cold alpine biomes alongside regular Hoarfrost Grass. It adds height and variety to frozen terrain.`,
+          detailsText: `Grows alongside regular [[Hoarfrost Grass|hoarfrost_grass]] and gives frozen meadows some height.`,
           detailsBullets: [
-            'Two-block-tall variant of Hoarfrost Grass',
-            'Generates in cold alpine biomes',
-            'Decorative tall grass for winter landscapes'
+            'Two blocks tall',
+            'Grows in Snowy Plains and Groves',
+            'Eaten by Alpine Sheep'
           ]
         },
         {
           id: 'snow_layers',
-          title: 'Snow Layers',
-          subtitle: 'Snowy biomes now feature naturally varying snow layer heights.',
+          title: 'Snow Drifts',
+          subtitle: 'Snow piles up in drifts instead of a flat single layer.',
           icon: '/assets/icons/alpine-whispers/snow_layer.webp',
-          search: 'snow layer worldgen alpine whispers snowy plains grove',
+          search: 'snow layer drifts worldgen alpine whispers snowy plains grove',
           details: true,
           detailsTitle: 'Worldgen',
-          detailsText: `Alpine Whispers adjusts snow generation in Snowy Plains and Grove biomes so that snow layers appear at varying heights rather than a uniform single layer. This creates a more natural and visually interesting winter landscape.`,
+          detailsText: `In Snowy Plains and Groves, snow collects in drifts of two to four layers, and more snow gathers under the trees. The ground looks uneven and natural instead of evenly dusted.`,
           detailsBullets: [
-            'Snow layers generate at varying heights in snowy biomes',
-            'Affects Snowy Plains and Grove biomes',
-            'Creates a more natural-looking winter landscape'
+            'Snow drifts of different heights',
+            'Extra snow under trees',
+            'Snowy Plains and Groves'
           ]
         },
         {
           id: 'arolla_pine_sapling',
           title: 'Arolla Pines',
-          subtitle: 'Arolla Pines can grow naturally in snowy regions and form the basis of the Arolla Pine wood set.',
+          namespace_id: 'alpinewhispers:arolla_pine_sapling',
+          subtitle: 'The native trees of Snowy Plains and Groves.',
           icon: '/assets/icons/alpine-whispers/arolla_pine_sapling.webp',
-          search: 'arolla pine sapling tree worldgen alpine whispers',
+          search: 'arolla pine sapling tree fallen log worldgen alpine whispers',
           details: true,
           detailsTitle: 'Worldgen',
-          detailsText: `Arolla Pines are the native tree type of cold alpine biomes, generating naturally in Snowy Plains and Grove biomes. Their wood forms the basis of the Arolla Pine building set used throughout Alpine Whispers.
+          detailsText: `Arolla Pines replace the vanilla spruces in Snowy Plains and Groves. They grow in several sizes, and fallen trunks lie scattered between them.
 
-Saplings can be collected and grown on your own land.`,
+Their saplings can be replanted, and their wood makes up the [[Arolla Pine|arolla_pine]] building set.`,
           detailsBullets: [
-            'Generates naturally in Snowy Plains and Grove biomes',
-            'Source of Arolla Pine wood and building materials',
-            'Saplings can be collected and replanted'
+            'Replace the vanilla trees in Snowy Plains and Groves',
+            'Several tree sizes and fallen logs',
+            'Saplings can be replanted'
           ]
         },
         {
           id: 'cobbled_alpine_gneiss',
-          title: 'Alpine Gneiss',
-          subtitle: 'Some stone formations are naturally replaced with Alpine Gneiss.',
+          title: 'Alpine Gneiss Rocks',
+          subtitle: 'Gneiss boulders in the snow and gneiss in the stone of Groves.',
           icon: '/assets/icons/alpine-whispers/alpine_gneiss.webp',
-          search: 'cobbled alpine gneiss stone worldgen alpine whispers',
+          search: 'alpine gneiss stone boulder rock worldgen alpine whispers grove',
           details: true,
           detailsTitle: 'Worldgen',
-          detailsText: `Alpine Gneiss partially replaces regular stone in Snowy Plains and Grove biomes, adding natural variation to underground and surface stone formations. It can be mined and used as a full building set.`,
+          detailsText: `Rock piles and boulders of Alpine Gneiss stick out of the snow in Snowy Plains and Groves.
+
+In Groves, large veins of Alpine Gneiss also replace part of the stone underground.`,
           detailsBullets: [
-            'Partially replaces stone in cold biomes',
-            'Found underground and in surface formations',
-            'Full building set available — see Alpine Gneiss entry'
+            'Boulders and rock piles in Snowy Plains and Groves',
+            'Replaces some stone in Groves',
+            'See [[Alpine Gneiss|alpine_gneiss]] for the building set'
           ]
         },
         {
           id: 'alpine_gneiss_slabs',
           title: 'Gneiss Slabs',
-          subtitle: 'Alpine Gneiss slabs can generate naturally near slopes and terrain edges.',
+          subtitle: 'Loose Alpine Gneiss slabs scattered across the ground.',
           icon: '/assets/icons/alpine-whispers/alpine_gneiss_slab.webp',
           search: 'alpine gneiss slab worldgen alpine whispers',
           details: true,
           detailsTitle: 'Worldgen',
-          detailsText: `Alpine Gneiss Slabs appear naturally near slopes, cliffs, and terrain edges in cold biomes, adding natural-looking stepped formations to the landscape.`,
+          detailsText: `Single Alpine Gneiss Slabs lie scattered across Snowy Plains and Groves, like flat stones peeking out of the snow.`,
           detailsBullets: [
-            'Generates near slopes and terrain edges in cold biomes',
-            'Part of the Alpine Gneiss building set',
-            'Adds natural stepped formations to cold landscapes'
+            'Found in Snowy Plains and Groves',
+            'Part of the [[Alpine Gneiss|alpine_gneiss]] set'
           ]
         }
       ]
@@ -858,60 +841,54 @@ Saplings can be collected and grown on your own land.`,
     {
       id: 'entities',
       title: 'Entities',
-      subtitle: 'New animals added by Alpine Whispers.',
+      subtitle: 'Animals of the cold.',
       entries: [
         {
           id: 'reindeer_entity',
           title: 'Reindeer',
           namespace_id: 'alpinewhispers:reindeer',
-          subtitle: 'A tameable mount that can carry riders and chests.',
+          subtitle: 'A tameable mount for two riders that can carry a chest.',
           icon: '/assets/icons/alpine-whispers/entity/reindeer.webp',
-          search: 'reindeer alpine whispers mount ride chest storage sweet berries snow speed ice slow herd',
+          search: 'reindeer alpine whispers mount ride tame chest storage sweet berries snow speed ice slow herd',
           details: true,
           detailsTitle: 'Behavior and Riding',
-          detailsText: `Reindeer spawn in cold biomes and move together in small herds.
+          detailsText: `Reindeer live in herds in taigas, Snowy Plains, Groves and Snowy Slopes.
 
-They can be fed Sweet Berries. Adults can be bred using Sweet Berries.
+Tame one like a donkey: keep climbing on until it accepts you. A tamed Reindeer needs no saddle, carries up to two riders and can be fitted with a chest.
 
-Right click a grown Reindeer with an empty hand to ride it. Up to two players can ride at the same time.
-
-A chest can be attached, allowing the Reindeer to carry extra storage.
-
-Reindeer move faster on snow blocks, but slow down on ice.`,
+Sweet Berries let calves grow faster and make tamed adults breed. Reindeer run faster on snow and slow down on ice. They avoid wolves and polar bears, but fight back when attacked.`,
           detailsBullets: [
-            'Spawns in colder regions and forms herds',
-            'Feed and breed using Sweet Berries',
-            'Right click with an empty hand to ride',
-            'Supports two riders at once',
-            'Can carry a chest for storage',
-            'Moves faster on snow, slower on ice',
-            'Avoids wolves and polar bears'
+            'Lives in herds in cold biomes',
+            'Tame by riding it, no saddle needed',
+            'Carries two riders and a chest',
+            'Sweet Berries for growing and breeding',
+            'Faster on snow, slower on ice',
+            'Avoids wolves and polar bears, fights back when hurt'
           ]
         },
         {
           id: 'alpine_sheep',
           title: 'Alpine Sheep',
           namespace_id: 'alpinewhispers:alpine_sheep',
-          subtitle: 'A ridable sheep that drops Homespun Wool when sheared.',
+          subtitle: 'A sturdy sheep you can ride and shear for Homespun Wool.',
           icon: '/assets/icons/alpine-whispers/entity/alpine_sheep.webp',
-          search: 'alpine sheep alpine whispers ride bread on a stick homespun wool shears wheat hoarfrost grass frozen dirt snow boost',
+          search: 'alpine sheep alpine whispers ride bread on a stick homespun wool shears wheat hoarfrost grass snow boost',
           details: true,
           detailsTitle: 'Behavior and Riding',
-          detailsText: `Alpine Sheep can be bred using Wheat and can be sheared for [[Homespun Wool|homespun_wool]].
+          detailsText: `Alpine Sheep live in the same cold biomes as Reindeer. They follow Wheat, breed with it and can be sheared for [[Homespun Wool|homespun_wool]].
 
-Right click a grown Alpine Sheep with an empty hand to ride it.
-Use [[Bread on a Stick|bread_on_a_stick]] to steer it, and use it again for a short speed boost.
+Right click a grown sheep with an empty hand to climb on. To steer, hold [[Bread on a Stick|bread_on_a_stick]], and use it for a short burst of speed.
 
-Alpine Sheep graze on cold plants and terrain, including [[Hoarfrost Grass|hoarfrost_grass]] and [[Frozen Dirt|frozen_dirt]].
+They graze on grass, [[Hoarfrost Grass|hoarfrost_grass]] and even snow.
 
-Feeding Bread is a bad idea: after a short while, the sheep gets angry and eventually takes damage.`,
+Do not feed them Bread. After a while the sheep gets upset and hurts itself.`,
           detailsBullets: [
-            'Breed using Wheat',
+            'Breed with Wheat',
             'Shear for Homespun Wool',
             'Right click with an empty hand to ride',
-            'Steer with Bread on a Stick',
-            'Bread on a Stick can trigger a short speed boost',
-            'Feeding Bread triggers an angry reaction and can hurt the sheep'
+            'Steer and boost with Bread on a Stick',
+            'Grazes on grass, Hoarfrost Grass and snow',
+            'Bread upsets it and costs it health'
           ]
         }
       ]
@@ -919,105 +896,109 @@ Feeding Bread is a bad idea: after a short while, the sheep gets angry and event
     {
       id: 'misc_changes',
       title: 'Miscellaneous Changes & Features',
-      subtitle: 'Small extras and supporting features.',
+      subtitle: 'Atmosphere, settings and hidden mechanics.',
       entries: [
         {
           id: 'config',
           title: 'Configuration',
-          subtitle: 'Most gameplay features of Alpine Whispers can be adjusted via a configuration file, usually located at `config/alpinewhispers.json`.',
+          subtitle: 'The snow fog can be adjusted in config/alpinewhispers.client.json.',
           icon: '/assets/icons/misc/config.webp',
-          search: 'config configuration settings options alpine whispers',
+          search: 'config configuration settings options fog strength alpine whispers',
           details: true,
           detailsTitle: 'Configuration File',
-          detailsText: `Most gameplay features of Alpine Whispers can be adjusted or disabled via the configuration file, usually located at config/alpinewhispers.json.
-
-This includes worldgen features, entity behavior, and gameplay tweaks.`,
+          detailsText: `The client config at config/alpinewhispers.client.json controls the snow fog.`,
           detailsBullets: [
-            'Config file located at config/alpinewhispers.json',
-            'Most gameplay features can be toggled or adjusted',
-            'Includes worldgen, entity, and gameplay settings'
+            'snowFogEnabled: turns the snow fog on or off',
+            'snowFogStrength: fog strength from 0 to 2, default 1'
           ]
         },
         {
           id: 'grove_snow_weather',
           title: 'Grove Snow Weather',
-          subtitle: 'In Grove biomes, calm snowfall effects appear during clear weather, occasionally accompanied by distant avalanche sounds.',
+          subtitle: 'Light snow drifts through Groves on clear days, with the occasional distant avalanche.',
           icon: '/assets/icons/misc/weather.webp',
           search: 'grove snow weather ambient falling snow avalanche sounds alpine whispers',
           details: true,
           detailsTitle: 'Ambient Feature',
-          detailsText: `In Grove biomes, Alpine Whispers adds a calm ambient snowfall effect that plays during clear weather, giving the impression of light drifting snow even when it is not officially snowing.
+          detailsText: `In Groves, light snow drifts through the air even on clear days. The longer you stay, the more snow blows around, and now and then you hear an avalanche in the distance.
 
-Occasionally, distant avalanche sounds accompany this effect for extra atmosphere.`,
+When it actually rains or snows, the effect pauses.`,
           detailsBullets: [
-            'Ambient snowfall effect in Grove biomes during clear weather',
-            'Occasional distant avalanche sound effects',
-            'Purely atmospheric — no gameplay impact'
+            'Only in Groves, only in clear weather',
+            'Snow flurries that build up over time',
+            'Occasional distant avalanche sounds',
+            'Purely visual, no gameplay impact'
           ]
         },
         {
           id: 'snow_fog',
           title: 'Snow Fog',
-          subtitle: 'Cold and snowy biomes feel mistier, with stronger fog at night and during snowfall or storms.',
+          subtitle: 'Cold biomes are mistier, especially at night and during snowfall.',
           icon: '/assets/icons/misc/fog.webp',
           search: 'snow fog cold biomes grove night storm alpine whispers',
           details: true,
           detailsTitle: 'Ambient Feature',
-          detailsText: `Alpine Whispers adds increased fog density to cold and snowy biomes. Fog is lighter during the day but thickens noticeably at night and during snowfall or storms, creating a more immersive and atmospheric winter environment.`,
+          detailsText: `Wherever it is cold enough to snow, the view distance closes in. The fog is light at noon, thicker at dusk and at night, and thickest during snowfall and storms. Groves are always a little foggier.
+
+The fog can be adjusted or turned off in the [[configuration|config]].`,
           detailsBullets: [
-            'Increased fog density in cold biomes',
-            'Stronger fog at night and during snowfall or storms',
-            'Purely visual — no gameplay impact'
+            'Active in all biomes cold enough to snow',
+            'Thicker at dusk, at night and in bad weather',
+            'Extra fog in Groves',
+            'Adjustable in the client config'
           ]
         },
         {
           id: 'alpine_gneiss_reproduction',
-          title: 'Alpine Gneiss Reproduction',
-          subtitle: 'Icicles can slowly transform nearby stone into Alpine Gneiss under specific cold conditions.',
+          title: 'Alpine Gneiss Growth',
+          subtitle: 'Icicles under Frozen Dirt slowly turn stone into Alpine Gneiss.',
           icon: '/assets/icons/misc/time.webp',
-          search: 'alpine gneiss reproduction icicle frozen dirt stone alpine whispers',
+          search: 'alpine gneiss growth reproduction icicle frozen dirt stone farm alpine whispers',
           details: true,
           detailsTitle: 'Mechanic',
-          detailsText: `Under specific cold conditions, Icicles can slowly transform nearby stone blocks into Alpine Gneiss over time. This creates a natural spread of alpine stone in cold environments without any player intervention.`,
+          detailsText: `Hang an [[Icicle|icicles]] from [[Frozen Dirt|frozen_dirt]], leave one block of air beneath it and put Stone below that.
+
+Over time the meltwater does its work: the Stone becomes Alpine Gneiss, the Frozen Dirt thaws into Dirt and the Icicle breaks.`,
           detailsBullets: [
-            'Icicles trigger Alpine Gneiss conversion in nearby stone',
-            'Requires specific cold conditions to activate',
-            'Happens slowly and naturally over time'
+            'Frozen Dirt, Icicle, one air block, Stone',
+            'Stone turns into Alpine Gneiss',
+            'Frozen Dirt thaws and the Icicle breaks',
+            'Happens slowly over time'
           ]
         }
       ]
     }
   ],
   impressionsTitle: 'Everyday Scenes',
-  impressionsSubtitle: 'A closer look at how everything comes together ingame',
+  impressionsSubtitle: 'A closer look at how everything comes together in game',
   impressions: [
     {
       src: '/assets/impressions/alpine-whispers/01.webp',
-      caption: 'Lili\'s Alpine Spa featuring Bathtub, Wardrobe and a Dresser'
+      caption: 'Lili\'s Alpine Spa with Bathtub, Wardrobe and Dresser'
     },
     {
       src: '/assets/impressions/alpine-whispers/02.webp',
-      caption: 'A small Bathroom'
+      caption: 'A small bathroom'
     },
     {
       src: '/assets/impressions/alpine-whispers/03.webp',
-      caption: 'Snowy landscapes with soft fog, gentle snowfall, and quiet atmosphere.'
+      caption: 'Snowy landscape with soft fog and gentle snowfall'
     },
     {
       src: '/assets/impressions/alpine-whispers/04.webp',
-      caption: 'Simple bedroom built from classic alpine materials.'
+      caption: 'A simple bedroom built from alpine materials'
     },
     {
       src: '/assets/impressions/alpine-whispers/05.webp',
-      caption: 'Cozy living spaces centered around a fireplace and winterly decor.'
+      caption: 'A cozy living room around the fireplace'
     },
     {
       src: '/assets/impressions/alpine-whispers/06.webp',
-      caption: 'Cold alpine slopes with lingering winter fog.'
+      caption: 'Cold alpine slopes in lingering fog'
     },
     {
       src: '/assets/impressions/alpine-whispers/07.webp',
-      caption: 'Quiet alpine wildlife sheltering under snowy trees.'
+      caption: 'Wildlife sheltering under snowy trees'
     }
   ]
 }
