@@ -1,0 +1,14 @@
+{
+  "type": "meadow:cooking",
+  "ingredients": [
+    {
+      "item": "minecraft:rabbit"
+    },
+    {
+      "tag": "c:salts"
+    }
+  ],
+  "result": {
+    "id": "minecraft:cooked_rabbit"
+  }
+}

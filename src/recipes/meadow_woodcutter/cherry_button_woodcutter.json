@@ -1,0 +1,11 @@
+{
+  "type": "meadow:woodcutting",
+  "ingredients": [
+    {
+      "tag": "minecraft:cherry_logs"
+    }
+  ],
+  "result": {
+    "id": "minecraft:cherry_button"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "meadow:cooking",
+  "ingredients": [
+    {
+      "item": "minecraft:potato"
+    },
+    {
+      "tag": "c:salts"
+    }
+  ],
+  "result": {
+    "id": "minecraft:baked_potato"
+  }
+}

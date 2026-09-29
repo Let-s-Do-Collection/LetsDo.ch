@@ -53,13 +53,20 @@ const linkifyText = (text) => {
 
     if (!match) {
       out += escapeHtmlWithBreaks(part)
-        .replace(/`([^`]+)`/g, '<code class="wikiInlineCode">$1</code>')
-        .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+        .replace(/`([^`]+)`/g, '<code class="wikiInlineCode">$1</code>');
       continue;
     }
 
     const label = match[1] ?? "";
     const rawTarget = match[2] ?? match[1] ?? "";
+    const crossMod = rawTarget.match(/^([\w-]+):(.+)$/);
+
+    if (crossMod) {
+      const href = withBase(`/wiki/${normalizeId(crossMod[1])}/${toItemSlug(normalizeId(crossMod[2]))}/`);
+      out += `<a class="wikiInlineLink" href="${escapeHtml(href)}">${escapeHtml(label)}</a>`;
+      continue;
+    }
+
     const targetId = normalizeId(rawTarget);
 
     if (!targetId) {
@@ -70,7 +77,7 @@ const linkifyText = (text) => {
     out += `<a class="wikiInlineLink" href="#${escapeHtml(targetId)}">${escapeHtml(label)}</a>`;
   }
 
-  return out;
+  return out.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
 };
 
 const { config, currentSlug, wikiIndex } = Astro.props;
@@ -188,7 +195,7 @@ const itemHref = (id) => withBase(`/wiki/${activeSlug}/${toItemSlug(id)}/`);
 
                     return (
                       <article
-                        class="card wikiCard"
+                        class:list={["card wikiCard", { wikiCardText: !iconSrc }]}
                         id={entryId}
                         data-section={sectionId}
                         data-search={entrySearch(entry)}
@@ -203,9 +210,7 @@ const itemHref = (id) => withBase(`/wiki/${activeSlug}/${toItemSlug(id)}/`);
                             <a class="wikiCardLogoLink" href={entryHref} aria-label={entry.title ?? "Open item"}>
                               <img class="cardLogo wikiCardLogo" src={iconSrc} alt={entry.title} loading="lazy" />
                             </a>
-                          ) : (
-                            <div class="wikiCardLogoPlaceholder" aria-hidden="true" />
-                          )}
+                          ) : null}
 
                           <h3>{entry.title}</h3>
 
@@ -257,8 +262,8 @@ const itemHref = (id) => withBase(`/wiki/${activeSlug}/${toItemSlug(id)}/`);
 
                             {Array.isArray(entry.detailsBullets) && entry.detailsBullets.length ? (
                               <ul class="wikiDetailsList">
-                                {entry.detailsBullets.map((line) => (
-                                  <li set:html={linkifyText(line)} />
+                                {entry.detailsBullets.map((line, lineIndex) => (
+                                  <li style={`--i: ${Math.min(lineIndex, 12)}`} set:html={linkifyText(line)} />
                                 ))}
                               </ul>
                             ) : null}

@@ -1,0 +1,14 @@
+{
+  "type": "herbalbrews:kettle_brewing",
+  "ingredients": [
+    {
+      "item": "herbalbrews:coffee_beans"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    }
+  ],
+  "result": {
+    "id": "herbalbrews:coffee"
+  }
+}

@@ -7,6 +7,7 @@ import { buildStoveStation } from "./grids/stove.js";
 import { buildBrewingStation } from "./grids/brewing.js";
 import { buildWineFermentationStation } from "./grids/wine_fermentation.js";
 import { buildOtherStation } from "./grids/other.js";
+import { buildModStations } from "./grids/mod_stations.js";
 import {
   normalizeId,
   flattenWikiEntries,
@@ -58,6 +59,7 @@ export const buildStationRegistry = ({ wikiEntries, tagAliasMap, fallbackNamespa
   addStation(buildMincerStation({ wikiEntries, itemResolver }));
   addStation(buildBrewingStation({ wikiEntries, itemResolver }));
   addStation(buildWineFermentationStation({ wikiEntries, itemResolver }));
+  for (const station of buildModStations()) addStation(station);
   addStation(buildOtherStation({ itemResolver }));
 
   return {

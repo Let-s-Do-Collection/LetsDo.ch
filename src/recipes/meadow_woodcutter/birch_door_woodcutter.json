@@ -1,0 +1,11 @@
+{
+  "type": "meadow:woodcutting",
+  "ingredients": [
+    {
+      "tag": "minecraft:birch_logs"
+    }
+  ],
+  "result": {
+    "id": "minecraft:birch_door"
+  }
+}

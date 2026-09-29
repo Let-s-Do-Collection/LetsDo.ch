@@ -24,6 +24,8 @@ import beachparty from "../config/beachparty.js";
 import bloomingnature from "../config/bloomingnature.js";
 import meadow from "../config/meadow.js";
 import smoker from "../config/smoker.js";
+import wokandbowl from "../config/wokandbowl.js";
+import legacy from "../config/legacy.js";
 
 export function getStaticPaths() {
   const wikiConfigs = {
@@ -44,6 +46,8 @@ export function getStaticPaths() {
     "lilis-pottery": pottery,
     "alpine-whispers": alpinewhispers,
     smoker,
+    wokandbowl,
+  legacy,
   };
 
   const paths = [];
@@ -139,26 +143,34 @@ const linkifyText = (text) => {
     const match = part.match(/^\[\[(.+?)(?:\|(.+?))?\]\]$/);
 
     if (!match) {
-      out += escapeHtmlWithBreaks(part);
+      out += escapeHtmlWithBreaks(part)
+        .replace(/`([^`]+)`/g, '<code class="wikiInlineCode">$1</code>');
       continue;
     }
 
     const label = match[1] ?? "";
-    const targetId = normalizeId(match[2] ?? match[1] ?? "");
+    const rawTarget = match[2] ?? match[1] ?? "";
+    const crossMod = rawTarget.match(/^([\w-]+):(.+)$/);
+    const targetMod = crossMod ? normalizeId(crossMod[1]) : mod;
+    const targetId = normalizeId(crossMod ? crossMod[2] : rawTarget);
 
     if (!targetId) {
       out += escapeHtml(label);
       continue;
     }
 
-    const href = withBase(`/wiki/${mod}/${toItemSlug(targetId)}/`);
+    const href = withBase(`/wiki/${targetMod}/${toItemSlug(targetId)}/`);
     out += `<a class="wikiInlineLink" href="${escapeHtml(href)}">${escapeHtml(label)}</a>`;
   }
 
-  return out;
+  return out.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
 };
 
-const stripLinks = (text) => String(text ?? "").replace(/\[\[(.+?)(?:\|.+?)?\]\]/g, "$1");
+const stripLinks = (text) =>
+  String(text ?? "")
+    .replace(/\[\[(.+?)(?:\|.+?)?\]\]/g, "$1")
+    .replace(/\*\*([^*]+)\*\*/g, "$1")
+    .replace(/`([^`]+)`/g, "$1");
 
 const toDescription = (text) => {
   const clean = stripLinks(text).replace(/\s+/g, " ").trim();
@@ -231,11 +243,13 @@ const canonicalUrl = `https://lets-do.ch/wiki/${mod}/${itemSlug}/`;
           </div>
         </section>
 
-        {(entry.detailsTitle || entry.detailsText || entry.detailsBullets?.length) && (
+        {(entry.detailsTitle || entry.detailsText || entry.detailsCode || entry.detailsBullets?.length) && (
           <section class="section sectionTight itemDetails">
             {entry.detailsTitle && <h2>{entry.detailsTitle}</h2>}
 
             {entry.detailsText && <div class="wikiDetailsText" set:html={linkifyText(entry.detailsText)} />}
+            {entry.detailsCode && <pre class="wikiDetailsCode"><code>{entry.detailsCode}</code></pre>}
+            {entry.detailsTextAfter && <div class="wikiDetailsText" set:html={linkifyText(entry.detailsTextAfter)} />}
 
             {Array.isArray(entry.detailsBullets) && entry.detailsBullets.length > 0 && (
               <ul class="wikiDetailsList">

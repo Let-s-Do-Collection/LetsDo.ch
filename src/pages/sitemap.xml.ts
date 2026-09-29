@@ -14,6 +14,8 @@ import wildernature from "./wiki/config/wildernature.js";
 import beachparty from "./wiki/config/beachparty.js";
 import bloomingnature from "./wiki/config/bloomingnature.js";
 import smoker from "./wiki/config/smoker.js";
+import wokandbowl from "./wiki/config/wokandbowl.js";
+import legacy from "./wiki/config/legacy.js";
 import meadow from "./wiki/config/meadow.js";
 
 const configs = {
@@ -28,6 +30,8 @@ const configs = {
   bloomingnature,
   wildernature,
   smoker,
+  wokandbowl,
+  legacy,
   furniture,
   meadow,
   bakery,

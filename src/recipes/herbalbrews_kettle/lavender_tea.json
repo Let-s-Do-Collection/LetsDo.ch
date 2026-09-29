@@ -1,0 +1,17 @@
+{
+  "type": "herbalbrews:kettle_brewing",
+  "ingredients": [
+    {
+      "item": "herbalbrews:lavender_blossom"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    }
+  ],
+  "result": {
+    "id": "herbalbrews:lavender_tea"
+  }
+}

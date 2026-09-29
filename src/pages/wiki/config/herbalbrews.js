@@ -423,5 +423,14 @@ Most of their effects also reach other players nearby, but get a little weaker t
         }
       ]
     }
-  ]
+  ],
+  recipesCta: {
+    enabled: true,
+    title: 'Recipes',
+    text: `Not sure how to make something?
+
+The recipe overview lists every Let's Do crafting station and its recipes.`,
+    buttonLabel: 'Open Recipe Overview',
+    href: '/recipes/'
+  }
 }

@@ -1,0 +1,17 @@
+{
+  "type": "meadow:cooking",
+  "ingredients": [
+    {
+      "item": "meadow:raw_buffalo_meat"
+    },
+    {
+      "tag": "c:salts"
+    },
+    {
+      "tag": "c:cheese"
+    }
+  ],
+  "result": {
+    "id": "meadow:sausage_with_cheese"
+  }
+}

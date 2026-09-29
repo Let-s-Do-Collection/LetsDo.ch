@@ -1,0 +1,14 @@
+{
+  "type": "lilis_pottery:firing",
+  "ingredients": [
+    {
+      "item": "lilis_pottery:white_vase"
+    },
+    {
+      "tag": "lilis_pottery:dyes"
+    }
+  ],
+  "result": {
+    "id": "lilis_pottery:white_vase"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "meadow:cooking",
+  "ingredients": [
+    {
+      "item": "minecraft:calcite"
+    }
+  ],
+  "result": {
+    "id": "meadow:alpine_salt"
+  }
+}

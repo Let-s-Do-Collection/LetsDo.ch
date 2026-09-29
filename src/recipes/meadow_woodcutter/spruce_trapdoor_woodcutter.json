@@ -1,0 +1,11 @@
+{
+  "type": "meadow:woodcutting",
+  "ingredients": [
+    {
+      "tag": "minecraft:spruce_logs"
+    }
+  ],
+  "result": {
+    "id": "minecraft:spruce_trapdoor"
+  }
+}

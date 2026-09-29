@@ -1,3 +1,6 @@
+import { existsSync } from "node:fs";
+import { join } from "node:path";
+
 export const normalizeId = (value) =>
   String(value ?? "")
     .trim()
@@ -15,15 +18,34 @@ const splitNamespacedId = (value) => {
   return { namespace: namespace ?? "", path: path ?? "" };
 };
 
+const ICON_FOLDER_OVERRIDES = {
+  lilis_pottery: "pottery"
+};
+
 export const iconFolderFromNamespace = (namespace) =>
-  String(namespace ?? "").replace(/_/g, "-");
+  ICON_FOLDER_OVERRIDES[namespace] ?? String(namespace ?? "").replace(/_/g, "-");
+
+const iconExists = (iconPath) => {
+  try {
+    return existsSync(join(process.cwd(), "public", iconPath));
+  } catch {
+    return true;
+  }
+};
+
+export const MISSING_ICON =
+  "data:image/svg+xml," +
+  encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect x="4" y="4" width="24" height="24" rx="5" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 3"/><text x="16" y="21" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#94a3b8">?</text></svg>'
+  );
 
 export const iconFromItemId = (namespacedId) => {
   if (!isNamespacedId(namespacedId)) return "";
   const { namespace, path } = splitNamespacedId(namespacedId);
   if (!namespace || !path) return "";
   const folder = iconFolderFromNamespace(namespace);
-  return `/assets/icons/${folder}/${path}.webp`;
+  const iconPath = `/assets/icons/${folder}/${path}.webp`;
+  return iconExists(iconPath) ? iconPath : MISSING_ICON;
 };
 
 export const wikiHrefForEntry = (wikiSlug, entryId) => {

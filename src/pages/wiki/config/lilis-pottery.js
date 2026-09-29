@@ -547,5 +547,14 @@ Over time the dripping water turns the block at the bottom into clay of the terr
       src: '/assets/impressions/pottery/06.webp',
       caption: 'Another pottery shop'
     }
-  ]
+  ],
+  recipesCta: {
+    enabled: true,
+    title: 'Recipes',
+    text: `Not sure how to make something?
+
+The recipe overview lists every Let's Do crafting station and its recipes.`,
+    buttonLabel: 'Open Recipe Overview',
+    href: '/recipes/'
+  }
 }

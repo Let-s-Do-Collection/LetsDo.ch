@@ -1,0 +1,17 @@
+{
+  "type": "herbalbrews:kettle_brewing",
+  "ingredients": [
+    {
+      "item": "herbalbrews:yerba_mate_leaf"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    }
+  ],
+  "result": {
+    "id": "herbalbrews:yerba_mate_tea"
+  }
+}

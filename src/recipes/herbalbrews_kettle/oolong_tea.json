@@ -1,0 +1,14 @@
+{
+  "type": "herbalbrews:kettle_brewing",
+  "ingredients": [
+    {
+      "item": "herbalbrews:dried_oolong_tea"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    }
+  ],
+  "result": {
+    "id": "herbalbrews:oolong_tea"
+  }
+}

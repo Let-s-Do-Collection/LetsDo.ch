@@ -1,0 +1,11 @@
+{
+  "type": "meadow:woodcutting",
+  "ingredients": [
+    {
+      "tag": "minecraft:dark_oak_logs"
+    }
+  ],
+  "result": {
+    "id": "minecraft:dark_oak_trapdoor"
+  }
+}

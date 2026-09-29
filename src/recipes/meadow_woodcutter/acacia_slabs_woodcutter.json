@@ -1,0 +1,11 @@
+{
+  "type": "meadow:woodcutting",
+  "ingredients": [
+    {
+      "tag": "minecraft:acacia_logs"
+    }
+  ],
+  "result": {
+    "id": "minecraft:acacia_slab"
+  }
+}

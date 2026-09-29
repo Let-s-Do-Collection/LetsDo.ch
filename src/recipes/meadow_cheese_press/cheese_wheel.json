@@ -1,0 +1,14 @@
+{
+  "type": "meadow:cheese",
+  "ingredients": [
+    {
+      "tag": "c:milks"
+    },
+    {
+      "item": "meadow:rennet"
+    }
+  ],
+  "result": {
+    "id": "meadow:cheese_wheel"
+  }
+}

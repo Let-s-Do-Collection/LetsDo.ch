@@ -1,0 +1,20 @@
+{
+  "type": "meadow:cooking",
+  "ingredients": [
+    {
+      "tag": "c:wheat"
+    },
+    {
+      "tag": "c:wheat"
+    },
+    {
+      "tag": "c:wheat"
+    },
+    {
+      "item": "meadow:wooden_bucket"
+    }
+  ],
+  "result": {
+    "id": "meadow:wooden_grain_milk_bucket"
+  }
+}

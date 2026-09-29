@@ -1,0 +1,14 @@
+{
+  "type": "herbalbrews:kettle_brewing",
+  "ingredients": [
+    {
+      "item": "herbalbrews:rooibos_leaf"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    }
+  ],
+  "result": {
+    "id": "herbalbrews:rooibos_tea"
+  }
+}

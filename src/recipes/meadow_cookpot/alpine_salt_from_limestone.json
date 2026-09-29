@@ -1,0 +1,11 @@
+{
+  "type": "meadow:cooking",
+  "ingredients": [
+    {
+      "item": "meadow:limestone"
+    }
+  ],
+  "result": {
+    "id": "meadow:alpine_salt"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "meadow:cheese",
+  "ingredients": [
+    {
+      "item": "meadow:wooden_amethyst_milk_bucket"
+    },
+    {
+      "item": "meadow:rennet"
+    }
+  ],
+  "result": {
+    "id": "meadow:amethyst_cheese_wheel"
+  }
+}

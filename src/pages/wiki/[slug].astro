@@ -17,6 +17,8 @@ import beachparty from "./config/beachparty.js";
 import bloomingnature from "./config/bloomingnature.js";
 import meadow from "./config/meadow.js";
 import smoker from "./config/smoker.js";
+import wokandbowl from "./config/wokandbowl.js";
+import legacy from "./config/legacy.js";
 
 export function getStaticPaths() {
   return [
@@ -37,6 +39,8 @@ export function getStaticPaths() {
     { params: { slug: "bloomingnature" } },
     { params: { slug: "wildernature" } },
     { params: { slug: "smoker" } },
+    { params: { slug: "wokandbowl" } },
+    { params: { slug: "legacy" } },
   ];
 }
 
@@ -56,6 +60,8 @@ const configs = {
   furniture,
   meadow,
   smoker,
+  wokandbowl,
+  legacy,
   bakery,
   "hearth-and-timber": hearthandtimber,
   "lilis-pottery": pottery,

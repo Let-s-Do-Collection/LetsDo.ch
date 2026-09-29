@@ -957,5 +957,14 @@ They start with palm sprouts, coconuts and torches. As they level up they add bu
         }
       ]
     }
-  ]
+  ],
+  recipesCta: {
+    enabled: true,
+    title: 'Recipes',
+    text: `Not sure how to make something?
+
+The recipe overview lists every Let's Do crafting station and its recipes.`,
+    buttonLabel: 'Open Recipe Overview',
+    href: '/recipes/'
+  }
 }

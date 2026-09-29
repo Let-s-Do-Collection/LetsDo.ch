@@ -15,6 +15,7 @@ const mods = [
   },
   {
     title: "Lili's Pottery",
+    series: "lilis",
     logo: "/assets/mod-logos/lilis_pottery.webp",
     description: "Pottery, kilns, and ceramic decoration.",
     wiki: "/wiki/lilis-pottery/",
@@ -23,6 +24,7 @@ const mods = [
   },
 {
   title: "Lili's Lucky Lures",
+  series: "lilis",
   logo: "/assets/mod-logos/lucky_lures.webp",
   description: "New fishing loot, floating finds, and the occasional unexpected catch.",
   wiki: "/wiki/lilis-lucky-lures/",
@@ -31,6 +33,7 @@ const mods = [
 },
   {
   title: "Bakery",
+    series: "farm-and-charm",
   logo: "/assets/mod-logos/bakery.webp",
   description: "Bread, cakes and pastries, with a Caking Station, baking tools and cake stands to show them off.",
   wiki: "/wiki/bakery/",
@@ -55,6 +58,7 @@ const mods = [
 },
   {
     title: "Brewery",
+    series: "farm-and-charm",
     logo: "/assets/mod-logos/brewery.webp",
     description: "Brewing stations, drinks, food, and tavern themed furniture.",    wiki: "/wiki/brewery/",
     source: "https://github.com/Let-s-Do-Collection/Brewery",
@@ -70,6 +74,7 @@ const mods = [
   },
   {
     title: "Candlelight",
+    series: "farm-and-charm",
     logo: "/assets/mod-logos/candlelight.webp",
     description: "Elegant furniture, fine dining and table settings for candlelit evenings.",
     wiki: "/wiki/candlelight/",
@@ -78,6 +83,7 @@ const mods = [
   },
   {
     title: "Farm & Charm",
+    series: "farm-and-charm",
     logo: "/assets/mod-logos/farm_and_charm.webp",
     description: "Farming, food processing, and the small routines of farm life.",
     wiki: "/wiki/farm-and-charm/",
@@ -109,12 +115,12 @@ const mods = [
   tags: ["alpine", "nature", "animals", "decor", "building", "furniture", "worldgen", "plants", "food", "cheese"],
 },
   {
-    title: "Smoker",
-    logo: "/assets/mod-logos/smoker.webp",
-    description: "The overlooked vanilla Smoker, reworked. Smoke food with different woods for better nutrition and the occasional potion effect.",
-    wiki: "/wiki/smoker/",
-    source: "https://github.com/Let-s-Do-Collection/Smoker",
-    tags: ["food", "cooking", "smoking", "vanilla-plus", "utility"],
+    title: "Wok & Bowl",
+    series: "farm-and-charm",
+    logo: "/assets/mod-logos/wokandbowl.webp",
+    description: "Wok cooking inspired by East Asian cuisine. Grow rice, chop on the cutting board, toss the wok and serve for up to three flames.",
+    wiki: "/wiki/wokandbowl/",
+    tags: ["food", "cooking", "farming", "rice", "decor", "furniture", "farm-and-charm"],
   },
   {
     title: "Vinery",
@@ -139,6 +145,46 @@ const mods = [
     wiki: "/wiki/hearth-and-timber/",
     source: "https://github.com/Let-s-Do-Collection/HearthAndTimber",
     tags: ["building", "wood_variants", "timber_framing", "masonry", "worldgen"],
+  },
+  {
+    title: "Legacy",
+    logo: "/assets/mod-logos/legacy.webp",
+    description: "Titles to wear, a diary of your first times and server milestones that remember who was first.",
+    wiki: "/wiki/legacy/",
+    source: "https://github.com/Let-s-Do-Collection/Legacy",
+    tags: ["titles", "journeys", "milestones", "cosmetic", "progression", "multiplayer", "datapack"],
+  },
+  {
+    title: "Smoker",
+    logo: "/assets/mod-logos/smoker.webp",
+    description: "The overlooked vanilla Smoker, reworked. Smoke food with different woods for better nutrition and the occasional potion effect.",
+    wiki: "/wiki/smoker/",
+    source: "https://github.com/Let-s-Do-Collection/Smoker",
+    tags: ["food", "cooking", "smoking", "vanilla-plus", "utility"],
+  },
+];
+
+const groups = [
+  {
+    id: "standalone",
+    title: "The Collection",
+    subtitle: "Mods you can install on their own.",
+    mods: mods.filter((mod) => !mod.series),
+  },
+  {
+    id: "farm-and-charm",
+    title: "Farm & Charm Series",
+    subtitle: "Farm & Charm and the mods that build on it. The add-ons require Farm & Charm.",
+    mods: [
+      ...mods.filter((mod) => mod.title === "Farm & Charm"),
+      ...mods.filter((mod) => mod.series === "farm-and-charm" && mod.title !== "Farm & Charm"),
+    ],
+  },
+  {
+    id: "lilis",
+    title: "Lili's Series",
+    subtitle: "A series made with extra love for MissLilitu.",
+    mods: mods.filter((mod) => mod.series === "lilis"),
   },
 ];
 ---
@@ -176,33 +222,49 @@ const mods = [
         <div id="modsSearchMeta" class="modsSearchMeta"></div>
       </div>
 
-      <div class="gridWrapper">
-        <div id="modsGrid" class="grid">
-          {mods.map((mod) => (
-            <article class="card" data-search={`${mod.title} ${mod.description} ${(mod.tags ?? []).join(" ")}`.toLowerCase()}>
-              <div class="cardContent">
-                <img class="cardLogo" src={mod.logo} alt={mod.title} loading="lazy" />
-                <h3>{mod.title}</h3>
-                <p>{mod.description}</p>
-              </div>
+      {groups.map((group) => (
+        <div class="modsGroup" data-group={group.id}>
+          <div class="sectionTitle modsGroupTitle">
+            <span>{group.title}</span>
+          </div>
+          <p class="sectionSubtitle">{group.subtitle}</p>
 
-              <div class="cardAction">
-                {mod.wiki ? (
-                  <a class="btn btnPrimary" href={mod.wiki}>
-                    View Wiki
-                  </a>
-                ) : null}
+          <div class="gridWrapper">
+            <div class:list={["grid", { modsGridSeries: group.id === "farm-and-charm", modsGridCentered: group.id === "lilis" }]}>
+              {group.mods.map((mod) => (
+                <article class:list={["card", { modsCardMain: group.id === "farm-and-charm" && mod.title === "Farm & Charm" }]} data-search={`${mod.title} ${mod.description} ${(mod.tags ?? []).join(" ")}`.toLowerCase()}>
+                  <div class="cardContent">
+                    {group.id === "farm-and-charm" ? (
+                      mod.title === "Farm & Charm" ? (
+                        <span class="modsCardBadge">Core Mod</span>
+                      ) : (
+                        <span class="modsCardBadge modsCardBadgeAddon">Addon</span>
+                      )
+                    ) : null}
+                    <img class="cardLogo" src={mod.logo} alt={mod.title} loading="lazy" />
+                    <h3>{mod.title}</h3>
+                    <p>{mod.description}</p>
+                  </div>
 
-                {mod.source ? (
-                  <a class="btn btnSecondary" href={mod.source} target="_blank" rel="noopener">
-                    Source Code
-                  </a>
-                ) : null}
-              </div>
-            </article>
-          ))}
+                  <div class="cardAction">
+                    {mod.wiki ? (
+                      <a class="btn btnPrimary" href={mod.wiki}>
+                        View Wiki
+                      </a>
+                    ) : null}
+
+                    {mod.source ? (
+                      <a class="btn btnSecondary" href={mod.source} target="_blank" rel="noopener">
+                        Source Code
+                      </a>
+                    ) : null}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
+      ))}
 
       <div id="modsEmpty" class="modsEmpty" style="display: none;">
         No mods match your search.
@@ -214,23 +276,30 @@ const mods = [
 
   <script is:inline>
     const input = document.getElementById("modsSearchInput")
-    const grid = document.getElementById("modsGrid")
     const meta = document.getElementById("modsSearchMeta")
     const empty = document.getElementById("modsEmpty")
-    const cards = Array.from(grid.querySelectorAll("[data-search]"))
+    const groups = Array.from(document.querySelectorAll(".modsGroup"))
+    const total = document.querySelectorAll(".modsGroup [data-search]").length
 
     const update = () => {
       const q = (input.value || "").trim().toLowerCase()
       let visible = 0
 
-      for (const card of cards) {
-        const hay = card.getAttribute("data-search") || ""
-        const show = q.length === 0 || hay.includes(q)
-        card.style.display = show ? "" : "none"
-        if (show) visible++
+      for (const group of groups) {
+        const cards = Array.from(group.querySelectorAll("[data-search]"))
+        let groupVisible = 0
+
+        for (const card of cards) {
+          const show = q.length === 0 || (card.getAttribute("data-search") || "").includes(q)
+          card.style.display = show ? "" : "none"
+          if (show) groupVisible++
+        }
+
+        group.style.display = groupVisible === 0 ? "none" : ""
+        visible += groupVisible
       }
 
-      meta.textContent = q.length === 0 ? `${cards.length} mods` : `${visible} of ${cards.length}`
+      meta.textContent = q.length === 0 ? `${total} mods` : `${visible} of ${total}`
       empty.style.display = visible === 0 ? "" : "none"
     }
 

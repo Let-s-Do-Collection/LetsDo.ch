@@ -68,3 +68,119 @@
 .metaLink:hover {
   color: var(--text);
 }
+
+.modsGroup {
+  width: 100%;
+}
+
+.modsGroup + .modsGroup {
+  margin-top: 48px;
+}
+
+.modsGroupTitle {
+  margin-top: 24px;
+}
+
+.modsGridSeries .card:first-child {
+  grid-column: 2;
+}
+
+.modsGridSeries .card:nth-child(2) {
+  grid-column-start: 1;
+}
+
+.modsGridSeries .card:last-child:nth-child(3n + 2) {
+  grid-column: 2;
+}
+
+@media (max-width: 900px) {
+  .modsGridSeries .card:first-child,
+  .modsGridSeries .card:nth-child(2),
+  .modsGridSeries .card:last-child:nth-child(3n + 2) {
+    grid-column: auto;
+  }
+}
+
+.modsCardMain {
+  position: relative;
+  overflow: hidden;
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+  background:
+    radial-gradient(90% 60% at 50% 0%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 75%),
+    var(--card);
+  box-shadow:
+    var(--shadow),
+    0 0 0 3px color-mix(in srgb, var(--accent) 10%, transparent),
+    0 20px 44px color-mix(in srgb, var(--accent) 16%, transparent);
+}
+
+.modsCardMain::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 35%, transparent), var(--accent), color-mix(in srgb, var(--accent) 35%, transparent));
+}
+
+.modsCardBadge {
+  align-self: center;
+  margin-bottom: 14px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+.modsCardMain .cardLogo {
+  max-height: 112px;
+}
+
+.modsCardMain h3 {
+  font-size: 21px;
+}
+
+.modsGridSeries .card.modsCardMain {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.modsCardMain p {
+  max-width: 44ch;
+}
+
+.modsCardBadgeAddon {
+  color: #c25e22;
+  background: rgba(226, 122, 58, 0.14);
+  border-color: rgba(226, 122, 58, 0.38);
+}
+
+html[data-mode="dark"] .modsCardBadgeAddon {
+  color: #f0a066;
+  background: rgba(240, 160, 102, 0.14);
+  border-color: rgba(240, 160, 102, 0.35);
+}
+
+.modsGridCentered {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.modsGridCentered .card {
+  box-sizing: border-box;
+  flex: 0 1 calc((100% - 52px) / 3);
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .modsGridCentered .card {
+    flex-basis: 100%;
+  }
+}

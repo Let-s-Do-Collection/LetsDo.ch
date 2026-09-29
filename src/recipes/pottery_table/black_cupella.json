@@ -1,0 +1,11 @@
+{
+  "type": "lilis_pottery:pottering",
+  "ingredients": [
+    {
+      "item": "lilis_pottery:black_clay_ball"
+    }
+  ],
+  "result": {
+    "id": "lilis_pottery:black_cupella"
+  }
+}

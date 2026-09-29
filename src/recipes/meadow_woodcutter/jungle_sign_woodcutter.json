@@ -1,0 +1,11 @@
+{
+  "type": "meadow:woodcutting",
+  "ingredients": [
+    {
+      "tag": "minecraft:jungle_logs"
+    }
+  ],
+  "result": {
+    "id": "minecraft:jungle_sign"
+  }
+}

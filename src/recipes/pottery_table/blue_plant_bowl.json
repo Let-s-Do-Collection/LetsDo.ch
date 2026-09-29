@@ -1,0 +1,11 @@
+{
+  "type": "lilis_pottery:pottering",
+  "ingredients": [
+    {
+      "item": "lilis_pottery:blue_clay_ball"
+    }
+  ],
+  "result": {
+    "id": "lilis_pottery:blue_plant_bowl"
+  }
+}

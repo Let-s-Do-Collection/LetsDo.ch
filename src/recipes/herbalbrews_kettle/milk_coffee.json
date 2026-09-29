@@ -1,0 +1,14 @@
+{
+  "type": "herbalbrews:kettle_brewing",
+  "ingredients": [
+    {
+      "item": "herbalbrews:coffee"
+    },
+    {
+      "tag": "herbalbrews:is_milk"
+    }
+  ],
+  "result": {
+    "id": "herbalbrews:milk_coffee"
+  }
+}
