@@ -3,6 +3,7 @@ export default {
   title: 'Lili\'s Lucky Lures',
   logo: '/assets/mod-logos/lucky_lures.webp',
   aboutTitle: 'Welcome',
+  modVersion: '1.1.5',
   aboutSubtitle: 'More to catch, more to find',
   aboutText: `Lili's Lucky Lures makes fishing more rewarding. Floating pools of fish, books and driftwood drift on rivers and oceans, waiting to be fished out.
 

@@ -3,6 +3,7 @@ export default {
   title: 'Camping',
   logo: '/assets/mod-logos/camping.webp',
   aboutTitle: 'Welcome',
+  modVersion: '2.1.6',
   aboutSubtitle: 'Everything you need for a night under the stars',
   aboutText: `Camping packs a few cozy outdoor essentials for your adventures.
 

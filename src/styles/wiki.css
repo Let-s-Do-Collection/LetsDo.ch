@@ -683,3 +683,22 @@ main.page.wikiShell > *,
     transform: none;
   }
 }
+
+.wikiVersionBanner {
+  margin: 24px auto 0;
+  width: fit-content;
+  max-width: 100%;
+  padding: 16px 32px;
+  border: 2px solid rgba(214, 168, 30, 0.45);
+  border-radius: 16px;
+  background: rgba(255, 214, 90, 0.22);
+  color: #6b4e00;
+  font-size: 22px;
+  text-align: center;
+}
+
+html[data-mode='dark'] .wikiVersionBanner {
+  border-color: rgba(240, 196, 70, 0.35);
+  background: rgba(240, 196, 70, 0.12);
+  color: #f1d37a;
+}

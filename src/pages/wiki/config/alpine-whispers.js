@@ -3,6 +3,7 @@ export default {
   title: 'Alpine Whispers',
   logo: '/assets/mod-logos/alpine_whispers.webp',
   aboutTitle: 'Welcome',
+  modVersion: '1.0.4',
   aboutSubtitle: 'Alpine building, cozy interiors and a colder winter',
   aboutText: `Alpine Whispers brings the look of traditional alpine homes into Minecraft.
 

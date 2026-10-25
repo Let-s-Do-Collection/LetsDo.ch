@@ -3,6 +3,7 @@ export default {
   title: 'Beachparty',
   logo: '/assets/mod-logos/beachparty.webp',
   aboutTitle: 'Welcome',
+  modVersion: '2.1.5',
   aboutSubtitle: 'Palm trees, cocktails and a day at the beach',
   aboutText: `Beachparty turns every beach into a holiday spot.
 

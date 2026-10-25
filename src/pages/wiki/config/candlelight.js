@@ -3,12 +3,13 @@ export default {
   title: 'Candlelight',
   logo: '/assets/mod-logos/candlelight.webp',
   aboutTitle: 'Welcome',
+  modVersion: '2.1.15',
   aboutSubtitle: 'Fine dining, cozy interiors and a little romance',
   aboutText: `Candlelight is about cooking for others and setting a beautiful table.
 
 Prepare plated meals on stoves, in cooking pots and pans, then serve them on plates with a napkin, a glass of wine and a cloche. Food eaten from a plate is even more filling.
 
-Furnish your restaurant with tables, chairs, cabinets and shelves in every wood type, write letters on a typewriter, and dress up in chef's whites or evening wear.
+Furnish your restaurant with tables, chairs, cabinets and shelves in every wood type, write letters on a typewriter, and dress up in chef's whites or evening wear. Serve a full dinner menu, clink glasses with friends, and watch villagers come by for dinner.
 
 Candlelight requires Farm & Charm.`,
   sections: [
@@ -76,6 +77,23 @@ It needs a heat source below it, and smoke rises while it cooks. Held in the han
             'Needs a heat source below it',
             'Can be used as a melee weapon'
           ]
+        },
+        {
+          id: 'cutting_board_recipes',
+          title: 'Cutting Board Recipes',
+          subtitle: 'Cold dishes and gifts are put together on the Farm & Charm [[Cutting Board|farm-and-charm:cutting_board]].',
+          icon: '/assets/icons/farm-and-charm/cutting_board.webp',
+          search: 'cutting board assembly assemble beef tartare harvest plate tomato mozzarella salad chocolate box flower crown bowl paper string farm and charm',
+          details: true,
+          detailsTitle: 'Assembled by hand',
+          detailsText: `Place the ingredients on an empty [[Cutting Board|farm-and-charm:cutting_board]] without a tool, then right click with an empty hand. The order does not matter, only the finishing item goes on last.`,
+          detailsBullets: [
+            '**[[Beef Tartare|beef_tartare]]** (×2): [[Minced Beef|farm-and-charm:minced_beef]] + [[Onion|farm-and-charm:onion]], finished with a Bowl',
+            '**[[Harvest Plate|harvest_plate]]** (×3): Carrot + Potato + [[Tomato|farm-and-charm:tomato]], finished with a Bowl',
+            '**[[Tomato Mozzarella Salad|tomato_mozzarella_salad]]**: [[Mozzarella|mozzarella]] or any cheese + [[Tomato|farm-and-charm:tomato]], finished with a Bowl',
+            '**[[Chocolate Box|chocolate_box]]**: 4 Chocolate, finished with Paper',
+            '**[[Flower Crown|flower_crown]]**: 4 [[Roses|rose]], finished with String'
+          ]
         }
       ]
     },
@@ -116,9 +134,12 @@ It needs a heat source below it, and smoke rises while it cooks. Held in the han
         {
           id: 'table',
           title: 'Table',
-          subtitle: 'A dining table, in every wood type.',
+          subtitle: 'A dining table, in every wood type, that can be covered with a tablecloth.',
           icon: '/assets/icons/candlelight/oak_table.webp',
-          search: 'table dining wood variants oak spruce birch jungle acacia dark oak mangrove cherry bamboo crimson warped candlelight'
+          search: 'table dining tablecloth carpet dye wood variants oak spruce birch jungle acacia dark oak mangrove cherry bamboo crimson warped candlelight',
+          details: true,
+          detailsTitle: 'Tablecloth',
+          detailsText: `Put a carpet on a wooden table to cover it with a tablecloth. Right click it with any dye to change its color, and sneak and right click to take it off again.`
         },
         {
           id: 'big_table',
@@ -138,9 +159,9 @@ It needs a heat source below it, and smoke rises while it cooks. Held in the han
           id: 'sofa',
           title: 'Sofa',
           namespace_id: 'candlelight:sofa',
-          subtitle: 'A soft sofa to sit on.',
+          subtitle: 'A soft sofa to sit on. Right click it with any dye to change its color.',
           icon: '/assets/icons/candlelight/sofa.webp',
-          search: 'sofa seating candlelight'
+          search: 'sofa seating dye dyeable color candlelight'
         },
         {
           id: 'kitchen_sink',
@@ -175,16 +196,25 @@ Sinks come in the same styles as the [[Stove|stove]].`,
           search: 'table set plate bowl glass wine glass napkin cloche candlelight',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Place a Plate or Bowl on a table and put a meal on it. Add a Glass, a Wine Glass, a Napkin or a Cloche by right clicking the place setting with them. Sneak and right click to lift the Cloche again.
+          detailsText: `Place a Plate or Bowl on a table and put a dish on it. Add a Glass, a Wine Glass, a Napkin or a Cloche by right clicking the place setting with them. Sneak and right click to lift the Cloche again. Freshly served dishes steam for a while.
 
-Eating from a plate is worth it: the meal fills you up 30% more, and all its effects still apply.
+**Eating from the table:** A dish eaten from a Table Set fills you up 30% more, gives the effects of its ingredients and makes you [[Well Served|well_served]] for longer. Every table setting adds one more minute: the dish itself, the Napkin, the Glass, the Wine Glass, every filled drink and a lit candle, lantern or Lamp right next to the table. Look at the Table Set to see what is served and what you can still add.
 
-Glasses and Wine Glasses can be filled with wine or potions. Right click with an empty hand to drink.`,
+**Dinner menu:** Eat a starter, a main course and a dessert from a Table Set one after another, each within five minutes of the last, and you get a much longer Well Served and Refreshed.
+
+**Drinks:** Pour wine from Vinery into the Wine Glass, and beer from Brewery, grape juice or potions into the Glass. They give the same effects as drinking them normally. Hold right click on the Wine Glass with an empty hand to raise it and drink. Raise your glass next to another player doing the same and you clink glasses. Hold right click on the Napkin to dab your mouth, it goes back on the table when you let go.
+
+**Dinner guests:** In the evening after work, villagers may walk to a Table Set with a dish on it and eat it. Afterwards they give 10% off all their trades for one day. Nitwits eat too, but give nothing back.`,
           detailsBullets: [
-            'Place a Plate or Bowl, then serve a meal on it',
-            'Meals from a plate are 30% more filling',
-            'Add Glass, Wine Glass, Napkin and Cloche',
-            'Fill glasses with wine or potions and drink from them'
+            'Place a Plate or Bowl, then serve a dish on it',
+            'Dishes from the table are 30% more filling',
+            'Each table setting adds one minute of Well Served, up to 10 minutes',
+            'Starter, main course and dessert in a row: up to 15 minutes',
+            'Wine, beer, juice and potions can be poured into the glasses',
+            'Clink glasses with other players',
+            'Villagers come to dinner and give 10% off for a day',
+            'Info tooltip shows the dish, the table setting and what is missing',
+            'Dishes from Farm & Charm, Bakery, Brewery, Vinery, Meadow and more count for the menu'
           ],
           items: [
             {
@@ -235,17 +265,29 @@ Glasses and Wine Glasses can be filled with wine or potions. Right click with an
           id: 'lamp',
           title: 'Lamp',
           namespace_id: 'candlelight:lamp',
-          subtitle: 'A lamp you can switch on and off. Stands on the floor or hangs from the ceiling.',
+          subtitle: 'A lamp you can switch on and off. Stands on the floor or hangs from the ceiling. At night, fireflies gather around it.',
           icon: '/assets/icons/candlelight/lamp.webp',
-          search: 'lamp light switch hanging candlelight'
+          search: 'lamp light switch hanging fireflies table light candlelight'
         },
         {
           id: 'side_table',
           title: 'Side Table',
           namespace_id: 'candlelight:side_table',
-          subtitle: 'A small table that can hold a lantern and a book.',
+          subtitle: 'A small table for books, decoration and a light.',
           icon: '/assets/icons/candlelight/side_table.webp',
-          search: 'side table lantern book candlelight'
+          search: 'side table lantern lamp soul lantern book stack items fireflies candlelight',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `Right click with any item to put it on the Side Table. Up to four of the same item stack up, books up to two.
+
+You can also place a Lamp, a Lantern or a Soul Lantern on it and switch it on and off with right click. At night, fireflies gather around a lit Side Table. Sneak and right click with an empty hand to take everything off.`,
+          detailsBullets: [
+            'Stacks up to 4 of the same item, 2 books',
+            'Holds a Lamp, Lantern or Soul Lantern',
+            'Right click to switch the light on and off',
+            'Sneak and right click to take everything off',
+            'Drops its items when broken'
+          ]
         },
         {
           id: 'dinner_bell',
@@ -276,9 +318,17 @@ Glasses and Wine Glasses can be filled with wine or potions. Right click with an
           id: 'table_sign',
           title: 'Table Sign',
           namespace_id: 'candlelight:table_sign',
-          subtitle: 'A small board for tables and counters.',
+          subtitle: 'A small board for tables and counters that you can write a menu on.',
           icon: '/assets/icons/candlelight/table_sign.webp',
-          search: 'table sign board placeable decor candlelight'
+          search: 'table sign board menu note write text placeable decor candlelight',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `Hold the Table Sign and right click in the air to write a menu or a note on it, up to eight lines. Place it and everyone who looks at it can read the text. The text stays on the sign when you break it.`,
+          detailsBullets: [
+            'Right click in the air to write',
+            'Up to eight lines',
+            'Keeps its text when broken'
+          ]
         },
         {
           id: 'small_painting',
@@ -349,11 +399,14 @@ Once placed, it gives Fire Resistance to all players within eight blocks.`,
           search: 'typewriter writing letters note paper iron gold candlelight',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Right click the Typewriter with [[Note Paper|note_paper]] to insert a sheet, then right click again to start typing. When you are done, sign the page and take it out with another right click.`,
+          detailsText: `Right click the Typewriter with [[Note Paper|note_paper]] to insert a sheet, then right click again to start typing. When you are done, sign the page and take it out with another right click.
+
+The keys move and the carriage slides along while you type, and ink flies from the page. Without paper, right click with an empty hand to mash a few keys, at the end of the line the bell rings.`,
           detailsBullets: [
             'Right click with Note Paper to insert it',
             'Right click to type',
-            'Sign and take out the finished page'
+            'Sign and take out the finished page',
+            'Empty hand without paper: key mashing'
           ],
           items: [
             {
@@ -453,10 +506,10 @@ Love Envelopes work the same way. Opening a love letter releases a few hearts, a
           search: 'gold ring luck accessory candlelight',
           details: true,
           detailsTitle: 'Effect',
-          detailsText: `Wear the Gold Ring in the chestplate slot to get Luck II, which improves loot from chests and fishing.
+          detailsText: `Hold the Gold Ring in your off hand to get Luck II, which improves loot from chests and fishing. With Accessories, Curios or Trinkets installed, it goes into a ring slot instead.
 
 You can keep it in a [[Jewelry Box|jewelry_box]].`,
-          detailsBullets: ['Worn in the chestplate slot', 'Gives Luck II']
+          detailsBullets: ['Held in the off hand or worn in a ring slot', 'Gives Luck II']
         },
         {
           id: 'chefs_attire',
@@ -466,7 +519,9 @@ You can keep it in a [[Jewelry Box|jewelry_box]].`,
           search: 'chef attire cooking hat chefs jacket chefs pants chefs boots candlelight',
           details: true,
           detailsTitle: 'Included Pieces',
-          detailsText: `A cosmetic outfit for the kitchen, worn in the armor slots. Now and then a zombie shows up wearing the Cooking Hat.`,
+          detailsText: `An outfit for the kitchen, worn in the armor slots. Now and then a zombie shows up wearing the Cooking Hat.
+
+**Set bonus:** Wearing all four pieces gives a 25% chance of an extra portion from the [[Cooking Pot|cooking_pot]] and [[Cooking Pan|cooking_pan]].`,
           items: [
             {
               id: 'cooking_hat',
@@ -506,7 +561,11 @@ You can keep it in a [[Jewelry Box|jewelry_box]].`,
           search: 'evening wear flower crown dress shirt formal shirt trousers vest necktie dyeable candlelight',
           details: true,
           detailsTitle: 'Included Pieces',
-          detailsText: `Cosmetic formal wear, worn in the armor slots. The Dress and the Trousers and Vest can be dyed.`,
+          detailsText: `Formal wear, worn in the armor slots. The Dress and the Trousers and Vest can be dyed.
+
+**Set bonus:** Wearing the full Suit or Evening Dress makes dishes eaten from a [[Table Set|table_set]] 50% more filling instead of 30%, and counts as an extra table setting.
+
+With Accessories, Curios or Trinkets installed, the Necktie goes into the necklace slot and the Flower Crown into the hat slot.`,
           items: [
             {
               id: 'flower_crown',
@@ -567,7 +626,7 @@ You can keep it in a [[Jewelry Box|jewelry_box]].`,
           search: 'candlelight food meals plated soups pasta steak salad well served refreshed',
           details: true,
           detailsTitle: 'Notes',
-          detailsText: `Most dishes are cooked in the [[Cooking Pot|cooking_pot]] or [[Cooking Pan|cooking_pan]] and need a plate or bowl as container. Wine or potions used as ingredients pass their effects on to the dish.
+          detailsText: `Most dishes are cooked in the [[Cooking Pot|cooking_pot]] or [[Cooking Pan|cooking_pan]] and need a plate or bowl as container. Beef Tartare, the Harvest Plate and the Tomato Mozzarella Salad are put together on the [[Cutting Board|cutting_board_recipes]] instead. Wine or potions used as ingredients pass their effects on to the dish.
 
 Lasagne, Beef Wellington, Pork Ribs and the big salads can be placed on the table and shared, several servings each.
 
@@ -594,13 +653,13 @@ Serve your dishes on a [[plate|table_set]] to make them 30% more filling.`,
             { id: 'tropical_fish_supreme', title: 'Tropical Fish Supreme', icon: '/assets/icons/candlelight/tropical_fish_supreme.webp', search: 'tropical fish' },
             { id: 'lasagne', title: 'Lasagne', icon: '/assets/icons/candlelight/lasagne.webp', search: 'lasagne' },
             { id: 'beef_wellington', title: 'Beef Wellington', icon: '/assets/icons/candlelight/beef_wellington.webp', search: 'beef wellington' },
+            { id: 'potroast', title: 'Pot Roast', icon: '/assets/icons/candlelight/potroast.webp', search: 'pot roast potroast beef potato carrot onion' },
             { id: 'pork_ribs', title: 'Pork Ribs', icon: '/assets/icons/candlelight/pork_ribs.webp', search: 'pork ribs' },
             { id: 'fresh_garden_salad', title: 'Fresh Garden Salad', icon: '/assets/icons/candlelight/fresh_garden_salad.webp', search: 'fresh garden salad' },
             { id: 'tomato_mozzarella_salad', title: 'Tomato Mozzarella Salad', icon: '/assets/icons/candlelight/tomato_mozzarella_salad.webp', search: 'tomato mozzarella salad' },
             { id: 'salad', title: 'Salad', icon: '/assets/icons/candlelight/salad.webp', search: 'salad' },
             { id: 'beetroot_salad', title: 'Beetroot Salad', icon: '/assets/icons/candlelight/beetroot_salad.webp', search: 'beetroot salad' },
             { id: 'pasta_with_lettuce', title: 'Pasta with Lettuce', icon: '/assets/icons/candlelight/pasta_with_lettuce.webp', search: 'pasta lettuce' },
-            { id: 'khinkali', title: 'Khinkali', icon: '/assets/icons/candlelight/khinkali.webp', search: 'khinkali' },
             { id: 'omelet', title: 'Omelette', icon: '/assets/icons/candlelight/omelet.webp', search: 'omelette omelet' },
             { id: 'harvest_plate', title: 'Harvest Plate', icon: '/assets/icons/candlelight/harvest_plate.webp', search: 'harvest plate' },
             { id: 'chocolate_mousse', title: 'Mousse au Chocolate', icon: '/assets/icons/candlelight/chocolate_mousse.webp', search: 'chocolate mousse' },
@@ -677,6 +736,31 @@ They can be placed in a flower pot and multiplied with Bone Meal.`,
           subtitle: 'About 3% of adult zombies spawn wearing a [[Cooking Hat|cooking_hat]].',
           icon: '/assets/icons/misc/zombie.webp',
           search: 'chef zombie candlelight cooking hat spawn'
+        },
+        {
+          id: 'vanilla_blend',
+          title: 'VanillaBlend',
+          subtitle: 'An optional built-in resource pack with muted, vanilla-friendly colors for plates, bowls, dishes, glasses, clothing and effect icons. Turn it on in the Resource Packs menu.',
+          icon: '/assets/icons/candlelight/plate.webp',
+          search: 'vanillablend vanilla blend resource pack textures colors muted'
+        },
+        {
+          id: 'config',
+          title: 'Config',
+          subtitle: 'Change effects, table bonuses and food values.',
+          icon: '/assets/icons/misc/config.webp',
+          search: 'config settings mod menu options food values',
+          details: true,
+          detailsTitle: 'Settings',
+          detailsText: `On Fabric the config opens through Mod Menu, on NeoForge in the Mods screen. Changes to food values need a restart.`,
+          detailsBullets: [
+            'Well Served, Refreshed, Gold Ring and Banner effects',
+            'Table Set bonuses, dinner menu and dish steam',
+            'Villager dinner guests and their discount',
+            "Chef's Outfit and Evening Wear set bonuses",
+            'Info tooltips',
+            'Hunger and saturation of every dish'
+          ]
         }
       ]
     }

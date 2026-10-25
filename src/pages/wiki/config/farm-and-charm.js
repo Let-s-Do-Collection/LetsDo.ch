@@ -3,6 +3,7 @@ export default {
   title: 'Farm & Charm',
   logo: '/assets/mod-logos/farm_and_charm.webp',
   aboutTitle: 'Welcome',
+  modVersion: '1.1.30',
   aboutSubtitle: 'The heart of the Let\'s Do kitchen and farm',
   aboutText: `Farm & Charm is the foundation of the Let's Do food mods. It adds the shared kitchen stations, crops and farming tools that Bakery, Brewery, Candlelight and others build on.
 
@@ -24,14 +25,18 @@ Look after your animals with troughs, a chicken coop and pet bowls, pull carts a
           search: 'stove baking fuel heat cooking roaster pot',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Stove has three ingredient slots, a fuel slot and an output slot. Add ingredients and fuel such as coal, and a recipe is done after about twelve seconds. The ingredients and the result are visible on the stove.
+          detailsText: `The Stove has three ingredient slots, a fuel slot and an output slot. Add ingredients and fuel such as coal, and a recipe is done after about twelve seconds. The ingredients and the result are visible on the stove. Baking gives experience when you take the result.
 
-A lit stove also heats a [[Cooking Pot|cooking_pot]] or [[Roaster|roaster]] placed on top of it.`,
+**Grill:** The top of the Stove is a grill with four spots. Right click with anything that cooks on a Campfire to put it on, right click it to flip it and sneak and right click to take it back. It only cooks while the Stove burns and pops off when it is done. Look at it to see how long each piece still needs. This is also how you get the campfire-only meats such as [[Cooked Bacon|campfire_meats]].
+
+A lit stove also heats a [[Cooking Pot|cooking_pot]] or [[Roaster|roaster]] placed on top of it. Put it out with a Water Bottle.`,
           detailsBullets: [
             'Three ingredient slots, one fuel slot, one output slot',
             'About twelve seconds per recipe',
             'Needs fuel such as coal or charcoal',
-            'Heat source for the Cooking Pot and Roaster'
+            'Grill with four spots on top',
+            'Heat source for the Cooking Pot and Roaster',
+            'Gives experience'
           ]
         },
         {
@@ -84,14 +89,16 @@ It needs a heat source below it, such as a lit [[Stove|stove]]. Smoke rises and 
           search: 'mincer crank processing interact right click hold particles sound animation meat iron wood speed',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Mincer has no menu. Right click it with an ingredient to put it in, then hold right click to turn the crank. When it is done, the result drops out at the bottom.
+          detailsText: `The Mincer has no menu. Right click it with an ingredient to put it in, then hold right click to turn the crank. The crank speeds up and slows down with you, and the Mincer rocks along. When it is done, the result drops out at the bottom.
 
-Soft things like meat are minced almost instantly, harder materials take longer. Holding another item of the same kind while cranking speeds things up.`,
+Soft things like meat are minced almost instantly, harder materials take longer. It squishes meat, crunches wood and plants, grits stone and grinds ores. If you stop cranking, the progress is kept. Look at it to see the input, the result and the progress.`,
           detailsBullets: [
             'Right click with an item to put it in',
             'Hold right click to turn the crank',
             'The result drops out at the bottom',
-            'Harder materials take longer'
+            'Harder materials take longer',
+            'Progress is kept when you stop',
+            'Every 5 minced items give experience'
           ]
         },
         {
@@ -103,11 +110,60 @@ Soft things like meat are minced almost instantly, harder materials take longer.
           search: 'crafting bowl dough cereals salads whisk stir interact no gui empty hand capacity animation',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Crafting Bowl has no menu. Right click it with ingredients to drop up to four of them in. Once the right ingredients are inside, stir the whisk with an empty hand until the result is ready.`,
+          detailsText: `The Crafting Bowl has no menu. Right click it with ingredients to drop up to four of them in. Once the right ingredients are inside, hold right click with an empty hand to stir the whisk.
+
+A recipe needs 200 stirs, and speed counts: quick, steady stirring finishes in about eight seconds, slow stirring takes longer and stopping pauses the progress. The faster you whisk, the louder it gets and the more the bowl rocks. The dough slowly rises from the bottom and splashes little drops out of the bowl, but only if the ingredients actually make something. Look at the bowl to see the ingredients, the result and the progress.`,
           detailsBullets: [
             'Holds up to four ingredients',
-            'Stir with an empty hand',
-            'Used for dough, salads, animal feed and similar recipes'
+            'Stir with an empty hand, 200 stirs per recipe',
+            'Faster stirring finishes sooner',
+            'Every 5 dishes give experience',
+            'Used for dough, butter, salads and oatmeal',
+            'Animal feed is now put together on the [[Cutting Board|cutting_board]]'
+          ]
+        },
+        {
+          id: 'cutting_board',
+          title: 'Cutting Board',
+          namespace_id: 'farm_and_charm:cutting_board',
+          subtitle: 'Chop meat and vegetables, strip logs and put together animal feed by hand.',
+          icon: '/assets/icons/farm-and-charm/cutting_board.webp',
+          search: 'cutting board chop knife cleaver fillet assemble assembly strip axe logs station animal feed cat dog food horse fodder chicken feed rope nest compost',
+          details: true,
+          detailsTitle: 'Three ways to use it',
+          detailsText: `**Chopping:** Place a knife or [[Cleaver|cleavers]] on the board, it sticks right into the wood. Then hold right click with an ingredient to chop it. You can also place the ingredient first and chop it with the knife in your hand.
+
+**Stripping logs:** Place an axe on the board and hold right click with a log to strip it. Every log an axe can strip works, including logs from other mods, and takes 2 chops.
+
+**Assembling:** Without a tool, place up to five ingredients on the board and right click with an empty hand to combine them. For most recipes the order does not matter, only a finishing item such as Paper has to go on last. [[Rope|rope]] is the exception and needs String, Barley, String in exactly this order. Shift and right click takes the last ingredient back.
+
+Every recipe needs 3 chops with a regular knife, [[Cleavers|cleavers]] use their own number. Chopping also gives a little experience. Other mods such as Bakery, Candlelight and Wok & Bowl add their own recipes.`,
+          detailsBullets: [
+            '**Chicken** → 3 [[Chicken Parts|chicken_parts]] + 1 Feather',
+            '**Beef** → 1 [[Minced Beef|minced_beef]]',
+            '**Porkchop** → 2 [[Bacon|bacon]]',
+            '**Mutton** → 1 [[Lamb Ham|lamb_ham]]',
+            '**[[Dough|dough]]** → 2 [[Raw Pasta|raw_pasta]]',
+            '**[[Tomato|tomato]]** → 4 [[Tomato Seeds|tomato_seeds]]',
+            '**[[Strawberry|strawberry]]** → 4 [[Strawberry Seeds|strawberry_seeds]]',
+            '**Melon** → 9 Melon Slices, **Melon Slice** → 2 Melon Seeds',
+            '**Pumpkin** → 4 Pumpkin Seeds',
+            '**Sugar Cane** → 2 Sugar',
+            '**Bone** → 4 Bone Meal',
+            '**Hay Bale** → 9 Wheat',
+            '**Wool** → 4 String',
+            '**Mushroom Blocks** → 2 Mushrooms',
+            '**Flowers** → 2 Dye, tall flowers → 4 Dye',
+            '**[[Cat Food|cat_food]]** (×6): Raw Fish + Raw Chicken + Cooked Beef, finished with Paper',
+            '**[[Dog Food|dog_food]]** (×4): Cooked Beef + Raw Beef + Bone, finished with Paper',
+            '**[[Cat Food Bag / Dog Food Bag|pet_food_bags]]**: 4 Cat Food or 4 Dog Food, finished with Paper',
+            '**[[Horse Fodder|horse_fodder]]**: Wheat + Apple + Carrot',
+            '**[[Chicken Feed|chicken_feed]]** (×3): Wheat + Carrot + Wheat Seeds',
+            '**[[Chicken Nest|chicken_nest]]** (×2): 3 Wheat',
+            '**[[Rope|rope]]** (×6): String + [[Barley|barley]] + String, in this order',
+            '**[[Compost|compost]]**: 4 [[Fertilizer|fertilizer]]',
+            'Each finished cut costs one durability',
+            'Right click with an empty hand to take the tool back'
           ]
         },
         {
@@ -128,6 +184,7 @@ Brewery uses the silo to dry grain for beer and whiskey, and Podzol dries into F
             'Combines up to 3 x 3 x 9 blocks',
             'Right click with items to fill it',
             'Open the hatch to release dried items',
+            'Info tooltip shows how full it is and what is drying',
             'Comes in wood and copper'
           ]
         }
@@ -215,11 +272,34 @@ A fresh, full block can be turned into [[Fertilized Farmland|fertilized_farmland
           detailsTitle: 'Usage',
           detailsText: `The Water Sprinkler waters the farmland around it, so you do not need water nearby. It also puts out fires, campfires and candles in its spray, so place it carefully.
 
+Right click it to switch between three pressures: Steady Pressure turns evenly, Pulsing Pressure ticks around in small steps like a real impact sprinkler, High Pressure spins fast, rattles and shoots its jets further. The pressure only changes the look, not the watering. Sprinklers slowly spin up when placed or when rain starts, and every one turns on its own.
+
 Onions and lettuce next to a sprinkler can grow into [[big crops|big_crops]].`,
           detailsBullets: [
             'Keeps nearby farmland wet',
             'Puts out fire, campfires and candles',
+            'Right click to switch between three pressures',
             'Helps crops grow big'
+          ]
+        },
+        {
+          id: 'timber_well',
+          title: 'Timber Well',
+          namespace_id: 'farm_and_charm:timber_well',
+          subtitle: 'Pumps up groundwater for your bucket and your animals.',
+          icon: '/assets/icons/farm-and-charm/water_trough.webp',
+          search: 'timber well water pump groundwater bucket rain livestock drink breeding',
+          details: true,
+          detailsTitle: 'Usage',
+          detailsText: `Right click the Timber Well with an empty hand to pump up water from a water source up to six blocks below it. It also fills up slowly in the rain. Draw the water with an empty Bucket, the well holds three buckets.
+
+Livestock can drink from it, which shortens their breeding cooldown. Breaking the well splashes out some water.`,
+          detailsBullets: [
+            'Needs a water source up to 6 blocks below',
+            'Pump with an empty hand',
+            'Fills slowly in the rain',
+            'Holds three buckets of water',
+            'Animals drinking from it can breed sooner'
           ]
         },
         {
@@ -268,10 +348,13 @@ Right click the coop to take all eggs at once. Use a [[Pitchfork|pitchfork]] on 
           search: 'chicken nest coop farm eggs storage nearby chickens',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Chickens nearby lay their eggs into the nest instead of dropping them on the ground.`,
+          detailsText: `Chickens nearby lay their eggs into the nest instead of dropping them on the ground. Feathers fly when you take the eggs out or put them in.
+
+Birds and eggs from other mods work too, when the mod adds them to the right tags.`,
           detailsBullets: [
             'Chickens lay their eggs into it',
-            'Holds up to two eggs'
+            'Holds up to two eggs',
+            'Works with birds from other mods'
           ]
         }
       ]
@@ -293,9 +376,9 @@ Right click the coop to take all eggs at once. Use a [[Pitchfork|pitchfork]] on 
           id: 'tool_rack',
           title: 'Tool Rack',
           namespace_id: 'farm_and_charm:tool_rack',
-          subtitle: 'Hang your tools and pans on the wall.',
+          subtitle: 'Hang your tools and pans on the wall. Takes every tool, including bows, crossbows, tridents, maces, brushes and tools from other mods, but no shields. Hung tools wobble a little.',
           icon: '/assets/icons/farm-and-charm/tool_rack.webp',
-          search: 'tool rack toolrack storage tools pans kitchen decor'
+          search: 'tool rack toolrack storage tools pans bow crossbow trident mace brush kitchen decor'
         },
         {
           id: 'scarecrow',
@@ -309,12 +392,21 @@ Right click the coop to take all eggs at once. Use a [[Pitchfork|pitchfork]] on 
           detailsTitle: 'Reward',
           detailsText: `Collect every Farm & Charm meal to complete the final advancement and receive two Scarecrows. More can be crafted from an existing Scarecrow, a Barley Ball and sticks.
 
-Every 25 seconds the Scarecrow helps all crops within eight blocks grow a little. It sways gently in the wind, and it wears [[Dungarees|dungarees]] that you can take off or put back on.`,
+Every 25 seconds the Scarecrow helps all crops within eight blocks grow a little. It wears [[Dungarees|dungarees]] that you can take off or put back on. The Scarecrow is two blocks tall and needs free space above it.
+
+Sneak and right click it with an empty hand to switch between three moods:
+- **Calm:** sways gently.
+- **Windy:** sways on its post, flaps its arms, nods its head, moves more in rain and thunder and catches a gust now and then.
+- **Watchful:** slowly turns its head towards the nearest player, looks around when nobody is near and throws its arms up when you come too close.
+
+The mood only changes the look, not the crop growth.`,
           detailsBullets: [
             'Reward for collecting every meal',
             'Gives crops within 8 blocks an extra growth tick every 25 seconds',
             'Can be copied with a Barley Ball and sticks',
-            'Right click to take off or put on its Dungarees'
+            'Right click to take off or put on its Dungarees',
+            'Sneak and right click to switch its mood',
+            'Two blocks tall'
           ]
         },
         {
@@ -428,7 +520,7 @@ Use a shovel or hoe to sweep the straw away. You get Wheat back and the plain St
           id: 'sturdy_ladder',
           title: 'Sturdy Ladder',
           namespace_id: 'farm_and_charm:sturdy_ladder',
-          subtitle: 'A free-standing ladder that can be extended from the bottom.',
+          subtitle: 'A free-standing ladder that can be extended from the bottom. It wobbles a little and creaks now and then while someone climbs it.',
           icon: '/assets/icons/farm-and-charm/sturdy_ladder.webp',
           search: 'sturdy ladder barn farm building climb extend stack place on ladder support walls ground'
         },
@@ -486,6 +578,51 @@ Compost is also the way to grow [[giant onions and lettuce|big_crops]].`,
             'Boosts two to six crops in a 5 x 5 area',
             'Ten uses',
             'Can make onions and lettuce grow big or giant'
+          ]
+        },
+        {
+          id: 'cleavers',
+          title: 'Cleavers',
+          subtitle: 'Heavy kitchen blades that chop faster and hit hard.',
+          icon: '/assets/icons/farm-and-charm/iron_cleaver.webp',
+          search: 'cleaver iron diamond netherite knife axe weapon head drop chops cutting board',
+          details: true,
+          detailsTitle: 'Chop, chop',
+          detailsText: `Cleavers work as knives on the [[Cutting Board|cutting_board]] and as axes and weapons everywhere else. The better the cleaver, the fewer chops each ingredient needs.
+
+Mobs and players defeated with a cleaver always drop their head, if they have one: zombies, skeletons, wither skeletons, creepers, piglins, the Ender Dragon and players.
+
+The [[Netherite Cleaver|netherite_cleaver]] is made on a smithing table from a [[Diamond Cleaver|diamond_cleaver]] and survives lava.`,
+          detailsBullets: [
+            '[[Iron Cleaver|iron_cleaver]]: 5 chops',
+            '[[Diamond Cleaver|diamond_cleaver]]: 3 chops',
+            '[[Netherite Cleaver|netherite_cleaver]]: 1 chop',
+            'Other knives use the recipe value (3 chops)',
+            'Accepts sword and axe enchantments',
+            'Chops and head drops can be changed in the config'
+          ],
+          items: [
+            {
+              id: 'iron_cleaver',
+              title: 'Iron Cleaver',
+              namespace_id: 'farm_and_charm:iron_cleaver',
+              icon: '/assets/icons/farm-and-charm/iron_cleaver.webp',
+              search: 'iron cleaver'
+            },
+            {
+              id: 'diamond_cleaver',
+              title: 'Diamond Cleaver',
+              namespace_id: 'farm_and_charm:diamond_cleaver',
+              icon: '/assets/icons/farm-and-charm/diamond_cleaver.webp',
+              search: 'diamond cleaver'
+            },
+            {
+              id: 'netherite_cleaver',
+              title: 'Netherite Cleaver',
+              namespace_id: 'farm_and_charm:netherite_cleaver',
+              icon: '/assets/icons/farm-and-charm/netherite_cleaver.webp',
+              search: 'netherite cleaver'
+            }
           ]
         },
         {
@@ -619,6 +756,22 @@ It also releases the chickens from a [[Chicken Coop|chicken_coop]], and makes a 
           subtitle: 'A breakfast classic.',
           icon: '/assets/icons/farm-and-charm/bacon.webp',
           search: 'bacon pork meat ingredient cooking meals breakfast'
+        },
+        {
+          id: 'campfire_meats',
+          title: 'Campfire Meats',
+          subtitle: 'Prepared meat cooked over an open fire. Only on a Campfire or the grill of the Stove.',
+          icon: '/assets/icons/farm-and-charm/cooked_bacon.webp',
+          search: 'cooked bacon cooked chicken parts cooked lamb ham cooked minced beef campfire grill stove',
+          details: true,
+          detailsTitle: 'Included Meats',
+          detailsText: `Bacon, Chicken Parts, Lamb Ham and Minced Beef turn into their cooked versions on a Campfire or the grill of the [[Stove|stove]]. In a Furnace or Smoker, Minced Beef becomes Steak and Lamb Ham Cooked Mutton instead.`,
+          items: [
+            { id: 'cooked_bacon', title: 'Cooked Bacon', namespace_id: 'farm_and_charm:cooked_bacon', icon: '/assets/icons/farm-and-charm/cooked_bacon.webp', search: 'cooked bacon' },
+            { id: 'cooked_chicken_parts', title: 'Cooked Chicken Parts', namespace_id: 'farm_and_charm:cooked_chicken_parts', icon: '/assets/icons/farm-and-charm/cooked_chicken_parts.webp', search: 'cooked chicken parts' },
+            { id: 'cooked_lamb_ham', title: 'Cooked Lamb Ham', namespace_id: 'farm_and_charm:cooked_lamb_ham', icon: '/assets/icons/farm-and-charm/cooked_lamb_ham.webp', search: 'cooked lamb ham' },
+            { id: 'cooked_minced_beef', title: 'Cooked Minced Beef', namespace_id: 'farm_and_charm:cooked_minced_beef', icon: '/assets/icons/farm-and-charm/cooked_minced_beef.webp', search: 'cooked minced beef' }
+          ]
         },
         {
           id: 'chicken_parts',
@@ -1580,14 +1733,34 @@ Big crops that you treat with [[Compost|compost]] have a chance to become giant.
           search: 'config configuration settings options balance farm and charm',
           details: true,
           detailsTitle: 'Configuration File',
-          detailsText: `On Fabric the settings are in config/farm_and_charm.json, on NeoForge in the mod's config file.`,
+          detailsText: `The config is split into Farming, Water, Animals, Kitchen, Effects and Food, and every option has an explanation.`,
           detailsBullets: [
+            'Giant crop chance, Scarecrow interval and range, wild crop drops',
+            'Timber Well groundwater depth and rain fill chance',
+            'Chicken Coop capacity, dog and cat begging, Pet Bowl range and feeding times',
+            'Cooking experience on or off, or multiplied',
+            'Info tooltips of the Cutting Board, Mincer, Crafting Bowl and Silo on or off, or only with Dungarees',
             'Ranges of Fertilized Soil, Water Sprinkler and Feeding Trough',
             'Rain growth on or off, and how strong it is',
             'Taming with animal food, horse and chicken effects',
+            'Chops per cleaver and cleaver head drops',
             'Hunger and saturation of every meal',
             'Timings of the food effects'
           ]
+        },
+        {
+          id: 'abandoned_fields',
+          title: 'Abandoned Fields',
+          subtitle: 'Small, overgrown fields in Plains, Meadows, Forests, Taigas and Savannas, with old crops in all growth stages and sometimes a few crop bags left at the edge.',
+          icon: '/assets/icons/farm-and-charm/packed_dirt.webp',
+          search: 'abandoned fields worldgen structure overgrown farmland crops bags plains meadow forest taiga savanna'
+        },
+        {
+          id: 'vanilla_blend',
+          title: 'VanillaBlend',
+          subtitle: 'An optional built-in resource pack with muted, vanilla-friendly colors for food, dishes, teas and effect icons. Turn it on in the Resource Packs menu.',
+          icon: '/assets/icons/farm-and-charm/stove.webp',
+          search: 'vanillablend vanilla blend resource pack textures colors muted'
         },
         {
           id: 'rain_growth',

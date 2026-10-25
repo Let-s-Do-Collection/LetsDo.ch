@@ -3,10 +3,11 @@ export default {
   title: 'Bakery',
   logo: '/assets/mod-logos/bakery.webp',
   aboutTitle: 'Welcome',
+  modVersion: '2.1.11',
   aboutSubtitle: 'Fresh bread, cakes and a bakery to sell them in',
   aboutText: `Bakery is all about baking: breads and buns, cakes, cupcakes and cookies, tarts, jams and spreads.
 
-Cakes are decorated by hand on the Caking Station, everyday meals simmer in the Small Cooking Pot, and a range of displays, trays and cabinets lets you set up a proper bakery shop.
+Cakes, cupcakes, cookies and Jam Rolls are made by hand on the Caking Station, jam bubbles away in the Jam Pot, and a range of displays, trays and cabinets lets you set up a proper bakery shop.
 
 Many baked goods also give special effects. Bread keeps you going for longer, and sweets give you a sugar rush.`,
   sections: [
@@ -24,44 +25,78 @@ Many baked goods also give special effects. Bread keeps you going for longer, an
           search: 'caking station baker station baking cake cupcake cookie dough jam spread truffle gateau rolling pin knife',
           details: true,
           detailsTitle: 'How baking works',
-          detailsText: `The Caking Station has no crafting menu. Everything happens on top of it.
+          detailsText: `The Caking Station has no crafting menu. Everything happens on top of it, step by step and with an animation for each one. Look at the station to see what you can use next.
 
-Use [[Cake Dough|cake_dough]] on the station to put a Blank Cake on it. What it turns into depends on what you use next:
+**Cakes:** Use [[Cake Dough|cake_dough]] on the station to get a cake base. Spread a jam on it for a Strawberry or Sweetberry Cake, Chocolate Truffles make the Chocolate Cake and Chocolate Spread the Chocolate Gateau. The jam spreads from the middle outwards.
 
-Jam or Chocolate Spread turns it into a finished cake right away. A Chocolate Truffle makes a Chocolate Gateau.
-A [[Bread Knife|bread_knife]] cuts it into cupcakes. Finish them with Strawberry, Sweetberry or Apple Jam.
-Roll the cupcakes flat with a [[Rolling Pin|rolling_pin]] to get cookies. Glaze them with Strawberry Jam, Sweetberry Jam or Chocolate Spread.
+**Cupcakes and cookies:** Place [[Sweet Dough|sweet_dough]] on the station to get four dough cubes. Cut them with the [[Bread Knife|bread_knife]] and the pieces hop apart into cupcake blanks. For cookies, flatten the cubes with the [[Rolling Pin|rolling_pin]] (5 clicks) or knead them with both hands empty (8 clicks), then cut the sheet into cookie blanks. Click too hectically and the dough mushes back together, so find the rhythm! Then decorate them with jam or Chocolate Spread.
 
-You get the empty Jar back every time.`,
+**Jam Rolls:** Put a Sponge Sheet on the station, spread a filling on it, roll it up with empty hands and cut it into five slices with the knife.
+
+**Cornets:** Put up to four Cornet Shells on the station, fill them all at once and take them with an empty hand.
+
+Fillings are Milk for cream, or any jam and Chocolate Spread from the [[Jam Pot|small_cooking_pot]]. Perfect jam gives one piece more. You can also lay down up to two tools on the left and right half of the station and pick them up again with an empty hand. Right click with flour for a puff of flour, just for fun.`,
           detailsBullets: [
-            'Use Cake Dough on the station to start a Blank Cake',
-            'Jam or Chocolate Spread: Strawberry, Sweetberry or Chocolate Cake',
-            'Chocolate Truffle: Chocolate Gateau',
-            'Bread Knife: cupcakes, finished with Strawberry, Sweetberry or Apple Jam',
-            'Knife, then Rolling Pin: cookies, glazed with Strawberry, Sweetberry or Chocolate',
+            'Cake Dough: cake base for cakes and the gateau',
+            'Sweet Dough: four cubes for cupcakes and cookies',
+            'Knife cuts, Rolling Pin or bare hands flatten',
+            'Sponge Sheet: Jam Roll, cut into five slices',
+            'Up to four Cornet Shells filled at once',
+            'Fillings: Milk, jams and Chocolate Spread',
+            'Perfect jam: one extra slice, cupcake or cookie',
+            'Gives experience for every finished batch',
+            'Info overlay shows the next step',
             'Empty Jars are returned'
           ]
         },
         {
           id: 'small_cooking_pot',
-          title: 'Small Cooking Pot',
+          title: 'Jam Pot',
           namespace_id: 'bakery:small_cooking_pot',
-          subtitle: 'A small pot for simple meals. Needs heat from below, and makes a decent club in a pinch.',
+          subtitle: 'Cook jam by hand: stir at the right moment and bottle it at the right time.',
           icon: '/assets/icons/bakery/small_cooking_pot.webp',
-          search: 'small cooking pot meals heat stove magma lava cauldron recipe weapon',
+          search: 'jam pot small cooking pot jam spread stir whisk bottle perfect runny caramelized burnt stove campfire',
           details: true,
-          detailsTitle: 'Usage',
-          detailsText: `The Small Cooking Pot has six ingredient slots, one container slot and one output slot. A meal takes 45 seconds.
+          detailsTitle: 'How to cook jam',
+          detailsText: `The Jam Pot has no menu. Put it on a stove or campfire and right click it with the fruit and Sugar. It starts cooking on its own.
 
-It only cooks while it sits on a heat source, such as a Magma Block, a Lava Cauldron or a stove from other Let's Do mods. Rising bubbles, cooking sounds and a lit flame in the menu show that it is working.
+Now and then the jam bubbles up and wants to be stirred: right click with an empty hand, hold it to whisk faster and faster. Miss it and the jam catches at the bottom. You can even feel the jam thicken: runny jam whisks easily, perfect jam pushes back, caramelized jam is tough.
 
-Held in the hand, the pot also works as a weapon.`,
+Bottle it with empty [[Jars|jars]]. When you bottle decides how it turned out:
+- Too early: runny, one jar more
+- Right on time: perfect, signed by the cook
+- Too late or not stirred: caramelized, one jar less
+- Far too long on the fire: the jam turns black and burns. Empty the pot before cooking again.
+
+Sneak and right click with an empty hand to tip the pot over. Ingredients that are not cooking yet come back.`,
           detailsBullets: [
-            'Six ingredient slots, one container slot, one output slot',
-            'A meal takes 45 seconds',
-            'Needs a heat source below it',
-            'Bubbles, sounds and a flame icon show it is cooking',
-            'Can be used as a melee weapon'
+            '2 fruit + Sugar → 3 jars of jam',
+            '**Chocolate Spread**: Milk + Chocolate + Sugar',
+            'Needs a stove or campfire below it',
+            'Stir when it bubbles up',
+            'Perfect jam gives an extra piece at the Caking Station',
+            'Gives experience for every batch',
+            'Info overlay shows what to do next'
+          ]
+        },
+        {
+          id: 'cutting_board_recipes',
+          title: 'Cutting Board Recipes',
+          subtitle: 'Sandwiches, bread baskets and chocolate boxes are put together on the Farm & Charm [[Cutting Board|farm-and-charm:cutting_board]].',
+          icon: '/assets/icons/farm-and-charm/cutting_board.webp',
+          search: 'cutting board assembly assemble sandwich vegetable sandwich grilled salmon sandwich bread with jam basket of bread crate chocolate box farm and charm',
+          details: true,
+          detailsTitle: 'Assembled by hand',
+          detailsText: `Place the ingredients on an empty [[Cutting Board|farm-and-charm:cutting_board]] without a tool, then right click with an empty hand. The board holds up to five items. The order does not matter, except for Bread with Jam: the bread goes on first.
+
+Any bread works, including the breads from Bakery.`,
+          detailsBullets: [
+            '**[[Sandwich|sandwiches]]** (×2): Bread + any cooked meat + [[Lettuce|farm-and-charm:lettuce]]',
+            '**[[Vegetable Sandwich|sandwiches]]** (×2): Bread + [[Lettuce|farm-and-charm:lettuce]] + [[Tomato|farm-and-charm:tomato]]',
+            '**[[Grilled Salmon Sandwich|sandwiches]]** (×2): Bread + Cooked Salmon + [[Lettuce|farm-and-charm:lettuce]]',
+            '**[[Bread with Jam|sandwiches]]** (×5): Bread, then any [[Jam|jars]]',
+            '**[[Basket of Bread|bread_crate]]**: [[Tray|tray]] + Bread + Baguette + Bun + Braided Bread',
+            '**[[Chocolate Box|chocolate_box]]**: Paper + 4 Chocolate Truffles'
           ]
         }
       ]
@@ -95,14 +130,15 @@ Held in the hand, the pot also works as a weapon.`,
           search: 'kitchen sink brick bakery filled bucket bottle water',
           details: true,
           detailsTitle: 'Function',
-          detailsText: `Right click the lower half with an empty hand to turn on the tap, or pour in a Water Bucket.
+          detailsText: `Turn the tap on with an empty hand and the sink slowly fills up. Fill Glass Bottles from it three times, or empty it all at once with a Bucket.
 
-Once it is filled, draw water with an empty Bucket or a Glass Bottle.`,
+You can also wash dyed leather, banners and shulker boxes in it, or put yourself out when you are on fire.`,
           detailsBullets: [
-            'Fill with an empty hand or a Water Bucket',
-            'Empty Bucket gives a Water Bucket',
-            'Glass Bottle gives a Water Bottle',
-            'Interact with the lower half'
+            'Turn the tap on with an empty hand',
+            'Three Water Bottles per filling',
+            'Empty Bucket takes all the water',
+            'Washes dyed leather, banners and shulker boxes',
+            'Puts out burning players'
           ]
         },
         {
@@ -216,13 +252,12 @@ Once it is filled, draw water with an empty Bucket or a Glass Bottle.`,
           search: 'cake stand bakery display glass',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Cake Stand holds either one whole cake or up to three smaller food items.
-
-Right click with an item to put it on the stand. Sneak and right click to take it off again.`,
+          detailsText: `The Cake Stand holds either one whole cake or up to three stacks of smaller food items. Every spot holds up to 64 of the same item. Right click with items to put in as many as fit, right click to take one out, and sneak and right click to take the whole stack. Look at it to see the item and amount of each spot. Whole cakes stay single.`,
           detailsBullets: [
-            'One whole cake or up to three food items',
-            'Right click with an item to place it',
-            'Sneak right click to take it off'
+            'One whole cake or three spots',
+            'Up to 64 items per spot',
+            'Sneak and right click takes the whole stack',
+            'Info tooltip shows what is inside'
           ]
         },
         {
@@ -234,14 +269,15 @@ Right click with an item to put it on the stand. Sneak and right click to take i
           search: 'cake display bakery shelf glass counter',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Cake Display holds up to six items, three on each shelf. It takes food items such as [[slices|cakes]], cupcakes and cookies, but no whole cakes. Displays placed side by side connect.
+          detailsText: `The Cake Display has six spots, three on each shelf. It takes food items such as [[slices|cakes]], cupcakes and cookies, but no whole cakes. Displays placed side by side connect.
 
-Right click an empty spot with an item to place it, and right click a filled spot to take it back.`,
+Every spot holds up to 64 of the same item. Right click with items to put in as many as fit, right click to take one out, and sneak and right click to take the whole stack. Look at it to see the item and amount of each spot. Fuller spots show a bigger pile.`,
           detailsBullets: [
             'Six spots, three per shelf',
+            'Up to 64 items per spot',
             'For items, not for whole cakes',
             'Connects with neighbouring displays',
-            'Right click a spot to place or take an item'
+            'Info tooltip shows what is inside'
           ]
         },
         {
@@ -253,13 +289,14 @@ Right click an empty spot with an item to place it, and right click a filled spo
           search: 'cupcake display bakery shelf',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Holds up to six items, three on each shelf. Unlike the [[Cake Display|cake_display]], it accepts any item.
+          detailsText: `Six spots, three on each shelf. Unlike the [[Cake Display|cake_display]], it accepts any item.
 
-Right click an empty spot with an item to place it, and right click a filled spot to take it back.`,
+Every spot holds up to 64 of the same item. Right click with items to put in as many as fit, right click to take one out, and sneak and right click to take the whole stack. Look at it to see the item and amount of each spot. Fuller spots show a bigger pile.`,
           detailsBullets: [
             'Six spots, three per shelf',
+            'Up to 64 items per spot',
             'Accepts any item',
-            'Right click a spot to place or take an item'
+            'Info tooltip shows what is inside'
           ]
         },
         {
@@ -271,7 +308,7 @@ Right click an empty spot with an item to place it, and right click a filled spo
           search: 'breadbox bread box bakery bread storage lid',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Bread Box holds a single loaf or other food item and shows it inside.
+          detailsText: `The Bread Box holds a single loaf or other food item and shows it inside. Look at it to see what is inside.
 
 Right click with the item to put it in and right click again to take it out. Sneak and right click to open or close the lid.`,
           detailsBullets: [
@@ -289,12 +326,15 @@ Right click with the item to put it in and right click again to take it out. Sne
           search: 'tray bakery serving bread',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Tray holds up to five items side by side. Right click a free spot with an item to place it and right click it again to take it back.
+          detailsText: `The Tray holds up to five items side by side. Right click a free spot with an item to place it and right click it again to take it back. Look at it to see everything that is on it.
 
-A Tray is also used to craft the [[Basket of Bread|bread_crate]] and comes back once the basket is empty.`,
+Right click it with any dye to change its color. It keeps the color when you pick it up.
+
+A Tray is also needed for the [[Basket of Bread|bread_crate]] and comes back once the basket is empty.`,
           detailsBullets: [
             'Up to five items in a row',
-            'Right click a spot to place or take an item'
+            'Right click a spot to place or take an item',
+            'Can be dyed with any dye'
           ]
         },
         {
@@ -306,11 +346,14 @@ A Tray is also used to craft the [[Basket of Bread|bread_crate]] and comes back 
           search: 'wall display bakery shelf bread',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `The Wall Display hangs on the wall and holds four items, two on each shelf. It takes food items and all Bakery breads.`,
+          detailsText: `The Wall Display hangs on the wall and has four spots, two on each shelf. It takes food items and all Bakery breads.
+
+Every spot holds up to 64 of the same item. Right click with items to put in as many as fit, right click to take one out, and sneak and right click to take the whole stack. Look at it to see the item and amount of each spot.`,
           detailsBullets: [
             'Four spots, two per shelf',
+            'Up to 64 items per spot',
             'Takes food items and Bakery breads',
-            'Right click a spot to place or take an item'
+            'Info tooltip shows what is inside'
           ]
         },
         {
@@ -323,7 +366,7 @@ A Tray is also used to craft the [[Basket of Bread|bread_crate]] and comes back 
           detailsTitle: 'Included Pieces',
           detailsText: `Jars can be placed and stacked up to four high, which looks great on shelves.
 
-Jams and Chocolate Spread decorate cakes, cupcakes and cookies on the [[Caking Station|baker_station]]. The empty Jar comes back afterwards.`,
+Jams and Chocolate Spread are cooked in the [[Jam Pot|small_cooking_pot]]. Perfect jam is called for example "Perfect Strawberry Jam" and carries the name of its cook. Jams and Chocolate Spread decorate cakes, cupcakes and cookies on the [[Caking Station|baker_station]]. The empty Jar comes back afterwards.`,
           items: [
             {
               id: 'jar',
@@ -403,12 +446,13 @@ Once placed, it gives Resistance to all players within eight blocks. At a Smithi
           search: 'rolling pin tool weapon cookies',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `On the [[Caking Station|baker_station]], the Rolling Pin rolls freshly cut cupcakes flat into cookies.
+          detailsText: `On the [[Caking Station|baker_station]], the Rolling Pin flattens Sweet Dough for cookies in 5 clicks instead of 8 by hand.
 
-It can also be swung as a slow, weak weapon.`,
+It can also be swung as a quick but weak weapon (1 damage).`,
           detailsBullets: [
-            'Turns cupcakes into cookies on the Caking Station',
-            'Can be used as a melee weapon'
+            'Flattens dough on the Caking Station',
+            'Can be laid down on the station',
+            'Weapon: 1 damage, 1.2 attacks per second'
           ]
         },
         {
@@ -420,12 +464,13 @@ It can also be swung as a slow, weak weapon.`,
           search: 'bread knife tool weapon cupcakes',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `On the [[Caking Station|baker_station]], the Bread Knife cuts a Blank Cake into cupcakes.
+          detailsText: `On the [[Caking Station|baker_station]], the Bread Knife cuts dough into cupcake and cookie blanks and Jam Rolls into slices.
 
-It can also be swung as a slow, weak weapon.`,
+It can also be swung as a fast weapon with iron stats (3 damage).`,
           detailsBullets: [
-            'Cuts a Blank Cake into cupcakes',
-            'Can be used as a melee weapon'
+            'Cuts cupcakes, cookies and Jam Roll slices',
+            'Can be laid down on the station',
+            'Weapon: 3 damage, 2 attacks per second'
           ]
         },
         {
@@ -437,7 +482,7 @@ It can also be swung as a slow, weak weapon.`,
           search: 'cake dough ingredient',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Use Cake Dough on the [[Caking Station|baker_station]] to place a Blank Cake, which you then decorate or cut into cupcakes and cookies.
+          detailsText: `Use Cake Dough on the [[Caking Station|baker_station]] to place a cake base, which you then decorate. Baked on the Farm & Charm Stove, it becomes a Sponge Sheet for Jam Rolls.
 
 You can also eat it raw, but it will not fill you up much.`,
           detailsBullets: [
@@ -454,10 +499,12 @@ You can also eat it raw, but it will not fill you up much.`,
           search: 'sweet dough ingredient pastry tart',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Sweet Dough is used in crafting recipes for pastries and tarts. Check the [[recipe overview|recipes]] for details.
+          detailsText: `Place Sweet Dough on the [[Caking Station|baker_station]] to get four dough cubes for cupcakes and cookies. Baked on the Farm & Charm Stove, it becomes Cornet Shells, and it is also used for pastries and tarts. Try cooking it on a Campfire!
 
 You can also eat it raw, but it will not fill you up much.`,
           detailsBullets: [
+            'Cupcakes and cookies on the Caking Station',
+            'Cornet Shells on the Stove',
             'Ingredient for pastries and tarts',
             'Edible, but not very filling'
           ]
@@ -496,11 +543,61 @@ When the last piece is gone, you get the [[Tray|tray]] back.`,
           search: 'chocolate box food eatable placeable',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Place the box and right click it to eat a chocolate. Each piece restores a little hunger, and the box disappears once it is empty.`,
+          detailsText: `The Chocolate Box is wrapped as a gift. Place it and right click to unwrap it, then right click again to eat one of the six chocolates. Each piece restores half a drumstick.
+
+Only a box that is still wrapped can be picked up again. Once opened, it stays where it is, even when empty.`,
           detailsBullets: [
-            'Placeable',
-            'Eaten piece by piece',
-            'Each piece restores a little hunger'
+            'Placeable, wrapped as a gift',
+            'Right click to unwrap',
+            'Six pieces, half a drumstick each',
+            'Only unopened boxes can be picked up'
+          ]
+        },
+        {
+          id: 'sandwiches',
+          title: 'Sandwiches',
+          subtitle: 'Quick meals put together on the Farm & Charm Cutting Board.',
+          icon: '/assets/icons/bakery/sandwich.webp',
+          search: 'sandwich vegetable sandwich grilled salmon sandwich grilled bacon sandwich bread with jam cutting board stove',
+          details: true,
+          detailsTitle: 'How to make them',
+          detailsText: `Most sandwiches are assembled on the [[Cutting Board|cutting_board_recipes]]. The Grilled Bacon Sandwich is baked on the Farm & Charm Stove.`,
+          items: [
+            {
+              id: 'sandwich',
+              title: 'Sandwich',
+              namespace_id: 'bakery:sandwich',
+              icon: '/assets/icons/bakery/sandwich.webp',
+              search: 'sandwich meat'
+            },
+            {
+              id: 'vegetable_sandwich',
+              title: 'Vegetable Sandwich',
+              namespace_id: 'bakery:vegetable_sandwich',
+              icon: '/assets/icons/bakery/vegetable_sandwich.webp',
+              search: 'vegetable sandwich'
+            },
+            {
+              id: 'grilled_salmon_sandwich',
+              title: 'Grilled Salmon Sandwich',
+              namespace_id: 'bakery:grilled_salmon_sandwich',
+              icon: '/assets/icons/bakery/grilled_salmon_sandwich.webp',
+              search: 'grilled salmon sandwich'
+            },
+            {
+              id: 'grilled_bacon_sandwich',
+              title: 'Grilled Bacon Sandwich',
+              namespace_id: 'bakery:grilled_bacon_sandwich',
+              icon: '/assets/icons/bakery/grilled_bacon_sandwich.webp',
+              search: 'grilled bacon sandwich'
+            },
+            {
+              id: 'bread_with_jam',
+              title: 'Bread with Jam',
+              namespace_id: 'bakery:bread_with_jam',
+              icon: '/assets/icons/bakery/bread_with_jam.webp',
+              search: 'bread with jam'
+            }
           ]
         },
         {
@@ -574,7 +671,9 @@ When the last piece is gone, you get the [[Tray|tray]] back.`,
           detailsTitle: 'Included Cakes',
           detailsText: `Place a whole cake, pie or tart and right click it with a [[Bread Knife|bread_knife]] to cut off a slice. Sneak and right click to eat a piece straight from the plate.
 
-An untouched cake can be picked up again with an empty hand.`,
+An untouched cake can be picked up again with an empty hand.
+
+**Candles:** Cakes, tarts and pies hold up to four candles of one color, one per slice. The Chocolate Gateau, Bundt Cake and Pudding take one candle in the middle. Light them with Flint and Steel and blow them out with an empty hand. Cutting or eating a slice drops its candle.`,
           items: [
             {
               id: 'strawberry_cake_slice',
@@ -687,8 +786,48 @@ Stacks one to five each add 2% movement speed. Stacks six to ten each add 2% att
             'One stack per sweet, up to 10',
             'Stacks 1 to 5: +2% movement speed each',
             'Stacks 6 to 10: +2% attack speed each',
-            'Eating another sweet refreshes the timer'
+            'Eating another sweet refreshes the timer',
+            'The stack count is shown on the effect icon'
           ]
+        }
+      ]
+    },
+    {
+      id: 'misc_changes',
+      title: 'Miscellaneous Changes & Features',
+      subtitle: 'Small extras.',
+      entries: [
+        {
+          id: 'config',
+          title: 'Configuration',
+          subtitle: 'Effects, the Caking Station and the food values can be adjusted in the config.',
+          icon: '/assets/icons/misc/config.webp',
+          search: 'config configuration settings options bakery',
+          details: true,
+          detailsTitle: 'Settings',
+          detailsText: `The config is split into Effects, Misc and Food, and every option has a description.`,
+          detailsBullets: [
+            'Sugar Rush: max stacks, bonus per stack, attack speed',
+            'Completionist Banner: radius and Resistance level',
+            'Caking Station: animations, kneading, clicks per step',
+            'Info overlays and tooltips on or off, or only with Dungarees from Farm & Charm',
+            'Attack speed of the Bread Knife and Rolling Pin',
+            'Effect duration of every food'
+          ]
+        },
+        {
+          id: 'vanilla_blend',
+          title: 'VanillaBlend',
+          subtitle: 'An optional built-in resource pack with muted, vanilla-friendly colors. Turn it on in the Resource Packs menu.',
+          icon: '/assets/icons/bakery/bread.webp',
+          search: 'vanillablend vanilla blend resource pack textures colors muted'
+        },
+        {
+          id: 'experience',
+          title: 'Baking Experience',
+          subtitle: 'Finishing cakes, cupcakes and cookies on the Caking Station and bottling jam gives experience.',
+          icon: '/assets/icons/misc/tip.webp',
+          search: 'experience xp baking jam'
         }
       ]
     }

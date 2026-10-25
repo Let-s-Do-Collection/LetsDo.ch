@@ -12,6 +12,7 @@ export default {
   title: 'Vinery',
   logo: '/assets/mod-logos/vinery.webp',
   aboutTitle: 'Welcome',
+  modVersion: '1.5.6',
   aboutSubtitle: 'From the grapevine to the wine cellar',
   aboutText: `Vinery is all about wine. Find wild grapes in forests, savannas, taigas and jungles, plant them on grapevine stems or lattices and harvest them by the handful.
 
@@ -33,14 +34,16 @@ For the cellar there are wine racks in every wood type, a dark cherry wood set w
           search: 'grapevine pot stomp jump grapes juice wine bottle',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Right click the pot with grapes until it holds six. The first grape decides which juice you will get.
+          detailsText: `Right click the pot with grapes until it holds six. Only one grape type fits in a pot at a time.
 
-Then jump into the pot a few times to stomp the grapes. When they are fully crushed, right click with an empty Wine Bottle to fill it. Six grapes make two bottles of juice.`,
+Then jump into the pot to stomp the grapes. It takes 12 jumps, a little less if you wear heavy armor (iron or better). When they are fully crushed, right click with an empty Wine Bottle to fill it. Six grapes make two bottles of juice.
+
+Look at the pot to see which grapes are inside, how far the stomping is and how many bottles are left. Breaking a pot before the grapes are stomped gives them back.`,
           detailsBullets: [
-            'Six grapes per batch',
-            'The first grape sets the juice type',
-            'Jump in the pot to stomp',
-            'Fill with empty Wine Bottles, two per batch'
+            'Six grapes of one type per batch',
+            '12 jumps to stomp, 10% faster in heavy armor',
+            'Fill with empty Wine Bottles, two per batch',
+            'HUD panel shows grapes, progress and bottles left'
           ]
         },
         {
@@ -129,7 +132,7 @@ Right click a lattice with [[Jungle Grape Seeds|grapes]] to plant them. Once the
           icon: '/assets/icons/vinery/oak_wine_rack_small.webp',
           search: 'wine rack bottle storage small big display',
           details: true,
-          detailsText: `Right click a rack with a wine to put it in, and right click again to take it out. The tooltip tells you which bottles fit.`,
+          detailsText: `Right click a rack with a wine to put it in, and right click again to take it out. Aim at a slot to see what is in it, including the wine's age. Empty slots show which wines fit there.`,
           detailsBullets: [
             'Small Wine Bottle Storage: 4 small bottles',
             'Big Wine Bottle Storage: 9 small bottles',
@@ -150,7 +153,7 @@ Right click a lattice with [[Jungle Grape Seeds|grapes]] to plant them. Once the
           icon: '/assets/icons/vinery/wine_box.webp',
           search: 'wine box gift bottle open close',
           details: true,
-          detailsText: `Sneak and right click with an empty hand to open or close the lid. While it is open, right click with a small wine bottle to put it in.`,
+          detailsText: `Sneak and right click with an empty hand to open or close the lid. While it is open, right click with a small wine bottle to put it in. Like the wine racks, it shows a HUD panel with the bottle inside.`,
           detailsBullets: [
             'Holds one small bottle',
             'Sneak + right click opens and closes the lid'
@@ -168,11 +171,19 @@ Right click a lattice with [[Jungle Grape Seeds|grapes]] to plant them. Once the
           id: 'stackable_log',
           title: 'Stackable Log',
           namespace_id: 'vinery:stackable_log',
-          subtitle: 'Stack two and light them up for a cosy log fire.',
+          subtitle: 'Stack them, light them up and cook on a cosy log fire.',
           icon: '/assets/icons/vinery/stackable_log.webp',
-          search: 'stackable log fire flint and steel shovel campfire light',
+          search: 'stackable log fire flint and steel fire charge shovel campfire light cook food',
           details: true,
-          detailsText: `Place a second log on top to make a full stack. A full stack can be lit with Flint and Steel and gives off light. A shovel puts the fire out.`
+          detailsText: `Place a second log on top to make a full stack. A full stack can be lit with Flint and Steel, a Fire Charge, burning arrows or fireballs, and works like a campfire: put up to four food items on top and they cook.
+
+The fire burns out after 10 minutes, adding another log resets the timer. A shovel, Water Bottles, Splash Water Bottles or rain put it out. Burning logs hurt like a campfire, sneak to walk over them safely.`,
+          detailsBullets: [
+            'Cooks up to 4 food items',
+            'Burns for 10 minutes, a new log resets the timer',
+            'Put out with a shovel, water or rain',
+            'Sneak to walk over it safely'
+          ]
         },
         {
           id: 'vinery_slabs',
@@ -218,7 +229,7 @@ The matching furniture includes a chair, a table, a big table, a cabinet, a draw
           detailsTitle: 'Usage',
           detailsText: `Place a stem while holding at least two and it grows two blocks tall. Right click the upper part with grape seeds to plant them. Ripe grapes are harvested with a right click, and shears remove the plant and give the seeds back.
 
-Red and White Grapes slowly grow leaves over the stem as well. All grapes except Jungle Grapes grow on stems.`,
+Red and White Grapes slowly grow leaves over the stem as well. All grapes except Jungle Grapes grow on stems. Look at a stem to see its growth progress and why it isn't growing.`,
           detailsBullets: [
             'Two blocks tall',
             'Plant seeds on the upper part',
@@ -280,7 +291,9 @@ Red and White Grapes slowly grow leaves over the stem as well. All grapes except
           icon: '/assets/icons/vinery/straw_hat.webp',
           search: 'winemaker armor straw hat apron leggings boots bone meal set bonus',
           details: true,
-          detailsText: `While you wear all four pieces, Bone Meal is not used up. Instead, each armor piece loses a little durability every time.`,
+          detailsText: `While you wear all four pieces, Bone Meal is not used up. Instead, each armor piece loses a little durability every time. The tooltip shows how many pieces you are wearing.
+
+Depending on the config, the Straw Hat is also needed to see the HUD panels on vineyard blocks.`,
           detailsBullets: [
             'Full set: Bone Meal is not consumed',
             'Each use costs the armor some durability'
@@ -342,14 +355,17 @@ When placed, the banner gives Regeneration II to all players within 8 blocks. Mo
           detailsTitle: 'Drinking, placing and aging',
           detailsText: `Every wine is made in the [[Fermentation Barrel|fermentation_barrel]] from one specific juice plus a few ingredients. Drink it for its effect, or sneak and right click to place the bottle as decoration.
 
-Wine gets better with age. A fresh bottle's effect lasts 90 seconds. Every in-game year (24 days) adds 10 seconds, and every six years raises the effect by one level, up to level V. The tooltip shows the age and how many days are left until the next level. Chorus Wine, Creeper's Crush and Mellohi Wine are instant and do not age.
+Wine gets better with age. A fresh bottle's effect lasts 90 seconds. Every in-game year (24 days) adds 10 seconds, and every six years raises the effect by one level, up to level V. The tooltip shows the age, how many days are left until the next level, and "Fully Aged" once the highest level is reached.
+
+Wine stored without sky light, underground or in a fully roofed cellar, ages 1.5 times faster. Chorus Wine, Creeper's Crush and Mellohi Wine are instant and do not age.
 
 Each item below lists its effect, the juice and the extra ingredients.`,
           detailsBullets: [
             'Sneak + right click to place',
             'Fresh: 90 seconds of effect',
             '+10 seconds per year (24 in-game days)',
-            '+1 effect level every 6 years, up to V'
+            '+1 effect level every 6 years, up to V',
+            'Ages 1.5x faster in a dark cellar'
           ],
           items: [
             wine('apple_cider', 'Cider', 'Apple Juice + Sugar', 'Strength'),
@@ -419,7 +435,7 @@ Bone Meal speeds up ripening and can even make a leaf start bearing fruit.`,
           details: true,
           detailsText: `Wild grape bushes grow across the Overworld. Right click a ripe bush to pick grapes. Grape seeds can be planted as a new bush on any solid block, on a [[Grapevine Stem|stem]] or, for Jungle Grapes, on a [[Lattice|lattice]].
 
-Bushes need daylight to grow; Savanna Grapes want full sun. Foxes like grapes just as much as sweet berries.`,
+Bushes need daylight to grow; Savanna Grapes want full sun. Look at a bush to see its growth and what it is missing. Foxes like grapes just as much as sweet berries.`,
           detailsBullets: [
             'Red and White Grapes: forests, plains, rivers, swamps, meadows and mountains',
             'Taiga Grapes: taigas and mountains',
@@ -543,7 +559,7 @@ Winemakers buy grapes and cherries and sell seeds, Wine Bottles, Apple Mash, fru
         {
           id: 'experience_effect',
           title: 'Experience',
-          subtitle: 'Experience orbs give you 25% more per effect level. From Mojang Noir.',
+          subtitle: 'Experience orbs give you 50% more per effect level. From Mojang Noir.',
           icon: '/assets/icons/vinery/effects/experience_effect.webp',
           search: 'experience effect xp bonus mojang noir'
         },
@@ -601,7 +617,7 @@ Winemakers buy grapes and cherries and sell seeds, Wine Bottles, Apple Mash, fru
     {
       id: 'misc_changes',
       title: 'Miscellaneous Changes & Features',
-      subtitle: 'Settings and fruit storage.',
+      subtitle: 'HUD panels, settings and fruit storage.',
       entries: [
         {
           id: 'config',
@@ -612,6 +628,11 @@ Winemakers buy grapes and cherries and sell seeds, Wine Bottles, Apple Mash, fru
           details: true,
           detailsText: `The config file lets you change, among other things:`,
           detailsBullets: [
+            'Every wine effect, amplifier and duration',
+            'Turning wine aging off, or letting wine age only in storage',
+            'Cellar aging speed',
+            'Grapevine Pot jumps, heavy armor bonus and splash particles',
+            'HUD panels: always, never or only with the Straw Hat',
             'Fermentation time and barrel capacity',
             'Apple Press mashing and fermenting time',
             'Growth chances for grapes, apples and cherries',
@@ -619,6 +640,20 @@ Winemakers buy grapes and cherries and sell seeds, Wine Bottles, Apple Mash, fru
             'All Winemaker trades',
             'Spawn chance and mules of the Wandering Winemaker',
             'Completionist Banner effect and tooltip'
+          ]
+        },
+        {
+          id: 'hud',
+          title: 'HUD Panels',
+          subtitle: 'Look at a block to see what is going on inside.',
+          icon: '/assets/icons/vinery/straw_hat.webp',
+          search: 'hud panel overlay info grapevine pot wine rack wine box shelf grape bush lattice stem growth straw hat',
+          details: true,
+          detailsText: `Aim at Vinery blocks to get a small info panel. The config decides if the panels show always, never or only while you wear the [[Straw Hat|winemaker_armor]].`,
+          detailsBullets: [
+            'Grapevine Pot: grapes, fill level, stomps and bottles left',
+            'Wine racks, Wine Box and shelves: contents, wine age and what fits',
+            'Grape bushes, stems and lattices: growth and why something isn\'t growing'
           ]
         },
         {

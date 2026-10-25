@@ -4,6 +4,8 @@ export default {
   logo: '/assets/mod-logos/legacy.webp',
 
   aboutTitle: 'Welcome',
+
+  modVersion: '1.0.3',
   aboutSubtitle: 'Your world remembers who was first',
   aboutText: `Legacy adds cosmetic progression to the Let's Do Collection: titles to wear, a personal journey diary and server-wide milestones.
 

@@ -3,6 +3,7 @@ export default {
   title: 'HerbalBrews',
   logo: '/assets/mod-logos/herbalbrews.webp',
   aboutTitle: 'Welcome',
+  modVersion: '1.1.4',
   aboutSubtitle: 'Tea, coffee and a pinch of magic',
   aboutText: `HerbalBrews is about tea and coffee. Gather wild plants, grow your own tea, dry the leaves and brew them in the tea kettle.
 

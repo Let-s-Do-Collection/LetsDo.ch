@@ -3,6 +3,7 @@ export default {
   title: 'Furniture',
   logo: '/assets/mod-logos/furniture.webp',
   aboutTitle: 'Welcome',
+  modVersion: '1.1.10',
   aboutSubtitle: 'Everyday furniture for cozy homes',
   aboutText: `Furniture fills your home with sofas, desks, wardrobes, clocks, curtains and many small details, from a gramophone to a fish tank.
 

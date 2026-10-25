@@ -4,6 +4,8 @@ export default {
   logo: '/assets/mod-logos/smoker.webp',
 
   aboutTitle: 'Welcome',
+
+  modVersion: '1.0.3',
   aboutSubtitle: 'The overlooked block, made worth using',
   aboutText: `Smoker gives the vanilla Smoker a real purpose. Instead of simply cooking faster, it now smokes your food with wood, and the wood you choose decides how nourishing the result becomes.`,
   sections: [

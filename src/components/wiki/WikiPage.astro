@@ -87,6 +87,8 @@ const logo = config?.logo ?? "";
 const aboutTitle = config?.aboutTitle ?? "Welcome";
 const aboutSubtitle = config?.aboutSubtitle ?? "";
 const aboutText = config?.aboutText ?? "";
+const modVersion = config?.modVersion ?? "";
+const minecraftVersion = config?.minecraftVersion ?? "1.21.1";
 const sections = Array.isArray(config?.sections) ? config.sections : [];
 const wikis = Array.isArray(wikiIndex) ? wikiIndex : [];
 
@@ -168,6 +170,12 @@ const itemHref = (id) => withBase(`/wiki/${activeSlug}/${toItemSlug(id)}/`);
           {aboutSubtitle ? <p class="sectionSubtitle" set:html={escapeHtmlWithBreaks(aboutSubtitle)} /> : null}
 
           {aboutText ? <div class="aboutText" set:html={escapeHtmlWithBreaks(aboutText)} /> : null}
+
+          {modVersion ? (
+            <p class="wikiVersionBanner">
+              This wiki refers to <strong>{title} {modVersion}</strong> for Minecraft {minecraftVersion}.
+            </p>
+          ) : null}
         </section>
 
         {sections.map((section) => {

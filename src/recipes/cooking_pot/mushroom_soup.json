@@ -1,5 +1,5 @@
 {
-  "type": "farm_and_charm:cooking_pot",
+  "type": "farm_and_charm:pot_cooking",
   "ingredients": [
     {
       "tag": "candlelight:mushrooms"

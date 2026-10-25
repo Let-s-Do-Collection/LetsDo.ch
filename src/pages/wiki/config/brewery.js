@@ -3,6 +3,7 @@ export default {
   title: 'Brewery',
   logo: '/assets/mod-logos/brewery.webp',
   aboutTitle: 'Welcome',
+  modVersion: '2.1.13',
   aboutSubtitle: 'Beer, whiskey and a proper tavern',
   aboutText: `Brewery brings brewing into survival. Grow hops, dry your grain, and brew beer and whiskey at a Brewingstation that keeps you busy while it works.
 
@@ -25,27 +26,35 @@ Brewery requires Farm & Charm, which provides yeast, the silo for drying grain a
           search: 'brewingstation brewing station beer whiskey kettle oven timer whistle events quality wood copper netherite multiblock 2x2x2',
           details: true,
           detailsTitle: 'How brewing works',
-          detailsText: `The Brewingstation takes up 2x2x2 blocks and consists of a kettle, an oven, a timer and a whistle. It has no menu, everything happens by hand.
+          detailsText: `The Brewingstation consists of a kettle, an oven, a timer and a whistle. The kettle is two blocks tall, so it needs one more free block above it. It has no menu, everything happens by hand.
 
 1. Fill the kettle with a Water Bucket.
 2. Add three ingredients by right clicking the kettle with them.
 3. Light the oven with any fuel.
+4. Press the button on the Brew Timer to start.
 
-Brewing takes one minute. During that time things go wrong, and you need to react quickly:
+Look at the station to see the ingredients, which ones are still missing, the possible drinks and what is still needed to start: water, heat or a better Brewingstation.
+
+Brewing takes one minute. The lid of the kettle lowers, the needle of the timer follows the progress. During that time things go wrong, and you need to react quickly:
 - The oven fire gets weak: add more fuel.
 - The timer rings: press it.
 - The kettle boils over: take water out with an empty Bucket.
 - The whistle blows and the kettle runs dry: refill it with a Water Bucket.
 
-The more of these events you handle, the more drinks you get and the better their quality. Leave too many unanswered, or let the kettle overflow, and angry [[Booze|booze]] climbs out of the brew.
+The more of these events you handle, the more drinks you get and the better their quality. Quality 2 needs at least three solved events with at most one missed, quality 3 needs at least four solved events and none missed. Quality is shown with barrel icons on the drink. Leave too many unanswered, or let the kettle overflow, and angry [[Booze|booze]] climbs out of the brew.
 
-When it is done, take the drinks out with a [[Beer Mug|beer_mug]].`,
+You can watch the brew: the ingredients float in the kettle, and after a few seconds the water slowly turns yellow for beer or brown for whiskey.
+
+When it is done, take the drinks out with the right container: beer with a [[Beer Mug|beer_mug]], whiskey with a Glass Bottle.`,
           detailsBullets: [
+            'Start brewing with the button on the Brew Timer',
+            'Info tooltip shows what is missing',
             'Wooden: beer only, many events',
             'Copper: needed for most whiskeys, fewer events',
             'Netherite: needed for the rarest whiskeys and Dark Brew, no events at all and always three drinks of the best quality',
             'Upgrade Wooden to Copper and Copper to Netherite at a Smithing Table',
-            'Failed events can spawn Booze'
+            'Failed events can spawn Booze',
+            'Beer is filled into Beer Mugs, whiskey into Glass Bottles'
           ]
         }
       ]
@@ -59,14 +68,19 @@ When it is done, take the drinks out with a [[Beer Mug|beer_mug]].`,
           id: 'big_barrel',
           title: 'Big Barrel',
           namespace_id: 'brewery:barrel_main',
-          subtitle: 'A huge cellar barrel, purely decorative.',
+          subtitle: 'A huge cellar barrel that ages your beer and whiskey.',
           icon: '/assets/icons/brewery/big_barrel.webp',
-          search: 'big barrel 2x2x2 brewery decor cellar',
+          search: 'big barrel 2x2x2 brewery cellar aging age quality golden barrel',
           details: true,
-          detailsTitle: 'Placement',
-          detailsText: `The Big Barrel takes up 2x2x2 blocks and makes a great centrepiece for a cellar.`,
+          detailsTitle: 'Aging drinks',
+          detailsText: `The Big Barrel takes up 2x2x2 blocks. Right click it with a beer or whiskey to store it, up to nine drinks. Sneak and right click to take the last one out.
+
+Every seven in-game days in the barrel raise the quality by one, up to a fourth level that only aging can reach, shown as a golden barrel. Barrel-aged drinks last longer, hit harder and make you less drunk. Look at the barrel to see what is inside and how far it has aged.`,
           detailsBullets: [
-            'Decorative',
+            'Holds nine drinks',
+            '+1 quality every 7 in-game days',
+            'Fourth quality level only from aging',
+            'Aged drinks last longer and make you less drunk',
             'Needs 2x2x2 blocks of space'
           ]
         },
@@ -93,7 +107,7 @@ When it is done, take the drinks out with a [[Beer Mug|beer_mug]].`,
           search: 'table brewery tablecloth patterned carpet',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Right click the Table with a Patterned Carpet to lay it on as a tablecloth. Right click it with an empty hand to take the cloth off again.
+          detailsText: `Right click the Table with a Patterned Carpet to lay it on as a tablecloth. It keeps its color. Right click it with an empty hand to take the cloth off again, and breaking the table drops the carpet too.
 
 The carpet is made from [[Patterned Wool|patterned_wool]].`
         },
@@ -173,15 +187,16 @@ The carpet is made from [[Patterned Wool|patterned_wool]].`
           id: 'patterned_wool',
           title: 'Patterned Wool',
           namespace_id: 'brewery:patterned_wool',
-          subtitle: 'Wool with the checked Brewfest pattern.',
+          subtitle: 'Wool with the checked Brewfest pattern, in any color you like.',
           icon: '/assets/icons/brewery/patterned_wool.webp',
-          search: 'patterned wool carpet brewery',
+          search: 'patterned wool carpet tablecloth dye dyeable color brewery',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `A decorative wool block in the classic Brewfest pattern. Craft it into Patterned Carpet to lay a tablecloth on the [[Table|table]].`,
+          detailsText: `A decorative wool block in the classic Brewfest pattern, light blue by default. Right click Patterned Wool, Patterned Carpet or a tablecloth with any dye to change its color. Dyed wool crafts into carpet of the same color, which you can lay on the [[Table|table]] as a tablecloth.`,
           detailsBullets: [
             'Decorative block',
-            'Crafts into Patterned Carpet'
+            'Can be dyed with any dye',
+            'Crafts into Patterned Carpet of the same color'
           ]
         },
         {
@@ -319,7 +334,7 @@ Dried grain is used at the [[Brewingstation|brewingstation]]. You can also place
           search: 'beer mug flower pot brewery',
           details: true,
           detailsTitle: 'Usage',
-          detailsText: `Use an empty Beer Mug on a finished [[Brewingstation|brewingstation]] to take out a drink. You get the mug back after drinking.
+          detailsText: `Use an empty Beer Mug on a finished [[Brewingstation|brewingstation]] to take out a beer. You get the mug back after drinking. Whiskey is filled into Glass Bottles instead, and you get the bottle back.
 
 Placed on a table, it also works as a small flower pot. Sneak and right click to take the flower out again.`,
           detailsBullets: [
@@ -338,11 +353,11 @@ Placed on a table, it also works as a small flower pot. Sneak and right click to
           detailsTitle: 'Outfit',
           detailsText: `Brewfest clothing is worn in the armor slots. Every piece can be mixed with the [[Dirndl|dirndl_set]] pieces.
 
-The outfits are cosmetic and give only minimal protection.`,
+**Set bonus Harddrinking:** Wearing a full set of four Brewfest pieces makes you immune to [[Drunkenness|drunk]]. The tooltip shows every piece and lights up the bonus once the set is complete.`,
           detailsBullets: [
             'Worn in the armor slots',
             'Mix and match with Dirndl pieces',
-            'Cosmetic'
+            'Full set: immune to Drunkenness'
           ],
           items: [
             {
@@ -385,11 +400,11 @@ The outfits are cosmetic and give only minimal protection.`,
           detailsTitle: 'Outfit',
           detailsText: `Brewfest clothing is worn in the armor slots. Every piece can be mixed with the [[Lederhosen|regalia_set]] pieces.
 
-The outfits are cosmetic and give only minimal protection.`,
+**Set bonus Harddrinking:** Wearing a full set of four Brewfest pieces makes you immune to [[Drunkenness|drunk]]. The tooltip shows every piece and lights up the bonus once the set is complete.`,
           detailsBullets: [
             'Worn in the armor slots',
             'Mix and match with Lederhosen pieces',
-            'Cosmetic'
+            'Full set: immune to Drunkenness'
           ],
           items: [
             {
@@ -439,7 +454,7 @@ The outfits are cosmetic and give only minimal protection.`,
           detailsTitle: 'All Beers',
           detailsText: `Beers are brewed at any [[Brewingstation|brewingstation]] from Hops, Yeast and a third ingredient.
 
-Better quality makes the effect stronger and last longer. Every drink also adds a level of [[Intoxication|drunk]].`,
+Better quality makes the effect stronger and last longer. Placed beers can be stacked: right click with another one to add it, right click with an empty hand to take one. Every drink also adds a level of [[Intoxication|drunk]].`,
           items: [
             { id: 'beer_wheat', title: 'Wheat Beer', namespace_id: 'brewery:beer_wheat', subtitle: 'Snow White', icon: '/assets/icons/brewery/beer_wheat.webp', search: 'wheat beer snow white' },
             { id: 'beer_hops', title: 'Hops Beer', namespace_id: 'brewery:beer_hops', subtitle: 'Partystarter', icon: '/assets/icons/brewery/beer_hops.webp', search: 'hops beer partystarter' },
@@ -801,6 +816,30 @@ From level III your view starts to sway and you stagger. From level V you also g
             'Corn and kernels: plains and desert village houses, pillager outposts',
             'Barley and barley seeds: savanna village houses'
           ]
+        },
+        {
+          id: 'config',
+          title: 'Configuration',
+          subtitle: 'Brewing, drunkenness, effects and food values can be adjusted in the config.',
+          icon: '/assets/icons/misc/config.webp',
+          search: 'config configuration settings options brewery',
+          details: true,
+          detailsTitle: 'Settings',
+          detailsText: `The config is split into Effects, Brewing, Drunkenness, Info Tooltips and Food.`,
+          detailsBullets: [
+            'Effects: Combustion, Repulsion, Stoutheart, Mining, Pacify and flying with Amorous Glide',
+            'Brewing: brew time, brew events, time between events, Beer Elementals',
+            'Drunkenness: swaying, slowness, blackouts, blackout chance and teleport range',
+            'Info tooltip of the Brewingstation on or off, or only with Dungarees from Farm & Charm',
+            'Hunger and saturation of all food'
+          ]
+        },
+        {
+          id: 'vanilla_blend',
+          title: 'VanillaBlend',
+          subtitle: 'An optional built-in resource pack with muted, vanilla-friendly colors for beers, whiskeys, food and the Brewingstation. Turn it on in the Resource Packs menu.',
+          icon: '/assets/icons/brewery/beer_mug.webp',
+          search: 'vanillablend vanilla blend resource pack textures colors muted'
         }
       ]
     }

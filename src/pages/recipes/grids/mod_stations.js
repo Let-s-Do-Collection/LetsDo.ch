@@ -1,5 +1,5 @@
-const createNormalizer = (slotCount) => ({ inputs, output, station, normalizeItemRef, titleFn }) => {
-  const inputRefs = Array.isArray(inputs) ? inputs : [];
+const createNormalizer = (slotCount) => ({ recipe, inputs, output, station, normalizeItemRef, titleFn }) => {
+  const inputRefs = [...(Array.isArray(inputs) ? inputs : []), ...(recipe?.finisher ? [recipe.finisher] : [])];
   const normalizedSlots = inputRefs.slice(0, slotCount).map((ref) => normalizeItemRef(ref, titleFn));
 
   while (normalizedSlots.length < slotCount) normalizedSlots.push(null);
@@ -35,6 +35,39 @@ const LAYOUTS = {
 };
 
 const STATIONS = [
+  {
+    key: "bakery_jam_pot",
+    mod: "Bakery",
+    title: "Jam Pot",
+    stationName: "Jam Pot",
+    subtitleExtra: " Stir when it bubbles up and bottle it with empty Jars at the right time.",
+    wiki: "/wiki/bakery/#small_cooking_pot",
+    icon: "/assets/icons/bakery/small_cooking_pot.webp",
+    slots: 4,
+    search: "bakery jam pot jam spread bakery:jam_cooking"
+  },
+  {
+    key: "cutting_board",
+    mod: "Farm &amp; Charm",
+    title: "Cutting Board",
+    stationName: "Cutting Board",
+    subtitleExtra: " Place a knife or cleaver on the board and chop the ingredient.",
+    wiki: "/wiki/farm-and-charm/#cutting_board",
+    icon: "/assets/icons/farm-and-charm/cutting_board.webp",
+    slots: 1,
+    search: "cutting board chopping knife cleaver farm_and_charm:cutting_board"
+  },
+  {
+    key: "cutting_board_assembly",
+    mod: "Farm &amp; Charm",
+    title: "Cutting Board Assembly",
+    stationName: "Cutting Board",
+    subtitleExtra: " Place the ingredients on an empty board and right click with an empty hand. A finishing item such as Paper goes on last.",
+    wiki: "/wiki/farm-and-charm/#cutting_board",
+    icon: "/assets/icons/farm-and-charm/cutting_board.webp",
+    slots: 6,
+    search: "cutting board assembly assemble farm_and_charm:cutting_board_assembly"
+  },
   {
     key: "meadow_cookpot",
     mod: "Meadow",

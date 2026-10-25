@@ -3,6 +3,7 @@ export default {
   title: 'Hearth & Timber',
   logo: '/assets/mod-logos/hearth_and_timber.webp',
   aboutTitle: 'Welcome',
+  modVersion: '1.0.5',
   aboutSubtitle: 'Half-timbering, masonry and roofs for detailed builds',
   aboutText: `Hearth & Timber is all about building. Frame half-timbered houses, plaster the walls in any colour, lay rubblestone and splitstone, and cover the roof with thatch or shingles.
 

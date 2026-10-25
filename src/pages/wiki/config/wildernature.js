@@ -3,6 +3,7 @@ export default {
   title: 'WilderNature',
   logo: '/assets/mod-logos/wildernature.webp',
   aboutTitle: 'Welcome',
+  modVersion: '1.1.8',
   aboutSubtitle: 'Wild animals, hunting bounties and a busy ecosystem',
   aboutText: `WilderNature fills the Overworld with animals that have lives of their own. Deer sleep in the grass and bolt when you sprint, raccoons raid your chests, squirrels hoard hazelnuts, and lions doze through the savanna heat.
 

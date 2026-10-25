@@ -3,6 +3,7 @@ export default {
   title: 'Meadow',
   logo: '/assets/mod-logos/meadow.webp',
   aboutTitle: 'Welcome',
+  modVersion: '1.4.10',
   aboutSubtitle: 'Alpine life, from the pasture to the cheese wheel',
   aboutText: `Meadow turns the vanilla Meadow biome into a proper alpine landscape: pine and birch trees, fields of mountain flowers, limestone boulders, salt veins and small structures like chalets, chapels and logging camps.
 

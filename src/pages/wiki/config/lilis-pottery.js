@@ -3,6 +3,7 @@ export default {
   title: 'Lili\'s Pottery',
   logo: '/assets/mod-logos/lilis_pottery.webp',
   aboutTitle: 'Welcome',
+  modVersion: '1.0.3',
   aboutSubtitle: 'Clay, fire and handmade pottery',
   aboutText: `Lili's Pottery is about working with clay. Dig up coloured clay, shape it on the Pottery Table into pots, vases and urns, and fire it in the Kiln with the colours of your choice.
 

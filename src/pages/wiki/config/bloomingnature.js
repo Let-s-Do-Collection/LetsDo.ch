@@ -4,6 +4,8 @@ export default {
   logo: '/assets/mod-logos/bloomingnature.webp',
 
   aboutTitle: 'Welcome',
+
+  modVersion: '1.1.13',
   aboutSubtitle: 'Denser, wilder and more alive',
   aboutText: `BloomingNature reworks almost every vanilla biome with new tree shapes, richer vegetation, small terrain changes and more atmosphere. Biome placement and the overall world layout stay the same.
 
