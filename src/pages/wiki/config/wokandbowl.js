@@ -224,7 +224,7 @@ Cutting Board results go straight into a nearby open [[Ingredient Cubby|ingredie
           id: 'cutting_board_assembly',
           title: 'Assembly Recipes',
           subtitle: 'Dumplings, buns, rolls, rice balls and rice cakes, put together by hand.',
-          icon: '/assets/icons/wokandbowl/seaweed_salmon_rolls.webp',
+          icon: '/assets/icons/farm-and-charm/cutting_board.webp',
           search: 'assembly dumplings bun rice ball seaweed salmon rolls sweet rice cake dough kelp honey sugar',
           details: true,
           detailsTitle: 'Recipes',
