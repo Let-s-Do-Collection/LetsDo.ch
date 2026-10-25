@@ -76,7 +76,7 @@ How many dishes you get depends on how well you cooked: one dish for one flame, 
           detailsTitle: 'How flames work',
           detailsText: `Every dish starts with three flames. A missed toss costs one flame, two late tosses cost one flame, and serving outside the perfect window costs one more. A [[flambé|wok_cooking]] gives one flame back. A dish never drops below one flame.
 
-The perfect window is 2 seconds before to 2 seconds after the cooking time. Better dishes are more filling, you get more of them, and they make you rested for longer on [[tatami|tatami_rested]].`,
+The perfect window is 2 seconds before to 2 seconds after the cooking time. Better dishes are more filling, you get more of them, and they make you [[Rested|farm-and-charm:rested]] for longer on [[tatami|tatami]].`,
           detailsBullets: [
             'Three flames: 3 dishes, +10% nutrition and saturation',
             'Two flames: 2 dishes, +5% nutrition and saturation',
@@ -353,11 +353,11 @@ Right click with a dye to recolour it.`,
           title: 'Tatami',
           subtitle: 'Woven hay floors, as a block or a mat.',
           icon: '/assets/icons/wokandbowl/tatami_block.webp',
-          search: 'tatami block mat floor hay rested',
+          search: 'tatami block mat floor hay rested effect eat meal buff',
           details: true,
           detailsTitle: 'Good to know',
-          detailsText: `Tatami is made from a Hay Bale and [[Rattan Cane|rattan_cane]]. Eating a meal on it makes you [[Well Rested|tatami_rested]].`,
-          detailsBullets: ['[[Tatami Block|tatami_block]]: Hay Bale + [[Rattan Cane|rattan_cane]]', '[[Tatami Mat|tatami_mat]]: 2 [[Tatami Blocks|tatami_block]] → 6 Mats', 'Place up to five Tatami Mats on top of each other', 'Mined with a hoe'],
+          detailsText: `Tatami is made from a Hay Bale and [[Rattan Cane|rattan_cane]]. Eat any Wok & Bowl food while standing on it and you get the Farm & Charm [[Rested|farm-and-charm:rested]] effect for 60 seconds. Every [[flame|wok_quality]] above the first adds 50% to the duration.`,
+          detailsBullets: ['[[Tatami Block|tatami_block]]: Hay Bale + [[Rattan Cane|rattan_cane]]', '[[Tatami Mat|tatami_mat]]: 2 [[Tatami Blocks|tatami_block]] → 6 Mats', 'Place up to five Tatami Mats on top of each other', '[[Rested|farm-and-charm:rested]]: 60 s for one flame, 90 s for two, 120 s for three (configurable)', 'Mined with a hoe'],
           items: [
             { id: 'tatami_block', title: 'Tatami Block', icon: '/assets/icons/wokandbowl/tatami_block.webp', search: 'tatami block' },
             { id: 'tatami_mat', title: 'Tatami Mat', icon: '/assets/icons/wokandbowl/tatami_mat.webp', search: 'tatami mat' }
@@ -779,17 +779,6 @@ Item tooltips tell you where a Wok, Rattan Branch, Bamboo Steamer or placeable d
           ]
         },
         {
-          id: 'tatami_rested',
-          title: 'Well Rested',
-          subtitle: 'Eat a Wok & Bowl meal on tatami to feel rested.',
-          icon: '/assets/icons/wokandbowl/tatami_mat.webp',
-          search: 'rested effect tatami eat meal buff',
-          details: true,
-          detailsTitle: 'Bonus',
-          detailsText: `Eat any Wok & Bowl food while standing on a [[Tatami Block or Tatami Mat|tatami]] and you get the Rested effect for 60 seconds. Every [[flame|wok_quality]] above the first adds 50% to the duration.`,
-          detailsBullets: ['One flame: 60 s, two flames: 90 s, three flames: 120 s', 'Duration and flame bonus can be changed or disabled in the config']
-        },
-        {
           id: 'config',
           title: 'Configuration',
           subtitle: 'Wok timing, farming, gameplay and visual settings.',
@@ -814,5 +803,14 @@ Item tooltips tell you where a Wok, Rattan Branch, Bamboo Steamer or placeable d
         }
       ]
     }
-  ]
+  ],
+  recipesCta: {
+    enabled: true,
+    title: 'Recipes',
+    text: `Not sure how to make something?
+
+The recipe overview lists every Let's Do crafting station and its recipes.`,
+    buttonLabel: 'Open Recipe Overview',
+    href: '/recipes/'
+  }
 };
